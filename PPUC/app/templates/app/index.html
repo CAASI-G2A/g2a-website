@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Project Police Union Contracts</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            The G2A Decision Support web application is intended to walk users through the steps of filing reports of police misconduct.  
+            The application will take information from the user about an incident anonymously.  Once the user enters information pertaining to the location of the incident,
+            the application will inform the user of what steps can be taken to file their complaint.
+        </p>
+        <p><a class="btn btn-default" href="{% url 'about' %}">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
