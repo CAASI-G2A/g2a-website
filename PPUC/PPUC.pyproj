@@ -60,6 +60,8 @@
     <Folder Include="PPUC\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\result_snippet.html" />
+    <Content Include="app\templates\app\search.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

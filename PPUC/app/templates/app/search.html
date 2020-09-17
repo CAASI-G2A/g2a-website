@@ -1,0 +1,14 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<form method="GET" action="{% url 'search' %}">
+    <input name="q" value="{{request.GET.q}}" placeholder="search...">
+    <button class=" "btn btn-success" type="submit">
+        Search
+    </button>
+</form>
+{% for obj in locations %}
+    <h1><a href="{%url 'view_location' obj.pk %}"></a>{{obj.name}}</h1>
+    <a href="{%url 'view_location' obj.pk %}" >{{ obj.name }}</a>
+{% endfor %}
+{% endblock %}
