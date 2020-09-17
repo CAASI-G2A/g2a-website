@@ -67,20 +67,15 @@ def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
     reviews = Review.objects.all()
+    r = []
     for review in reviews:
+        print("checking review")
         if review.location == location:
+            print("adding..")
+            r.append(review)
             context = {
-                        'location' : review.location,
-                       'policy_type' : review.policy_type,
-                       'expiration' : review.expiration,
-                       'section' : review.section,
-                       'language' : review.language,
-                       'category' : review.category,
-                       'impact' : review.impact
+                       'location' : review.location,
+                       'r' : r,
                        }
-        assert isinstance(request, HttpRequest)
-        return render(
-            request,
-            'app/view_location.html',
-            context
-        )
+    assert isinstance(request, HttpRequest)
+    return render(request,'app/view_location.html',context)
