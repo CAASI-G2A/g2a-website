@@ -1,0 +1,148 @@
+---
+title: "Preliminary functions for the G2A site"
+author: "Yu-Ru Lin"
+date: '2020-09-27'
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float: yes
+    code_folding: hide
+---
+```{r document_specific_setup, echo=FALSE, message=F, warning=F}
+# This chunk can include things you need for the rest of the document
+source('utils.R')
+```
+
+
+## Overview
+
+This notebook illustrate the preliminary search functions that we'll provide on the G2A site. The basic steps to build such function include:
+
+1. scrape the webpage to get a list of contract files
+2. download the contract PDF files to a server or local machine
+3. convert the contract PDF files to plain text
+4. parse the text into sentences (for further natural language processing)
+5. store the parsed text into a table (database)
+6. provide search interface that **allows users to retrieve text portion by keywords**
+
+In this notebook, I skip step 1 and 5. I use R packages to implement step 2, 3, 4, and 6. And all these steps can be re-implemented using python, javascript, or other languages.
+
+### Next steps
+
+* Identify how to extend this preliminary search functionality using web-based frameworks
+* Find better scrapping and PDF conversion tools
+* Implement the search UI with database back-end (I can provide initial data to begin with) 
+
+### Step 1-2 Scrape & Download
+
+From [the checkthepolice.org -- open-source database of police union contracts](https://www.checkthepolice.org/database), I scraped 22 URLs that contains `*.pdf` and save the list into a CSV file `contract-list.csv`, and then download all the files to a folder. Note some of the links returned 404 error. Out of the 22 URLs, only 17 (77%) can be downloaded.
+
+```{r, eval=FALSE}
+
+  df <- read_csv("data/contract-list.csv", 
+                 col_names = FALSE)
+  df %<>% rename(url='X1')
+  df %>% glimpse()
+  cat('# of URLs',nrow(df),'\n')
+
+## download a list of contract files
+if (1) {
+  for (idx in 1:length(df$url)) {
+    url = df$url[idx]
+    url = str_replace(url, "\\?dl=0", "?raw=1")
+    url = str_replace_all(url, "\\%20", "/")
+    s = str_split(url, "\\/")
+    filename = sprintf('data/download/%d.pdf', idx)
+    cat('\ndownloading file:',filename,' from ',url,'\n')
+    cat ("Press [enter] to continue")
+    line <- readline()
+    download.file(url, filename, method = "auto")
+    txt = pdf_text(filename)
+    txt = str_trim(txt)
+    txt = str_squish(txt)
+    
+    txt <- unlist(txt)
+    txt <- paste(txt, collapse = " ") ## page break
+    txt = str_replace_all(txt, "\\\t\\\r", "")
+    realtxt = str_extract(txt, "[a-zA-Z]+")
+    if (is.na(realtxt)) {
+      cat('no text extracted from file:',filename,'\n')
+    } else {
+      cat('text extracted from file:',filename, '(', realtxt, ' ...)\n')
+    }
+  }
+  
+}
+
+```
+
+### Step 3-4 Convert & Parse
+
+The list of downloaded PDF files are converted to plain text, and each of the text content is split into sentences. The sentence splitting may not be 100% accurate because the conversion from the PDFs may have undesirable symbols that make the sentence detection imperfect.
+
+```{r}
+## convert PDFs to text
+if (1) {
+  library(pdftools)
+  filedir = 'data/download'
+  filenames = list.files(filedir, full.names = TRUE)
+  filenidx = list.files(filedir, full.names = F)
+  
+  df = NULL
+  for (idx in 1:length(filenames) ) {
+    filename = filenames[idx]
+    txt = tryCatch({
+      txt = pdf_text(filename)
+      txt = str_trim(txt)
+      txt = str_squish(txt)
+      
+      txt <- unlist(txt)
+      txt <- paste(txt, collapse = " ") ## page break
+      txt = str_replace_all(txt, "\\\t\\\r", "")
+      realtxt = str_extract(txt, "[a-zA-Z]+")
+      if (is.na(realtxt)) {
+        cat('no text extracted from file:',filename,'\n')
+        NA
+      } else {
+        cat('text extracted from file:',filename, '(', realtxt, ' ...)\n')
+        txt
+      }
+    }, error = function(e) {
+      cat('error in coverting PDF from file:',filename, '\n')
+      NA
+    })
+    
+    
+    if(!is.na(txt)) {
+      df = rbind(df, 
+                 data.frame(idx=filenidx[idx], text=txt)
+      )
+      
+    }
+  }
+  cat('*** contract documents ***\n')
+  df %>% glimpse()
+  df_sent = df %>%
+    unnest_tokens(
+      output = sentence,
+      input = text,
+      token = 'sentences' )
+  
+  cat('*** sentences in contract documents ***\n')
+  df_sent %>% glimpse()
+  
+}
+
+```
+
+### Step 5-6 Prepare for Search
+
+Here I directly use an R package that supports interactive query from the `data.frame` object stored in the memory. A better option would be to store data in a database and implement the query UI. In this preliminary version, the documents are named by their positions on the page. It would be better to extract the city/county names to name the documents.
+
+```{r}
+if (1) {
+  library(DT)
+  datatable(df_sent, options = list(pageLength = 5, searchHighlight = TRUE, search = list(search = 'day'))) 
+}
+```
