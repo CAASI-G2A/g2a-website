@@ -8,7 +8,7 @@
     </button>
 </form>
 {% for obj in locations %}
-    <h1><a href="{%url 'view_location' obj.pk %}"></a>{{obj.name}}</h1>
+    <h1>{{obj.name}}</h1>
     <a href="{%url 'view_location' obj.pk %}" >{{ obj.name }}</a>
 {% endfor %}
 {% endblock %}

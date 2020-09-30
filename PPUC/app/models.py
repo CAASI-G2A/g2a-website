@@ -20,3 +20,9 @@ class Review(models.Model):
     impact = models.CharField(max_length=256)
     def __str__(self):
         return self.section
+
+class Contract(models.Model):
+    location = models.CharField(max_length=40)
+    text = models.TextField()
+    def __str__(self):
+       return self.location

@@ -14,7 +14,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('search/', views.search, name='search'),
+    path('search_contract/', views.search_contract, name='search_contract'),
     path('view_location/<int:lid>', views.view_location, name='view_location'),
+    path('view_contract/<int:cid>', views.view_contract, name='view_contract'),
     path('login/',
          LoginView.as_view
          (
