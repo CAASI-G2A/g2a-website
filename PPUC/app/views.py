@@ -106,4 +106,4 @@ def view_contract(request, cid):
         'text' : contract.text,
               }
     assert isinstance(request, HttpRequest)
-    return render(request,'app/view_contract.html',context)
+    return render(request,'app/test.html',context)
