@@ -63,6 +63,24 @@ def search(request):
         context
     )
 
+def search_contract(request):
+    context = {}
+    query = request.GET.get('q','')
+    if query == '':
+        results = ''
+    else:
+        results = Contract.objects.filter(Q(text__icontains=query))
+
+    context = {
+        'results' : results,
+        }
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/search_contract.html',
+        context
+    )
+
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
@@ -79,3 +97,13 @@ def view_location(request, lid):
                        }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
+
+def view_contract(request, cid):
+    context = {}
+    contract = Contract.objects.get(pk=cid)
+    context = {
+        'location' : contract.location,
+        'text' : contract.text,
+              }
+    assert isinstance(request, HttpRequest)
+    return render(request,'app/test.html',context)
