@@ -1,0 +1,1338 @@
+"","No","City","Contract Review Status","Complaint form / link to complaint process","Contract URL","State","Available Elsewhere Online?","Slack handle of person interested in reviewing this contract.","Expiration Date","Comments","pdfname","pdf_parsing_success"
+"1",1,"Anchorage","Done","Complaint Form: https://www.muni.org/Departments/police/HowDoI/Documents/IACompForm_053112.pdf  Complaint information https://www.muni.org/Departments/police/HowDoI/Documents/APD%201095%20Ver.%205_12.pdf","https://www.muni.org/Departments/employee_relations/Pages/CBA09.aspx","AK","Municipal Website",NA,NA,NA,"001-AK-Anchorage",FALSE
+"2",2,"Chandler","Done","https://www.chandlerpd.com/complaint/","http://www.chandleraz.gov/content/20160623_13.PDF","AZ","Municipal Website",NA,NA,NA,"002-AZ-Chandler",FALSE
+"3",3,"Glendale","Done","https://www.glendaleca.gov/government/departments/police-department/commendation-complaint-forms/gpd-complaint-form-english","https://www.glendaleaz.com/clerk/Contracts/10632.pdf","AZ","Municipal Website",NA,NA,NA,"003-AZ-Glendale",FALSE
+"4",4,"Mesa","Done","https://www.mesaaz.gov/residents/police/units-divisions/professional-standards/professional-standards-complaint-form","https://static1.squarespace.com/static/559fbf2be4b08ef197467542/t/56789d93df40f3876baa8075/1450745235910/Mesa+Police+Union+Contract.pdf","AZ","Campaign Zero",NA,NA,NA,"004-AZ-Mesa",TRUE
+"5",5,"Phoenix","Done","https://www.phoenix.gov/police/commendation-complaint-form","https://azplea.com/wp-content/uploads/2016/06/MOU-2016-2019.pdf","AZ","Municipal Website",NA,NA,NA,"005-AZ-Phoenix",TRUE
+"6",6,"Tucson","Done","https://www.tucsonaz.gov/police/complaints","https://www.tucsonaz.gov/files/hr/tpd/2015-2018_TPOA_Contract.pdf","AZ","Municipal Website",NA,NA,NA,"006-AZ-Tucson",FALSE
+"7",7,"Jacksonville","Done","https://securecomplaintform.jaxsheriff.org/","http://www.coj.net/departments/employee-services/labor-relations","FL","Municipal Website",NA,NA,NA,"007-FL-Jacksonville",FALSE
+"8",8,"Philadelphia","Done","https://www.phillypolice.com/forms/official-complaint-form","http://fop5.org/contract/","PA","Association or Union Website",NA,NA,NA,"008-PA-Philadelphia",FALSE
+"9",9,"Milwaukee","Done","https://city.milwaukee.gov/police/Information-Services/Citizen-Complaints/Online-Complaint-Submission-Form.htm","http://city.milwaukee.gov/der/LaborContracts","WI","Municipal Website",NA,NA,NA,"009-WI-Milwaukee",FALSE
+"10",10,"Columbus","Done","https://www.columbus.gov/Templates/Detail.aspx?ekfrm=2147510737","http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"010-OH-Columbus",FALSE
+"11",11,"Covina","Done","https://covinaca.gov/police/page/department-personnel-complaints-how-they-are-handled#:~:text=A%20complaint%20may%20be%20filed,and%20attached%20to%20the%20form.","https://covinaca.gov/hr/page/memoranda-understanding","CA","Municipal Website",NA,NA,NA,"011-CA-Covina",FALSE
+"12",12,"Bakersfield","Done","https://www.kernsheriff.org/Complaints_Document/citizen_complaint_form.pdf","http://www.bakersfieldcity.us/gov/depts/human_resources/labor_relations.htm","CA","Municipal Website",NA,NA,NA,"012-CA-Bakersfield",FALSE
+"13",13,"Baldwin Park","Done","http://www.baldwinparkpolice.com/wp-content/uploads/2019/05/PERSONNEL-COMPLAINT-FORM.pdf","https://www.baldwinpark.com/docssidemenu/human-resources/mous-memorandums-of-understanding","CA","Municipal Website",NA,NA,NA,"013-CA-Baldwin Park",FALSE
+"14",14,"Berkeley","Done","https://www.cityofberkeley.info/Police/Home_-_translated/Complaints_and_Concerns.aspx#:~:text=During%20regular%20business%20hours%2C%208,(510)%20981%2D5706.","https://www.cityofberkeley.info/Human_Resources/Home/Union_Agreements_and_Employee_Manuals.aspx","CA","Municipal Website",NA,NA,NA,"014-CA-Berkeley",FALSE
+"15",15,"Brea","Done","https://www.ci.brea.ca.us/393/Professional-Standards-Unit","http://www.ci.brea.ca.us/DocumentCenter/View/428","CA","Municipal Website",NA,NA,NA,"015-CA-Brea",TRUE
+"16",16,"Brentwood","Done","https://www.brentwoodca.gov/gov/police/contact/dissatisfied.asp","http://www.brentwoodca.gov/gov/hr/mou.asp","CA","Municipal Website",NA,NA,NA,"016-CA-Brentwood",FALSE
+"17",17,"Buena Park","Done","http://www.bppd.com/Personnel%20Complaint%20Form%20Rev%2002-2016,%202-sided,%20English.pdf","http://www.buenapark.com/city-departments/human-resources/employee-labor-relations","CA","Municipal Website",NA,NA,NA,"017-CA-Buena Park",FALSE
+"18",18,"Burbank","Done","https://www.burbankpd.org/online-services/complaint-form/#:~:text=If%20you%20need%20to%20report,a%20Burbank%20Police%20Department%20employee.","http://www.burbankca.gov/departments/management-services/salary-listings-differentials-mous-employee-gross-earnings","CA","Municipal Website",NA,NA,NA,"018-CA-Burbank",FALSE
+"19",19,"Carlsbad","Done","https://www.carlsbadca.gov/services/depts/police/complaint.asp","http://carlsbad-local.civica.granicuslabs.com/services/depts/hr/compensation.asp","CA","Municipal Website",NA,NA,NA,"019-CA-Carlsbad",FALSE
+"20",20,"Cathedral City","Done","not found","http://www.cathedralcity.gov/services/human-resources/mous","CA","Municipal Website",NA,NA,NA,"020-CA-Cathedral City",FALSE
+"21",21,"Costa Mesa","Done","https://www.costamesaca.gov/home/showdocument?id=40449","https://www.costamesaca.gov/index.aspx?page=1423","CA","Municipal Website",NA,NA,NA,"021-CA-Costa Mesa",FALSE
+"22",22,"Dallas","Done","https://nextdoor.com/agency-post/tx/dallas/dallas-police/how-to-file-a-complaint-4116515/ also a much more recent audit on their complaint process (that points out how they don't have the detailed procedure for complaints stated anywhere and goes into other details): https://dallascityhall.com/departments/auditor/DCH%20Documents/Audit%20of%20the%20Dallas%20Police%20Department%27s%20Complaint%20Process%2011-25-2019.pdf","https://www.dropbox.com/s/8xoor06ynxd7syu/Dallas%20%28updated%29.pdf?dl=0","TX","Not online",NA,NA,NA,"022-TX-Dallas",FALSE
+"23",23,"Oklahoma City","Done","https://www.okc.gov/home/showdocument?id=13238","https://www.dropbox.com/s/wcxpq9rct0v34hw/Oklahoma%20City%20%28updated%20again%29.pdf?dl=0","OK","Not online",NA,NA,NA,"023-OK-Oklahoma City",FALSE
+"24",24,"El Paso","Done","https://www.elpasotexas.gov/police-department/internal-affairs","https://www.muckrock.com/foi/el-paso-339/police-union-contract-el-paso-police-department-18453/","TX","Campaign Zero",NA,NA,NA,"024-TX-El Paso",FALSE
+"25",25,"Dayton","Done","closest i could find to it: http://daytonhrc.org/citizens-appeal-board/","http://www.daytonohio.gov/346/Labor-Agreements","OH","Municipal Website",NA,NA,NA,"025-OH-Dayton",FALSE
+"26",26,"Louisville","Done","https://louisville-police.org/447/Formal-Complaint","https://louisvilleky.gov/government/human-resources/union-contracts","KY","Municipal Website",NA,NA,NA,"026-KY-Louisville",FALSE
+"27",27,"Aurora","Done","https://www.aurora-il.org/2178/FAQs-on-The-Complaint-Process","https://www.auroragov.org/UserFiles/Servers/Server_1881137/File/Residents/Public%20Safety/Police/Join%20the%20APD/2017-2018%20APA-CITY%20Collective%20Bargaining%20Contract.pdf","CO","Municipal Website",NA,NA,NA,"027-CO-Aurora",FALSE
+"28",28,"Detroit","Done","https://detroitmi.gov/government/boards/board-police-commissioners/office-chief-investigator-police-complaints#collapse-vbp-accordion-2416-4","http://www.detroitpoa.com/current_contract.php","MI","Municipal Website",NA,NA,NA,"028-MI-Detroit",FALSE
+"29",29,"Cleveland","Done","http://www.city.cleveland.oh.us/CityofCleveland/Home/Government/CityAgencies/OPS/ComplaintProcess#:~:text=Filing%20A%20Complaint&text=Complete%20and%20Submit%20the%20complaint,Suite%20301%2C%20Cleveland%2C%20Ohio%2044113","http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"029-OH-Cleveland",FALSE
+"30",30,"Fort Worth","Done","https://police.fortworthtexas.gov/Support/internal-affairs#:~:text=Complaints%20can%20be%20generated%20on,timeline%20for%20complaint%20resolution%20here.","https://www.dropbox.com/s/13zg9u3v2jw4ttr/Fort%20Worth%20%28updated%29.pdf?dl=0","TX","Not online",NA,NA,NA,"030-TX-Fort Worth",TRUE
+"31",31,"Houston","Done","https://www.houstontx.gov/police/contact/iad.htm","http://hpou.org/about-us/2011-meet-confer-agreement/","TX","Municipal Website",NA,NA,NA,"031-TX-Houston",FALSE
+"32",32,"Minneapolis","Done","http://www2.minneapolismn.gov/civilrights/policereview/WCMSP-225744","http://www.minneapolismn.gov/hr/laboragreements/","MN","Municipal Website",NA,NA,NA,"032-MN-Minneapolis",FALSE
+"33",33,"Boston","Done","While looking for a link, I came across a site called openpolice.org (https://openpolice.org/dept/MA-boston-police-dept) that said that the BPD has an online form for reporting police misconduct but I was unable to locate it. Then I found in the BPD FAQ (https://bpdnews.com/faq) a section addressing police misconduct reports that said that a ""Internal Affairs Complaint Information Form"" would need to be filled out and mailed or handed in. The only place I could find that form was on this website http://vault.blackstonian.org/wp-content/uploads/2016/11/BPD_complaint_form.pdf","https://www.boston.gov/departments/labor-relations","MA","Municipal Website",NA,NA,NA,"033-MA-Boston",FALSE
+"34",34,"Eugene","Done","https://www.eugene-or.gov/577/Internal-Affairs","https://www.eugene-or.gov/1966/Union-Information","OR","Municipal Website",NA,NA,NA,"034-OR-Eugene",FALSE
+"35",35,"Fort Wayne","Done","http://www.fwpd.org/file-an-internal-affairs-complaint","https://www.muckrock.com/foi/fort-wayne-379/police-union-contract-fort-wayne-police-18426/","IN","Campaign Zero",NA,NA,NA,"035-IN-Fort Wayne",FALSE
+"36",36,"Baltimore","Done","https://www.baltimorepolice.org/citizen-misconduct-complaint-form","https://labor-commissioner.baltimorecity.gov/contract-agreements","MD","Municipal Website",NA,NA,NA,"036-MD-Baltimore",FALSE
+"37",37,"Reno","Done","https://www.renopd.com/IA","http://www.reno.gov/government/departments/human-resources/labor-relations-agreements","NV","Municipal Website",NA,NA,NA,"037-NV-Reno",FALSE
+"38",38,"Sacramento","Done","https://www.cityofsacramento.org/Police/Contact/Personnel-Complaint","https://www.cityofsacramento.org/HR/Divisions/Labor-Relations/Labor-Agreements","CA","Municipal Website",NA,NA,NA,"038-CA-Sacramento",FALSE
+"39",39,"Salinas","Done","https://www.salinaspd.com/content/civilian-complaint","https://www.cityofsalinas.org/our-city-services/human-resources/bargaining-units-mous","CA","Municipal Website",NA,NA,NA,"039-CA-Salinas",FALSE
+"40",40,"San Bernadino","Done","Not found","https://www.ci.san-bernardino.ca.us/civicax/filebank/blobdload.aspx?BlobID=23685","CA","Municipal Website",NA,NA,NA,"040-CA-San Bernadino",FALSE
+"41",41,"San Diego","Done","https://www.sandiego.gov/police/services/officercomments","https://www.sandiego.gov/humanresources/laborrelations","CA","Municipal Website",NA,NA,NA,"041-CA-San Diego",FALSE
+"42",42,"San Francisco","Done","https://www.sanfranciscopolice.org/get-service/police-complaint","http://sfdhr.org/memoranda-understanding","CA","Municipal Website",NA,NA,NA,"042-CA-San Francisco",FALSE
+"43",43,"San Jose","Done","http://www.sjpd.org/cop/ia.html#:~:text=When%20can%20a%20complaint%20be,(408)%20277%2D3920.","https://www.sanjoseca.gov/index.aspx?nid=508","CA","Municipal Website",NA,NA,NA,"043-CA-San Jose",FALSE
+"44",44,"Cincinnati","Done","https://www.cincinnati-oh.gov/ccia/citizen-complaint-investigative-hearing-process/","http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"044-OH-Cincinnati",FALSE
+"45",45,"Saint Petersburg","Done","https://police.stpete.org/employee-complaint/index.html","http://www.stpete.org/city_departments/human_resources/labor_relations_division.php","FL","Municipal Website",NA,NA,NA,"045-FL-Saint Petersburg",FALSE
+"46",46,"Memphis","Done","https://www.memphispolice.org/complaints.asp","http://www.memphispoliceassociation.org/member-resources/","TN","Association or Union Website",NA,NA,NA,"046-TN-Memphis",FALSE
+"47",47,"Las Vegas","Done","https://www.lvmpd.com/en-us/Pages/InternalAffairs-Complaints.aspx","https://lvppa.com/member-benefits/contracts/","NV","Association or Union Website",NA,NA,NA,"047-NV-Las Vegas",FALSE
+"48",48,"Baton Rouge","Done","https://www.brla.gov/1821/Complaint-Form","https://assets.documentcloud.org/documents/3259912/Baton-Rouge-LA.pdf","LA","Media",NA,NA,NA,"048-LA-Baton Rouge",FALSE
+"49",49,"Laredo","Done","Not found","http://www.cityoflaredohr.com/files/Police_Signed_Contract16_20.pdf","TX","Municipal Website",NA,NA,NA,"049-TX-Laredo",FALSE
+"50",50,"Indianapolis","Done","https://www.indy.gov/activity/file-impd-complaint","https://www.muckrock.com/foi/indianapolis-160/police-union-contract-indianapolis-police-department-18442/","IN","Campaign Zero",NA,NA,NA,"050-IN-Indianapolis",FALSE
+"51",51,"Hialeah","Done","Blair","http://www.hialeahfl.gov/index.php?option=com_docman&view=flat&category[0]=204&layout=default&Itemid=716&lang=en","FL","Municipal Website",NA,NA,NA,"051-FL-Hialeah",FALSE
+"52",52,"Honolulu","Done","Blair","https://assets.documentcloud.org/documents/3259918/Honolulu-HI.pdf","HI","Media",NA,NA,NA,"052-HI-Honolulu",TRUE
+"53",53,"Portland","Done","Blair","https://www.portlandoregon.gov/bhr/27840","OR","Municipal Website",NA,NA,NA,"053-OR-Portland",FALSE
+"54",54,"Orlando","Done","Blair","https://orlando.novusagenda.com/AgendaPublic/CoverSheet.aspx?ItemID=41183&MeetingID=796","FL","Municipal Website",NA,NA,NA,"054-FL-Orlando",FALSE
+"55",55,"Miami","Done","Blair","http://www.miamibeachfl.gov/laborrelations/scroll.aspx?id=18468","FL","Municipal Website",NA,NA,NA,"055-FL-Miami",FALSE
+"56",56,"Kansas City","Done","Blair","https://www.lris.com/wp-content/uploads/contracts/kansascity_mo_police.pdf","MO","Labor Relations Information Systems",NA,NA,NA,"056-MO-Kansas City",FALSE
+"57",57,"Madison","Done","Blair","https://www.cityofmadison.com/human-resources/labor-contracts","WI","Municipal Website",NA,NA,NA,"057-WI-Madison",FALSE
+"58",58,"Austin","Done","Blair","http://www.austintexas.gov/department/city-manager/labor-relations","TX","Municipal Website",NA,NA,NA,"058-TX-Austin",FALSE
+"59",59,"Los Angeles","Done","Blair","http://cao.lacity.org/MOUs/","CA","Municipal Website",NA,NA,NA,"059-CA-Los Angeles",FALSE
+"60",60,"Seattle","Done","Blair","https://www.seattle.gov/personnel/resources/agreements.asp","WA","Municipal Website",NA,NA,NA,"060-WA-Seattle",FALSE
+"61",61,"Tampa","Done","https://docs.google.com/spreadsheets/d/12OUTyq9B2fk_DP4obbln4MxLmKu2fUUHhQYDb4TyQuE/edit#gid=0","http://tampapba.org/mobile/index.cfm?action=page&section=26&pagenum=309&href=%2Findex.cfm%3Fsection%3D26%26pagenum%3D309%26titles%3D0","FL","Municipal Website",NA,NA,NA,"061-FL-Tampa",FALSE
+"62",62,"New York","Done","see above link^^^^","https://www1.nyc.gov/site/olr/labor/labor-recent-agreements.page","NY","Municipal Website",NA,NA,NA,"062-NY-New York",FALSE
+"63",63,"North Las Vegas","Done","see above link^^^^","http://emrb.nv.gov/Resources/police/Non-Supervisory/","NV","State Website",NA,NA,NA,"063-NV-North Las Vegas",FALSE
+"64",64,"Lincoln","Done","see above link^^^^","http://lincolnca.gov/home/showdocument?id=1218","NE","Municipal Website",NA,NA,NA,"064-NE-Lincoln",FALSE
+"65",65,"Tulsa","Done","see above link^^^^","https://www.cityoftulsa.org/government/departments/human-resources/union-agreements/","OK","Municipal Website",NA,NA,NA,"065-OK-Tulsa",FALSE
+"66",66,"Saint Paul","Done","see above link^^^^","https://www.stpaul.gov/departments/human-resources/labor-relations","MN","Municipal Website",NA,NA,NA,"066-MN-Saint Paul",FALSE
+"67",67,"Nashville","Done","see above link^^^^","https://www.lris.com/wp-content/uploads/contracts/nashvilledavidson_tn_police.pdf","TN","Labor Relations Information Systems",NA,NA,NA,"067-TN-Nashville",TRUE
+"68",68,"Spokane","Done","see above link^^^^","https://www.muckrock.com/foi/spokane-71/police-union-contract-spokane-police-department-18472/","WA","Campaign Zero",NA,NA,NA,"068-WA-Spokane",FALSE
+"69",69,"Chicago","Done","see above link^^^^","http://www.chicagofop.org/contract/","IL","Municipal Website",NA,NA,NA,"069-IL-Chicago",FALSE
+"70",70,"Rochester","Done","see above link^^^^","http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"070-NY-Rochester",FALSE
+"71",71,"Henderson","Done","https://www.shouselaw.com/nv/blog/laws/how-to-file-a-complaint-against-a-police-officer-in-nevada/","http://emrb.nv.gov/Resources/police/Non-Supervisory/","NV","State Website",NA,NA,NA,"071-NV-Henderson",FALSE
+"72",72,"Buffalo","Done","https://www.bpdny.org/158/Complaint-Process","http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"072-NY-Buffalo",FALSE
+"73",73,"Omaha","Done","https://police.cityofomaha.org/citizen-complaints","https://hr.cityofomaha.org/public-documents/union-contracts","NE","Municipal Website",NA,NA,NA,"073-NE-Omaha",FALSE
+"74",74,"San Antonio","Done","https://www.sanantonio.gov/SAPD/Internal-Affairs","http://www.sanantonio.gov/City-Attorney/CollectiveBargaining","TX","Municipal Website",NA,NA,NA,"074-TX-San Antonio",FALSE
+"75",75,"Saint Louis","Done","https://stlouiscountypolice.com/Citizen-Resources/Complaints-Commendations","https://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/b/93/b9308707-0367-5560-9d70-8448b978916b/53bafe7167668.pdf.pdf","MO","Media",NA,NA,NA,"075-MO-Saint Louis",FALSE
+"76",76,"District of Columbia","Done","Yuru","http://app.ocp.dc.gov/pdf/DCFA-2008-R-0024_Att3.pdf","DC","Municipal Website",NA,NA,NA,"076-DC-District of Columbia",TRUE
+"77",77,"Pittsburgh","Done","Yuru","https://www.muckrock.com/foi/pittsburgh-130/police-union-contract-pittsburgh-bureau-of-police-18486/","PA","Campaign Zero",NA,NA,NA,"077-PA-Pittsburgh",FALSE
+"78",78,"Corpus Christi","Done","Yuru","http://cms.cctexas.com/sites/default/files/HMRES-executed-ccpoa-final-contract.pdf","TX","Municipal Website",NA,NA,NA,"078-TX-Corpus Christi",TRUE
+"79",79,"Newark","Done","Yuru","http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"079-NJ-Newark",FALSE
+"80",80,"Jersey City","Done","Yuru","http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"080-NJ-Jersey City",FALSE
+"81",81,"Jacksonville","Done",NA,"http://www.coj.net/departments/employee-services/labor-relations","FL","Municipal Website",NA,NA,NA,"081-FL-Jacksonville",FALSE
+"82",82,"Philadelphia","Done",NA,"http://fop5.org/contract/","PA","Association or Union Website",NA,NA,NA,"082-PA-Philadelphia",FALSE
+"83",83,"Milwaukee","Done",NA,"http://city.milwaukee.gov/der/LaborContracts","WI","Municipal Website",NA,NA,NA,"083-WI-Milwaukee",FALSE
+"84",84,"Columbus","Done",NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"084-OH-Columbus",FALSE
+"85",85,"Covina","Done",NA,"https://covinaca.gov/hr/page/memoranda-understanding","CA","Municipal Website",NA,NA,NA,"085-CA-Covina",FALSE
+"86",86,"Culver City","Done",NA,"http://www.culvercity.org/city-hall/city-government/city-departments/human-resources/labor-and-employee-relations-mous","CA","Municipal Website",NA,NA,NA,"086-CA-Culver City",FALSE
+"87",87,"Cypress","Done",NA,"http://destinyhosted.com/cypredocs/2016/CCREG/20161010_2/30_MOU_POA-2016%20-2019%20-%20(Redline%2009292016).pdf","CA","Municipal Website",NA,NA,NA,"087-CA-Cypress",FALSE
+"88",88,"Daly City","Done",NA,"http://www.dalycity.org/City_Hall/Departments/home/Employee_and_Labor_Relations/Memorandum_of_Understanding__Employment_Contracts.htm","CA","Municipal Website",NA,NA,NA,"088-CA-Daly City",FALSE
+"89",89,"Davis","Done",NA,"http://cityofdavis.org/city-hall/human-resources/memorandums-of-understanding-mous","CA","Municipal Website",NA,NA,NA,"089-CA-Davis",FALSE
+"90",90,"Delano","Done",NA,"http://www.cityofdelano.org/index.aspx?NID=524","CA","Municipal Website",NA,NA,NA,"090-CA-Delano",FALSE
+"91",91,"Downey","Done",NA,"http://downeyca.org/depts/hr/memoranda_of_understanding.asp","CA","Municipal Website",NA,NA,NA,"091-CA-Downey",FALSE
+"92",92,"El Cajon","Done",NA,"https://www.cityofelcajon.us/home/showdocument?id=8115","CA","Municipal Website",NA,NA,NA,"092-CA-El Cajon",FALSE
+"93",93,"El Monte","Done",NA,"http://www.elmonteca.gov/Government/Finance/CityContracts.aspx","CA","Municipal Website",NA,NA,NA,"093-CA-El Monte",FALSE
+"94",94,"El Paso Robles","Done",NA,"http://www.prcity.com/government/departments/humanresources/","CA","Municipal Website",NA,NA,NA,"094-CA-El Paso Robles",FALSE
+"95",95,"Elk Grove","Done",NA,"http://www.elkgrovecity.org/city_hall/departments_divisions/human_resources/m_o_us_and_agreements","CA","Municipal Website",NA,NA,NA,"095-CA-Elk Grove",FALSE
+"96",96,"Escondido","Done",NA,"https://www.escondido.org/Data/Sites/1/media/pdfs/MOU/EPOASworn.pdf?v=2","CA","Municipal Website",NA,NA,NA,"096-CA-Escondido",TRUE
+"97",97,"Fairfield","Done",NA,"https://www.fairfield.ca.gov/gov/depts/manager/human_resources/memoranda_of_understanding/fairfield_police_officers_association_(fpoa).asp","CA","Municipal Website",NA,NA,NA,"097-CA-Fairfield",FALSE
+"98",98,"Folsom","Done",NA,"http://www.folsom.ca.us/city_hall/depts/human_resources/mous.asp","CA","Municipal Website",NA,NA,NA,"098-CA-Folsom",FALSE
+"99",99,"Fontana","Done",NA,"https://www.fontana.org/326/City-Salary-Tables-MOUs","CA","Municipal Website",NA,NA,NA,"099-CA-Fontana",FALSE
+"100",100,"Fountain Valley","Done",NA,"http://www.fountainvalley.org/263/Memorandums-of-Understanding","CA","Municipal Website",NA,NA,NA,"100-CA-Fountain Valley",FALSE
+"101",101,"Fremont","Done",NA,"https://fremont.gov/452/Memorandums-of-Understanding","CA","Municipal Website",NA,NA,NA,"101-CA-Fremont",FALSE
+"102",102,"Fresno","Done",NA,"https://www.fresno.gov/personnel/human-resources-support/","CA","Municipal Website",NA,NA,NA,"102-CA-Fresno",FALSE
+"103",103,"Fullerton","Done",NA,"https://www.cityoffullerton.com/gov/departments/hr/labor_agreements.asp","CA","Municipal Website",NA,NA,NA,"103-CA-Fullerton",FALSE
+"104",104,"Garden Grove","Done",NA,"https://www.ci.garden-grove.ca.us/internet/pdf/hr/2016-police-mou.pdf","CA","Municipal Website",NA,NA,NA,"104-CA-Garden Grove",TRUE
+"105",105,"Gardena","Done",NA,"https://d17aqltn7cihbm.cloudfront.net/uploads/d03450c15e2ba1c7c6aac6e1a2138005","CA","Municipal Website",NA,NA,NA,"105-CA-Gardena",TRUE
+"106",106,"Gilroy","Done",NA,"http://www.cityofgilroy.org/160/Memorandums-of-Understanding","CA","Municipal Website",NA,NA,NA,"106-CA-Gilroy",FALSE
+"107",107,"Glendale","Done",NA,"http://www.glendaleca.gov/government/departments/police-department/career-opportunities/gpd-advantage/police-officer-employment-contract","CA","Municipal Website",NA,NA,NA,"107-CA-Glendale",FALSE
+"108",108,"Glendora","Done",NA,"http://www.ci.glendora.ca.us/about-glendora/compensation-and-financial-transparency","CA","Municipal Website",NA,NA,NA,"108-CA-Glendora",FALSE
+"109",109,"Hanford","Done",NA,"http://www.ci.hanford.ca.us/depts/admin/mou.asp","CA","Municipal Website",NA,NA,NA,"109-CA-Hanford",FALSE
+"110",110,"Hawthorne","Done",NA,"http://www.cityofhawthorne.org/mou/","CA","Municipal Website",NA,NA,NA,"110-CA-Hawthorne",FALSE
+"111",111,"Hayward","Done",NA,"https://www.hayward-ca.gov/your-government/departments/human-resources/mous","CA","Municipal Website",NA,NA,NA,"111-CA-Hayward",FALSE
+"112",112,"Hemet","Done",NA,"http://www.cityofhemet.org/index.aspx?NID=395","CA","Municipal Website",NA,NA,NA,"112-CA-Hemet",FALSE
+"113",113,"Huntington Beach","Done",NA,"http://www.huntingtonbeachca.gov/government/Departments/Human_Resources/mous/index.cfm","CA","Municipal Website",NA,NA,NA,"113-CA-Huntington Beach",FALSE
+"114",114,"Huntington Park","Done",NA,"http://www.hpca.gov/353/MOUs","CA","Municipal Website",NA,NA,NA,"114-CA-Huntington Park",FALSE
+"115",115,"Indio","Done",NA,"http://www.indio.org/your_government/hr/mous.htm","CA","Municipal Website",NA,NA,NA,"115-CA-Indio",FALSE
+"116",116,"Inglewood","Done",NA,"https://www.cityofinglewood.org/464/Employee-Labor-Relations","CA","Municipal Website",NA,NA,NA,"116-CA-Inglewood",FALSE
+"117",117,"Irvine","Done",NA,"https://legacy.cityofirvine.org/civica/filebank/blobdload.asp?BlobID=10836","CA","Municipal Website",NA,NA,NA,"117-CA-Irvine",TRUE
+"118",118,"La Habra","Done",NA,"http://www.lahabracity.com/771/Salary-Schedule-Employee-MOU","CA","Municipal Website",NA,NA,NA,"118-CA-La Habra",FALSE
+"119",119,"La Mesa","Done",NA,"http://www.cityoflamesa.com/435/MOUs","CA","Municipal Website",NA,NA,NA,"119-CA-La Mesa",FALSE
+"120",120,"Lincoln","Done",NA,"https://www.lincoln.ne.gov/city/person/city/cicontra.htm","CA","Municipal Website",NA,NA,NA,"120-CA-Lincoln",FALSE
+"121",121,"Livermore","Done",NA,"http://www.cityoflivermore.net/citygov/admin/hr/mous.htm","CA","Municipal Website",NA,NA,NA,"121-CA-Livermore",FALSE
+"122",122,"Lodi","Done",NA,"http://www.lodi.gov/human_resources/MOUs.html","CA","Municipal Website",NA,NA,NA,"122-CA-Lodi",FALSE
+"123",123,"Long Beach","Done",NA,"http://www.longbeach.gov/hr/about-us/labor-relations/","CA","Municipal Website",NA,NA,NA,"123-CA-Long Beach",FALSE
+"124",124,"Madera","Done",NA,"https://www.cityofmadera.ca.gov/home/departments/human-resources/benefits/","CA","Municipal Website",NA,NA,NA,"124-CA-Madera",FALSE
+"125",125,"Manhattan Beach","Done",NA,"http://www.citymb.info/city-officials/human-resources/benefits/memoranda-of-understanding","CA","Municipal Website",NA,NA,NA,"125-CA-Manhattan Beach",FALSE
+"126",126,"Manteca","Done",NA,"https://www.ci.manteca.ca.us/HR/mou.aspx","CA","Municipal Website",NA,NA,NA,"126-CA-Manteca",FALSE
+"127",127,"Menlo Park","Done",NA,"https://menlopark.org/388/Labor-agreements","CA","Municipal Website",NA,NA,NA,"127-CA-Menlo Park",FALSE
+"128",128,"Merced","Done",NA,"https://www.cityofmerced.org/depts/personnel/employment/mous.asp","CA","Municipal Website",NA,NA,NA,"128-CA-Merced",FALSE
+"129",129,"Milpitas","Done",NA,"http://www.ci.milpitas.ca.gov/milpitas/departments/about-human-resources-2/employeelabor-relations/","CA","Municipal Website",NA,NA,NA,"129-CA-Milpitas",FALSE
+"130",130,"Modesto","Done",NA,"https://www.modestogov.com/594/Memorandums-of-Understanding","CA","Municipal Website",NA,NA,NA,"130-CA-Modesto",FALSE
+"131",131,"Monterey Park","Done",NA,"http://www.montereypark.ca.gov/220/Salary-Schedule","CA","Municipal Website",NA,NA,NA,"131-CA-Monterey Park",FALSE
+"132",132,"Mountain View","Done",NA,"http://www.mountainview.gov/depts/hr/benefits.asp","CA","Municipal Website",NA,NA,NA,"132-CA-Mountain View",FALSE
+"133",133,"Murrieta","Done",NA,"https://www.murrietaca.gov/departments/hr/mou.asp","CA","Municipal Website",NA,NA,NA,"133-CA-Murrieta",FALSE
+"134",134,"Napa","Done",NA,"http://www.cityofnapa.org/index.php?option=com_content&view=article&id=87&Itemid=1142","CA","Municipal Website",NA,NA,NA,"134-CA-Napa",FALSE
+"135",135,"National City","Done",NA,"http://www.nationalcityca.gov/government/human-resources/employee-benefits-incld-mou-s","CA","Municipal Website",NA,NA,NA,"135-CA-National City",FALSE
+"136",136,"Newport Beach","Done",NA,"http://www.newportbeachca.gov/government/departments/human-resources-department/mous-benefit-summaries","CA","Municipal Website",NA,NA,NA,"136-CA-Newport Beach",FALSE
+"137",137,"Novato","Done",NA,"http://novato.org/government/human-resources/collective-bargaining-agreements-cbas","CA","Municipal Website",NA,NA,NA,"137-CA-Novato",FALSE
+"138",138,"Oakland","Done",NA,"http://www2.oaklandnet.com/oakca1/groups/hrm/documents/memorandum/oak057844.pdf","CA","Municipal Website",NA,NA,NA,"138-CA-Oakland",TRUE
+"139",139,"Oceanside","Done",NA,"https://www.ci.oceanside.ca.us/gov/hr/bargaining.asp","CA","Municipal Website",NA,NA,NA,"139-CA-Oceanside",FALSE
+"140",140,"Ontario","Done",NA,"http://www.ontarioca.gov/human-resources/memoranda-understanding","CA","Municipal Website",NA,NA,NA,"140-CA-Ontario",FALSE
+"141",141,"Orange","Done",NA,"http://www.cityoforange.org/355/Memoranda-of-Understanding-MOU","CA","Municipal Website",NA,NA,NA,"141-CA-Orange",FALSE
+"142",142,"Oxnard","Done",NA,"https://www.oxnard.org/city-department/human-resources/mou-information/","CA","Municipal Website",NA,NA,NA,"142-CA-Oxnard",FALSE
+"143",143,"Palm Springs","Done",NA,"http://www.palmspringsca.gov/government/departments/human-resources/employee-resources/policies-and-mou-s","CA","Municipal Website",NA,NA,NA,"143-CA-Palm Springs",FALSE
+"144",144,"Palo Alto","Done",NA,"http://www.cityofpaloalto.org/gov/depts/human_resources/labor_relations/default.asp","CA","Municipal Website",NA,NA,NA,"144-CA-Palo Alto",FALSE
+"145",145,"Pasadena","Done",NA,"http://cityofpasadena.net/HumanResources/MOU/","CA","Municipal Website",NA,NA,NA,"145-CA-Pasadena",FALSE
+"146",146,"Petaluma","Done",NA,"http://cityofpetaluma.net/hr/mou.html","CA","Municipal Website",NA,NA,NA,"146-CA-Petaluma",FALSE
+"147",147,"Pittsburg","Done",NA,"http://www.ci.pittsburg.ca.us/index.aspx?page=268","CA","Municipal Website",NA,NA,NA,"147-CA-Pittsburg",FALSE
+"148",148,"Placentia","Done",NA,"http://placentia.org/index.aspx?nid=640","CA","Municipal Website",NA,NA,NA,"148-CA-Placentia",FALSE
+"149",149,"Pleasanton","Done",NA,"http://www.cityofpleasantonca.gov/gov/depts/hr/labor.asp","CA","Municipal Website",NA,NA,NA,"149-CA-Pleasanton",FALSE
+"150",150,"Pomona","Done",NA,"http://www.ci.pomona.ca.us/index.php/human-resources-home/employee-relations/memorandum-of-understanding-mou","CA","Municipal Website",NA,NA,NA,"150-CA-Pomona",FALSE
+"151",151,"Redding","Done",NA,"http://www.cityofredding.org/departments/personnel-department/personnel/m-o-u-s","CA","Municipal Website",NA,NA,NA,"151-CA-Redding",FALSE
+"152",152,"Redlands","Done",NA,"http://www.cityofredlands.org/cms/One.aspx?portalId=6255746&pageId=7294618","CA","Municipal Website",NA,NA,NA,"152-CA-Redlands",FALSE
+"153",153,"Redondo Beach","Done",NA,"http://www.redondo.org/depts/hr/mous.asp","CA","Municipal Website",NA,NA,NA,"153-CA-Redondo Beach",FALSE
+"154",154,"Redwood City","Done",NA,"http://www.redwoodcity.org/departments/administrative-services/human-resources","CA","Municipal Website",NA,NA,NA,"154-CA-Redwood City",FALSE
+"155",155,"Rialto","Done",NA,"http://yourrialto.com/human-resources/current-labor-agreements-memorandum-understanding/","CA","Municipal Website",NA,NA,NA,"155-CA-Rialto",FALSE
+"156",156,"Richmond","Done",NA,"http://www.ci.richmond.ca.us/238/MOUs","CA","Municipal Website",NA,NA,NA,"156-CA-Richmond",FALSE
+"157",157,"Riverside","Done",NA,"https://www.riversideca.gov/human/labor/","CA","Municipal Website",NA,NA,NA,"157-CA-Riverside",FALSE
+"158",158,"Rocklin","Done",NA,"http://www.rocklin.ca.us/mous-and-resolutions","CA","Municipal Website",NA,NA,NA,"158-CA-Rocklin",FALSE
+"159",159,"Roseville","Done",NA,"https://www.roseville.ca.us/hr/media/mou/rpa.pdf","CA","Municipal Website",NA,NA,NA,"159-CA-Roseville",FALSE
+"160",160,"San Leandro","Done",NA,"http://www.sanleandro.org/depts/hr/mous_salary_schedules/default.asp","CA","Municipal Website",NA,NA,NA,"160-CA-San Leandro",FALSE
+"161",161,"San Luis Opisbo","Done",NA,"http://www.slocity.org/government/department-directory/human-resources/employee-salaries-benefits/memorandum-of-agreements","CA","Municipal Website",NA,NA,NA,"161-CA-San Luis Opisbo",FALSE
+"162",162,"San Mateo","Done",NA,"http://www.cityofsanmateo.org/866/MOUs-and-Compensation-Resolution","CA","Municipal Website",NA,NA,NA,"162-CA-San Mateo",FALSE
+"163",163,"San Rafael","Done",NA,"https://www.cityofsanrafael.org/employee-contracts/","CA","Municipal Website",NA,NA,NA,"163-CA-San Rafael",FALSE
+"164",164,"San Ramon","Done",NA,"http://www.sanramon.ca.gov/employ/mous.html","CA","Municipal Website",NA,NA,NA,"164-CA-San Ramon",FALSE
+"165",165,"Santa Ana","Done",NA,"http://www.ci.santa-ana.ca.us/personnel/documents.asp","CA","Municipal Website",NA,NA,NA,"165-CA-Santa Ana",FALSE
+"166",166,"Santa Barbara","Done",NA,"http://www.santabarbaraca.gov/gov/depts/adminsvs/hr/relations/mous.asp","CA","Municipal Website",NA,NA,NA,"166-CA-Santa Barbara",FALSE
+"167",167,"Santa Clara","Done",NA,"http://santaclaraca.gov/government/departments/human-resources-/mous-salary-schedules-total-comp-and-procedures","CA","Municipal Website",NA,NA,NA,"167-CA-Santa Clara",FALSE
+"168",168,"Santa Cruz","Done",NA,"http://www.cityofsantacruz.com/government/city-departments/human-resources/memoranda-of-understanding","CA","Municipal Website",NA,NA,NA,"168-CA-Santa Cruz",FALSE
+"169",169,"Santa Maria","Done",NA,"http://www.cityofsantamaria.org/city-government/departments/human-resources-employment/salary-group-agreements","CA","Municipal Website",NA,NA,NA,"169-CA-Santa Maria",FALSE
+"170",170,"Santa Monica","Done",NA,"https://www.smgov.net/Departments/HR/Labor_Relations/MOUs/MOU_s.aspx","CA","Municipal Website",NA,NA,NA,"170-CA-Santa Monica",FALSE
+"171",171,"Santa Rosa","Done",NA,"https://srcity.org/468/Employment-Contracts-MOUs","CA","Municipal Website",NA,NA,NA,"171-CA-Santa Rosa",FALSE
+"172",172,"Simi Valley","Done",NA,"http://www.simivalley.org/departments/city-manager-s-office/human-resources/compensation","CA","Municipal Website",NA,NA,NA,"172-CA-Simi Valley",FALSE
+"173",173,"South Gate","Done",NA,"https://www.dropbox.com/s/uja0q5shyf2fxu5/South%20GateCA.pdf?dl=0","CA","Not online",NA,NA,NA,"173-CA-South Gate",TRUE
+"174",174,"South San Francisco","Done",NA,"http://www.ssf.net/departments/human-resources/job-resources/memorandums-of-understanding-mou","CA","Municipal Website",NA,NA,NA,"174-CA-South San Francisco",FALSE
+"175",175,"Stockton","Done",NA,"http://www.stocktongov.com/government/departments/humanResources/mouAgreements.html","CA","Municipal Website",NA,NA,NA,"175-CA-Stockton",FALSE
+"176",176,"Sunnyvale","Done",NA,"https://sunnyvale.ca.gov/government/jobs/salaries.htm","CA","Municipal Website",NA,NA,NA,"176-CA-Sunnyvale",FALSE
+"177",177,"Torrance","Done",NA,"https://www.torranceca.gov/our-city/human-resources/salary-resolutions","CA","Municipal Website",NA,NA,NA,"177-CA-Torrance",FALSE
+"178",178,"Tracy","Done",NA,"http://www.ci.tracy.ca.us/?navid=804","CA","Municipal Website",NA,NA,NA,"178-CA-Tracy",FALSE
+"179",179,"Tulare","Done",NA,"http://www.tulare.ca.gov/departments/human-resources/labor-contracts-employment-agreements","CA","Municipal Website",NA,NA,NA,"179-CA-Tulare",FALSE
+"180",180,"Turlock","Done",NA,"https://www.turlock.ca.us/workingforus/laborrelationsmou/","CA","Municipal Website",NA,NA,NA,"180-CA-Turlock",FALSE
+"181",181,"Tustin","Done",NA,"http://www.tustinca.org/civicax/filebank/blobdload.aspx?BlobID=24406","CA","Municipal Website",NA,NA,NA,"181-CA-Tustin",FALSE
+"182",182,"Union City","Done",NA,"https://www.dropbox.com/s/3sf1u7lkmjnnc1t/Union%20CityCA.pdf?dl=0","CA","Not online",NA,NA,NA,"182-CA-Union City",FALSE
+"183",183,"Upland","Done",NA,"http://uplandpd.org/uploads/files/mou-UPOA.pdf","CA","Municipal Website",NA,NA,NA,"183-CA-Upland",FALSE
+"184",184,"Vacaville","Done",NA,"http://www.ci.vacaville.ca.us/departments/administrative-services/human-resources/benefits-mous","CA","Municipal Website",NA,NA,NA,"184-CA-Vacaville",FALSE
+"185",185,"Vallejo","Done",NA,"http://www.cityofvallejo.net/cms/One.aspx?portalId=13506&pageId=30679&objectId.2833=50366&contextId.2833=30680&parentId.2833=30681","CA","Municipal Website",NA,NA,NA,"185-CA-Vallejo",FALSE
+"186",186,"Ventura","Done",NA,"https://www.cityofventura.ca.gov/204/Employment-Contracts-Resolutions-MOUs","CA","Municipal Website",NA,NA,NA,"186-CA-Ventura",FALSE
+"187",187,"Visalia","Done",NA,"https://www.visalia.city/civicax/filebank/blobdload.aspx?BlobID=3910","CA","Municipal Website",NA,NA,NA,"187-CA-Visalia",FALSE
+"188",188,"Walnut Creek","Done",NA,"http://www.walnut-creek.org/department-services/human-resources/job-opportunities/labor-agreements","CA","Municipal Website",NA,NA,NA,"188-CA-Walnut Creek",FALSE
+"189",189,"Watsonville","Done",NA,"https://www.cityofwatsonville.org/185/Bargaining-Units","CA","Municipal Website",NA,NA,NA,"189-CA-Watsonville",FALSE
+"190",190,"West Covina","Done",NA,"http://www.westcovina.org/departments/finance-administrative-services/human-resources-risk-management/memorandum-of-understanding-employee-contracts/police-officers-association","CA","Municipal Website",NA,NA,NA,"190-CA-West Covina",FALSE
+"191",191,"West Sacramento","Done",NA,"https://www.cityofwestsacramento.org/city/depts/admin_services/hr/mous.asp","CA","Municipal Website",NA,NA,NA,"191-CA-West Sacramento",FALSE
+"192",192,"Westminster","Done",NA,"http://www.westminster-ca.gov/depts/hr/mous/default.asp","CA","Municipal Website",NA,NA,NA,"192-CA-Westminster",FALSE
+"193",193,"Whittier","Done",NA,"http://www.cityofwhittier.org/depts/controllers.asp","CA","Municipal Website",NA,NA,NA,"193-CA-Whittier",FALSE
+"194",194,"Woodland","Done",NA,"http://www.cityofwoodland.org/gov/depts/adminsrvs/hr/understanding.asp","CA","Municipal Website",NA,NA,NA,"194-CA-Woodland",FALSE
+"195",195,"Yuba City","Done",NA,"http://www.yubacity.net/city_hall/departments/human_resources/bargaining_unit/","CA","Municipal Website",NA,NA,NA,"195-CA-Yuba City",FALSE
+"196",196,"Ceres","Done",NA,"http://www.ci.ceres.ca.us/3043.html","CA","Municipal Website",NA,NA,NA,"196-CA-Ceres",FALSE
+"197",197,"Chico","Done",NA,"http://www.chico.ca.us/human_resources_and_risk_management/labor_agreements_home.asp","CA","Municipal Website",NA,NA,NA,"197-CA-Chico",FALSE
+"198",198,"Chino","Done",NA,"http://www.cityofchino.org/government-services/human-resources/labor-agreements-benefit-summaries","CA","Municipal Website",NA,NA,NA,"198-CA-Chino",FALSE
+"199",199,"Chula Vista","Done",NA,"http://www.chulavistaca.gov/departments/human-resources/about-us/bargaining-agreements-mous","CA","Municipal Website",NA,NA,NA,"199-CA-Chula Vista",FALSE
+"200",200,"Citrus Heights","Done",NA,"http://www.citrusheights.net/783/Labor-Relations","CA","Municipal Website",NA,NA,NA,"200-CA-Citrus Heights",FALSE
+"201",201,"Clovis","Done",NA,"https://www.ci.clovis.ca.us/Departments-Services/Personnel/Employee-Resources","CA","Municipal Website",NA,NA,NA,"201-CA-Clovis",FALSE
+"202",202,"Colton","Done",NA,"http://www.coltononline.com/index.aspx?NID=174","CA","Municipal Website",NA,NA,NA,"202-CA-Colton",FALSE
+"203",203,"Concord","Done",NA,"http://www.cityofconcord.org/page.asp?pid=7013","CA","Municipal Website",NA,NA,NA,"203-CA-Concord",FALSE
+"204",204,"Corona","Done",NA,"http://www.discovercorona.org/City-Departments/Human-Resources/MOU-s-Resulutions.aspx","CA","Municipal Website",NA,NA,NA,"204-CA-Corona",FALSE
+"205",NA,"Fairbanks",NA,NA,"http://www.psea.net/?page_id=2531","AK","Association or Union Website",NA,NA,NA,"205-AK-Fairbanks",FALSE
+"206",NA,"Juneau",NA,NA,"http://www.psea.net/wp-content/uploads/2016/10/Juneau-Contract-1.pdf?iframe=true&width=100%&height=100%","AK","Association or Union Website",NA,NA,NA,"206-AK-Juneau",FALSE
+"207",NA,"Little Rock",NA,NA,"https://www.littlerock.gov/for-job-seekers/human-resources/helpful-documents/union-agreements/","AR","Municipal Website",NA,NA,NA,"207-AR-Little Rock",FALSE
+"208",NA,"Goodyear",NA,NA,"https://www.dropbox.com/s/tdlss3ujp9fa2ba/GoodyearAZ.pdf?dl=0","AZ","Not online",NA,NA,NA,"208-AZ-Goodyear",FALSE
+"209",NA,"Lake Havasu",NA,NA,"https://www.dropbox.com/s/t73xto3b38zyipy/Lake%20Havasu%20CityAZ.pdf?dl=0","AZ","Not online",NA,NA,NA,"209-AZ-Lake Havasu",TRUE
+"210",NA,"Peoria",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/peoria_az_police.pdf","AZ","Labor Relations Information Systems",NA,NA,NA,"210-AZ-Peoria",TRUE
+"211",NA,"Tempe",NA,NA,"http://www.tempe.gov/city-hall/internal-services/human-resources/personnel-rules-mous","AZ","Municipal Website",NA,NA,NA,"211-AZ-Tempe",FALSE
+"212",NA,"Boulder",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/boulder_co_police.pdf","CO","Labor Relations Information Systems",NA,NA,NA,"212-CO-Boulder",TRUE
+"213",NA,"Commerce City",NA,NA,"https://www.dropbox.com/s/5s47hps90xb913b/Commerce%20CityCO.pdf?dl=0","CO","Not online",NA,NA,NA,"213-CO-Commerce City",FALSE
+"214",NA,"Denver",NA,NA,"https://www.denvergov.org/content/dam/denvergov/Portals/744/documents/recruiting/DPD%20Collective%20Bargaining%20Agreement%202015-2017.pdf","CO","Municipal Website",NA,NA,NA,"214-CO-Denver",FALSE
+"215",NA,"Fort Collins",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/fortcollins_co_police.pdf","CO","Labor Relations Information Systems",NA,NA,NA,"215-CO-Fort Collins",FALSE
+"216",NA,"Greeley",NA,NA,"https://www.dropbox.com/s/v2zgt5guvs6ngks/GreeleyCO.pdf?dl=0","CO","Not online",NA,NA,NA,"216-CO-Greeley",TRUE
+"217",NA,"Pueblo",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/pueblo_co_police.pdf","CO","Association or Union Website",NA,NA,NA,"217-CO-Pueblo",TRUE
+"218",NA,"Thornton",NA,NA,"https://www.dropbox.com/s/778nh7fyi5vjrvx/ThorntonCO.pdf?dl=0","CO","Not online",NA,NA,NA,"218-CO-Thornton",TRUE
+"219",NA,"Bridgeport",NA,NA,"http://www.bridgeportct.gov/content/89019/96373/default.aspx","CT","Municipal Website",NA,NA,NA,"219-CT-Bridgeport",FALSE
+"220",NA,"Bristol",NA,NA,"http://www.ci.bristol.ct.us/DocumentCenter/Home/View/469","CT","Municipal Website",NA,NA,NA,"220-CT-Bristol",TRUE
+"221",NA,"Greenwich",NA,NA,"http://www.greenwichct.org/government/departments/labor_relations/","CT","Municipal Website",NA,NA,NA,"221-CT-Greenwich",FALSE
+"222",NA,"Hartford",NA,NA,"http://www.hartford.gov/humanresources/labor-contracts","CT","Municipal Website",NA,NA,NA,"222-CT-Hartford",FALSE
+"223",NA,"Manchester",NA,NA,"http://hrd1.townofmanchester.org/index.cfm/employee-contracts/","CT","Municipal Website",NA,NA,NA,"223-CT-Manchester",FALSE
+"224",NA,"Meriden",NA,NA,"https://www.meridenct.gov/government/departments/human-resources/contracts/","CT","Municipal Website",NA,NA,NA,"224-CT-Meriden",FALSE
+"225",NA,"Middletown",NA,NA,"http://www.cityofmiddletown.com/content/117/121/161/1875/default.aspx","CT","Municipal Website",NA,NA,NA,"225-CT-Middletown",FALSE
+"226",NA,"Milford",NA,NA,"http://www.ci.milford.ct.us/personnel/pages/union-contracts","CT","Municipal Website",NA,NA,NA,"226-CT-Milford",FALSE
+"227",NA,"Naugatuck",NA,NA,"http://www.naugatuck-ct.gov/filestorage/166/203/1588/AFSCME_Local_1126_Police.pdf","CT","Municipal Website",NA,NA,NA,"227-CT-Naugatuck",FALSE
+"228",NA,"New Haven",NA,NA,"http://www.newhavenct.gov/gov/depts/hr/city_employees/city_bargaining_union_contracts.htm","CT","Municipal Website",NA,NA,NA,"228-CT-New Haven",FALSE
+"229",NA,"Norwalk",NA,NA,"http://www.norwalkct.org/548/Contracts","CT","Municipal Website",NA,NA,NA,"229-CT-Norwalk",FALSE
+"230",NA,"Norwich",NA,NA,"http://www.norwichct.org/Index.aspx?NID=513","CT","Municipal Website",NA,NA,NA,"230-CT-Norwich",FALSE
+"231",NA,"Stamford",NA,NA,"https://www.stamfordct.gov/human-resources/pages/union-contracts-and-salary-wage-schedules","CT","Municipal Website",NA,NA,NA,"231-CT-Stamford",FALSE
+"232",NA,"Stratford",NA,NA,"http://www.townofstratford.com/content/39832/39846/39917/67331.aspx","CT","Municipal Website",NA,NA,NA,"232-CT-Stratford",FALSE
+"233",NA,"Torrington",NA,NA,"https://www.torringtonct.org/personnel-department/pages/current-union-contracts","CT","Municipal Website",NA,NA,NA,"233-CT-Torrington",FALSE
+"234",NA,"Waterbury",NA,NA,"http://www.waterburyct.org/content/9569/9605/9625/9882/default.aspx","CT","Municipal Website",NA,NA,NA,"234-CT-Waterbury",FALSE
+"235",NA,"West Hartford",NA,NA,"https://www.westhartfordct.gov/gov/departments/employee_services/labor.asp","CT","Municipal Website",NA,NA,NA,"235-CT-West Hartford",FALSE
+"236",NA,"Dover",NA,NA,"https://www.cityofdover.com/labor-contracts","DE","Municipal Website",NA,NA,NA,"236-DE-Dover",FALSE
+"237",NA,"Newark",NA,NA,"https://newarkde.gov/556/Labor-Contracts","DE","Municipal Website",NA,NA,NA,"237-DE-Newark",FALSE
+"238",NA,"Wilmington",NA,NA,"https://www.dropbox.com/s/chwxpeaaq0vr07o/WilmingtonDE.pdf?dl=0","DE","Not online",NA,NA,NA,"238-DE-Wilmington",FALSE
+"239",NA,"Aventura",NA,NA,"http://cityofaventura.com/Modules/ShowDocument.aspx?documentid=5718","FL","Municipal Website",NA,NA,NA,"239-FL-Aventura",FALSE
+"240",NA,"Boca Raton",NA,NA,"https://www.myboca.us/DocumentCenter/Home/View/1195","FL","Municipal Website",NA,NA,NA,"240-FL-Boca Raton",FALSE
+"241",NA,"Boynton Beach",NA,NA,"http://ww1.boynton-beach.org/weblink/browse.aspx?startid=674&dbid=0","FL","Association or Union Website",NA,NA,NA,"241-FL-Boynton Beach",FALSE
+"242",NA,"Bradenton",NA,NA,"http://www.cityofbradenton.com/vertical/Sites/%7B2D1C3C91-86C5-4ACC-86B6-6CFA76381D46%7D/uploads/Bradenton_P_D__2016-2019_Final_012317.pdf","FL","Municipal Website",NA,NA,NA,"242-FL-Bradenton",FALSE
+"243",NA,"Cape Coral",NA,NA,"https://www.dropbox.com/s/susuprrhed2nnd5/Cape%20CoralFL.pdf?dl=0","FL",NA,NA,NA,NA,"243-FL-Cape Coral",TRUE
+"244",NA,"Clearwater",NA,NA,"http://www.myclearwater.com/home/showdocument?id=864","FL","Municipal Website",NA,NA,NA,"244-FL-Clearwater",FALSE
+"245",NA,"Coconut Creek",NA,NA,"https://www.coconutcreek.net/docs/default-source/hrdocs/pba-ofcs-cpls-contract-2016-2019.pdf?sfvrsn=4","FL","Municipal Website",NA,NA,NA,"245-FL-Coconut Creek",TRUE
+"246",NA,"Coral Gables",NA,NA,"http://www.coralgables.com/index.aspx?page=459","FL","Municipal Website",NA,NA,NA,"246-FL-Coral Gables",FALSE
+"247",NA,"Coral Springs",NA,NA,"http://www.coralsprings.org/government/other-departments-and-services/human-resources/union-contracts","FL","Municipal Website",NA,NA,NA,"247-FL-Coral Springs",FALSE
+"248",NA,"Davie",NA,NA,"http://daviefl.virtualtownhall.net/Pages/DavieFL_HumanResrs/CBAs/index","FL","Municipal Website",NA,NA,NA,"248-FL-Davie",FALSE
+"249",NA,"Daytona Beach",NA,NA,"http://www.coastalfloridapba.us/daytona-beach-pd.html","FL","Association or Union Website",NA,NA,NA,"249-FL-Daytona Beach",FALSE
+"250",NA,"Delray Beach",NA,NA,"http://www.mydelraybeach.com/departments/human_resources/collective_bargaining_agreements.php","FL","Municipal Website",NA,NA,NA,"250-FL-Delray Beach",FALSE
+"251",NA,"Doral",NA,NA,"http://cityofdoral.granicus.com/MetaViewer.php?view_id=2&clip_id=244&meta_id=33478","FL","Municipal Website",NA,NA,NA,"251-FL-Doral",FALSE
+"252",NA,"Fort Lauderdale",NA,NA,"http://www.fortlauderdale.gov/departments/human-resources/human-resources-administration/employee-relations-office-of-professional-standards","FL","Municipal Website",NA,NA,NA,"252-FL-Fort Lauderdale",FALSE
+"253",NA,"Fort Myers",NA,NA,"http://gulfcoastpba.com/cba.php","FL","Association or Union Website",NA,NA,NA,"253-FL-Fort Myers",FALSE
+"254",NA,"Fort Pierce",NA,NA,"http://www.cityoffortpierce.com/179/Union-Contracts-Civil-Service-Appeals","FL","Municipal Website",NA,NA,NA,"254-FL-Fort Pierce",FALSE
+"255",NA,"Gainesville",NA,NA,"https://cityofgainesville.org/Portals/0/hr/PBA%202014-2017.pdf","FL","Municipal Website",NA,NA,NA,"255-FL-Gainesville",FALSE
+"256",NA,"Greenacres",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/greenacres_fl_police.pdf","FL","Labor Relations Information Systems",NA,NA,NA,"256-FL-Greenacres",TRUE
+"257",NA,"Hallandale",NA,NA,"http://www.hallandalebeachfl.gov/609/Union-Contracts-Pension-Information","FL","Municipal Website",NA,NA,NA,"257-FL-Hallandale",FALSE
+"258",NA,"Hollywood",NA,NA,"http://bcpba.org/bcpba-contracts/","FL","Association or Union Website",NA,NA,NA,"258-FL-Hollywood",FALSE
+"259",NA,"Jupiter",NA,NA,"http://pbcpba.org/agency-info/contracts-mous/","FL","Association or Union Website",NA,NA,NA,"259-FL-Jupiter",FALSE
+"260",NA,"Kissimmee",NA,NA,"https://www.dropbox.com/s/dyclet8u7wgfr29/KissimmeeFL.pdf?dl=0","FL","Not online",NA,NA,NA,"260-FL-Kissimmee",TRUE
+"261",NA,"Lakeland",NA,NA,"http://www.wcfpba.org/contracts/lakeland_officers_oct09.pdf","FL","Association or Union Website",NA,NA,NA,"261-FL-Lakeland",FALSE
+"262",NA,"Largo",NA,NA,"http://www.suncoastpba.com/docs/contracts/largo-2014-17.pdf","FL","Association or Union Website",NA,NA,NA,"262-FL-Largo",FALSE
+"263",NA,"Lauderhill",NA,NA,"http://www.lauderhillpolicepension.org/docs/announcements/FOP-2010-2013.pdf","FL","Association or Union Website",NA,NA,NA,"263-FL-Lauderhill",TRUE
+"264",NA,"Margate",NA,NA,"https://margatefl.legistar.com/LegislationDetail.aspx?ID=2705576&GUID=400851F4-50E7-49C4-9971-62FFC3D4E691","FL","Municipal Website",NA,NA,NA,"264-FL-Margate",FALSE
+"265",NA,"Melbourne",NA,NA,"http://www.coastalfloridapba.us/melbourne-pd.html","FL","Association or Union Website",NA,NA,NA,"265-FL-Melbourne",FALSE
+"266",NA,"Miami Beach",NA,NA,"http://www.miamigov.com/employeerel/pages/labor/union_contracts/FOP%20contract%202015-2018-%20Official.pdf","FL","Municipal Website",NA,NA,NA,"266-FL-Miami Beach",FALSE
+"267",NA,"Miami Gardens",NA,NA,"https://www.dropbox.com/s/y56oqtui4szpr5p/Miami%20GardensFL.pdf?dl=0","FL","Not online",NA,NA,NA,"267-FL-Miami Gardens",TRUE
+"268",NA,"Miramar",NA,NA,"http://bcpba.org/bcpba-contracts/","FL","Association or Union Website",NA,NA,NA,"268-FL-Miramar",FALSE
+"269",NA,"North Miami",NA,NA,"http://www.northmiamifl.gov/Docs/AgendasMinutes/TABJ07102012.pdf","FL","Municipal Website",NA,NA,NA,"269-FL-North Miami",FALSE
+"270",NA,"North Miami Beach",NA,NA,"http://www.citynmb.com/index.asp?SEC=55C213F0-0453-46D4-B707-CFE5E2D638C9#{93746125-8761-4C83-BB9C-F90D56015E06}","FL","Municipal Website",NA,NA,NA,"270-FL-North Miami Beach",FALSE
+"271",NA,"Ocala",NA,NA,"http://www.ocalafl.org/home/showdocument?id=2477","FL","Municipal Website",NA,NA,NA,"271-FL-Ocala",TRUE
+"272",NA,"Ocoee",NA,NA,"http://www.ocoee.org/documentcenter/view/3898","FL","Municipal Website",NA,NA,NA,"272-FL-Ocoee",TRUE
+"273",NA,"Ormond Beach",NA,NA,"https://ormondbeach.iqm2.com/Citizens/FileOpen.aspx?Type=30&ID=1144","FL","Municipal Website",NA,NA,NA,"273-FL-Ormond Beach",TRUE
+"274",NA,"Oviedo",NA,NA,"http://www.coastalfloridapba.us/oviedo-pd.html","FL","Association or Union Website",NA,NA,NA,"274-FL-Oviedo",FALSE
+"275",NA,"Palm Bay",NA,NA,"http://www.palmbayflorida.org/government/departments/human-resources/about-us/union-information","FL","Municipal Website",NA,NA,NA,"275-FL-Palm Bay",FALSE
+"276",NA,"Palm Beach Gardens",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/palmbeachgardens_fl_police.pdf","FL","Labor Relations Information Systems",NA,NA,NA,"276-FL-Palm Beach Gardens",TRUE
+"277",NA,"Pembroke Pines",NA,NA,"http://bcpba.org/bcpba-contracts/","FL","Association or Union Website",NA,NA,NA,"277-FL-Pembroke Pines",FALSE
+"278",NA,"Pensacola",NA,NA,"http://www.cityofpensacola.com/documentcenter/view/7373","FL","Municipal Website",NA,NA,NA,"278-FL-Pensacola",TRUE
+"279",NA,"Plantation",NA,NA,"http://plantation.novusagenda.com/agendapublic/AttachmentViewer.ashx?AttachmentID=8053&ItemID=5434","FL","Municipal Website",NA,NA,NA,"279-FL-Plantation",TRUE
+"280",NA,"Port Orange",NA,NA,"http://www.coastalfloridapba.us/port-orange--city-of.html","FL","Association or Union Website",NA,NA,NA,"280-FL-Port Orange",FALSE
+"281",NA,"Port St. Lucie",NA,NA,"http://www.cityofpsl.com/hr/pdf/union_contracts/","FL","Municipal Website",NA,NA,NA,"281-FL-Port St. Lucie",FALSE
+"282",NA,"Sarasota",NA,NA,"http://sarasotagov.org/HR/UnionContracts.cfm","FL","Municipal Website",NA,NA,NA,"282-FL-Sarasota",FALSE
+"283",NA,"Sunrise",NA,NA,"https://www.sunrisefl.gov/index.aspx?page=341","FL","Municipal Website",NA,NA,NA,"283-FL-Sunrise",FALSE
+"284",NA,"Titusville",NA,NA,"http://www.titusville.com/SIB/files/FOP-Officers%20Agreement%2010012016%20-%2009302019.pdf","FL","Municipal Website",NA,NA,NA,"284-FL-Titusville",FALSE
+"285",NA,"West Palm Beach",NA,NA,"http://wpb.org/Departments/Human-Resources/Employee-Relations","FL","Association or Union Website",NA,NA,NA,"285-FL-West Palm Beach",FALSE
+"286",NA,"Ames",NA,NA,"https://www.dropbox.com/s/ttdmwt1oubcvtp3/AmesIA.pdf?dl=0","IA","Not online",NA,NA,NA,"286-IA-Ames",TRUE
+"287",NA,"Ankeny",NA,NA,"http://www.ankenyiowa.gov/departments/human-resources/employee-handbook-union-contracts","IA","Municipal Website",NA,NA,NA,"287-IA-Ankeny",FALSE
+"288",NA,"Bettendorf",NA,NA,"http://www.bettendorf.org/egov/apps/document/center.egov?view=detail&id=2161","IA","Municipal Website",NA,NA,NA,"288-IA-Bettendorf",FALSE
+"289",NA,"Cedar Rapids",NA,NA,"http://www.cedar-rapids.org/document_center/HR/Class%20&%20Compensation/Union%20Contracts/Police%20063019.pdf","IA","Municipal Website",NA,NA,NA,"289-IA-Cedar Rapids",FALSE
+"290",NA,"Council Bluffs",NA,NA,"https://www.dropbox.com/s/ivbu9nyusc5k0wr/Council%20BluffsIA%20%28updated%29.pdf?dl=0","IA","Municipal Website",NA,NA,NA,"290-IA-Council Bluffs",TRUE
+"291",NA,"Davenport",NA,NA,"http://www.cityofdavenportiowa.com/department/division.php?structureid=192","IA","Municipal Website",NA,NA,NA,"291-IA-Davenport",FALSE
+"292",NA,"Des Moines",NA,NA,"https://www.dmgov.org/Departments/HumanResources/Pages/ContractsAgreements.aspx","IA","Municipal Website",NA,NA,NA,"292-IA-Des Moines",FALSE
+"293",NA,"Dubuque",NA,NA,"http://www.cityofdubuque.org/DocumentCenter/Home/View/2559","IA","Municipal Website",NA,NA,NA,"293-IA-Dubuque",TRUE
+"294",NA,"Iowa City",NA,NA,"https://www.icgov.org/city-government/departments-and-divisions/human-resources/policies-contracts-and-pay-plans","IA","Municipal Website",NA,NA,NA,"294-IA-Iowa City",FALSE
+"295",NA,"Sioux City",NA,NA,"https://www.sioux-city.org/government/departments-g-p/human-resources/labor-relations-compensation","IA","Municipal Website",NA,NA,NA,"295-IA-Sioux City",FALSE
+"296",NA,"West Des Moines",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/westdesmoines_ia_police.pdf","IA","Labor Relations Information Systems",NA,NA,NA,"296-IA-West Des Moines",TRUE
+"297",NA,"Boise",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/boise_id_police.pdf","ID","Labor Relations Information Systems",NA,NA,NA,"297-ID-Boise",FALSE
+"298",NA,"Pocatello",NA,NA,"https://www.dropbox.com/s/9cr1bzijht2a1g4/PocatelloID.PDF?dl=0","ID","Not online",NA,NA,NA,"298-ID-Pocatello",FALSE
+"299",NA,"Addison",NA,NA,"https://www.bettergov.org/addison-police","IL","Media",NA,NA,NA,"299-IL-Addison",FALSE
+"300",NA,"Algonquin",NA,NA,"http://www.algonquin.org/egov/documents/1403030828_4462.pdf","IL","Municipal Website",NA,NA,NA,"300-IL-Algonquin",TRUE
+"301",NA,"Arlington Heights",NA,NA,"http://www.vah.com/assets/1/documents/2014-2017_Police_Contract.pdf","IL","Municipal Website",NA,NA,NA,"301-IL-Arlington Heights",FALSE
+"302",NA,"Aurora",NA,NA,"https://www.bettergov.org/aurora-police","IL","State Website",NA,NA,NA,"302-IL-Aurora",FALSE
+"303",NA,"Bartlett",NA,NA,"http://www.village.bartlett.il.us/government/government-transparency","IL","Municipal Website",NA,NA,NA,"303-IL-Bartlett",FALSE
+"304",NA,"Belleville",NA,NA,"http://www.belleville.net/DocumentCenter/View/2272","IL","Municipal Website",NA,NA,NA,"304-IL-Belleville",FALSE
+"305",NA,"Berwyn",NA,NA,"https://www.bettergov.org/berwyn-police","IL","Media",NA,NA,NA,"305-IL-Berwyn",FALSE
+"306",NA,"Bloomington",NA,NA,"http://www.cityblm.org/government/departments/human-resources/labor-contracts","IL","Municipal Website",NA,NA,NA,"306-IL-Bloomington",FALSE
+"307",NA,"Bolingbrook",NA,NA,"http://www.bolingbrook.com/union_contracts","IL","Municipal Website",NA,NA,NA,"307-IL-Bolingbrook",FALSE
+"308",NA,"Buffalo Grove",NA,NA,"http://www.vbg.org/793/Village-Labor-Agreements","IL","Municipal Website",NA,NA,NA,"308-IL-Buffalo Grove",FALSE
+"309",NA,"Calumet City",NA,NA,"https://www.bettergov.org/calumet-city-police","IL","Media",NA,NA,NA,"309-IL-Calumet City",FALSE
+"310",NA,"Carol Stream",NA,NA,"https://www.bettergov.org/carol-stream-police","IL","Media",NA,NA,NA,"310-IL-Carol Stream",FALSE
+"311",NA,"Carpentersville",NA,NA,"http://www.cville.org/Services/Human-Resources/Collective-Bargaining-Agreements.aspx","IL","Municipal Website",NA,NA,NA,"311-IL-Carpentersville",FALSE
+"312",NA,"Champaign",NA,NA,"http://champaignil.gov/hr/jobs/bargaining-units/","IL","Municipal Website",NA,NA,NA,"312-IL-Champaign",FALSE
+"313",NA,"Chicago Heights",NA,NA,"https://www.bettergov.org/chicago-heights-police","IL","Media",NA,NA,NA,"313-IL-Chicago Heights",FALSE
+"314",NA,"Cicero",NA,NA,"https://www.bettergov.org/cicero-police-patrol","IL","Media",NA,NA,NA,"314-IL-Cicero",FALSE
+"315",NA,"Crystal Lake",NA,NA,"http://www.crystallake.org/about-us/website-transparency","IL","Municipal Website",NA,NA,NA,"315-IL-Crystal Lake",FALSE
+"316",NA,"Danville",NA,NA,"http://www.cityofdanville.org/human-resources.html","IL","Municipal Website",NA,NA,NA,"316-IL-Danville",FALSE
+"317",NA,"Decatur",NA,NA,"https://www.decaturil.gov/departments/human-resources/labor-agreement/","IL","Municipal Website",NA,NA,NA,"317-IL-Decatur",FALSE
+"318",NA,"DeKalb",NA,NA,"http://www.cityofdekalb.com/255/Collective-Bargaining-Agreements-Pay-Pla","IL","Municipal Website",NA,NA,NA,"318-IL-DeKalb",FALSE
+"319",NA,"Des Plaines",NA,NA,"https://www.bettergov.org/des-plaines-police","IL","Municipal Website",NA,NA,NA,"319-IL-Des Plaines",FALSE
+"320",NA,"Downers Grove",NA,NA,"http://www.downers.us/govt/village-managers-office/transparency","IL","Municipal Website","Daniel Riggins",NA,NA,"320-IL-Downers Grove",FALSE
+"321",NA,"Elgin",NA,NA,"http://www.cityofelgin.org/DocumentCenter/Index/1852","IL","Municipal Website",NA,NA,NA,"321-IL-Elgin",FALSE
+"322",NA,"Elk Grove",NA,NA,"https://www.bettergov.org/elk-grove-police","IL","Media",NA,NA,NA,"322-IL-Elk Grove",FALSE
+"323",NA,"Elmhurst",NA,NA,"https://assets.documentcloud.org/documents/2828122/Elmhurst-Police.pdf","IL","Labor Relations Information Systems",NA,NA,NA,"323-IL-Elmhurst",FALSE
+"324",NA,"Evanston",NA,NA,"https://www.bettergov.org/evanston-police-telecommunicators-other","IL","Media",NA,NA,NA,"324-IL-Evanston",FALSE
+"325",NA,"Galesburg",NA,NA,"http://www.ci.galesburg.il.us/government/human_resources/","IL","Municipal Website",NA,NA,NA,"325-IL-Galesburg",FALSE
+"326",NA,"Glendale Heights",NA,NA,"https://web01.glendaleheights.org/myvogh/HR/contracts.html","IL","Municipal Website",NA,NA,NA,"326-IL-Glendale Heights",FALSE
+"327",NA,"Glenview",NA,NA,"http://www.glenview.il.us/government/Pages/Salary-Benefits.aspx","IL","Municipal Website",NA,NA,NA,"327-IL-Glenview",FALSE
+"328",NA,"Gurnee",NA,NA,"http://www.gurnee.il.us/government/transparency-portal/collective-bargaining-agreements/docs/default-source/human-resources/union-contracts/fopmay2015-april2019","IL","Municipal Website",NA,NA,NA,"328-IL-Gurnee",FALSE
+"329",NA,"Hanover Park",NA,NA,"https://www.hanoverparkillinois.org/Services/Human-Resources.aspx","IL","Municipal Website",NA,NA,NA,"329-IL-Hanover Park",FALSE
+"330",NA,"Hoffman Estates",NA,NA,"http://www.hoffmanestates.org/government/police/police-collective-bargaining-agreements","IL","Municipal Website",NA,NA,NA,"330-IL-Hoffman Estates",FALSE
+"331",NA,"Joliet",NA,NA,"http://cityofjoliet.info/home/showdocument?id=4231","IL","Municipal Website",NA,NA,NA,"331-IL-Joliet",FALSE
+"332",NA,"Lombard",NA,NA,"http://www.villageoflombard.org/2914/Union-Contracts","IL","Municipal Website",NA,NA,NA,"332-IL-Lombard",FALSE
+"333",NA,"Moline",NA,NA,"http://www.moline.il.us/index.aspx?NID=110","IL","Municipal Website",NA,"6/30/2018 (Rob Blumstein)",NA,"333-IL-Moline",FALSE
+"334",NA,"Mount Prospect",NA,NA,"http://www.mountprospect.org/departments/village-administration/human-resources/collective-bargaining-agreements","IL","Municipal Website",NA,NA,NA,"334-IL-Mount Prospect",FALSE
+"335",NA,"Mundelein",NA,NA,"http://www.mundelein.org/government/human-resources","IL","Municipal Website",NA,NA,NA,"335-IL-Mundelein",FALSE
+"336",NA,"Naperville",NA,NA,"https://www.bettergov.org/naperville-police","IL","State Website",NA,NA,NA,"336-IL-Naperville",FALSE
+"337",NA,"Normal",NA,NA,"https://www.normal.org/145/Collective-Bargaining-Agreements","IL","Municipal Website",NA,NA,NA,"337-IL-Normal",FALSE
+"338",NA,"North Chicago",NA,NA,"http://www.northchicago.org/index.asp?SEC=29120554-A1AD-467C-B1E8-09DC6EF0B067&DE=F46FE16D-01DE-41B3-81B6-F7733BDA0E9B&Type=B_BASIC","IL","Municipal Website",NA,NA,NA,"338-IL-North Chicago",FALSE
+"339",NA,"Northbrook",NA,NA,"https://www.bettergov.org/northbrook-police","IL","Media",NA,NA,NA,"339-IL-Northbrook",FALSE
+"340",NA,"Oak Lawn",NA,NA,"http://www.oaklawn-il.gov/government/village-clerk/contracts/-folder-707","IL","Municipal Website",NA,NA,NA,"340-IL-Oak Lawn",FALSE
+"341",NA,"Oak Park",NA,NA,"https://www.bettergov.org/oak-park-police","IL","Media",NA,NA,NA,"341-IL-Oak Park",FALSE
+"342",NA,"Orlando Park",NA,NA,"https://www.orland-park.il.us/index.aspx?NID=1423","IL","Municipal Website",NA,NA,NA,"342-IL-Orlando Park",FALSE
+"343",NA,"Oswego",NA,NA,"http://www.oswegoil.org/MAPContract.pdf","IL","Municipal Website",NA,NA,NA,"343-IL-Oswego",FALSE
+"344",NA,"Palatine",NA,NA,"https://www.bettergov.org/palatine-police","IL","Media",NA,NA,NA,"344-IL-Palatine",FALSE
+"345",NA,"Park Ridge",NA,NA,"http://www.parkridge.us/documents/default.aspx?CategoryId=26","IL","Municipal Website",NA,NA,NA,"345-IL-Park Ridge",FALSE
+"346",NA,"Pekin",NA,NA,"http://www.ci.pekin.il.us/document_center/depts/hr/Union%20Contracts/Union%20Police%20Department%20MAY%201,%202015%20-%20APRIL%2030,%202019.pdf","IL","Municipal Website",NA,NA,NA,"346-IL-Pekin",FALSE
+"347",NA,"Peoria",NA,NA,"http://www.peoriagov.org/human-resources/","IL","Municipal Website",NA,NA,NA,"347-IL-Peoria",FALSE
+"348",NA,"Plainfield",NA,NA,"http://www.plainfield-il.org/pages/transparency","IL","Municipal Website",NA,NA,NA,"348-IL-Plainfield",FALSE
+"349",NA,"Rock Island",NA,NA,"http://www.rigov.org/239/Union-Contracts","IL","Municipal Website",NA,NA,NA,"349-IL-Rock Island",FALSE
+"350",NA,"Rockford",NA,NA,"https://rockfordil.gov/city-departments/human-resources/union-contracts/","IL","Municipal Website",NA,NA,NA,"350-IL-Rockford",FALSE
+"351",NA,"Romeoville",NA,NA,"https://www.bettergov.org/romeoville-police","IL","Media",NA,NA,NA,"351-IL-Romeoville",FALSE
+"352",NA,"Saint Charles",NA,NA,"http://s3.documentcloud.org/documents/838054/st-charles-police.pdf","IL","Other",NA,NA,NA,"352-IL-Saint Charles",FALSE
+"353",NA,"Schaumburg",NA,NA,"http://www.villageofschaumburg.com/depts/hr/labor.htm","IL","Municipal Website",NA,NA,NA,"353-IL-Schaumburg",FALSE
+"354",NA,"Skokie",NA,NA,"http://www.skokie.org/EmployeeContracts.cfm","IL","Municipal Website",NA,NA,NA,"354-IL-Skokie",FALSE
+"355",NA,"Springfield",NA,NA,"http://www.pbpa5.org/secure/Contracts/Contract_12-15.pdf","IL","Municipal Website",NA,NA,NA,"355-IL-Springfield",TRUE
+"356",NA,"Tinley Park",NA,NA,"http://www.tinleypark.org/DocumentCenter/View/1464","IL","Municipal Website",NA,NA,NA,"356-IL-Tinley Park",FALSE
+"357",NA,"Urbana",NA,NA,"http://www.urbanaillinois.us/labor-contracts","IL","Municipal Website",NA,NA,NA,"357-IL-Urbana",FALSE
+"358",NA,"Waukegan",NA,NA,"http://www.waukeganweb.net/index.aspx?NID=144","IL","Municipal Website",NA,NA,NA,"358-IL-Waukegan",FALSE
+"359",NA,"Wheaton",NA,NA,"http://www.wheaton.il.us/departments/hr/default.aspx?id=8294","IL","Municipal Website",NA,NA,NA,"359-IL-Wheaton",FALSE
+"360",NA,"Wheeling",NA,NA,"http://wheelingil.gov/563/Contracts","IL","Municipal Website",NA,NA,NA,"360-IL-Wheeling",FALSE
+"361",NA,"Woodridge",NA,NA,"http://woodridgevillageil.iqm2.com/Citizens/FileOpen.aspx?Type=30&ID=1666","IL","Municipal Website",NA,NA,NA,"361-IL-Woodridge",TRUE
+"362",NA,"Carmel",NA,NA,"http://carmel.in.gov/Home/ShowDocument?id=3039","IN","Municipal Website",NA,NA,NA,"362-IN-Carmel",TRUE
+"363",NA,"Evansville",NA,NA,"http://www.evansville.in.gov/modules/showdocument.aspx?documentid=21764","IN","Municipal Website",NA,NA,NA,"363-IN-Evansville",FALSE
+"364",NA,"Gary",NA,NA,"http://garyfop.com/documents/GPDcontract0709.pdf","IN","Association or Union Website",NA,NA,NA,"364-IN-Gary",TRUE
+"365",NA,"Lafeyette",NA,NA,"http://www.lafayette.in.gov/RequestTracker/12796/Agreement%201_1_2016-12_31_2020.pdf","IN","Municipal Website",NA,NA,NA,"365-IN-Lafeyette",FALSE
+"366",NA,"Muncie",NA,NA,"http://www.cityofmuncie.com/documents/city_council_agenda_2017/Res._6-17.pdf","IN","Municipal Website",NA,NA,NA,"366-IN-Muncie",TRUE
+"367",NA,"Noblesville",NA,NA,"https://www.dropbox.com/s/2pey2fl8dzbl855/NoblesvilleIN.pdf?dl=0","IN","Not online",NA,NA,NA,"367-IN-Noblesville",FALSE
+"368",NA,"South Bend",NA,NA,"https://www.dropbox.com/s/09d3iw6awuaa4qw/South%20BendIN.pdf?dl=0","IN","Not online",NA,NA,NA,"368-IN-South Bend",FALSE
+"369",NA,"Terre Haute",NA,NA,"https://www.dropbox.com/s/g9zb0yrw0rvegd9/Terre%20HauteIN.pdf?dl=0","IN","Not online",NA,NA,NA,"369-IN-Terre Haute",TRUE
+"370",NA,"Kansas City",NA,NA,"http://public.wycokck.org/sites/ugordinancesresolutions/Resolutions/2015/R-109-15.pdf","KS","Municipal Website",NA,NA,NA,"370-KS-Kansas City",FALSE
+"371",NA,"Lawrence",NA,NA,"https://www.dropbox.com/s/oos3f1l65iayr0m/LawrenceKS.pdf?dl=0","KS","Not online",NA,NA,NA,"371-KS-Lawrence",FALSE
+"372",NA,"Topeka",NA,NA,"https://www.topeka.org/hr/Pages/Union-Contracts.aspx","KS","Municipal Website",NA,NA,NA,"372-KS-Topeka",FALSE
+"373",NA,"Wichita",NA,NA,"http://www.wichita.gov/Council/Agendas/12-09-2014%20City%20Council%20Agenda%20Packet.pdf#search=FOP","KS","Municipal Website",NA,NA,NA,"373-KS-Wichita",FALSE
+"374",NA,"Bowling Green",NA,NA,"https://www.dropbox.com/s/ydjzvwk1ottfci3/Bowling%20GreenKY.pdf?dl=0","KY","Not online",NA,NA,NA,"374-KY-Bowling Green",FALSE
+"375",NA,"Covington",NA,NA,"https://www.covingtonky.gov/Portals/covingtonky/Documents/hr_policy_working%20agreement_fop2011-2015_2014.pdf","KY","Municipal Website",NA,NA,NA,"375-KY-Covington",FALSE
+"376",NA,"Lexington",NA,NA,"https://www.dropbox.com/s/99bwj5zte266y47/Lexington%20%28updated%29.pdf?dl=0","KY","Not online",NA,NA,NA,"376-KY-Lexington",FALSE
+"377",NA,"Alexandria",NA,NA,"https://www.cityofalexandriala.com/sites/default/files/Officers%20Association%20Working%20Agreement(2016).pdf","LA","Municipal Website",NA,NA,NA,"377-LA-Alexandria",FALSE
+"378",NA,"Beverly",NA,NA,"http://www.beverlyma.gov/departments/human-resources/union-labor-contracts/","MA","Municipal Website",NA,NA,NA,"378-MA-Beverly",FALSE
+"379",NA,"Brockton",NA,NA,"https://www.dropbox.com/s/0t252quxibrd07i/BrocktonMA%283%29.pdf?dl=0","MA","Not online",NA,NA,NA,"379-MA-Brockton",TRUE
+"380",NA,"Cambridge",NA,NA,"https://www.dropbox.com/s/x5o9c3at0har30z/CambridgeMA.pdf?dl=0","MA","Not online",NA,NA,NA,"380-MA-Cambridge",FALSE
+"381",NA,"Chicopee",NA,NA,"http://www.chicopeema.gov/693/Collective-Bargaining-Agreements","MA","Municipal Website",NA,NA,NA,"381-MA-Chicopee",FALSE
+"382",NA,"Fall River",NA,NA,"https://www.dropbox.com/s/0rhyyh55tbkztq9/Fall%20RiverMA.pdf?dl=0","MA","Not online",NA,NA,NA,"382-MA-Fall River",TRUE
+"383",NA,"Fitchburg",NA,NA,"http://www.ci.fitchburg.ma.us/665/Collective-Bargaining-Agreements","MA","Municipal Website",NA,NA,NA,"383-MA-Fitchburg",FALSE
+"384",NA,"Framingham",NA,NA,"http://www.framinghamma.gov/608/Collective-Bargaining-Agreements","MA","Municipal Website",NA,NA,NA,"384-MA-Framingham",FALSE
+"385",NA,"Haverhill",NA,NA,"http://www.haverhillma.gov/departments/human_resources/contracts.php","MA","Municipal Website",NA,NA,NA,"385-MA-Haverhill",FALSE
+"386",NA,"Lowell",NA,NA,"https://www.dropbox.com/s/m3qfdwb78a63mnh/LowellMA.pdf?dl=0","MA","Not online",NA,NA,NA,"386-MA-Lowell",TRUE
+"387",NA,"Medford",NA,NA,"https://www.dropbox.com/s/8xiy6fptgomdm04/MedfordMA.pdf?dl=0","MA","Not online",NA,NA,NA,"387-MA-Medford",FALSE
+"388",NA,"New Bedford",NA,NA,"https://www.dropbox.com/s/f8pyakpwuu94qxi/New%20BedfordMA.pdf?dl=0","MA","Not online",NA,NA,NA,"388-MA-New Bedford",FALSE
+"389",NA,"Newton",NA,NA,"http://www.newtonma.gov/gov/hr/union.asp","MA","Municipal Website",NA,NA,NA,"389-MA-Newton",FALSE
+"390",NA,"Peabody",NA,NA,"https://www.dropbox.com/s/a5gk251zv0552aw/PeabodyMA.pdf?dl=0","MA","Municipal Website",NA,NA,NA,"390-MA-Peabody",FALSE
+"391",NA,"Plymouth",NA,NA,"https://www.plymouth-ma.gov/human-resources/pages/collective-bargaining-agreements","MA","Municipal Website",NA,NA,NA,"391-MA-Plymouth",FALSE
+"392",NA,"Revere",NA,NA,"https://www.dropbox.com/s/oconvhdrimmaf9p/RevereMA.pdf?dl=0","MA","Not online",NA,NA,NA,"392-MA-Revere",FALSE
+"393",NA,"Somerville",NA,NA,"https://www.dropbox.com/s/hoj9gcw2mmriese/SomervilleMA.pdf?dl=0","MA","Not online",NA,NA,NA,"393-MA-Somerville",TRUE
+"394",NA,"Taunton",NA,NA,"https://www.taunton-ma.gov/mayors-office/pages/union-contracts","MA","Municipal Website",NA,NA,NA,"394-MA-Taunton",FALSE
+"395",NA,"Waltham",NA,NA,"https://www.dropbox.com/s/3cahpb3u9qs78iu/WalthamMA.pdf?dl=0","MA","Not online",NA,NA,NA,"395-MA-Waltham",FALSE
+"396",NA,"Watertown Town",NA,NA,"http://www.watertown-ma.gov/index.aspx?nid=218","MA","Municipal Website",NA,NA,NA,"396-MA-Watertown Town",FALSE
+"397",NA,"Weymouth",NA,NA,"http://www.weymouth.ma.us/human-resources/pages/union-contracts-and-moas-0","MA","Municipal Website",NA,NA,NA,"397-MA-Weymouth",FALSE
+"398",NA,"Worcester",NA,NA,"http://www.worcesterma.gov/human-resources/collective-bargaining-agreements","MA","Municipal Website",NA,NA,NA,"398-MA-Worcester",FALSE
+"399",NA,"Bowie",NA,NA,"https://www.cityofbowie.org/documentcenter/view/4662","MD","Municipal Website",NA,NA,NA,"399-MD-Bowie",TRUE
+"400",NA,"Frederick",NA,NA,"http://www.cityoffrederick.com/924/Collective-Bargaining-Agreements","MD","Municipal Website",NA,NA,NA,"400-MD-Frederick",FALSE
+"401",NA,"Rockville",NA,NA,"https://www.dropbox.com/s/4bl5wud7040gh5q/RockvilleMD.pdf?dl=0","MD","Not online",NA,NA,NA,"401-MD-Rockville",FALSE
+"402",NA,"Lewiston",NA,NA,"http://www.ci.lewiston.me.us/index.aspx?NID=182","ME","Municipal Website",NA,NA,NA,"402-ME-Lewiston",FALSE
+"403",NA,"Portland",NA,NA,"http://www.portlandmaine.gov/256/Unions","ME","Municipal Website",NA,NA,NA,"403-ME-Portland",FALSE
+"404",NA,"Ann Arbor",NA,NA,"https://www.a2gov.org/departments/Human-Resources/Pages/Compensation-and-Contracts.aspx","MI","Municipal Website",NA,NA,NA,"404-MI-Ann Arbor",FALSE
+"405",NA,"Battle Creek",NA,NA,"http://www.battlecreekmi.gov/199/Current-Contracts","MI","Municipal Website",NA,NA,NA,"405-MI-Battle Creek",FALSE
+"406",NA,"Bay City",NA,NA,"http://www.baycitymi.org/400/Union-Contracts","MI","Municipal Website",NA,NA,NA,"406-MI-Bay City",FALSE
+"407",NA,"Dearborn",NA,NA,"https://www.dropbox.com/s/f3cnvg4054k0ge3/DearbornMI.pdf?dl=0","MI","Not online",NA,NA,NA,"407-MI-Dearborn",FALSE
+"408",NA,"East Lansing",NA,NA,"https://www.cityofeastlansing.com/1032/Union-Contracts","MI","Municipal Website",NA,NA,NA,"408-MI-East Lansing",FALSE
+"409",NA,"Eastpointe",NA,NA,"http://www.cityofeastpointe.net/index.asp?SEC=B840010D-7184-4E88-9EFD-32482A972675&Type=B_LIST","MI","Municipal Website",NA,NA,NA,"409-MI-Eastpointe",FALSE
+"410",NA,"Farmington Hills",NA,NA,"http://www2.fhgov.com/Intranet/HRReferenceDesk/LaborAgreements/LaborAgreementPOAMCurrent.pdf","MI","Municipal Website",NA,NA,NA,"410-MI-Farmington Hills",FALSE
+"411",NA,"Flint",NA,NA,"https://www.cityofflint.com/human-resourceslabor-relations/contracts/","MI","Municipal Website",NA,NA,NA,"411-MI-Flint",FALSE
+"412",NA,"Grand Rapids",NA,NA,"http://grcity.us/human-resources/Pages/Labor-Relations.aspx","MI","Municipal Website",NA,NA,NA,"412-MI-Grand Rapids",FALSE
+"413",NA,"Jackson",NA,NA,"http://www.cityofjackson.org/328/Employee-Contracts","MI","Municipal Website",NA,NA,NA,"413-MI-Jackson",FALSE
+"414",NA,"Kalamazoo",NA,NA,"http://www.kalamazoocity.org/benefits-contracts","MI","Municipal Website",NA,NA,NA,"414-MI-Kalamazoo",FALSE
+"415",NA,"Lansing",NA,NA,"https://www.mackinac.org/archives/lpi/contracts/33001_2009-06-30_FOP_LN.pdf","MI","Association or Union Website",NA,NA,NA,"415-MI-Lansing",FALSE
+"416",NA,"Lincoln Park",NA,NA,"http://www.lincolnpark.govoffice.com/index.asp?SEC=0703D6B7-DB8A-4794-8DD6-AC24C74AB933&DE=62054F5D-F092-4050-AC7F-CB0AA5A71BA3&Type=B_BASIC","MI","Municipal Website",NA,NA,NA,"416-MI-Lincoln Park",FALSE
+"417",NA,"Livonia",NA,NA,"http://www.ci.livonia.mi.us/Departments/CivilService/EmployeeInformation.aspx","MI","Municipal Website",NA,NA,NA,"417-MI-Livonia",FALSE
+"418",NA,"Madison Heights",NA,NA,"https://www.madison-heights.org/227/Labor-Contracts","MI","Municipal Website",NA,NA,NA,"418-MI-Madison Heights",FALSE
+"419",NA,"Midland",NA,NA,"http://cityofmidlandmi.gov/1201/City-of-Midland-Labor-Agreements","MI","Municipal Website",NA,NA,NA,"419-MI-Midland",FALSE
+"420",NA,"Novi",NA,NA,"http://www.cityofnovi.org/Government/City-Services/Human-Resources/Contracts-and-Administrative-Personnel-Policy.aspx","MI","Municipal Website",NA,NA,NA,"420-MI-Novi",FALSE
+"421",NA,"Portage",NA,NA,"http://www.portagemi.gov/FilesCustom/HtmlEditor/files/Employee%20Development/PPOA%20Agreement%202013-2016,%20signed%20copy,%20CURRENT.pdf","MI","Municipal Website",NA,NA,NA,"421-MI-Portage",FALSE
+"422",NA,"Rochester Hills",NA,NA,"https://www.rochesterhills.org/index.aspx?NID=775","MI","Municipal Website",NA,NA,NA,"422-MI-Rochester Hills",FALSE
+"423",NA,"Roseville",NA,NA,"http://sanweb.lib.msu.edu/LIR/contracts/c3802.pdf","MI","Other",NA,NA,NA,"423-MI-Roseville",FALSE
+"424",NA,"Royal Oaks",NA,NA,"https://www.romi.gov/295/Union-Contracts","MI","Municipal Website",NA,NA,NA,"424-MI-Royal Oaks",FALSE
+"425",NA,"Saginaw",NA,NA,"https://www.dropbox.com/s/yoghlk5oixu8xu1/SaginawMI.pdf?dl=0","MI","Not online",NA,NA,NA,"425-MI-Saginaw",FALSE
+"426",NA,"Southfield",NA,NA,"https://www.cityofsouthfield.com/CityDepartments/DK/HumanResources/UnionContracts/tabid/752/Default.aspx","MI","Municipal Website",NA,NA,NA,"426-MI-Southfield",FALSE
+"427",NA,"Sterling Heights",NA,NA,"https://www.mackinac.org/archives/lpi/contracts/50001_2011-06-30_MAP_L.pdf","MI","Association or Union Website",NA,NA,NA,"427-MI-Sterling Heights",FALSE
+"428",NA,"Taylor",NA,NA,"http://www.cityoftaylor.com/993/Collective-Bargaining-Agreements","MI","Municipal Website",NA,NA,NA,"428-MI-Taylor",FALSE
+"429",NA,"Troy",NA,NA,"https://troymi.gov/Residents/Government/Open%20Troy/Collective%20Bargaining%20Agreements/TPOA.pdf","MI","Municipal Website",NA,NA,NA,"429-MI-Troy",FALSE
+"430",NA,"Warren",NA,NA,"https://www.dropbox.com/s/6h9ydh20fdvt98v/WarrenMI.pdf?dl=0","MI","Not online",NA,NA,NA,"430-MI-Warren",FALSE
+"431",NA,"West Bloomfield",NA,NA,"http://www.wbtownship.org/government/departments/human_resources/labor_contracts.php","MI","Municipal Website",NA,NA,NA,"431-MI-West Bloomfield",FALSE
+"432",NA,"Westland",NA,NA,"http://www.cityofwestland.com/open-gov/contracts","MI","Municipal Website",NA,NA,NA,"432-MI-Westland",FALSE
+"433",NA,"Wyoming",NA,NA,"https://www.dropbox.com/s/w58vr22uky56o6s/WyomingMI.pdf?dl=0","MI","https://www.wyomingmi.gov/Portals/0/Human%20Resources/Transparency%20Reporting/Contracts/Police%202017-2021%20Contract.pdf",NA,NA,NA,"433-MI-Wyoming",TRUE
+"434",NA,"Blaine",NA,NA,"https://www.dropbox.com/s/ak14ghpn4jtlojm/BlaineMN.pdf?dl=0","MN","Not online",NA,NA,NA,"434-MN-Blaine",FALSE
+"435",NA,"Bloomington",NA,NA,"https://www.dropbox.com/s/ftnfhciwydbq0bo/BloomingtonMN.pdf?dl=0","MN","Not online",NA,NA,NA,"435-MN-Bloomington",TRUE
+"436",NA,"Coon Rapids",NA,NA,"https://www.dropbox.com/s/b9lumml80sjqy1b/Coon%20RapidsMI.docx?dl=0","MN","Not online",NA,NA,NA,"436-MN-Coon Rapids",FALSE
+"437",NA,"Duluth",NA,NA,"http://www.duluthmn.gov/human-resources/city-union-contracts/","MN","Municipal Website",NA,NA,NA,"437-MN-Duluth",FALSE
+"438",NA,"Mankato",NA,NA,"https://www.cityofwinona.com/wp-content/uploads/2013/05/LELS-Police-Officer-Contract-2014_2015.pdf","MN","Municipal Website",NA,NA,NA,"438-MN-Mankato",FALSE
+"439",NA,"Moorhead",NA,NA,"http://www.cityofmoorhead.com/departments/administration/human-resources/labor-union-contracts","MN","Municipal Website",NA,NA,NA,"439-MN-Moorhead",FALSE
+"440",NA,"Rochester",NA,NA,"https://www.dropbox.com/s/qs3zukv7nmx44pd/RochesterMN.pdf?dl=0","MN","Not online",NA,NA,NA,"440-MN-Rochester",TRUE
+"441",NA,"Saint Cloud",NA,NA,"http://www.ci.stcloud.mn.us/154/Labor-Union-Contracts","MN","Municipal Website",NA,NA,NA,"441-MN-Saint Cloud",FALSE
+"442",NA,"Shakopee",NA,NA,"https://shakopeemn.novusagenda.com/agendapublic/AttachmentViewer.ashx?AttachmentID=393&ItemID=207","MN","Municipal Website",NA,NA,NA,"442-MN-Shakopee",TRUE
+"443",NA,"Woodbury",NA,NA,"https://www.dropbox.com/s/71mhy8i35evssmo/WoodburyMN.pdf?dl=0","MN","Not online",NA,NA,NA,"443-MN-Woodbury",FALSE
+"444",NA,"Blue Springs",NA,NA,"https://www.dropbox.com/s/b7uv61x85igxk8k/Blue%20SpringsMO.pdf?dl=0","MO","Not online",NA,NA,NA,"444-MO-Blue Springs",TRUE
+"445",NA,"Columbia",NA,NA,"https://columbiamo.s3-us-gov-west-1.amazonaws.com/21326400-11f5-5704-5174-4da126630bc3.pdf?AWSAccessKeyId=AKIAL3HL2O6ZDBRI4EPQ&Expires=1507312280&response-content-disposition=attachment%3B%20filename%3DExhibit_A_to_Ordinance.pdf&Signature=4GcrWmWOiSaHwdlADjo%2Bbg%2B4ft4%3D","MO","Municipal Website",NA,NA,NA,"445-MO-Columbia",FALSE
+"446",NA,"Independence",NA,NA,"https://www.dropbox.com/s/zvrr3v691qxabxz/IndependenceMO.pdf?dl=0","MO","Not online",NA,NA,NA,"446-MO-Independence",TRUE
+"447",NA,"O'fallon",NA,NA,"https://www.dropbox.com/s/iczc0e38li98bjp/OfallonMO.pdf?dl=0","MO","Not online",NA,NA,NA,"447-MO-O'fallon",TRUE
+"448",NA,"Saint Charles",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/stcharles_mo_police_sgts.pdf","MO","Labor Relations Information Systems",NA,NA,NA,"448-MO-Saint Charles",TRUE
+"449",NA,"Saint Joseph",NA,NA,"https://www.dropbox.com/s/izxe1whrn7oo2b1/St.%20JosephMO.pdf?dl=0","MO","Not online",NA,NA,NA,"449-MO-Saint Joseph",TRUE
+"450",NA,"Springfield",NA,NA,"https://www.springfieldmo.gov/DocumentCenter/View/16676","MO","Municipal Website",NA,NA,NA,"450-MO-Springfield",TRUE
+"451",NA,"University City",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/universitycity_mo_police.pdf","MO","Labor Relations Information Systems",NA,NA,NA,"451-MO-University City",TRUE
+"452",NA,"Billings",NA,NA,"http://ci.billings.mt.us/427/Labor-Unions","MT","Municipal Website",NA,NA,NA,"452-MT-Billings",FALSE
+"453",NA,"Bozeman",NA,NA,"https://www.bozeman.net/government/human-resources/employee-information/union-agreements","MT","Municipal Website",NA,NA,NA,"453-MT-Bozeman",FALSE
+"454",NA,"Butte",NA,NA,"http://co.silverbow.mt.us/DocumentCenter/View/6227","MT","Municipal Website",NA,NA,NA,"454-MT-Butte",FALSE
+"455",NA,"Great Falls",NA,NA,"https://greatfallsmt.net/hr/collective-bargaining-agreements","MT","Municipal Website",NA,NA,NA,"455-MT-Great Falls",FALSE
+"456",NA,"Helena",NA,NA,"http://www.helenamt.gov/hr/labor-agreements.html","MT","Municipal Website",NA,NA,NA,"456-MT-Helena",FALSE
+"457",NA,"Missoula",NA,NA,"https://www.ci.missoula.mt.us/339/Labor-Unions","MT","Municipal Website",NA,NA,NA,"457-MT-Missoula",FALSE
+"458",NA,"Bellevue",NA,NA,"https://www.dropbox.com/s/4qu3ct8h4sdl1zc/BellevueNE.pdf?dl=0","NE","Not online",NA,NA,NA,"458-NE-Bellevue",TRUE
+"459",NA,"Grand Island",NA,NA,"http://www.grand-island.com/your-government/city-clerk/contract-agreement-index","NE","Municipal Website",NA,NA,NA,"459-NE-Grand Island",FALSE
+"460",NA,"Concord",NA,NA,"https://www.nh.gov/pelrb/collective/index.htm","NH","State Website",NA,NA,NA,"460-NH-Concord",FALSE
+"461",NA,"Dover",NA,NA,"https://www.nh.gov/pelrb/collective/index.htm","NH","State Website",NA,NA,NA,"461-NH-Dover",FALSE
+"462",NA,"Manchester",NA,NA,"https://www.nh.gov/pelrb/collective/index.htm","NH","Municipal Website",NA,NA,NA,"462-NH-Manchester",FALSE
+"463",NA,"Nashua",NA,NA,"https://www.nh.gov/pelrb/collective/coll_m_r.htm","NH","State Website",NA,NA,NA,"463-NH-Nashua",FALSE
+"464",NA,"Rochester",NA,NA,"https://www.nh.gov/pelrb/collective/index.htm","NH","State Website",NA,NA,NA,"464-NH-Rochester",FALSE
+"465",NA,"Atlantic City",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"465-NJ-Atlantic City",FALSE
+"466",NA,"Bayonne",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"466-NJ-Bayonne",FALSE
+"467",NA,"Brick",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"467-NJ-Brick",FALSE
+"468",NA,"Camden",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"468-NJ-Camden",FALSE
+"469",NA,"Clifton",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"469-NJ-Clifton",FALSE
+"470",NA,"East Orange",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"470-NJ-East Orange",FALSE
+"471",NA,"Edison",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"471-NJ-Edison",FALSE
+"472",NA,"Elizabeth",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"472-NJ-Elizabeth",FALSE
+"473",NA,"Fair Lawn",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"473-NJ-Fair Lawn",FALSE
+"474",NA,"Fort Lee",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"474-NJ-Fort Lee",FALSE
+"475",NA,"Garfield",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"475-NJ-Garfield",FALSE
+"476",NA,"Hackensack",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"476-NJ-Hackensack",FALSE
+"477",NA,"Hamilton",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"477-NJ-Hamilton",FALSE
+"478",NA,"Hoboken",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"478-NJ-Hoboken",FALSE
+"479",NA,"Kearny",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"479-NJ-Kearny",FALSE
+"480",NA,"Linden",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"480-NJ-Linden",FALSE
+"481",NA,"Long Branch",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"481-NJ-Long Branch",FALSE
+"482",NA,"New Brunswick",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"482-NJ-New Brunswick",FALSE
+"483",NA,"Passaic",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"483-NJ-Passaic",FALSE
+"484",NA,"Paterson",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"484-NJ-Paterson",FALSE
+"485",NA,"Perth Amboy",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"485-NJ-Perth Amboy",FALSE
+"486",NA,"Plainfield",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"486-NJ-Plainfield",FALSE
+"487",NA,"Sayreville",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"487-NJ-Sayreville",FALSE
+"488",NA,"Trenton",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"488-NJ-Trenton",FALSE
+"489",NA,"Union City",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"489-NJ-Union City",FALSE
+"490",NA,"Vineland",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"490-NJ-Vineland",FALSE
+"491",NA,"West New York",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"491-NJ-West New York",FALSE
+"492",NA,"Westfield",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"492-NJ-Westfield",FALSE
+"493",NA,"Woodbridge",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","NJ","State Website",NA,NA,NA,"493-NJ-Woodbridge",FALSE
+"494",NA,"Albuquerque",NA,NA,"https://www.cabq.gov/humanresources/documents/albuquerquepoliceofficersassociationcontract201415.pdf/view","NM","Municipal Website",NA,NA,NA,"494-NM-Albuquerque",FALSE
+"495",NA,"Hobbs",NA,NA,"http://www.hobbspd.com/files/union_contract.pdf","NM","Municipal Website",NA,NA,NA,"495-NM-Hobbs",FALSE
+"496",NA,"Las Cruces",NA,NA,"https://www.dropbox.com/s/zvt77sbdonakvjy/Las%20CrucesNM%20%28updated%29.pdf?dl=0","NM","Not online",NA,NA,NA,"496-NM-Las Cruces",FALSE
+"497",NA,"Rio Rancho",NA,NA,"http://rrnm.gov/ArchiveCenter/ViewFile/Item/1147","NM","Municipal Website",NA,NA,NA,"497-NM-Rio Rancho",FALSE
+"498",NA,"Santa Fe",NA,NA,"https://www.dropbox.com/s/f6zits7z4wstww7/Santa%20FeNM.pdf?dl=0","NM","Not online",NA,NA,NA,"498-NM-Santa Fe",FALSE
+"499",NA,"Carson",NA,NA,"http://emrb.nv.gov/Resources/police/Non-Supervisory/","NV","State Website",NA,NA,NA,"499-NV-Carson",FALSE
+"500",NA,"Sparks",NA,NA,"http://emrb.nv.gov/Resources/police/Non-Supervisory/","NV","State Website",NA,NA,NA,"500-NV-Sparks",FALSE
+"501",NA,"Albany",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"501-NY-Albany",FALSE
+"502",NA,"Binghampton",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"502-NY-Binghampton",FALSE
+"503",NA,"Cheektowaga",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"503-NY-Cheektowaga",FALSE
+"504",NA,"Cicero",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"504-NY-Cicero",FALSE
+"505",NA,"Freeport",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"505-NY-Freeport",FALSE
+"506",NA,"Hempstead",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"506-NY-Hempstead",FALSE
+"507",NA,"Irondequoit",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"507-NY-Irondequoit",FALSE
+"508",NA,"Ithaca",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"508-NY-Ithaca",FALSE
+"509",NA,"Jamestown",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"509-NY-Jamestown",FALSE
+"510",NA,"Long Beach",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"510-NY-Long Beach",FALSE
+"511",NA,"Mount Vernon",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"511-NY-Mount Vernon",FALSE
+"512",NA,"New Rochelle",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"512-NY-New Rochelle",FALSE
+"513",NA,"Niagra Falls",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"513-NY-Niagra Falls",FALSE
+"514",NA,"Oyster Bay",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"514-NY-Oyster Bay",FALSE
+"515",NA,"Poughkeepsie (City)",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"515-NY-Poughkeepsie (City)",FALSE
+"516",NA,"Poughkeepsie (Town)",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"516-NY-Poughkeepsie (Town)",FALSE
+"517",NA,"Riverhead",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"517-NY-Riverhead",FALSE
+"518",NA,"Rome",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"518-NY-Rome",FALSE
+"519",NA,"Schenectady",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"519-NY-Schenectady",FALSE
+"520",NA,"Syracuse",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"520-NY-Syracuse",FALSE
+"521",NA,"Tonawanda",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"521-NY-Tonawanda",FALSE
+"522",NA,"Troy",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"522-NY-Troy",FALSE
+"523",NA,"Utica",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"523-NY-Utica",FALSE
+"524",NA,"White Plains",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"524-NY-White Plains",FALSE
+"525",NA,"Yonkers",NA,NA,"http://seethroughny.net/contracts/","NY","State Website",NA,NA,NA,"525-NY-Yonkers",FALSE
+"526",NA,"Akron",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"526-OH-Akron",FALSE
+"527",NA,"Beavercreek",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"527-OH-Beavercreek",FALSE
+"528",NA,"Boardman",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"528-OH-Boardman",FALSE
+"529",NA,"Bowling Green",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"529-OH-Bowling Green",FALSE
+"530",NA,"Brunswick",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"530-OH-Brunswick",FALSE
+"531",NA,"Canton",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"531-OH-Canton",FALSE
+"532",NA,"Cleveland Heights",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"532-OH-Cleveland Heights",FALSE
+"533",NA,"Colerain",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"533-OH-Colerain",FALSE
+"534",NA,"Cuyahoga Falls",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"534-OH-Cuyahoga Falls",FALSE
+"535",NA,"Delaware",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"535-OH-Delaware",FALSE
+"536",NA,"Dublin",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"536-OH-Dublin",FALSE
+"537",NA,"Elyria",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"537-OH-Elyria",FALSE
+"538",NA,"Euclid",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"538-OH-Euclid",FALSE
+"539",NA,"Fairborn",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"539-OH-Fairborn",FALSE
+"540",NA,"Fairfield",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"540-OH-Fairfield",FALSE
+"541",NA,"Findlay",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"541-OH-Findlay",FALSE
+"542",NA,"Gahanna",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"542-OH-Gahanna",FALSE
+"543",NA,"Grove City",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"543-OH-Grove City",FALSE
+"544",NA,"Hamilton",NA,NA,"http://www.perc.state.nj.us/publicsectorcontracts.nsf","OH","State Website",NA,NA,NA,"544-OH-Hamilton",FALSE
+"545",NA,"Hilliard",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"545-OH-Hilliard",FALSE
+"546",NA,"Huber Heights",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"546-OH-Huber Heights",FALSE
+"547",NA,"Kent",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"547-OH-Kent",FALSE
+"548",NA,"Kettering",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","Municipal Website",NA,NA,NA,"548-OH-Kettering",FALSE
+"549",NA,"Lakewood",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","Municipal Website",NA,NA,NA,"549-OH-Lakewood",FALSE
+"550",NA,"Lancaster",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"550-OH-Lancaster",FALSE
+"551",NA,"Lima",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"551-OH-Lima",FALSE
+"552",NA,"Mansfield",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"552-OH-Mansfield",FALSE
+"553",NA,"Marion",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"553-OH-Marion",FALSE
+"554",NA,"Mason",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"554-OH-Mason",FALSE
+"555",NA,"Massillon",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"555-OH-Massillon",FALSE
+"556",NA,"Mentor",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State website",NA,NA,NA,"556-OH-Mentor",FALSE
+"557",NA,"Middletown",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"557-OH-Middletown",FALSE
+"558",NA,"Newark",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"558-OH-Newark",FALSE
+"559",NA,"North Olmstead",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"559-OH-North Olmstead",FALSE
+"560",NA,"North Ridgeville",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"560-OH-North Ridgeville",FALSE
+"561",NA,"North Royalton",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"561-OH-North Royalton",FALSE
+"562",NA,"Parma",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"562-OH-Parma",FALSE
+"563",NA,"Reynoldsburg",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"563-OH-Reynoldsburg",FALSE
+"564",NA,"Springfield",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"564-OH-Springfield",FALSE
+"565",NA,"Stow",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"565-OH-Stow",FALSE
+"566",NA,"Strongsville",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"566-OH-Strongsville",FALSE
+"567",NA,"Toledo",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"567-OH-Toledo",FALSE
+"568",NA,"Upper Arlington",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"568-OH-Upper Arlington",FALSE
+"569",NA,"Warren",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"569-OH-Warren",FALSE
+"570",NA,"Westerville",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"570-OH-Westerville",FALSE
+"571",NA,"Westlake",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"571-OH-Westlake",FALSE
+"572",NA,"Youngstown",NA,NA,"http://www.serb.state.oh.us/sections/research/WEB_CONTRACTS/WebContracts.htm","OH","State Website",NA,NA,NA,"572-OH-Youngstown",FALSE
+"573",NA,"Broken Arrow",NA,NA,"https://www.dropbox.com/s/p7c8oks9atm4zh7/Broken%20ArrowOK.pdf?dl=0","OK","Not online",NA,NA,NA,"573-OK-Broken Arrow",FALSE
+"574",NA,"Edmond",NA,NA,"https://www.dropbox.com/s/vi6ycf6qs6jbxxd/EdmondOK.pdf?dl=0","OK","Not online",NA,NA,NA,"574-OK-Edmond",FALSE
+"575",NA,"Lawton",NA,NA,"https://www.dropbox.com/s/sxyxte7rfyyzfrm/LawtonOK.pdf?dl=0","OK","Not online",NA,NA,NA,"575-OK-Lawton",FALSE
+"576",NA,"Midwest City",NA,NA,"https://midwestcityok.org/documentcenter/view/3337","OK","Municipal Website",NA,NA,NA,"576-OK-Midwest City",FALSE
+"577",NA,"Moore",NA,NA,"https://www.dropbox.com/s/yb9zyfmnt4vz21i/MooreOK.pdf?dl=0","OK","Not online",NA,NA,NA,"577-OK-Moore",FALSE
+"578",NA,"Norman",NA,NA,"http://www.normanok.gov/hr/personnel-manual-union-contracts","OK","Municipal Website",NA,NA,NA,"578-OK-Norman",FALSE
+"579",NA,"Shawnee",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/shawnee_ok_police.pdf","OK","Labor Relations Information Systems",NA,NA,NA,"579-OK-Shawnee",FALSE
+"580",NA,"Stillwater",NA,NA,"https://www.lris.com/wp-content/uploads/contracts/stillwater_ok_police.pdf","OK","Labor Relations Information Systems",NA,NA,NA,"580-OK-Stillwater",FALSE
+"581",NA,"Albany",NA,NA,"https://www.cityofalbany.net/departments/human-resources/collective-bargaining-agreements","OR","Municipal Website",NA,NA,NA,"581-OR-Albany",FALSE
+"582",NA,"Beaverton",NA,NA,"http://www.beavertonoregon.gov/518/Labor-Contracts","OR","Municipal Website",NA,NA,NA,"582-OR-Beaverton",FALSE
+"583",NA,"Bend",NA,NA,"http://www.bendoregon.gov/government/departments/human-resources/association-contracts","OR","Municipal Website",NA,NA,NA,"583-OR-Bend",FALSE
+"584",NA,"Corvallis",NA,NA,"http://www.corvallisoregon.gov/index.aspx?page=1112","OR","Municipal Website",NA,NA,NA,"584-OR-Corvallis",FALSE
+"585",NA,"Grants Pass",NA,NA,"https://www.grantspassoregon.gov/documentcenter/view/119","OR","Municipal Website",NA,NA,NA,"585-OR-Grants Pass",TRUE
+"586",NA,"Gresham",NA,NA,"https://greshamoregon.gov/HR-Labor-Contracts/","OR","Municipal Website",NA,NA,NA,"586-OR-Gresham",FALSE
+"587",NA,"Hillsboro",NA,NA,"https://www.hillsboro-oregon.gov/departments/human-resources/collective-bargaining-agreements","OR","Municipal Website",NA,NA,NA,"587-OR-Hillsboro",FALSE
+"588",NA,"Keizer",NA,NA,"https://www.keizer.org/collective-bargaining-agreements-and-mous","OR","Municipal Website",NA,NA,NA,"588-OR-Keizer",FALSE
+"589",NA,"Lake Oswego",NA,NA,"https://www.ci.oswego.or.us/hr/labor-agreements","OR","Municipal Website",NA,NA,NA,"589-OR-Lake Oswego",FALSE
+"590",NA,"McMinnville",NA,NA,"http://www.mcminnvilleoregon.gov/hr/page/labor-contracts","OR","Municipal Website",NA,NA,NA,"590-OR-McMinnville",FALSE
+"591",NA,"Medford",NA,NA,"http://www.ci.medford.or.us/Page.asp?NavID=1593","OR","Municipal Website",NA,NA,NA,"591-OR-Medford",FALSE
+"592",NA,"Oregon City",NA,NA,"https://www.orcity.org/humanresources/ocpea-oregon-city-police-employees-association-current-contract","OR","Municipal Website",NA,NA,NA,"592-OR-Oregon City",FALSE
+"593",NA,"Salem",NA,NA,"http://www.cityofsalem.net/CityDocuments/labor-contract-speu-2014-2017.pdf","OR","Municipal Website",NA,NA,NA,"593-OR-Salem",FALSE
+"594",NA,"Springfield",NA,NA,"https://www.dropbox.com/s/rwdtajseulx4oim/SpringfieldOR.pdf?dl=0","OR","Not online",NA,NA,NA,"594-OR-Springfield",TRUE
+"595",NA,"Tigard",NA,NA,"http://www.tigard-or.gov/city_hall/human_resources.php","OR","Municipal Website",NA,NA,NA,"595-OR-Tigard",FALSE
+"596",NA,"Allentown",NA,NA,"https://www.allentownpa.gov/Contracts","PA","Municipal Website",NA,NA,NA,"596-PA-Allentown",FALSE
+"597",NA,"Bethlehem",NA,NA,"https://www.dropbox.com/s/ib77w806uy5tqpm/BethlehemPA.PDF?dl=0","PA","Not online",NA,NA,NA,"597-PA-Bethlehem",FALSE
+"598",NA,"Erie",NA,NA,"https://www.dropbox.com/s/v3j8y3emof1djcp/EriePA.pdf?dl=0","PA","Not online",NA,NA,NA,"598-PA-Erie",TRUE
+"599",NA,"Reading",NA,NA,"https://www.dropbox.com/s/j69r7ej1sq9xoj1/ReadingPA.pdf?dl=0","PA","Not online",NA,NA,NA,"599-PA-Reading",FALSE
+"600",NA,"Scranton",NA,NA,"https://www.dropbox.com/s/uvdfrqctrl0joq4/ScrantonPA.pdf?dl=0","PA","Not online",NA,NA,NA,"600-PA-Scranton",TRUE
+"601",NA,"Cranston",NA,NA,"http://www.municipalfinance.ri.gov/contracts/","RI","Municipal Website",NA,NA,NA,"601-RI-Cranston",FALSE
+"602",NA,"East Providence",NA,NA,"http://www.eastprovidenceri.net/content/12101/11296/default.aspx","RI","Municipal Website",NA,NA,NA,"602-RI-East Providence",FALSE
+"603",NA,"Pawtucket",NA,NA,"http://www.municipalfinance.ri.gov/contracts/","RI","Municipal Website",NA,NA,NA,"603-RI-Pawtucket",FALSE
+"604",NA,"Providence",NA,NA,"http://www.municipalfinance.ri.gov/contracts/","RI","Municipal Website",NA,NA,NA,"604-RI-Providence",FALSE
+"605",NA,"Warwick",NA,NA,"http://www.municipalfinance.ri.gov/contracts/","RI","Municipal Website",NA,NA,NA,"605-RI-Warwick",FALSE
+"606",NA,"Woonsocket",NA,NA,"http://www.municipalfinance.ri.gov/contracts/","RI","Municipal Website",NA,NA,NA,"606-RI-Woonsocket",FALSE
+"607",NA,"Rapid City",NA,NA,"https://www.rcgov.org/departments/community-resources/human-resources/union-contracts.html","SD","Municipal Website",NA,NA,NA,"607-SD-Rapid City",FALSE
+"608",NA,"Sioux Falls",NA,NA,"https://www.siouxfalls.org/human-resources/fop-contract","SD","Municipal Website",NA,NA,NA,"608-SD-Sioux Falls",TRUE
+"609",NA,"Abilene",NA,NA,"https://www.cleat.org/wp-content/uploads/2016/04/Abilene-MC-2015-2018-Contract.compressed1.pdf","TX","Association or Union Website",NA,NA,NA,"609-TX-Abilene",FALSE
+"610",NA,"Amarillo",NA,NA,"https://www.dropbox.com/s/rn1fo7nrjfh3n36/AmarilloTX.PDF?dl=0","TX","Not online",NA,NA,NA,"610-TX-Amarillo",TRUE
+"611",NA,"Baytown",NA,NA,"http://agendas.baytown.org/docs/2015/CC%20Regular/20151008_1361/11760_PD%20Meet%20and%20Confer%20Jan%202016%20-%20Dec%202018.pdf","TX","Municipal Website",NA,NA,NA,"611-TX-Baytown",FALSE
+"612",NA,"Beaumont",NA,NA,"https://www.cleat.org/wp-content/uploads/2016/04/Beaumont-agreement-2014-2018.pdf","TX","Association or Union Website",NA,NA,NA,"612-TX-Beaumont",FALSE
+"613",NA,"Brownsville",NA,NA,"https://www.dropbox.com/s/ctjovov00cwhrau/Brownsville.pdf?dl=0","TX","Not online",NA,NA,NA,"613-TX-Brownsville",TRUE
+"614",NA,"Cedar Park",NA,NA,"https://www.cedarparktexas.gov/home/showdocument?id=5705","TX","Municipal Website",NA,NA,NA,"614-TX-Cedar Park",TRUE
+"615",NA,"Del Rio",NA,NA,"https://www.cleat.org/wp-content/uploads/2014/09/Contract-Del-Rio.compressed.pdf","TX","Association or Union Website",NA,NA,NA,"615-TX-Del Rio",FALSE
+"616",NA,"Denton",NA,NA,"https://www.cleat.org/wp-content/uploads/2016/04/Denton-Meet_Confer_Agreement_2015_2019.pdf","TX","Association or Union Website",NA,NA,NA,"616-TX-Denton",FALSE
+"617",NA,"Edinburg",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/edinburgcontract20100831132620.pdf","TX","Association or Union Website",NA,NA,NA,"617-TX-Edinburg",FALSE
+"618",NA,"Galveston",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/gmpa2010Contract.pdf","TX","Labor Relations Information Systems",NA,NA,NA,"618-TX-Galveston",FALSE
+"619",NA,"Georgetown",NA,NA,"https://www.cleat.org/wp-content/uploads/2016/04/Georgetown-Contract.pdf","TX","Association or Union Website",NA,NA,NA,"619-TX-Georgetown",FALSE
+"620",NA,"Harlingen",NA,NA,"https://www.dropbox.com/s/fxuadughjl16mfb/HarlingenTX.pdf?dl=0","TX","Not online",NA,NA,NA,"620-TX-Harlingen",FALSE
+"621",NA,"Lufkin",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/Lufkin-Police-Association-MC-2009.pdf","TX","Association or Union Website",NA,NA,NA,"621-TX-Lufkin",FALSE
+"622",NA,"McAllen",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/McAllen-pd-cba-final-version-05-27-08-2.pdf","TX","Association or Union Website",NA,NA,NA,"622-TX-McAllen",FALSE
+"623",NA,"McKinney",NA,NA,"https://www.dropbox.com/s/po0whcjgzvi2358/McKinneyTX.pdf?dl=0","TX","Not online",NA,NA,NA,"623-TX-McKinney",TRUE
+"624",NA,"Mesquite",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/Mesquite-MOU-expires-9-3-2010.pdf","TX","Association or Union Website",NA,NA,NA,"624-TX-Mesquite",FALSE
+"625",NA,"Pharr",NA,NA,"https://www.dropbox.com/s/5prs0nk2ngo80bc/PharrTX.pdf?dl=0","TX","Not online",NA,NA,NA,"625-TX-Pharr",FALSE
+"626",NA,"Port Arthur",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/PortArthur-exp-2011.pdf","TX","Association or Union Website",NA,NA,NA,"626-TX-Port Arthur",FALSE
+"627",NA,"Round Rock",NA,NA,"https://www.dropbox.com/s/jkqgeq9qgwbzjj6/Round%20RockTX.pdf?dl=0","TX","Not online",NA,NA,NA,"627-TX-Round Rock",TRUE
+"628",NA,"San Angelo",NA,NA,"https://www.cleat.org/wp-content/uploads/2015/09/2015_09_14_10_23_171.pdf","TX","Association or Union Website",NA,NA,NA,"628-TX-San Angelo",FALSE
+"629",NA,"San Marcos",NA,NA,"https://www.cleat.org/wp-content/uploads/2016/04/San-Marcos-2015-2018.pdf","TX","Association or Union Website",NA,NA,NA,"629-TX-San Marcos",FALSE
+"630",NA,"Temple",NA,NA,"https://www.dropbox.com/s/aqxhwe3k5dgkhs5/TempleTX.pdf?dl=0","TX","Not online",NA,NA,NA,"630-TX-Temple",FALSE
+"631",NA,"Waco",NA,NA,"https://www.cleat.org/wp-content/uploads/2013/03/Waco-Police-Association-Contract.pdf","TX","Association or Union Website",NA,NA,NA,"631-TX-Waco",FALSE
+"632",NA,"Salt Lake City",NA,NA,"http://www.slcdocs.com/hr/policemou.pdf","UT","Municipal Website",NA,NA,NA,"632-UT-Salt Lake City",FALSE
+"633",NA,"Burlington",NA,NA,"https://www.burlingtonvt.gov/sites/default/files/Mayor/04-2014%20City-BPOA%20Contract.pdf","VT","Municipal Website",NA,NA,NA,"633-VT-Burlington",FALSE
+"634",NA,"Auburn",NA,NA,"https://www.dropbox.com/s/b1dvxb82r10dmxq/AuburnWA.pdf?dl=0","WA","Not online",NA,NA,NA,"634-WA-Auburn",TRUE
+"635",NA,"Bellevue",NA,NA,"https://bellevuewa.gov/city-government/departments/human-resources/benefits/union-contracts","WA","Municipal Website",NA,NA,NA,"635-WA-Bellevue",FALSE
+"636",NA,"Bellingham",NA,NA,"https://www.cob.org/employment/Pages/labor-agreements-pay-schedule.aspx","WA","Municipal Website",NA,NA,NA,"636-WA-Bellingham",FALSE
+"637",NA,"Bothell",NA,NA,"http://www.ci.bothell.wa.us/174/Union-Contracts","WA","Municipal Website",NA,NA,NA,"637-WA-Bothell",FALSE
+"638",NA,"Bremerton",NA,NA,"http://www.ci.bremerton.wa.us/188/Union-Contracts","WA","Municipal Website",NA,NA,NA,"638-WA-Bremerton",FALSE
+"639",NA,"Des Moines",NA,NA,"http://desmoineswa.gov/458/Compensation-Plans-and-CBA","WA","Municipal Website",NA,NA,NA,"639-WA-Des Moines",FALSE
+"640",NA,"Everett",NA,NA,"https://www.dropbox.com/s/icv5xtz8ig2m8qv/Everett.pdf?dl=0","WA","Not online",NA,NA,NA,"640-WA-Everett",TRUE
+"641",NA,"Federal Way",NA,NA,"http://docs.cityoffederalway.com/WEBLINK/PDF/4otsry55lrxrgr55wwyjkpzj/2/AG%2017-009.pdf","WA","Not online",NA,NA,NA,"641-WA-Federal Way",FALSE
+"642",NA,"Issaquah",NA,NA,"https://www.dropbox.com/s/00jc359e87zgd3v/IssaquahWA.pdf?dl=0","WA","Not online",NA,NA,NA,"642-WA-Issaquah",FALSE
+"643",NA,"Kennewick",NA,NA,"https://www.go2kennewick.com/305/Current-Labor-Contracts","WA","Municipal Website",NA,NA,NA,"643-WA-Kennewick",FALSE
+"644",NA,"Kent",NA,NA,"https://www.kentwa.gov/union-contracts","WA","Municipal Website",NA,NA,NA,"644-WA-Kent",FALSE
+"645",NA,"Lacey",NA,NA,"http://www.ci.lacey.wa.us/Portals/0/docs/human_resources/collective_bargaining_agreements/LPOG%20Contract%20-%20FINAL%20-%20Searchable.pdf","WA","Municipal Website",NA,NA,NA,"645-WA-Lacey",FALSE
+"646",NA,"Lake Stevens",NA,NA,"http://www.ci.lake-stevens.wa.us/DocumentCenter/Home/View/1728","WA","Municipal Website",NA,NA,NA,"646-WA-Lake Stevens",FALSE
+"647",NA,"Lakewood",NA,NA,"https://www.dropbox.com/s/t5j81dpsl4m9zs5/LakewoodWA.pdf?dl=0","WA","Not online",NA,NA,NA,"647-WA-Lakewood",FALSE
+"648",NA,"Lynwood",NA,NA,"http://www.ci.lynnwood.wa.us/Government/City-Departments/Human-Resources/Union-Contracts-and-Non-Represented-GSO.htm","WA","Municipal Website",NA,NA,NA,"648-WA-Lynwood",FALSE
+"649",NA,"Marysville",NA,NA,"http://marysvillewa.gov/321/Union-Contracts","WA","Municipal Website",NA,NA,NA,"649-WA-Marysville",FALSE
+"650",NA,"Puyallup",NA,NA,"https://www.cityofpuyallup.org/465/Collective-Bargaining-Agreements","WA","Municipal Website",NA,NA,NA,"650-WA-Puyallup",FALSE
+"651",NA,"Redmond",NA,NA,"http://www.redmond.gov/Government/Employment/CityEmployees","WA","Municipal Website",NA,NA,NA,"651-WA-Redmond",FALSE
+"652",NA,"Renton",NA,NA,"http://www.rentonwa.gov/working/default.aspx?id=6048","WA","Municipal Website",NA,NA,NA,"652-WA-Renton",FALSE
+"653",NA,"Richland",NA,NA,"https://www.ci.richland.wa.us/home/showdocument?id=640","WA","Municipal Website",NA,NA,NA,"653-WA-Richland",FALSE
+"654",NA,"Tacoma",NA,NA,"https://www.cityoftacoma.org/government/city_departments/human_resources/collective_bargaining_agreements","WA","Municipal Website",NA,NA,NA,"654-WA-Tacoma",FALSE
+"655",NA,"Vancouver",NA,NA,"http://www.cityofvancouver.us/sites/default/files/fileattachments/human_resources/page/888/vpog_contract_2015-2016_fully_executed.pdf","WA","Municipal Website",NA,NA,NA,"655-WA-Vancouver",TRUE
+"656",NA,"Walla Walla",NA,NA,"https://www.wallawallawa.gov/depts/humanresources/bargaining-agmnts","WA","Municipal Website",NA,NA,NA,"656-WA-Walla Walla",FALSE
+"657",NA,"Wenatchee",NA,NA,"http://www.wenatcheewa.gov/government/human-resources/labor-contracts","WA","Municipal Website",NA,NA,NA,"657-WA-Wenatchee",FALSE
+"658",NA,"Yakima",NA,NA,"https://www.yakimawa.gov/services/hr/collective-bargaining-agreements/","WA","Municipal Website",NA,NA,NA,"658-WA-Yakima",FALSE
+"659",NA,"Appleton",NA,NA,"http://www.appleton.org/home/showdocument?id=13143","WI","Municipal Website",NA,NA,NA,"659-WI-Appleton",FALSE
+"660",NA,"Brookfield",NA,NA,"http://www.ci.brookfield.wi.us/283/Labor-Relations","WI","Municipal Website",NA,NA,NA,"660-WI-Brookfield",FALSE
+"661",NA,"Fond du Lac",NA,NA,"https://www.fdl.wi.gov/departments.iml?DeptID=22&DeptPage=41","WI","Municipal Website",NA,NA,NA,"661-WI-Fond du Lac",FALSE
+"662",NA,"Green Bay",NA,NA,"https://www.dropbox.com/s/vlecobbn50iy2hw/Green%20Bay%20%28second%20updated%29.pdf?dl=0","WI","Not online",NA,NA,NA,"662-WI-Green Bay",TRUE
+"663",NA,"Janesville",NA,NA,"https://www.dropbox.com/s/638myla8qit3por/JanesvilleWI.pdf?dl=0","WI","Not online",NA,NA,NA,"663-WI-Janesville",TRUE
+"664",NA,"Kenosha",NA,NA,"https://www.kenosha.org/images/human-resources/kenosha-police-and-professional-police-association-(2016-2018).pdf","WI","Municipal Website",NA,NA,NA,"664-WI-Kenosha",TRUE
+"665",NA,"New Berlin",NA,NA,"http://www.newberlin.org/documentcenter/view/7839","WI","Municipal Website",NA,NA,NA,"665-WI-New Berlin",FALSE
+"666",NA,"Oshkosh",NA,NA,"https://www.ci.oshkosh.wi.us/Administrative_Services/Human_Resources/labor_agreements.asp","WI","Municipal Website",NA,NA,NA,"666-WI-Oshkosh",FALSE
+"667",NA,"Wausau",NA,NA,"http://www.ci.wausau.wi.us/Departments/HumanResources/DocumentsPolicies.aspx","WI","Municipal Website",NA,NA,NA,"667-WI-Wausau",FALSE
+"668",NA,"Wauwatosa",NA,NA,"http://www.wauwatosa.net/index.aspx?NID=765","WI","Municipal Website",NA,NA,NA,"668-WI-Wauwatosa",FALSE
+"669",NA,"West Allis",NA,NA,"https://www.dropbox.com/s/qtxoo74u258x563/West%20AllisWI.pdf?dl=0","WI","Not online",NA,NA,NA,"669-WI-West Allis",TRUE
+"670",NA,"Madison County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"670-AL-Madison County",FALSE
+"671",NA,"Shelby County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"671-AL-Shelby County",FALSE
+"672",NA,"Birmingham",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"672-AL-Birmingham",FALSE
+"673",NA,"Montgomery",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"673-AL-Montgomery",FALSE
+"674",NA,"Tuscaloosa",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"674-AL-Tuscaloosa",FALSE
+"675",NA,"Mobile",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"675-AL-Mobile",FALSE
+"676",NA,"Huntsville",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"676-AL-Huntsville",FALSE
+"677",NA,"Dothan",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"677-AL-Dothan",FALSE
+"678",NA,"Baldwin County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"678-AL-Baldwin County",FALSE
+"679",NA,"Cullman County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"679-AL-Cullman County",FALSE
+"680",NA,"Jefferson County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"680-AL-Jefferson County",FALSE
+"681",NA,"Lee County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"681-AL-Lee County",FALSE
+"682",NA,"Limestone County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"682-AL-Limestone County",FALSE
+"683",NA,"Tuscaloosa County",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"683-AL-Tuscaloosa County",FALSE
+"684",NA,"Hoover",NA,NA,"Need to Find Contract","AL",NA,NA,NA,NA,"684-AL-Hoover",FALSE
+"685",NA,"Conway",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"685-AR-Conway",FALSE
+"686",NA,"North Little Rock",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"686-AR-North Little Rock",FALSE
+"687",NA,"Fayetteville",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"687-AR-Fayetteville",FALSE
+"688",NA,"Rogers",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"688-AR-Rogers",FALSE
+"689",NA,"Fort Smith",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"689-AR-Fort Smith",FALSE
+"690",NA,"Jonesboro",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"690-AR-Jonesboro",FALSE
+"691",NA,"Garland County",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"691-AR-Garland County",FALSE
+"692",NA,"Saline County",NA,NA,"Need to Find Contract","AR",NA,NA,NA,NA,"692-AR-Saline County",FALSE
+"693",NA,"Yavapai County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"693-AZ-Yavapai County",FALSE
+"694",NA,"Apache County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"694-AZ-Apache County",FALSE
+"695",NA,"Lake Havasu City",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"695-AZ-Lake Havasu City",FALSE
+"696",NA,"Navajo County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"696-AZ-Navajo County",FALSE
+"697",NA,"Avondale",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"697-AZ-Avondale",FALSE
+"698",NA,"Scottsdale",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"698-AZ-Scottsdale",FALSE
+"699",NA,"Gilbert",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"699-AZ-Gilbert",FALSE
+"700",NA,"Flagstaff",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"700-AZ-Flagstaff",FALSE
+"701",NA,"Surprise",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"701-AZ-Surprise",FALSE
+"702",NA,"Pima County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"702-AZ-Pima County",FALSE
+"703",NA,"Coconino County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"703-AZ-Coconino County",FALSE
+"704",NA,"Maricopa County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"704-AZ-Maricopa County",FALSE
+"705",NA,"Mohave County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"705-AZ-Mohave County",FALSE
+"706",NA,"Pinal County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"706-AZ-Pinal County",FALSE
+"707",NA,"Yuma County",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"707-AZ-Yuma County",FALSE
+"708",NA,"Buckeye",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"708-AZ-Buckeye",FALSE
+"709",NA,"Casa Grande",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"709-AZ-Casa Grande",FALSE
+"710",NA,"Yuma",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"710-AZ-Yuma",FALSE
+"711",NA,"Glendale",NA,NA,"Need to Find Contract","AZ",NA,NA,NA,NA,"711-AZ-Glendale",FALSE
+"712",NA,"Santa Cruz County",NA,NA,"http://www.santacruzcounty.us/Portals/0/Personnel%20Files/LaborRelations/Law%20Enforcement%20MOU%202016-2020%20-%20Final%20Draft.pdf","CA",NA,NA,"June 30 2020",NA,"712-CA-Santa Cruz County",FALSE
+"713",NA,"San Mateo County",NA,NA,"https://hr.smcgov.org/memorandum-understanding-mou","CA","This is a link to San Mateo's various MOUS.  There are 3 different MOUs for law enforcement.  (Sheriff, probation, law enforcement)",NA,"Dec. 20, 2023",NA,"713-CA-San Mateo County",FALSE
+"714",NA,"Merced County",NA,NA,"https://www.co.merced.ca.us/DocumentCenter/View/1200/Unit-12-MOU-Sheriff-Employees?bidId=","CA",NA,NA,"June 2021",NA,"714-CA-Merced County",TRUE
+"715",NA,"Yuba County",NA,NA,"https://www.yuba.org/Yuba%20County/Human%20Resources%20and%20Organizational%20Services/4.%20Employee%20&%20Labor%20Relations/MOUs/04%20DSA%20Comprehensive%20MOU%20FINAL%2008.01.2019%20to%2006.03.22%20with%20signature%20page.pdf","CA",NA,NA,"6/30/2022",NA,"715-CA-Yuba County",FALSE
+"716",NA,"San Joaquin County",NA,NA,"https://www.sjgov.org/department/hr/labor/","CA","There are three different MOUs",NA,NA,NA,"716-CA-San Joaquin County",FALSE
+"717",NA,"Contra Costa County",NA,NA,"https://www.contracosta.ca.gov/DocumentCenter/View/59838/FINAL-MOU_DSA-R-F_7-1-19-thru-6_30_23PDF","CA","Sherriff's Rank and File MOU",NA,"6/30/2023",NA,"717-CA-Contra Costa County",TRUE
+"718",NA,"Tulare County",NA,NA,"https://tularecounty.ca.gov/hrd/index.cfm/employee-employer-relations/memorandum-of-understanding/tulare-county-deputy-sheriffs-association-tcdsa-unit-133/","CA",NA,NA,"6/30/2021",NA,"718-CA-Tulare County",FALSE
+"719",NA,"San Luis Obispo County",NA,NA,"https://www.slocounty.ca.gov/getattachment/Departments/Human-Resources/Services/Memorandum-of-Understanding-(MOU)-Contracts/DSA-BU03,-BU21,-BU22-January,-2020-December,-2022-MOU.pdf.aspx?lang=en-US","CA",NA,NA,"2022",NA,"719-CA-San Luis Obispo County",TRUE
+"720",NA,"Monterey County",NA,NA,"https://www.co.monterey.ca.us/home/showdocument?id=62694","CA",NA,NA,"6/30/2021",NA,"720-CA-Monterey County",TRUE
+"721",NA,"Butte County",NA,NA,"http://www.buttecounty.net/Portals/17/LaborRelations/DSA_General_MOU_2016-2019.pdf","CA",NA,NA,"2019 (no update)",NA,"721-CA-Butte County",TRUE
+"722",NA,"Sonoma County",NA,NA,"https://sonomacounty.ca.gov/WorkArea/DownloadAsset.aspx?id=2147572908","CA",NA,NA,"Expired- Currently negotiating",NA,"722-CA-Sonoma County",TRUE
+"723",NA,"Fresno County",NA,NA,"https://www.co.fresno.ca.us/home/showdocument?id=38526","CA",NA,NA,"10/18/2020",NA,"723-CA-Fresno County",TRUE
+"724",NA,"Santa Barbara County",NA,NA,"http://www.countyofsb.org/uploadedFiles/hr/Content/Employee_Relations/mou/mou-sma-2018-2022.pdf","CA",NA,NA,"2022",NA,"724-CA-Santa Barbara County",TRUE
+"725",NA,"Alameda County",NA,NA,"http://www.acgov.org/hrs/documents/Deputy_Sheriffs_Association_062412_to_062125_FINAL.pdf","CA",NA,NA,"06/21/2025",NA,"725-CA-Alameda County",TRUE
+"726",NA,"Kern County",NA,NA,"https://itsapps.kerncounty.com/Iframed/CMS/UnionsAndMOUs/kcsca_mou.pdf","CA",NA,NA,"06/30/2020",NA,"726-CA-Kern County",TRUE
+"727",NA,"San Bernardino County",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"2024",NA,"727-CA-San Bernardino County",FALSE
+"728",NA,"Ventura County",NA,NA,"https://vcportal.ventura.org/CEO/HR/MOA/docs/2018-21_VCDSA_MOA_Final_Posted_wi_Sig_Pg.pdf","CA",NA,NA,"04/30/2021",NA,"728-CA-Ventura County",TRUE
+"729",NA,"San Diego County",NA,NA,"https://www.sandiegocounty.gov/content/dam/sdc/hr/union_contracts/MOA/MOA_Sheriffs_Management_SM_2018-2023.pdf","CA",NA,NA,"06/22/2023",NA,"729-CA-San Diego County",TRUE
+"730",NA,"Santa Clara County",NA,NA,"https://www.sccgov.org/sites/esa/labor/Documents/mou-moa/deputy-sheriffs-association-091315-extended-through090620.pdf","CA",NA,NA,"09/06/20",NA,"730-CA-Santa Clara County",TRUE
+"731",NA,"Los Angeles County",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021",NA,"731-CA-Los Angeles County",TRUE
+"732",NA,"El Dorado County",NA,NA,"https://www.edcgov.us/Government/HumanResources/labor%20agreements/Documents/LEMA%20FE%20Final%20MOU%209-18-18.pdf","CA",NA,NA,"06/30/2020",NA,"732-CA-El Dorado County",FALSE
+"733",NA,"Madera County",NA,NA,"https://www.maderacounty.com/Home/ShowDocument?id=19662","CA",NA,NA,NA,NA,"733-CA-Madera County",FALSE
+"734",NA,"Mendocino County",NA,NA,"http://www.cityofukiah.com/NewWeb/wp-content/uploads/2012/04/Police-Unit-Comprehensive-MOU-2018-2021.pdf","CA",NA,NA,"09/18/2021",NA,"734-CA-Mendocino County",TRUE
+"735",NA,"Nevada County",NA,NA,"https://www.mynevadacounty.com/DocumentCenter/View/10389/DSA-Memoranda-of-Understanding-PDF","CA",NA,NA,"06/30/2022",NA,"735-CA-Nevada County",TRUE
+"736",NA,"Orange County",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"2023",NA,"736-CA-Orange County",TRUE
+"737",NA,"Placer County",NA,NA,"https://www.placer.ca.gov/1693/Employee-Labor-Relations","CA",NA,NA,NA,NA,"737-CA-Placer County",FALSE
+"738",NA,"Riverside County",NA,NA,"https://www.rc-hr.com/Portals/2/PDF/LEMU%20-%20MOU%202018-2020.pdf","CA",NA,NA,"2020",NA,"738-CA-Riverside County",FALSE
+"739",NA,"Sacramento County",NA,NA,"https://laborrelations.saccounty.net/Documents/2018-2021%20031%20Peace%20Officers%20Agreement.pdf","CA",NA,NA,"2021",NA,"739-CA-Sacramento County",FALSE
+"740",NA,"Shasta County",NA,NA,"https://www.co.shasta.ca.us/docs/libraries/support-services-docs/mous/dsa-dss-dai-mou-2016---2018.pdf?sfvrsn=2961e289_23","CA",NA,NA,"8/30/2020",NA,"740-CA-Shasta County",TRUE
+"741",NA,"Stanislaus County",NA,NA,"http://www.stancounty.com/personnel/pdf/custodial-mou.pdf","CA",NA,NA,"2021",NA,"741-CA-Stanislaus County",TRUE
+"742",NA,"Aliso Viejo",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"2023",NA,"742-CA-Aliso Viejo",TRUE
+"743",NA,"Apple Valley",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"2024",NA,"743-CA-Apple Valley",FALSE
+"744",NA,"Bellflower",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,NA,NA,"744-CA-Bellflower",TRUE
+"745",NA,"Camarillo",NA,NA,"https://vcportal.ventura.org/CEO/HR/MOA/docs/2018-21_VCDSA_MOA_Final_Posted_wi_Sig_Pg.pdf","CA",NA,NA,"04/30/2021","Ventura County Sheriff's Department","745-CA-Camarillo",TRUE
+"746",NA,"Cerritos",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"01/31/2021","Los Angeles Sheriff's Department","746-CA-Cerritos",TRUE
+"747",NA,"Chino Hills",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"07/31/2024","San Bernadino County Sheriff's Department","747-CA-Chino Hills",FALSE
+"748",NA,"Compton",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"01/31/2021","Los Angeles Sheriff's Department","748-CA-Compton",TRUE
+"749",NA,"Cupertino",NA,NA,"https://www.sccgov.org/sites/esa/labor/Documents/mou-moa/deputy-sheriffs-association-091315-extended-through090620.pdf","CA",NA,NA,"9/6/2020","Santa Clara County Sheriff's Office","749-CA-Cupertino",TRUE
+"750",NA,"Diamond Bar",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"01/31/2021","Los Angeles Sheriff's Department","750-CA-Diamond Bar",TRUE
+"751",NA,"Eastvale",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","751-CA-Eastvale",FALSE
+"752",NA,"Encinitas",NA,NA,"https://www.sandiegocounty.gov/content/sdc/hr/LaborAgreements/DSA.html","CA",NA,NA,"06/22/2023","San Diego County Sheriff's Department","752-CA-Encinitas",FALSE
+"753",NA,"Hesperia",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"07/31/2024","San Bernadino County Sheriff's Department","753-CA-Hesperia",FALSE
+"754",NA,"Highland",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"07/31/2024","San Bernadino County Sheriff's Department","754-CA-Highland",FALSE
+"755",NA,"Jurupa Valley",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","755-CA-Jurupa Valley",FALSE
+"756",NA,"Laguna Niguel",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"06/29/2023","Orange County Sheriff's Department","756-CA-Laguna Niguel",TRUE
+"757",NA,"Lake Elsinore",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","757-CA-Lake Elsinore",FALSE
+"758",NA,"Lake Forest",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"06/29/2023","Orange County Sheriff's Department","758-CA-Lake Forest",TRUE
+"759",NA,"Menifee",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","759-CA-Menifee",FALSE
+"760",NA,"Mission Viejo",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"06/29/2023","Orange County Sheriff's Department","760-CA-Mission Viejo",TRUE
+"761",NA,"Montebello",NA,NA,"Need to Find Contract","CA",NA,NA,NA,NA,"761-CA-Montebello",FALSE
+"762",NA,"Moreno Valley",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","762-CA-Moreno Valley",FALSE
+"763",NA,"Palm Desert",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","763-CA-Palm Desert",FALSE
+"764",NA,"Palmdale",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021","Los Angeles Sheriff's Department","764-CA-Palmdale",TRUE
+"765",NA,"Paramount",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021","Los Angeles Sheriff's Department","765-CA-Paramount",TRUE
+"766",NA,"Perris",NA,NA,"https://www.rc-hr.com/HR-Services/Employee-Labor-Relations/Employee-Relations/MOUs-Resolutions-and-Ordinances","CA",NA,NA,NA,"Riverside County Sheriff's Department","766-CA-Perris",FALSE
+"767",NA,"Pico Rivera",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021","Los Angeles Sheriff's Department","767-CA-Pico Rivera",TRUE
+"768",NA,"Porterville",NA,NA,"http://www.ci.porterville.ca.us/depts/AdministrativeServices/documents/PPOACompMOU2018-2020.pdf","CA",NA,NA,"12/31/2020",NA,"768-CA-Porterville",TRUE
+"769",NA,"Poway",NA,NA,"https://www.sandiegocounty.gov/content/sdc/hr/LaborAgreements/DSA.html","CA",NA,NA,"06/22/2023","San Diego County Sheriff's Department","769-CA-Poway",FALSE
+"770",NA,"Rancho Cordova",NA,NA,"https://laborrelations.saccounty.net/Documents/2018-2021%20031%20Peace%20Officers%20Agreement.pdf","CA",NA,NA,"06/30/2021","Sacramento County Sheriff's Department","770-CA-Rancho Cordova",FALSE
+"771",NA,"Rancho Cucamonga",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"07/31/2024","San Bernadino County Sheriff's Department","771-CA-Rancho Cucamonga",FALSE
+"772",NA,"Rosemead",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021","Los Angeles Sheriff's Department","772-CA-Rosemead",TRUE
+"773",NA,"San Clemente",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"06/29/2023","Orange County Sheriff's Department","773-CA-San Clemente",TRUE
+"774",NA,"Santa Clarita",NA,NA,"http://file.lacounty.gov/SDSInter/bos/supdocs/128227.pdf","CA",NA,NA,"2021",NA,"774-CA-Santa Clarita",TRUE
+"775",NA,"Santee",NA,NA,"https://www.sandiegocounty.gov/content/sdc/hr/LaborAgreements/DSA.html","CA",NA,NA,"06/22/2023","San Diego County Sheriff's Department","775-CA-Santee",FALSE
+"776",NA,"Temecula",NA,NA,"Need to Find Contract","CA",NA,NA,NA,NA,"776-CA-Temecula",FALSE
+"777",NA,"Thousand Oaks",NA,NA,"https://vcportal.ventura.org/CEO/HR/MOA/docs/2018-21_VCDSA_MOA_Final_Posted_wi_Sig_Pg.pdf","CA",NA,NA,"04/30/2021","Ventura County Sheriff's Department","777-CA-Thousand Oaks",TRUE
+"778",NA,"Victorville",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"2024",NA,"778-CA-Victorville",FALSE
+"779",NA,"Vista",NA,NA,"https://www.sandiegocounty.gov/content/sdc/hr/LaborAgreements/DSA.html","CA",NA,NA,"06/22/2023","San Diego County Sheriff's Department","779-CA-Vista",FALSE
+"780",NA,"Yorba Linda",NA,NA,"https://www.ocgov.com/civicax/filebank/blobdload.aspx?blobid=61916","CA",NA,NA,"2023",NA,"780-CA-Yorba Linda",TRUE
+"781",NA,"Yucaipa",NA,NA,"https://cms.sbcounty.gov/Portals/54/Documents/EmployeeRelations/MOUs/ADD-MOU-CAO-08-06-19-Safety%20MOU%202019-2024%20Final%20V3.pdf?ver=2019-08-16-134344-863","CA",NA,NA,"2024",NA,"781-CA-Yucaipa",FALSE
+"782",NA,"San Bernardino",NA,NA,"http://www.ci.san-bernardino.ca.us/civicax/filebank/blobdload.aspx?BlobID=23685","CA",NA,NA,"06/30/2020",NA,"782-CA-San Bernardino",FALSE
+"783",NA,"Alhambra",NA,NA,"https://drive.google.com/file/d/1oSPUL3m4fvXVJr3EX2IfKYa0LcspdANy/view","CA",NA,NA,"2021",NA,"783-CA-Alhambra",FALSE
+"784",NA,"Arvada",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"784-CO-Arvada",FALSE
+"785",NA,"Broomfield",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"785-CO-Broomfield",FALSE
+"786",NA,"Pueblo County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"786-CO-Pueblo County",FALSE
+"787",NA,"El Paso County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"787-CO-El Paso County",FALSE
+"788",NA,"Longmont",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"788-CO-Longmont",FALSE
+"789",NA,"Boulder County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"789-CO-Boulder County",FALSE
+"790",NA,"Grand Junction",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"790-CO-Grand Junction",FALSE
+"791",NA,"Colorado Springs",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"791-CO-Colorado Springs",FALSE
+"792",NA,"Adams County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"792-CO-Adams County",FALSE
+"793",NA,"Arapahoe County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"793-CO-Arapahoe County",FALSE
+"794",NA,"Douglas County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"794-CO-Douglas County",FALSE
+"795",NA,"Jefferson County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"795-CO-Jefferson County",FALSE
+"796",NA,"Larimer County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"796-CO-Larimer County",FALSE
+"797",NA,"Mesa County",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"797-CO-Mesa County",FALSE
+"798",NA,"Castle Rock",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"798-CO-Castle Rock",FALSE
+"799",NA,"Centennial",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"799-CO-Centennial",FALSE
+"800",NA,"Loveland",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"800-CO-Loveland",FALSE
+"801",NA,"Westminster",NA,NA,"Need to Find Contract","CO",NA,NA,NA,NA,"801-CO-Westminster",FALSE
+"802",NA,"East Hartford",NA,NA,"Need to Find Contract","CT",NA,NA,NA,NA,"802-CT-East Hartford",FALSE
+"803",NA,"Hamden",NA,NA,"Need to Find Contract","CT",NA,NA,NA,NA,"803-CT-Hamden",FALSE
+"804",NA,"West Haven",NA,NA,"Need to Find Contract","CT",NA,NA,NA,NA,"804-CT-West Haven",FALSE
+"805",NA,"Danbury",NA,NA,"Need to Find Contract","CT",NA,NA,NA,NA,"805-CT-Danbury",FALSE
+"806",NA,"New Britain",NA,NA,"Need to Find Contract","CT",NA,NA,NA,NA,"806-CT-New Britain",FALSE
+"807",NA,"New Castle County",NA,NA,"Need to Find Contract","DE",NA,NA,NA,NA,"807-DE-New Castle County",FALSE
+"808",NA,"Kent County",NA,NA,"Need to Find Contract","DE",NA,NA,NA,NA,"808-DE-Kent County",FALSE
+"809",NA,"Sussex County",NA,NA,"Need to Find Contract","DE",NA,NA,NA,NA,"809-DE-Sussex County",FALSE
+"810",NA,"Alachua County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"810-FL-Alachua County",FALSE
+"811",NA,"Bay County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"811-FL-Bay County",FALSE
+"812",NA,"Brevard County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"812-FL-Brevard County",FALSE
+"813",NA,"Charlotte County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"813-FL-Charlotte County",FALSE
+"814",NA,"Citrus County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"814-FL-Citrus County",FALSE
+"815",NA,"Clay County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"815-FL-Clay County",FALSE
+"816",NA,"Collier County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"816-FL-Collier County",FALSE
+"817",NA,"Columbia County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"817-FL-Columbia County",FALSE
+"818",NA,"Deerfield Beach",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"818-FL-Deerfield Beach",FALSE
+"819",NA,"Escambia County",NA,NA,"https://myescambia.com/sites/myescambia.com/files/pages/2016/May/Pay%20Study%20Files/Sheriff_PBA_BargainingAgreement.pdf","FL",NA,NA,NA,NA,"819-FL-Escambia County",FALSE
+"820",NA,"Flagler County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"820-FL-Flagler County",FALSE
+"821",NA,"Hernando County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"821-FL-Hernando County",FALSE
+"822",NA,"Highlands County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"822-FL-Highlands County",FALSE
+"823",NA,"Hillsborough County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"823-FL-Hillsborough County",FALSE
+"824",NA,"Homestead",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"824-FL-Homestead",FALSE
+"825",NA,"Indian River County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"825-FL-Indian River County",FALSE
+"826",NA,"Lake County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"826-FL-Lake County",FALSE
+"827",NA,"Lee County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"827-FL-Lee County",FALSE
+"828",NA,"Leon County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"828-FL-Leon County",FALSE
+"829",NA,"Manatee County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"829-FL-Manatee County",FALSE
+"830",NA,"Marion County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"830-FL-Marion County",FALSE
+"831",NA,"Martin County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"831-FL-Martin County",FALSE
+"832",NA,"Miami-Dade",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"832-FL-Miami-Dade",FALSE
+"833",NA,"Monroe County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"833-FL-Monroe County",FALSE
+"834",NA,"Nassau County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"834-FL-Nassau County",FALSE
+"835",NA,"North Port",NA,NA,"http://cityofnorthport.granicus.com/MetaViewer.php?view_id=9&clip_id=88&meta_id=7673","FL",NA,"John Fentiman","9/20/2012",NA,"835-FL-North Port",FALSE
+"836",NA,"Okaloosa County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"836-FL-Okaloosa County",FALSE
+"837",NA,"Orange County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"837-FL-Orange County",FALSE
+"838",NA,"Osceola County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"838-FL-Osceola County",FALSE
+"839",NA,"Pasco County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"839-FL-Pasco County",FALSE
+"840",NA,"Pinellas County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"840-FL-Pinellas County",FALSE
+"841",NA,"Pinellas Park",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"841-FL-Pinellas Park",FALSE
+"842",NA,"Polk County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"842-FL-Polk County",FALSE
+"843",NA,"Pompano Beach",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"843-FL-Pompano Beach",FALSE
+"844",NA,"Putnam County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"844-FL-Putnam County",FALSE
+"845",NA,"Sanford",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"845-FL-Sanford",FALSE
+"846",NA,"Santa Rosa County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"846-FL-Santa Rosa County",FALSE
+"847",NA,"Sarasota County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"847-FL-Sarasota County",FALSE
+"848",NA,"Seminole County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"848-FL-Seminole County",FALSE
+"849",NA,"St. Johns County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"849-FL-St. Johns County",FALSE
+"850",NA,"St. Lucie County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"850-FL-St. Lucie County",FALSE
+"851",NA,"St. Petersburg",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"851-FL-St. Petersburg",FALSE
+"852",NA,"Sumter County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"852-FL-Sumter County",FALSE
+"853",NA,"Tallahassee",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"853-FL-Tallahassee",FALSE
+"854",NA,"Tamarac",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"854-FL-Tamarac",FALSE
+"855",NA,"Volusia County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"855-FL-Volusia County",FALSE
+"856",NA,"Walton County",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"856-FL-Walton County",FALSE
+"857",NA,"Wellington",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"857-FL-Wellington",FALSE
+"858",NA,"Weston",NA,NA,"Need to Find Contract","FL",NA,NA,NA,NA,"858-FL-Weston",FALSE
+"859",NA,"Alpharetta",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"859-GA-Alpharetta",FALSE
+"860",NA,"Carroll County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"860-GA-Carroll County",FALSE
+"861",NA,"Fulton",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"861-GA-Fulton",FALSE
+"862",NA,"Fayette County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"862-GA-Fayette County",FALSE
+"863",NA,"Gwinnett County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"863-GA-Gwinnett County",FALSE
+"864",NA,"Henry County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"864-GA-Henry County",FALSE
+"865",NA,"Clayton County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"865-GA-Clayton County",FALSE
+"866",NA,"Cobb County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"866-GA-Cobb County",FALSE
+"867",NA,"Bibb County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"867-GA-Bibb County",FALSE
+"868",NA,"Dekalb County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"868-GA-Dekalb County",FALSE
+"869",NA,"Atlanta",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"869-GA-Atlanta",FALSE
+"870",NA,"Barrow County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"870-GA-Barrow County",FALSE
+"871",NA,"Bartow County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"871-GA-Bartow County",FALSE
+"872",NA,"Catoosa County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"872-GA-Catoosa County",FALSE
+"873",NA,"Cherokee County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"873-GA-Cherokee County",FALSE
+"874",NA,"Columbia County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"874-GA-Columbia County",FALSE
+"875",NA,"Coweta County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"875-GA-Coweta County",FALSE
+"876",NA,"Douglas County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"876-GA-Douglas County",FALSE
+"877",NA,"Floyd County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"877-GA-Floyd County",FALSE
+"878",NA,"Forsyth County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"878-GA-Forsyth County",FALSE
+"879",NA,"Glynn County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"879-GA-Glynn County",FALSE
+"880",NA,"Hall County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"880-GA-Hall County",FALSE
+"881",NA,"Houston County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"881-GA-Houston County",FALSE
+"882",NA,"Lowndes County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"882-GA-Lowndes County",FALSE
+"883",NA,"Newton County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"883-GA-Newton County",FALSE
+"884",NA,"Paulding County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"884-GA-Paulding County",FALSE
+"885",NA,"Richmond County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"885-GA-Richmond County",FALSE
+"886",NA,"Rockdale County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"886-GA-Rockdale County",FALSE
+"887",NA,"Walker County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"887-GA-Walker County",FALSE
+"888",NA,"Walton County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"888-GA-Walton County",FALSE
+"889",NA,"Whitfield County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"889-GA-Whitfield County",FALSE
+"890",NA,"Athens-Clarke County",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"890-GA-Athens-Clarke County",FALSE
+"891",NA,"Brook Haven",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"891-GA-Brook Haven",FALSE
+"892",NA,"Johns Creek",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"892-GA-Johns Creek",FALSE
+"893",NA,"Marietta",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"893-GA-Marietta",FALSE
+"894",NA,"Roswell",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"894-GA-Roswell",FALSE
+"895",NA,"Sandy Spring",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"895-GA-Sandy Spring",FALSE
+"896",NA,"Savannah",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"896-GA-Savannah",FALSE
+"897",NA,"Smyrna",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"897-GA-Smyrna",FALSE
+"898",NA,"Valdosta",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"898-GA-Valdosta",FALSE
+"899",NA,"Warner Robins",NA,NA,"Need to Find Contract","GA",NA,NA,NA,NA,"899-GA-Warner Robins",FALSE
+"900",NA,"Hawaii County",NA,NA,"Need to Find Contract","HI",NA,NA,NA,NA,"900-HI-Hawaii County",FALSE
+"901",NA,"Kauai County",NA,NA,"Need to Find Contract","HI",NA,NA,NA,NA,"901-HI-Kauai County",FALSE
+"902",NA,"Maui County",NA,NA,"Need to Find Contract","HI",NA,NA,NA,NA,"902-HI-Maui County",FALSE
+"903",NA,"Waterloo",NA,NA,"https://www.sdc.gov.on.ca/sites/mol/drs/ca/Public%20Administration/913-13752-19%20(951-0566).pdf","IA",NA,"Dan Pelegero","12/31/2019",NA,"903-IA-Waterloo",FALSE
+"904",NA,"Ada County",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"904-ID-Ada County",FALSE
+"905",NA,"Bonneville County",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"905-ID-Bonneville County",FALSE
+"906",NA,"Canyon County",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"906-ID-Canyon County",FALSE
+"907",NA,"Kootenai County",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"907-ID-Kootenai County",FALSE
+"908",NA,"Caldwell",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"908-ID-Caldwell",FALSE
+"909",NA,"Coeur D'Alene",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"909-ID-Coeur D'Alene",FALSE
+"910",NA,"Idaho Falls",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"910-ID-Idaho Falls",FALSE
+"911",NA,"Meridian",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"911-ID-Meridian",FALSE
+"912",NA,"Nampa",NA,NA,"Need to Find Contract","ID",NA,NA,NA,NA,"912-ID-Nampa",FALSE
+"913",NA,"Madison County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"913-IN-Madison County",FALSE
+"914",NA,"Allen County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"914-IN-Allen County",FALSE
+"915",NA,"Kosciusko County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"915-IN-Kosciusko County",FALSE
+"916",NA,"Monroe County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"916-IN-Monroe County",FALSE
+"917",NA,"St. Joseph County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"917-IN-St. Joseph County",FALSE
+"918",NA,"Tippecanoe County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"918-IN-Tippecanoe County",FALSE
+"919",NA,"Vanderburgh County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"919-IN-Vanderburgh County",FALSE
+"920",NA,"Warrick County",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"920-IN-Warrick County",FALSE
+"921",NA,"Anderson",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"921-IN-Anderson",FALSE
+"922",NA,"Elkhart",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"922-IN-Elkhart",FALSE
+"923",NA,"Fishers",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"923-IN-Fishers",FALSE
+"924",NA,"Greenwood",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"924-IN-Greenwood",FALSE
+"925",NA,"Hammond",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"925-IN-Hammond",FALSE
+"926",NA,"Kokomo",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"926-IN-Kokomo",FALSE
+"927",NA,"Lafayette",NA,NA,"Need to Find Contract","IN",NA,NA,NA,NA,"927-IN-Lafayette",FALSE
+"928",NA,"Riley County",NA,NA,"Need to Find Contract","KS",NA,NA,NA,NA,"928-KS-Riley County",FALSE
+"929",NA,"Lenexa",NA,NA,"Need to Find Contract","KS",NA,NA,NA,NA,"929-KS-Lenexa",FALSE
+"930",NA,"Boone County",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"930-KY-Boone County",FALSE
+"931",NA,"Laurel County",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"931-KY-Laurel County",FALSE
+"932",NA,"Oldham County",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"932-KY-Oldham County",FALSE
+"933",NA,"Pike County",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"933-KY-Pike County",FALSE
+"934",NA,"Warren County",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"934-KY-Warren County",FALSE
+"935",NA,"Louisville Metro",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"935-KY-Louisville Metro",FALSE
+"936",NA,"Owensboro",NA,NA,"Need to Find Contract","KY",NA,NA,NA,NA,"936-KY-Owensboro",FALSE
+"937",NA,"Ascension Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"937-LA-Ascension Parish",FALSE
+"938",NA,"Bossier Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"938-LA-Bossier Parish",FALSE
+"939",NA,"Calcasieu Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"939-LA-Calcasieu Parish",FALSE
+"940",NA,"East Baton Rouge Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"940-LA-East Baton Rouge Parish",FALSE
+"941",NA,"Iberia Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"941-LA-Iberia Parish",FALSE
+"942",NA,"Jefferson Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"942-LA-Jefferson Parish",FALSE
+"943",NA,"Lafayette Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"943-LA-Lafayette Parish",FALSE
+"944",NA,"Lafourche Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"944-LA-Lafourche Parish",FALSE
+"945",NA,"Livingston Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"945-LA-Livingston Parish",FALSE
+"946",NA,"Ouachita Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"946-LA-Ouachita Parish",FALSE
+"947",NA,"Rapides Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"947-LA-Rapides Parish",FALSE
+"948",NA,"St. Charles Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"948-LA-St. Charles Parish",FALSE
+"949",NA,"St. Landry Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"949-LA-St. Landry Parish",FALSE
+"950",NA,"St. Tammany Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"950-LA-St. Tammany Parish",FALSE
+"951",NA,"Tangipahoa Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"951-LA-Tangipahoa Parish",FALSE
+"952",NA,"Terrebonne Parish",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"952-LA-Terrebonne Parish",FALSE
+"953",NA,"Bossier City",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"953-LA-Bossier City",FALSE
+"954",NA,"Kenner",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"954-LA-Kenner",FALSE
+"955",NA,"Lafayette",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"955-LA-Lafayette",FALSE
+"956",NA,"Lake Charles",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"956-LA-Lake Charles",FALSE
+"957",NA,"New Orleans",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"957-LA-New Orleans",FALSE
+"958",NA,"Shreveport",NA,NA,"Need to Find Contract","LA",NA,NA,NA,NA,"958-LA-Shreveport",FALSE
+"959",NA,"Lynn",NA,NA,"Need to Find Contract","MA",NA,NA,NA,NA,"959-MA-Lynn",FALSE
+"960",NA,"Malden",NA,NA,"Need to Find Contract","MA",NA,NA,NA,NA,"960-MA-Malden",FALSE
+"961",NA,"Quincy",NA,NA,"Need to Find Contract","MA",NA,NA,NA,NA,"961-MA-Quincy",FALSE
+"962",NA,"Calvert County",NA,NA,"Need to Find Contract","MD",NA,NA,NA,NA,"962-MD-Calvert County",FALSE
+"963",NA,"Harford County",NA,NA,"Need to Find Contract","MD",NA,NA,NA,NA,"963-MD-Harford County",FALSE
+"964",NA,"St. Mary's County",NA,NA,"Need to Find Contract","MD",NA,NA,NA,NA,"964-MD-St. Mary's County",FALSE
+"965",NA,"Carroll County",NA,NA,"Need to Find Contract","MD",NA,NA,NA,NA,"965-MD-Carroll County",FALSE
+"966",NA,"Washington County",NA,NA,"Need to Find Contract","MD",NA,NA,NA,NA,"966-MD-Washington County",FALSE
+"967",NA,"Kennebec County",NA,NA,"Need to Find Contract","ME",NA,NA,NA,NA,"967-ME-Kennebec County",FALSE
+"968",NA,"Penobscot County",NA,NA,"Need to Find Contract","ME",NA,NA,NA,NA,"968-ME-Penobscot County",FALSE
+"969",NA,"Bay County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"969-MI-Bay County",FALSE
+"970",NA,"Eaton County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"970-MI-Eaton County",FALSE
+"971",NA,"Grand Traverse County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"971-MI-Grand Traverse County",FALSE
+"972",NA,"Ingham County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"972-MI-Ingham County",FALSE
+"973",NA,"Jackson County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"973-MI-Jackson County",FALSE
+"974",NA,"Kalamazoo County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"974-MI-Kalamazoo County",FALSE
+"975",NA,"Kent County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"975-MI-Kent County",FALSE
+"976",NA,"Lapeer County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"976-MI-Lapeer County",FALSE
+"977",NA,"Macomb County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"977-MI-Macomb County",FALSE
+"978",NA,"Monroe County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"978-MI-Monroe County",FALSE
+"979",NA,"Muskegon County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"979-MI-Muskegon County",FALSE
+"980",NA,"Ottawa County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"980-MI-Ottawa County",FALSE
+"981",NA,"Van Buren County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"981-MI-Van Buren County",FALSE
+"982",NA,"Washtenaw County",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"982-MI-Washtenaw County",FALSE
+"983",NA,"Clinton",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"983-MI-Clinton",FALSE
+"984",NA,"Dearborn Heights",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"984-MI-Dearborn Heights",FALSE
+"985",NA,"Kentwood",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"985-MI-Kentwood",FALSE
+"986",NA,"Pontiac",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"986-MI-Pontiac",FALSE
+"987",NA,"Royal Oak",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"987-MI-Royal Oak",FALSE
+"988",NA,"Shelby",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"988-MI-Shelby",FALSE
+"989",NA,"St. Clair Shores",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"989-MI-St. Clair Shores",FALSE
+"990",NA,"Waterford",NA,NA,"Need to Find Contract","MI",NA,NA,NA,NA,"990-MI-Waterford",FALSE
+"991",NA,"Anoka County",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"991-MN-Anoka County",FALSE
+"992",NA,"Carver County",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"992-MN-Carver County",FALSE
+"993",NA,"Ramsey County",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"993-MN-Ramsey County",FALSE
+"994",NA,"St. Louis County",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"994-MN-St. Louis County",FALSE
+"995",NA,"Wright County",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"995-MN-Wright County",FALSE
+"996",NA,"Apple Valley",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"996-MN-Apple Valley",FALSE
+"997",NA,"Brooklyn Park",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"997-MN-Brooklyn Park",FALSE
+"998",NA,"Burnsville",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"998-MN-Burnsville",FALSE
+"999",NA,"Eagan",NA,NA,"https://lels.org/wp-content/uploads/2018/09/ActiveContract-Eagan-PD-12-31-2018.pdf","MN",NA,"John Fentiman","12/31/2018",NA,"999-MN-Eagan",TRUE
+"1000",NA,"Eden Prairie",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"1000-MN-Eden Prairie",FALSE
+"1001",NA,"Maple Grove",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"1001-MN-Maple Grove",FALSE
+"1002",NA,"Minnetonka",NA,NA,"https://lels.org/wp-content/uploads/2018/09/ActiveContract-Minnetonka-PD-Sergeants-12-24-2020.pdf","MN",NA,NA,NA,NA,"1002-MN-Minnetonka",TRUE
+"1003",NA,"St. Cloud",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"1003-MN-St. Cloud",FALSE
+"1004",NA,"St. Paul",NA,NA,"Need to Find Contract","MN",NA,NA,NA,NA,"1004-MN-St. Paul",FALSE
+"1005",NA,"Greene County",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1005-MO-Greene County",FALSE
+"1006",NA,"Jefferson County",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1006-MO-Jefferson County",FALSE
+"1007",NA,"St. Charles County",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1007-MO-St. Charles County",FALSE
+"1008",NA,"St. Louis County",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1008-MO-St. Louis County",FALSE
+"1009",NA,"Florissant",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1009-MO-Florissant",FALSE
+"1010",NA,"Joplin",NA,NA,"http://www.joplinmo.org/AgendaCenter/ViewFile/Item/1787?fileID=3503","MO",NA,NA,NA,NA,"1010-MO-Joplin",TRUE
+"1011",NA,"Lee's Summit",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1011-MO-Lee's Summit",FALSE
+"1012",NA,"St. Charles",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1012-MO-St. Charles",FALSE
+"1013",NA,"St. Joseph",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1013-MO-St. Joseph",FALSE
+"1014",NA,"St. Louis",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1014-MO-St. Louis",FALSE
+"1015",NA,"St. Peters",NA,NA,"Need to Find Contract","MO",NA,NA,NA,NA,"1015-MO-St. Peters",FALSE
+"1016",NA,"Harrison County",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1016-MS-Harrison County",FALSE
+"1017",NA,"Jackson County",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1017-MS-Jackson County",FALSE
+"1018",NA,"Lamar County",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1018-MS-Lamar County",FALSE
+"1019",NA,"Rankin County",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1019-MS-Rankin County",FALSE
+"1020",NA,"Gulfport",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1020-MS-Gulfport",FALSE
+"1021",NA,"Southaven",NA,NA,"Need to Find Contract","MS",NA,NA,NA,NA,"1021-MS-Southaven",FALSE
+"1022",NA,"Flathead County",NA,NA,"Need to Find Contract","MT",NA,NA,NA,NA,"1022-MT-Flathead County",FALSE
+"1023",NA,"Fayetteville",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1023-NC-Fayetteville",FALSE
+"1024",NA,"Alamance County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1024-NC-Alamance County",FALSE
+"1025",NA,"Brunswick County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1025-NC-Brunswick County",FALSE
+"1026",NA,"Buncombe County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1026-NC-Buncombe County",FALSE
+"1027",NA,"Burke County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1027-NC-Burke County",FALSE
+"1028",NA,"Cabarrus County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1028-NC-Cabarrus County",FALSE
+"1029",NA,"Caldwell County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1029-NC-Caldwell County",FALSE
+"1030",NA,"Catawba County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1030-NC-Catawba County",FALSE
+"1031",NA,"Chatham County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1031-NC-Chatham County",FALSE
+"1032",NA,"Cumberland County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1032-NC-Cumberland County",FALSE
+"1033",NA,"Davidson County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1033-NC-Davidson County",FALSE
+"1034",NA,"Forsyth County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1034-NC-Forsyth County",FALSE
+"1035",NA,"Franklin County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1035-NC-Franklin County",FALSE
+"1036",NA,"Gaston County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1036-NC-Gaston County",FALSE
+"1037",NA,"Guilford County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1037-NC-Guilford County",FALSE
+"1038",NA,"Harnett County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1038-NC-Harnett County",FALSE
+"1039",NA,"Henderson County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1039-NC-Henderson County",FALSE
+"1040",NA,"Iredell County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1040-NC-Iredell County",FALSE
+"1041",NA,"Johnston County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1041-NC-Johnston County",FALSE
+"1042",NA,"Lincoln County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1042-NC-Lincoln County",FALSE
+"1043",NA,"New Hanover County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1043-NC-New Hanover County",FALSE
+"1044",NA,"Onslow County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1044-NC-Onslow County",FALSE
+"1045",NA,"Orange County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1045-NC-Orange County",FALSE
+"1046",NA,"Pender County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1046-NC-Pender County",FALSE
+"1047",NA,"Pitt County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1047-NC-Pitt County",FALSE
+"1048",NA,"Robeson County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1048-NC-Robeson County",FALSE
+"1049",NA,"Rockingham County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1049-NC-Rockingham County",FALSE
+"1050",NA,"Rowan County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1050-NC-Rowan County",FALSE
+"1051",NA,"Sampson County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1051-NC-Sampson County",FALSE
+"1052",NA,"Surry County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1052-NC-Surry County",FALSE
+"1053",NA,"Union County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1053-NC-Union County",FALSE
+"1054",NA,"Wake County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1054-NC-Wake County",FALSE
+"1055",NA,"Wayne County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1055-NC-Wayne County",FALSE
+"1056",NA,"Wilkes County",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1056-NC-Wilkes County",FALSE
+"1057",NA,"Asheville",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1057-NC-Asheville",FALSE
+"1058",NA,"Cary",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1058-NC-Cary",FALSE
+"1059",NA,"Chapel Hill",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1059-NC-Chapel Hill",FALSE
+"1060",NA,"Charlotte",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1060-NC-Charlotte",FALSE
+"1061",NA,"Durham",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1061-NC-Durham",FALSE
+"1062",NA,"Gastonia",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1062-NC-Gastonia",FALSE
+"1063",NA,"Greensboro",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1063-NC-Greensboro",FALSE
+"1064",NA,"Greenville",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1064-NC-Greenville",FALSE
+"1065",NA,"High Point",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1065-NC-High Point",FALSE
+"1066",NA,"Huntersville",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1066-NC-Huntersville",FALSE
+"1067",NA,"Rocky Mount",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1067-NC-Rocky Mount",FALSE
+"1068",NA,"Winston-Salem",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1068-NC-Winston-Salem",FALSE
+"1069",NA,"Concord",NA,NA,"Need to Find Contract","NC",NA,NA,NA,NA,"1069-NC-Concord",FALSE
+"1070",NA,"Bismarck",NA,NA,"Need to Find Contract","ND",NA,NA,NA,NA,"1070-ND-Bismarck",FALSE
+"1071",NA,"Fargo",NA,NA,"Need to Find Contract","ND",NA,NA,NA,NA,"1071-ND-Fargo",FALSE
+"1072",NA,"Grand Forks",NA,NA,"Need to Find Contract","ND",NA,NA,NA,NA,"1072-ND-Grand Forks",FALSE
+"1073",NA,"Minot",NA,NA,"Need to Find Contract","ND",NA,NA,NA,NA,"1073-ND-Minot",FALSE
+"1074",NA,"Douglas County",NA,NA,"Need to Find Contract","NE",NA,NA,NA,NA,"1074-NE-Douglas County",FALSE
+"1075",NA,"Sarpy County",NA,NA,"Need to Find Contract","NE",NA,NA,NA,NA,"1075-NE-Sarpy County",FALSE
+"1076",NA,"Cherry Hill",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1076-NJ-Cherry Hill",FALSE
+"1077",NA,"Franklin",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1077-NJ-Franklin",FALSE
+"1078",NA,"Gloucester",NA,NA,"https://www.perc.state.nj.us/publicsectorcontracts.nsf/1c23a2620ca63d8285256fc80056bb78/b61bb581c9352fd985257eac005b291d/$FILE/Gloucester%20City%20and%20PBA%20Loc%2040%202013.pdf","NJ","https://www.perc.state.nj.us/publicsectorcontracts.nsf/298b6b12dcbbcf4185256f4d005df2dc/8dcacd5c0f609e1985257c75007820ae?OpenDocument","John","12/31/2017",NA,"1078-NJ-Gloucester",FALSE
+"1079",NA,"Irvington",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1079-NJ-Irvington",FALSE
+"1080",NA,"North Bergen",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1080-NJ-North Bergen",FALSE
+"1081",NA,"Old Bridge",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1081-NJ-Old Bridge",FALSE
+"1082",NA,"Parsippany-Troy Hills",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1082-NJ-Parsippany-Troy Hills",FALSE
+"1083",NA,"Piscataway",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1083-NJ-Piscataway",FALSE
+"1084",NA,"Union",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1084-NJ-Union",FALSE
+"1085",NA,"Wayne",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1085-NJ-Wayne",FALSE
+"1086",NA,"Union City",NA,NA,"Need to Find Contract","NJ",NA,NA,NA,NA,"1086-NJ-Union City",FALSE
+"1087",NA,"Bernalillo County",NA,NA,"Need to Find Contract","NM",NA,NA,NA,NA,"1087-NM-Bernalillo County",FALSE
+"1088",NA,"Dona Ana County",NA,NA,"Need to Find Contract","NM",NA,NA,NA,NA,"1088-NM-Dona Ana County",FALSE
+"1089",NA,"Mckinley County",NA,NA,"Need to Find Contract","NM",NA,NA,NA,NA,"1089-NM-Mckinley County",FALSE
+"1090",NA,"Santa Fe County",NA,NA,"Need to Find Contract","NM",NA,NA,NA,NA,"1090-NM-Santa Fe County",FALSE
+"1091",NA,"Carson City County",NA,NA,"Need to Find Contract","NV",NA,NA,NA,NA,"1091-NV-Carson City County",FALSE
+"1092",NA,"Washoe County",NA,NA,"Need to Find Contract","NV",NA,NA,NA,NA,"1092-NV-Washoe County",FALSE
+"1093",NA,"Broome County",NA,NA,"http://www.gobroomecounty.com/sites/default/files/dept/personnel/pdfs/PBA%202012-2017%20Signed.pdf","NY",NA,NA,"12/31/2017",NA,"1093-NY-Broome County",FALSE
+"1094",NA,"Chautauqua County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofChautauqua_P_dsacc_2021.pdf",NA,NA,NA,"1094-NY-Chautauqua County",FALSE
+"1095",NA,"Jefferson County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofJefferson_P_2019.pdf",NA,NA,NA,"1095-NY-Jefferson County",FALSE
+"1096",NA,"Monroe County",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1096-NY-Monroe County",FALSE
+"1097",NA,"Nassau County",NA,NA,"N/A","NY","2017 contract expired and there's a lawsuit https://www.newsday.com/long-island/politics/laura-curran-nassau-unons-rob-walker-1.17655406",NA,NA,NA,"1097-NY-Nassau County",FALSE
+"1098",NA,"Oneida County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofOneida_P_2020.pdf",NA,NA,NA,"1098-NY-Oneida County",FALSE
+"1099",NA,"Onondaga County",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1099-NY-Onondaga County",FALSE
+"1100",NA,"Oswego County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofOswego_P_2020.pdf",NA,NA,NA,"1100-NY-Oswego County",FALSE
+"1101",NA,"Rensselaer County",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1101-NY-Rensselaer County",FALSE
+"1102",NA,"Saratoga County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofSaratoga_P_2018.pdf",NA,"12/31/2018",NA,"1102-NY-Saratoga County",FALSE
+"1103",NA,"Steuben County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofSteuben_P_2020.pdf",NA,NA,NA,"1103-NY-Steuben County",FALSE
+"1104",NA,"Suffolk County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/CountyofSuffolk_P_2007.pdf",NA,NA,NA,"1104-NY-Suffolk County",FALSE
+"1105",NA,"Sullivan County",NA,NA,"Need to Find Contract","NY","https://www.seethroughny.net/contracts/police_fire/CountyofSullivan_P_moa_2020.pdf",NA,NA,NA,"1105-NY-Sullivan County",FALSE
+"1106",NA,"Wayne County",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1106-NY-Wayne County",FALSE
+"1107",NA,"Westchester County",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1107-NY-Westchester County",FALSE
+"1108",NA,"Amherst Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1108-NY-Amherst Town",FALSE
+"1109",NA,"Cheektowaga Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1109-NY-Cheektowaga Town",FALSE
+"1110",NA,"Clarkstown Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1110-NY-Clarkstown Town",FALSE
+"1111",NA,"Colonie Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1111-NY-Colonie Town",FALSE
+"1112",NA,"Greece Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1112-NY-Greece Town",FALSE
+"1113",NA,"Hempstead Village",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1113-NY-Hempstead Village",FALSE
+"1114",NA,"Irondequoit Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1114-NY-Irondequoit Town",FALSE
+"1115",NA,"Ramapo Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1115-NY-Ramapo Town",FALSE
+"1116",NA,"Tonawanda Town",NA,NA,"Need to Find Contract","NY",NA,NA,NA,NA,"1116-NY-Tonawanda Town",FALSE
+"1117",NA,"Butler County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-12-1229.pdf","OH",NA,NA,"01/28/2022","Also https://serb.ohio.gov/static/PDF/Contracts/2017/17-MED-08-0855.pdf","1117-OH-Butler County",TRUE
+"1118",NA,"Clark County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2017/17-MED-09-0960.pdf","OH",NA,NA,"12/31/2020",NA,"1118-OH-Clark County",TRUE
+"1119",NA,"Clermont County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2017/17-MED-09-1185.pdf","OH",NA,NA,"12/31/2020",NA,"1119-OH-Clermont County",TRUE
+"1120",NA,"Delaware County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2019/19-MED-03-0229.pdf","OH",NA,NA,"06/25/2022",NA,"1120-OH-Delaware County",TRUE
+"1121",NA,"Fairfield County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-01-0002.pdf","OH",NA,NA,"03/31/2021",NA,"1121-OH-Fairfield County",TRUE
+"1122",NA,"Franklin County",NA,NA,"Need to Find Contract","OH",NA,NA,NA,NA,"1122-OH-Franklin County",FALSE
+"1123",NA,"Geauga County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2019/19-MED-10-1204.pdf","OH",NA,NA,"12/31/2022",NA,"1123-OH-Geauga County",TRUE
+"1124",NA,"Hamilton County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-06-0579.pdf","OH",NA,NA,"12/31/2020",NA,"1124-OH-Hamilton County",TRUE
+"1125",NA,"Licking County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-04-0354.pdf","OH",NA,NA,"12/31/2020",NA,"1125-OH-Licking County",TRUE
+"1126",NA,"Montgomery County",NA,NA,"Need to Find Contract","OH",NA,NA,NA,NA,"1126-OH-Montgomery County",FALSE
+"1127",NA,"Muskingum County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-09-0840.pdf","OH",NA,NA,"12/31/2021",NA,"1127-OH-Muskingum County",TRUE
+"1128",NA,"Portage County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2017/17-MED-10-1230.pdf","OH",NA,NA,"12/31/2020",NA,"1128-OH-Portage County",TRUE
+"1129",NA,"Richland County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-09-0816.pdf","OH",NA,NA,"12/31/20201",NA,"1129-OH-Richland County",TRUE
+"1130",NA,"Ross County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2017/17-MED-03-0366.pdf","OH",NA,NA,"06/30/2020",NA,"1130-OH-Ross County",TRUE
+"1131",NA,"Stark County",NA,NA,"Need to Find Contract","OH",NA,NA,NA,NA,"1131-OH-Stark County",FALSE
+"1132",NA,"Warren County",NA,NA,"Need to Find Contract","OH",NA,NA,NA,NA,"1132-OH-Warren County",FALSE
+"1133",NA,"Wayne County",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2018/18-MED-02-0162.pdf","OH",NA,NA,"08/31/2021",NA,"1133-OH-Wayne County",TRUE
+"1134",NA,"Lorain",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2016/16-MED-08-0827.pdf","OH","(MOU: https://serb.ohio.gov/static/PDF/Addendums/2016/16-MED-08-0827.pdf)","John Fentiman","Oct 31, 2020",NA,"1134-OH-Lorain",TRUE
+"1135",NA,"West Chester",NA,NA,"https://serb.ohio.gov/static/PDF/Contracts/2019/19-MED-08-0692.pdf","OH",NA,NA,"09/20/2022",NA,"1135-OH-West Chester",TRUE
+"1136",NA,"Rogers County",NA,NA,"Need to Find Contract","OK",NA,NA,NA,NA,"1136-OK-Rogers County",FALSE
+"1137",NA,"Enid",NA,NA,"http://www.enid.org/Home/ShowDocument?id=14714","OK",NA,NA,NA,NA,"1137-OK-Enid",TRUE
+"1138",NA,"Deschutes County",NA,NA,"https://www.deschutes.org/sites/default/files/fileattachments/human_resources/page/685/dcsea_contract_2019-2022_with_links_for_printing.pdf","OR",NA,NA,NA,NA,"1138-OR-Deschutes County",TRUE
+"1139",NA,"Douglas County",NA,NA,"http://www.co.douglas.or.us/hr/labor_contracts/sheriff/2016%20-%202019/contract%20070116%20-%20063019.pdf","OR",NA,NA,NA,NA,"1139-OR-Douglas County",FALSE
+"1140",NA,"Jackson County",NA,NA,"http://jacksoncountyor.org/Departments/Human-Resources/Labor-Agreements","OR",NA,NA,NA,NA,"1140-OR-Jackson County",FALSE
+"1141",NA,"Lane County",NA,NA,"https://www.lanecounty.org/UserFiles/Servers/Server_3585797/Image/Government/County%20Departments/Human%20Resources/Collective%20Bargaining%20Agreements/LCPOA%20CBA%202019-2022%20Final.pdf","OR",NA,NA,NA,NA,"1141-OR-Lane County",FALSE
+"1142",NA,"Linn County",NA,NA,"Need to Find Contract","OR",NA,NA,"6/30/2020",NA,"1142-OR-Linn County",FALSE
+"1143",NA,"Washington County",NA,NA,"https://www.co.washington.or.us/Support_Services/HR/upload/WCPOA-Contract-2019_2022.pdf","OR",NA,NA,NA,NA,"1143-OR-Washington County",FALSE
+"1144",NA,"Northern York",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1144-PA-Northern York",FALSE
+"1145",NA,"Bensalem",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1145-PA-Bensalem",FALSE
+"1146",NA,"Millcreek",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1146-PA-Millcreek",FALSE
+"1147",NA,"Berks County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1147-PA-Berks County",FALSE
+"1148",NA,"Butler County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1148-PA-Butler County",FALSE
+"1149",NA,"Centre County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1149-PA-Centre County",FALSE
+"1150",NA,"Chester County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1150-PA-Chester County",FALSE
+"1151",NA,"Cumberland County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1151-PA-Cumberland County",FALSE
+"1152",NA,"Elizabethville",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1152-PA-Elizabethville",FALSE
+"1153",NA,"Erie County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1153-PA-Erie County",FALSE
+"1154",NA,"Fayette County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1154-PA-Fayette County",FALSE
+"1155",NA,"Franklin County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1155-PA-Franklin County",FALSE
+"1156",NA,"Indiana County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1156-PA-Indiana County",FALSE
+"1157",NA,"Lancaster County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1157-PA-Lancaster County",FALSE
+"1158",NA,"Lehigh County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1158-PA-Lehigh County",FALSE
+"1159",NA,"Lycoming County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1159-PA-Lycoming County",FALSE
+"1160",NA,"Monroe County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1160-PA-Monroe County",FALSE
+"1161",NA,"Skippack",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1161-PA-Skippack",FALSE
+"1162",NA,"Westmoreland County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1162-PA-Westmoreland County",FALSE
+"1163",NA,"York County",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1163-PA-York County",FALSE
+"1164",NA,"Abington",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1164-PA-Abington",FALSE
+"1165",NA,"State College",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1165-PA-State College",FALSE
+"1166",NA,"Upper Darby",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1166-PA-Upper Darby",FALSE
+"1167",NA,"York Area Regional",NA,NA,"Need to Find Contract","PA",NA,NA,NA,NA,"1167-PA-York Area Regional",FALSE
+"1168",NA,"Berkeley County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1168-SC-Berkeley County",FALSE
+"1169",NA,"Darlington County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1169-SC-Darlington County",FALSE
+"1170",NA,"Lancaster County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1170-SC-Lancaster County",FALSE
+"1171",NA,"Sumter County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1171-SC-Sumter County",FALSE
+"1172",NA,"York County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1172-SC-York County",FALSE
+"1173",NA,"Aiken County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1173-SC-Aiken County",FALSE
+"1174",NA,"Dorchester County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1174-SC-Dorchester County",FALSE
+"1175",NA,"Spartanburg County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1175-SC-Spartanburg County",FALSE
+"1176",NA,"North Charleston",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1176-SC-North Charleston",FALSE
+"1177",NA,"Beaufort County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1177-SC-Beaufort County",FALSE
+"1178",NA,"Rock Hill",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1178-SC-Rock Hill",FALSE
+"1179",NA,"Charleston County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1179-SC-Charleston County",FALSE
+"1180",NA,"Charleston",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1180-SC-Charleston",FALSE
+"1181",NA,"Greenville County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1181-SC-Greenville County",FALSE
+"1182",NA,"Lexington County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1182-SC-Lexington County",FALSE
+"1183",NA,"Anderson County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1183-SC-Anderson County",FALSE
+"1184",NA,"Florence County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1184-SC-Florence County",FALSE
+"1185",NA,"Horry County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1185-SC-Horry County",FALSE
+"1186",NA,"Kershaw County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1186-SC-Kershaw County",FALSE
+"1187",NA,"Oconee County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1187-SC-Oconee County",FALSE
+"1188",NA,"Orangeburg County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1188-SC-Orangeburg County",FALSE
+"1189",NA,"Pickens County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1189-SC-Pickens County",FALSE
+"1190",NA,"Richland County",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1190-SC-Richland County",FALSE
+"1191",NA,"Greenville",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1191-SC-Greenville",FALSE
+"1192",NA,"Mount Pleasant",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1192-SC-Mount Pleasant",FALSE
+"1193",NA,"Summerville",NA,NA,"Need to Find Contract","SC",NA,NA,NA,NA,"1193-SC-Summerville",FALSE
+"1194",NA,"Sevier County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1194-TN-Sevier County",FALSE
+"1195",NA,"Williamson County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1195-TN-Williamson County",FALSE
+"1196",NA,"Johnson City",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1196-TN-Johnson City",FALSE
+"1197",NA,"Kingsport",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1197-TN-Kingsport",FALSE
+"1198",NA,"Clarksville",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1198-TN-Clarksville",FALSE
+"1199",NA,"Bradley County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1199-TN-Bradley County",FALSE
+"1200",NA,"Shelby County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1200-TN-Shelby County",FALSE
+"1201",NA,"Knoxville",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1201-TN-Knoxville",FALSE
+"1202",NA,"Sumner County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1202-TN-Sumner County",FALSE
+"1203",NA,"Blount County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1203-TN-Blount County",FALSE
+"1204",NA,"Greene County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1204-TN-Greene County",FALSE
+"1205",NA,"Hamilton County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1205-TN-Hamilton County",FALSE
+"1206",NA,"Knox County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1206-TN-Knox County",FALSE
+"1207",NA,"Rutherford County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1207-TN-Rutherford County",FALSE
+"1208",NA,"Sullivan County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1208-TN-Sullivan County",FALSE
+"1209",NA,"Washington County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1209-TN-Washington County",FALSE
+"1210",NA,"Wilson County",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1210-TN-Wilson County",FALSE
+"1211",NA,"Chattanooga",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1211-TN-Chattanooga",FALSE
+"1212",NA,"Franklin",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1212-TN-Franklin",FALSE
+"1213",NA,"Hendersonville",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1213-TN-Hendersonville",FALSE
+"1214",NA,"Murfreesboro",NA,NA,"Need to Find Contract","TN",NA,NA,NA,NA,"1214-TN-Murfreesboro",FALSE
+"1215",NA,"Williamson County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1215-TX-Williamson County",FALSE
+"1216",NA,"El Paso County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1216-TX-El Paso County",FALSE
+"1217",NA,"Bastrop County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1217-TX-Bastrop County",FALSE
+"1218",NA,"Bell County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1218-TX-Bell County",FALSE
+"1219",NA,"Brazoria County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1219-TX-Brazoria County",FALSE
+"1220",NA,"Cameron County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1220-TX-Cameron County",FALSE
+"1221",NA,"Comal County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1221-TX-Comal County",FALSE
+"1222",NA,"Denton County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1222-TX-Denton County",FALSE
+"1223",NA,"Ellis County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1223-TX-Ellis County",FALSE
+"1224",NA,"Fort Bend County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1224-TX-Fort Bend County",FALSE
+"1225",NA,"Harris County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1225-TX-Harris County",FALSE
+"1226",NA,"Hays County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1226-TX-Hays County",FALSE
+"1227",NA,"Henderson County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1227-TX-Henderson County",FALSE
+"1228",NA,"Hidalgo County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1228-TX-Hidalgo County",FALSE
+"1229",NA,"Johnson County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1229-TX-Johnson County",FALSE
+"1230",NA,"Kaufman County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1230-TX-Kaufman County",FALSE
+"1231",NA,"Liberty County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1231-TX-Liberty County",FALSE
+"1232",NA,"Montgomery County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1232-TX-Montgomery County",FALSE
+"1233",NA,"Parker County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1233-TX-Parker County",FALSE
+"1234",NA,"Smith County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1234-TX-Smith County",FALSE
+"1235",NA,"Tarrant County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1235-TX-Tarrant County",FALSE
+"1236",NA,"Travis County",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1236-TX-Travis County",FALSE
+"1237",NA,"Allen",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1237-TX-Allen",FALSE
+"1238",NA,"Arlington",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1238-TX-Arlington",FALSE
+"1239",NA,"Bryan",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1239-TX-Bryan",FALSE
+"1240",NA,"Carrollton",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1240-TX-Carrollton",FALSE
+"1241",NA,"College Station",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1241-TX-College Station",FALSE
+"1242",NA,"Conroe",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1242-TX-Conroe",FALSE
+"1243",NA,"Desoto",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1243-TX-Desoto",FALSE
+"1244",NA,"Euless",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1244-TX-Euless",FALSE
+"1245",NA,"Flower Mound",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1245-TX-Flower Mound",FALSE
+"1246",NA,"Frisco",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1246-TX-Frisco",FALSE
+"1247",NA,"Garland",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1247-TX-Garland",FALSE
+"1248",NA,"Grand Prairie",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1248-TX-Grand Prairie",FALSE
+"1249",NA,"Grapevine",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1249-TX-Grapevine",FALSE
+"1250",NA,"Irving",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1250-TX-Irving",FALSE
+"1251",NA,"Killeen",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1251-TX-Killeen",FALSE
+"1252",NA,"League City",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1252-TX-League City",FALSE
+"1253",NA,"Lewisville",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1253-TX-Lewisville",FALSE
+"1254",NA,"Longview",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1254-TX-Longview",FALSE
+"1255",NA,"Lubbock",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1255-TX-Lubbock",FALSE
+"1256",NA,"Mission",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1256-TX-Mission",FALSE
+"1257",NA,"Missouri City",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1257-TX-Missouri City",FALSE
+"1258",NA,"New Braunfels",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1258-TX-New Braunfels",FALSE
+"1259",NA,"North Richland Hills",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1259-TX-North Richland Hills",FALSE
+"1260",NA,"Odessa",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1260-TX-Odessa",FALSE
+"1261",NA,"Pearland",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1261-TX-Pearland",FALSE
+"1262",NA,"Pflugerville",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1262-TX-Pflugerville",FALSE
+"1263",NA,"Plano",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1263-TX-Plano",FALSE
+"1264",NA,"Richardson",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1264-TX-Richardson",FALSE
+"1265",NA,"Rowlett",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1265-TX-Rowlett",FALSE
+"1266",NA,"Sugar Land",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1266-TX-Sugar Land",FALSE
+"1267",NA,"Tyler",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1267-TX-Tyler",FALSE
+"1268",NA,"Victoria",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1268-TX-Victoria",FALSE
+"1269",NA,"Wichita Falls",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1269-TX-Wichita Falls",FALSE
+"1270",NA,"Pasadena",NA,NA,"Need to Find Contract","TX",NA,NA,NA,NA,"1270-TX-Pasadena",FALSE
+"1271",NA,"Provo",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1271-UT-Provo",FALSE
+"1272",NA,"West Jordan",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1272-UT-West Jordan",FALSE
+"1273",NA,"Sandy",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1273-UT-Sandy",FALSE
+"1274",NA,"Weber County",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1274-UT-Weber County",FALSE
+"1275",NA,"St. George",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1275-UT-St. George",FALSE
+"1276",NA,"West Valley",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1276-UT-West Valley",FALSE
+"1277",NA,"Layton",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1277-UT-Layton",FALSE
+"1278",NA,"Logan",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1278-UT-Logan",FALSE
+"1279",NA,"Ogden",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1279-UT-Ogden",FALSE
+"1280",NA,"Orem",NA,NA,"Need to Find Contract","UT",NA,NA,NA,NA,"1280-UT-Orem",FALSE
+"1281",NA,"Henry County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1281-VA-Henry County",FALSE
+"1282",NA,"Campbell County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1282-VA-Campbell County",FALSE
+"1283",NA,"Spotsylvania County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1283-VA-Spotsylvania County",FALSE
+"1284",NA,"Hanover County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1284-VA-Hanover County",FALSE
+"1285",NA,"Newport News",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1285-VA-Newport News",FALSE
+"1286",NA,"Pittsylvania County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1286-VA-Pittsylvania County",FALSE
+"1287",NA,"Roanoke County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1287-VA-Roanoke County",FALSE
+"1288",NA,"York County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1288-VA-York County",FALSE
+"1289",NA,"Henrico",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1289-VA-Henrico",FALSE
+"1290",NA,"Suffolk County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1290-VA-Suffolk County",FALSE
+"1291",NA,"Hampton",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1291-VA-Hampton",FALSE
+"1292",NA,"Roanoke",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1292-VA-Roanoke",FALSE
+"1293",NA,"Lynchburg",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1293-VA-Lynchburg",FALSE
+"1294",NA,"Prince William County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1294-VA-Prince William County",FALSE
+"1295",NA,"Albemarle County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1295-VA-Albemarle County",FALSE
+"1296",NA,"Virginia Beach",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1296-VA-Virginia Beach",FALSE
+"1297",NA,"Loudoun County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1297-VA-Loudoun County",FALSE
+"1298",NA,"Portsmouth",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1298-VA-Portsmouth",FALSE
+"1299",NA,"Fairfax County",NA,NA,"no union agreement- https://www.muckrock.com/foi/fairfax-county-138/police-union-contract-fairfax-county-police-department-94596/","VA",NA,NA,"N/A",NA,"1299-VA-Fairfax County",FALSE
+"1300",NA,"Arlington County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1300-VA-Arlington County",FALSE
+"1301",NA,"Norfolk",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1301-VA-Norfolk",FALSE
+"1302",NA,"Chesterfield",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1302-VA-Chesterfield",FALSE
+"1303",NA,"Augusta County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1303-VA-Augusta County",FALSE
+"1304",NA,"Bedford County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1304-VA-Bedford County",FALSE
+"1305",NA,"Fauquier County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1305-VA-Fauquier County",FALSE
+"1306",NA,"Franklin County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1306-VA-Franklin County",FALSE
+"1307",NA,"Frederick County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1307-VA-Frederick County",FALSE
+"1308",NA,"James City",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1308-VA-James City",FALSE
+"1309",NA,"Rockingham County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1309-VA-Rockingham County",FALSE
+"1310",NA,"Stafford County",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1310-VA-Stafford County",FALSE
+"1311",NA,"Chesapeake",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1311-VA-Chesapeake",FALSE
+"1312",NA,"Harrisonburg",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1312-VA-Harrisonburg",FALSE
+"1313",NA,"Leesburg",NA,NA,"Need to Find Contract","VA",NA,NA,NA,NA,"1313-VA-Leesburg",FALSE
+"1314",NA,"Olympia",NA,NA,"https://www.codepublishing.com/WA/Olympia/?labor/OlympiaLabor05.html","WA","Code publishing","Michael Chandler","12/31/19","All other contracts in Olympia are up to date except this one","1314-WA-Olympia",FALSE
+"1315",NA,"Pierce County",NA,NA,"https://www.co.pierce.wa.us/DocumentCenter/View/2203/1889-Guild?bidId=","WA","Municipal website","Michael Chandler","12/31/21","Sheriff's Office","1315-WA-Pierce County",TRUE
+"1316",NA,"Mason County",NA,NA,"https://www.co.mason.wa.us/forms/human-resources/deputy-sheriffs-2019-2021.pdf","WA","Municipal website","Michael Chandler","12/31/21","Sheriff's Office","1316-WA-Mason County",TRUE
+"1317",NA,"Skagit County",NA,NA,"https://www.skagitcounty.net/HumanResources/Documents/Agreements/Sheriff's%20Patrol%20Deputies%202017-2019%20(Guild).pdf","WA","Municipal website","Michael Chandler","12/31/19","Sheriff's Office OUT OF DATE","1317-WA-Skagit County",FALSE
+"1318",NA,"Snohomish County",NA,NA,"https://www.snohomishcountywa.gov/DocumentCenter/View/66282/Sheriffs-Office-Management-Team?bidId=","WA","Municipal website","Michael Chandler","3/21/21","Sheriff's Office","1318-WA-Snohomish County",TRUE
+"1319",NA,"Yakima County",NA,NA,"https://www.yakimacounty.us/DocumentCenter/View/21356/Deputy-Sheriff-Guild-CBA-2018-2021","WA","Municipal website","Michael Chandler","2021",NA,"1319-WA-Yakima County",TRUE
+"1320",NA,"Kirkland",NA,NA,"http://www.kirklandwa.gov/Assets/Human+Resources/HR+PDFs/Collective+Bargaining+Agreements/PD+COM+(POLICE+COMMISSIONED)+CBA.pdf","WA","Municipal website","Michael Chandler","2019",NA,"1320-WA-Kirkland",FALSE
+"1321",NA,"Pasco",NA,NA,"https://www.pasco-wa.gov/DocumentCenter/View/60707/PPOA-Uniformed--2016---2018-","WA","Municipal website","Michael Chandler","2018","This is the most updated on their website","1321-WA-Pasco",FALSE
+"1322",NA,"Spokane Valley",NA,NA,"https://www.spokanecounty.org/DocumentCenter/View/19419/DSA-CBA-2019-2021-","WA","Municipal website","Michael Chandler","12/31/2021",NA,"1322-WA-Spokane Valley",FALSE
+"1323",NA,"Eau Claire",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1323-WI-Eau Claire",FALSE
+"1324",NA,"St. Croix County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1324-WI-St. Croix County",FALSE
+"1325",NA,"Brown County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1325-WI-Brown County",FALSE
+"1326",NA,"Racine",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1326-WI-Racine",FALSE
+"1327",NA,"Dane County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1327-WI-Dane County",FALSE
+"1328",NA,"Marathon County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1328-WI-Marathon County",FALSE
+"1329",NA,"Washington County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1329-WI-Washington County",FALSE
+"1330",NA,"Waukesha County",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1330-WI-Waukesha County",FALSE
+"1331",NA,"La Crosse",NA,NA,"Need to Find Contract","WI",NA,NA,NA,NA,"1331-WI-La Crosse",FALSE
+"1332",NA,"Kanawha County",NA,NA,"Need to Find Contract","WV",NA,NA,NA,NA,"1332-WV-Kanawha County",FALSE
+"1333",NA,"Berkeley County",NA,NA,"Need to Find Contract","WV",NA,NA,NA,NA,"1333-WV-Berkeley County",FALSE
+"1334",NA,"Raleigh County",NA,NA,"Need to Find Contract","WV",NA,NA,NA,NA,"1334-WV-Raleigh County",FALSE
+"1335",NA,"Monongalia County",NA,NA,"Need to Find Contract","WV",NA,NA,NA,NA,"1335-WV-Monongalia County",FALSE
+"1336",NA,"Cheyenne",NA,NA,"Need to Find Contract","WY",NA,NA,NA,NA,"1336-WY-Cheyenne",FALSE
+"1337",NA,"Casper",NA,NA,"Need to Find Contract","WY",NA,NA,NA,NA,"1337-WY-Casper",FALSE

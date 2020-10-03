@@ -1,7 +1,7 @@
 ---
 title: "Preliminary functions for the G2A site"
 author: "Yu-Ru Lin"
-date: '2020-09-27'
+date: 'Published: 2020-09-27; Last updated: 2020-10-03'
 output:
   html_document:
     df_print: paged
@@ -12,6 +12,7 @@ output:
 ```{r document_specific_setup, echo=FALSE, message=F, warning=F}
 # This chunk can include things you need for the rest of the document
 source('utils.R')
+library(pdftools)
 ```
 
 
@@ -28,7 +29,7 @@ This notebook illustrate the preliminary search functions that we'll provide on 
 
 In this notebook, I skip step 1 and 5. I use R packages to implement step 2, 3, 4, and 6. And all these steps can be re-implemented using python, javascript, or other languages.
 
-### Next steps
+### Next steps (for capstone team)
 
 * Identify how to extend this preliminary search functionality using web-based frameworks
 * Find better scrapping and PDF conversion tools
@@ -36,62 +37,118 @@ In this notebook, I skip step 1 and 5. I use R packages to implement step 2, 3, 
 
 ### Step 1-2 Scrape & Download
 
-From [the checkthepolice.org -- open-source database of police union contracts](https://www.checkthepolice.org/database), I scraped 22 URLs that contains `*.pdf` and save the list into a CSV file `contract-list.csv`, and then download all the files to a folder. Note some of the links returned 404 error. Out of the 22 URLs, only 17 (77%) can be downloaded.
+From [the checkthepolice.org -- open-source database of police union contracts](https://www.checkthepolice.org/database), I scraped 22 URLs that contains `*.pdf` for testing. Later, with Campaign Zero's permission, I switched to use their spreadsheet (the particular tab was saved into `Campaign Zero Nationwide Police Scorecard Data - Links to Police Union Contracts.csv`).
+
+I downloaded the list of contract files. Note some of the links returned 404 error. Only 140 (~10%) can be downloaded and parsed. The download can take a while, so this chunk can be omitted after the files are downloaded.
 
 ```{r, eval=FALSE}
 
-  df <- read_csv("data/contract-list.csv", 
-                 col_names = FALSE)
-  df %<>% rename(url='X1')
+## this chunk can be omitted once the files are downloaded
+if (0) {
+  Campaign_Zero_Nationwide_Police_Scorecard_Data_Links_to_Police_Union_Contracts <- read_csv("data/Campaign Zero Nationwide Police Scorecard Data - Links to Police Union Contracts.csv")
+  df = Campaign_Zero_Nationwide_Police_Scorecard_Data_Links_to_Police_Union_Contracts
   df %>% glimpse()
   cat('# of URLs',nrow(df),'\n')
+  df %<>% mutate(pdfname = sprintf('%03d-%s-%s',No, State, City))
+  df %>% glimpse()
+  
+}
+
 
 ## download a list of contract files
-if (1) {
-  for (idx in 1:length(df$url)) {
-    url = df$url[idx]
+## this will take a while...
+if (0) {
+  df %<>% mutate(pdf_parsing_success = F)
+  idx = 1 ## test
+  options(timeout=20)
+  for (idx in 1:length(df$`Contract URL`)) {
+    url = df$`Contract URL`[idx]
     url = str_replace(url, "\\?dl=0", "?raw=1")
     url = str_replace_all(url, "\\%20", "/")
     s = str_split(url, "\\/")
-    filename = sprintf('data/download/%d.pdf', idx)
-    cat('\ndownloading file:',filename,' from ',url,'\n')
-    cat ("Press [enter] to continue")
-    line <- readline()
-    download.file(url, filename, method = "auto")
-    txt = pdf_text(filename)
-    txt = str_trim(txt)
-    txt = str_squish(txt)
+    filename = sprintf('download-contracts/%s.pdf', df$pdfname[idx])
+    cat('\ndownloading file:',filename,' from ',url, '\n-->', filename,'\n')
+    # cat ("Press [enter] to continue")
+    # line <- readline()
     
-    txt <- unlist(txt)
-    txt <- paste(txt, collapse = " ") ## page break
-    txt = str_replace_all(txt, "\\\t\\\r", "")
-    realtxt = str_extract(txt, "[a-zA-Z]+")
-    if (is.na(realtxt)) {
-      cat('no text extracted from file:',filename,'\n')
-    } else {
-      cat('text extracted from file:',filename, '(', realtxt, ' ...)\n')
+    parsing_success = F
+    txt = tryCatch({
+      download.file(url, filename, method = "auto")
+      txt = pdf_text(filename)
+      txt = str_trim(txt)
+      txt = str_squish(txt)
+      
+      txt <- unlist(txt)
+      txt <- paste(txt, collapse = " ") ## page break
+      txt = str_replace_all(txt, "\\\t\\\r", "")
+      realtxt = str_extract(txt, "[a-zA-Z]+")
+      if (is.na(realtxt)) {
+        cat('no text extracted from file:',filename,'\n')
+        parsing_success = F
+        NA
+      } else {
+        cat('text extracted from file:',filename, '(', realtxt, ' ...)\n')
+        parsing_success = T
+        txt
+      }
+    }, error = function(e) {
+      cat('error in coverting PDF from file:',filename, '\n')
+      NA
+    })
+    parsing_success
+    df$pdf_parsing_success[idx] = parsing_success
+    
+  }
+  
+  filename = sprintf('data/contratc-download-list.csv')
+  write.csv(df, filename)
+  table(df$pdf_parsing_success)
+}
+
+## rename files with missing No
+if (0) {
+  idx = 1001
+  for (idx in 1:length(df$pdfname)) {
+    pdfname = df$pdfname[idx]
+    filename = sprintf('%03d-%s-%s',idx, df$State[idx], df$City[idx])
+    if (str_detect(pdfname, ' NA')) {
+      cat('change filename:', pdfname, filename,'\n')
+      df$pdfname[idx] = filename
+      from_filename = sprintf('download-contracts/%s.pdf', pdfname)
+      to_filename = sprintf('download-contracts/%s.pdf', filename)
+      file.rename(from_filename, to_filename)
     }
   }
   
+  filename = sprintf('data/contratc-download-list.csv')
+  write.csv(df, filename)
+  table(df$pdf_parsing_success)/nrow(df)
+  
+  # FALSE     TRUE 
+  # 0.895288 0.104712 
+  ## only 140 (~10%) files were successfully downloaded and parsed
 }
 
 ```
 
 ### Step 3-4 Convert & Parse
 
-The list of downloaded PDF files are converted to plain text, and each of the text content is split into sentences. The sentence splitting may not be 100% accurate because the conversion from the PDFs may have undesirable symbols that make the sentence detection imperfect.
+The list of downloaded PDF files are converted to plain text, and each of the text content is split into sentences. The sentence splitting may not be 100% accurate because the conversion from the PDFs may have undesirable symbols that make the sentence detection imperfect. I save the parsed text in a new CSV file to save the parsing time.
 
 ```{r}
 ## convert PDFs to text
-if (1) {
-  library(pdftools)
-  filedir = 'data/download'
-  filenames = list.files(filedir, full.names = TRUE)
-  filenidx = list.files(filedir, full.names = F)
+## I saved the parsed text in a new CSV file to save time
+if (0) {
+  contratc_download_list <- read_csv("data/contratc-download-list.csv")
+  df = contratc_download_list
+  df = df %>% filter(pdf_parsing_success == T)
+  df %>% glimpse()
+  df1 = df %>% select(idx='X1', City, State, pdfname) %>% mutate(text=NA) 
+  df1 %>% glimpse()
   
-  df = NULL
-  for (idx in 1:length(filenames) ) {
-    filename = filenames[idx]
+  idx = 1
+  for (idx in 1:length(df$pdfname) ) {
+    filename = sprintf('download-contracts/%s.pdf', df$pdfname[idx])
     txt = tryCatch({
       txt = pdf_text(filename)
       txt = str_trim(txt)
@@ -113,16 +170,18 @@ if (1) {
       NA
     })
     
+    df1$text[idx] = txt
     
-    if(!is.na(txt)) {
-      df = rbind(df, 
-                 data.frame(idx=filenidx[idx], text=txt)
-      )
-      
-    }
   }
   cat('*** contract documents ***\n')
-  df %>% glimpse()
+  df1 %>% glimpse()
+  filename = sprintf('data/contratc-download-text.csv')
+  write.csv(df1, filename, row.names = F)
+}
+
+## load contract texts from saved file
+if (1) {
+  df <- read_csv("data/contratc-download-text.csv")
   df_sent = df %>%
     unnest_tokens(
       output = sentence,
@@ -131,18 +190,21 @@ if (1) {
   
   cat('*** sentences in contract documents ***\n')
   df_sent %>% glimpse()
-  
 }
 
 ```
 
 ### Step 5-6 Prepare for Search
 
-Here I directly use an R package that supports interactive query from the `data.frame` object stored in the memory. A better option would be to store data in a database and implement the query UI. In this preliminary version, the documents are named by their positions on the page. It would be better to extract the city/county names to name the documents.
+Here I directly use an R package that supports interactive query from the `data.frame` object stored in the memory. A better option would be to store data in a database and implement the query UI. For this small set (140 files), there are 134K sentences. The data is too big for client-side DataTables, so I only use the first 10K rows for this demonstration. For real web app, we will use client-server processing.
 
 ```{r}
 if (1) {
   library(DT)
-  datatable(df_sent, options = list(pageLength = 5, searchHighlight = TRUE, search = list(search = 'day'))) 
+  df_sent %<>% select(idx, State, City, Snippet=sentence)
+  df_sent %>% glimpse()
+  ## the entire dataset is too big for client-side DataTables, so I only use the first 10K rows
+  df = df_sent %>% slice(1:10000)
+  datatable(df, options = list(pageLength = 5, searchHighlight = TRUE, search = list(search = 'notified'))) 
 }
 ```
