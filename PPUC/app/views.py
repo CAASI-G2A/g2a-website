@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.http import HttpRequest
 from .models import *
 from django.views.generic.list import ListView
+import re
 
 def home(request):
     """Renders the home page."""
@@ -69,8 +70,38 @@ def search_contract(request):
     if query == '':
         results = ''
     else:
-        results = Contract.objects.filter(Q(text__icontains=query))
-
+        results = []
+        querySet = Contract.objects.filter(Q(text__icontains=query))
+        for result in querySet:
+            if result.is_parsed is False:
+                result.is_parsed = True
+                result.save()
+                location = result.location
+                r = result.text
+                r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
+                sent_num = 0
+                x = r.find('.')
+                while x != -1:
+                    temp1 = r[0:x]
+                    print("temp 1 is " + temp1)
+                    temp2 = r[x:len(r)]
+                    print("temp 2 is " + temp2)
+                    temp4 = temp2.find(".")
+                    print("here")
+                    if temp4 != -1:
+                        new_sentence = Sentence()
+                        new_sentence.text = r[0: x+temp4+1]
+                        new_sentence.sid = sent_num
+                        new_sentence.location = location
+                        new_sentence.save()
+                        print(new_sentence.text)
+                    sent_num += 1
+                    r = r[x+1: len(r)]
+                    x = r.find('.')
+            else:
+                querySet = Sentence.objects.filter(Q(text__icontains=query))
+                for result in querySet:
+                    results.append((result))
     context = {
         'results' : results,
         }
@@ -84,26 +115,21 @@ def search_contract(request):
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
-    reviews = Review.objects.all()
-    r = []
-    for review in reviews:
-        print("checking review")
-        if review.location == location:
-            print("adding..")
-            r.append(review)
-            context = {
-                       'location' : review.location,
-                       'r' : r,
-                       }
+    sentences = Sentence.objects.filter(Q(location__icontains=location.name))
+    context = {
+        'sentences' : sentences
+        }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
 
 def view_contract(request, cid):
     context = {}
     contract = Contract.objects.get(pk=cid)
+    sentences = Sentence.objects.filter(Q(location__equals=contract.location))
     context = {
         'location' : contract.location,
         'text' : contract.text,
-              }
+        'sentences' : sentences
+        }
     assert isinstance(request, HttpRequest)
     return render(request,'app/test.html',context)

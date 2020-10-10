@@ -24,5 +24,14 @@ class Review(models.Model):
 class Contract(models.Model):
     location = models.CharField(max_length=40)
     text = models.TextField()
+    is_parsed = models.BooleanField(default=False)
+    def __str__(self):
+       return self.location
+
+class Sentence(models.Model):
+    location = models.CharField(max_length=256)
+    sid = models.IntegerField() #sentence number
+    text = models.CharField(max_length=256)
+    category = models.CharField(max_length=256) #manually assigned category (reduces anonymity, destroys evidence...)
     def __str__(self):
        return self.location

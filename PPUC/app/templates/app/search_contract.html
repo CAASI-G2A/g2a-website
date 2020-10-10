@@ -9,8 +9,153 @@
 </form>
 {% if results != '' %}
     {% for obj in results %}
-        <h1>{{obj.location}}</h1>
-        <a href="{%url 'view_contract' obj.pk %}" >{{ obj.location}}</a>
+        <p><strong>{{obj.location}} Contract:   </strong>{{obj.text}}</p>
+    <hr >
     {% endfor %}
 {% endif %}
+<body> 
+    <center> 
+        <script> 
+            // Function to get the Selected Text  
+            function highlightSelectedText(value) { 
+                var selectedText = ''; 
+				var userSelection;
+  
+                // window.getSelection 
+                if (window.getSelection) { 
+                    selectedText = window.getSelection(); 
+					userSelection = window.getSelection().getRangeAt(0);
+                } 
+                // document.getSelection 
+                else if (document.getSelection) { 
+                    selectedText = document.getSelection(); 
+					userSelection = window.getSelection().getRangeAt(0);
+                } 
+                // document.selection 
+                else if (document.selection) { 
+                    selectedText =  
+                    document.selection.createRange().text; 
+					userSelection = window.getSelection().getRangeAt(0);
+					
+                } else return; 
+                // To write the selected text into the textarea 
+                // document.testform.selectedtext.value = selectedText; 
+				highlightSelection(userSelection, value);
+            } 
+			
+			function getSafeRanges(dangerous) {
+				var a = dangerous.commonAncestorContainer;
+				// Starts -- Work inward from the start, selecting the largest safe range
+				var s = new Array(0), rs = new Array(0);
+				if (dangerous.startContainer != a)
+					for(var i = dangerous.startContainer; i != a; i = i.parentNode)
+						s.push(i);
+				if (0 < s.length) for(var i = 0; i < s.length; i++) {
+				var xs = document.createRange();
+				if (i) {
+					xs.setStartAfter(s[i-1]);
+					xs.setEndAfter(s[i].lastChild);
+				}
+				else {
+					xs.setStart(s[i], dangerous.startOffset);
+					xs.setEndAfter(
+                (s[i].nodeType == Node.TEXT_NODE)
+                ? s[i] : s[i].lastChild
+            );
+        }
+        rs.push(xs);
+    }
+
+    // Ends -- basically the same code reversed
+    var e = new Array(0), re = new Array(0);
+    if (dangerous.endContainer != a)
+        for(var i = dangerous.endContainer; i != a; i = i.parentNode)
+            e.push(i)
+    ;
+    if (0 < e.length) for(var i = 0; i < e.length; i++) {
+        var xe = document.createRange();
+        if (i) {
+            xe.setStartBefore(e[i].firstChild);
+            xe.setEndBefore(e[i-1]);
+        }
+        else {
+            xe.setStartBefore(
+                (e[i].nodeType == Node.TEXT_NODE)
+                ? e[i] : e[i].firstChild
+            );
+            xe.setEnd(e[i], dangerous.endOffset);
+        }
+        re.unshift(xe);
+    }
+
+    // Middle -- the uncaptured middle
+    if ((0 < s.length) && (0 < e.length)) {
+        var xm = document.createRange();
+        xm.setStartAfter(s[s.length - 1]);
+        xm.setEndBefore(e[e.length - 1]);
+    }
+    else {
+        return [dangerous];
+    }
+
+    // Concat
+    rs.push(xm);
+    response = rs.concat(re);    
+
+    // Send to Console
+    return response;
+}
+			
+			function highlightSelection(userSelection, value) {
+				var safeRanges = getSafeRanges(userSelection);
+				for (var i = 0; i < safeRanges.length; i++) {
+					highlightRange(safeRanges[i], value);
+				}
+			}
+			
+			function highlightRange(range, value) {
+				var newNode = document.createElement("a");
+				var hr = document.createAttribute("href");
+				if(value == "Destroys Evidence") {
+					hr.value = "https://www.xkcd.com";
+				}
+				if(value == "Sets Time Limit") {
+					hr.value = "https://www.google.com";
+				}
+				if(value == "Reduces Anonymity") {
+					hr.value = "https://www.yahoo.com";
+				}
+				newNode.setAttributeNode(hr);
+				newNode.setAttribute(
+				"style",
+				"background-color: yellow; display: inline;"
+				);
+
+				newNode.setAttribute(
+				"title", 
+				value
+				);
+				range.surroundContents(newNode);
+			}
+        </script> 
+		
+
+  
+	<p>{{text}}</p>        
+		
+		<input type="button"
+				value="Destroys Evidence"
+				onmousedown="highlightSelectedText(value)">
+				
+		<input type="button"
+				value="Sets Time Limit"
+				onmousedown="highlightSelectedText(value)">
+				
+		<input type="button"
+				value="Reduces Anonymity"
+				onmousedown="highlightSelectedText(value)">
+		
+    </center> 
+</body>
 {% endblock %}
+

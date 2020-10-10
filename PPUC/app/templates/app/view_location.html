@@ -45,8 +45,12 @@
 <div class="container">
 	<div class="row">
 		<div class="left-column col-lg-7 offset-lg-1">
-			{% if r %}
-				{% for result in r %}
+			{% for sentence in sentences %}
+				{% if sentence.category == "Destroys Evidence"%}
+						<p>Destorys evidence here !</p>
+				{% endif %}
+				{{sentence.text}}
+			{% endfor %}
 					<div class="result-container">
 						<div class="container">
 							<div class="row">
@@ -54,20 +58,17 @@
 									<div class="card-body mt-2 mb-2">
 										<h2 class="card-title"> Section {{result.section}}</h2>
 										<p class="card-text">Policy Type: {{result.policy_type}}<br>
-										Language: {{result.language}}<br>
-										Category: {{result.category}}<br>
-										Impact: {{result.impact}}<br>
+										Language: <br>
+										Category: <br>
+										Impact:<br>
 										</p>
 									</div>
 									<div class="card-footer text-muted">
-									  Expires {{result.expiration}}
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				{% endfor %}
-			{% endif %}
 		</div>
 	</div>
 </div>
