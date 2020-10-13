@@ -7,7 +7,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
 from django.http import HttpRequest
 from .models import *
-from django.views.generic.list import ListView
+from app.forms import *
+from django.views.generic import ListView, FormView
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.decorators import login_required
 import re
 
 def home(request):
@@ -83,11 +86,8 @@ def search_contract(request):
                 x = r.find('.')
                 while x != -1:
                     temp1 = r[0:x]
-                    print("temp 1 is " + temp1)
                     temp2 = r[x:len(r)]
-                    print("temp 2 is " + temp2)
                     temp4 = temp2.find(".")
-                    print("here")
                     if temp4 != -1:
                         new_sentence = Sentence()
                         new_sentence.text = r[0: x+temp4+1]
@@ -117,10 +117,33 @@ def view_location(request, lid):
     location = Location.objects.get(pk=lid)
     sentences = Sentence.objects.filter(Q(location__icontains=location.name))
     context = {
-        'sentences' : sentences
+        'location' : location,
+        'sentences' : sentences,
+        'form' : ProblematicLanguageForm
         }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
+
+@login_required(login_url='login')
+def edit_sentence(request, sid):
+    sentence = Sentence.objects.get(sid=sid)
+    if request.method == 'POST':
+        form = ProblematicLanguageForm(request.POST)
+        if form.is_valid():
+            sentence.refresh_from_db()
+            sentence.limit_oversight = form.cleaned_data.get('limit_oversight')
+            sentence.city_pay_for_misconduct = form.cleaned_data.get('city_pay_for_misconduct')
+            sentence.erase_misconduct = form.cleaned_data.get('erase_misconduct')
+            sentence.disqualify_complaints = form.cleaned_data.get('disqualify_complaints')
+            sentence.restrict_interrogation = form.cleaned_data.get('restrict_interrogation')
+            sentence.unfair_information = form.cleaned_data.get('unfair_information')
+            sentence.save()
+            location = Location.objects.filter(Q(name__icontains=sentence.location)).first()
+            lid = location.lid
+            return view_location(request, lid)
+    else:
+        form = ProblematicLanguageForm(instance=sentence)
+        return render(request, 'app/edit_sentence.html', {'form': form, 'sentence' : sentence})
 
 def view_contract(request, cid):
     context = {}

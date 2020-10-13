@@ -1,0 +1,11 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<h4>Select Type of Problematic Language</h4>
+    <p>{{sentence.text}}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="dafde">
+    </form>
+{% endblock %}

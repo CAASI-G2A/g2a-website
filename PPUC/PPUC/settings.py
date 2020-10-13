@@ -81,7 +81,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
+SQLITE_MAX_VARIABLE_NUMBER = 10240
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [

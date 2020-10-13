@@ -41,10 +41,26 @@
             <p>&copy; {{ year }} - CAASI From Grief to Action</p>
         </footer>
     </div>
-
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
+    <!-- For modal form use l8r
+    <script>
+        // data-* attributes to scan when populating modal values
+        var attributesArray = ['text','id'];
+        // This event fires immediately when the show instance method is called.	
+        $('#myModal').on('show.bs.modal', function(e) {
+          // Get modal id
+          var $target = e.target.id;
+          // Get target values of clicked button
+          var $relatedTarget = e.relatedTarget;
+          // Iterate over each possible data-* attribute
+          attributesArray.forEach(function(attributeName){
+            $('#'+$target+ ' #modal-'+attributeName).text($($relatedTarget).data(attributeName) || '');
+          });
+        });
+    </script>
+    -->
 {% block scripts %}{% endblock %}
 
 </body>

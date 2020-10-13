@@ -1,75 +1,41 @@
-﻿{% extends "app/layout.html" %}
+﻿a {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+{% extends "app/layout.html" %}
 
 {% block content %}
-
+<!-- Modal for modal form use l8r
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel">Select Type of Problematic Language</h4>
+    </div>
+    <div class="modal-body">
+      <p>
+       <span id="modal-text"></span>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+   </div>
+  </div>
+</div>
+-->
 <div class="jumbotron">
     <h1>{{location}}</h1>
 </div>
-<style type="text/css">
-
-	@media (max-width: 768px) { 
-		.right-column{
-			margin-left: 0px;
-		}
-	}
-
-	@media (min-width: 768px) { 
-		.right-column{
-			margin-left: 20px;
-		}
-	}
-
-	.result-container{
-		margin-bottom: 20px;
-		width: 100%;
-	}
-
-	.left-column{
-		padding:0px;
-	}
-
-	.right-column{
-		padding:0px;
-	}
-	.lead{
-		font-size: 17px;
-	}
-	.card{
-		max-width: 700px;
-		width: 100%;
-	}
-	.card-body{
-		padding: 20px;
-	}
-</style>
 <div class="container">
 	<div class="row">
-		<div class="left-column col-lg-7 offset-lg-1">
 			{% for sentence in sentences %}
-				{% if sentence.category == "Destroys Evidence"%}
-						<p>Destorys evidence here !</p>
-				{% endif %}
-				{{sentence.text}}
+				<span> <a href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></span>
 			{% endfor %}
-					<div class="result-container">
-						<div class="container">
-							<div class="row">
-								<div class="card m-auto">
-									<div class="card-body mt-2 mb-2">
-										<h2 class="card-title"> Section {{result.section}}</h2>
-										<p class="card-text">Policy Type: {{result.policy_type}}<br>
-										Language: <br>
-										Category: <br>
-										Impact:<br>
-										</p>
-									</div>
-									<div class="card-footer text-muted">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-		</div>
 	</div>
 </div>
+
 {% endblock %}

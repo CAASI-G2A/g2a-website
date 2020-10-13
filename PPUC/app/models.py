@@ -6,20 +6,10 @@ from django.db import models
 
 # Create your models here.
 class Location(models.Model):
-    name = models.CharField(max_length=150, default="Un-named")
+    name = models.CharField(max_length=150, default="")
+    lid = models.IntegerField(primary_key=True)
     def __str__(self):
         return self.name
-
-class Review(models.Model):
-    policy_type = models.CharField(max_length=40)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    expiration = models.DateField(verbose_name="Expiration Date")
-    section = models.CharField(max_length=12)
-    language = models.TextField()
-    category = models.CharField(max_length=40)
-    impact = models.CharField(max_length=256)
-    def __str__(self):
-        return self.section
 
 class Contract(models.Model):
     location = models.CharField(max_length=40)
@@ -31,7 +21,12 @@ class Contract(models.Model):
 class Sentence(models.Model):
     location = models.CharField(max_length=256)
     sid = models.IntegerField() #sentence number
-    text = models.CharField(max_length=256)
-    category = models.CharField(max_length=256) #manually assigned category (reduces anonymity, destroys evidence...)
+    text = models.CharField(max_length=500)
+    limit_oversight = models.BooleanField(default=False)
+    city_pay_for_misconduct = models.BooleanField(default=False)
+    erase_misconduct = models.BooleanField(default=False)
+    disqualify_complaints = models.BooleanField(default=False)
+    restrict_interrogation = models.BooleanField(default=False)
+    unfair_information = models.BooleanField(default=False)
     def __str__(self):
-       return self.location
+        return self.text
