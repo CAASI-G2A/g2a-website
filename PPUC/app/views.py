@@ -82,7 +82,6 @@ def search_contract(request):
                 location = result.location
                 r = result.text
                 r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
-                sent_num = 0
                 x = r.find('.')
                 while x != -1:
                     temp1 = r[0:x]
@@ -91,11 +90,9 @@ def search_contract(request):
                     if temp4 != -1:
                         new_sentence = Sentence()
                         new_sentence.text = r[0: x+temp4+1]
-                        new_sentence.sid = sent_num
                         new_sentence.location = location
                         new_sentence.save()
                         print(new_sentence.text)
-                    sent_num += 1
                     r = r[x+1: len(r)]
                     x = r.find('.')
             else:
@@ -126,7 +123,7 @@ def view_location(request, lid):
 
 @login_required(login_url='login')
 def edit_sentence(request, sid):
-    sentence = Sentence.objects.get(sid=sid)
+    sentence = Sentence.objects.get(id=sid)
     if request.method == 'POST':
         form = ProblematicLanguageForm(request.POST)
         if form.is_valid():
@@ -139,7 +136,7 @@ def edit_sentence(request, sid):
             sentence.unfair_information = form.cleaned_data.get('unfair_information')
             sentence.save()
             location = Location.objects.filter(Q(name__icontains=sentence.location)).first()
-            lid = location.lid
+            lid = location.id
             return view_location(request, lid)
     else:
         form = ProblematicLanguageForm(instance=sentence)

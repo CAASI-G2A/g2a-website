@@ -7,7 +7,6 @@ from django.db import models
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length=150, default="")
-    lid = models.IntegerField(primary_key=True)
     def __str__(self):
         return self.name
 
@@ -20,7 +19,6 @@ class Contract(models.Model):
 
 class Sentence(models.Model):
     location = models.CharField(max_length=256)
-    sid = models.IntegerField() #sentence number
     text = models.CharField(max_length=500)
     limit_oversight = models.BooleanField(default=False)
     city_pay_for_misconduct = models.BooleanField(default=False)
