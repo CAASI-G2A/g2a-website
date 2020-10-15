@@ -20,7 +20,13 @@
                 border: 1px solid #4dd0e1;
                 box-shadow: 0 0 0 1px #4dd0e1;
             }
-        </style>
+            a.a1:link {
+              color: black;
+            }
+            a.a1:hover {
+              text-decoration: none;
+            }
+    </style>
 </head>
 
 <body>
@@ -38,8 +44,8 @@
             <div class="navbar-collapse collapse">
 
                 <ul class ="nav navbar-nav">
-                    <li><a id="lk1" href="{% url 'search' %}">Search</a></li>
-                    <li><a href="{% url 'search_contract' %}">Search Contracts</a></li>
+                    <li><a id="lk1" href="{% url 'search' %}">View Contracts</a></li>
+                    <li><a href="{% url 'search_contract' %}">Search for Phrasing</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>

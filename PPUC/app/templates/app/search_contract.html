@@ -2,16 +2,16 @@
 
 {% block content %}
 <form method="GET" action="{% url 'search_contract' %}">
-    <div class="active-cyan-3 active-cyan-4 mb-4">
-        <input class="form-control" type="text" name="q" value="{{request.GET.q}}" placeholder="Search" aria-label="Search">
+    <div class="active-cyan-3 active-cyan-4 mb-4" style="padding-top: 5px; padding-bottom: 8px;">
+        <input class="form-control" type="text" name="q" value="{{request.GET.q}}" placeholder="Search all contracts for a phrase" aria-label="Search" style="width: 100%">
     </div>
     <button class="btn btn-primary" type="submit">
         Search
     </button>
 </form>
 {% if results != '' %}
-    {% for obj in results %}
-        <p><strong>{{obj.location}} Contract:   </strong>{{obj.text}}</p>
+    {% for sentence in results %}
+        <p><strong>{{sentence.location}} Contract:   </strong><a class ="a1" href ="{% url 'edit_sentence' sentence.id%}">{{sentence.text}}</a></p>
     <hr >
     {% endfor %}
 {% endif %}

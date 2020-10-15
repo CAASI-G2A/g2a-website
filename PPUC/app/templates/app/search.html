@@ -2,7 +2,7 @@
 
 {% block content %}
 <form method="GET" action="{% url 'search' %}">
-    <div class="active-cyan-3 active-cyan-4 mb-4">
+    <div class="active-cyan-3 active-cyan-4 mb-4" style="padding-top: 5px; padding-bottom: 8px;">
         <input class="form-control" type="text" name="q" value="{{request.GET.q}}" placeholder="Search" aria-label="Search">
     </div>
     <button class="btn btn-primary" type="submit">

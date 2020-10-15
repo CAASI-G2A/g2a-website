@@ -24,4 +24,4 @@ class ProblematicLanguageForm(ModelForm):
     # will validate that the user MUST check the box.
     class Meta:
         model = Sentence
-        fields = ('limit_oversight', 'city_pay_for_misconduct', 'erase_misconduct', 'disqualify_complaints', 'restrict_interrogation', 'unfair_information')
+        fields = ('impact', 'limit_oversight', 'city_pay_for_misconduct', 'erase_misconduct', 'disqualify_complaints', 'restrict_interrogation', 'unfair_information')

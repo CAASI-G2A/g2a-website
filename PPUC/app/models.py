@@ -19,7 +19,8 @@ class Contract(models.Model):
 
 class Sentence(models.Model):
     location = models.CharField(max_length=256)
-    text = models.CharField(max_length=500)
+    text = models.TextField()
+    impact = models.TextField()
     limit_oversight = models.BooleanField(default=False)
     city_pay_for_misconduct = models.BooleanField(default=False)
     erase_misconduct = models.BooleanField(default=False)

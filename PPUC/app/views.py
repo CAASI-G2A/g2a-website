@@ -128,6 +128,7 @@ def edit_sentence(request, sid):
         form = ProblematicLanguageForm(request.POST)
         if form.is_valid():
             sentence.refresh_from_db()
+            sentence.impact = form.cleaned_data.get('impact')
             sentence.limit_oversight = form.cleaned_data.get('limit_oversight')
             sentence.city_pay_for_misconduct = form.cleaned_data.get('city_pay_for_misconduct')
             sentence.erase_misconduct = form.cleaned_data.get('erase_misconduct')
