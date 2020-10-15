@@ -4,7 +4,7 @@
 {% load staticfiles %}
 
 <div class="jumbotron" style="background-image: linear-gradient(#d4e0ed,#8db6df);padding-top:60px;padding-bottom:90px;">
-<img src="{% static "img/CAASI2.png" %}" style="width:50px; padding-bottom:12px;"/>
+<img src="{% static "app/img/CAASI2.png" %}" style="width:50px; padding-bottom:12px;"/>
     <h1 style="color:white;">PxPUC</h1>
     <p class="lead" style="color:white;">Project x Police Union Contracts</p>
 </div>
@@ -22,10 +22,10 @@ contracts and summarizes this in a way that is easier to understand.</p>
 <div class="jumbotron" style="background-color:white;padding-top:20px;">
     <h2>How can it help?</h2>
     <p class="lead">With a more widespread understanding of these police union contracts, we can help
-break down the barriers they pose to holding police offers accountable for
-misconduct and misconduct investigation processes. This can help those considering
-filing a police misconduct complaint understand more about how the process works
-and what it means for them if they choose to do so.</p>
+    break down the barriers they pose to holding police offers accountable for
+    misconduct and misconduct investigation processes. This can help those considering
+    filing a police misconduct complaint understand more about how the process works
+    and what it means for them if they choose to do so.</p>
     <p class="lead">
       <a class="btn btn-light" href="/about" role="button" style="float:right;">Learn more ></a>
 
@@ -33,8 +33,8 @@ and what it means for them if they choose to do so.</p>
 
 
 <div class="jumbotron">
-    <h2><a href="#">Explore police contracts</a></h2>
-    <p class="lead">Search by keyword our databse of police contracts</p>
+    <h2><a href="{% url 'search_contract' %}">Explore police contracts</a></h2>
+    <p class="lead">Search by keyword our database of police contracts</p>
 </div>
 
 <div class="jumbotron">

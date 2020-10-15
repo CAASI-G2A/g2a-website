@@ -110,12 +110,19 @@ venv.bak/
 
 #Misc stuff I found in the old repository
 .DS_Store
-Bark-In.pyproj
-Bark-In.pyproj.user
 bin/Microsoft.PythonTools.WebRole.dll
 bin/wfastcgi.py
-obj/Debug/Bark-In.pyproj.CoreCompileInputs.cache
-obj/Debug/Bark-In.pyproj.FileListAbsolute.txt
 photos/
 media/
 obj/
+
+#pyproj
+pyproj/proj_dir/
+pyproj/*.c
+pyproj/*/*.c
+pyproj/*/*.html
+pyproj/*.html
+proj-*/
+
+PPUC/PPUC.pyproj
+PPUC/PPUC.pyproj.user
