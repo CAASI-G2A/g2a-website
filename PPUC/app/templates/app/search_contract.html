@@ -2,8 +2,10 @@
 
 {% block content %}
 <form method="GET" action="{% url 'search_contract' %}">
-    <input name="q" value="{{request.GET.q}}" placeholder="search...">
-    <button class=" "btn btn-success" type="submit">
+    <div class="active-cyan-3 active-cyan-4 mb-4">
+        <input class="form-control" type="text" name="q" value="{{request.GET.q}}" placeholder="Search" aria-label="Search">
+    </div>
+    <button class="btn btn-primary" type="submit">
         Search
     </button>
 </form>

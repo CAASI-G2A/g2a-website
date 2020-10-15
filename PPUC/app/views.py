@@ -95,13 +95,13 @@ def search_contract(request):
                         print(new_sentence.text)
                     r = r[x+1: len(r)]
                     x = r.find('.')
-            else:
-                querySet = Sentence.objects.filter(Q(text__icontains=query))
-                for result in querySet:
-                    results.append((result))
-    context = {
-        'results' : results,
-        }
+        else:
+            querySet = Sentence.objects.filter(Q(text__icontains=query))
+            for result in querySet:
+                results.append((result))
+        context = {
+            'results' : results,
+            }
     assert isinstance(request, HttpRequest)
     return render(
         request,
