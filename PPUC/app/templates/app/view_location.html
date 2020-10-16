@@ -30,9 +30,9 @@
 		{% for sentence in sentences %}
             <!--call javascript write sentence, with switch statement for each type-->
             {% if sentence.limit_oversight or sentence.city_pay_for_misconduct or sentence.erase_misconduct or sentence.disqualify_complaints or sentence.restrict_interrogation or sentence.unfair_information %}
-				<span> <a style="color:black; background:#FE6F5E" href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></span>
+				<pre style="background:#ffad99;"><a style="color:black; " href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></pre>
             {% else %}
-                <span> <a style="color:black;" href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></span>
+                <pre><a style="color:black;" href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></pre>
             {% endif %}
 			{% endfor %}
 	</div>

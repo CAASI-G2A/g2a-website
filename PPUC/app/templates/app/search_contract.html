@@ -10,6 +10,7 @@
     </button>
 </form>
 {% if results != '' %}
+    <hr >
     {% for sentence in results %}
         <p><strong>{{sentence.location}} Contract:   </strong><a class ="a1" href ="{% url 'edit_sentence' sentence.id%}">{{sentence.text}}</a></p>
     <hr >

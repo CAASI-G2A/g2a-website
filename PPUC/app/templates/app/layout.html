@@ -8,25 +8,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
-    <style>
-            .navbar-custom {
-                background-color: white;
-            }
-            .active-cyan-3 input[type=text] {
-            border: 1px solid #4dd0e1;
-            box-shadow: 0 0 0 1px #4dd0e1;
-            }
-            .active-cyan-4 input[type=text]:focus:not([readonly]) {
-                border: 1px solid #4dd0e1;
-                box-shadow: 0 0 0 1px #4dd0e1;
-            }
-            a.a1:link {
-              color: black;
-            }
-            a.a1:hover {
-              text-decoration: none;
-            }
-    </style>
 </head>
 
 <body>
@@ -45,7 +26,7 @@
 
                 <ul class ="nav navbar-nav">
                     <li><a id="lk1" href="{% url 'search' %}">View Contracts</a></li>
-                    <li><a href="{% url 'search_contract' %}">Search for Phrasing</a></li>
+                    <li><a href="{% url 'search_contract' %}">Search Phrasing</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>

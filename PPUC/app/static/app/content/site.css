@@ -40,3 +40,40 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+.navbar-custom {
+    background-color: white;
+}
+
+.active-cyan-3 input[type=text] {
+    border: 1px solid #428bca;
+    box-shadow: 0 0 0 1px #428bca;
+}
+
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid #428bca;
+    box-shadow: 0 0 0 1px #428bca;
+}
+a {
+    overflow-wrap: break-word;
+}
+a.a1:link {
+    color: black;
+}
+
+a.a1:hover {
+    text-decoration: none;
+}
+
+a.a1:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+pre {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    background: none;
+    white-space: normal;
+    padding: 0px;
+    word-break: keep-all;
+}
