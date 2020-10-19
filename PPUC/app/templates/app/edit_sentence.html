@@ -1,13 +1,40 @@
-﻿{% extends "app/layout.html" %}
-
-{% block content %}
-<h4>Select Type of Problematic Language</h4>
-    <p>"{{sentence.text}}"</p>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">
-            Save
-        </button>
-    </form>
-{% endblock %}
+﻿<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <form id="sentence_update_form" method='post' class="form" role="form" action='{% url 'edit_sentence' sentence.id %}'>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Edit Sentence Attributes</h4>
+              </div>
+              <div class="modal-body">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-group">
+                    {% for field in form %}
+                        <div class="form-group">
+                            {% if field.errors %}
+                                <ul class="form-errors">
+                                {% for error in field.errors %}
+                                    <li><strong>{{ error|escape }}</strong></li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {{ field.label_tag }} {{ field }} 
+                            {% if field.help_text %}<div class="form-helptext">{{ field.help_text }}</div>{% endif %}
+                        </div>
+                    {% endfor %}
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancel" />
+                <input type="submit" class="btn btn-primary" value="Save"/>
+              </div>
+        </form>
+        <script>
+                var form_options = {
+                    target: '#modal',
+                    success: function() {  }
+                }
+                $('#sentence_update_form').ajaxForm(form_options);
+        </script>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

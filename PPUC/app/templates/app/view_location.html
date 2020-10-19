@@ -1,41 +1,19 @@
 ﻿{% extends "app/layout.html" %}
-
+{% block extra_js%}
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %}
 {% block content %}
-<!-- Modal for modal form use l8r
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-   <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="myModalLabel">Select Type of Problematic Language</h4>
-    </div>
-    <div class="modal-body">
-      <p>
-       <span id="modal-text"></span>
-      </p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-   </div>
-  </div>
-</div>
--->
 <div class="jumbotron">
     <h1>{{location}} Police Contract</h1>
 </div>
-<div class="container">
-	<div class="row">
-		{% for sentence in sentences %}
-            <!--call javascript write sentence, with switch statement for each type-->
+<!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div><!-- /.modal -->
+        {% for sentence in sentences %}
             {% if sentence.limit_oversight or sentence.city_pay_for_misconduct or sentence.erase_misconduct or sentence.disqualify_complaints or sentence.restrict_interrogation or sentence.unfair_information %}
-				<pre style="background:#ffad99;"><a style="color:black; " href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></pre>
+                <pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="edit sentence" data-tooltip>{{sentence.text}}</a></pre>
             {% else %}
-                <pre><a style="color:black;" href ="{% url 'edit_sentence' sentence.id%}"> {{sentence.text}}</a></pre>
+                <pre><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="edit sentence" data-tooltip>{{sentence.text}}</a></pre>
             {% endif %}
-			{% endfor %}
-	</div>
-</div>
-
+    {% endfor %}
 {% endblock %}
