@@ -3,10 +3,12 @@
 {% block content %}
 <div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
 
+<div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
+
   <div style="max-width:350px;margin:0px auto;">
 
-    <form method="GET" action="{% url 'search_contract' %}">
-        <input name="q" value="{{request.GET.q}}" placeholder="enter a keyword here" style="border-radius:15px;align:center; border-width:2px; border-color:#5685d1;">
+    <form method="GET" action="{% url 'search' %}">
+        <input name="q" value="{{request.GET.q}}" placeholder="search for a location" style="border-radius:15px;text-align:center; border-width:2px; border-color:#5685d1;">
         <button class=" "btn btn-success" type="submit" style="border-radius:15px;color:white;background-color:#5685d1;border-color:#5685d1;padding-left:10px;padding-right:10px;">
             Go
         </button>
@@ -14,8 +16,10 @@
     </form>
   </div>
 </div>
+</div>
+<hr >
 {% for obj in locations %}
-    <h1>{{obj.name}}</h1>
-    <a href="{%url 'view_location' obj.pk %}" >{{ obj.name }}</a>
+    <h1><a href="{%url 'view_location' obj.pk %}" >{{ obj.name }} Police Contract</a></h1>
+<hr >
 {% endfor %}
 {% endblock %}
