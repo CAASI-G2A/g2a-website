@@ -15,5 +15,5 @@
             {% else %}
                 <pre><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="edit sentence" data-tooltip>{{sentence.text}}</a></pre>
             {% endif %}
-    {% endfor %}
+        {% endfor %}
 {% endblock %}

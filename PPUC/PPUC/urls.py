@@ -16,8 +16,8 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('search_contract/', views.search_contract, name='search_contract'),
     path('view_location/<int:lid>', views.view_location, name='view_location'),
-    path('view_contract/<int:cid>', views.view_contract, name='view_contract'),
     path('edit_sentence/<int:sid>', views.edit_sentence, name='edit_sentence'),
+    path('test/',views.test, name='test'),
     path('login/',
          LoginView.as_view
          (

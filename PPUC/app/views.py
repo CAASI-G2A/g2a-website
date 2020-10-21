@@ -58,6 +58,7 @@ def search(request):
     locations = Location.objects.filter(Q(name__icontains=query))
 
     context = {
+        'title' : 'Search',
         'locations' : locations,
         }
     assert isinstance(request, HttpRequest)
@@ -100,6 +101,7 @@ def search_contract(request):
             for result in querySet:
                 results.append((result))
         context = {
+            'title' : 'Search Contracts',
             'results' : results,
             }
     assert isinstance(request, HttpRequest)
@@ -114,6 +116,7 @@ def view_location(request, lid):
     location = Location.objects.get(pk=lid)
     sentences = Sentence.objects.filter(Q(location__icontains=location.name))
     context = {
+        'title' : 'View Location',
         'location' : location,
         'sentences' : sentences,
         'form' : ProblematicLanguageForm
@@ -141,16 +144,7 @@ def edit_sentence(request, sid):
             return view_location(request, lid)
     else:
         form = ProblematicLanguageForm(instance=sentence)
-        return render(request, 'app/edit_sentence.html', {'form': form, 'sentence' : sentence})
+        return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
 
-def view_contract(request, cid):
-    context = {}
-    contract = Contract.objects.get(pk=cid)
-    sentences = Sentence.objects.filter(Q(location__equals=contract.location))
-    context = {
-        'location' : contract.location,
-        'text' : contract.text,
-        'sentences' : sentences
-        }
-    assert isinstance(request, HttpRequest)
-    return render(request,'app/test.html',context)
+def test(request):
+    return render(request,'app/test.html')
