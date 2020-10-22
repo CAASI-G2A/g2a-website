@@ -12,6 +12,8 @@ from django.views.generic import ListView, FormView
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
 import re
+import nltk
+from nltk.tokenize import sent_tokenize
 
 def home(request):
     """Renders the home page."""
@@ -82,6 +84,7 @@ def search_contract(request):
                 result.save()
                 location = result.location
                 r = result.text
+				'''
                 r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
                 x = r.find('.')
                 while x != -1:
@@ -96,6 +99,19 @@ def search_contract(request):
                         print(new_sentence.text)
                     r = r[x+1: len(r)]
                     x = r.find('.')
+				'''
+				
+                sentences = sent_tokenize(content)
+                for sentence in sentences:
+                    sentence = sentence.replace("\n"," ")
+                    sentence = sentence.replace("-", "") 
+                    sentence = sentence.replace("­", "")
+                    new_sentence = Sentence()
+                    new_sentence.text = sentence
+                    new_sentence.location = location
+                    new_sentence.save()
+                    print(new_sentence.text)
+					
         else:
             querySet = Sentence.objects.filter(Q(text__icontains=query))
             for result in querySet:
