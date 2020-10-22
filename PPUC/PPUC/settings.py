@@ -1,5 +1,5 @@
 """
-Django settings for PPUC project.
+Django settings for main project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
     'app',
+    'PBB',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'PPUC.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/app')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
