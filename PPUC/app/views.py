@@ -101,7 +101,7 @@ def search_contract(request):
                     x = r.find('.')
 				'''
 				
-                sentences = sent_tokenize(content)
+                sentences = sent_tokenize(r)
                 for sentence in sentences:
                     sentence = sentence.replace("\n"," ")
                     sentence = sentence.replace("-", "") 
