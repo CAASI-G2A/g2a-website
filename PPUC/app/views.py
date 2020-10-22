@@ -84,34 +84,27 @@ def search_contract(request):
                 result.save()
                 location = result.location
                 r = result.text
-				'''
-                r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
-                x = r.find('.')
-                while x != -1:
-                    temp1 = r[0:x]
-                    temp2 = r[x:len(r)]
-                    temp4 = temp2.find(".")
-                    if temp4 != -1:
-                        new_sentence = Sentence()
-                        new_sentence.text = r[0: x+temp4+1]
-                        new_sentence.location = location
-                        new_sentence.save()
-                        print(new_sentence.text)
-                    r = r[x+1: len(r)]
-                    x = r.find('.')
-				'''
-				
+          #r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
+             #   x = r.find('.')
+             #   while x != -1:
+               #     temp1 = r[0:x]
+              #      temp2 = r[x:len(r)]
+               #     temp4 = temp2.find(".")
+                   # if temp4 != -1:
+                #        new_sentence = Sentence()
+                    #    new_sentence.text = r[0: x+temp4+1]
+                   #     new_sentence.location = location
+                   #     new_sentence.save()
+                #        print(new_sentence.text)
+                  #  r = r[x+1: len(r)]
+                #    x = r.find('.') 
                 sentences = sent_tokenize(r)
                 for sentence in sentences:
-                    sentence = sentence.replace("\n"," ")
-                    sentence = sentence.replace("-", "") 
-                    sentence = sentence.replace("­", "")
                     new_sentence = Sentence()
                     new_sentence.text = sentence
                     new_sentence.location = location
                     new_sentence.save()
                     print(new_sentence.text)
-					
         else:
             querySet = Sentence.objects.filter(Q(text__icontains=query))
             for result in querySet:
@@ -162,5 +155,18 @@ def edit_sentence(request, sid):
         form = ProblematicLanguageForm(instance=sentence)
         return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
 
-def test(request):
-    return render(request,'app/test.html')
+def complaint(request):
+    context = {}
+    query = request.GET.get('q','')
+    if query == '':
+        location = ''
+        questions = ''
+    else:
+        location = Location.objects.filter(Q(name__icontains=query)).first()
+        if not location:
+            location = ''
+            questions = ''
+        else:
+            questions = location.questions.all()
+    context = {'title': 'Complaints', 'location' : location, 'questions': questions}
+    return render(request,'app/complaint.html', context)

@@ -79,7 +79,7 @@ a.a1:visited {
 
 pre {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    display: flex;
+    display: inline-flex;
     background: none;
     white-space: normal;
     padding: 0px;

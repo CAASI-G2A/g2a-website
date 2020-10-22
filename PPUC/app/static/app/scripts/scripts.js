@@ -1,8 +1,26 @@
-function showOne() {
-    if (document.getElementById("one").style.display == "flex") {
-        document.getElementById("one").style.display = "none";
+function showCategory(c) {
+    //on click set all elements to hidden and who the one we want
+    document.getElementById("complaintPanel").style.display = "none";
+    document.getElementById("notificationPanel").style.display = "none";
+    document.getElementById("investigationPanel").style.display = "none";
+    document.getElementById("resultPanel").style.display = "none";
+    document.getElementById(c + "Answer").innerHTML = "Answer:" 
+    switch (c) {
+        case c = "Complaint":
+            document.getElementById("complaintPanel").style.display = "flex";
+            break;
+        case c = "Notification":
+            document.getElementById("notificationPanel").style.display = "flex";
+            break;
+        case c = "Investigation":
+            document.getElementById("investigationPanel").style.display = "flex";
+            break;
+        case c = "Result":
+            document.getElementById("resultPanel").style.display = "flex";
+            break;
     }
-    else {
-        document.getElementById("one").style.display = "flex";
-    }
+}
+
+function setAnswer(answer,c) {
+    document.getElementById(c+ "Answer").innerHTML = answer;
 }

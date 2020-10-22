@@ -10,6 +10,12 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+class Question(models.Model):
+    category = models.CharField(max_length=150,default="")
+    q = models.CharField(max_length=450, default="")
+    a = models.CharField(max_length=450, default="")
+    location = models.ForeignKey(Location, related_name='questions', on_delete=models.CASCADE)
+
 class Contract(models.Model):
     location = models.CharField(max_length=40)
     text = models.TextField()
