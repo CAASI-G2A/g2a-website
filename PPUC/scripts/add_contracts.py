@@ -4,6 +4,7 @@ import os
 import re
 from app.models import Contract
 from app.models import Location
+from app.models import Sentence
 
 def run():
     with os.scandir("./app/contracts") as entries:
@@ -12,8 +13,15 @@ def run():
                 with open(entry, encoding = 'ansi') as textFile:
                     location = entry.name[:-4]
                     content = strip_periods(textFile.read())
-                    contract = Contract.objects.get_or_create(location=location, text=content)
+                    contract = Contract.objects.get_or_create(location=location, text=content, is_parsed=True)
                     location = Location.objects.get_or_create(name=location)
+                with open(entry, encoding = 'ansi') as textFile:
+                    lines = textFile.readlines()
+                    for line in lines:
+                        line = strip_periods(line)
+                        location = entry.name[:-4]
+                        sentence = Sentence.objects.get_or_create(text=line, location=location)
+                    						
 					
 def strip_periods(txt):
     txt = re.sub('\.\.+', '.', txt)
