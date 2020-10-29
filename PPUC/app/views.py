@@ -77,38 +77,9 @@ def search_contract(request):
         results = ''
     else:
         results = []
-        querySet = Contract.objects.filter(Q(text__icontains=query))
+        querySet = Sentence.objects.filter(Q(text__icontains=query))
         for result in querySet:
-            if result.is_parsed is False:
-                result.is_parsed = True
-                result.save()
-                location = result.location
-                r = result.text
-          #r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
-             #   x = r.find('.')
-             #   while x != -1:
-               #     temp1 = r[0:x]
-              #      temp2 = r[x:len(r)]
-               #     temp4 = temp2.find(".")
-                   # if temp4 != -1:
-                #        new_sentence = Sentence()
-                    #    new_sentence.text = r[0: x+temp4+1]
-                   #     new_sentence.location = location
-                   #     new_sentence.save()
-                #        print(new_sentence.text)
-                  #  r = r[x+1: len(r)]
-                #    x = r.find('.') 
-                sentences = sent_tokenize(r)
-                for sentence in sentences:
-                    new_sentence = Sentence()
-                    new_sentence.text = sentence
-                    new_sentence.location = location
-                    new_sentence.save()
-                    print(new_sentence.text)
-        else:
-            querySet = Sentence.objects.filter(Q(text__icontains=query))
-            for result in querySet:
-                results.append((result))
+            results.append((result))
         context = {
             'title' : 'Search Contracts',
             'results' : results,

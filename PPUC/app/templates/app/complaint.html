@@ -1,4 +1,5 @@
 ﻿{% extends "app/layout.html" %}
+{% load static %}
 {% block content %}
 <div class="container-fluid">
     <div class="jumbotron" style="padding-bottom:25px;">
@@ -18,10 +19,22 @@
   </div>
     <div class="row">
         <div class="col-md-6">
+            <!-- Pre-Complaint Circle-->
+            <div class="circle">
+                <div class="circle" onclick="showPreComplaint()"></div>
+                <div class="test">Pre-Complaint</div>
+            </div>
+            <div class="v1"></div>
             <!-- Complaint Circle-->
             <div class="circle">
                 <div class="circle" onclick="showCategory('Complaint')"></div>
                 <div class="test">Complaint</div>
+            </div>
+            <div class="v1"></div>
+            <!-- Contract Circle-->
+            <div class="circle">
+                <div class="circle" onclick=""></div>
+                <div class="test">Contract</div>
             </div>
             <div class="v1"></div>
             <!-- Notification Circle-->
@@ -30,14 +43,29 @@
                 <div class="test">Notification</div>
             </div>
             <div class="v1"></div>
+            <!-- Investigation Circle-->
             <div class="circle">
                 <div class="circle" onclick="showCategory('Investigation')"></div>
                 <div class="test">Investigation</div>
             </div>
             <div class="v1"></div>
+            <!-- Result Circle-->
             <div class="circle">
                 <div class="circle" onclick="showCategory('Result')"></div>
                 <div class="test">Result</div>
+            </div>
+        </div>
+        <!-- Pre-Complaint Panel-->
+        <div class="col-md-6" id="pre-complaintPanel" style="display:none">
+            <div class="Qs">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">What is a complaint?</h3>
+                  </div>
+                  <div>
+                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}">Pre-Complaint</a>
+                  </div>
+                </div>
             </div>
         </div>
         <!-- Complaint Panel-->

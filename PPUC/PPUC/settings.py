@@ -25,7 +25,7 @@ SECRET_KEY = '64e78b4c-9f43-4988-a739-21c2d177af93'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.grieftoaction.org','localhost']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
