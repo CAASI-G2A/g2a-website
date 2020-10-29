@@ -7,7 +7,7 @@ from app.models import Location
 from app.models import Sentence
 
 def run():
-    with os.scandir("./app/contracts") as entries:
+    with os.scandir("./app/static/app/contracts") as entries:
         for entry in entries:
             if entry.is_file():
                 with open(entry, encoding = 'ansi') as textFile:
