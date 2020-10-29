@@ -8,6 +8,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+venv/
+env/
+*.sqlite3
+.idea/
 build/
 develop-eggs/
 dist/
@@ -68,6 +72,15 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Project asset folders
+media/
+
+# Database
+db.sqlite3
+
+# Editor directories and files
+.idea
 
 # Jupyter Notebook
 .ipynb_checkpoints
