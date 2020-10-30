@@ -9,14 +9,6 @@
             <p class="lead">Generic</p>
         {% endif %}
     </div>
-    <div style="max-width:350px;margin:0px auto;">
-    <form method="GET" action="{% url 'complaint' %}">
-        <input name="q" value="{{request.GET.q}}" placeholder="search for a location" style="border-radius:15px;text-align:center; border-width:2px; border-color:#5685d1;">
-        <button class=" "btn btn-success" type="submit" style="border-radius:15px;color:white;background-color:#5685d1;border-color:#5685d1;padding-left:10px;padding-right:10px;">
-            Go
-        </button>
-    </form>
-  </div>
     <div class="row">
         <div class="col-md-6">
             <!-- Pre-Complaint Circle-->
@@ -33,7 +25,7 @@
             <div class="v1"></div>
             <!-- Contract Circle-->
             <div class="circle">
-                <div class="circle" onclick=""></div>
+                <div class="circle" onclick="showContractSearch()"></div>
                 <div class="test">Contract</div>
             </div>
             <div class="v1"></div>
@@ -56,20 +48,23 @@
             </div>
         </div>
         <!-- Pre-Complaint Panel-->
-        <div class="col-md-6" id="pre-complaintPanel" style="display:none">
+        <div class="col-md-6" id="pre-complaintPanel" style="display:block">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">What is a complaint?</h3>
                   </div>
-                  <div>
+                  <div class="panel-body">
+                      <p>A complaint is... </p>
+                  </div>
+                  <div class="panel-footer">
                       <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}">Pre-Complaint</a>
                   </div>
                 </div>
             </div>
         </div>
         <!-- Complaint Panel-->
-        <div class="col-md-6" id="complaintPanel" style="display:none">
+        <div class="col-md-6" id="complaintPanel" style="display:block">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -93,9 +88,32 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
+        <!-- Contract Panel-->
+        <div class="col-md-6" id="contractPanel" style="display:block">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{location}} Contract Search</h3>
+                    </div>
+                    <div class="panel-body scrollable-panel" id="contractSearch">
+                         <form method="GET" action="{% url 'complaint' location.pk %}">
+                             <input name="searchTerm" value="{{request.GET.searchTerm}}" placeholder="enter a keyword here" style="border-radius:15px; text-align:center; border-width:2px; border-color:#5685d1;">
+                             <button class=" "btn btn-success" type="submit" style="border-radius:15px;color:white;background-color:#5685d1;border-color:#5685d1;padding-left:10px;padding-right:10px;">
+                                Go
+                             </button>
+                         </form>
+                         {% if results != '' %}
+                             <hr >
+                             {% for obj in results %}
+                                  <p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.text}}</p>
+                                  <hr >
+                              {% endfor %}
+                         {% endif %}
+                    </div>
+                </div>
+         </div>
         <!-- Notification Panel-->
-        <div class="col-md-6" id="notificationPanel" style="display:none">
+        <div class="col-md-6" id="notificationPanel" style="display:block">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -121,7 +139,7 @@
             </div>
         </div>
         <!-- Investigation Panel-->
-        <div class="col-md-6" id="investigationPanel" style="display:none">
+        <div class="col-md-6" id="investigationPanel" style="display:block">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -147,7 +165,7 @@
             </div>
         </div>
         <!-- Result Panel-->
-        <div class="col-md-6" id="resultPanel" style="display:none">
+        <div class="col-md-6" id="resultPanel" style="display:block">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">

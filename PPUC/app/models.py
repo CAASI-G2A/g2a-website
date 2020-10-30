@@ -17,14 +17,14 @@ class Question(models.Model):
     location = models.ForeignKey(Location, related_name='questions', on_delete=models.CASCADE)
 
 class Contract(models.Model):
-    location = models.CharField(max_length=40)
+    location = models.ForeignKey(Location, related_name='contract', on_delete=models.CASCADE)
     text = models.TextField()
     is_parsed = models.BooleanField(default=False)
     def __str__(self):
        return self.location
 
 class Sentence(models.Model):
-    location = models.CharField(max_length=256)
+    location = models.ForeignKey(Location, related_name='sentences', on_delete=models.CASCADE)
     text = models.TextField()
     impact = models.TextField(blank=True)
     limit_oversight = models.BooleanField(default=False)

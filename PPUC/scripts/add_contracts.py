@@ -13,13 +13,14 @@ def run():
                 with open(entry, encoding = 'ansi') as textFile:
                     location = entry.name[:-4]
                     content = strip_periods(textFile.read())
+                    location, created = Location.objects.get_or_create(name=location)
                     contract = Contract.objects.get_or_create(location=location, text=content, is_parsed=True)
-                    location = Location.objects.get_or_create(name=location)
                 with open(entry, encoding = 'ansi') as textFile:
                     lines = textFile.readlines()
                     for line in lines:
                         line = strip_periods(line)
                         location = entry.name[:-4]
+                        location, get = Location.objects.get_or_create(name=location)
                         sentence = Sentence.objects.get_or_create(text=line, location=location)
                     						
 					

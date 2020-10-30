@@ -14,8 +14,12 @@
     </div>
 </div>
 <hr >
-{% for obj in locations %}
-    <h1><a href="{%url 'view_location' obj.pk %}" >{{ obj.name }} Police Contract</a></h1>
-<hr >
-{% endfor %}
+<div class="container-fluid">
+    {% for obj in locations %}
+        <h1>{{ obj.name }}</h1>
+        <a href="{%url 'view_location' obj.pk %}" class="btn btn-info" role="button" >Police Union Contract</a>
+        <a href="{%url 'complaint' obj.pk %}" class="btn btn-info" role="button" >Complaint Tool</a>
+    <hr >
+    {% endfor %}
+    </div>
 {% endblock %}

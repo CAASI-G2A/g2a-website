@@ -94,7 +94,7 @@ def search_contract(request):
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
-    sentences = Sentence.objects.filter(Q(location__icontains=location.name))
+    sentences = Sentence.objects.filter(Q(location=location))
     context = {
         'title' : 'View Location',
         'location' : location,
@@ -126,18 +126,14 @@ def edit_sentence(request, sid):
         form = ProblematicLanguageForm(instance=sentence)
         return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
 
-def complaint(request):
+def complaint(request,lid):
+    location = Location.objects.get(pk=lid)
+    questions = location.questions.all()
     context = {}
-    query = request.GET.get('q','')
-    if query == '':
-        location = ''
-        questions = ''
+    searchTerm = request.GET.get('searchTerm','')
+    if searchTerm != '':
+        results = Sentence.objects.filter(Q(location=location),Q(text__icontains=searchTerm))
     else:
-        location = Location.objects.filter(Q(name__icontains=query)).first()
-        if not location:
-            location = ''
-            questions = ''
-        else:
-            questions = location.questions.all()
-    context = {'title': 'Complaints', 'location' : location, 'questions': questions}
+        results = ''
+    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results}
     return render(request,'app/complaint.html', context)

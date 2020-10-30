@@ -154,3 +154,8 @@ pre {
 .panel-body {
     border-top: 1px solid #428bca;
 }
+.scrollable-panel {
+    height: 300px;
+    overflow-y: scroll;
+    width:100%;
+}
