@@ -21,7 +21,7 @@ class Contract(models.Model):
     text = models.TextField()
     is_parsed = models.BooleanField(default=False)
     def __str__(self):
-       return self.location
+       return self.location.name
 
 class Sentence(models.Model):
     location = models.ForeignKey(Location, related_name='sentences', on_delete=models.CASCADE)

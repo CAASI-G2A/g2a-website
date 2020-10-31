@@ -3,11 +3,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="jumbotron" style="padding-bottom:25px;">
-         {% if location %}
-            <p class="lead">{{location.name}}</p>
-        {% else %}
-            <p class="lead">Generic</p>
-        {% endif %}
+        <p class="lead">{{location.name}}</p>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -48,7 +44,7 @@
             </div>
         </div>
         <!-- Pre-Complaint Panel-->
-        <div class="col-md-6" id="pre-complaintPanel" style="display:block">
+        <div class="col-md-6" id="pre-complaintPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -64,24 +60,18 @@
             </div>
         </div>
         <!-- Complaint Panel-->
-        <div class="col-md-6" id="complaintPanel" style="display:block">
+        <div class="col-md-6" id="complaintPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
-                      {% if location %}
                         {% for q in questions %}
                             {% if q.category == 'Complaint' %}
                                 <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
-                      {% else %}
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to complaint question one', 'Complaint')">Test Question 1 for complaint Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to complaint question 2', 'Complaint')">Test Question 2 for complaint Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to complaint question 3', 'Complaint')">Test Question 3 for complaint Generic</a>
-                      {% endif %}
                   </div>
                     <div class="panel-body" id="ComplaintAnswer">
                         Answer here...
@@ -90,7 +80,7 @@
             </div>
         </div> 
         <!-- Contract Panel-->
-        <div class="col-md-6" id="contractPanel" style="display:block">
+        <div class="col-md-6" id="contractPanel" style="display:none; position:sticky; top: 0;">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{location}} Contract Search</h3>
@@ -113,24 +103,18 @@
                 </div>
          </div>
         <!-- Notification Panel-->
-        <div class="col-md-6" id="notificationPanel" style="display:block">
+        <div class="col-md-6" id="notificationPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
-                      {% if location %}
                         {% for q in questions %}
                             {% if q.category == 'Notification' %}
                                 <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
-                      {% else %}
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to notification question one', 'Notification')">Test Question 1 for notification Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to notification question 2', 'Notification')">Test Question 2 for notification Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to notification question 3', 'Notification')" >Test Question 3 for notification Generic</a>
-                      {% endif %}
                   </div>
                     <div class="panel-body" id="NotificationAnswer">
                         Answer:
@@ -139,24 +123,18 @@
             </div>
         </div>
         <!-- Investigation Panel-->
-        <div class="col-md-6" id="investigationPanel" style="display:block">
+        <div class="col-md-6" id="investigationPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
-                      {% if location %}
                         {% for q in questions %}
                             {% if q.category == 'Investigation' %}
                                 <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
-                      {% else %}
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to investigation question one', 'Investigation')">Test Question 1 for investigation Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to investigation question 2', 'Investigation')">Test Question 2 for investigation Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to investigation question 3', 'Investigation')">Test Question 3 for investigation Generic</a>
-                      {% endif %}
                   </div>
                     <div class="panel-body" id="InvestigationAnswer">
                         Answer:
@@ -165,24 +143,18 @@
             </div>
         </div>
         <!-- Result Panel-->
-        <div class="col-md-6" id="resultPanel" style="display:block">
+        <div class="col-md-6" id="resultPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
-                      {% if location %}
                         {% for q in questions %}
                             {% if q.category == 'Result' %}
                                 <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
-                      {% else %}
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to result question one', 'Result')">Test Question 1 for result Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to result question 2', 'Result')">Test Question 2 for result Generic</a>
-                          <a href="#" class="list-group-item" onclick="setAnswer('Answer to result question 3', 'Result')">Test Question 3 for result Generic</a>
-                      {% endif %}
                   </div>
                     <div class="panel-body" id="ResultAnswer">
                         Answer:
