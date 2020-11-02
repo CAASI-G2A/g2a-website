@@ -10,7 +10,7 @@ def run():
     with os.scandir("./app/static/app/contracts") as entries:
         for entry in entries:
             if entry.is_file():
-                with open(entry, encoding = 'ansi') as textFile:
+                with open(entry, encoding = 'cp1252') as textFile:
                     location = entry.name[:-4]
                     content = strip_periods(textFile.read())
                     location, created = Location.objects.get_or_create(name=location)
