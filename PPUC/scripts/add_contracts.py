@@ -15,7 +15,7 @@ def run():
                     content = strip_periods(textFile.read())
                     location, created = Location.objects.get_or_create(name=location)
                     contract = Contract.objects.get_or_create(location=location, text=content, is_parsed=True)
-                with open(entry, encoding = 'ansi') as textFile:
+                with open(entry, encoding = 'cp1252') as textFile:
                     lines = textFile.readlines()
                     for line in lines:
                         line = strip_periods(line)
