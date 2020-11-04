@@ -22,7 +22,7 @@ def run():
                         location = entry.name[:-4]
                         location, get = Location.objects.get_or_create(name=location)
                         sentence = Sentence.objects.get_or_create(text=line, location=location)
-                    						
+                   						
 					
 def strip_periods(txt):
     txt = re.sub('\.\.+', '.', txt)
