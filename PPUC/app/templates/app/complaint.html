@@ -69,7 +69,7 @@
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Complaint' %}
-                                <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
+                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
@@ -112,7 +112,7 @@
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Notification' %}
-                                <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
+                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
@@ -132,7 +132,7 @@
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Investigation' %}
-                                <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
+                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
@@ -152,7 +152,7 @@
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Result' %}
-                                <a href="#" class="list-group-item" onclick="setAnswer('{{q.a}}','{{q.category}}')">{{q.q}}</a>
+                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
