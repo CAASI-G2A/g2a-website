@@ -123,6 +123,8 @@ bin/wfastcgi.py
 photos/
 media/
 obj/
+db.sqlite3
+*.sqlite3
 
 #pyproj
 pyproj/proj_dir/
