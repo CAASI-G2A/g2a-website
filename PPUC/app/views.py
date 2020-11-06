@@ -77,38 +77,9 @@ def search_contract(request):
         results = ''
     else:
         results = []
-        querySet = Contract.objects.filter(Q(text__icontains=query))
+        querySet = Sentence.objects.filter(Q(text__icontains=query))
         for result in querySet:
-            if result.is_parsed is False:
-                result.is_parsed = True
-                result.save()
-                location = result.location
-                r = result.text
-          #r = re.sub(r'(?<!\w)([A-Z])\.', r'\1', r)
-             #   x = r.find('.')
-             #   while x != -1:
-               #     temp1 = r[0:x]
-              #      temp2 = r[x:len(r)]
-               #     temp4 = temp2.find(".")
-                   # if temp4 != -1:
-                #        new_sentence = Sentence()
-                    #    new_sentence.text = r[0: x+temp4+1]
-                   #     new_sentence.location = location
-                   #     new_sentence.save()
-                #        print(new_sentence.text)
-                  #  r = r[x+1: len(r)]
-                #    x = r.find('.') 
-                sentences = sent_tokenize(r)
-                for sentence in sentences:
-                    new_sentence = Sentence()
-                    new_sentence.text = sentence
-                    new_sentence.location = location
-                    new_sentence.save()
-                    print(new_sentence.text)
-        else:
-            querySet = Sentence.objects.filter(Q(text__icontains=query))
-            for result in querySet:
-                results.append((result))
+            results.append((result))
         context = {
             'title' : 'Search Contracts',
             'results' : results,
@@ -123,7 +94,7 @@ def search_contract(request):
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
-    sentences = Sentence.objects.filter(Q(location__icontains=location.name))
+    sentences = Sentence.objects.filter(Q(location=location))
     context = {
         'title' : 'View Location',
         'location' : location,
@@ -155,18 +126,14 @@ def edit_sentence(request, sid):
         form = ProblematicLanguageForm(instance=sentence)
         return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
 
-def complaint(request):
+def complaint(request,lid):
+    location = Location.objects.get(pk=lid)
+    questions = location.questions.all()
     context = {}
-    query = request.GET.get('q','')
-    if query == '':
-        location = ''
-        questions = ''
+    searchTerm = request.GET.get('searchTerm','')
+    if searchTerm != '':
+        results = Sentence.objects.filter(Q(location=location),Q(text__icontains=searchTerm))
     else:
-        location = Location.objects.filter(Q(name__icontains=query)).first()
-        if not location:
-            location = ''
-            questions = ''
-        else:
-            questions = location.questions.all()
-    context = {'title': 'Complaints', 'location' : location, 'questions': questions}
+        results = ''
+    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results}
     return render(request,'app/complaint.html', context)
