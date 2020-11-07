@@ -106,7 +106,7 @@ def view_location(request, lid):
 
 @login_required(login_url='login')
 def edit_sentence(request, sid):
-    sentence = Sentence.objects.get(id=sid)
+    sentence = Problematic_Sentence.objects.get(id=sid)
     if request.method == 'POST':
         form = ProblematicLanguageForm(request.POST)
         if form.is_valid():

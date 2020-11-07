@@ -22,9 +22,15 @@ class Contract(models.Model):
     is_parsed = models.BooleanField(default=False)
     def __str__(self):
        return self.location.name
-
+	   
 class Sentence(models.Model):
-    location = models.ForeignKey(Location, related_name='sentences', on_delete=models.CASCADE)
+	location = models.ForeignKey(Location, related_name='sentences', on_delete=models.CASCADE)
+	text = models.TextField()
+	def __str__(self):
+		return self.text
+
+class Problematic_Sentence(models.Model):
+    location = models.ForeignKey(Location, related_name='problematic_sentences', on_delete=models.CASCADE)
     text = models.TextField()
     impact = models.TextField(blank=True)
     limit_oversight = models.BooleanField(default=False)

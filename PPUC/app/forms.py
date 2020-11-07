@@ -5,7 +5,7 @@ Definition of forms.
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms import ModelForm
-from app.models import Location, Sentence
+from app.models import Location, Sentence, Problematic_Sentence
 from django.utils.translation import ugettext_lazy as _
 
 class BootstrapAuthenticationForm(AuthenticationForm):
@@ -23,5 +23,5 @@ class ProblematicLanguageForm(ModelForm):
     # will accept a checked or unchecked value, while required=True
     # will validate that the user MUST check the box.
     class Meta:
-        model = Sentence
+        model = Problematic_Sentence
         fields = ('impact', 'limit_oversight', 'city_pay_for_misconduct', 'erase_misconduct', 'disqualify_complaints', 'restrict_interrogation', 'unfair_information')
