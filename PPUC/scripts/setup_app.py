@@ -20,6 +20,3 @@ print("runscript add_contracts complete\n\n")
 print("running runscript add_sentences")
 call_command('runscript', 'add_sentences')
 print ("runscript add_sentences complete\n\n")
-
-print("Create a superuser")
-call_command('createsuperuser')
