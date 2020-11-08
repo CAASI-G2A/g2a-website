@@ -1,5 +1,6 @@
 import os
 import csv
+import re
 from app.models import Problematic_Sentence
 from app.models import Location
 
