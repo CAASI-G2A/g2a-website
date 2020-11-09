@@ -19,8 +19,10 @@
 </div>
 {% if results != '' %}
     {% for obj in results %}
-        <p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.text}}</p>
+	{% with t=obj.text %}
+        <p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
     <hr >
+	{% endwith %}
     {% endfor %}
 {% endif %}
 {% endblock %}
