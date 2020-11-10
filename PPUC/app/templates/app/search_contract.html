@@ -2,6 +2,31 @@
 
 {% block content %}
 
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+
 <h3 style="text-align:center;">Search our database of contracts for any keyword.</h3>
 
 <div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
@@ -19,9 +44,33 @@
 </div>
 {% if results != '' %}
 {% regroup results by location as cities %}
-    {% for obj in results %}
-        <p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
-    <hr >
+    {% for city in cities %}
+	<button type="button" class="collapsible">{{city.grouper}}</button>
+	<div class="content">
+        {% for obj in results %}
+			{% if obj.location == city.grouper %}
+			<p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
+				<hr >
+			{% endif %}
+	    {% endfor %}
+	</div>
     {% endfor %}
 {% endif %}
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 {% endblock %}
