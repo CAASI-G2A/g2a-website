@@ -45,7 +45,7 @@
 {% if results != '' %}
 {% regroup results by location as cities %}
     {% for city in cities %}
-	<button type="button" class="collapsible">{{city.grouper}}</button>
+	<button type="button" class="collapsible">{{city.grouper}} - {{city.list|length}} results</button>
 	<div class="content">
         {% for obj in results %}
 			{% if obj.location == city.grouper %}
