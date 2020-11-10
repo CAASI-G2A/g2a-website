@@ -7,6 +7,7 @@ from django.db import models
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length=150, default="")
+    state = models.CharField(max_length=50, default="")
     def __str__(self):
         return self.name
 
@@ -22,7 +23,7 @@ class Contract(models.Model):
     is_parsed = models.BooleanField(default=False)
     def __str__(self):
        return self.location.name
-	   
+
 class Sentence(models.Model):
 	location = models.ForeignKey(Location, related_name='sentences', on_delete=models.CASCADE)
 	text = models.TextField()

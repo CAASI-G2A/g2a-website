@@ -15,11 +15,13 @@
 </div>
 <hr >
 <div class="container-fluid">
+    {% if locations != '' %}
     {% for obj in locations %}
         <h1>{{ obj.name }}</h1>
         <a href="{%url 'view_location' obj.pk %}" class="btn btn-info" role="button" >Police Union Contract</a>
         <a href="{%url 'complaint' obj.pk %}" class="btn btn-info" role="button" >Complaint Tool</a>
     <hr >
     {% endfor %}
+    {% endif %}
     </div>
 {% endblock %}
