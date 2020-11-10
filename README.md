@@ -5,6 +5,8 @@
   * virtualenv venv
   * .\venv\Scripts\Activate
   * pip install -r requirements.txt
+* To setup app(from scratch)
+  * python manage.py runscript -v3 setup_app
 * To reset database
   * manually delete db.sqlite3, and run commands:
   * python manage.py migrate
