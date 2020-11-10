@@ -45,12 +45,13 @@
 {% if results != '' %}
 {% regroup results by location as cities %}
     {% for city in cities %}
-	<button type="button" class="collapsible">{{city.grouper}} - {{city.list|length}} results</button>
+	<button type="button" class="collapsible">{{city.grouper}} - {{city.list|length}} results <img src="https://i.imgur.com/VDm9OyX.png" style="width:15px;float:right;padding-top:5px;"/></button>
 	<div class="content">
         {% for obj in results %}
 			{% if obj.location == city.grouper %}
+      <br>
 			<p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
-				<hr >
+				<hr style="border-color:white;border-width:2px;">
 			{% endif %}
 	    {% endfor %}
 	</div>
