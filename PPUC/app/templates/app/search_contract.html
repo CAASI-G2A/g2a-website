@@ -18,11 +18,10 @@
   </div>
 </div>
 {% if results != '' %}
+{% regroup results by location as cities %}
     {% for obj in results %}
-	{% with t=obj.text %}
         <p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
     <hr >
-	{% endwith %}
     {% endfor %}
 {% endif %}
 {% endblock %}
