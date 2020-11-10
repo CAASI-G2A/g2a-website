@@ -81,10 +81,9 @@ def search_contract(request):
         querySet = Sentence.objects.filter(Q(text__icontains=query))
         for result in querySet:
             t = result.text
+            lower = t.lower()
             q_length = len(searched_term)
-            pos = t.find(searched_term)
-            #t = t[:pos] + "<span style=\"background-color: #FFFF00\">" + t[pos:pos+q_length] + "</span>" + t[pos+q_length:]
-            #result.text=t
+            pos = lower.find(searched_term.lower())
             result.first = t[:pos]
             result.second = t[pos:pos+q_length]
             result.third = t[pos+q_length:]
