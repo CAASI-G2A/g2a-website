@@ -1,9 +1,10 @@
-﻿{% extends "app/layout.html" %}
+{% extends "app/layout.html" %}
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <div class="jumbotron" style="padding-bottom:25px;">
-        <p class="lead">{{location.name}}</p>
+    <div class="jumbotron" style="background-color:white;padding-bottom:0px;">
+        <h3>{{location.name}}</h3>
+        <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. Click on a circle to learn more about that particular phase.</p>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -19,12 +20,6 @@
                 <div class="test">Complaint</div>
             </div>
             <div class="v1"></div>
-            <!-- Contract Circle-->
-            <div class="circle">
-                <div class="circle" onclick="showContractSearch()"></div>
-                <div class="test">Contract</div>
-            </div>
-            <div class="v1"></div>
             <!-- Notification Circle-->
             <div class="circle">
                 <div class="circle" onclick="showCategory('Notification')"></div>
@@ -35,6 +30,12 @@
             <div class="circle">
                 <div class="circle" onclick="showCategory('Investigation')"></div>
                 <div class="test">Investigation</div>
+            </div>
+            <div class="v1"></div>
+            <!-- Conviction Circle-->
+            <div class="circle">
+                <div class="circle" onclick="showCategory('Conviction')"></div>
+                <div class="test">Conviction</div>
             </div>
             <div class="v1"></div>
             <!-- Result Circle-->
@@ -51,7 +52,8 @@
                     <h3 class="panel-title">What is a complaint?</h3>
                   </div>
                   <div class="panel-body">
-                      <p>A complaint is... </p>
+                      <p>PHASE 0: PRE-COMPLAINT</p>
+                      <p class="lead">If you are stopped by a police officer, the Pre-Complaint document below can help guide you on what you should do and what your rights are in that situation.</p>
                   </div>
                   <div class="panel-footer">
                       <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}">Pre-Complaint</a>
@@ -63,6 +65,15 @@
         <div class="col-md-6" id="complaintPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Process for filing a complaint</h3>
+                  </div>
+                  <div class="panel-body">
+                      <p>PHASE 1: COMPLAINT</p>
+                      <p class="lead">In the complaint phase a citizen formally files a complaint against a police officer for misconduct.</p>
+                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
+                      <p class="lead">Complaints must be files within a certain timeframe of the alleged event, typically within a year.</p>
+                  </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
@@ -78,7 +89,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Contract Panel-->
         <div class="col-md-6" id="contractPanel" style="display:none; position:sticky; top: 0;">
                 <div class="panel panel-primary">
@@ -107,6 +118,15 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
+                    <h3 class="panel-title">Process for filing a complaint</h3>
+                  </div>
+                  <div class="panel-body">
+                      <p>PHASE 2: NOTIFICATION</p>
+                      <p class="lead">In the notification phase the police officer who is being accused will be notified that they are under investigation, as well as anyone associated with them or who may have been a witness.</p>
+                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
+                      <p class="lead">The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days. <br>(e.g. 10-30 days)</p>
+                  </div>
+                  <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
@@ -127,6 +147,16 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
+                    <h3 class="panel-title">Process for filing a complaint</h3>
+                  </div>
+                  <div class="panel-body">
+                      <p>PHASE 3: INVESTIGATION</p>
+                      <p class="lead">In the investigation phase the accused police officer and those associated are given the documents of the actual complaint. The police officer will then be called to respond to the allegations.</p>
+                      <p class="lead">The information they are given at this step may include the citizen's name and the details of when they were arrested.</p>
+                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
+                      <p class="lead">The investigation must be completed within an agreed timeframe, typically a series of months. All procedures and protocols during the investigation must be followed without any violations.</p>
+                  </div>
+                  <div class="panel-heading">
                     <h3 class="panel-title">Questions</h3>
                   </div>
                   <div class="list-group">
@@ -137,6 +167,26 @@
                         {% endfor %}
                   </div>
                     <div class="panel-body" id="InvestigationAnswer">
+                        Answer:
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Conviction Panel-->
+        <div class="col-md-6" id="convictionPanel" style="display:none; position:sticky; top: 0;">
+            <div class="Qs">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Questions</h3>
+                  </div>
+                  <div class="list-group">
+                        {% for q in questions %}
+                            {% if q.category == 'Conviction' %}
+                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                            {% endif %}
+                        {% endfor %}
+                  </div>
+                    <div class="panel-body" id="ConvictionAnswer">
                         Answer:
                     </div>
                 </div>
