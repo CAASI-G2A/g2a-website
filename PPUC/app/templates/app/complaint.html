@@ -10,8 +10,8 @@
         <div class="col-md-6">
             <!-- Pre-Complaint Circle-->
             <div class="circle">
-                <div class="circle" onclick="showPreComplaint()"></div>
-                <div class="test">Pre-Complaint</div>
+                <div class="circle" onclick="showCategory('Pre-Complaint')"></div>
+                <div class="test">Interaction</div>
             </div>
             <div class="v1"></div>
             <!-- Complaint Circle-->
@@ -20,22 +20,16 @@
                 <div class="test">Complaint</div>
             </div>
             <div class="v1"></div>
-            <!-- Notification Circle-->
+            <!-- Review Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Notification')"></div>
-                <div class="test">Notification</div>
+                <div class="circle" onclick="showCategory('Review')"></div>
+                <div class="test">Review</div>
             </div>
             <div class="v1"></div>
             <!-- Investigation Circle-->
             <div class="circle">
                 <div class="circle" onclick="showCategory('Investigation')"></div>
                 <div class="test">Investigation</div>
-            </div>
-            <div class="v1"></div>
-            <!-- Conviction Circle-->
-            <div class="circle">
-                <div class="circle" onclick="showCategory('Conviction')"></div>
-                <div class="test">Conviction</div>
             </div>
             <div class="v1"></div>
             <!-- Result Circle-->
@@ -49,15 +43,30 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">What is a complaint?</h3>
+                    <h3 class="panel-title">PHASE 0: Pre-Complaint Interaction/Misconduct</h3>
                   </div>
                   <div class="panel-body">
-                      <p>PHASE 0: PRE-COMPLAINT</p>
-                      <p class="lead">If you are stopped by a police officer, the Pre-Complaint document below can help guide you on what you should do and what your rights are in that situation.</p>
+                      <p class="lead" >If you are stopped by a police officer, the Pre-Complaint document below can help guide you on what you should do and what your rights are in that situation.</p>
                   </div>
                   <div class="panel-footer">
-                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}">Pre-Complaint</a>
+                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}" target="_blank" >Pre-Complaint</a>
                   </div>
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
+                  </div>
+                  <div class="list-group">
+                      <!-- General Pre-Complaint Q's (displayed on all Cities)-->
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Police misconduct happens when inappropriate/illegal actions are taken by police officers in connection to their work. Some common examples of police misconduct are: intimidation, false arrest, false imprisonment, falsification of evidence, witness tampering, police brutality, police corruption, racial profiling, unwarranted searches. If you think you experienced misconduct you can file a complaint with the police department. NOTE: If you are considering filing a lawsuit you should speak to a lawyer before making a complaint. A lawyer will help you decide your next step.","Pre-Complaint")'>How do i know if I've experienced police misconduct?</a>
+                       <!-- Specific Pre-Complaint Q's (per city)-->
+                        {% for q in questions %}
+                            {% if q.category == 'Pre-Complaint' %}
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                            {% endif %}
+                        {% endfor %}
+                  </div>
+                    <div class="panel-body" id="Pre-ComplaintAnswer">
+                        Answer:
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,26 +75,32 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Process for filing a complaint</h3>
+                    <h3 class="panel-title">PHASE 1: Making a complaint</h3>
                   </div>
                   <div class="panel-body">
-                      <p>PHASE 1: COMPLAINT</p>
-                      <p class="lead">In the complaint phase a citizen formally files a complaint against a police officer for misconduct.</p>
-                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
-                      <p class="lead">Complaints must be files within a certain timeframe of the alleged event, typically within a year.</p>
+                      <p class="lead">Process for filing a complaint</p>
+                      <p>In the complaint phase a citizen formally files a complaint against a police officer for misconduct.</p>
+                      <p class="lead">Conditions to proceed to the next phase:</p>
+                      <p>Fill out and submit the complaint form for your city</p>
+                      <a href="{{location.complaint_form_link}}" target="_blank">{{location.name}}'s Police Complaint Form </a>
                   </div>
                   <div class="panel-heading">
-                    <h3 class="panel-title">Questions</h3>
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
+                      <!-- General Complaint Q's (displayed on all Cities)-->
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The victim of misconduct should file the complaint for themselves if possible. Some police departments do not accept misconduct complaints from witnesses to misconduct and will only accept complaints from victims. If you are a witness to misconduct and would like to file a complaint, check with the police department or police oversight board first to find out if it will be accepted. If the victim of misconduct is under 18 years old, a parent or guardian can file the complaint on their behalf.","Complaint")'>Who can file a complaint?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The more information the better! The most useful detail is the officers name and/or badge number, but you can still file a complaint without that information. Write down everything you can remember about the incident before you start filling out the form. Try to recall as much detail as possible: when did it happen? where? did anyone else see? what did the officer look like? what did their car look like?, etc. Be aware that complaints may be dismissed if there is not enough information to identify the accused officer. ","Complaint")'>What information do I need to file a complaint?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Many municipalities require the victim to file within 6 months of the misconduct. Check with the police department or, if possible, a police oversight board.","Complaint")'>Do I have to file the complaint within a certain period of time?</a>
+                       <!-- Specific Complaint Q's (per city)-->
                         {% for q in questions %}
                             {% if q.category == 'Complaint' %}
-                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
                     <div class="panel-body" id="ComplaintAnswer">
-                        Answer here...
+                        Answer:
                     </div>
                 </div>
             </div>
@@ -113,30 +128,31 @@
                     </div>
                 </div>
          </div>
-        <!-- Notification Panel-->
-        <div class="col-md-6" id="notificationPanel" style="display:none; position:sticky; top: 0;">
+        <!-- Review Panel-->
+        <div class="col-md-6" id="reviewPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Process for filing a complaint</h3>
+                    <h3 class="panel-title">PHASE 2: Review of complaint</h3>
                   </div>
                   <div class="panel-body">
-                      <p>PHASE 2: NOTIFICATION</p>
-                      <p class="lead">In the notification phase the police officer who is being accused will be notified that they are under investigation, as well as anyone associated with them or who may have been a witness.</p>
-                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
-                      <p class="lead">The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days. <br>(e.g. 10-30 days)</p>
+                      <p class="lead">What happens in this phase?</p>
+                      <p>Your complaint will be reviewed and the department will determine whether to proceed with an invesigation. Your complaint may be dismissed, but that does not necessarily mean you have not experienced misconduct</p>
+                      <p class="lead">Conditions to proceed to the next phase:</p>
+                      <p>Chief notified and agrees charges are plausible</p>
+                      <p>The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days. <br>(e.g. 10-30 days)</p>
                   </div>
                   <div class="panel-heading">
-                    <h3 class="panel-title">Questions</h3>
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
                         {% for q in questions %}
-                            {% if q.category == 'Notification' %}
-                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                            {% if q.category == 'Review' %}
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
-                    <div class="panel-body" id="NotificationAnswer">
+                    <div class="panel-body" id="ReviewAnswer">
                         Answer:
                     </div>
                 </div>
@@ -147,22 +163,25 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Process for filing a complaint</h3>
+                    <h3 class="panel-title">PHASE 3: Investigation</h3>
                   </div>
                   <div class="panel-body">
-                      <p>PHASE 3: INVESTIGATION</p>
-                      <p class="lead">In the investigation phase the accused police officer and those associated are given the documents of the actual complaint. The police officer will then be called to respond to the allegations.</p>
-                      <p class="lead">The information they are given at this step may include the citizen's name and the details of when they were arrested.</p>
-                      <p>CONDITIONS TO PROCEED TO THE NEXT PHASE:</p>
-                      <p class="lead">The investigation must be completed within an agreed timeframe, typically a series of months. All procedures and protocols during the investigation must be followed without any violations.</p>
+                      <p class="lead">What happens in this phase?</p>
+                      <p>In the investigation phase the accused police officer and those associated are given the documents of the actual complaint. The police officer will then be called to respond to the allegations.</p>
+                      <p>The information they are given at this step may include the citizen's name and the details of when they were arrested.</p>
+                      <p class="lead">Conditions to proceed to the next phase:</p>
+                      <p> The investigation must be completed within an agreed timeframe, typically a series of months. All procedures and protocols during the investigation must be followed without any violations.</p>
                   </div>
                   <div class="panel-heading">
-                    <h3 class="panel-title">Questions</h3>
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
+                   <!-- General Investigation Q's (displayed on all Cities)-->
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("In some police departments, the accused officer is allowed to see the name of the person who filed the complaint. [mention we can check this w tool.] If you are concerned that an officer might try to retaliate against you for filing the complaint, it may be the best option not to file at this time.","Investigation")'>What are the risks of filing a police misconduct complaint?</a>
+                   <!-- Specific Investigation Q's (per city)-->
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Investigation' %}
-                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
@@ -177,12 +196,12 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Questions</h3>
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Conviction' %}
-                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>
@@ -197,12 +216,12 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">Questions</h3>
+                    <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
                         {% for q in questions %}
                             {% if q.category == 'Result' %}
-                                <a href="#" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
+                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
                             {% endif %}
                         {% endfor %}
                   </div>

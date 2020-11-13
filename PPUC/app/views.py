@@ -114,7 +114,7 @@ def view_location(request, lid):
         }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
-	
+
 def download_pdf(request, lid):
     location = Location.objects.get(pk=lid)
     state = location.state
@@ -123,7 +123,6 @@ def download_pdf(request, lid):
     dirspot = os.getcwd()
     file_path = dirspot + "/app/static/app/contracts_pdf/" + fn
     filename = fn
-
     fl = open(file_path, mode="rb")
     mime_type, _ = mimetypes.guess_type(file_path)
     response = HttpResponse(fl, content_type='application/pdf')

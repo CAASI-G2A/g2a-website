@@ -8,14 +8,22 @@ from django.db import models
 class Location(models.Model):
     name = models.CharField(max_length=150, default="")
     state = models.CharField(max_length=50, default="")
+    complaint_form_link = models.URLField(max_length=300)
     def __str__(self):
         return self.name
 
+class Category(models.Model):
+    category = models.CharField(max_length=300)
+    def __str__(self):
+        return self.category
+
 class Question(models.Model):
-    category = models.CharField(max_length=150,default="")
+    category = models.ManyToManyField(Category)
     q = models.CharField(max_length=450, default="")
     a = models.CharField(max_length=450, default="")
     location = models.ForeignKey(Location, related_name='questions', on_delete=models.CASCADE)
+    def __str__(self):
+        return self.q
 
 class Contract(models.Model):
     location = models.ForeignKey(Location, related_name='contract', on_delete=models.CASCADE)
