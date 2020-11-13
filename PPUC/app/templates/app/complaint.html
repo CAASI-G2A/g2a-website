@@ -4,37 +4,37 @@
 <div class="container-fluid">
     <div class="jumbotron" style="background-color:white;padding-bottom:0px;">
         <h3>{{location.name}}</h3>
-        <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. Click on a circle to learn more about that particular phase.</p>
+        <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. <br />Click on a circle to learn more about that particular phase.</p>
     </div>
     <div class="row">
         <div class="col-md-6">
             <!-- Pre-Complaint Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Pre-Complaint')"></div>
+                <div class="circle" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')"></div>
                 <div class="test">Interaction</div>
             </div>
             <div class="v1"></div>
             <!-- Complaint Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Complaint')"></div>
+                <div class="circle"  id="ComplaintCircle" onclick="showCategory('Complaint')"></div>
                 <div class="test">Complaint</div>
             </div>
             <div class="v1"></div>
             <!-- Review Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Review')"></div>
+                <div class="circle"  id="ReviewCircle" onclick="showCategory('Review')"></div>
                 <div class="test">Review</div>
             </div>
             <div class="v1"></div>
             <!-- Investigation Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Investigation')"></div>
+                <div class="circle" id="InvestigationCircle" onclick="showCategory('Investigation')"></div>
                 <div class="test">Investigation</div>
             </div>
             <div class="v1"></div>
             <!-- Result Circle-->
             <div class="circle">
-                <div class="circle" onclick="showCategory('Result')"></div>
+                <div class="circle"  id="ResultCircle" onclick="showCategory('Result')"></div>
                 <div class="test">Result</div>
             </div>
         </div>

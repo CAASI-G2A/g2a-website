@@ -1,5 +1,6 @@
 function showCategory(c) {
     //on click set all elements to hidden and who the one we want
+    document.getElementById(c + "Circle").style.borderColor = "#B22222";
     document.getElementById("pre-complaintPanel").style.display = "none";
     document.getElementById("complaintPanel").style.display = "none";
     document.getElementById("contractPanel").style.display = "none";
