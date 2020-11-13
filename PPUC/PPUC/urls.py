@@ -32,5 +32,6 @@ urlpatterns = [
          ),
          name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+	path('download_pdf/<int:lid>', views.download_pdf, name='download_pdf')
     ]

@@ -15,9 +15,9 @@ def run():
                     """find _, everything before is state, after is city"""
                     print("filename: " + filename)
                     sep = filename.find('_')
-                    state = filename[0:sep]
+                    state = filename[:sep]
                     print("state: " + state)
-                    location = filename[sep+1:len(filename)]
+                    location = filename[sep+1:]
                     print("location: " + location)
                     content = strip_periods(textFile.read())
                     location, created = Location.objects.get_or_create(name=location, state=state)

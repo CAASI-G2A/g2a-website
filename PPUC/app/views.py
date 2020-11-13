@@ -6,13 +6,16 @@ from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
 from django.http import HttpRequest
+from django.http import HttpResponse
 from .models import *
 from app.forms import *
 from django.views.generic import ListView, FormView
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
+import os
 import re
 import nltk
+import mimetypes
 from nltk.tokenize import sent_tokenize
 
 def home(request):
@@ -102,7 +105,7 @@ def search_contract(request):
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
-    sentences = Sentence.objects.filter(Q(location=location))
+    sentences = Problematic_Sentence.objects.filter(Q(location=location))
     context = {
         'title' : 'View Location',
         'location' : location,
@@ -111,6 +114,21 @@ def view_location(request, lid):
         }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
+	
+def download_pdf(request, lid):
+    location = Location.objects.get(pk=lid)
+    state = location.state
+    city = location.name
+    fn = state + "_" + city + ".pdf"
+    dirspot = os.getcwd()
+    file_path = dirspot + "/app/static/app/contracts_pdf/" + fn
+    filename = fn
+
+    fl = open(file_path, mode="rb")
+    mime_type, _ = mimetypes.guess_type(file_path)
+    response = HttpResponse(fl, content_type='application/pdf')
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
 
 @login_required(login_url='login')
 def edit_sentence(request, sid):
