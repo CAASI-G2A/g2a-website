@@ -18,9 +18,9 @@ def run():
                     """find _, everything before is state, after is city"""
                     print("filename: " + filename)
                     sep = filename.find('_')
-                    state = filename[:sep]
+                    state = re.sub('-',' ',filename[:sep])
                     print("state: " + state)
-                    location = filename[sep+1:]
+                    location = re.sub('-',' ',filename[sep+1:])
                     print("location: " + location)
                     content = strip_periods(textFile.read())
                     location, created = Location.objects.get_or_create(name=location, state=state)
@@ -31,8 +31,8 @@ def run():
                         line = strip_periods(line)
                         location = entry.name[:-4]
                         sep = filename.find('_')
-                        state = filename[0:sep]
-                        location = filename[sep+1:len(filename)]
+                        state = re.sub('-',' ',filename[:sep])
+                        location = re.sub('-',' ',filename[sep+1:])
                         location, get = Location.objects.get_or_create(name=location, state=state)
                         sentence = Sentence.objects.get_or_create(text=line, location=location)
 
