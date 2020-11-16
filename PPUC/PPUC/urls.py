@@ -15,6 +15,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('search/', views.search, name='search'),
+	path('researchers/', views.researchers, name='researchers'),
     path('search_contract/', views.search_contract, name='search_contract'),
     path('view_location/<int:lid>', views.view_location, name='view_location'),
     path('edit_sentence/<int:sid>', views.edit_sentence, name='edit_sentence'),
