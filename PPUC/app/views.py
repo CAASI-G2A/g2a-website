@@ -57,6 +57,17 @@ def about(request):
         }
     )
 
+def researchers(request):
+    """Renders the researchers redirect page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/researchers.html',
+        {
+            'title':'Researchers',
+        }
+    )
+
 def search(request):
     context = {}
     query = request.GET.get('q','')
