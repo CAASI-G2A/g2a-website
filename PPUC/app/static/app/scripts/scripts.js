@@ -37,9 +37,13 @@ function showContractSearch() {
     document.getElementById("contractPanel").style.display = "block";
 }
 function setAnswer(answer, c) {
-    if (document.getElementById(c + "Answer").innerHTML != answer) {
+    if (document.getElementById(c + "Answer").style.display == "none") {
+        document.getElementById(c + "Answer").style.display = "block";
         document.getElementById(c + "Answer").innerHTML = answer;
     }
     else
-        document.getElementById(c + "Answer").innerHTML = "Answer:";
+        if (document.getElementById(c + "Answer").innerHTML != answer)
+            document.getElementById(c + "Answer").innerHTML = answer;
+        else
+            document.getElementById(c + "Answer").style.display = "none"
 }

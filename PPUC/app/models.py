@@ -28,6 +28,7 @@ class Question(models.Model):
 class Contract(models.Model):
     location = models.ForeignKey(Location, related_name='contract', on_delete=models.CASCADE)
     text = models.TextField()
+    expiry = models.CharField(max_length=150)
     is_parsed = models.BooleanField(default=False)
     def __str__(self):
        return self.location.name

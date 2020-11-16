@@ -43,13 +43,13 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">PHASE 0: Pre-Complaint Interaction/Misconduct</h3>
+                    <h3 class="panel-title">PHASE 0: Interaction with Police</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead" >If you are stopped by a police officer, the Pre-Complaint document below can help guide you on what you should do and what your rights are in that situation.</p>
+                      <p class="lead" >The PDF below guides you on what you should do and your rights if you are stopped by a police officer.</p>
                   </div>
                   <div class="panel-footer">
-                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}" target="_blank" >Pre-Complaint</a>
+                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}" target="_blank" >PDF (by Pttsburgh Independent Citizen Police Review Board)</a>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
@@ -64,7 +64,7 @@
                             {% endif %}
                         {% endfor %}
                   </div>
-                    <div class="panel-body" id="Pre-ComplaintAnswer">
+                    <div class="panel-body" id="Pre-ComplaintAnswer" style="display:none">
                         Answer:
                     </div>
                 </div>
@@ -75,11 +75,9 @@
             <div class="Qs">
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <h3 class="panel-title">PHASE 1: Making a complaint</h3>
+                    <h3 class="panel-title">PHASE 1: Filing a Complaint</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead">Process for filing a complaint</p>
-                      <p>In the complaint phase a citizen formally files a complaint against a police officer for misconduct.</p>
                       <p class="lead">Conditions to proceed to the next phase:</p>
                       <p>Fill out and submit the complaint form for your city</p>
                       <a href="{{location.complaint_form_link}}" target="_blank">{{location.name}}'s Police Complaint Form </a>
@@ -99,7 +97,7 @@
                             {% endif %}
                         {% endfor %}
                   </div>
-                    <div class="panel-body" id="ComplaintAnswer">
+                    <div class="panel-body" id="ComplaintAnswer" style="display:none">
                         Answer:
                     </div>
                 </div>
