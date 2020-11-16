@@ -11,6 +11,7 @@
     padding: 9px;
     border-color:white;
     border-radius: 5px;
+    margin-left:10px;
   }
 
 
@@ -27,8 +28,8 @@
 </div>
 <div>
 
-	<h2>Download full contract</h2>
-	<a href="{% url 'download_pdf' location.id %}" class="dl" role="button">PDF</a>
+	<h2 style="padding-bottom:5px;">Download full contract </h2>
+	<a href="{% url 'download_pdf' location.id %}" class="dl" role="button"><span class="glyphicon glyphicon glyphicon-file"></span> &nbsp;PDF</a>
   <hr class="my-4">
 <!-- Modal -->
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
