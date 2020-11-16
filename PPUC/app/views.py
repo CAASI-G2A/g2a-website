@@ -128,8 +128,8 @@ def view_location(request, lid):
 
 def download_pdf(request, lid):
     location = Location.objects.get(pk=lid)
-    state = location.state
-    city = location.name
+    state = re.sub(' ', '-', location.state)
+    city = re.sub(' ', '-', location.name)
     fn = state + "_" + city + ".pdf"
     dirspot = os.getcwd()
     file_path = dirspot + "/app/static/app/contracts_pdf/" + fn
