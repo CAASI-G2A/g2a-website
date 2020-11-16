@@ -1,27 +1,84 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
+
+
+<style>
+  dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: auto;
+  left: 100%;
+  margin-top: -33px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
 <div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
-    <div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
-      <div style="max-width:350px;margin:0px auto;">
-        <form method="GET" action="{% url 'search' %}">
-            <input name="q" value="{{request.GET.q}}" placeholder="search for a location" style="border-radius:15px;text-align:center; border-width:2px; border-color:#5685d1;">
-            <button class=" "btn btn-success" type="submit" style="border-radius:15px;color:white;background-color:#5685d1;border-color:#5685d1;padding-left:10px;padding-right:10px;">
-                Go
-            </button>
-        </form>
-      </div>
-    </div>
+
 </div>
-<hr >
-<div class="container-fluid">
-    {% if locations != '' %}
-    {% for obj in locations %}
-        <h1>{{ obj.name }}</h1>
-        <a href="{%url 'view_location' obj.pk %}" class="btn btn-info" role="button" >Police Union Contract</a>
-        <a href="{%url 'complaint' obj.pk %}" class="btn btn-info" role="button" >Complaint Tool</a>
-    <hr >
-    {% endfor %}
-    {% endif %}
-    </div>
+
+
+<div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:55px;text-align:center;">
+  <h2>Select a state</h2>
+      <div class="dropdown" style="text-align:center;">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin:10px auto;">
+          Choose a state&nbsp;&nbsp;
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu multi-level" aria-labelledby="dropdownMenu1" style="margin:10px auto;width:200px; left:50%; margin-left:-100px;">
+          {% if locations != '' %}
+          {% for obj in locations %}
+            <li class="dropdown-submenu"><a href="#">{{ obj.state }}</a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="{%url 'view_location' obj.pk %}">{{ obj.name }}</a></li>
+            </ul>
+            {% endfor %}
+            {% endif %}
+            </li>
+        </ul>
+
+      </div>
+</div>
+
+
 {% endblock %}
