@@ -1,22 +1,43 @@
-﻿{% extends "app/layout.html" %}
+{% extends "app/layout.html" %}
 {% block extra_js%}
     <script src="http://malsup.github.com/jquery.form.js"></script>
 {% endblock %}
 {% block content %}
+
+<style>
+  .dl {
+    color:white;
+    background-color:#5685d1;
+    padding: 9px;
+    border-color:white;
+    border-radius: 5px;
+  }
+
+
+  .dl:hover {
+    color: white;
+    text-decoration:none;
+    background-color:#456ba8;
+  }
+</style>
+
+  <p class="lead"><a href="/search"><span class="glyphicon glyphicon-arrow-left"></span> &nbsp;return to city select</a></p>
 <div class="jumbotron">
     <h1>{{location}} Police Contract</h1>
 </div>
 <div>
-	<h4>Download full contract</h4>
-	<a href="{% url 'download_pdf' location.id %}" class="btn btn-info" role="button" >PDF</a>
+
+	<h2>Download full contract</h2>
+	<a href="{% url 'download_pdf' location.id %}" class="dl" role="button">PDF</a>
+  <hr class="my-4">
 <!-- Modal -->
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     </div><!-- /.modal -->
-		<h2>The following sentences have been flagged from the contract as problematic</h2>
+		<h2>The following sentences have been flagged from the contract as problematic</h2><br>
         {% for sentence in sentences %}
             {% if sentence.limit_oversight %}
                 <pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Limits oversight" data-tooltip>{{sentence.text}}</a></pre>
-			{% elif sentence.city_pay_for_misconduct %}	
+			{% elif sentence.city_pay_for_misconduct %}
 				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Makes city pay for misconduct" data-tooltip>{{sentence.text}}</a></pre>
 			{% elif sentence.erase_misconduct %}
 				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Erases misconduct records" data-tooltip>{{sentence.text}}</a></pre>
