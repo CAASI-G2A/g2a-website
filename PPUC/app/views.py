@@ -101,6 +101,8 @@ def search_contract(request):
             result.first = t[:pos]
             result.second = t[pos:pos+q_length]
             result.third = t[pos+q_length:]
+            loc = Location.objects.get(name=result.location)
+            result.lid = loc.id
             results.append((result))
         context = {
             'title' : 'Search Contracts',

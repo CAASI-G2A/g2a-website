@@ -50,7 +50,7 @@
         {% for obj in results %}
 			{% if obj.location == city.grouper %}
       <br>
-			<p class="lead"><strong><span style="color:#5685d1;">{{obj.location}} Contract:</span>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
+			<p class="lead"><strong><a href="{%url 'view_location' obj.lid %}" style="color:#5685d1;">{{obj.location}} Contract:</a>   </strong>{{obj.first}}<span style="background-color: #FFFF00">{{obj.second}}</span>{{obj.third}}</p>
 				<hr style="border-color:white;border-width:2px;">
 			{% endif %}
 	    {% endfor %}
