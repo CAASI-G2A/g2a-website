@@ -35,21 +35,46 @@
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     </div><!-- /.modal -->
 		<h2>The following sentences have been flagged from the contract as problematic</h2><br>
-        {% for sentence in sentences %}
-            {% if sentence.limit_oversight %}
-                <pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Limits oversight" data-tooltip>{{sentence.text}}</a></pre>
-			{% elif sentence.city_pay_for_misconduct %}
-				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Makes city pay for misconduct" data-tooltip>{{sentence.text}}</a></pre>
-			{% elif sentence.erase_misconduct %}
-				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Erases misconduct records" data-tooltip>{{sentence.text}}</a></pre>
-            {% elif sentence.disqualify_complaints %}
-				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Disqualifies complaints" data-tooltip>{{sentence.text}}</a></pre>
-			{% elif sentence.restrict_interrogation %}
-				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Restricts interrogation" data-tooltip>{{sentence.text}}</a></pre>
-			{% elif sentence.unfair_information %}
-				<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Gives the officer unfair access to information" data-tooltip>{{sentence.text}}</a></pre>
-			{% else %}
-                <pre><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="edit sentence" data-tooltip>{{sentence.text}}</a></pre>
-            {% endif %}
-        {% endfor %}
+		<div><h3>Limit Oversight</h3>
+			{% for sentence in sentences %}
+				{% if sentence.limit_oversight %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Limits oversight" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div><h3>City Pays For Misconduct</h3>
+			{% for sentence in sentences %}
+				{% if sentence.city_pay_for_misconduct %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Makes city pay for misconduct" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div><h3>Erases Misconduct Records</h3>
+			{% for sentence in sentences %}
+				{% if sentence.erase_misconduct %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Erases misconduct records" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div><h3>Disqualifies Complaints</h3>
+			{% for sentence in sentences %}
+				{% if sentence.disqualify_complaints %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Disqualifies complaints" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div><h3>Limit Oversight</h3>
+			{% for sentence in sentences %}
+				{% if sentence.restrict_interrogation %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Restricts interrogation" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div><h3>Gives Officer Unfair Acess to Information</h3>
+			{% for sentence in sentences %}
+				{% if sentence.unfair_information %}
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Gives the officer unfair access to information" data-tooltip>{{sentence.text}}</a></pre>
+				{% endif %}
+			{% endfor %}
+		</div>
 {% endblock %}
