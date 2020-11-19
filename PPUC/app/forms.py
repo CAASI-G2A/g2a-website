@@ -21,7 +21,8 @@ class BootstrapAuthenticationForm(AuthenticationForm):
 class ProblematicLanguageForm(ModelForm):
     # For BooleanFields, required=False means that Django's validation
     # will accept a checked or unchecked value, while required=True
-    # will validate that the user MUST check the box.
+    # will validate that the user MUST check the box. 
+
     class Meta:
         model = Problematic_Sentence
-        fields = ('impact', 'limit_oversight', 'city_pay_for_misconduct', 'erase_misconduct', 'disqualify_complaints', 'restrict_interrogation', 'unfair_information')
+        fields = ('text', 'impact', 'limit_oversight', 'city_pay_for_misconduct', 'erase_misconduct', 'disqualify_complaints', 'restrict_interrogation', 'unfair_information')

@@ -83,6 +83,21 @@ def search(request):
         'app/search.html',
         context
     )
+def citizens(request):
+    context = {}
+    query = request.GET.get('q','')
+    locations = Location.objects.filter(Q(name__icontains=query))
+
+    context = {
+        'title' : 'Search',
+        'locations' : locations,
+        }
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/citizens.html',
+        context
+    )
 
 def search_contract(request):
     context = {}
@@ -142,8 +157,14 @@ def download_pdf(request, lid):
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
 
-@login_required(login_url='login')
+def view_sentence(request, sid):
+    print(sid)
+    sentence = Problematic_Sentence.objects.get(id=sid)
+    form = ProblematicLanguageForm(instance=sentence)
+    return render(request, 'app/view_sentence.html', {'title' : 'Edit Sentence', 'form': form, 'sentence' : sentence})
+
 def edit_sentence(request, sid):
+    print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)
     if request.method == 'POST':
         form = ProblematicLanguageForm(request.POST)

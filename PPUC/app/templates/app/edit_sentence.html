@@ -1,4 +1,7 @@
-﻿<div class="modal-dialog modal-lg">
+﻿{% block extra_js%}
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %}
+<div class="modal-dialog modal-lg">
     <div class="modal-content">
         <form id="sentence_update_form" method='post' class="form" role="form" action='{% url 'edit_sentence' sentence.id %}'>
               <div class="modal-header">
@@ -30,11 +33,11 @@
               </div>
         </form>
         <script>
-                var form_options = {
+         var form_options = {
                     target: '#modal',
                     success: function() {  }
                 }
-                $('#sentence_update_form').ajaxForm(form_options);
+                $('ProblematicLanguageForm').ajaxForm(form_options);
         </script>
     </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->

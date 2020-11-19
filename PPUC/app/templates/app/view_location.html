@@ -26,54 +26,54 @@
 <div class="jumbotron">
     <h1>{{location}} Police Contract</h1>
 </div>
-<div>
 
 	<h2 style="padding-bottom:5px;">Download full contract </h2>
 	<a href="{% url 'download_pdf' location.id %}" class="dl" role="button"><span class="glyphicon glyphicon glyphicon-file"></span> &nbsp;PDF</a>
   <hr class="my-4">
 <!-- Modal -->
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     </div><!-- /.modal -->
 		<h2>The following sentences have been flagged from the contract as problematic</h2><br>
 		<div><h3>Limit Oversight</h3>
 			{% for sentence in sentences %}
 				{% if sentence.limit_oversight %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Limits oversight" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
 		<div><h3>City Pays For Misconduct</h3>
 			{% for sentence in sentences %}
 				{% if sentence.city_pay_for_misconduct %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Makes city pay for misconduct" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
 		<div><h3>Erases Misconduct Records</h3>
 			{% for sentence in sentences %}
 				{% if sentence.erase_misconduct %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Erases misconduct records" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
 		<div><h3>Disqualifies Complaints</h3>
 			{% for sentence in sentences %}
 				{% if sentence.disqualify_complaints %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Disqualifies complaints" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
 		<div><h3>Limit Oversight</h3>
 			{% for sentence in sentences %}
 				{% if sentence.restrict_interrogation %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Restricts interrogation" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
-		<div><h3>Gives Officer Unfair Acess to Information</h3>
+		<div><h3>Gives Officer Unfair Access to Information</h3>
 			{% for sentence in sentences %}
 				{% if sentence.unfair_information %}
-					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'edit_sentence' sentence.id %}" data-target="#modal" title="Gives the officer unfair access to information" data-tooltip>{{sentence.text}}</a></pre>
+					<pre style="background:#ffad99;"><a style="color:black; " href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
 				{% endif %}
 			{% endfor %}
 		</div>
