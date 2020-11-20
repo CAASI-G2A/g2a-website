@@ -35,7 +35,7 @@
     <div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     </div><!-- /.modal -->
 		<h2>The following sentences have been flagged from the contract as problematic</h2><br>
-		<div><h3>Limit Oversight</h3>
+		<div><h3>Limits Oversight</h3>
 			{% for sentence in sentences %}
 				{% if sentence.limit_oversight %}
 					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
@@ -63,7 +63,7 @@
 				{% endif %}
 			{% endfor %}
 		</div>
-		<div><h3>Limit Oversight</h3>
+		<div><h3>Restricts Interrogation</h3>
 			{% for sentence in sentences %}
 				{% if sentence.restrict_interrogation %}
 					<pre style="background:#ffad99;"><a style="color:black; " data-toggle="modal" href="{% url 'view_sentence' sentence.id %}" data-target="#modal" title="view sentence">{{sentence.text}}</a></pre>
