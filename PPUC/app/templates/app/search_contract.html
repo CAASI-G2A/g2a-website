@@ -31,17 +31,19 @@
 <h3 style="text-align:center;">Search our database of contracts for any keyword.</h3>
 
 <div class="jumbotron" style="background-color:white;padding-top:30px;padding-bottom:15px;">
-
-  <div style="max-width:350px;margin:0px auto;">
-
-    <form method="GET" action="{% url 'search_contract' %}">
-        <input name="q" id="sub" value="{{request.GET.q}}" placeholder="enter a keyword here" style="border-radius:15px; text-align:center; border-width:2px; border-color:#5685d1;">
-        <button class="btn btn-success" id="subbtn" type="submit" style="border-radius:15px;color:white;background-color:#5685d1;border-color:#5685d1;padding-left:10px;padding-right:10px;">
-            Go
-        </button>
-
-    </form>
-
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form method="GET" action="{% url 'search_contract' %}">
+              <div class="input-group input-group-lg">
+                 <input type="text" id="sub" name="q" value="{{request.GET.q}}" class="form-control" placeholder="Search for...">
+                 <span class="input-group-btn">
+                   <button class="btn btn-default" id="subbtn" type="submit">Go!</button>
+                 </span>
+              </div><!-- /input-group -->
+            </form>
+        </div><!-- /.col-lg-6 -->
+        <div class="col-md-3"></div>
     </div>
 
     <div class="btn-group" role="group" aria-label="..." style="margin-top:33px;position:relative;left:47%;margin-right:-50%;transform:translate(-50%,-50%);">
@@ -53,13 +55,12 @@
 
     </div>
 
-  </div>
 </div>
-<div style="max-width:1100px;margin:0px auto;">
+<div class="col-md-12">
 {% if results != '' %}
 {% regroup results by location as cities %}
     {% for city in cities %}
-	<button type="button" class="collapsible">{{city.grouper}} - {{city.list|length}} results <img src="https://i.imgur.com/VDm9OyX.png" style="width:15px;float:right;padding-top:5px;"/></button>
+	<button type="button" class="collapsible" style="border-bottom: 5px solid white;">{{city.grouper}} - {{city.list|length}} results <span class="glyphicon glyphicon-chevron-down" style="float:right;"></span> </button>
 	<div class="content">
         {% for obj in results %}
 			{% if obj.location == city.grouper %}
