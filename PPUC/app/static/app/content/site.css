@@ -91,15 +91,17 @@ pre {
     padding: 10px;
 }
 .circleText {
+    z-index: 2;
     position: absolute;
     top: 30%;
-    left: -75%;
-    color: black;
+    left: -60%;
+    color:rgba(0,0,0,.87);
     font-family: "Ember";
     font-size: 30px;
 }
 
 .circle {
+    z-index: 1;
     position: relative;
     top: 25px;
     left: 168px;
@@ -115,7 +117,7 @@ pre {
     left: 0px;
     border-style: solid;
     border-width: 12px;
-    border-color: grey;
+    border-color: #428bca;
     background-color: none;
     border-radius: 110px;
     width: 100%;
@@ -139,6 +141,7 @@ pre {
 }
 
 .v1 {
+    z-index: 0;
     position: relative;
     margin-top: 24px;
     margin-bottom: -26px;

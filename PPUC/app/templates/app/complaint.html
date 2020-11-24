@@ -2,39 +2,46 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <div class="jumbotron" style="background-color:white;padding-bottom:0px;">
-        <h3>{{location.name}}</h3>
+    <p class="lead"><a href="/citizens"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
+    <div class="jumbotron">
+        <h1>{{location.name}}</h1>
         <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. <br />Click on a circle to learn more about that particular phase.</p>
     </div>
     <div class="row">
         <div class="col-md-6">
             <!-- Pre-Complaint Circle-->
             <div class="circle">
-                <div class="circle" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')"></div>
+                <div class="circle" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')">
+                </div>
+                <span class="material-icons" style="font-size:100px;position:absolute;left:50px;top: 50px; color: #428bca;">groups</span>
                 <div class="circleText">Interaction</div>
             </div>
-            <div class="v1"></div>
+            <div class="v1"><span class="material-icons" style="font-size:50px;position:absolute;left:-67px;top:50px;">south</span></div>
             <!-- Complaint Circle-->
             <div class="circle">
                 <div class="circle"  id="ComplaintCircle" onclick="showCategory('Complaint')"></div>
+                <span class="material-icons" style="font-size:100px;position:absolute;left:50px;top: 50px; color: #428bca;">report</span>
                 <div class="circleText">Complaint</div>
             </div>
-            <div class="v1"></div>
+            <div class="v1"><span class="material-icons" style="font-size:50px;position:absolute;left:-67px;top:50px;">south</span></div>
             <!-- Review Circle-->
             <div class="circle">
                 <div class="circle"  id="ReviewCircle" onclick="showCategory('Review')"></div>
+                <span class="material-icons" style="font-size:100px;position:absolute;left:50px;top: 55px; color: #428bca;">rate_review</span>
                 <div class="circleText">Review</div>
             </div>
-            <div class="v1"></div>
+            <div class="v1"><span class="material-icons" style="font-size:50px;position:absolute;left:-67px;top:50px;">south</span></div>
             <!-- Investigation Circle-->
             <div class="circle">
                 <div class="circle" id="InvestigationCircle" onclick="showCategory('Investigation')"></div>
+                <span class="material-icons" style="font-size:100px;position:absolute;left:50px;top: 55px; color: #428bca;">search</span>
                 <div class="circleText">Investigation</div>
             </div>
-            <div class="v1"></div>
+            <div class="v1"><span class="material-icons" style="font-size:50px;position:absolute;left:-67px;top:50px;">south</span></div>
             <!-- Result Circle-->
-            <div class="circle">
+            <div class="circle" style="margin-bottom:100px;">
                 <div class="circle"  id="ResultCircle" onclick="showCategory('Result')"></div>
+                <span class="material-icons" style="font-size:100px;position:absolute;left:50px;top: 55px; color: #428bca;">done</span>
                 <div class="circleText">Result</div>
             </div>
         </div>
