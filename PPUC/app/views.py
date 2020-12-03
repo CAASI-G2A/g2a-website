@@ -157,6 +157,20 @@ def download_pdf(request, lid):
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
 
+def download_txt(request, lid):
+    location = Location.objects.get(pk=lid)
+    state = re.sub(' ', '-', location.state)
+    city = re.sub(' ', '-', location.name)
+    fn = state + "_" + city + ".txt"
+    dirspot = os.getcwd()
+    file_path = dirspot + "/app/static/app/contracts_txt/" + fn
+    filename = fn
+    fl = open(file_path, mode="rb")
+    mime_type, _ = mimetypes.guess_type(file_path)
+    response = HttpResponse(fl, content_type='application/txt')
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
+	
 def view_sentence(request, sid):
     print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)
