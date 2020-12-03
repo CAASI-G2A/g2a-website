@@ -38,7 +38,7 @@ def about(request):
         request,
         'pbb/about.html',
         {
-            'title':'About',
+            'title':'Our Story',
             'message':'Your application description page.',
             'year':datetime.now().year,
         }
