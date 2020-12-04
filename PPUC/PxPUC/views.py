@@ -78,6 +78,7 @@ def researchers(request):
         'app/researchers.html',
         {
             'title':'Researchers',
+            'year':datetime.now().year,
         }
     )
 
@@ -94,6 +95,7 @@ def search(request):
         'title' : 'Search',
         'locations' : locations,
         'states' : states,
+        'year':datetime.now().year,
         }
     assert isinstance(request, HttpRequest)
     return render(
@@ -115,6 +117,7 @@ def citizens(request):
         'title' : 'Search',
         'locations' : locations,
         'states' : states,
+        'year':datetime.now().year,
         }
     assert isinstance(request, HttpRequest)
     return render(
@@ -153,10 +156,11 @@ def search_contract(request):
             loc = Location.objects.get(name=result.location)
             result.lid = loc.id
             results.append((result))
-        context = {
-            'title' : 'Search Contracts',
-            'results' : results,
-            }
+    context = {
+        'title' : 'Search Contracts',
+        'results' : results,
+        'year':datetime.now().year,
+        }
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -172,7 +176,8 @@ def view_location(request, lid):
         'title' : 'View Location',
         'location' : location,
         'sentences' : sentences,
-        'form' : ProblematicLanguageForm
+        'form' : ProblematicLanguageForm,
+        'year':datetime.now().year,
         }
     assert isinstance(request, HttpRequest)
     return render(request,'app/view_location.html',context)
@@ -242,5 +247,5 @@ def complaint(request,lid):
         results = Sentence.objects.filter(Q(location=location),Q(text__icontains=searchTerm))
     else:
         results = ''
-    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results}
+    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results, 'year':datetime.now().year,}
     return render(request,'app/complaint.html', context)
