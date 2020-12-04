@@ -53,10 +53,11 @@
                     <h3 class="panel-title">Interaction with Police</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead" >The PDF below guides you on what you should do and your rights if you are stopped by a police officer.</p>
+                      <p class="lead" >What happens in this stage?</p>
+                      <p>You have an encounter with the police that you don't feel "right" about</p> 
                   </div>
                   <div class="panel-footer">
-                      <a href="{% static 'app/Pre-Complaint/PittsburghPreComplaint.pdf' %}" target="_blank" >PDF (by Pittsburgh Independent Citizen Police Review Board)</a>
+                      <a href="https://www.aclu.org/know-your-rights/stopped-by-police/#ive-been-stopped-by-the-police-in-public" target="_blank" >ACLU Know Your Rights</a>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
@@ -64,6 +65,7 @@
                   <div class="list-group">
                       <!-- General Pre-Complaint Q's (displayed on all Cities)-->
                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Police misconduct happens when inappropriate/illegal actions are taken by police officers in connection to their work. Some common examples of police misconduct are: intimidation, false arrest, false imprisonment, falsification of evidence, witness tampering, police brutality, police corruption, racial profiling, unwarranted searches. If you think you experienced misconduct you can file a complaint with the police department. NOTE: If you are considering filing a lawsuit you should speak to a lawyer before making a complaint. A lawyer will help you decide your next step.","Pre-Complaint")'>How do i know if I've experienced police misconduct?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The California Innocence Project defines police misconduct as &quot; illegal or unethical actions or the violation of individuals’ constitutional rights by police officers in the conduct of their duties &quot;","Pre-Complaint")'>What is Police Misconduct?</a>
                        <!-- Specific Pre-Complaint Q's (per city)-->
                         {% for q in questions %}
                             {% if q.category == 'Pre-Complaint' %}
@@ -132,7 +134,7 @@
                          {% endif %}
                     </div>
                 </div>
-         </div>
+        </div>
         <!-- Review Panel-->
         <div class="col-md-6" id="reviewPanel" style="display:none; position:sticky; top: 0;">
             <div class="Qs">
