@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <p class="lead"><a href="/citizens"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
+    <p class="lead"><a href="{% url 'citizens' %}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
     <div class="jumbotron">
         <h1>{{location.name}}</h1>
         <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. <br />Click on a circle to learn more about that particular phase.</p>

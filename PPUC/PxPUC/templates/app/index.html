@@ -13,7 +13,7 @@
     <h2>What does our tool do?</h2>
     <p class="lead">Our tool allows researchers to explore police union contracts more easily for information, and
       helps citizens to find resources near them and learn more about the process of filing a misconduct complaint.</p>
-      <a class="btn btn-default" href="/about" role="button" style="float:right;">Learn more</a>
+      <a class="btn btn-default" href="{% url 'about' %}" role="button" style="float:right;">Learn more</a>
 </div>
 
 <hr class="my-4">
@@ -25,18 +25,18 @@
     misconduct and misconduct investigation processes. This can help those considering
     filing a police misconduct complaint understand more about how the process works
     and what it means for them if they choose to do so.</p>
-      <a class="btn btn-default" href="/about" role="button" style="float:right;">Learn more</a>
+      <a class="btn btn-default" href="{% url 'about' %}" role="button" style="float:right;">Learn more</a>
 
 </div>
 
 
 <div class="jumbotron">
-    <h2><a href="/researchers">Researchers: search and compare police union contracts</a></h2>
+    <h2><a href="{% url 'researchers' %}">Researchers: search and compare police union contracts</a></h2>
     <p class="lead">Search our database of police contracts by keyword or by city.</p>
 </div>
 
 <div class="jumbotron">
-    <h2><a href="/citizens">Citizens: learn about the process of filing a misconduct complaint</a></h2>
+    <h2><a href="{% url 'citizens' %}">Citizens: learn about the process of filing a misconduct complaint</a></h2>
     <p class="lead">Learn about the stages of filing a complaint and find links to resources for your city.</p>
 </div>
 

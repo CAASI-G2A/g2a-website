@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.http import HttpRequest
 from django.http import HttpResponse
 from .models import *
-from app.forms import *
+from PxPUC.forms import *
 from django.views.generic import ListView, FormView
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
@@ -17,6 +17,19 @@ import re
 import nltk
 import mimetypes
 from nltk.tokenize import sent_tokenize
+
+def landing(request):
+    """Renders the landing."""
+    context = {
+        'title':'G2A',
+        'year':datetime.now().year,
+        }
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/landing.html',
+        context
+    )
 
 def home(request):
     """Renders the home page."""
@@ -72,15 +85,10 @@ def search(request):
     context = {}
     query = request.GET.get('q','')
     locations = Location.objects.filter(Q(name__icontains=query))
-    states = []
-    for loc in locations:
-        if loc.state not in states:
-            states.append(loc.state)
 
     context = {
         'title' : 'Search',
         'locations' : locations,
-        'states' : states,
         }
     assert isinstance(request, HttpRequest)
     return render(
@@ -107,20 +115,30 @@ def citizens(request):
 def search_contract(request):
     context = {}
     query = request.GET.get('q','')
-    searched_term = request.GET.get('q')
+    orQuery = request.GET.get('OR','')
     if query == '':
         results = ''
     else:
         results = []
-        querySet = Sentence.objects.filter(Q(text__icontains=query))
+        if orQuery == '':
+            querySet = Sentence.objects.filter(Q(text__icontains=query))
+        else:
+            querySet = Sentence.objects.filter(Q(text__icontains=query) | Q(text__icontains=orQuery))
         for result in querySet:
             t = result.text
             lower = t.lower()
-            q_length = len(searched_term)
-            pos = lower.find(searched_term.lower())
-            result.first = t[:pos]
-            result.second = t[pos:pos+q_length]
-            result.third = t[pos+q_length:]
+            if lower.find(query) != -1:
+                q_length = len(query)
+                pos = lower.find(query.lower())
+                result.first = t[:pos]
+                result.second = t[pos:pos+q_length]
+                result.third = t[pos+q_length:]
+            elif lower.find(orQuery) != -1:
+                q_length = len(orQuery)
+                pos = lower.find(orQuery.lower())
+                result.first = t[:pos]
+                result.second = t[pos:pos+q_length]
+                result.third = t[pos+q_length:]
             loc = Location.objects.get(name=result.location)
             result.lid = loc.id
             results.append((result))
@@ -154,7 +172,7 @@ def download_pdf(request, lid):
     city = re.sub(' ', '-', location.name)
     fn = state + "_" + city + ".pdf"
     dirspot = os.getcwd()
-    file_path = dirspot + "/app/static/app/contracts_pdf/" + fn
+    file_path = dirspot + "/PxPUC/static/app/contracts_pdf/" + fn
     filename = fn
     fl = open(file_path, mode="rb")
     mime_type, _ = mimetypes.guess_type(file_path)
@@ -168,14 +186,14 @@ def download_txt(request, lid):
     city = re.sub(' ', '-', location.name)
     fn = state + "_" + city + ".txt"
     dirspot = os.getcwd()
-    file_path = dirspot + "/app/static/app/contracts_txt/" + fn
+    file_path = dirspot + "/PxPUC/static/app/contracts_txt/" + fn
     filename = fn
     fl = open(file_path, mode="rb")
     mime_type, _ = mimetypes.guess_type(file_path)
     response = HttpResponse(fl, content_type='application/txt')
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
-	
+
 def view_sentence(request, sid):
     print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)

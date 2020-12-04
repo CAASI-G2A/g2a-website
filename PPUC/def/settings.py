@@ -1,6 +1,7 @@
 """
 Django settings for main project.
 
+
 Based on 'django-admin startproject' using Django 2.1.2.
 
 For more information on this file, see
@@ -30,7 +31,7 @@ ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
-    'app',
+    'PxPUC',
     'PBB',
     # Add your apps here to enable them
     'django.contrib.admin',
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PPUC.urls'
+ROOT_URLCONF = 'def.urls'
 
 # Template configuration
 # https://docs.djangoproject.com/en/2.1/topics/templates/
@@ -74,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'PPUC.wsgi.application'
+WSGI_APPLICATION = 'def.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {

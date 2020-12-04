@@ -2,7 +2,7 @@
 
 import os
 import re
-from app.models import Contract, Location, Sentence, Category
+from PxPUC.models import Contract, Location, Sentence, Category
 
 def run():
     category = Category.objects.get_or_create(category = "Pre-Complaint")
@@ -10,7 +10,7 @@ def run():
     category = Category.objects.get_or_create(category = "Review")
     category = Category.objects.get_or_create(category = "Investigation")
     category = Category.objects.get_or_create(category = "Result")
-    with os.scandir("./app/static/app/contracts_txt") as entries:
+    with os.scandir("./PxPUC/static/app/contracts_txt") as entries:
         for entry in entries:
             if entry.is_file():
                 with open(entry, encoding = 'cp1252') as textFile:

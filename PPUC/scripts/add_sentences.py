@@ -1,12 +1,12 @@
 import os
 import csv
 import re
-from app.models import Problematic_Sentence
-from app.models import Location
+from PxPUC.models import Problematic_Sentence
+from PxPUC.models import Location
 
 def run():
     r = 0
-    with os.scandir("./app/static/app/problematic_sentences") as entries:
+    with os.scandir("./PxPUC/static/app/problematic_sentences") as entries:
         for entry in entries:
             if entry.is_file():
                 with open(entry, encoding = 'cp1252') as csvFile:

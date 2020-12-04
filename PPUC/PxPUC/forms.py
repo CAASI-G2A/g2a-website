@@ -5,7 +5,7 @@ Definition of forms.
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms import ModelForm
-from app.models import Location, Sentence, Problematic_Sentence
+from PxPUC.models import Location, Sentence, Problematic_Sentence
 from django.utils.translation import ugettext_lazy as _
 
 class BootstrapAuthenticationForm(AuthenticationForm):

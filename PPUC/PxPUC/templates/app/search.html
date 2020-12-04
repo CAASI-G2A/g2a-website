@@ -61,14 +61,10 @@
         </button>
         <ul class="dropdown-menu multi-level" aria-labelledby="dropdownMenu1" style="margin:10px auto;width:200px; left:50%; margin-left:-100px;">
           {% if locations != '' %}
-          {% for state in states %}
-            <li class="dropdown-submenu"><a href="#">{{ state }}</a>
+          {% for obj in locations %}
+            <li class="dropdown-submenu"><a href="#">{{ obj.state }}</a>
               <ul class="dropdown-menu">
-                {% for obj in locations %}
-                    {% if obj.state == state %}
-                        <li><a tabindex="-1" href="{%url 'view_location' obj.pk %}">{{ obj.name }}</a></li>
-                    {% endif %}
-                {% endfor %}
+                <li><a tabindex="-1" href="{%url 'view_location' obj.pk %}">{{ obj.name }}</a></li>
             </ul>
             {% endfor %}
             {% endif %}

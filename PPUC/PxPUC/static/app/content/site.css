@@ -101,6 +101,7 @@ pre {
 }
 
 .circle {
+    cursor: pointer;
     z-index: 1;
     position: relative;
     top: 25px;

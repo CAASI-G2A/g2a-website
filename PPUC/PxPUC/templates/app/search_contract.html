@@ -39,10 +39,9 @@
         <div class="col-md-6">
             <form method="GET" action="{% url 'search_contract' %}">
               <div class="input-group input-group-lg">
-                 <input type="text" id="sub" name="q" value="{{request.GET.q}}" class="form-control" placeholder="Search for...">
-                 <span class="input-group-btn">
-                   <button class="btn btn-default" id="subbtn" type="submit">Go!</button>
-                 </span>
+                 <input type="text" id="sub" name="q" value="{{request.GET.q}}" class="form-control" placeholder="Search for..." style="border-radius:6px;">
+                 <input type="text" id="or" name="OR" value="{{request.GET.OR}}" class="form-control" placeholder="Or.." style="border-radius:6px;">
+                 <button class="btn btn-lg btn-default" id="subbtn" type="submit" style="float:right; margin-top:2px;">Go!</button>
               </div><!-- /input-group -->
             </form>
         </div><!-- /.col-lg-6 -->
