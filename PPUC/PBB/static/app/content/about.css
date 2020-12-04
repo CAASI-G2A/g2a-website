@@ -5,7 +5,26 @@
     background: #C4C4C4; 
     text-align: center;
     height: 200px;
-    padding: 30px;
+    padding-top: 30px;
+}
+.pbbabout-headerbar{
+    background: #B0B0B0;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+.pbbabout-who{
+    margin-bottom: 40px;
+}
+.pbbabout-mission{
+    margin-bottom: 40px;
+}
+.pbbabout-team{
+    margin-bottom: 40px;
+}
+.pbbabout-partners{
+    margin-bottom: 40px;
 }
 
 .card {
