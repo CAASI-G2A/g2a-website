@@ -85,10 +85,15 @@ def search(request):
     context = {}
     query = request.GET.get('q','')
     locations = Location.objects.filter(Q(name__icontains=query))
+    states = []
+    for loc in locations:
+        if loc.state not in states:
+            states.append(loc.state)
 
     context = {
         'title' : 'Search',
         'locations' : locations,
+        'states' : states,
         }
     assert isinstance(request, HttpRequest)
     return render(
@@ -96,6 +101,7 @@ def search(request):
         'app/search.html',
         context
     )
+
 def citizens(request):
     context = {}
     query = request.GET.get('q','')
