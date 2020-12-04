@@ -38,8 +38,47 @@ def about(request):
         request,
         'pbb/about.html',
         {
-            'title':'About',
+            'title':'Our Story',
             'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+def directory(request):
+    """Renders the directory page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'pbb/directory.html',
+        {
+            'title':'Directory',
+            'message':'Directory stuff',
+            'year':datetime.now().year,
+        }
+    )
+
+def dashboard(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'pbb/dashboard.html',
+        {
+            'title':'Dashboard',
+            'message':'Dashboard stuff',
+            'year':datetime.now().year,
+        }
+    )
+
+def submitreview(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'pbb/submitreview.html',
+        {
+            'title':'Submit A Review',
+            'message':'Submit A Review stuff',
             'year':datetime.now().year,
         }
     )

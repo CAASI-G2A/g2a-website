@@ -1,0 +1,46 @@
+.pbbabout-container{
+
+}
+.pbbabout-header{
+    background: #C4C4C4; 
+    text-align: center;
+    height: 200px;
+    padding-top: 30px;
+}
+.pbbabout-headerbar{
+    background: #B0B0B0;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+.pbbabout-who{
+    margin-bottom: 40px;
+}
+.pbbabout-mission{
+    margin-bottom: 40px;
+}
+.pbbabout-team{
+    margin-bottom: 40px;
+}
+.pbbabout-partners{
+    margin-bottom: 40px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    margin: 5%;
+}
+  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
