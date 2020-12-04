@@ -58,13 +58,19 @@
                   </div>
                   <div class="panel-footer">
                       <a href="https://www.aclu.org/know-your-rights/stopped-by-police/#ive-been-stopped-by-the-police-in-public" target="_blank" >ACLU Know Your Rights</a>
+                      <br />
+                      <a href="https://californiainnocenceproject.org/issues-we-face/police-misconduct/#:~:text=Police%20misconduct%20encompasses%20illegal%20or,the%20conduct%20of%20their%20duties." target="_blank" >California Innocence Project</a>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
                       <!-- General Pre-Complaint Q's (displayed on all Cities)-->
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The California Innocence Project defines police misconduct as &ldquo;illegal or unethical actions or the violation of individuals constitutional rights by police officers in the conduct of their duties&rdquo;.","Pre-Complaint")'>What is Police Misconduct?</a>
                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Police misconduct happens when inappropriate/illegal actions are taken by police officers in connection to their work. Some common examples of police misconduct are: intimidation, false arrest, false imprisonment, falsification of evidence, witness tampering, police brutality, police corruption, racial profiling, unwarranted searches. If you think you experienced misconduct you can file a complaint with the police department. NOTE: If you are considering filing a lawsuit you should speak to a lawyer before making a complaint. A lawyer will help you decide your next step.","Pre-Complaint")'>How do i know if I've experienced police misconduct?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Some common examples of police misconduct are: intimidation, being arrested or imprisoned for the wrong reason, making up evidence, restricting witnesses, police brutality, police dishonesty, treating people poorly because of their race, searches with no permission, or failing to help when they are asked.","Pre-Complaint")'>What are some examples of misconduct?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Many cities have local organizations across the country working to increase police accountability, these will be often be the most helpful resource. Also, your local chapter of the ACLU can be helpful. You can find that through the ACLU website.","Pre-Complaint")'>What resources are there if I have questions before filing a report or I want to talk about legal representation?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("In some police departments, the accused officer is allowed to see the name of the person who filed the complaint. You can check your local contract on this webiste to find out! If you are worried that an officer might try to fight back against you for filing the complaint, it may be the best option not to file at this time and think about talking to a lawyer. The community orginizations in your city might be able to help you find someone to talk to. ","Pre-Complaint")'>What are the risks of filing a police misconduct complaint?</a>
                        <!-- Specific Pre-Complaint Q's (per city)-->
                         {% for q in questions %}
                             {% if q.category == 'Pre-Complaint' %}
@@ -86,7 +92,7 @@
                     <h3 class="panel-title">Filing a Complaint</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead">Conditions to proceed to the next phase:</p>
+                      <p class="lead">What happens in this stage?</p>
                       <p>Fill out and submit the complaint form for your city</p>
                       <a href="{{location.complaint_form_link}}" target="_blank">{{location.name}}'s Police Complaint Form </a>
                   </div>
@@ -98,6 +104,7 @@
                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The victim of misconduct should file the complaint for themselves if possible. Some police departments do not accept misconduct complaints from witnesses to misconduct and will only accept complaints from victims. If you are a witness to misconduct and would like to file a complaint, check with the police department or police oversight board first to find out if it will be accepted. If the victim of misconduct is under 18 years old, a parent or guardian can file the complaint on their behalf.","Complaint")'>Who can file a complaint?</a>
                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The more information the better! The most useful detail is the officers name and/or badge number, but you can still file a complaint without that information. Write down everything you can remember about the incident before you start filling out the form. Try to recall as much detail as possible: when did it happen? where? did anyone else see? what did the officer look like? what did their car look like?, etc. Be aware that complaints may be dismissed if there is not enough information to identify the accused officer. ","Complaint")'>What information do I need to file a complaint?</a>
                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Many municipalities require the victim to file within 6 months of the misconduct. Check with the police department or, if possible, a police oversight board.","Complaint")'>Do I have to file the complaint within a certain period of time?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("All departments allow complaints to be filled in person or by phone. Many also have online forms, mail in or even fax options as well. If you need assistance filing, you can ask the police department or municipal government for assistance; however, responses could vary wildly. Some departments might be very helpful, others might want to discourage people from filing.","Complaint")'>How do I file a complaint?</a>
                        <!-- Specific Complaint Q's (per city)-->
                         {% for q in questions %}
                             {% if q.category == 'Complaint' %}
@@ -142,16 +149,16 @@
                     <h3 class="panel-title">Review of complaint</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead">What happens in this phase?</p>
-                      <p>Your complaint will be reviewed and the department will determine whether to proceed with an invesigation. Your complaint may be dismissed, but that does not necessarily mean you have not experienced misconduct</p>
-                      <p class="lead">Conditions to proceed to the next phase:</p>
-                      <p>Chief notified and agrees charges are plausible</p>
-                      <p>The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days. <br>(e.g. 10-30 days)</p>
+                      <p class="lead">What happens in this stage?</p>
+                      <p>Your complaint will be reviewed and the department will determine whether to proceed with an invesigation. Your complaint may be dismissed, but that does not necessarily mean you have not experienced misconduct. If that happens, connect with an orginization in your city.</p>
+                      <p>Either the cheif or the department's internal affairs team is given the complaint and if they agree charges are plausible, the complaint moves on. The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days.<br>(e.g. 10-30 days)</p>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
+                      <!-- General Review Q's (displayed on all Cities)-->
+                       <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("The length of time varies by police department. It can take as little as 30 days to 6 months depending on how serious the problem is. According to NACOLE, the general time limit is 180 days. ","Review")'>How long does the review process take?</a>
                         {% for q in questions %}
                             {% if q.category == 'Review' %}
                                 <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
@@ -172,19 +179,19 @@
                     <h3 class="panel-title">Investigation</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead">What happens in this phase?</p>
-                      <p>In the investigation phase the accused police officer and those associated are given the documents of the actual complaint. The police officer will then be called to respond to the allegations.</p>
-                      <p>The information they are given at this step may include the citizen's name and the details of when they were arrested.</p>
-                      <p class="lead">Conditions to proceed to the next phase:</p>
+                      <p class="lead">What happens in this stage?</p>
+                      <p>The accused police officer and those associated are given the documents of the actual complaint. The police officer will then be called to respond to the allegations. The information they are given at this step may include the citizen's name or the details (time/date/location) of the complaint</p>
                       <p> The investigation must be completed within an agreed timeframe, typically a series of months. All procedures and protocols during the investigation must be followed without any violations.</p>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
-                   <!-- General Investigation Q's (displayed on all Cities)-->
-                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("In some police departments, the accused officer is allowed to see the name of the person who filed the complaint. [mention we can check this w tool.] If you are concerned that an officer might try to retaliate against you for filing the complaint, it may be the best option not to file at this time.","Investigation")'>What are the risks of filing a police misconduct complaint?</a>
-                   <!-- Specific Investigation Q's (per city)-->
                   <div class="list-group">
+                      <!-- General Investigation Q's (displayed on all Cities)-->
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("In some police departments, the accused officer is allowed to see the name of the person who filed the complaint. [mention we can check this w tool.] If you are concerned that an officer might try to retaliate against you for filing the complaint, it may be the best option not to file at this time.","Investigation")'>What are the risks of filing a police misconduct complaint?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("explain general process (flow chart)","Investigation")'>What happens after I file a complaint?</a>
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("It again varies by department. Some allow anonymous or third party complaints, some do not. Most complaint forms will require some form of contact information.","Investigation")'>Will my name be kept anonymous?</a>
+                       <!-- Specific Investigation Q's (per city)-->
                         {% for q in questions %}
                             {% if q.category == 'Investigation' %}
                                 <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
@@ -192,26 +199,6 @@
                         {% endfor %}
                   </div>
                     <div class="panel-body" id="InvestigationAnswer">
-                        Answer:
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Conviction Panel-->
-        <div class="col-md-6" id="convictionPanel" style="display:none; position:sticky; top: 0;">
-            <div class="Qs">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Frequently Asked Questions</h3>
-                  </div>
-                  <div class="list-group">
-                        {% for q in questions %}
-                            {% if q.category == 'Conviction' %}
-                                <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
-                            {% endif %}
-                        {% endfor %}
-                  </div>
-                    <div class="panel-body" id="ConvictionAnswer">
                         Answer:
                     </div>
                 </div>
@@ -225,13 +212,14 @@
                     <h3 class="panel-title">Result</h3>
                   </div>
                   <div class="panel-body">
-                      <p class="lead">...</p>
-                      <p>...</p>
+                      <p class="lead">What happens in this stage?</p>
+                      <p>You will be notified of the result of your complaint and sometimes the course of action being taken by the department. However, most of the time that information is kept private. Again, if your case is dismissed, that does NOT mean you have not experienced police misconduct. Seeking out the assistance of local organizations can help here as well.</p>
                   </div>
                   <div class="panel-heading">
                     <h3 class="panel-title">Frequently Asked Questions</h3>
                   </div>
                   <div class="list-group">
+                      <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("Dismissed/Not Sustained: the department didn&rsquo;t feel there was enough information to make a decision.  Exonerated: the department decided there either was no misconduct or the way the officer acted was allowed.  Sustaied: the evidence in the complaint proved there was misconduct. They decide what happens to the officer.","Result")'>What are some possible results?</a>
                         {% for q in questions %}
                             {% if q.category == 'Result' %}
                                 <a style="cursor:pointer;" class="list-group-item" onclick='setAnswer("{{q.a}}","{{q.category}}")'>{{q.q}}</a>
