@@ -1,5 +1,5 @@
 .pbbabout-container{
-
+    margin-bottom: 40px;
 }
 .pbbabout-header{
     background: #C4C4C4; 
@@ -23,16 +23,30 @@
 .pbbabout-team{
     margin-bottom: 40px;
 }
+.pbbabout-engagementteam{
+    margin-bottom: 40px;
+    clear: both;
+}
+.pbbabout-techteam{
+    margin-bottom: 40px;
+    clear: both;
+}
 .pbbabout-partners{
     margin-bottom: 40px;
+    clear: both;
 }
 
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 25%;
-    margin: 5%;
+    float: left;
+    width: 20%;
+    margin: 2%;
+}
+
+.card-title {
+    padding: 0px 16px;
 }
   
 /* On mouse-over, add a deeper shadow */
@@ -42,5 +56,5 @@
   
 /* Add some padding inside the card container */
 .container {
-    padding: 2px 16px;
+    padding: 2px 0px;
 }
