@@ -1,24 +1,175 @@
 {% extends "pbb/layout.html" %}
 {% block content %}
 
-<img src="../../static/app/img/projectelevate-mockbanner.png">
-<h1>Our Mission</h1>
-<p>Our mission is to promote, uplift, and elevate Black-owned businesses in Pittsburgh to increase 
-    their visibility and expand     their business presence on and around the University of Pittsburgh 
-    campus and the Pittsburgh community.</p>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="../../static/app/content/landing.css">
+        </head>
+        <body>
+            <div class="landing__container">
 
-<h1>What Do We Do?</h1>
+                <div class="landing__header">
+                    <h1><b>412Connect</b></h1>
+                    <h3>Connecting communities together, <br>one business at a time</h3>
+                    <div class="landing__header-mission">
+                        <a href=#about>our mission + story >></a>
+                    </div>
+                </div>
 
-<h1>Our Program</h1>
-<a href="elevate/register" class="btn btn-info" role="button">
-    Register your group to our program here!</a>
-<a href="elevate/review" class="btn btn-info" role="button">
-    Submit a Black business review here.</a>
-<a href="elevate/dashboard" class="btn btn-info" role="button">
-    Interested in seeing your group's progress? Click here!</a>
+                <div class="landing__row">
+                    <div class="landing__col">
+                        <div class="landing__card">
+                            <div class="landing__card-body">
+                                <h5><b>Submit a Review</b></h5>
+                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                <div class="landing__card-button">
+                                    <a href='#'>submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing__col">
+                        <div class="landing__card">
+                            <div class="landing__card-body">
+                                <h5><b>Register a ConnecTeam</b></h5>
+                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                <div class="landing__card-button">
+                                    <a href='#'>register</a>
+                                </div>      
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="landing__col">
+                        <div class="landing__card">
+                            <div class="landing__card-body">
+                                <h5><b>Add your Business</b></h5>
+                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                <div class="landing__card-button">
+                                    <a href='#'>join</a>
+                                </div>    
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
 
-<h1>Our Partners</h1>
-<img src="../../static/app/img/cocoapreneurpgh.png">
-<img src="../../static/app/img/wprdc.png">
+                <div class="landing__impact">
+                    <h2>Impact</h2>
+                    <div class="landing__impact-stats">
+                        <div class="landing__impact-row">
+                            <div class="landing__impact-col">
+                                <h3><b>157</b> Reviews Contributed</h3>
+                            </div>
+                            <div class="landing__impact-col">
+                                <h3><b>82</b> Unique Businesses Visited</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing__impact-map">
+                        <iframe className="landing__impact-map" src="https://www.google.com/maps/d/embed?mid=13Vj9dNMN0VxpkKKrpjtycQPiuVbVKV3r" 
+                        width="800" height="480"></iframe>
+                        <div class="landing__impact-button" >
+                            <a href='#'>Click to see your ConnecTeam's Progress Dashboard!</a>
+                            <img src="../../static/app/img/arrow1.png" alt="arrow" style="width:50px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing_directory">
+                    <div class="landing__directory-row">
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing__directory-row">
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                        <div class="landing__directory-col">
+                            <h2 style="text-align: center;">Business Directory</h2>
+                        </div>
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing__directory-row">
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                        <div class="landing__directory-col">
+                            <div class="landing__directory-card">
+                                <h4>Restaurants</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing__spotlights">
+                    <h2>Business Spotlights</h2>
+                    <div class="landing__row">
+                        <div class="landing__col">
+                            <div class="landing__card">
+                                <div class="landing__card-body">
+                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
+                                    <h5><b>Andi's Cake Shop</b></h5>
+                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                    <div class="landing__card-button">
+                                        <a href='#'>Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing__col">
+                            <div class="landing__card">
+                                <div class="landing__card-body">
+                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
+                                    <h5><b>Andi's Cake Shop</b></h5>
+                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                    <div class="landing__card-button">
+                                        <a href='#'>Learn more</a>
+                                    </div>      
+                                </div>                    
+                            </div>
+                        </div>
+                        <div class="landing__col">
+                            <div class="landing__card">
+                                <div class="landing__card-body">
+                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
+                                    <h5><b>Andi's Cake Shop</b></h5>
+                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+                                    <div class="landing__card-button">
+                                        <a href='#'>Learn more</a>
+                                    </div>    
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
 
 {% endblock %}
