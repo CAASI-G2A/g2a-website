@@ -28,19 +28,23 @@ class Directory():
         df = df.drop(['Number of Ratings'], axis=1)
 
         res = pd.DataFrame()
-        for filter in filters:
-            res = res.append(df.loc[df[filter[0]] == filter[1]])
+        if filters != '':
+            for filter in filters:
+                res = res.append(df.loc[df[filter[0]] == filter[1]])
+        else:
+            res = df
 
         res = res.drop_duplicates()
         res = res.sort_values(by=['Name'])
         js = res.reset_index().to_json(orient='records')
         data = json.loads(js)
-        print(res.columns)
+        print(res.name.unique())
         return res
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', None)
 
-    instance = Directory('blackbusinesses-gmapspull-with-category.csv')
-    filter = [('Category', 'Food'), ('Category', 'Hair Care'), ('Category', 'Shopping')]
+    instance = Directory('../static/app/csv/blackbusinesses-gmapspull-with-category.csv')
+    # filter = [('Category', 'Food'), ('Category', 'Hair Care'), ('Category', 'Shopping')]
+    filter = ''
     instance.get_data(filter)

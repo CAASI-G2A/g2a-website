@@ -257,6 +257,94 @@ iframe {
 	padding: 12px 20px 12px 40px;
 }
 
+.dir-table {
+	table-layout: fixed;
+}
+
+.th-lg {
+	width: 33%;
+}
+
+.th-sm {
+	width: 14%;
+}
+
+.th-md {
+	width: 20%;
+}
+
+
+table.dataTable thead>tr>td.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc {
+	padding-right: 30px;
+}
+
+table.dataTable thead>tr>td:active,
+table.dataTable thead>tr>th:active {
+	outline: 0;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+	cursor: pointer;
+	position: relative;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+	position: absolute;
+	bottom: .5em;
+	opacity: .3;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:before {
+	right: 1em;
+	content: "\f0de";
+	font-family: 'Font Awesome\ 5 Free';
+	font-weight: 900;
+	font-size: 1rem;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc_disabled:after {
+	content: "\f0dd";
+	font-family: 'Font Awesome\ 5 Free';
+	font-weight: 900;
+	right: 16px;
+	font-size: 1rem;
+}
+
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:after {
+	opacity: 1;
+}
+
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+	opacity: 0;
+}
+
+
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
 table.dataTable thead .sorting_asc:after,
