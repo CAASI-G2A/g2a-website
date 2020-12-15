@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link href="datatables.min.css" rel="stylesheet">
+		<link href="../../static/app/content/datatables.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../../static/app/content/styles.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,18 +84,62 @@
 							    <!-- Card body -->
 							    <div id="filter1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
 							      data-parent="#accordion">
-							      <div class="filter-check card-body">
+							      <div class="filter-check card-body" id="filterBox">
 							      	<div class="form-check">
-										<input type="checkbox" class="form-check-input filled-in" id="foodCheck">
+										<input type="checkbox" class="form-check-input" id="barCheck" onclick="filter()">
+										<label class="form-check-label" for="barCheck">Bar</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="beautyCheck" onclick="filter()">
+										<label class="form-check-label" for="beautyCheck">Beauty Salon</label>
+									</div>		
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="educationCheck" onclick="filter()">
+										<label class="form-check-label" for="educationCheck">Education</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="financeCheck" onclick="filter()">
+										<label class="form-check-label" for="financeCheck">Finance</label>
+									</div>					
+							      	<div class="form-check">
+										<input type="checkbox" class="form-check-input filled-in" id="foodCheck" onclick="filter()">
 										<label class="form-check-label" for="foodCheck">Food</label>
 									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="gymCheck" onclick="filter()">
+										<label class="form-check-label" for="gymCheck">Gym</label>
+									</div>
 							        <div class="form-check">
-										<input type="checkbox" class="form-check-input filled-in" id="hairCheck">
+										<input type="checkbox" class="form-check-input filled-in" id="hairCheck" onclick="filter()">
 										<label class="form-check-label" for="hairCheck">Hair Care</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="clothingCheck">
-										<label class="form-check-label" for="clothingCheck">Clothing</label>
+										<input type="checkbox" class="form-check-input" id="healthCheck" onclick="filter()">
+										<label class="form-check-label" for="healthCheck">Health</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="insuranceCheck" onclick="filter()">
+										<label class="form-check-label" for="insuranceCheck">Insurance Agency</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="laundryCheck" onclick="filter()">
+										<label class="form-check-label" for="laundryCheck">Laundry</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="lawyerCheck" onclick="filter()">
+										<label class="form-check-label" for="lawyerCheck">Lawyer</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="realCheck" onclick="filter()">
+										<label class="form-check-label" for="realCheck">Real Estate Agency</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="shoppingCheck" onclick="filter()">
+										<label class="form-check-label" for="shoppingCheck">Shopping</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="otherCheck" onclick="filter()">
+										<label class="form-check-label" for="otherCheck">Other</label>
 									</div>
 							      </div>
 							    </div>
@@ -119,7 +163,6 @@
 							    <div id="filter2" class="collapse" role="tabpanel" aria-labelledby="heading2"
 							      data-parent="#accordion">
 							      <div class="card-body">
-							        Anim.
 							      </div>
 							    </div>
 							  </div>
@@ -133,13 +176,13 @@
 					<div class="col"> 
 						<input class="form-control search" id="search" type="text" placeholder="Search for a business...">
 						<br>
-						<table id="dirTable" class="sortable">
+						<table class="dir-table" id="dirTable" class="sortable">
 							<thead>
 								<tr>
-									<th class="th-sm">Name</th>
-									<th>Address</th>
-									<th>Rating</th>
-									<th>Category</th>
+									<th class="th-lg">Name</th>
+									<th class="th-lg">Address</th>
+									<th class="th-sm">Rating</th>
+									<th class="th-md">Category</th>
 								</tr>
 							</thead>
 							<tbody id="directory">
