@@ -103,9 +103,9 @@ class Directory():
     def get_data(self, filters):
         df = pd.read_csv(self.csv_file)
         df = df.drop(['Unnamed: 0', 'Keywords'], axis=1)
-        for i, r in df.iterrows():
-            if r['Number of Ratings'] == 0:
-                df.loc[i, 'Rating'] = 'N/A'
+        # for i, r in df.iterrows():
+        #     if r['Number of Ratings'] == 0:
+        #         df.loc[i, 'Rating'] = 'N/A'
         df = df.drop(['Number of Ratings'], axis=1)
 
         res = pd.DataFrame()
