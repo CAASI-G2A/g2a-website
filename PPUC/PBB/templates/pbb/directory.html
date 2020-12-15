@@ -129,8 +129,29 @@
 					</div>
 					<div class="col-1">
 					</div>
-					<div class="col">
-						<h5>Filter</h5>
+					<div class="col"> 
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Address</th>
+									<th>Rating</th>
+									<th>Category</th>
+								</tr>
+							</thead>
+							<tbody>
+							{% if data %}
+							{% for i in data %}
+								<tr>
+									<td>{{i.Name}}</td>
+									<td>{{i.Address}}</td>
+									<td>{{i.Rating}}</td>
+									<td>{{i.Category}}</td>
+								</tr>
+							{% endfor %}
+							{% endif %}
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>

@@ -33,6 +33,10 @@ class Directory():
 
         res = res.drop_duplicates()
         res = res.sort_values(by=['Name'])
+        js = res.reset_index().to_json(orient='records')
+        data = json.loads(js)
+        print(res.columns)
+        return res
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', None)
