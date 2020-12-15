@@ -1,13 +1,54 @@
-{% extends "pbb/layout.html" %}
-{% block content %}
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../../static/app/content/about.css">
-    </head>
+	<head>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <body>
+        <link rel="stylesheet" href="../../static/app/content/about.css">
+		<link rel="stylesheet" href="../../static/app/content/styles.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>412Connect Home</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body class="text-center main-color">
+		<!-- Navigation Bar -->
+		<nav class="color3 navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="{% url 'PBB/' %}">
+				<img src="../../static/app/img/logo.png" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+  			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav-text navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{% url 'PBB/' %}">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/directory' %}">DIRECTORY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/dashboard' %}">DASHBOARD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/submitreview' %}">SUBMIT REVIEW</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/about' %}">ABOUT</a></li>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/contact' %}">CONTACT</a></li>
+					</li>
+				</ul>
+			</div>		
+		</nav>
+
         <div class="pbbabout-container">
             <div class="pbbabout-header">
                 <h2><b>{{ title }}</b></h2>
@@ -237,5 +278,3 @@
         </div>
     </body>
 </html>
-
-{% endblock %}
