@@ -249,6 +249,14 @@ iframe {
     text-decoration: none;
 }
 
+.search {
+	background-image: url('../img/searchicon.png');
+	background-position: 8px 8px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+}
+
 footer {
 	font-family: Montserrat, sans-serif;
 }

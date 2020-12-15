@@ -58,8 +58,6 @@ def directory(request):
     js = df.reset_index().to_json(orient='records')
     data = json.loads(js)
 
-    print(data)
-
     return render(
         request,
         'pbb/directory.html',
