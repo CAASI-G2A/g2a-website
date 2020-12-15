@@ -1,175 +1,217 @@
-{% extends "pbb/layout.html" %}
-{% block content %}
-
 <!DOCTYPE html>
-    <html>
-        <head>
-            <link rel="stylesheet" href="../../static/app/content/landing.css">
-        </head>
-        <body>
-            <div class="landing__container">
+<html>
+	<head>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-                <div class="landing__header">
-                    <h1><b>412Connect</b></h1>
-                    <h3>Connecting communities together, <br>one business at a time</h3>
-                    <div class="landing__header-mission">
-                        <a href=#about>our mission + story >></a>
-                    </div>
-                </div>
+		<link rel="stylesheet" href="../../static/app/content/styles.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-                <div class="landing__row">
-                    <div class="landing__col">
-                        <div class="landing__card">
-                            <div class="landing__card-body">
-                                <h5><b>Submit a Review</b></h5>
-                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                <div class="landing__card-button">
-                                    <a href='#'>submit</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="landing__col">
-                        <div class="landing__card">
-                            <div class="landing__card-body">
-                                <h5><b>Register a ConnecTeam</b></h5>
-                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                <div class="landing__card-button">
-                                    <a href='#'>register</a>
-                                </div>      
-                            </div>                    
-                        </div>
-                    </div>
-                    <div class="landing__col">
-                        <div class="landing__card">
-                            <div class="landing__card-body">
-                                <h5><b>Add your Business</b></h5>
-                                <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                <div class="landing__card-button">
-                                    <a href='#'>join</a>
-                                </div>    
-                            </div>                    
-                        </div>
-                    </div>
-                </div>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <div class="landing__impact">
-                    <h2>Impact</h2>
-                    <div class="landing__impact-stats">
-                        <div class="landing__impact-row">
-                            <div class="landing__impact-col">
-                                <h3><b>157</b> Reviews Contributed</h3>
-                            </div>
-                            <div class="landing__impact-col">
-                                <h3><b>82</b> Unique Businesses Visited</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="landing__impact-map">
-                        <iframe className="landing__impact-map" src="https://www.google.com/maps/d/embed?mid=13Vj9dNMN0VxpkKKrpjtycQPiuVbVKV3r" 
-                        width="800" height="480"></iframe>
-                        <div class="landing__impact-button" >
-                            <a href='#'>Click to see your ConnecTeam's Progress Dashboard!</a>
-                            <img src="../../static/app/img/arrow1.png" alt="arrow" style="width:50px">
-                        </div>
-                    </div>
-                </div>
+		<title>PBB</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body class="text-center main-color">
+		<!-- Navigation Bar -->
+		<nav class="color3 navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="index.html">
+				<img src="../../static/app/img/logo.png" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+  			</button>
 
-                <div class="landing_directory">
-                    <div class="landing__directory-row">
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="landing__directory-row">
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                        <div class="landing__directory-col">
-                            <h2 style="text-align: center;">Business Directory</h2>
-                        </div>
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="landing__directory-row">
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                        <div class="landing__directory-col">
-                            <div class="landing__directory-card">
-                                <h4>Restaurants</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav-text navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{% url 'PBB/' %}">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/directory' %}">DIRECTORY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/dashboard' %}">DASHBOARD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/submitreview' %}">SUBMIT REVIEW</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/about' %}">ABOUT</a></li>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/contact' %}">CONTACT</a></li>
+					</li>
+				</ul>
+			</div>		
+		</nav>
 
-                <div class="landing__spotlights">
-                    <h2>Business Spotlights</h2>
-                    <div class="landing__row">
-                        <div class="landing__col">
-                            <div class="landing__card">
-                                <div class="landing__card-body">
-                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
-                                    <h5><b>Andi's Cake Shop</b></h5>
-                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                    <div class="landing__card-button">
-                                        <a href='#'>Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="landing__col">
-                            <div class="landing__card">
-                                <div class="landing__card-body">
-                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
-                                    <h5><b>Andi's Cake Shop</b></h5>
-                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                    <div class="landing__card-button">
-                                        <a href='#'>Learn more</a>
-                                    </div>      
-                                </div>                    
-                            </div>
-                        </div>
-                        <div class="landing__col">
-                            <div class="landing__card">
-                                <div class="landing__card-body">
-                                    <img src="../../static/app/img/blackbusiness5.jpg" alt="business-photo-ex" style="width: 100%;">
-                                    <h5><b>Andi's Cake Shop</b></h5>
-                                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
-                                    <div class="landing__card-button">
-                                        <a href='#'>Learn more</a>
-                                    </div>    
-                                </div>                    
-                            </div>
-                        </div>
-                    </div>
+		<!-- Main Body -->
+		<div class="main-color jumbo jumbotron jumbotron-fluid">
+			<div class="container-fluid text-lg-left">
+				<h1 class="display-4 head-font">Project 412 Connect</h1>
+				<hr class="my-4">
+				<p>
+					[SHORT DESCRIPTION]
+				</p>
+			</div>
+		</div>
+
+		<div class="color2 pad-top pad-bot">
+			<div class="landing__row">
+		        <div class="landing__col">
+		            <div class="landing__card">
+		                <div class="landing__card-body">
+		                    <h5><b>Submit a Review</b></h5>
+		                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+		                    <div class="landing__card-button">
+		                        <a href='#'>submit</a>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="landing__col">
+		            <div class="landing__card">
+		                <div class="landing__card-body">
+		                    <h5><b>Register a ConnecTeam</b></h5>
+		                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+		                    <div class="landing__card-button">
+		                        <a href='#'>register</a>
+		                    </div>      
+		                </div>                    
+		            </div>
+		        </div>
+		        <div class="landing__col">
+		            <div class="landing__card">
+		                <div class="landing__card-body">
+		                    <h5><b>Add your Business</b></h5>
+		                    <p>Don’t see your business on our directory? If you are a minority owner and would like to be a part of our growing program, please join us!</p>
+		                    <div class="landing__card-button">
+		                        <a href='#'>join</a>
+		                    </div>    
+		                </div>                    
+		            </div>
+		        </div>
+		    </div>
+
+		  	<div class="thumb">
+		  		<img src="http://placehold.it/350x350">
+		  		<div>
+			  		<h3>Our Mission</h3>
+			  		<hr class="my-1">
+			  		<p>[MISSION STATEMENT / ALSO NEED DIFFERENT PIC]</p>
+			  		<button type="button" class="btn btn-primary">Learn More</button>
+			  	</div>
+			</div>
+			<div class="pad-top-lg">
+				<h2>Featured Businesses</h2>
+				<div id="slideshow" class="carousel slide mx-auto pad-top-sm" data-ride="carousel">
+				    <ol class="carousel-indicators">
+				        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+				        <li data-target="#slideshow" data-slide-to="1"></li>
+				        <li data-target="#slideshow" data-slide-to="2"></li>
+				    </ol>
+				    <div class="carousel-inner">
+				        <div class="carousel-item active">
+				            <img class="d-block w-100" src="http://placehold.it/1920x1080">
+				            <div class="carousel-caption d-none d-md-block">
+				                <h5></h5>
+				                <p></p>
+				            </div>
+				        </div>
+				        <div class="carousel-item">
+				            <img class="d-block w-100" src="http://placehold.it/1920x1080">
+				            <div class="carousel-caption d-none d-md-block">
+				                <h5></h5>
+				                <p></p>
+				            </div>
+				        </div>
+				        <div class="carousel-item">
+				            <img class="d-block w-100" src="http://placehold.it/1920x1080">
+				            <div class="carousel-caption d-none d-md-block">
+				                <h5></h5>
+				                <p></p>
+				            </div>
+				        </div>
+				    </div>
+				    <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+				        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Previous</span>
+				    </a>
+				    <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+				        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Next</span>
+				    </a>
+				</div>
+			</div>
+
+			<div class="landing__impact-map">
+                <iframe className="landing__impact-map" src="https://www.google.com/maps/d/embed?mid=13Vj9dNMN0VxpkKKrpjtycQPiuVbVKV3r" 
+                width="800" height="480"></iframe>
+                <div class="landing__impact-button" >
+                    <a href='#'>Click to see your ConnecTeam's Progress Dashboard!</a>
+                    <img src="../../static/app/img/arrow1.png" alt="arrow" style="width:50px">
                 </div>
             </div>
-        </body>
-    </html>
+		</div>
 
-{% endblock %}
+		<div class="color3 pad-top pad-bot">
+			<div class="text-section">
+		  		<div>
+			  		<h2>Become a volunteer</h2>
+			  		<hr class="my-1">
+			  		<p>[TEXT / ALSO NEED DIFFERENT PIC]</p>
+			  		<button type="button" class="btn btn-primary">Learn More</button>
+			  	</div>
+			  	<img src="http://placehold.it/475x475">
+			</div>
+		</div>
+
+		<footer class="container py-5 main-color">
+		  <div class="row text-md-left">
+		  	<div class="col-4 col-md header">
+		  		<img class="logo" src="../../static/app/img/logo.png">
+		  		<p>Grief to Action</p>
+		  	</div>
+		  </div>
+		  <div class="row text-md-left">
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li>
+		        	<img src="../../static/app/img/email.png">
+		        	<a class="text-muted" href="">E-mail</a>
+		        </li>
+		        <li>
+		        	<img src="../../static/app/img/instagram.png">
+		        	<a class="text-muted" href="">Instagram</a>
+		        </li>
+		        <li>
+		        	<img src="../../static/app/img/facebook.png">
+		        	<a class="text-muted" href="">Facebook</a>
+		        </li>
+		      </ul>
+		    </div>
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li class="text-muted foot-head">General</li>
+		        <li class="text-muted"><a class="text-muted" href="">About Us</a></li>
+		        <li class="text-muted"><a class="text-muted" href="">Contact Us</a></li>
+		      </ul>
+		    </div>
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li class="text-muted foot-head"> Other Projects</li>
+		        <li class="text-muted"><a class="text-muted" href="">Police Union Contract Reform</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</footer>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

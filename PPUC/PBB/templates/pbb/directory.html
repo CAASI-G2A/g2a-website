@@ -1,8 +1,212 @@
-{% extends "pbb/layout.html" %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-{% block content %}
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="datatables.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../static/app/content/styles.css">
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% endblock %}
+		<title>PBB</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body class="text-center main-color">
+		<!-- Navigation Bar -->
+		<nav class="color3 navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="index.html">
+				<img src="../../static/app/img/logo.png" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+  			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav-text navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/' %}">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{% url 'PBB/' %}">DIRECTORY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/dashboard' %}">DASHBOARD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/submitreview' %}">SUBMIT REVIEW</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/about' %}">ABOUT</a></li>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'PBB/contact' %}">CONTACT</a></li>
+					</li>
+				</ul>
+			</div>		
+		</nav>
+
+		<!-- Main Body -->
+		<div class="main-color">
+			<div class="container-fluid text-lg-left pad-top-sm pad-bot-sm">
+				<h1 class="display-4 head-font">Directory</h1>
+				<hr class="my-2">
+				<p>
+					[SHORT DESCRIPTION]
+				</p>
+			</div>
+		</div>
+
+		<div class="color3 pad-top-lg pad-bot-lg">
+			<div class="container-fluid">
+				<div class="row text-md-left dir">
+					<div class="col-2">
+						<div class="filter-box">
+							<h5>Filter</h5>
+							<!--Accordion wrapper-->
+							<div class="accordion md-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+							  <!-- Accordion card -->
+							  <div class="card">
+							    <!-- Card header -->
+							    <div class="card-header" role="tab" id="heading1">
+							      <a data-toggle="collapse" data-parent="#accordion" href="#filter1" aria-expanded="true"
+							        aria-controls="filter1">
+							        <div class="text">
+								        <p>Business Type</p>
+								        <p><i class="fas"></i></p>
+								    </div>
+							      </a>
+							    </div>
+
+							    <!-- Card body -->
+							    <div id="filter1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
+							      data-parent="#accordion">
+							      <div class="filter-check card-body">
+							      	<div class="form-check">
+										<input type="checkbox" class="form-check-input filled-in" id="foodCheck">
+										<label class="form-check-label" for="foodCheck">Food</label>
+									</div>
+							        <div class="form-check">
+										<input type="checkbox" class="form-check-input filled-in" id="hairCheck">
+										<label class="form-check-label" for="hairCheck">Hair Care</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="clothingCheck">
+										<label class="form-check-label" for="clothingCheck">Clothing</label>
+									</div>
+							      </div>
+							    </div>
+							  </div>
+							  <!-- Accordion card -->
+
+							  <!-- Accordion card -->
+							  <div class="card">
+							    <!-- Card header -->
+							    <div class="card-header" role="tab" id="heading2">
+							      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#filter2"
+							        aria-expanded="false" aria-controls="filter2">
+							        <div class="text">
+								        <p>Location</p>
+								        <p><i class="fas"></i></p>
+								    </div>
+							      </a>
+							    </div>
+
+							    <!-- Card body -->
+							    <div id="filter2" class="collapse" role="tabpanel" aria-labelledby="heading2"
+							      data-parent="#accordion">
+							      <div class="card-body">
+							        Anim.
+							      </div>
+							    </div>
+							  </div>
+							  <!-- Accordion card -->
+							</div>
+							<!-- Accordion wrapper -->
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col"> 
+						<input class="form-control search" id="search" type="text" placeholder="Search for a business...">
+						<br>
+						<table id="dirTable" class="sortable">
+							<thead>
+								<tr>
+									<th class="th-sm">Name</th>
+									<th>Address</th>
+									<th>Rating</th>
+									<th>Category</th>
+								</tr>
+							</thead>
+							<tbody id="directory">
+							{% if data %}
+							{% for i in data %}
+								<tr>
+									<td>{{i.Name}}</td>
+									<td>{{i.Address}}</td>
+									<td>{{i.Rating}}</td>
+									<td>{{i.Category}}</td>
+								</tr>
+							{% endfor %}
+							{% endif %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer class="container py-5 main-color">
+		  <div class="row text-md-left">
+		  	<div class="col-4 col-md header">
+		  		<img class="logo" src="../../static/app/img/logo.png">
+		  		<p>Grief to Action</p>
+		  	</div>
+		  </div>
+		  <div class="row text-md-left">
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li>
+		        	<img src="../../static/app/img/email.png">
+		        	<a class="text-muted" href="">E-mail</a>
+		        </li>
+		        <li>
+		        	<img src="../../static/app/img/instagram.png">
+		        	<a class="text-muted" href="">Instagram</a>
+		        </li>
+		        <li>
+		        	<img src="../../static/app/img/facebook.png">
+		        	<a class="text-muted" href="">Facebook</a>
+		        </li>
+		      </ul>
+		    </div>
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li class="text-muted foot-head">General</li>
+		        <li class="text-muted"><a class="text-muted" href="">About Us</a></li>
+		        <li class="text-muted"><a class="text-muted" href="">Contact Us</a></li>
+		      </ul>
+		    </div>
+		    <div class="col-4 col-md">
+		      <ul class="list-unstyled text-small">
+		        <li class="text-muted foot-head"> Other Projects</li>
+		        <li class="text-muted"><a class="text-muted" href="">Police Union Contract Reform</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</footer>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<script type="text/javascript" src="../../static/app/scripts/datatables.min.js"></script>
+		<script src='../../static/app/scripts/directory.js'></script>
+	</body>
+</html>
