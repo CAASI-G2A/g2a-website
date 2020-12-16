@@ -28,24 +28,26 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="nav-text navbar-nav ml-auto">
-					<li class="nav-item">
+          {% with url_name=request.resolver_match.url_name %}
+					<li class="nav-item {% if url_name == 'PBB/' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/' %}">HOME</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {% if url_name == 'PBB/directory' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/directory' %}">DIRECTORY</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {% if url_name == 'PBB/dashboard' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/dashboard' %}">DASHBOARD</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {% if url_name == 'PBB/submitreview' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/submitreview' %}">SUBMIT REVIEW</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {% if url_name == 'PBB/about' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/about' %}">ABOUT</a></li>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item {% if url_name == 'PBB/contact' %}active{% endif %}">
 						<a class="nav-link" href="{% url 'PBB/contact' %}">CONTACT</a></li>
 					</li>
+          {% endwith %}
 				</ul>
 			</div>		
         </nav>
