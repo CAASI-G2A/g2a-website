@@ -85,8 +85,8 @@
 							    <div id="filter1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
 							      data-parent="#accordion">
 							      <div class="filter-check card-body" id="filterBox">
-							      	<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="barCheck">
+							      	<div class="form-check">	
+							      		<input type="checkbox" class="form-check-input" id="barCheck">
 										<label class="form-check-label" for="barCheck">Bar</label>
 									</div>
 									<div class="form-check">
@@ -98,13 +98,17 @@
 										<label class="form-check-label" for="educationCheck">Education</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="financeCheck">
-										<label class="form-check-label" for="financeCheck">Finance</label>
-									</div>					
-							      	<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="eventsCheck">
+										<label class="form-check-label" for="eventsCheck">Events</label>
+									</div>
+									<div class="form-check">
 										<input type="checkbox" class="form-check-input filled-in" id="foodCheck">
 										<label class="form-check-label" for="foodCheck">Food</label>
 									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="generalCheck">
+										<label class="form-check-label" for="generalCheck">General Services</label>
+									</div>					
 									<div class="form-check">
 										<input type="checkbox" class="form-check-input" id="gymCheck">
 										<label class="form-check-label" for="gymCheck">Gym</label>
@@ -118,28 +122,16 @@
 										<label class="form-check-label" for="healthCheck">Health</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="insuranceCheck">
-										<label class="form-check-label" for="insuranceCheck">Insurance Agency</label>
+										<input type="checkbox" class="form-check-input" id="nonCheck">
+										<label class="form-check-label" for="nonCheck">Nonprofit</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="laundryCheck">
-										<label class="form-check-label" for="laundryCheck">Laundry</label>
-									</div>
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="lawyerCheck">
-										<label class="form-check-label" for="lawyerCheck">Lawyer</label>
-									</div>
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="realCheck">
-										<label class="form-check-label" for="realCheck">Real Estate Agency</label>
+										<input type="checkbox" class="form-check-input" id="profCheck">
+										<label class="form-check-label" for="profCheck">Professional Services</label>
 									</div>
 									<div class="form-check">
 										<input type="checkbox" class="form-check-input" id="shoppingCheck">
 										<label class="form-check-label" for="shoppingCheck">Shopping</label>
-									</div>
-									<div class="form-check">
-										<input type="checkbox" class="form-check-input" id="otherCheck">
-										<label class="form-check-label" for="otherCheck">Other</label>
 									</div>
 							      </div>
 							    </div>
@@ -183,6 +175,7 @@
 									<th class="th-lg">Address</th>
 									<th class="th-sm">Rating</th>
 									<th class="th-md">Category</th>
+									<th style="display:none;">G2A_Keywords</th>
 								</tr>
 							</thead>
 							<tbody id="directory">
@@ -193,6 +186,7 @@
 									<td>{{i.Address}}</td>
 									<td>{{i.Rating}}</td>
 									<td>{{i.Category}}</td>
+									<td style="display:none;">{{i.G2A_Keywords}}</td>
 								</tr>
 							{% endfor %}
 							{% endif %}

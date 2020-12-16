@@ -1,17 +1,15 @@
 document.getElementById("barCheck").addEventListener("change", filterDir, false);
 document.getElementById("beautyCheck").addEventListener("click", filterDir, false);
 document.getElementById("educationCheck").addEventListener("click", filterDir, false);
-document.getElementById("financeCheck").addEventListener("click", filterDir, false);
+document.getElementById("eventsCheck").addEventListener("click", filterDir, false);
 document.getElementById("foodCheck").addEventListener("click", filterDir, false);
+document.getElementById("generalCheck").addEventListener("click", filterDir, false);
 document.getElementById("gymCheck").addEventListener("click", filterDir, false);
 document.getElementById("hairCheck").addEventListener("click", filterDir, false);
 document.getElementById("healthCheck").addEventListener("click", filterDir, false);
-document.getElementById("insuranceCheck").addEventListener("click", filterDir, false);
-document.getElementById("laundryCheck").addEventListener("click", filterDir, false);
-document.getElementById("lawyerCheck").addEventListener("click", filterDir, false);
-document.getElementById("realCheck").addEventListener("click", filterDir, false);
+document.getElementById("nonCheck").addEventListener("click", filterDir, false);
+document.getElementById("profCheck").addEventListener("click", filterDir, false);
 document.getElementById("shoppingCheck").addEventListener("click", filterDir, false);
-document.getElementById("otherCheck").addEventListener("click", filterDir, false);
 
 var checks = [];
 
