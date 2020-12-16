@@ -1,0 +1,186 @@
+Index,Address,Name,Rating,Google Keywords,Number of Ratings,Latitude,Longitude,Category,G2A Keywords
+0,"5935 Penn Ave, Pittsburgh, PA 15206, United States",360 Cafe LLC,5,"['health', 'point_of_interest', 'establishment']",2,40.4618393,-79.9254337,Health,"['wellness', 'holistic', 'healing'] "
+1,"531 N Homewood Ave, Pittsburgh, PA 15208, United States",7 senses,4.6,"['restaurant', 'meal_delivery', 'food', 'point_of_interest', 'establishment']",22,40.4536691,-79.8984105,Food,"['american', 'restaurant', 'catering', 'events']"
+2,"900 Wood St, Pittsburgh, PA 15221, United States",9 Cafe,5,"['restaurant', 'food', 'point_of_interest', 'establishment']",16,40.4429296,-79.8850435,Food,"['restaurant,' 'seafood']"
+3,"620 Wood St, Pittsburgh, PA 15221, United States","A Peace of Mind, Inc.",4.5,"['gym', 'health', 'point_of_interest', 'establishment']",8,40.441095,-79.885857,Gym,"['art,' 'aerobics,' 'yoga,' 'pilates', 'zumba', 'daycare', 'wellness', 'nonprofit', 'child care']"
+4,"640 Rodi Rd #2, Pittsburgh, PA 15235, United States",AGR Settlement LLC,0,"['finance', 'insurance_agency', 'point_of_interest', 'establishment']",0,40.4479839,-79.8279849,Professional Services,"['titles', 'notary', 'real estate','settlement']"
+5,"4901 Penn Ave, Pittsburgh, PA 15224, United States",Arts & Crafts: Botanica & Occult Shop,4.7,"['point_of_interest', 'store', 'establishment']",50,40.4654827,-79.9450426,Shopping,"['witchcraft', 'wicca', 'cleansing', 'reiki', 'health']"
+6,"416 Library St, Braddock, PA 15104, United States",Aunt Cheryl's Cafe,4.4,"['restaurant', 'food', 'point_of_interest', 'establishment']",46,40.401447,-79.86499,Food,"['restaurant', 'cafe']"
+7,"1619 Lowrie St, Pittsburgh, PA 15212, United States",Bellevue Beauty Bar and Spa,5,"['beauty_salon', 'point_of_interest', 'establishment']",1,40.4631805,-79.9828268,Beauty Salon,"['skincare', 'waxing', 'lash', 'brow', 'tanning', 'makeup']"
+8,"378 Broadway Blvd, Pitcairn, PA 15140, United States",Back To The Foodture,4.8,"['restaurant', 'food', 'point_of_interest', 'establishment']",60,40.4015693,-79.7803957,Food,"['restaurant', 'american']"
+9,"5911 Penn Ave, Pittsburgh, PA 15206, United States",Bat's Barber Shop,4.4,"['hair_care', 'health', 'point_of_interest', 'establishment']",166,40.462156,-79.926387,Hair Care,"['barber shop', 'hair']"
+10,"770 Trumbull Dr, Pittsburgh, PA 15220, United States",Beanie Paints LLC,5,"['point_of_interest', 'establishment']",20,40.4180701,-80.0561326,Events,"['paint', 'art']"
+11,"1415 North Lang Avenue, Pittsburgh, PA,15208, United States",B F Design Associates LLC,5,"['point_of_interest', 'establishment']",5,40.462862,-79.897787,Events,['event planning']
+12,"2037 Centre Ave, Pittsburgh, PA 15219, United States",Black Beauty Lounge,4.1,"['night_club', 'bar', 'point_of_interest', 'establishment']",12,40.4444165,-79.9792423,Bar,['night club']
+14,"1703 Monongahela Ave, Pittsburgh, PA 15218, United States",Brrats Deli,4.7,"['restaurant', 'food', 'point_of_interest', 'establishment']",77,40.4235144,-79.8911308,Food,"['restaurant', 'deli']"
+15,"623 Brown Ave, Turtle Creek, PA 15145, United States",Mama Meatball's Pizzeria,4.6,"['meal_delivery', 'food', 'point_of_interest', 'establishment']",202,40.423987,-79.834749,Food,"['restaurant', 'pizza']"
+16,"4901 Second Avenue, Pittsburgh, PA 15207, United States",C&D’s Kitchen,4.6,"['restaurant', 'food', 'point_of_interest', 'establishment']",66,40.41006,-79.9437579,Food,"['restaurant', 'soul food'']"
+17,"12 N Balph Ave, Bellevue, PA 15202, United States",CYourBeauty,5,"['hospital', 'health', 'point_of_interest', 'establishment']",2,40.4959167,-80.0552051,Health,"['holistic', 'wellness', 'reiki', 'yoga', 'healing']"
+18,"2700 Shadeland Ave, Pittsburgh, PA 15212, United States",Cafe On the Corner,4.8,"['cafe', 'restaurant', 'food', 'point_of_interest', 'establishment']",45,40.4692099,-80.0300121,Food,"['restaurant', 'cafe', 'soul food', 'catering', 'events']"
+19,"1710 Jancey St, Pittsburgh, PA 15206, United States",Camille Et Robert Salon,4,"['hair_care', 'point_of_interest', 'establishment']",1,40.4849093,-79.927321,Beauty Salon,"['hair', 'nails', 'styling', 'hair care']"
+20,"1825 E Carson St, Pittsburgh, PA 15203, United States",Carmi Soul Food Restaurant,4.2,"['bar', 'restaurant', 'food', 'point_of_interest', 'establishment']",1147,40.428892,-79.979488,Food,"['restaurant', 'soul food'', 'catering', 'events']"
+21,"5904 Bryant St, Pittsburgh, PA 15206, United States",Casa Brasil,4.8,"['restaurant', 'food', 'point_of_interest', 'establishment']",133,40.4754732,-79.919708,Food,"['restaurant', 'brazilian', 'catering']"
+22,"2193 Babcock Blvd, Pittsburgh, PA 15209, United States",Chef’s Table,4.9,"['restaurant', 'food', 'point_of_interest', 'establishment']",34,40.5103337,-79.9933539,Food,"['restaurant', 'american', 'health']"
+23,"5921 Baum Blvd # 8, Pittsburgh, PA 15206, United States",Chelsea Rae Salon,5,"['hair_care', 'point_of_interest', 'establishment']",4,40.460522,-79.92724,Hair Care,"['hair', 'styling']"
+24,"211 Nelbon Ave, Pittsburgh, PA 15235, United States",Children's Ark Creative Learning Center,5,"['point_of_interest', 'establishment']",2,40.459015,-79.8438109,Education,['child care']
+26,"5935 Penn Ave, Pittsburgh, PA 15206, United States",CobblerWorld,4.5,"['bakery', 'food', 'point_of_interest', 'store', 'establishment']",15,40.46196,-79.92538,Food,['bakery']
+27,"7120 Kelly St, Pittsburgh, PA 15208, United States",Community Empowerment Association,4.6,"['point_of_interest', 'establishment']",29,40.4556585,-79.8980125,Nonprofit,"['community', 'empowerment', 'training', 'education']"
+56,"2351 Century Dr, West Mifflin, PA 15122, United States",Cornbread West Mifflin,4.2,"['restaurant', 'food', 'point_of_interest', 'establishment']",97,40.3415049,-79.9462011,Food,"['restaurant', 'soul food']"
+57,"764 Penn Ave, Pittsburgh, PA 15221, United States",Crabs R Us,4,"['restaurant', 'food', 'point_of_interest', 'establishment']",355,40.4429903,-79.8829748,Food,"['restaurant', 'seafood', 'catering', 'events']"
+58,"3120 Chartiers Ave, Pittsburgh, PA 15204, United States",Craig's,4.1,"['bar', 'point_of_interest', 'establishment']",41,40.4536213,-80.0615903,Bar,"['restaurant', 'entertainment', 'food']"
+60,"505 Grant Ave, Millvale, PA 15209, United States",Curated Flame,5,"['point_of_interest', 'store', 'establishment']",21,40.4804326,-79.9742952,Shopping,
+61,"720 N Homewood Ave, Pittsburgh, PA 15208, United States",Dana's Bakery,4.6,"['bakery', 'food', 'point_of_interest', 'store', 'establishment']",172,40.456127,-79.896575,Food,
+62,"3506 Main St, Munhall, PA 15120, United States",Dayna Delgado Photography,5,"['point_of_interest', 'establishment']",6,40.3856429,-79.9033866,Professional Services,['events']
+64,"436 Seventh Ave, Pittsburgh, PA 15219, United States",African American Chamber of Commerce of Western Pennsylvania,0,"['point_of_interest', 'establishment']",0,40.442124,-79.9955389,Professional Services,
+65,"532 N Homewood Ave, Pittsburgh, PA 15208, United States",Everyday Cafe,4.6,"['cafe', 'food', 'point_of_interest', 'establishment']",225,40.4532501,-79.8981302,Food,
+66,"1849 Montier St, Pittsburgh, PA 15221, United States",Exotic Hush Boutique,5,"['point_of_interest', 'clothing_store', 'store', 'establishment']",2,40.4488944,-79.8677697,Shopping,
+67,"123 Mall Cir Dr, Monroeville, PA 15146, United States",Femi,3.5,"['point_of_interest', 'clothing_store', 'store', 'establishment']",25,40.4290797,-79.7944644,Shopping,
+68,"796 Penn Ave, Pittsburgh, PA 15221, United States",Fireside Caribbean Restaurant,4.4,"['restaurant', 'food', 'point_of_interest', 'establishment']",511,40.4427209,-79.882143,Food,
+69,"3231 Brighton Rd, Pittsburgh, PA 15212, United States",Flavors Famous Street Food,4.6,"['meal_takeaway', 'restaurant', 'food', 'point_of_interest', 'establishment']",136,40.4758776,-80.0315512,Food,
+70,"525 Smithfield St, Pittsburgh, PA 15222, United States",Fogo de Chão Brazilian Steakhouse,4.5,"['restaurant', 'food', 'point_of_interest', 'establishment']",1264,40.44074,-79.9984283,Food,
+71,"6140 Station St, Pittsburgh, PA 15206, United States",412 Food Rescue,4.7,"['point_of_interest', 'establishment']",12,40.4624179,-79.9219696,Nonprofit,
+72,"449 Atwood St, Pittsburgh, PA 15213, United States",Frenchi's Deli & Market,4.8,"['convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",73,40.4371953,-79.9525849,Food,
+73,"1503 E Carson St, Pittsburgh, PA 15203, United States",Fudge Farm - E. Carson St. (South Side),4.5,"['food', 'point_of_interest', 'store', 'establishment']",177,40.4289152,-79.9832267,Food,
+74,"100 Mulberry St, Pittsburgh, PA 15235, United States",Future Focus Child Care,1.7,"['point_of_interest', 'establishment']",3,40.4561772,-79.8450923,Education,['child care']
+76,"301 E Carson St, Pittsburgh, PA 15219, United States",Gabriella's Gourmet,4.6,"['restaurant', 'food', 'point_of_interest', 'establishment']",110,40.429707,-79.997613,Food,
+77,"7246 Kelly St, Pittsburgh, PA 15208, United States",Galaxy Lounge & Entertainment Center,4.1,"['night_club', 'bar', 'point_of_interest', 'establishment']",335,40.4548804,-79.8954075,Bar,
+78,"1256 Franklin Ave, Pittsburgh, PA 15221, United States",Global Human Performance,5,"['health', 'point_of_interest', 'establishment']",13,40.437526,-79.8745428,Gym,
+79,"4517 Butler St, Pittsburgh, PA 15201, United States",The Goldmark,4.4,"['bar', 'point_of_interest', 'establishment']",200,40.4727304,-79.9591666,Bar,
+80,"2537 Wylie Ave, Pittsburgh, PA 15219, United States",Grandma B's,4.6,"['restaurant', 'food', 'point_of_interest', 'establishment']",336,40.4486945,-79.9705415,Food,
+81,"2621 Webster Ave, Pittsburgh, PA 15219, United States",Grandma Joan's,0,"['food', 'point_of_interest', 'establishment']",0,40.4506636,-79.9704904,Food,
+82,"1817 Leechburg Rd, Penn Hills, PA 15235, United States",Griff's Grounds Coffe',5,"['cafe', 'food', 'point_of_interest', 'store', 'establishment']",98,40.4933262,-79.790119,Food,
+83,"906A Western Ave, Pittsburgh, PA 15233, United States",Happy Day Dessert Factory,4.9,"['food', 'point_of_interest', 'establishment']",91,40.4521606,-80.0170081,Food,
+84,"203 Whitaker St, Munhall, PA 15120, United States","House of Soul Catering, LLC.",4.1,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",147,40.4004674,-79.8868422,Food,
+86,"5935 Penn Ave, Pittsburgh, PA 15206, United States",IMIHI Designs,5,"['park', 'point_of_interest', 'clothing_store', 'store', 'establishment']",2,40.4618393,-79.9254337,Shopping,
+87,"605 McFarland Rd, Latrobe, PA 15650, United States",Indulgence Salon,5,"['beauty_salon', 'hair_care', 'point_of_interest', 'establishment']",11,40.3313094,-79.3964436,Beauty Salon,
+88,"900 Wood St, Pittsburgh, PA 15221, United States",Jameelah's Creative Creations,0,"['clothing_store', 'jewelry_store', 'point_of_interest', 'store', 'establishment']",0,40.4428896,-79.8848659,Shopping,
+89,"4929 Centre Ave, Pittsburgh, PA 15213, United States",Jeffries Smith & Associates PC,4.7,"['dentist', 'health', 'point_of_interest', 'establishment']",20,40.4541778,-79.9451675,Health,['professional services']
+91,"2450 Wylie Ave, Pittsburgh, PA 15219, United States",Jerry's Market & Pizza Shop,5,"['restaurant', 'food', 'point_of_interest', 'establishment']",4,40.4479701,-79.9717698,Food,
+92,"3636 Boulevard of the Allies, Pittsburgh, PA 15213, United States",Kiss Joseph MD,0,"['doctor', 'health', 'point_of_interest', 'establishment']",0,40.4342276,-79.9534612,Health,['professional services']
+93,"4415 Fifth Ave Ste 120, Pittsburgh, PA 15213, United States",Kevin's Deli LLC,4.9,"['food', 'point_of_interest', 'store', 'establishment']",39,40.447309,-79.9513939,Food,
+94,"5935 Penn Ave, Pittsburgh, PA 15206, United States",Kin of Duncan,5,"['point_of_interest', 'clothing_store', 'store', 'establishment']",2,40.4618393,-79.9254337,Shopping,
+96,"303 S Trenton Ave, Pittsburgh, PA 15221, United States",Knotzland Bespoke Bowtie Studio|Showroom,5,"['point_of_interest', 'store', 'establishment']",17,40.4440176,-79.8919155,Shopping,
+98,"715 N Highland Ave, Pittsburgh, PA 15206, United States",Albert Anthony Real Estate,3.2,"['real_estate_agency', 'point_of_interest', 'establishment']",14,40.468452,-79.9218506,Professional Services,
+99,"5527 Walnut St # 2, Pittsburgh, PA 15232, United States",La Feria,4.1,"['restaurant', 'food', 'point_of_interest', 'establishment']",108,40.4515541,-79.9328089,Food,
+100,"5341 Penn Ave, Pittsburgh, PA 15224, United States",LaLa's Salon & Spa,4.7,"['beauty_salon', 'point_of_interest', 'establishment']",88,40.4648331,-79.9369131,Beauty Salon,
+101,"823 E Warrington Ave, Pittsburgh, PA 15210, United States",Leon's Caribbean Food,4.1,"['restaurant', 'food', 'point_of_interest', 'establishment']",313,40.4218923,-79.9927935,Food,
+102,"200 Mall Cir Dr, Monroeville, PA 15146, United States",Lettuce Eat,4.7,"['restaurant', 'food', 'point_of_interest', 'establishment']",35,40.4295803,-79.7953705,Food,
+103,"4836 Penn Ave, Pittsburgh, PA 15224, United States",Level Up Studios,5,"['point_of_interest', 'establishment']",13,40.4652445,-79.9457305,Education,
+105,"114 E 8th Ave, Homestead, PA 15120, United States",Live Fresh Cold Pressed Juice + Smoothie Bar,4.9,"['meal_takeaway', 'cafe', 'restaurant', 'food', 'point_of_interest', 'establishment']",99,40.4063072,-79.9116244,Food,
+106,"420 Chartiers Ave, McKees Rocks, PA 15136, United States",Love Rocks Cafe',5,"['cafe', 'food', 'point_of_interest', 'establishment']",5,40.4649176,-80.0583647,Food,
+107,"1320 Kelton Ave, Pittsburgh, PA 15216, United States",Love Style Love,0,"['jewelry_store', 'point_of_interest', 'store', 'establishment']",0,40.3921547,-80.0369617,Shopping,
+109,"7120 Kelly St, Pittsburgh, PA 15208, United States",MA'AT Construction Group LLC,0,"['general_contractor', 'point_of_interest', 'establishment']",0,40.4555176,-79.8981222,Professional Services,['construction']
+110,"209 S Craig St, Pittsburgh, PA 15213, United States",Mark Anthony Hair Salon,4.7,"['beauty_salon', 'hair_care', 'point_of_interest', 'establishment']",109,40.4459578,-79.9486846,Beauty Salon,
+112,"7721 Mulford St, Pittsburgh, PA 15208, United States",McCoy's Learning Center,5,"['point_of_interest', 'establishment']",3,40.4521313,-79.888257,Education,
+113,"2101 Centre Ave, Pittsburgh, PA 15219, United States",Molly's World Boutique,5,"['clothing_store', 'point_of_interest', 'store', 'establishment']",7,40.4444764,-79.9788407,Shopping,
+114,"369 Coltart Ave, Pittsburgh, PA 15213, United States",Monroes clubhouse childcare center,4.2,"['point_of_interest', 'establishment']",9,40.4364271,-79.956647,Education,['child care']
+115,"5850 Ellsworth Ave #230, Pittsburgh, PA 15232, United States",The Law Office of Shaheen Wallace,5,"['lawyer', 'point_of_interest', 'establishment']",11,40.4568715,-79.9294162,Professional Services,['lawyer']
+116,"807 Wallace Ave, Pittsburgh, PA 15221, United States",Jean’s Southern Cuisine,4.2,"['restaurant', 'food', 'point_of_interest', 'establishment']",219,40.4437851,-79.8805148,Food,
+117,"4510 Liberty Ave, Pittsburgh, PA 15224, United States",Nana's Place By Gibson,4.6,"['restaurant', 'food', 'point_of_interest', 'establishment']",14,40.4627595,-79.9515605,Food,
+118,"531 Greenfield Ave, Pittsburgh, PA 15207, United States",Natural Expressions Beauty Inc,4.8,"['spa', 'beauty_salon', 'hair_care', 'health', 'point_of_interest', 'establishment']",10,40.4261184,-79.9413196,Beauty Salon,
+119,"315 E Carson St, Pittsburgh, PA 15219, United States",New Pittsburgh Courier Pub Co,4,"['point_of_interest', 'establishment']",4,40.4295644,-79.9971877,General Services,['news']
+120,"625 Long Rd, Pittsburgh, PA 15235, United States",World Class Tavern,4.5,"['bar', 'point_of_interest', 'establishment']",74,40.4536281,-79.8377986,Bar,"['bar', 'restaurant', 'nightlife']"
+121,"1001 Cool Springs Dr, Pittsburgh, PA 15234, United States",No Limits Martial Arts,5,"['health', 'point_of_interest', 'establishment']",21,40.3506411,-80.0163876,Health,"['fitness', 'martial arts', 'health']"
+122,"1924 Monongahela Ave, Pittsburgh, PA 15218, United States",Nubian Dreamz,0,"['jewelry_store', 'point_of_interest', 'store', 'establishment']",0,40.4211243,-79.8902225,Shopping,"['jewelry', 'apparel', 'fashion']"
+123,"3856 Baytree St, Pittsburgh, PA 15214, United States",Observatory Hill Deli,4.9,"['restaurant', 'food', 'point_of_interest', 'establishment']",14,40.4896134,-80.0177646,Food,"['restaurant', 'deli']"
+124,"2333 E Carson St, Pittsburgh, PA 15203, United States",Illegal Apparel Co,0,"['clothing_store', 'point_of_interest', 'store', 'establishment']",0,40.4284508,-79.9715841,Shopping,"['apparel', 'fashion', 'streetwear']"
+125,"991 Freeport Rd, Pittsburgh, PA 15238, United States",Party City,3.9,"['home_goods_store', 'food', 'point_of_interest', 'clothing_store', 'store', 'establishment']",300,40.4882604,-79.8867062,Shopping,['event planning'
+126,"733 Washington Rd, Mt Lebanon, PA 15228, United States",Pathways to SmartCare,0,"['health', 'point_of_interest', 'establishment']",0,40.3791264,-80.0451495,Health,"['fitness', 'wellness plans', 'health']"
+127,"1204 Federal St, Pittsburgh, PA 15212, United States",Pauline's Caribbean Soul Cuisine,4.2,"['restaurant', 'food', 'point_of_interest', 'establishment']",29,40.4561256,-80.0065359,Food,"['restaurant', 'caribbean']"
+128,"249 N Craig St, Pittsburgh, PA 15213, United States",PCSI,4.5,"['point_of_interest', 'establishment']",21,40.4513675,-79.9518266,Nonprofit,"['nonprofit', 'disability services']"
+129,"7232 Hamilton Ave, Pittsburgh, PA 15208, United States",Phase III,4.3,"['bar', 'point_of_interest', 'establishment']",27,40.4542034,-79.8963077,Bar,"['nightlife', 'bar', 'night club']"
+130,"819 Penn Ave, Pittsburgh, PA 15222, United States",Pittsburgh Playwrights Theatre Company,4.7,"['point_of_interest', 'establishment']",28,40.443854,-79.998719,Events,"['theatre', 'playwriting']"
+132,"2701 Penn Ave, Pittsburgh, PA 15222, United States",Preeti's Pitt LLC,4.1,"['bar', 'restaurant', 'food', 'point_of_interest', 'establishment']",328,40.4560533,-79.9770402,Food,"['restaurant', 'bar']"
+133,"410 Forbes Ave, Pittsburgh, PA 15219, United States",Prime Time Cuts & Styles,4.2,"['hair_care', 'health', 'point_of_interest', 'establishment']",53,40.439172,-79.998781,Hair Care,"['barber shop', 'hair']"
+134,"1401 Forbes Ave #200, Pittsburgh, PA 15219, United States",Pyramid Healthcare Pittsburgh Outpatient Treatment Center,2.3,"['health', 'point_of_interest', 'establishment']",3,40.44491,-79.98986,Health,"['rehabilitation', 'substance abuse', 'mental health']"
+135,"820 Pennsylvania Ave, Pittsburgh, PA 15233, United States",Quik-It Chicken,3.5,"['restaurant', 'convenience_store', 'meal_takeaway', 'food', 'point_of_interest', 'store', 'establishment']",70,40.4562612,-80.0161723,Food,"['restaurant', 'chicken', 'takeout'"
+136,"1298 Freeport Rd, Pittsburgh, PA 15238, United States",R & R Eyewear Excellence,5,"['health', 'point_of_interest', 'store', 'establishment']",8,40.488551,-79.877344,Health,"['eye doctor', 'glasses',]"
+137,"100 Commerce Dr, Pittsburgh, PA 15275, United States",R & R Express,2.9,"['moving_company', 'point_of_interest', 'establishment']",58,40.4341137,-80.0064643,General Services,"['shipping', 'logistics', 'transportation']"
+138,"4707 Centre Ave, Pittsburgh, PA 15213, United States",RibsNBread,4.5,"['meal_takeaway', 'meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",44,40.4528416,-79.9493702,Food,"['restaurant', 'barbecue', 'takeout']"
+139,"6140 Butler St, Pittsburgh, PA 15201, United States",Rolling Pepperoni,4.8,"['bakery', 'food', 'point_of_interest', 'store', 'establishment']",6,40.4879543,-79.9378213,Food,"['bakery', 'Appalachian', coffee]"
+141,"4124 Main St, Pittsburgh, PA 15224, United States",Roxanne’s Take-Out & Catering,5,"['meal_takeaway', 'restaurant', 'food', 'point_of_interest', 'establishment']",3,40.4649557,-79.9544411,Food,"[takeout', 'catering'"
+142,"6200 Howe St, Pittsburgh, PA 15206, United States","Explorrditions, LLC.",0,"['point_of_interest', 'establishment']",0,40.4537972,-79.9229065,Professional Services,['consulting']
+143,"810 Western Ave, Pittsburgh, PA 15233, United States","Royalties Beauty Spa - Lash, Waxing, Threading , Body treatments & Facials",4.7,"['beauty_salon', 'spa', 'point_of_interest', 'establishment']",35,40.452462,-80.014592,Beauty Salon,"['beauty', 'salon', 'spa']"
+144,"1805 Duquesne Ave, McKeesport, PA 15132, United States",Royalty by Design,0,"['point_of_interest', 'establishment']",0,40.3399194,-79.8452442,Nonprofit,"['decor', 'customized']"
+145,"143 6th St, Pittsburgh, PA 15222, United States",Fresh Nostalgia Boutique,5,"['point_of_interest', 'clothing_store', 'store', 'establishment']",8,40.4430205,-80.0020547,Shopping,"['apparel', 'fashion']"
+147,"2010 Noble St, Swissvale, PA 15218, United States",Salon Blue LLC,4.5,"['beauty_salon', 'hair_care', 'point_of_interest', 'establishment']",37,40.421546,-79.886442,Beauty Salon,"['salon', 'beauty']"
+148,"3400 Fifth Ave, Pittsburgh, PA 15213, United States",Salúd Juicery Oakland,4,"['food', 'point_of_interest', 'establishment']",45,40.4390807,-79.961865,Food,"['restaurant', 'cafe', 'juicery']"
+149,"200 Tabor St, Pittsburgh, PA 15204, United States","Saving Others Under Love, LLC",0,"['point_of_interest', 'establishment']",0,40.4626646,-80.052833,Nonprofit,"['nonprofit', 'career counseling', 'charity']"
+150,"2623 Penn Ave, Pittsburgh, PA 15222, United States",Savoy Restaurant,4.2,"['restaurant', 'food', 'point_of_interest', 'establishment']",316,40.455481,-79.978015,Food,"['restaurant', 'fine dining']"
+151,"500 Grant St #2900, Pittsburgh, PA 15219, United States",Scales Family Law Practice,0,"['lawyer', 'point_of_interest', 'establishment']",0,40.4396782,-79.9959316,Professional Services,"['law firm', 'lawyer', 'legal help']"
+152,"807 Chartiers Ave, McKees Rocks, PA 15136, United States",Shadedbythequeen,0,"['point_of_interest', 'store', 'establishment']",0,40.4656077,-80.0646004,Shopping,"['accessories', 'sunglasses', 'fashion']"
+153,"1849 Montier St, Pittsburgh, PA 15221, United States",Shawna Solomon Collection,5,"['shoe_store', 'point_of_interest', 'clothing_store', 'store', 'establishment']",4,40.4489844,-79.8678118,Shopping,"['stylist', 'apparel', 'fashion', 'brand consulting']"
+154,"183 Wylie Ave, Strabane, PA 15363, United States",Shoe Patio Bar,5,"['bar', 'point_of_interest', 'establishment']",2,40.2519993,-80.1983993,Bar,
+155,"6800 Frankstown Ave #1370, Pittsburgh, PA 15208, United States",Showcase Barbeque,4.5,"['restaurant', 'food', 'point_of_interest', 'establishment']",1060,40.4581375,-79.9059829,Food,"['restaurant', 'barbecue', 'takeaway']"
+156,"8500 Frankstown Rd, Pittsburgh, PA 15235, United States",Simmie's Restaurant,4.2,"['meal_takeaway', 'restaurant', 'food', 'point_of_interest', 'establishment']",260,40.4581002,-79.8755027,Food,"['restaurant', 'seafood', 'soulfood]"
+157,"100 Fifth Ave, Pittsburgh, PA 15222, United States",Yerimah's Sisters Beauty Supply,4.6,"['point_of_interest', 'store', 'establishment']",76,40.44144,-80.0027028,Shopping,"['beauty', 'beauty supply']"
+159,"748 E Warrington Ave, Pittsburgh, PA 15210, United States",Slayd Apparel,0,"['point_of_interest', 'clothing_store', 'store', 'establishment']",0,40.4216827,-79.9939334,Shopping,"['apparel', 'fashion']"
+160,"1 Woodland Rd, Pittsburgh, PA 15232, United States",Athletic and Fitness Center,4.2,"['gym', 'health', 'point_of_interest', 'establishment']",9,40.4466581,-79.9242237,Gym,"['fitness', 'health', 'gym']"
+161,"503 Herron Ave, Pittsburgh, PA 15219, United States",Society,4.6,"['hair_care', 'health', 'point_of_interest', 'establishment']",38,40.449006,-79.9651031,Hair Care,
+162,"819 Wood St, Pittsburgh, PA 15221, United States",Soul Food Connection,4.3,"['restaurant', 'food', 'point_of_interest', 'establishment']",140,40.4425442,-79.8854781,Food,"['restaurant', 'soul food']"
+163,"1728 E Carson St, Pittsburgh, PA 15203, United States",Soul & Sea,3.4,"['restaurant', 'food', 'point_of_interest', 'establishment']",34,40.4285784,-79.9810547,Food,"['restaurant', 'soul food', 'seafood']"
+164,"11632 Frankstown Rd, Penn Hills, PA 15235, United States",Soul Pitt Media,0,"['point_of_interest', 'establishment']",0,40.4651587,-79.827335,General Services,"['media', 'news']"
+165,"75 S 17th St, Pittsburgh, PA 15203, United States",South Side BBQ Company,4.1,"['restaurant', 'food', 'point_of_interest', 'establishment']",259,40.429375,-79.981785,Food,"['restaurant', 'soul food']"
+166,"Oakdale, PA 15071, United States",STRONG AMBITIOUS WOMEN LLC,5,"['secondary_school', 'school', 'point_of_interest', 'establishment']",1,40.3981246,-80.1856134,Education,"['fashion', 'accessories', 'apparel', wellness']"
+167,"7620 Frankstown Ave #1624, Pittsburgh, PA 15208, United States",Strong II Dry Cleaners,4.6,"['laundry', 'point_of_interest', 'establishment']",21,40.455514,-79.889315,General Services,"['laundry', 'dry cleaner']"
+168,"3747 William Penn Hwy D, Monroeville, PA 15146, United States",Success Barber Shop,3.8,"['hair_care', 'health', 'point_of_interest', 'establishment']",63,40.437214,-79.78706,Hair Care,"['barber shop', 'hair']"
+169,"5929 Baum Blvd, Pittsburgh, PA 15206, United States",Tana Ethiopian Cuisine,4.3,"['restaurant', 'food', 'point_of_interest', 'establishment']",347,40.4606379,-79.9268814,Food,"['restaurant', 'ethiopian']"
+170,"5744 Baum Blvd, Pittsburgh, PA 15206, United States",The Barbers Inn,4,"['hair_care', 'health', 'point_of_interest', 'establishment']",55,40.4586925,-79.9322439,Hair Care,"['barber shop', 'hair']"
+171,"732 E Warrington Ave, Pittsburgh, PA 15210, United States",The Black Unicorn: Library and Archives Project,0,"['library', 'point_of_interest', 'establishment']",0,40.4215555,-79.9944671,Education,"['media', 'blog', 'wellness']"
+173,"7600 N Braddock Ave, Pittsburgh, PA 15208, United States",The Dream BBQ,4.3,"['restaurant', 'food', 'point_of_interest', 'establishment']",199,40.4529362,-79.8910117,Food,"['restaurant', 'barbecue']"
+174,"1307 Federal St, Pittsburgh, PA 15212, United States",THE LUNCH BOX,5,"['restaurant', 'food', 'point_of_interest', 'establishment']",7,40.4572118,-80.0078136,Food,"['restaurant', 'cafe', 'sandwiches']"
+175,"111 Meyran Ave, Pittsburgh, PA 15213, United States",Natural Choice,4,"['hair_care', 'health', 'point_of_interest', 'establishment']",111,40.4410946,-79.9587647,Hair Care,"['barber shop', 'hair', 'salon']"
+177,"715 Dorseyville Rd, Pittsburgh, PA 15238, United States",The Spot Pittsburgh,4.8,"['cafe', 'food', 'point_of_interest', 'establishment']",62,40.546082,-79.9015871,Food,"['smoothies', 'smoothie bowls', 'coffee', 'cafe']"
+178,"1130 Perry Hwy Suite 106, Pittsburgh, PA 15237, United States",The Tiny Bookstore,5,"['book_store', 'point_of_interest', 'store', 'establishment']",5,40.5477169,-80.0355297,Shopping,"['bookstore', 'books']"
+179,"1731 Murray Ave, Pittsburgh, PA 15217, United States",The Warehouse Pub & Grub,4.3,"['bar', 'restaurant', 'food', 'point_of_interest', 'establishment']",126,40.4370715,-79.9228024,Food,"['restaurant', 'bar']"
+180,"105 Overland Ave, Duquesne, PA 15110, United States",Third Day Soaps Garden,0,"['point_of_interest', 'establishment']",0,40.3791241,-79.8560966,Shopping,"['beauty', 'wellness', 'skincare']"
+181,"8000 Frankstown Ave, Pittsburgh, PA 15221, United States",Three Generations Barbershop,4.7,"['hair_care', 'health', 'point_of_interest', 'establishment']",70,40.455157,-79.8845599,Hair Care,"['hair', barbershop]'"
+183,"5474 Campbells Run Rd, Pittsburgh, PA 15205, United States",True Pizzeria & Lounge,4.3,"['meal_delivery', 'meal_takeaway', 'restaurant', 'food', 'point_of_interest', 'establishment']",213,40.4462418,-80.1579754,Food,
+184,"709 Liberty Ave, Pittsburgh, PA 15222, United States",UBrokeWEFIX,0,"['point_of_interest', 'establishment']",0,40.4426859,-79.999545,General Services,
+185,"1901 Centre Ave, Pittsburgh, PA 15219, United States",Ujamaa Collective,4.9,"['point_of_interest', 'store', 'establishment']",26,40.443338,-79.9808783,Nonprofit,
+186,"6520 Saltsburg Rd, Penn Hills, PA 15235, United States",Uncle Redd's BBQ,4.1,"['restaurant', 'food', 'point_of_interest', 'establishment']",46,40.4819905,-79.8091655,Food,
+187,"437 Turrett St, Pittsburgh, PA 15206, United States",Urban Academy,3,"['school', 'point_of_interest', 'establishment']",24,40.4624348,-79.9098358,Education,
+188,"2625 Penn Ave, Pittsburgh, PA 15222, United States",V Lounge,0,"['bar', 'point_of_interest', 'establishment']",0,40.4555292,-79.9780067,Bar,
+189,"6 N Balph Ave, Bellevue, PA 15202, United States",Vibe Bellevue,4.8,"['restaurant', 'food', 'point_of_interest', 'establishment']",67,40.4957972,-80.0553077,Food,
+190,"200 Mall Cir Dr, Monroeville, PA 15146, United States",Vickey's Soul Grill Restaurant & Catering,4.6,"['restaurant', 'food', 'point_of_interest', 'establishment']",5,40.4291856,-79.795702,Food,
+191,"413 Smithfield St, Pittsburgh, PA 15222, United States","Vip Styles, INC.",4.2,"['hair_care', 'health', 'point_of_interest', 'establishment']",95,40.439103,-79.999511,Hair Care,
+192,"PPG Place, Fl 31, Pittsburgh, PA 15222, United States",Virginia Humphries Real Estate,3,"['real_estate_agency', 'point_of_interest', 'establishment']",2,40.4397928,-80.0031808,Professional Services,
+193,"71 Orin St, Pittsburgh, PA 15235, United States",Virtual Staffing Source,5,"['point_of_interest', 'establishment']",2,40.4642925,-79.853033,Professional Services,
+194,"4501 Butler St, Pittsburgh, PA 15201, United States",Walter's BBQ Southern Kitchen,4.2,"['bar', 'restaurant', 'food', 'point_of_interest', 'establishment']",909,40.4725446,-79.9593943,Food,
+195,"7365 Denniston Ave, Pittsburgh, PA 15218, United States",Wilson’s Nite Out,4.3,"['restaurant', 'food', 'point_of_interest', 'establishment']",67,40.4196373,-79.8893514,Food,
+196,"226 Shady Ave, Pittsburgh, PA 15206, United States","Wings & A Prayer, LLC",4.5,"['meal_takeaway', 'restaurant', 'food', 'point_of_interest', 'establishment']",123,40.4588022,-79.9222184,Food,
+197,"5730 Ellsworth Ave #3, Pittsburgh, PA 15232, United States",Winning Smiles Pediatric Dental Care,5,"['doctor', 'dentist', 'health', 'point_of_interest', 'establishment']",99,40.455293,-79.931227,Health,
+198,"625 Long Rd, Pittsburgh, PA 15235, United States",World Class Tavern,4.5,"['bar', 'point_of_interest', 'establishment']",74,40.4536281,-79.8377986,Bar,
+199,"437 Turrett St, Pittsburgh, PA 15206, United States",Wright Childcare Solutions,5,"['point_of_interest', 'establishment']",6,40.4623296,-79.9098844,Education,
+200,"1441 Woods Run Ave, Pittsburgh, PA 15212, United States",Young Brothers Bar,4.4,"['bar', 'point_of_interest', 'establishment']",266,40.4750786,-80.0349957,Bar,
+201,"1315 Fifth Ave, Pittsburgh, PA 15219, United States",Z-Best Barbeque Chicken & Ribs,4.5,"['restaurant', 'food', 'point_of_interest', 'establishment']",356,40.439,-79.98754,Food,
+202,"4638 Browns Hill Rd, Pittsburgh, PA 15217, United States",Zoom Dry Cleaning,4.4,"['laundry', 'point_of_interest', 'establishment']",72,40.415228,-79.92372,General Services,
+203,"600 Grant St, Pittsburgh, PA 15219, United States",Esthetics By Esther,4.3,"['health', 'point_of_interest', 'establishment']",11,40.4410742,-79.9949158,Health,
+204,"5001 Baum Blvd #405, Pittsburgh, PA 15213, United States",SKIN by Stephanie,3,"['health', 'point_of_interest', 'establishment']",4,40.4553461,-79.9450248,Health,
+205,"472 Wildwood Ave, Verona, PA 15147, United States",Hey BOOP,0,"['health', 'point_of_interest', 'establishment']",0,40.5033399,-79.8402223,Health,
+207,"452 S Main St, Pittsburgh, PA 15220, United States",Encore Event Design,4.9,"['point_of_interest', 'establishment']",14,40.4410946,-80.034701,Events,
+208,"South Park Area, Bethel Park, PA 15102, United States",K. Flowers Designs: custom wedding stationery,5,"['point_of_interest', 'establishment']",7,40.330351,-80.0220188,Events,
+209,"2517 Penn Ave, Pittsburgh, PA 15222, United States",Slate Studio,4.7,"['point_of_interest', 'establishment']",36,40.4544548,-79.9794617,Events,
+210,"1439 Woods Run Ave, Pittsburgh, PA 15212, United States",BJ's Event Center,0,"['point_of_interest', 'establishment']",0,40.4750698,-80.0348373,Events,
+211,"528 N Homewood Ave, Pittsburgh, PA 15208, United States",CKV Suites,4.8,"['point_of_interest', 'establishment']",5,40.4533378,-79.8982311,Events,
+212,"1901 Centre Ave Conference Room 1, Pittsburgh, PA 15219, United States","Cameron Professional Services Group, LLC",3,"['accounting', 'finance', 'point_of_interest', 'establishment']",2,40.443418,-79.98104,Professional Services,
+213,"901 Western Ave Ste 208C, Pittsburgh, PA 15233, United States","Quinerly Financial Group, LLC",5,"['accounting', 'finance', 'point_of_interest', 'establishment']",6,40.4516792,-80.0165936,Professional Services,
+215,"6000 Penn Ave, Pittsburgh, PA 15206, United States",Isom Capital Investments LLC,0,"['finance', 'point_of_interest', 'establishment']",0,40.46108,-79.9245482,Professional Services,
+216,"Office Service, 5001 Baum Blvd, Pittsburgh, PA 15213, United States",Brown Insurance Agency,4.7,"['insurance_agency', 'point_of_interest', 'establishment']",13,40.4553337,-79.9451981,Professional Services,
+219,"7424 Washington Ave, Pittsburgh, PA 15218, United States",Credit Power LLC,5,"['finance', 'point_of_interest', 'establishment']",34,40.4201268,-79.8881976,Professional Services,
+220,"2010 E Carson St, Pittsburgh, PA 15203, United States",Aliya Wrays Beauty Parlor,3.7,"['spa', 'point_of_interest', 'establishment']",17,40.4283603,-79.9771266,Beauty Salon,
+221,"216 E 7th Ave, Homestead, PA 15120, United States",Dreamz Hair Salon and Barber Shop,4.3,"['beauty_salon', 'hair_care', 'point_of_interest', 'establishment']",113,40.4076025,-79.9107467,Beauty Salon,
+223,"4237 Murray Ave, Pittsburgh, PA 15217, United States",S-Spa of Pgh,4.8,"['beauty_salon', 'hair_care', 'dentist', 'spa', 'health', 'point_of_interest', 'store', 'establishment']",22,40.422128,-79.928567,Beauty Salon,
+224,"1901 Centre Ave Suite 104, Pittsburgh, PA 15219, United States",Salon XO PGH,4.9,"['beauty_salon', 'hair_care', 'point_of_interest', 'establishment']",45,40.4434183,-79.9810402,Beauty Salon,
+225,"706 Wood St, Pittsburgh, PA 15221, United States",Aim High Hair Studio,5,"['beauty_salon', 'point_of_interest', 'establishment']",5,40.4414734,-79.8858677,Beauty Salon,
+227,"500 Liberty Ave, Pittsburgh, PA 15222, United States",Pittsburgh Spot,0,"['point_of_interest', 'establishment']",0,40.4412585,-80.0033712,Nonprofit,
+228,"203 Lothrop St # 718, Pittsburgh, PA 15213, United States",Safi Farhad MD,0,"['doctor', 'health', 'point_of_interest', 'establishment']",0,40.441782,-79.961203,Health,
+229,"711 Penn Ave Floor 2, Pittsburgh, PA 15221, United States",Vision Towards Peace Counseling,5,"['health', 'point_of_interest', 'establishment']",4,40.4436117,-79.8841733,Health,
+230,"124 S Highland Ave #210, Pittsburgh, PA 15206, United States",YOGAMOTIF,5,"['gym', 'health', 'point_of_interest', 'establishment']",3,40.4603832,-79.9254376,Gym,
+231,"201 N Braddock Ave, Pittsburgh, PA 15208, United States",OJ Macklin Fitness,4.9,"['gym', 'health', 'point_of_interest', 'establishment']",11,40.4487419,-79.8942184,Gym,
+232,"1386 Old Freeport Rd #3b, Pittsburgh, PA 15238, United States",Helping Others Heal,4.2,"['health', 'point_of_interest', 'establishment']",5,40.4884663,-79.8723399,Health,
+233,"9951 Old Perry Hwy, Wexford, PA 15090, United States",D-Fit by Deawna Fitness & Wellness Studio,5,"['gym', 'health', 'point_of_interest', 'establishment']",6,40.5893266,-80.0459391,Gym,
+234,"700 River Ave, Pittsburgh, PA 15235, United States",Big Rock & RAC Cleaning LLC,0,"['laundry', 'point_of_interest', 'establishment']",0,40.449844,-79.9968155,General Services,
+235,"924 Bay Ridge Ave, Pittsburgh, PA 15226, United States",Groovy Maid,4.5,"['point_of_interest', 'establishment']",52,40.3905996,-80.0208079,General Services,
+236,"2015 Centre Ave Suite 201, Pittsburgh, PA 15219, United States",Steel City Cleaning Solutions LLC,5,"['point_of_interest', 'establishment']",9,40.4440493,-79.9799623,General Services,
+240,"744 E. Warrington Avenue, Pittsburgh, PA  15210",Root 28 Clothing,,,,40.421694,-79.994096,Shopping,
