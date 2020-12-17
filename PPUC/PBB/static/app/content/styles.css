@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .nav-text {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -22,8 +26,39 @@ h2 {
 	padding-left: 3vw
 }
 
+.landing {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.landing-header {
+	font-size: 100px !important;
+	line-height: 110px;
+	font-weight: 500;
+}
+
+.landing-subhead {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20pt;
+	line-height: 45px;
+	font-weight: 300;
+}
+
+/* .landing-subhead-right {
+	background-color: rgba(255, 255, 255, 0.25);
+	line-height: 45pt;
+	font-size: 24pt;
+	font-weight: 600;
+} */
+
 .main-color {
 	background-color: #C4C4C4 !important;
+}
+
+.break-color {
+	background-color: #ffb81c;
+	border-width: 4px;
+	margin-right: 90px;
 }
 
 .color2 {
