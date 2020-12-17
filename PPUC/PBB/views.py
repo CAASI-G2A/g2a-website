@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 import pandas as pd
 import json
+import os
 
 def home(request):
     """Renders the home page."""
@@ -49,11 +50,11 @@ def about(request):
 def directory(request):
     """Renders the directory page."""
     assert isinstance(request, HttpRequest)
+    basepath = os.path.abspath(".")
 
-    directory = Directory('PBB/static/app/csv/blackbusiness-map-data.csv')
+    print(basepath)
+    directory = Directory(basepath + '/PBB/static/app/csv/blackbusiness-map-data.csv')
     df = directory.get_data()
-
-    print(df.columns)
 
     js = df.reset_index().to_json(orient='records')
     data = json.loads(js)
