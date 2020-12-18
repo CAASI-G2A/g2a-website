@@ -62,7 +62,7 @@ h2 {
 
 .navbar-brand img {
 	height: 50px;
-	width: 50px;
+	width: auto;
 }
 
 .thumb {
