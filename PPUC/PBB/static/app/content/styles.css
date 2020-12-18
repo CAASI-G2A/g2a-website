@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .nav-text {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -7,10 +11,17 @@
 	float: left;
 }
 
+.caption p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	line-height: 45px;
+	font-weight: 600;
+}
+
 h1 {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
-	font-size: 78px !important;
+	font-size: 4.876em !important;
 }
 
 h2 {
@@ -22,8 +33,44 @@ h2 {
 	padding-left: 3vw
 }
 
+.landing {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.landing-header {
+	font-size: 6.25em !important;
+	line-height: 110px;
+	font-weight: 500;
+}
+
+.landing-subhead {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.7em;
+	line-height: 45px;
+	font-weight: 300;
+}
+
+.landing-quote {
+	border-left: 2px solid #ffb81c;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000;
+    line-height: 33px;
+    font-weight: 300;
+    padding-left: 40px;
+    margin-left: 25px;
+    padding-right: 40px;
+}
+
 .main-color {
 	background-color: #C4C4C4 !important;
+}
+
+.break-color {
+	background-color: #ffb81c;
+	border-width: 4px;
+	margin-right: 90px;
 }
 
 .color2 {
@@ -225,7 +272,7 @@ h2 {
 }
 
 iframe {
-    border: 5px solid #B786F5;
+    border: 0px;
 }
 
 .landing__impact-button {
