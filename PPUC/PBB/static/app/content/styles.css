@@ -11,10 +11,17 @@ body {
 	float: left;
 }
 
+.caption p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	line-height: 45px;
+	font-weight: 600;
+}
+
 h1 {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
-	font-size: 78px !important;
+	font-size: 4.876em !important;
 }
 
 h2 {
@@ -32,24 +39,29 @@ h2 {
 }
 
 .landing-header {
-	font-size: 100px !important;
+	font-size: 6.25em !important;
 	line-height: 110px;
 	font-weight: 500;
 }
 
 .landing-subhead {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 20pt;
+	font-size: 1.7em;
 	line-height: 45px;
 	font-weight: 300;
 }
 
-/* .landing-subhead-right {
-	background-color: rgba(255, 255, 255, 0.25);
-	line-height: 45pt;
-	font-size: 24pt;
-	font-weight: 600;
-} */
+.landing-quote {
+	border-left: 2px solid #ffb81c;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000;
+    line-height: 33px;
+    font-weight: 300;
+    padding-left: 40px;
+    margin-left: 25px;
+    padding-right: 40px;
+}
 
 .main-color {
 	background-color: #C4C4C4 !important;
