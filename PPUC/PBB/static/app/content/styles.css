@@ -28,9 +28,6 @@ h2 {
 	font-family: 'Rubik', sans-serif;
 	font-weight: normal;
 	font-size: 58px !important;
-	display: flex;
-	align-items: flex-start;
-	padding-left: 3vw
 }
 
 .landing {
