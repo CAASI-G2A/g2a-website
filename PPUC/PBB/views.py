@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 import pandas as pd
 import json
+import os
 
 def home(request):
     """Renders the home page."""
@@ -49,11 +50,11 @@ def about(request):
 def directory(request):
     """Renders the directory page."""
     assert isinstance(request, HttpRequest)
+    basepath = os.path.abspath(".")
 
-    directory = Directory('PBB/static/app/csv/blackbusinesses-gmapspull-with-category.csv')
-    # filter = [('Category', 'Food'), ('Category', 'Hair Care'), ('Category', 'Shopping')]
-    filter = ''
-    df = directory.get_data(filter)
+    print(basepath)
+    directory = Directory(basepath + '/PBB/static/app/csv/blackbusiness-map-data.csv')
+    df = directory.get_data()
 
     js = df.reset_index().to_json(orient='records')
     data = json.loads(js)
@@ -100,21 +101,11 @@ class Directory():
         self.csv_file = csv_file
         pass
 
-    def get_data(self, filters):
+    def get_data(self):
         df = pd.read_csv(self.csv_file)
-        df = df.drop(['Unnamed: 0', 'Keywords'], axis=1)
-        # for i, r in df.iterrows():
-        #     if r['Number of Ratings'] == 0:
-        #         df.loc[i, 'Rating'] = 'N/A'
-        df = df.drop(['Number of Ratings'], axis=1)
+        df = df.drop(['Number of Ratings', 'Google Keywords'], axis=1)
+        df.rename(columns={"G2A Keywords": "G2A_Keywords"}, inplace=True)
 
-        res = pd.DataFrame()
-        if filters != '':
-            for filter in filters:
-                res = res.append(df.loc[df[filter[0]] == filter[1]])
-        else:
-            res = df
-
-        res = res.drop_duplicates()
-        res = res.sort_values(by=['Name'])
-        return res
+        df = df.drop_duplicates()
+        df = df.sort_values(by=['Name'])
+        return df
