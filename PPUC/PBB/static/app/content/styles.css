@@ -112,7 +112,7 @@ h2 {
 
 .navbar-brand img {
 	height: 50px;
-	width: auto;
+	width: 50px;
 }
 
 .thumb {
@@ -120,7 +120,7 @@ h2 {
 	background-color: #FFF;
 	border-style: solid;
     border-width: 1px;
-    border-color: #000;
+	border: 1px solid rgba(0,0,0,.125);
     margin: auto;
  	max-width: 75%;
  	display: flex;
