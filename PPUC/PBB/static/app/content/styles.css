@@ -2,6 +2,10 @@ body {
 	overflow-x: hidden;
 }
 
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .nav-text {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -12,7 +16,6 @@ body {
 }
 
 .caption p{
-	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 	line-height: 45px;
 	font-weight: 600;
@@ -223,6 +226,37 @@ h2 {
     margin: 0 -5px;
     margin-bottom: 55px;
     text-align: left;
+}
+
+.landing-card h1 {
+	font-family: 'Open Sans', sans-serif;
+	size: 64px;
+	line-height: 110px;
+}
+
+.landing-card h4 {
+	font-family: 'Open Sans', sans-serif;
+	size: 20px;
+}
+
+.landing-card p {
+	font-family: 'Open Sans', sans-serif;
+	size: 14px;
+	line-height: 25px;
+}
+
+.impact-card-header p {
+	font-family: 'Open Sans', sans-serif;
+	size: 18px;
+	line-height: 19px;
+	text-align: left;
+}
+
+.impact-card-body p {
+	font-family: 'Open Sans', sans-serif;
+	size: 16px;
+	line-height: 24px;
+	text-align: left;
 }
 
 .landing__row:after {
