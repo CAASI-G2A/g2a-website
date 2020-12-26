@@ -1,86 +1,76 @@
+.tabs {
+    background-color: #2B70E4 !important;
+    color: #FFFFFF;
+}
+
+.title-container {
+    background-color: #B0C9F4 !important;
+    color: #000000;
+}
+
+.main-color {
+    background-color: #F0F0F0 !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #FFFFFF !important;
+    color: #000000;
+    transition: 0.3s;
+    width: 15rem;
+    text-align: left;
+}
+
+.card-body {
+    background-color: #FFFFFF !important;
+}
+
+.card-title {
+    white-space:nowrap;
+}
+
+.who {
+    line-height: 3em;
+}
+
+h2{
+    font-weight: 500;
+}
+
+p.description {
+    font-size: 1.25em;
+	line-height: 45px;
+}
+
+.tabmenu {
+    color:FFFFFF;
+}
+
+.tabmenu.active {
+    color: #FFB81C;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
 a:hover{
-    color: inherit;
+    color:  #FFB81C;
     text-decoration: none;
 }
 
-a.anchor {
-    display: block;
-    position: relative;
-    top: -90px;
-    visibility: hidden;
+hr {
+    width:15%;
+    height: 3px;
+    text-align:left;
+    margin-left:0;
+    background-color: #B0C9F4;
+    border-width:0;
+    color: #B0C9F4;
 }
 
-.pbbabout-container{
-    margin-bottom: 40px;
-}
-.pbbabout-header{
-    background: #F3D159;
-    color: #000000;
-    text-align: center;
-    height: 200px;
-    padding-top: 30px;
-}
-.pbbabout-headerbar{
-    background: #A57B79;
-    color: #000000;
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-    margin-bottom: 40px;
-}
-.pbbabout-who{
-    margin-bottom: 40px;
-}
-.pbbabout-mission{
-    margin-bottom: 40px;
-}
-.pbbabout-team{
-    margin-bottom: 40px;
-}
-.pbbabout-engagementteam{
-    margin-bottom: 40px;
-    clear: both;
-}
-.pbbabout-techteam{
-    margin-bottom: 40px;
-    clear: both;
-}
-.pbbabout-partners{
-    margin-bottom: 40px;
-    clear: both;
-}
-
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #FFFFFF;
-    color: #000000;
-    transition: 0.3s;
-    float: left;
-    width: 20%;
-    height: 310px;
-    margin: 2%;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-}
-
-.card-title {
-    padding: 0px 16px;
-    max-width: 1;
-}
-  
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-  
-/* Add some padding inside the card container */
-.container {
-    padding: 0px 0px;
 }
