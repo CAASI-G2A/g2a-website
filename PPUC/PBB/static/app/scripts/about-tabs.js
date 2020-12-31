@@ -11,7 +11,7 @@ function rudrSwitchTab(rudr_tab_id, rudr_tab_content) {
 	var x = document.getElementsByClassName("tabmenu");
 	var i;
 	for (i = 0; i < x.length; i++) {
-		x[i].className = 'tabmenu'; 
+		x[i].className = 'nav-link tabmenu'; 
 	}
-	document.getElementById(rudr_tab_id).className = 'tabmenu active';
+	document.getElementById(rudr_tab_id).className = 'nav-link tabmenu active';
 }
