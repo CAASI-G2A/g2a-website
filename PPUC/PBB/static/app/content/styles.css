@@ -16,8 +16,8 @@ p {
 }
 
 .caption p{
-	font-size: 24px;
-	line-height: 45px;
+	font-size: 2.5vh;
+	line-height: 4.5vh;
 	font-weight: 600;
 }
 
@@ -30,10 +30,7 @@ h1 {
 h2 {
 	font-family: 'Rubik', sans-serif;
 	font-weight: normal;
-	font-size: 58px !important;
-	display: flex;
-	align-items: flex-start;
-	padding-left: 3vw
+	font-size: 6vh !important;
 }
 
 .landing {
@@ -42,10 +39,27 @@ h2 {
 }
 
 .landing-header {
-	font-size: 6.25em !important;
+	/* Extra small devices (phones, less than 768px) */
+	font-size: 10px;
+  
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+	  font-size: 12px;
+	}
+  
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+	  font-size: 16px;
+	}
+  
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+	  font-size: 6.25em;
+	}
+
 	line-height: 110px;
 	font-weight: 500;
-}
+  }
 
 .landing-subhead {
 	font-family: 'Open Sans', sans-serif;
@@ -57,9 +71,9 @@ h2 {
 .landing-quote {
 	border-left: 2px solid #ffb81c;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
+    font-size: 2.5vh;
     color: #000;
-    line-height: 33px;
+    line-height: 4vh;
     font-weight: 300;
     padding-left: 40px;
     margin-left: 25px;
@@ -70,30 +84,16 @@ h2 {
 	background-color: white;
 }
 
-.landing-card h1 {
-	size: 64px;
-	line-height: 110px;
-}
-
-.landing-card h4 {
-	size: 20px;
-}
-
-.landing-card p {
-	size: 14px;
-	line-height: 25px;
-}
-
 .landing-impact-header h2 {
 	display: inline;
 	font-weight: bold;
-	font-size: 64px;
+	font-size: 5vmin;
 }
 
 .landing-impact-header h3 {
 	display: inline;
 	font-weight: 300;
-	font-size: 36px;
+	font-size: 4vmin;
 }
 
 .main-color {
@@ -151,14 +151,6 @@ h2 {
 	border-style: solid;
     border-width: 1px;
 	border: 1px solid rgba(0,0,0,.125);
-    margin: auto;
- 	max-width: 75%;
- 	display: flex;
-  	align-items: center;
-  	flex-direction: row;
- 	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 .thumb img {
