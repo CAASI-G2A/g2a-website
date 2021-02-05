@@ -7,7 +7,6 @@ function showCategory(c) {
     document.getElementById("reviewPanel").style.display = "none";
     document.getElementById("investigationPanel").style.display = "none";
     document.getElementById("resultPanel").style.display = "none";
-    document.getElementById(c + "Answer").innerHTML = "Answer:" 
     switch (c) {
         case c = "Pre-Complaint":
             document.getElementById("pre-complaintPanel").style.display = "block";

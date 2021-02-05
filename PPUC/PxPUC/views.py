@@ -240,7 +240,15 @@ def edit_sentence(request, sid):
 
 def complaint(request,lid):
     location = Location.objects.get(pk=lid)
-    questions = location.questions.all()
+    db_questions = Question.objects.filter(location=None).prefetch_related('category').union(location.questions.all().prefetch_related('category'))
+    questions = {}
+    for question in db_questions:
+        for cat in question.category.all():
+            cat_questions = questions.get(cat.category)
+            if cat_questions is None:
+                cat_questions = []
+            cat_questions.append(question)
+            questions[cat.category] = cat_questions
     context = {}
     searchTerm = request.GET.get('searchTerm','')
     if searchTerm != '':
