@@ -1,15 +1,12 @@
 ﻿<!DOCTYPE html>
+{% load manifest %}
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - PxPUC</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	{% block css %}{% endblock %}
-    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <link rel="stylesheet" href="{% manifest 'main.css' %}">-->
 </head>
 
 <body>
@@ -44,10 +41,6 @@
             <p>&copy; {{ year }} - CAASI From Grief to Action</p>
         </footer>
     </div>
-    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
-    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
-    <script src="{% static 'app/scripts/respond.js' %}"></script>
-    <script src="{% static 'app/scripts/scripts.js' %}"></script>
-{% block scripts %}{% endblock %}
+    <script src="{% manifest 'main.js' %}"></script>
 </body>
 </html>

@@ -2,17 +2,6 @@
 {% load tag_utils %}
 {% load static %}
 
-{% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'app/content/simple-flow.min.css' %}" />
-{% endblock %}
-
-{% block scripts %}
-<script src="{% static 'app/scripts/simple-flow.min.js' %}"></script>
-	<script>
-		$('.flow-stage').SimpleFlow();
-	</script>
-{% endblock %}
-
 {% block content %}
 <div class="container-fluid">
     <p class="lead"><a href="{% url 'citizens' %}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
@@ -22,23 +11,49 @@
     </div>
     <div class="row">
 	    <div class="col-md-2 col-md-offset-1 text-center">
-		    <div class="btn-primary circle flow-stage" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')"><span class="flow-stage-icon material-icons text-center">groups</span></div>
+		    <div class="flow-stage" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')">
+			    <span class="fa-stack fa-5x">
+				    <!--<i class="fas fa-arrow-right fa-stack-2x" data-fa-transform="shrink-8 right-10"></i>-->
+				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+				    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+			    </span>
+		    </div>
 		    <h4 class="text-center">Interaction</h4>
 	    </div>
 	    <div class="col-md-2 text-center">
-		    <div class="btn-primary circle flow-stage" id="ComplaintCircle" onclick="showCategory('Complaint')"><span class="flow-stage-icon material-icons text-center">report</span></div>
+		    <div class="flow-stage" id="ComplaintCircle" onclick="showCategory('Complaint')">
+			    <span class="fa-stack fa-5x">
+				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+				    <i class="fas fa-exclamation-circle fa-stack-1x fa-inverse"></i>
+			    </span>
+		    </div>
 		    <h4 class="text-center">Complaint</h4>
 	    </div>
 	    <div class="col-md-2 text-center">
-		    <div class="btn-primary circle flow-stage" id="ReviewCircle" onclick="showCategory('Review')"><span class="flow-stage-icon material-icons text-center">rate_review</span></div>
+		    <div class="flow-stage" id="ReviewCircle" onclick="showCategory('Review')">
+			    <span class="fa-stack fa-5x">
+				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+				    <i class="fas fa-edit fa-stack-1x fa-inverse"></i>
+			    </span>
+		    </div>
 		    <h4 class="text-center">Review</h4>
 	    </div>
 	    <div class="col-md-2 text-center">
-		    <div class="btn-primary circle flow-stage" id="InvestigationCircle" onclick="showCategory('Investigation')"><span class="flow-stage-icon material-icons text-center">search</span></div>
+		    <div class="flow-stage" id="InvestigationCircle" onclick="showCategory('Investigation')">
+			    <span class="fa-stack fa-5x">
+				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+				    <i class="fas fa-search fa-stack-1x fa-inverse"></i>
+			    </span>
+		    </div>
 		    <h4 class="text-center">Investigation</h4>
 	    </div>
 	    <div class="col-md-2 text-center">
-		    <div class="btn-primary circle flow-stage" id="ResultCircle" onclick="showCategory('Result')"><span class="flow-stage-icon material-icons text-center">done</span></div>
+		    <div class="flow-stage" id="ResultCircle" onclick="showCategory('Result')">
+			    <span class="fa-stack fa-5x">
+				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+				    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+			    </span>
+		    </div>
 		    <h4 class="text-center">Result</h4>
 	    </div>
     </div>
