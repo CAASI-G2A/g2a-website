@@ -1,4 +1,5 @@
 @import "~@fontsource/roboto-mono/index.css";
+@import "~bootstrap-utilities";
 
 body {
     padding-top: 50px;
@@ -100,4 +101,15 @@ pre {
 
 .flow-circle {
     color: #337ab7;
+}
+.flow-stage {
+    transition: transform 0.35s ease;
+}
+.flow-stage:hover {
+    cursor:pointer;
+    transform: scale(1.3);
+    transition: transform 0.35s ease;
+}
+.flow-stage-text {
+    margin-top: 0px;
 }

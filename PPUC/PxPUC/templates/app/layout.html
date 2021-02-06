@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - PxPUC</title>
     {% load static %}
-    <link rel="stylesheet" href="{% manifest 'main.css' %}">-->
+    <link rel="stylesheet" href="{% manifest 'main.css' %}">
 </head>
 
 <body>
@@ -42,5 +42,6 @@
         </footer>
     </div>
     <script src="{% manifest 'main.js' %}"></script>
+    {% block script %}{% endblock %}
 </body>
 </html>

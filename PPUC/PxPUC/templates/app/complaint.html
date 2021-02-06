@@ -2,6 +2,12 @@
 {% load tag_utils %}
 {% load static %}
 
+{% block script %}
+<script>
+	drawFlowArrows();
+</script>
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid">
     <p class="lead"><a href="{% url 'citizens' %}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
@@ -10,51 +16,60 @@
         <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. <br />Click on a circle to learn more about that particular phase.</p>
     </div>
     <div class="row">
-	    <div class="col-md-2 col-md-offset-1 text-center">
-		    <div class="flow-stage" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')">
-			    <span class="fa-stack fa-5x">
-				    <!--<i class="fas fa-arrow-right fa-stack-2x" data-fa-transform="shrink-8 right-10"></i>-->
-				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
-				    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
-			    </span>
+	    <div class="col-md-2 col-md-offset-1 mb-5">
+		    <div class="row">
+			    <div class="text-center flow-stage col-xs-6 col-lg-12" id="Pre-ComplaintCircle" onclick="showCategory('Pre-Complaint')">
+				    <span class="fa-stack fa-5x">
+					    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+					    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+				    </span>
+			    </div>
+			    <h2 class="text-center flow-stage-text col-xs-6 col-lg-12">Interaction</h2>
 		    </div>
-		    <h4 class="text-center">Interaction</h4>
 	    </div>
-	    <div class="col-md-2 text-center">
-		    <div class="flow-stage" id="ComplaintCircle" onclick="showCategory('Complaint')">
-			    <span class="fa-stack fa-5x">
-				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
-				    <i class="fas fa-exclamation-circle fa-stack-1x fa-inverse"></i>
-			    </span>
+	    <div class="col-md-2 mb-5">
+		    <div class="row">
+			    <div class="text-center flow-stage col-xs-6 col-lg-12" id="ComplaintCircle" onclick="showCategory('Complaint')">
+				    <span class="fa-stack fa-5x">
+					    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+					    <i class="fas fa-exclamation-circle fa-stack-1x fa-inverse"></i>
+				    </span>
+			    </div>
+			    <h2 class="text-center flow-stage-text col-xs-6 col-lg-12">Complaint</h2>
 		    </div>
-		    <h4 class="text-center">Complaint</h4>
 	    </div>
-	    <div class="col-md-2 text-center">
-		    <div class="flow-stage" id="ReviewCircle" onclick="showCategory('Review')">
-			    <span class="fa-stack fa-5x">
-				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
-				    <i class="fas fa-edit fa-stack-1x fa-inverse"></i>
-			    </span>
+	    <div class="col-md-2 mb-5">
+		    <div class="row">
+			    <div class="text-center flow-stage col-xs-6 col-lg-12" id="ReviewCircle" onclick="showCategory('Review')">
+				    <span class="fa-stack fa-5x">
+					    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+					    <i class="fas fa-edit fa-stack-1x fa-inverse"></i>
+				    </span>
+			    </div>
+			    <h2 class="text-center flow-stage-text col-xs-6 col-lg-12">Review</h2>
 		    </div>
-		    <h4 class="text-center">Review</h4>
 	    </div>
-	    <div class="col-md-2 text-center">
-		    <div class="flow-stage" id="InvestigationCircle" onclick="showCategory('Investigation')">
-			    <span class="fa-stack fa-5x">
-				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
-				    <i class="fas fa-search fa-stack-1x fa-inverse"></i>
-			    </span>
+	    <div class="col-md-2 mb-5">
+		    <div class="row">
+			    <div class="text-center flow-stage col-xs-6 col-lg-12" id="InvestigationCircle" onclick="showCategory('Investigation')">
+				    <span class="fa-stack fa-5x">
+					    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+					    <i class="fas fa-search fa-stack-1x fa-inverse"></i>
+				    </span>
+			    </div>
+			    <h2 class="text-center flow-stage-text col-xs-6 col-lg-12">Investigation</h2>
 		    </div>
-		    <h4 class="text-center">Investigation</h4>
 	    </div>
-	    <div class="col-md-2 text-center">
-		    <div class="flow-stage" id="ResultCircle" onclick="showCategory('Result')">
-			    <span class="fa-stack fa-5x">
-				    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
-				    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
-			    </span>
+	    <div class="col-md-2 mb-5">
+		    <div class="row">
+			    <div class="text-center flow-stage col-xs-6 col-lg-12" id="ResultCircle" onclick="showCategory('Result')">
+				    <span class="fa-stack fa-5x">
+					    <i class="fas fa-circle fa-stack-2x flow-circle"></i>
+					    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+				    </span>
+			    </div>
+			    <h2 class="text-center flow-stage-text col-xs-6 col-lg-12">Result</h2>
 		    </div>
-		    <h4 class="text-center">Result</h4>
 	    </div>
     </div>
     <div class="row">

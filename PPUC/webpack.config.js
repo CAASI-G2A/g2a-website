@@ -11,14 +11,21 @@ module.exports = {
 			filename: '[name].[contenthash].css',
 		}),
 		new webpack.ProvidePlugin({
-			  $: 'jquery',
-			  jQuery: 'jquery',
+			$: 'jquery',
+			jQuery: 'jquery',
 		}),
 		new CleanWebpackPlugin(),
 		new WebpackManifestPlugin(),
 	],
 	module: {
 		rules: [
+			{
+				test: require('path').resolve(__dirname, 'node_modules/leader-line/'),
+				use: [{
+					loader: 'skeleton-loader',
+					options: {procedure: content => `${content}export default LeaderLine`}
+				}]
+			},
 			{
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
 				loader: 'url-loader',
