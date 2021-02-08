@@ -10,7 +10,27 @@
 
 {% block content %}
 <div class="container-fluid">
-    <p class="lead"><a href="{% url 'citizens' %}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
+    <div class="dropdown" style="text-align:center;">
+	    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin:10px auto;">
+		    Choose a state&nbsp;&nbsp;
+		    <span class="caret"></span>
+	    </button>
+	    <ul class="dropdown-menu multi-level" aria-labelledby="dropdownMenu1" style="margin:10px auto;width:200px; left:50%; margin-left:-100px;">
+		    {% if locations != '' %}
+		    {% for state in states %}
+		    <li class="dropdown-submenu"><a href="#">{{ state }}</a>
+			    <ul class="dropdown-menu">
+				    {% for obj in locations %}
+				    {% if obj.state == state %}
+				    <li><a tabindex="-1" href="{%url 'complaint' obj.pk %}">{{ obj.name }}</a></li>
+				    {% endif %}
+				    {% endfor %}
+			    </ul>
+			    {% endfor %}
+			    {% endif %}
+		    </li>
+	    </ul>
+    </div>
     <div class="jumbotron">
         <h1>{{location.name}}</h1>
         <p class="lead">This tool highlights the phases involved in the process of filing a police complaint. <br />Click on a circle to learn more about that particular phase.</p>

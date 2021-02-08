@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 {% load manifest %}
+{% load tag_utils %}
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,7 +25,7 @@
             <div class="navbar-collapse collapse">
                 <ul class ="nav navbar-nav">
                     <li><a href="{% url 'researchers' %}">Researchers</a></li>
-                    <li><a href="{% url 'citizens' %}">Citizens</a></li>
+                    <li><a href="{% default_complaint %}">Citizens</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
                 </ul>

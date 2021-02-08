@@ -249,11 +249,16 @@ def complaint(request,lid):
                 cat_questions = []
             cat_questions.append(question)
             questions[cat.category] = cat_questions
+    locations = Location.objects.all()
+    states = []
+    for loc in locations:
+        if loc.state not in states:
+            states.append(loc.state)
     context = {}
     searchTerm = request.GET.get('searchTerm','')
     if searchTerm != '':
         results = Sentence.objects.filter(Q(location=location),Q(text__icontains=searchTerm))
     else:
         results = ''
-    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results, 'year':datetime.now().year,}
+    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results, 'year':datetime.now().year, 'locations': locations, 'states': states}
     return render(request,'app/complaint.html', context)
