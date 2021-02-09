@@ -158,6 +158,16 @@ pre {
     transform: scale(1.3);
     transition: transform 0.35s ease;
 }
+.flow-circle-selected {
+    color: #28a745;
+}
 .flow-stage-text {
     margin-top: 0px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
 }

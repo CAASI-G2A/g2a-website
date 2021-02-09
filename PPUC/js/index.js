@@ -17,10 +17,10 @@ window.drawFlowArrows = () => {
 		const getCircle = (element) => element.children[0].children[0].children[0];
 		const leaderLineConfig = {color: '#337ab7'};
 		const lines = [
-			['Pre-ComplaintCircle', 'ComplaintCircle'],
-			['ComplaintCircle', 'ReviewCircle'],
-			['ReviewCircle', 'InvestigationCircle'],
-			['InvestigationCircle', 'ResultCircle'],
+			['pre-complaintIcon', 'complaintIcon'],
+			['complaintIcon', 'reviewIcon'],
+			['reviewIcon', 'investigationIcon'],
+			['investigationIcon', 'resultIcon'],
 		];
 		for (let line of lines) {
 			new LeaderLine(
@@ -32,9 +32,13 @@ window.drawFlowArrows = () => {
 	});
 };
 
-window.showCategory = function(c) {
+window.showCategory = (c) => {
+    $("#pre-complaintCircle")[0].classList.remove("flow-circle-selected");
+    $("#complaintCircle")[0].classList.remove("flow-circle-selected");
+    $("#reviewCircle")[0].classList.remove("flow-circle-selected");
+    $("#investigationCircle")[0].classList.remove("flow-circle-selected");
+    $("#resultCircle")[0].classList.remove("flow-circle-selected");
     //on click set all elements to hidden and who the one we want
-    //document.getElementById(c + "Circle").style.borderColor = "#B22222";
     document.getElementById("pre-complaintPanel").style.display = "none";
     document.getElementById("complaintPanel").style.display = "none";
     document.getElementById("contractPanel").style.display = "none";
@@ -44,33 +48,38 @@ window.showCategory = function(c) {
     switch (c) {
         case c = "Pre-Complaint":
             document.getElementById("pre-complaintPanel").style.display = "block";
+            $("#pre-complaintCircle")[0].classList.add("flow-circle-selected");
             // scroll to answer area
             scrollToElement("#pre-complaintPanel");
             break;
         case c = "Complaint":
             document.getElementById("complaintPanel").style.display = "block";
+            $("#complaintCircle")[0].classList.add("flow-circle-selected");
             // scroll to answer area
             scrollToElement("#complaintPanel");
             break;
         case c = "Review":
             document.getElementById("reviewPanel").style.display = "block";
+            $("#reviewCircle")[0].classList.add("flow-circle-selected");
             // scroll to answer area
             scrollToElement("#reviewPanel");
             break;
         case c = "Investigation":
             document.getElementById("investigationPanel").style.display = "block";
+            $("#investigationCircle")[0].classList.add("flow-circle-selected");
             // scroll to answer area
             scrollToElement("#investigationPanel");
             break;
         case c = "Result":
             document.getElementById("resultPanel").style.display = "block";
+            $("#resultCircle")[0].classList.add("flow-circle-selected");
             // scroll to answer area
             scrollToElement("#resultPanel");
             break;
     }
 }
 
-window.showContractSearch = function() {
+window.showContractSearch = () => {
     //on click set all elements to hidden and who the one we want
     document.getElementById("pre-complaintPanel").style.display = "none";
     document.getElementById("complaintPanel").style.display = "none";
@@ -79,3 +88,21 @@ window.showContractSearch = function() {
     document.getElementById("resultPanel").style.display = "none";
     document.getElementById("contractPanel").style.display = "block";
 }
+
+// scroll to top button
+$(document).ready(function() {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 50) {
+			$('#back-to-top').fadeIn();
+		} else {
+			$('#back-to-top').fadeOut();
+		}
+	});
+	// scroll body to 0px on click
+	$('#back-to-top').click(() => {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
+});
