@@ -20,6 +20,15 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.m?js$/, exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			},
+			{
 				test: require('path').resolve(__dirname, 'node_modules/leader-line/'),
 				use: [{
 					loader: 'skeleton-loader',
@@ -48,12 +57,9 @@ module.exports = {
 						loader: 'postcss-loader', // Run post css actions
 						options: {
 							postcssOptions: {
-								pugins: function () { // post css plugins, can be exported to postcss.config.js
-									return [
-										require('precss'),
-										require('autoprefixer')
-									];
-								}
+								plugins: [
+									require('autoprefixer')
+								]
 							}
 						}
 					},
@@ -68,5 +74,17 @@ module.exports = {
 		publicPath: '',
 		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'dist'),
+	},
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					chunks: 'all',
+					enforce: true,
+					name: 'vendor'
+				},
+			}
+		}
 	},
 };
