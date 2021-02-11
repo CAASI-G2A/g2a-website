@@ -43,12 +43,12 @@
 	<div class="row" style="margin-bottom:-75px;">
 		<p>The following sentences have been flagged from the contract as problematic, click on a category and sentence to learn why a sentence was flagged.</p><br>
 		<a class="btn btn-primary" href="{% url 'download_pdf' location.id %}" role="button" style="position:relative; top:-50px; float:right;">
-			<span style="position:relative;top:-4px;font-weight: 600;">Download PDF&nbsp;</span>
-			<span class="material-icons" style="position:relative;top:4px">file_download</span>
+			<span class="font-weight-bold">Download PDF&nbsp;</span>
+			<i class="fas fa-file-download"></i>
 		</a>
 		<a class="btn btn-primary" href="{% url 'download_txt' location.id %}" role="button" style="position:relative; top:-50px; float:right; margin-right: 5px">
-			<span style="position:relative;top:-4px;font-weight: 600;">Download TXT&nbsp;</span>
-			<span class="material-icons" style="position:relative;top:4px">file_download</span>
+			<span class="font-weight-bold">Download TXT&nbsp;</span>
+			<i class="fas fa-file-download"></i>
 		</a>
 	</div>
 </div>
@@ -56,7 +56,7 @@
 <div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 <!-- /.modal -->
 <div class="col-md-12">
-    <button type="button" class="collapsible">Limits Oversight<span class="material-icons" style="float:right;">keyboard_arrow_down</span></button>
+	<button type="button" class="collapsible">Limits Oversight<i class="fas fa-chevron-down" style="float:right;"></i></button>
 	    <div class="content">
 		    {% for sentence in sentences %}
 			    {% if sentence.limit_oversight %}
@@ -66,7 +66,7 @@
 			    {% endif %}
 		    {% endfor %}
 	    </div>
-    <button type="button" class="collapsible">City Pays for Misconduct<span class="material-icons" style="float:right;">keyboard_arrow_down</span></button>
+	    <button type="button" class="collapsible">City Pays for Misconduct<i class="fas fa-chevron-down" style="float:right;"></i></button>
 	    <div class="content">
 		    {% for sentence in sentences %}
 			    {% if sentence.city_pay_for_misconduct %}
@@ -76,7 +76,7 @@
 			    {% endif %}
 		    {% endfor %}
 	    </div>
-	<button type="button" class="collapsible">Erases Misconduct Records<span class="material-icons" style="float:right;">keyboard_arrow_down</span></button>
+	    <button type="button" class="collapsible">Erases Misconduct Records<i class="fas fa-chevron-down" style="float:right;"></i></button>
 	    <div class="content">
 		    {% for sentence in sentences %}
 			    {% if sentence.erases_misconduct %}
@@ -86,7 +86,7 @@
 			    {% endif %}
 		    {% endfor %}
 	    </div>
-	<button type="button" class="collapsible">Disqualifies Complaints<span class="material-icons" style="float:right;">keyboard_arrow_down</span></button>
+	    <button type="button" class="collapsible">Disqualifies Complaints<i class="fas fa-chevron-down" style="float:right;"></i></button>
 	    <div class="content">
 		    {% for sentence in sentences %}
 			    {% if sentence.disqualify_complaints %}
@@ -96,7 +96,7 @@
 			    {% endif %}
 		    {% endfor %}
 	    </div>
-	<button type="button" class="collapsible">Gives Officer Unfair Access to Information<span class="material-icons" style="float:right;">keyboard_arrow_down</span></button>
+	    <button type="button" class="collapsible">Gives Officer Unfair Access to Information<i class="fas fa-chevron-down" style="float:right;"></i></button>
 	    <div class="content">
 		    {% for sentence in sentences %}
 			    {% if sentence.unfair_information %}
