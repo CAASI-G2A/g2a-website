@@ -153,10 +153,13 @@ pre {
 .flow-stage {
     transition: transform 0.35s ease;
 }
-.flow-stage:hover {
-    cursor:pointer;
-    transform: scale(1.3);
-    transition: transform 0.35s ease;
+// disable hover on mobile
+@media (hover) {
+	.flow-stage:hover {
+		cursor:pointer;
+		transform: scale(1.3);
+		transition: transform 0.35s ease;
+	}
 }
 .flow-stage-text {
     margin-top: 0px;
