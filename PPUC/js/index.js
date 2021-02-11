@@ -33,11 +33,13 @@ window.drawFlowArrows = () => {
 };
 
 window.showCategory = (c) => {
-    $("#pre-complaintCircle")[0].classList.remove("flow-circle-selected");
-    $("#complaintCircle")[0].classList.remove("flow-circle-selected");
-    $("#reviewCircle")[0].classList.remove("flow-circle-selected");
-    $("#investigationCircle")[0].classList.remove("flow-circle-selected");
-    $("#resultCircle")[0].classList.remove("flow-circle-selected");
+    // can't use CSS class here since it seems to mess with LeaderLine
+    // Results in lines "floating" after a button is clicked
+    document.getElementById("pre-complaintCircle").style.color = "";
+    document.getElementById("complaintCircle").style.color = "";
+    document.getElementById("reviewCircle").style.color = "";
+    document.getElementById("investigationCircle").style.color = "";
+    document.getElementById("resultCircle").style.color = "";
     //on click set all elements to hidden and who the one we want
     document.getElementById("pre-complaintPanel").style.display = "none";
     document.getElementById("complaintPanel").style.display = "none";
@@ -48,31 +50,31 @@ window.showCategory = (c) => {
     switch (c) {
         case c = "Pre-Complaint":
             document.getElementById("pre-complaintPanel").style.display = "block";
-            $("#pre-complaintCircle")[0].classList.add("flow-circle-selected");
+            document.getElementById("pre-complaintCircle").style.color = "#d9534f";
             // scroll to answer area
             scrollToElement("#pre-complaintPanel");
             break;
         case c = "Complaint":
             document.getElementById("complaintPanel").style.display = "block";
-            $("#complaintCircle")[0].classList.add("flow-circle-selected");
+            document.getElementById("complaintCircle").style.color = "#d9534f";
             // scroll to answer area
             scrollToElement("#complaintPanel");
             break;
         case c = "Review":
             document.getElementById("reviewPanel").style.display = "block";
-            $("#reviewCircle")[0].classList.add("flow-circle-selected");
+            document.getElementById("reviewCircle").style.color = "#d9534f";
             // scroll to answer area
             scrollToElement("#reviewPanel");
             break;
         case c = "Investigation":
             document.getElementById("investigationPanel").style.display = "block";
-            $("#investigationCircle")[0].classList.add("flow-circle-selected");
+            document.getElementById("investigationCircle").style.color = "#d9534f";
             // scroll to answer area
             scrollToElement("#investigationPanel");
             break;
         case c = "Result":
             document.getElementById("resultPanel").style.display = "block";
-            $("#resultCircle")[0].classList.add("flow-circle-selected");
+            document.getElementById("resultCircle").style.color = "#d9534f";
             // scroll to answer area
             scrollToElement("#resultPanel");
             break;
