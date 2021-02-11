@@ -154,7 +154,7 @@ pre {
     transition: transform 0.35s ease;
 }
 // disable hover on mobile
-@media (hover) {
+@media (hover: hover) {
 	.flow-stage:hover {
 		cursor:pointer;
 		transform: scale(1.3);

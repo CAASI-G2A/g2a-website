@@ -1,3 +1,7 @@
+// handle all polyfills for browsers
+import 'core-js/stable';
+import './polyfills.js'
+
 // import bootstrap
 import 'bootstrap';
 // import fontawesome icons

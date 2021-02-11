@@ -3,7 +3,8 @@
 		[
 			"@babel/preset-env",
 			{
-				"useBuiltIns": "entry",
+				"useBuiltIns": "usage",
+				"corejs": 3,
 				"targets": {
 					"browsers": [
 						"edge >= 16",
@@ -16,5 +17,8 @@
 				}
 			}
 		]
-	]
+	],
+	"plugins": [
+		"@babel/transform-arrow-functions",
+	],
 }
