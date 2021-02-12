@@ -4,41 +4,11 @@
 {% endblock %}
 {% block content %}
 
-<style>
-.collapsible {
-  border-radius:4px;
-  background-color: #428bca;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  margin-bottom:10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.active, .collapsible:hover {
-  background-color: #428bca;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-
-}
-</style>
-
-<p class="lead"><a href="{% url 'search' %}"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;return to city select</a></p>
 <div class="jumbotron">
 	<div class="row">
-        <div class="col-md-9">
+		<div class="col-md-9">
 			<h1>{{location}} Police Contract</h1>
-		</div>	
+		</div>
 	</div>
 	<div class="row" style="margin-bottom:-75px;">
 		<p>The following sentences have been flagged from the contract as problematic, click on a category and sentence to learn why a sentence was flagged.</p><br>
@@ -56,72 +26,70 @@
 <div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 <!-- /.modal -->
 <div class="col-md-12">
-	<button type="button" class="collapsible">Limits Oversight<i class="fas fa-chevron-down" style="float:right;"></i></button>
-	    <div class="content">
-		    {% for sentence in sentences %}
-			    {% if sentence.limit_oversight %}
-	      <br>
-			    <p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
-				    <hr style="border-color:#428bca;border-width:2px;">
-			    {% endif %}
-		    {% endfor %}
-	    </div>
-	    <button type="button" class="collapsible">City Pays for Misconduct<i class="fas fa-chevron-down" style="float:right;"></i></button>
-	    <div class="content">
-		    {% for sentence in sentences %}
-			    {% if sentence.city_pay_for_misconduct %}
-	      <br>
-			    <p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
-				    <hr style="border-color:#428bca;border-width:2px;">
-			    {% endif %}
-		    {% endfor %}
-	    </div>
-	    <button type="button" class="collapsible">Erases Misconduct Records<i class="fas fa-chevron-down" style="float:right;"></i></button>
-	    <div class="content">
-		    {% for sentence in sentences %}
-			    {% if sentence.erases_misconduct %}
-	      <br>
-			    <p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
-				    <hr style="border-color:#428bca;border-width:2px;">
-			    {% endif %}
-		    {% endfor %}
-	    </div>
-	    <button type="button" class="collapsible">Disqualifies Complaints<i class="fas fa-chevron-down" style="float:right;"></i></button>
-	    <div class="content">
-		    {% for sentence in sentences %}
-			    {% if sentence.disqualify_complaints %}
-	      <br>
-			    <p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
-				    <hr style="border-color:#428bca;border-width:2px;">
-			    {% endif %}
-		    {% endfor %}
-	    </div>
-	    <button type="button" class="collapsible">Gives Officer Unfair Access to Information<i class="fas fa-chevron-down" style="float:right;"></i></button>
-	    <div class="content">
-		    {% for sentence in sentences %}
-			    {% if sentence.unfair_information %}
-	      <br>
-			    <p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
-				    <hr style="border-color:#428bca;border-width:2px;">
-			    {% endif %}
-		    {% endfor %}
-	    </div>
+	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+		<span class="float-left">Limits Oversight</span>
+		<i class="fas fa-chevron-down float-right"></i>
+	</button>
+	<div class="collapse bg-light px-4" id="collapse1">
+		{% for sentence in sentences %}
+		{% if sentence.limit_oversight %}
+		<br>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<hr class="border border-secondary border-1">
+		{% endif %}
+		{% endfor %}
 	</div>
-<script>
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
+	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+		<span class="float-left">City Pays for Misconduct</span>
+		<i class="fas fa-chevron-down float-right"></i>
+	</button>
+	<div class="collapse bg-light px-4" id="collapse2">
+		{% for sentence in sentences %}
+		{% if sentence.city_pay_for_misconduct %}
+		<br>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<hr class="border border-secondary border-1">
+		{% endif %}
+		{% endfor %}
+	</div>
+	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+		<span class="float-left">Erases Misconduct Records</span>
+		<i class="fas fa-chevron-down float-right"></i>
+	</button>
+	<div class="collapse bg-light px-4" id="collapse3">
+		{% for sentence in sentences %}
+		{% if sentence.erases_misconduct %}
+		<br>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<hr class="border border-secondary border-1">
+		{% endif %}
+		{% endfor %}
+	</div>
+	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+		<span class="float-left">Disqualifies Complaints</span>
+		<i class="fas fa-chevron-down float-right"></i>
+	</button>
+	<div class="collapse bg-light px-4" id="collapse4">
+		{% for sentence in sentences %}
+		{% if sentence.disqualify_complaints %}
+		<br>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<hr class="border border-secondary border-1">
+		{% endif %}
+		{% endfor %}
+	</div>
+	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+		<span class="float-left">Gives Officer Unfair Access to Information</span>
+		<i class="fas fa-chevron-down float-right"></i>
+	</button>
+	<div class="collapse bg-light px-4" id="collapse5">
+		{% for sentence in sentences %}
+		{% if sentence.unfair_information %}
+		<br>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<hr class="border border-secondary border-1">
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}

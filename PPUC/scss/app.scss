@@ -1,6 +1,27 @@
 @import "~@fontsource/roboto-mono/index.css";
 @import "~bootstrap-utilities";
 
+.border-0 {
+border-width: 0 !important;
+}
+
+// border sizes from Bootstrap 5
+.border-1 {
+    border-width: 1px !important;
+}
+.border-2 {
+    border-width: 2px !important;
+}
+.border-3 {
+    border-width: 3px !important;
+}
+.border-4 {
+    border-width: 4px !important;
+}
+.border-5 {
+    border-width: 5px !important;
+}
+
 .dropdown-submenu {
     position: relative;
 }

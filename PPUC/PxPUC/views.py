@@ -73,11 +73,49 @@ def about(request):
 def researchers(request):
     """Renders the researchers redirect page."""
     assert isinstance(request, HttpRequest)
+    # load locations for search by city
+    locations = Location.objects.all()
+    states = []
+    for loc in locations:
+        if loc.state not in states:
+            states.append(loc.state)
+    # handle search by keyword requests
+    query = request.GET.get('q','')
+    orQuery = request.GET.get('OR','')
+    if query == '':
+        results = ''
+    else:
+        results = []
+        if orQuery == '':
+            querySet = Sentence.objects.filter(Q(text__icontains=query))
+        else:
+            querySet = Sentence.objects.filter(Q(text__icontains=query) | Q(text__icontains=orQuery))
+        for result in querySet:
+            t = result.text
+            lower = t.lower()
+            if lower.find(query) != -1:
+                q_length = len(query)
+                pos = lower.find(query.lower())
+                result.first = t[:pos]
+                result.second = t[pos:pos+q_length]
+                result.third = t[pos+q_length:]
+            elif lower.find(orQuery) != -1:
+                q_length = len(orQuery)
+                pos = lower.find(orQuery.lower())
+                result.first = t[:pos]
+                result.second = t[pos:pos+q_length]
+                result.third = t[pos+q_length:]
+            loc = Location.objects.get(name=result.location)
+            result.lid = loc.id
+            results.append((result))
     return render(
         request,
         'app/researchers.html',
         {
             'title':'Researchers',
+            'locations' : locations,
+            'states' : states,
+            'results' : results,
             'year':datetime.now().year,
         }
     )
