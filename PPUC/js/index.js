@@ -95,6 +95,15 @@ window.showContractSearch = () => {
     document.getElementById("contractPanel").style.display = "block";
 }
 
+window.loadModalLink = function(element, e) {
+	if (e) {
+		e.preventDefault();
+	}
+	const modalId = $(element).attr("data-target");
+	const href = $(element).attr("href");
+	$(modalId).modal("show").load(href);
+}
+
 // scroll to top button
 $(document).ready(function() {
 	$(window).scroll(function() {

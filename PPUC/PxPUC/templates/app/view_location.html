@@ -34,7 +34,7 @@
 		{% for sentence in sentences %}
 		{% if sentence.limit_oversight %}
 		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
 		<hr class="border border-secondary border-1">
 		{% endif %}
 		{% endfor %}
@@ -47,7 +47,7 @@
 		{% for sentence in sentences %}
 		{% if sentence.city_pay_for_misconduct %}
 		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
 		<hr class="border border-secondary border-1">
 		{% endif %}
 		{% endfor %}
@@ -60,7 +60,7 @@
 		{% for sentence in sentences %}
 		{% if sentence.erases_misconduct %}
 		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
 		<hr class="border border-secondary border-1">
 		{% endif %}
 		{% endfor %}
@@ -73,7 +73,7 @@
 		{% for sentence in sentences %}
 		{% if sentence.disqualify_complaints %}
 		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
 		<hr class="border border-secondary border-1">
 		{% endif %}
 		{% endfor %}
@@ -86,7 +86,7 @@
 		{% for sentence in sentences %}
 		{% if sentence.unfair_information %}
 		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" data-toggle="modal" data-target="#modal" title="view sentence" style="color:black; text-decoration:none;">{{sentence.text}}</a></p>
+		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
 		<hr class="border border-secondary border-1">
 		{% endif %}
 		{% endfor %}
