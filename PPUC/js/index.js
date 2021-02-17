@@ -47,7 +47,6 @@ window.showCategory = (c) => {
     //on click set all elements to hidden and who the one we want
     document.getElementById("pre-complaintPanel").style.display = "none";
     document.getElementById("complaintPanel").style.display = "none";
-    document.getElementById("contractPanel").style.display = "none";
     document.getElementById("reviewPanel").style.display = "none";
     document.getElementById("investigationPanel").style.display = "none";
     document.getElementById("resultPanel").style.display = "none";
