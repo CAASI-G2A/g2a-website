@@ -196,3 +196,9 @@ pre {
     right: 25px;
     display: none;
 }
+
+// adds fix to prevent shifting of elements when scroll bars are enabled
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
