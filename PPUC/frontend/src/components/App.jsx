@@ -1,7 +1,3 @@
-// handle all polyfills for browsers
-import 'core-js/stable';
-import './polyfills.js'
-
 // import bootstrap
 import 'bootstrap';
 // import fontawesome icons
@@ -15,6 +11,48 @@ import '../scss/app.scss';
 
 import LeaderLine from 'leader-line';
 import { dom } from '@fortawesome/fontawesome-svg-core';
+
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import routes from '../routes';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Landing from './Landing';
+import Researchers from './Researchers';
+import Citizens from './Citizens';
+import About from './About';
+import Contact from './Contact';
+
+class App extends Component {
+	render() {
+		return (
+			<HashRouter>
+				<Navbar/>
+				<div className="container body-content">
+					{/* handle routes */}
+					<Switch>
+						<Route path={routes.home} exact component={Landing} />
+						<Route path={routes.researchers} component={Researchers} />
+						<Route path={routes.citizens} component={Citizens} />
+						<Route path={routes.about} component={About} />
+						<Route path={routes.contact} component={Contact} />
+					</Switch>
+					<a id="back-to-top" href="#" className="btn btn-light btn-lg back-to-top" role="button">
+						<i className="fas fa-chevron-up"></i>
+					</a>
+					<hr/>
+					<Footer/>
+				</div>
+			</HashRouter>
+		);
+	}
+}
+
+export default App;
+const container = document.getElementById("app");
+render(<App/>, container);
+
 window.drawFlowArrows = () => {
 	dom.i2svg().then(() => {
 		// given a flow chat element returns the underlying circle element SVG

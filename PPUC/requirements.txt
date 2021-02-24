@@ -5,3 +5,5 @@ numpy == 1.19.3
 pandas
 django-pandas
 django-manifest-loader
+djangorestframework
+django-cors-headers

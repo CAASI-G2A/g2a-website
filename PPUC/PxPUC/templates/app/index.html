@@ -1,45 +1,19 @@
-{% extends "app/layout.html" %}
-
-{% block content %}
+<!DOCTYPE html>
+{% load manifest %}
 {% load static %}
-
-<div class="jumbotron" style="background-image: url(https://i.imgur.com/jj0eBl5.jpg);background-size:100%;padding-top:60px;padding-bottom:90px;">
-<img src="{% static 'app/img/CAASI2.png' %}" style="width:55px; padding-bottom:14px;opacity:0.9;"/>
-    <h1 style="color:white;">P<span style="font-weight:bolder;opacity:0.5;">x</span>PUC</h1>
-    <hr class="my-4" style="border-top:1px solid white;">
-    <p class="lead" style="color:white;">Project <span style="font-weight:bolder;opacity:0.5;">x</span> Police Union Contracts</p>
-</div>
-<div class="jumbotron" style="background-color:white;padding-top:20px;">
-    <h2>What does our tool do?</h2>
-    <p class="lead">Our tool allows researchers to explore police union contracts more easily for information, and
-      helps citizens to find resources near them and learn more about the process of filing a misconduct complaint.</p>
-      <a class="btn btn-default" href="{% url 'about' %}" role="button" style="float:right;">Learn more</a>
-</div>
-
-<hr class="my-4">
-
-<div class="jumbotron" style="background-color:white;padding-top:20px;">
-    <h2>How can it help?</h2>
-    <p class="lead">With a more widespread understanding of these police union contracts, we can help
-    break down the barriers they pose to holding police offers accountable for
-    misconduct and misconduct investigation processes. This can help those considering
-    filing a police misconduct complaint understand more about how the process works
-    and what it means for them if they choose to do so.</p>
-      <a class="btn btn-default" href="{% url 'about' %}" role="button" style="float:right;">Learn more</a>
-
-</div>
-
-
-<div class="jumbotron">
-    <h2><a href="{% url 'researchers' %}">Researchers: search and compare police union contracts</a></h2>
-    <p class="lead">Search our database of police contracts by keyword or by city.</p>
-</div>
-
-<div class="jumbotron">
-    <h2><a href="{% url 'citizens' %}">Citizens: learn about the process of filing a misconduct complaint</a></h2>
-    <p class="lead">Learn about the stages of filing a complaint and find links to resources for your city.</p>
-</div>
-
-
-
-{% endblock %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PxPUC</title>
+		<link rel="stylesheet" href="{% manifest 'vendor.css' %}">
+		<link rel="stylesheet" href="{% manifest 'main.css' %}">
+	</head>
+	<body>
+		<div id="app">
+			<!-- React will load here -->
+		</div>
+	</body>
+	<script src="{% manifest 'vendor.js' %}"></script>
+	<script src="{% manifest 'main.js' %}"></script>
+</html>

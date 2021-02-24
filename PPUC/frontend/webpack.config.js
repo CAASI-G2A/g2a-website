@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	entry: './js/index.js',
+	entry: './src/index.js',
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
@@ -20,12 +20,12 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.m?js$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env'],
+						presets: ['@babel/preset-env', '@babel/preset-react'],
 						plugins: [require('@babel/plugin-transform-arrow-functions')]
 					}
 				}
@@ -71,6 +71,9 @@ module.exports = {
 				]
 			},
 		],
+	},
+	resolve: {
+		extensions: ['*', '.js', '.jsx']
 	},
 	output: {
 		publicPath: '',

@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
-    'manifest_loader'
+    'manifest_loader',
+    'corsheaders',
+    'rest_framework'
 ]
 
 # Middleware framework
@@ -118,4 +120,4 @@ STATIC_URL = '/static/'
 
 # Additional directories for static files
 # Webpacked assets stored here
-STATICFILES_DIRS = [BASE_DIR + '/dist']
+STATICFILES_DIRS = [BASE_DIR + '/frontend/dist']
