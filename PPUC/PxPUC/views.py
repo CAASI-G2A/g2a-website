@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.http import HttpRequest
 from django.http import HttpResponse
 from .models import *
+from .serializers import *
 from PxPUC.forms import *
 from django.views.generic import ListView, FormView
 from django.contrib.auth import login as auth_login
@@ -17,19 +18,7 @@ import re
 import nltk
 import mimetypes
 from nltk.tokenize import sent_tokenize
-
-def landing(request):
-    """Renders the landing."""
-    context = {
-        'title':'G2A',
-        'year':datetime.now().year,
-        }
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/landing.html',
-        context
-    )
+from rest_framework import generics
 
 def home(request):
     """Renders the home page."""
@@ -42,32 +31,6 @@ def home(request):
         request,
         'app/index.html',
         context
-    )
-
-def contact(request):
-    """Renders the contact page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/contact.html',
-        {
-            'title':'Contact',
-            'message':'Contact page.',
-            'year':datetime.now().year,
-        }
-    )
-
-def about(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/about.html',
-        {
-            'title':'About',
-            'message':'application description page.',
-            'year':datetime.now().year,
-        }
     )
 
 def researchers(request):
@@ -139,28 +102,6 @@ def search(request):
     return render(
         request,
         'app/search.html',
-        context
-    )
-
-def citizens(request):
-    context = {}
-    query = request.GET.get('q','')
-    locations = Location.objects.filter(Q(name__icontains=query))
-    states = []
-    for loc in locations:
-        if loc.state not in states:
-            states.append(loc.state)
-
-    context = {
-        'title' : 'Search',
-        'locations' : locations,
-        'states' : states,
-        'year':datetime.now().year,
-        }
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/citizens.html',
         context
     )
 
@@ -300,3 +241,17 @@ def complaint(request,lid):
         results = ''
     context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results, 'year':datetime.now().year, 'locations': locations, 'states': states}
     return render(request,'app/complaint.html', context)
+
+class LocationList(generics.ListAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
+class LocationQuestionList(generics.ListAPIView):
+    serializer_class = QuestionSerializer
+    lookup_url_kwarg = 'lid'
+
+    def get_queryset(self):
+        lid = self.kwargs.get(self.lookup_url_kwarg)
+        location = Location.objects.get(pk=lid)
+        queryset = Question.objects.filter(location=None).prefetch_related('category').union(location.questions.all().prefetch_related('category'))
+        return queryset
