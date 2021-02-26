@@ -7,5 +7,8 @@ const Api = {
   getLocationQuestions: (lid) => {
     return fetch(`${Api.BASE_PATH}/location/${lid}/questions`).then(toJSON);
   },
+  getLocationStages: (lid) => {
+    return fetch(`${Api.BASE_PATH}/location/${lid}/stages`).then(toJSON);
+  },
 };
 export default Api;

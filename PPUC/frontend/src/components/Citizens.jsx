@@ -12,70 +12,89 @@ class Citizens extends Component {
       locations: {},
       location: null,
       locationQuestions: null,
+      locationStages: null,
       curStage: null,
-	    leaderLines: []
+      leaderLines: [],
     };
-	  this.drawLeaderLines = this.drawLeaderLines.bind(this);
-	  this.getLocationQuestions = this.getLocationQuestions.bind(this);
+    this.drawLeaderLines = this.drawLeaderLines.bind(this);
+    this.getLocationQuestions = this.getLocationQuestions.bind(this);
+    this.getLocationStages = this.getLocationStages.bind(this);
     this.handleLocationSelect = this.handleLocationSelect.bind(this);
     this.handleIconClick = this.handleIconClick.bind(this);
   }
 
-	drawLeaderLines() {
-		// given a flow chat element returns the underlying circle element SVG
-		const getCircle = (element) =>
-			element.children[0].children[0].children[0];
-		const leaderLineConfig = { color: "#337ab7" };
-		const lines = [
-			["pre-complaintIcon", "complaintIcon"],
-			["complaintIcon", "reviewIcon"],
-			["reviewIcon", "investigationIcon"],
-			["investigationIcon", "resultIcon"],
-		];
-		const leaderLines = [];
-		for (let line of lines) {
-			leaderLines.push(new LeaderLine(
-				getCircle(document.getElementById(line[0])),
-				getCircle(document.getElementById(line[1])),
-				leaderLineConfig
-			));
-		}
-		this.setState({
-			leaderLines: leaderLines
-		});
-	}
+  drawLeaderLines() {
+    // given a flow chat element returns the underlying circle element SVG
+    const getCircle = (element) => element.children[0].children[0].children[0];
+    const leaderLineConfig = { color: "#337ab7" };
+    const lines = [
+      ["pre-complaintIcon", "complaintIcon"],
+      ["complaintIcon", "reviewIcon"],
+      ["reviewIcon", "investigationIcon"],
+      ["investigationIcon", "resultIcon"],
+    ];
+    const leaderLines = [];
+    for (let line of lines) {
+      leaderLines.push(
+        new LeaderLine(
+          getCircle(document.getElementById(line[0])),
+          getCircle(document.getElementById(line[1])),
+          leaderLineConfig
+        )
+      );
+    }
+    this.setState({
+      leaderLines: leaderLines,
+    });
+  }
 
-	getLocationQuestions() {
-		Api.getLocationQuestions(this.state.location.id).then((resp) => {
-			const questionsByCat = {}
-			for (let question of resp) {
-				for (let cat of question.categories) {
-					const catName = cat.name.toLowerCase();
-					if (questionsByCat[catName]) {
-						questionsByCat[catName].push(question);
-					}
-					else {
-						questionsByCat[catName] = [question];
-					}
-				}
-			}
-			this.setState({
-				locationQuestions: questionsByCat,
-			});
-		});
-	}
+  getLocationQuestions() {
+    Api.getLocationQuestions(this.state.location.id).then((resp) => {
+      const questionsByCat = {};
+      for (let question of resp) {
+        for (let cat of question.categories) {
+          const catName = cat.name.toLowerCase();
+          if (questionsByCat[catName]) {
+            questionsByCat[catName].push(question);
+          } else {
+            questionsByCat[catName] = [question];
+          }
+        }
+      }
+      this.setState({
+        locationQuestions: questionsByCat,
+      });
+    });
+  }
+
+  getLocationStages() {
+    Api.getLocationStages(this.state.location.id).then((resp) => {
+      this.setState({
+        locationStages: resp,
+      });
+    });
+  }
 
   handleLocationSelect(location) {
     // update current selected location
-    this.setState({
-      location: location,
-    }, () => this.getLocationQuestions());
+    this.setState(
+      {
+        location: location,
+      },
+      () => {
+        this.getLocationQuestions();
+        this.getLocationStages();
+      }
+    );
   }
 
   handleIconClick(category) {
-    this.setState({
-	    curStage: category
-    }, () => scrollToElement("#citizenInfoPanel"));
+    this.setState(
+      {
+        curStage: category,
+      },
+      () => scrollToElement("#citizenInfoPanel")
+    );
   }
 
   componentDidMount() {
@@ -89,33 +108,36 @@ class Citizens extends Component {
           locationsByState[loc.state] = [loc];
         }
       }
-	    // check if preset location
-	    const { lid } = this.props.match.params;
-	    let location = null;
-	    // if set try to find it
-	    if (lid) {
-		    location = resp.find(loc => loc.id == lid);
-	    }
-	    else {
-		    // default to Pittsburgh
-		    location = resp.find(loc => loc.name == "Pittsburgh");
-	    }
-      this.setState({
-        locations: locationsByState,
-	      location: location
-      }, () => {
-	      this.drawLeaderLines();
-	      this.getLocationQuestions();
-      });
+      // check if preset location
+      const { lid } = this.props.match.params;
+      let location = null;
+      // if set try to find it
+      if (lid) {
+        location = resp.find((loc) => loc.id == lid);
+      } else {
+        // default to Pittsburgh
+        location = resp.find((loc) => loc.name == "Pittsburgh");
+      }
+      this.setState(
+        {
+          locations: locationsByState,
+          location: location,
+        },
+        () => {
+          this.drawLeaderLines();
+          this.getLocationQuestions();
+          this.getLocationStages();
+        }
+      );
     });
   }
 
-	componentWillUnmount() {
-		// remove leader lines
-		for (let leaderLine of this.state.leaderLines) {
-			leaderLine.remove();
-		}
-	}
+  componentWillUnmount() {
+    // remove leader lines
+    for (let leaderLine of this.state.leaderLines) {
+      leaderLine.remove();
+    }
+  }
 
   render() {
     return (
@@ -275,7 +297,11 @@ class Citizens extends Component {
         </div>
         <div className="row">
           {this.state.curStage && (
-            <CitizenInfoPanel id="citizenInfoPanel" stage={this.state.curStage} questions={this.state.locationQuestions[this.state.curStage] }/>
+            <CitizenInfoPanel
+              id="citizenInfoPanel"
+              stage={this.state.locationStages[this.state.curStage]}
+              questions={this.state.locationQuestions[this.state.curStage]}
+            />
           )}
         </div>
       </div>

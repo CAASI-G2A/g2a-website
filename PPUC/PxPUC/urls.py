@@ -13,9 +13,9 @@ urlpatterns = [
     path('PxPUC/view_location/<int:lid>', views.view_location, name='view_location'),
     path('PxPUC/view_sentence/<int:sid>', views.view_sentence, name='view_sentence'),
     path('PxPUC/edit_sentence/<int:sid>', views.edit_sentence, name='edit_sentence'),
-    path('PxPUC/complaint/<int:lid>',views.complaint, name='complaint'),
     path('PxPUC/download_pdf/<int:lid>', views.download_pdf, name='download_pdf'),
     path('PxPUC/download_txt/<int:lid>', views.download_txt, name='download_txt'),
     path('PxPUC/locations', views.LocationList.as_view()),
-    path('PxPUC/location/<int:lid>/questions', views.LocationQuestionList.as_view())
+    path('PxPUC/location/<int:lid>/questions', views.LocationQuestionList.as_view()),
+    path('PxPUC/location/<int:lid>/stages', views.LocationStageList.as_view())
     ]

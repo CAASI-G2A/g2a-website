@@ -4,19 +4,11 @@ class About extends Component {
   render() {
     return (
       <div>
-        <div style={{ padding: "5px" }}></div>
-
-        <h1
-          style={{
-            paddingTop: "20px",
-            paddingLeft: "5px",
-            textAlign: "center",
-          }}
-        >
+        <h1 className="text-center pt-5 pl-2">
           About P<span style={{ color: "#5685d1" }}>x</span>PUC
         </h1>
 
-        <div className="jumbotron" style={{ paddingBottom: "25px" }}>
+        <div className="jumbotron pb-5">
           <p className="lead">
             The P<span style={{ color: "#5685d1" }}>x</span>PUC team is made up
             of a subset of members from Grief to Action (G2A) , a working group
@@ -30,11 +22,8 @@ class About extends Component {
           </p>
         </div>
 
-        <div
-          className="jumbotron"
-          style={{ backgroundColor: "white", paddingTop: "0px" }}
-        >
-          <hr className="my-4" style={{ borderTop: "1px solid darkgrey" }} />
+        <div className="jumbotron pt-0 bg-white">
+          <hr className="my-4 border-top border-secondary" />
           <p className="lead">
             The aim of this project is to analyze police union contracts and the
             barriers they pose to holding police officers accountable, as well
@@ -46,7 +35,7 @@ class About extends Component {
             problematic language used within them and break this information
             down.
           </p>
-          <hr className="my-4" style={{ borderTop: "1px solid darkgrey" }} />
+          <hr className="my-4 border-top border-secondary" />
         </div>
       </div>
     );

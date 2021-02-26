@@ -19,6 +19,8 @@ import nltk
 import mimetypes
 from nltk.tokenize import sent_tokenize
 from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 def home(request):
     """Renders the home page."""
@@ -217,31 +219,6 @@ def edit_sentence(request, sid):
         form = ProblematicLanguageForm(instance=sentence)
         return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
 
-def complaint(request,lid):
-    location = Location.objects.get(pk=lid)
-    db_questions = Question.objects.filter(location=None).prefetch_related('category').union(location.questions.all().prefetch_related('category'))
-    questions = {}
-    for question in db_questions:
-        for cat in question.category.all():
-            cat_questions = questions.get(cat.category)
-            if cat_questions is None:
-                cat_questions = []
-            cat_questions.append(question)
-            questions[cat.category] = cat_questions
-    locations = Location.objects.all()
-    states = []
-    for loc in locations:
-        if loc.state not in states:
-            states.append(loc.state)
-    context = {}
-    searchTerm = request.GET.get('searchTerm','')
-    if searchTerm != '':
-        results = Sentence.objects.filter(Q(location=location),Q(text__icontains=searchTerm))
-    else:
-        results = ''
-    context = {'title': 'Complaints', 'location' : location, 'questions': questions, 'results' : results, 'year':datetime.now().year, 'locations': locations, 'states': states}
-    return render(request,'app/complaint.html', context)
-
 class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
@@ -255,3 +232,64 @@ class LocationQuestionList(generics.ListAPIView):
         location = Location.objects.get(pk=lid)
         queryset = Question.objects.filter(location=None).prefetch_related('category').union(location.questions.all().prefetch_related('category'))
         return queryset
+
+# this is a generic view until the data model is formalized for stages
+class LocationStageList(APIView):
+    def get(self, request, lid, format=None):
+        precomplaint = {
+                'title': 'Interaction with Police',
+                'content': """<p class="lead">What happens in this stage?</p><p>You have an encounter with the police that you don't feel "right" about. If you feel an officer was rude to you or another member of the public, didn't properly investigate your case, or perhaps even hurt someone, you may have experienced police misconduct.</p>""",
+                'resources': '<a href="https://www.aclu.org/know-your-rights/stopped-by-police/" target="_blank">ACLU Know Your Rights</a>'
+                }
+        complaint = {
+                'title': 'Filing a Complaint',
+                'content': """<p class="lead">What happens in this stage?</p>
+                                    <p> In Pittsburgh there are two places to file a police misconduct complaint. The Office of Municipal Investigations (OMI) is the City's investigative branch and investigates all complaints filed against any city employees, including police and fire. The Citizens Police Reivew Board (CPRB) is an independent review board staffed with non-city employees. Three members are appointed by the mayor, and two members have to be experienced law professionals. You can choose which one to file the complaint with. Both of these agencies only investigate complaints involving the Pittsburgh Bureau's officers, not outside municipalites. The details, forms, and contact information for both are below. </p>
+                                                        <p>To file a complaint with the Citizens Police Review Board (CPRB), you can fill out this online <a target='_blank' href="https://cprbpgh.org/about/filing-a-complaint/file-a-complaint-now">form</a> to file an "informal complaint". Someone from CPRB will contact you within 10 days to help you file an official complaint. The investigation process will not start until an official complaint is filed. 
+                                                                            If you want to start with filing an official complaint, you must fill out this <a target='_blank' href="https://cprbpgh.org/documents/cprb-citizen-complaint.pdf">form</a>. You must mail or deliver your form to the following address: 
+                                                                                                <address>
+                                                                                                                        Citizen Police Review Board<br/>
+                                                                                                                                                816 5th Avenue, Suite 400<br/>
+                                                                                                                                                                        Pittsburgh, PA 15219
+                                                                                                                                                                                            </address>
+                                                                                                                                                                                                                NOTE: this complaint form requires a sworn affidavit signed by a notary. This is a written document that is you acknowledging that the informtation in your complaint is accurate, you must sign your name in the prescense of a notary to confirm that your complaint is verified. CPRB has notaries at their office to help with this.</p>
+                                                                                                                                                                                                                                    <p>To file a complaint with the Office of Municipal Investigations (OMI), you can mail or deliver your complaint in person. OMI prefers for complaints to be filed in writing but if necessary, you can file a complaint over the phone. Here is their contact information: 
+                                                                                                                                                                                                                                                        <address>
+                                                                                                                                                                                                                                                                                414 Grant Street, Suite 901 (Ross Street side)<br/>
+                                                                                                                                                                                                                                                                                                        Pittsburgh, PA 15219<br/>
+                                                                                                                                                                                                                                                                                                                                Phone: 412-255-2804<br/>
+                                                                                                                                                                                                                                                                                                                                                        Fax: 412-255-2952
+                                                                                                                                                                                                                                                                                                                                                                            </address>
+                                                                                                                                                                                                                                                                                                                                                                                                </p>""",
+                'resources': None
+                }
+        review = {
+                'title': 'Review of complaint',
+                'content': """<p class="lead">What happens in this stage?</p>
+                                    <p>OMI and CPRB have different ways of reviewing complaints they recieve.</p>
+                                                        <p>When you file a complaint with OMI, you will receive a letter informing you that your complaint has been recieved and the person assigned to investigate your case. That person gathers information from you, witnesses, and any other people involved. At CPRB, all complaints are taken through in an intake coordinator, passed to the executive director, and then assigned to an investigator.</p>
+                                                                            <p>The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days.</p>""",
+                'resources': None
+                }
+        investigation = {
+                'title': 'Investigation',
+                'content': """ <p class="lead">What happens in this stage?</p>
+                                    <p>Both CPRB and OMI have their own investigation structure. Depending on which one you file your complaint with, you will experience a different process.</p>
+                                                        <p>The process for complaints filed through OMI should take no longer than 120 days from when you file. Once your complaint is assigned an investigator, that person will contact you, witness, and the officers involved to create a full summary of the incidient. That information will be passed to city leadership including the Office of Public Safety where they will decide on the appropriate punishment. The written result and discipline decision will be sent to the officer and their supervisor.</p>
+                                                                            <p>Once you file a formal complaint with CPRB including a notarized affidavit, the investigator assigned to your complaint goes over the details and decides if it should be dismissed or presented to the board. If it goes to the board, they either decide to dismiss it or start a preliminary inquiry which takes last 10 buisness days. During this time, the investigator conducts interviews with witnesses, the victim, and the officer in question. They gather documents and request any additonal information they might need from OMI. The inquiry is then brought back to the board who either can decide to dismiss or offer the option of mediation between the citizen and officer. If anyone chooses not to do mediation, the complaint moves to a full investigation with more interviews and research. This review is completed in 30 days and if it requires more time, you will be notified in writing. It then goes back to the board who either dismiss or order a public hearing. You will get a 10 day advance notice of the hearing date. The Hearing panel is made up of three individuals chosen by the CPRB execuitve director. A special prosecutor will represent the complaint and provide the evidence to the panel from the investigation. A final decision is announced publicly either 10 days later or by the next CPRB board meeting, whichever is later. You will be directly notified, the officer in question is notified, and the discipline recommendation is given to the mayor and the police cheif.</p>""",
+                'resources': None
+                }
+        result = {
+                'title': 'Result',
+                'content': """<p class="lead">What happens in this stage?</p>
+                                    <p>You will be always notified of the result of your complaint and sometimes the course of action being taken by the department if your complaint is sustained. Generally, the form of discipline that is decided is kept internal. Again, if your case is dismissed, that does NOT mean you have not experienced police misconduct. Seeking out the assistance of local organizations can help here as well.</p>""",
+                'resources': None
+                }
+        stages = {
+                'pre-complaint': precomplaint,
+                'complaint': complaint,
+                'review': review,
+                'investigation': investigation,
+                'result': result,
+                }
+        return Response(stages)

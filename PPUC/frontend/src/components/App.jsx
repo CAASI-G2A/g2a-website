@@ -21,28 +21,28 @@ import About from "./About";
 import Contact from "./Contact";
 
 class App extends Component {
-componentDidMount() {
-// scroll to top button
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $("#back-to-top").fadeIn();
-    } else {
-      $("#back-to-top").fadeOut();
-    }
-  });
-  // scroll body to 0px on click
-  $("#back-to-top").click(() => {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      400
-    );
-    return false;
-  });
-});
-}
+  componentDidMount() {
+    // scroll to top button
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $("#back-to-top").fadeIn();
+        } else {
+          $("#back-to-top").fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $("#back-to-top").click(() => {
+        $("body,html").animate(
+          {
+            scrollTop: 0,
+          },
+          400
+        );
+        return false;
+      });
+    });
+  }
 
   render() {
     return (
@@ -53,7 +53,7 @@ $(document).ready(function () {
           <Switch>
             <Route path={routes.home} exact component={Landing} />
             <Route path={routes.researchers} component={Researchers} />
-		  <Route path={routes.citizens+"/:lid?"} component={Citizens} />
+            <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
             <Route path={routes.contact} component={Contact} />
           </Switch>

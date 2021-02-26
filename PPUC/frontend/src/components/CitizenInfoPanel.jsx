@@ -5,12 +5,20 @@ class CitizenInfoPanel extends Component {
     return (
       <div id={this.props.id} className="panel panel-primary">
         <div className="panel-heading">
-          <h3 className="panel-title">{this.props.title}</h3>
+          <h3 className="panel-title">{this.props.stage.title}</h3>
         </div>
-        <div className="panel-body">{this.props.body}</div>
-        <div className="panel-footer">{this.props.footer}</div>
+        <div
+          className="panel-body"
+          dangerouslySetInnerHTML={{ __html: this.props.stage.content }}
+        ></div>
+        {this.props.stage.resources && (
+          <div
+            className="panel-footer"
+            dangerouslySetInnerHTML={{ __html: this.props.stage.resources }}
+          ></div>
+        )}
         <div className="panel-heading">
-          <h3 className="panel-title">{this.props.title2}</h3>
+          <h3 className="panel-title">Frequently Asked Questions</h3>
         </div>
         <div
           className="panel-group"
@@ -43,7 +51,10 @@ class CitizenInfoPanel extends Component {
                   role="tabpanel"
                   aria-labelledby={`heading${question.id}`}
                 >
-			<div className="panel-body" dangerouslySetInnerHTML={{ __html: question.answer }}></div>
+                  <div
+                    className="panel-body"
+                    dangerouslySetInnerHTML={{ __html: question.answer }}
+                  ></div>
                 </div>
               </div>
             ))}
