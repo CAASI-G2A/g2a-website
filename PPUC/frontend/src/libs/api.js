@@ -10,5 +10,8 @@ const Api = {
   getLocationStages: (lid) => {
     return fetch(`${Api.BASE_PATH}/location/${lid}/stages`).then(toJSON);
   },
+  getResearcherSearchResults: (query) => {
+    return fetch(`${Api.BASE_PATH}/researcher?query=${query}`).then(toJSON);
+  },
 };
 export default Api;

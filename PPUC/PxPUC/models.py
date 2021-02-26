@@ -18,7 +18,7 @@ class Category(models.Model):
         return self.category
 
 class Question(models.Model):
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category, related_name='questions')
     q = models.CharField(max_length=450, default="")
     a = models.CharField(max_length=450, default="")
     location = models.ForeignKey(Location, related_name='questions', on_delete=models.CASCADE, null=True)

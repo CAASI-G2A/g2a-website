@@ -51,15 +51,8 @@ class Citizens extends Component {
   getLocationQuestions() {
     Api.getLocationQuestions(this.state.location.id).then((resp) => {
       const questionsByCat = {};
-      for (let question of resp) {
-        for (let cat of question.categories) {
-          const catName = cat.name.toLowerCase();
-          if (questionsByCat[catName]) {
-            questionsByCat[catName].push(question);
-          } else {
-            questionsByCat[catName] = [question];
-          }
-        }
+      for (let category of resp) {
+        questionsByCat[category.name.toLowerCase()] = category.questions;
       }
       this.setState({
         locationQuestions: questionsByCat,

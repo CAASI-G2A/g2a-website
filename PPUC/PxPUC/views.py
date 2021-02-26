@@ -4,7 +4,7 @@ Definition of views.
 
 from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
-from django.db.models import Q
+from django.db.models import Q, Prefetch
 from django.http import HttpRequest
 from django.http import HttpResponse
 from .models import *
@@ -22,6 +22,19 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+def landing(request):
+    """Renders the landing."""
+    context = {
+        'title':'G2A',
+        'year':datetime.now().year,
+    }
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/landing.html',
+        context
+    )
+
 def home(request):
     """Renders the home page."""
     context = {
@@ -33,56 +46,6 @@ def home(request):
         request,
         'app/index.html',
         context
-    )
-
-def researchers(request):
-    """Renders the researchers redirect page."""
-    assert isinstance(request, HttpRequest)
-    # load locations for search by city
-    locations = Location.objects.all()
-    states = []
-    for loc in locations:
-        if loc.state not in states:
-            states.append(loc.state)
-    # handle search by keyword requests
-    query = request.GET.get('q','')
-    orQuery = request.GET.get('OR','')
-    if query == '':
-        results = ''
-    else:
-        results = []
-        if orQuery == '':
-            querySet = Sentence.objects.filter(Q(text__icontains=query))
-        else:
-            querySet = Sentence.objects.filter(Q(text__icontains=query) | Q(text__icontains=orQuery))
-        for result in querySet:
-            t = result.text
-            lower = t.lower()
-            if lower.find(query) != -1:
-                q_length = len(query)
-                pos = lower.find(query.lower())
-                result.first = t[:pos]
-                result.second = t[pos:pos+q_length]
-                result.third = t[pos+q_length:]
-            elif lower.find(orQuery) != -1:
-                q_length = len(orQuery)
-                pos = lower.find(orQuery.lower())
-                result.first = t[:pos]
-                result.second = t[pos:pos+q_length]
-                result.third = t[pos+q_length:]
-            loc = Location.objects.get(name=result.location)
-            result.lid = loc.id
-            results.append((result))
-    return render(
-        request,
-        'app/researchers.html',
-        {
-            'title':'Researchers',
-            'locations' : locations,
-            'states' : states,
-            'results' : results,
-            'year':datetime.now().year,
-        }
     )
 
 def search(request):
@@ -223,14 +186,22 @@ class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
+class ResearcherSearchList(generics.ListAPIView):
+    serializer_class = LocationSerializer
+
+    def get_queryset(self):
+        query = self.request.query_params.get('query')
+        queryset = Location.objects.all().prefetch_related(Prefetch('sentences', queryset=Sentence.objects.filter(Q(text__icontains=query))))
+        return queryset
+
 class LocationQuestionList(generics.ListAPIView):
-    serializer_class = QuestionSerializer
+    serializer_class = CategorySerializer
     lookup_url_kwarg = 'lid'
 
     def get_queryset(self):
         lid = self.kwargs.get(self.lookup_url_kwarg)
         location = Location.objects.get(pk=lid)
-        queryset = Question.objects.filter(location=None).prefetch_related('category').union(location.questions.all().prefetch_related('category'))
+        queryset = Category.objects.all().prefetch_related(Prefetch('questions', queryset=Question.objects.filter(Q(location=None) | Q(location=location))))
         return queryset
 
 # this is a generic view until the data model is formalized for stages
