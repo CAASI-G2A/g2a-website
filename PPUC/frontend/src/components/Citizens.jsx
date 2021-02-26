@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import LeaderLine from "leader-line";
-import { dom } from "@fortawesome/fontawesome-svg-core";
+import * as scrollToElement from "scroll-to-element";
 import CitizenInfoPanel from "./CitizenInfoPanel";
 import Api from "../libs/api";
+import { useParams } from "react-router-dom";
 
 class Citizens extends Component {
   constructor(props) {
@@ -12,28 +13,69 @@ class Citizens extends Component {
       location: null,
       locationQuestions: null,
       curStage: null,
+	    leaderLines: []
     };
+	  this.drawLeaderLines = this.drawLeaderLines.bind(this);
+	  this.getLocationQuestions = this.getLocationQuestions.bind(this);
     this.handleLocationSelect = this.handleLocationSelect.bind(this);
     this.handleIconClick = this.handleIconClick.bind(this);
   }
+
+	drawLeaderLines() {
+		// given a flow chat element returns the underlying circle element SVG
+		const getCircle = (element) =>
+			element.children[0].children[0].children[0];
+		const leaderLineConfig = { color: "#337ab7" };
+		const lines = [
+			["pre-complaintIcon", "complaintIcon"],
+			["complaintIcon", "reviewIcon"],
+			["reviewIcon", "investigationIcon"],
+			["investigationIcon", "resultIcon"],
+		];
+		const leaderLines = [];
+		for (let line of lines) {
+			leaderLines.push(new LeaderLine(
+				getCircle(document.getElementById(line[0])),
+				getCircle(document.getElementById(line[1])),
+				leaderLineConfig
+			));
+		}
+		this.setState({
+			leaderLines: leaderLines
+		});
+	}
+
+	getLocationQuestions() {
+		Api.getLocationQuestions(this.state.location.id).then((resp) => {
+			const questionsByCat = {}
+			for (let question of resp) {
+				for (let cat of question.categories) {
+					const catName = cat.name.toLowerCase();
+					if (questionsByCat[catName]) {
+						questionsByCat[catName].push(question);
+					}
+					else {
+						questionsByCat[catName] = [question];
+					}
+				}
+			}
+			this.setState({
+				locationQuestions: questionsByCat,
+			});
+		});
+	}
 
   handleLocationSelect(location) {
     // update current selected location
     this.setState({
       location: location,
-    });
-    // fetch questions for this location
-    Api.getLocationQuestions(location.id).then((resp) => {
-      this.setState({
-        locationQuestions: resp,
-      });
-    });
+    }, () => this.getLocationQuestions());
   }
 
   handleIconClick(category) {
     this.setState({
-      curStage: category,
-    });
+	    curStage: category
+    }, () => scrollToElement("#citizenInfoPanel"));
   }
 
   componentDidMount() {
@@ -47,31 +89,33 @@ class Citizens extends Component {
           locationsByState[loc.state] = [loc];
         }
       }
+	    // check if preset location
+	    const { lid } = this.props.match.params;
+	    let location = null;
+	    // if set try to find it
+	    if (lid) {
+		    location = resp.find(loc => loc.id == lid);
+	    }
+	    else {
+		    // default to Pittsburgh
+		    location = resp.find(loc => loc.name == "Pittsburgh");
+	    }
       this.setState({
         locations: locationsByState,
+	      location: location
+      }, () => {
+	      this.drawLeaderLines();
+	      this.getLocationQuestions();
       });
     });
-    // draw leader lines between icons
-    dom.i2svg().then(() => {
-      // given a flow chat element returns the underlying circle element SVG
-      const getCircle = (element) =>
-        element.children[0].children[0].children[0];
-      const leaderLineConfig = { color: "#337ab7" };
-      const lines = [
-        ["pre-complaintIcon", "complaintIcon"],
-        ["complaintIcon", "reviewIcon"],
-        ["reviewIcon", "investigationIcon"],
-        ["investigationIcon", "resultIcon"],
-      ];
-      for (let line of lines) {
-        new LeaderLine(
-          getCircle(document.getElementById(line[0])),
-          getCircle(document.getElementById(line[1])),
-          leaderLineConfig
-        );
-      }
-    });
   }
+
+	componentWillUnmount() {
+		// remove leader lines
+		for (let leaderLine of this.state.leaderLines) {
+			leaderLine.remove();
+		}
+	}
 
   render() {
     return (
@@ -133,7 +177,7 @@ class Citizens extends Component {
               <div
                 className="text-center flow-stage col-xs-6 col-lg-12"
                 id="pre-complaintIcon"
-                onClick={() => this.handleIconClick("precomplaint")}
+                onClick={() => this.handleIconClick("pre-complaint")}
               >
                 <span className="fa-stack fa-5x">
                   <i
@@ -231,7 +275,7 @@ class Citizens extends Component {
         </div>
         <div className="row">
           {this.state.curStage && (
-            <CitizenInfoPanel stage={this.state.curStage} />
+            <CitizenInfoPanel id="citizenInfoPanel" stage={this.state.curStage} questions={this.state.locationQuestions[this.state.curStage] }/>
           )}
         </div>
       </div>

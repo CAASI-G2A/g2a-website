@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CitizenInfoPanel extends Component {
   render() {
     return (
-      <div className="panel panel-primary">
+      <div id={this.props.id} className="panel panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">{this.props.title}</h3>
         </div>
@@ -29,21 +29,21 @@ class CitizenInfoPanel extends Component {
                       role="button"
                       data-toggle="collapse"
                       data-parent="#citizenInfoPanelAccordion"
-                      href="#collapse{ question.id }"
+                      href={`#collapse${question.id}`}
                       aria-expanded="false"
-                      aria-controls="collapse{ question.id }"
+                      aria-controls={`collapse${question.id}`}
                     >
-                      {question.text}
+                      {question.question}
                     </a>
                   </h4>
                 </div>
                 <div
-                  id="collapse{ question.id }"
+                  id={`collapse${question.id}`}
                   className="panel-collapse collapse"
                   role="tabpanel"
-                  aria-labelledby="heading{ question.id }"
+                  aria-labelledby={`heading${question.id}`}
                 >
-                  <div className="panel-body">{question.answer}</div>
+			<div className="panel-body" dangerouslySetInnerHTML={{ __html: question.answer }}></div>
                 </div>
               </div>
             ))}

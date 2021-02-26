@@ -2,7 +2,6 @@
 import "bootstrap";
 // import fontawesome icons
 import "@fortawesome/fontawesome-free/js/all.js";
-import * as scrollToElement from "scroll-to-element";
 
 // import bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,6 +21,29 @@ import About from "./About";
 import Contact from "./Contact";
 
 class App extends Component {
+componentDidMount() {
+// scroll to top button
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("#back-to-top").fadeIn();
+    } else {
+      $("#back-to-top").fadeOut();
+    }
+  });
+  // scroll body to 0px on click
+  $("#back-to-top").click(() => {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      400
+    );
+    return false;
+  });
+});
+}
+
   render() {
     return (
       <HashRouter>
@@ -31,7 +53,7 @@ class App extends Component {
           <Switch>
             <Route path={routes.home} exact component={Landing} />
             <Route path={routes.researchers} component={Researchers} />
-            <Route path={routes.citizens} component={Citizens} />
+		  <Route path={routes.citizens+"/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
             <Route path={routes.contact} component={Contact} />
           </Switch>
@@ -55,54 +77,6 @@ export default App;
 const container = document.getElementById("app");
 render(<App />, container);
 
-window.showCategory = (c) => {
-  // can't use CSS class here since it seems to mess with LeaderLine
-  // Results in lines "floating" after a button is clicked
-  document.getElementById("pre-complaintCircle").style.color = "";
-  document.getElementById("complaintCircle").style.color = "";
-  document.getElementById("reviewCircle").style.color = "";
-  document.getElementById("investigationCircle").style.color = "";
-  document.getElementById("resultCircle").style.color = "";
-  //on click set all elements to hidden and who the one we want
-  document.getElementById("pre-complaintPanel").style.display = "none";
-  document.getElementById("complaintPanel").style.display = "none";
-  document.getElementById("reviewPanel").style.display = "none";
-  document.getElementById("investigationPanel").style.display = "none";
-  document.getElementById("resultPanel").style.display = "none";
-  switch (c) {
-    case (c = "Pre-Complaint"):
-      document.getElementById("pre-complaintPanel").style.display = "block";
-      document.getElementById("pre-complaintCircle").style.color = "#d9534f";
-      // scroll to answer area
-      scrollToElement("#pre-complaintPanel");
-      break;
-    case (c = "Complaint"):
-      document.getElementById("complaintPanel").style.display = "block";
-      document.getElementById("complaintCircle").style.color = "#d9534f";
-      // scroll to answer area
-      scrollToElement("#complaintPanel");
-      break;
-    case (c = "Review"):
-      document.getElementById("reviewPanel").style.display = "block";
-      document.getElementById("reviewCircle").style.color = "#d9534f";
-      // scroll to answer area
-      scrollToElement("#reviewPanel");
-      break;
-    case (c = "Investigation"):
-      document.getElementById("investigationPanel").style.display = "block";
-      document.getElementById("investigationCircle").style.color = "#d9534f";
-      // scroll to answer area
-      scrollToElement("#investigationPanel");
-      break;
-    case (c = "Result"):
-      document.getElementById("resultPanel").style.display = "block";
-      document.getElementById("resultCircle").style.color = "#d9534f";
-      // scroll to answer area
-      scrollToElement("#resultPanel");
-      break;
-  }
-};
-
 window.showContractSearch = () => {
   //on click set all elements to hidden and who the one we want
   document.getElementById("pre-complaintPanel").style.display = "none";
@@ -121,24 +95,3 @@ window.loadModalLink = function (element, e) {
   const href = $(element).attr("href");
   $(modalId).modal("show").load(href);
 };
-
-// scroll to top button
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $("#back-to-top").fadeIn();
-    } else {
-      $("#back-to-top").fadeOut();
-    }
-  });
-  // scroll body to 0px on click
-  $("#back-to-top").click(() => {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      400
-    );
-    return false;
-  });
-});
