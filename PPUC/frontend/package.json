@@ -32,6 +32,7 @@
     "leader-line": "^1.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-highlight-words": "^0.17.0",
     "react-router-dom": "^5.2.0",
     "scroll-to-element": "^2.0.3"
   },

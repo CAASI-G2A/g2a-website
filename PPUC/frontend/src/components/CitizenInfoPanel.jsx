@@ -29,7 +29,7 @@ class CitizenInfoPanel extends Component {
         >
           {this.props.questions &&
             this.props.questions.map((question) => (
-              <div className="panel panel-default">
+              <div key={question.id} className="panel panel-default">
                 <div className="panel-heading" role="tab" id="heading{{q.id}}">
                   <h4 className="panel-title">
                     <a
