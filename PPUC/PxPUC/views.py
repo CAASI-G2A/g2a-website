@@ -21,6 +21,7 @@ from nltk.tokenize import sent_tokenize
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
+import json
 
 def landing(request):
     """Renders the landing."""
@@ -190,8 +191,19 @@ class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
 
     def get_queryset(self):
+        def buildFilter(query):
+            # we hit an operand
+            if type(query) is str:
+                return Q(text__icontains=query)
+            else:
+                if query["operation"] == "AND":
+                    return buildFilter(query["operand1"]) & buildFilter(query["operand2"])
+                else:
+                    return buildFilter(query["operand1"]) | buildFilter(query["operand2"])
         query = self.request.query_params.get('query')
-        queryset = Location.objects.all().prefetch_related(Prefetch('sentences', queryset=Sentence.objects.filter(Q(text__icontains=query))))
+        query = json.loads(query)["query"]
+        queryFilter = buildFilter(query)
+        queryset = Location.objects.all().prefetch_related(Prefetch('sentences', queryset=Sentence.objects.filter(queryFilter)))
         return queryset
 
 class LocationQuestionList(generics.ListAPIView):

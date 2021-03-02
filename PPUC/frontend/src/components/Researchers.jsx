@@ -1,12 +1,17 @@
 import React, { Component } from "react";
+import QueryString from "query-string";
 import Highlighter from "react-highlight-words";
 import Api from "../libs/api";
+import SearchParser from "../libs/researcher_search_lang";
+import routes from "../routes";
 
 class Researchers extends Component {
   constructor(props) {
     super(props);
     this.state = {
       searchQuery: "",
+      searchQueryWords: [],
+      searchQueryError: null,
       queryResults: null,
       filteredQueryResults: null,
       queryResultStates: null,
@@ -17,12 +22,12 @@ class Researchers extends Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
-  setSearchQuery(newQuery) {
+  setSearchQuery(newQuery, autoSearch) {
     this.setState(
       {
         searchQuery: newQuery,
       },
-      () => this.handleSearch()
+      () => (autoSearch ? this.handleSearch() : null)
     );
   }
 
@@ -45,28 +50,72 @@ class Researchers extends Component {
     }
   }
 
-  handleSearch() {
-    Api.getResearcherSearchResults(this.state.searchQuery).then((resp) => {
-      // remove cities that had 0 results
-      const respFilter = resp.filter((res) => res.sentences.length > 0);
-      // sort based on city name
-      respFilter.sort((a, b) => {
-        if (a.name < b.name) {
-          return -1;
+  handleSearch(event) {
+    if (event) {
+      event.preventDefault();
+    }
+    // parse query
+    try {
+      function getQueryWords(query) {
+        if (typeof query === "string") {
+          return [query];
+        } else {
+          return getQueryWords(query["operand1"]).concat(
+            getQueryWords(query["operand2"])
+          );
         }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
+      }
+      const searchQuery = SearchParser.parse(this.state.searchQuery);
+      // parse down to just the words being searched for, for highlighting
+      const searchQueryWords = getQueryWords(searchQuery["query"]);
+      Api.getResearcherSearchResults(searchQuery).then((resp) => {
+        // remove cities that had 0 results
+        const respFilter = resp.filter((res) => res.sentences.length > 0);
+        // sort based on city name
+        respFilter.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        // parse states out
+        const respStates = [...new Set(respFilter.map((a) => a.state))];
+        this.setState({
+          queryResults: respFilter,
+          filteredQueryResults: respFilter,
+          queryResultStates: respStates,
+          searchQueryError: null,
+          searchQueryWords: searchQueryWords,
+          stateFilter: "null",
+        });
       });
-      // parse states out
-      const respStates = [...new Set(respFilter.map((a) => a.state))];
-      this.setState({
-        queryResults: respFilter,
-        filteredQueryResults: respFilter,
-        queryResultStates: respStates,
+      // set search query param
+      this.props.history.push({
+        pathname: routes.researchers,
+        search:
+          "?" +
+          new URLSearchParams({ search: this.state.searchQuery }).toString(),
       });
-    });
+    } catch (err) {
+      if (err instanceof SearchParser.SyntaxError) {
+        this.setState({
+          searchQueryError: err,
+        });
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  componentDidMount() {
+    const queryParams = QueryString.parse(this.props.location.search);
+    // if search already set, use it
+    if (queryParams.search) {
+      this.setSearchQuery(queryParams.search, true);
+    }
   }
 
   render() {
@@ -74,24 +123,34 @@ class Researchers extends Component {
       <div className="row mt-3">
         <div className="col-lg-12">
           <div className="col-md-6 col-md-offset-3">
-            <div className="input-group">
-              <input
-                type="text"
-                className="form-control input-lg"
-                placeholder="Search Query..."
-                value={this.state.searchQuery}
-                onChange={(event) => this.setSearchQuery(event.target.value)}
-              />
-              <div className="input-group-addon">
-                <button
-                  className="btn btn-sm btn-outline-primary"
-                  onClick={() => this.handleSearch()}
-                  type="submit"
-                >
-                  <i className="fas fa-search"></i>
-                </button>
+            <form onSubmit={(e) => this.handleSearch(e)}>
+              <div className="input-group">
+                <input
+                  type="text"
+                  className={`form-control input-lg ${
+                    this.state.searchQueryError ? "border-danger" : ""
+                  }`}
+                  placeholder="Search Query..."
+                  value={this.state.searchQuery}
+                  onChange={(event) =>
+                    this.setSearchQuery(event.target.value, false)
+                  }
+                />
+                <div className="input-group-addon">
+                  <button
+                    className="btn btn-sm btn-outline-primary"
+                    type="submit"
+                  >
+                    <i className="fas fa-search"></i>
+                  </button>
+                </div>
               </div>
-            </div>
+              {this.state.searchQueryError && (
+                <p className="text-danger text-center">
+                  This search query is invalid
+                </p>
+              )}
+            </form>
           </div>
         </div>
         <div className="col-lg-12 mt-3">
@@ -99,35 +158,35 @@ class Researchers extends Component {
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("file")}
+                onClick={() => this.setSearchQuery("file", true)}
                 className="btn btn-info btn-rounded mr-2"
               >
                 file
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("interview")}
+                onClick={() => this.setSearchQuery("interview", true)}
                 className="btn btn-info btn-rounded mr-2"
               >
                 interview
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("arbitration")}
+                onClick={() => this.setSearchQuery("arbitration", true)}
                 className="btn btn-info btn-rounded mr-2"
               >
                 arbitration
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("review")}
+                onClick={() => this.setSearchQuery("review", true)}
                 className="btn btn-info btn-rounded mr-2"
               >
                 review
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("investigation")}
+                onClick={() => this.setSearchQuery("investigation", true)}
                 className="btn btn-info btn-rounded"
               >
                 investigation
@@ -135,7 +194,7 @@ class Researchers extends Component {
             </div>
           </div>
         </div>
-        {this.state.queryResults && (
+        {this.state.filteredQueryResults && (
           <div>
             <div className="col-lg-12 mt-3">
               {this.state.queryResultStates && (
@@ -143,7 +202,6 @@ class Researchers extends Component {
                   <div className="input-group">
                     <select
                       className="form-control"
-                      defaultValue={"null"}
                       value={this.state.stateFilter}
                       onChange={(e) => this.setStateFilter(e.target.value)}
                     >
@@ -168,6 +226,11 @@ class Researchers extends Component {
               )}
             </div>
             <div className="col-lg-12 mt-3">
+              {this.state.filteredQueryResults.length === 0 && (
+                <p className="text-center lead">
+                  Sorry, it appears there are no results for this search!
+                </p>
+              )}
               {this.state.filteredQueryResults.map((result) => (
                 <div key={result.id}>
                   <button
@@ -197,7 +260,7 @@ class Researchers extends Component {
                         <p className="lead">
                           <Highlighter
                             highlightClassName="bg-warning"
-                            searchWords={[this.state.searchQuery]}
+                            searchWords={this.state.searchQueryWords}
                             autoEscape={true}
                             textToHighlight={sentence.text}
                           />
