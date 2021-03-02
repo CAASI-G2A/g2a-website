@@ -10,6 +10,9 @@ AND
 OR
 = " or "i
 
+ESC
+= "\"" / "'"
+
 QOR
 = exprPP:QOP OR exprQ:Q { return {operation: "OR", operand1: exprPP, operand2: exprQ} }
 
@@ -19,7 +22,7 @@ QAND
 QOP = PP / P
 
 PP
-= "\"" (P " ")* P "\"" { return text() }
+= ESC (P " ")* P ESC { return text() }
 
 P
 = [A-Za-z0-9]+ { return text() }
