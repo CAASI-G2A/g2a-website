@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-{% load manifest %}
-{% load static %}
+{% load manifest %} {% load static %}
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>PxPUC</title>
-		<link rel="stylesheet" href="{% manifest 'vendor.css' %}">
-		<link rel="stylesheet" href="{% manifest 'main.css' %}">
-	</head>
-	<body>
-		<div id="app">
-			<!-- React will load here -->
-		</div>
-	</body>
-	<script src="{% manifest 'vendor.js' %}"></script>
-	<script src="{% manifest 'main.js' %}"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PxPUC</title>
+    <link rel="stylesheet" href="{% manifest 'vendor.css' %}" />
+    <link rel="stylesheet" href="{% manifest 'main.css' %}" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- React will load here -->
+    </div>
+  </body>
+  <script src="{% manifest 'vendor.js' %}"></script>
+  <script src="{% manifest 'main.js' %}"></script>
 </html>

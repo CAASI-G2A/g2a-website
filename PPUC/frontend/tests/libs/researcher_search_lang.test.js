@@ -13,7 +13,18 @@ describe("Researcher Search Language Parser", () => {
   });
 
   test("it should parse an expression with an escaped 'and'", () => {
-    const input = "'dog and cat'";
+    const input = '"dog and cat"';
+    const output = parse(input);
+
+    const expectedOutput = {
+      query: input,
+    };
+
+    expect(output).toEqual(expectedOutput);
+  });
+
+  test("it should parse contractions (ex: don't)", () => {
+    const input = "don't";
     const output = parse(input);
 
     const expectedOutput = {

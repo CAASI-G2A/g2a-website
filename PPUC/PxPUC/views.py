@@ -23,169 +23,136 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
 
+
 def landing(request):
     """Renders the landing."""
     context = {
-        'title':'G2A',
-        'year':datetime.now().year,
+        "title": "G2A",
+        "year": datetime.now().year,
     }
     assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/landing.html',
-        context
-    )
+    return render(request, "app/landing.html", context)
+
 
 def home(request):
     """Renders the home page."""
     context = {
-        'title':'Home Page',
-        'year':datetime.now().year,
-        }
+        "title": "Home Page",
+        "year": datetime.now().year,
+    }
     assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/index.html',
-        context
-    )
+    return render(request, "app/index.html", context)
 
-def search(request):
-    context = {}
-    query = request.GET.get('q','')
-    locations = Location.objects.filter(Q(name__icontains=query))
-    states = []
-    for loc in locations:
-        if loc.state not in states:
-            states.append(loc.state)
-
-    context = {
-        'title' : 'Search',
-        'locations' : locations,
-        'states' : states,
-        'year':datetime.now().year,
-        }
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/search.html',
-        context
-    )
-
-def search_contract(request):
-    context = {}
-    query = request.GET.get('q','')
-    orQuery = request.GET.get('OR','')
-    if query == '':
-        results = ''
-    else:
-        results = []
-        if orQuery == '':
-            querySet = Sentence.objects.filter(Q(text__icontains=query))
-        else:
-            querySet = Sentence.objects.filter(Q(text__icontains=query) | Q(text__icontains=orQuery))
-        for result in querySet:
-            t = result.text
-            lower = t.lower()
-            if lower.find(query) != -1:
-                q_length = len(query)
-                pos = lower.find(query.lower())
-                result.first = t[:pos]
-                result.second = t[pos:pos+q_length]
-                result.third = t[pos+q_length:]
-            elif lower.find(orQuery) != -1:
-                q_length = len(orQuery)
-                pos = lower.find(orQuery.lower())
-                result.first = t[:pos]
-                result.second = t[pos:pos+q_length]
-                result.third = t[pos+q_length:]
-            loc = Location.objects.get(name=result.location)
-            result.lid = loc.id
-            results.append((result))
-    context = {
-        'title' : 'Search Contracts',
-        'results' : results,
-        'year':datetime.now().year,
-        }
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/search_contract.html',
-        context
-    )
 
 def view_location(request, lid):
     context = {}
     location = Location.objects.get(pk=lid)
     sentences = Problematic_Sentence.objects.filter(Q(location=location))
     context = {
-        'title' : 'View Location',
-        'location' : location,
-        'sentences' : sentences,
-        'form' : ProblematicLanguageForm,
-        'year':datetime.now().year,
-        }
+        "title": "View Location",
+        "location": location,
+        "sentences": sentences,
+        "form": ProblematicLanguageForm,
+        "year": datetime.now().year,
+    }
     assert isinstance(request, HttpRequest)
-    return render(request,'app/view_location.html',context)
+    return render(request, "app/view_location.html", context)
+
 
 def download_pdf(request, lid):
     location = Location.objects.get(pk=lid)
-    state = re.sub(' ', '-', location.state)
-    city = re.sub(' ', '-', location.name)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
     fn = state + "_" + city + ".pdf"
     dirspot = os.getcwd()
     file_path = dirspot + "/PxPUC/static/app/contracts_pdf/" + fn
     filename = fn
     fl = open(file_path, mode="rb")
     mime_type, _ = mimetypes.guess_type(file_path)
-    response = HttpResponse(fl, content_type='application/pdf')
-    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    response = HttpResponse(fl, content_type="application/pdf")
+    response["Content-Disposition"] = "attachment; filename=%s" % filename
     return response
+
 
 def download_txt(request, lid):
     location = Location.objects.get(pk=lid)
-    state = re.sub(' ', '-', location.state)
-    city = re.sub(' ', '-', location.name)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
     fn = state + "_" + city + ".txt"
     dirspot = os.getcwd()
     file_path = dirspot + "/PxPUC/static/app/contracts_txt/" + fn
     filename = fn
     fl = open(file_path, mode="rb")
     mime_type, _ = mimetypes.guess_type(file_path)
-    response = HttpResponse(fl, content_type='application/txt')
-    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    response = HttpResponse(fl, content_type="application/txt")
+    response["Content-Disposition"] = "attachment; filename=%s" % filename
     return response
+
 
 def view_sentence(request, sid):
     print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)
     form = ProblematicLanguageForm(instance=sentence)
-    return render(request, 'app/view_sentence.html', {'title' : 'Edit Sentence', 'form': form, 'sentence' : sentence})
+    return render(
+        request,
+        "app/view_sentence.html",
+        {"title": "Edit Sentence", "form": form, "sentence": sentence},
+    )
+
 
 def edit_sentence(request, sid):
     print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProblematicLanguageForm(request.POST)
         if form.is_valid():
             sentence.refresh_from_db()
-            sentence.impact = form.cleaned_data.get('impact')
-            sentence.limit_oversight = form.cleaned_data.get('limit_oversight')
-            sentence.city_pay_for_misconduct = form.cleaned_data.get('city_pay_for_misconduct')
-            sentence.erase_misconduct = form.cleaned_data.get('erase_misconduct')
-            sentence.disqualify_complaints = form.cleaned_data.get('disqualify_complaints')
-            sentence.restrict_interrogation = form.cleaned_data.get('restrict_interrogation')
-            sentence.unfair_information = form.cleaned_data.get('unfair_information')
+            sentence.impact = form.cleaned_data.get("impact")
+            sentence.limit_oversight = form.cleaned_data.get("limit_oversight")
+            sentence.city_pay_for_misconduct = form.cleaned_data.get(
+                "city_pay_for_misconduct"
+            )
+            sentence.erase_misconduct = form.cleaned_data.get("erase_misconduct")
+            sentence.disqualify_complaints = form.cleaned_data.get(
+                "disqualify_complaints"
+            )
+            sentence.restrict_interrogation = form.cleaned_data.get(
+                "restrict_interrogation"
+            )
+            sentence.unfair_information = form.cleaned_data.get("unfair_information")
             sentence.save()
-            location = Location.objects.filter(Q(name__icontains=sentence.location)).first()
+            location = Location.objects.filter(
+                Q(name__icontains=sentence.location)
+            ).first()
             lid = location.id
             return view_location(request, lid)
     else:
         form = ProblematicLanguageForm(instance=sentence)
-        return render(request, 'app/edit_sentence.html', {'title' : 'Edit Sentence','form': form, 'sentence' : sentence})
+        return render(
+            request,
+            "app/edit_sentence.html",
+            {"title": "Edit Sentence", "form": form, "sentence": sentence},
+        )
+
 
 class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
+
+
+class LocationRetrieve(generics.RetrieveAPIView):
+    lookup_url_kwarg = "lid"
+    lookup_field = "id"
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
+
+class LocationContractRetrieve(generics.RetrieveAPIView):
+    lookup_url_kwarg = "lid"
+    lookup_field = "location_id"
+    queryset = Contract.objects.all()
+    serializer_class = ContractSerializer
+
 
 class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
@@ -197,36 +164,69 @@ class ResearcherSearchList(generics.ListAPIView):
                 return Q(text__icontains=query)
             else:
                 if query["operation"] == "AND":
-                    return buildFilter(query["operand1"]) & buildFilter(query["operand2"])
+                    return buildFilter(query["operand1"]) & buildFilter(
+                        query["operand2"]
+                    )
                 else:
-                    return buildFilter(query["operand1"]) | buildFilter(query["operand2"])
-        query = self.request.query_params.get('query')
-        query = json.loads(query)["query"]
+                    return buildFilter(query["operand1"]) | buildFilter(
+                        query["operand2"]
+                    )
+
+        query = self.request.query_params.get("query")
+        if query is None:
+            raise serializers.ValidationError(
+                {"message": "Request missing query string parameter 'query'."}
+            )
+
+        try:
+            query = json.loads(query)
+        except:
+            raise serializers.ValidationError(
+                {"message": "Invalid JSON data received."}
+            )
+
+        query = query.get("query")
+        if query is None:
+            raise serializers.ValidationError(
+                {"message": "JSON root field 'query' missing from request data."}
+            )
+
         queryFilter = buildFilter(query)
-        queryset = Location.objects.all().prefetch_related(Prefetch('sentences', queryset=Sentence.objects.filter(queryFilter)))
+        queryset = Location.objects.all().prefetch_related(
+            Prefetch("sentences", queryset=Sentence.objects.filter(queryFilter))
+        )
         return queryset
+
 
 class LocationQuestionList(generics.ListAPIView):
     serializer_class = CategorySerializer
-    lookup_url_kwarg = 'lid'
+    lookup_url_kwarg = "lid"
 
     def get_queryset(self):
         lid = self.kwargs.get(self.lookup_url_kwarg)
         location = Location.objects.get(pk=lid)
-        queryset = Category.objects.all().prefetch_related(Prefetch('questions', queryset=Question.objects.filter(Q(location=None) | Q(location=location))))
+        queryset = Category.objects.all().prefetch_related(
+            Prefetch(
+                "questions",
+                queryset=Question.objects.filter(
+                    Q(location=None) | Q(location=location)
+                ),
+            )
+        )
         return queryset
+
 
 # this is a generic view until the data model is formalized for stages
 class LocationStageList(APIView):
     def get(self, request, lid, format=None):
         precomplaint = {
-                'title': 'Interaction with Police',
-                'content': """<p class="lead">What happens in this stage?</p><p>You have an encounter with the police that you don't feel "right" about. If you feel an officer was rude to you or another member of the public, didn't properly investigate your case, or perhaps even hurt someone, you may have experienced police misconduct.</p>""",
-                'resources': '<a href="https://www.aclu.org/know-your-rights/stopped-by-police/" target="_blank">ACLU Know Your Rights</a>'
-                }
+            "title": "Interaction with Police",
+            "content": """<p class="lead">What happens in this stage?</p><p>You have an encounter with the police that you don't feel "right" about. If you feel an officer was rude to you or another member of the public, didn't properly investigate your case, or perhaps even hurt someone, you may have experienced police misconduct.</p>""",
+            "resources": '<a href="https://www.aclu.org/know-your-rights/stopped-by-police/" target="_blank">ACLU Know Your Rights</a>',
+        }
         complaint = {
-                'title': 'Filing a Complaint',
-                'content': """<p class="lead">What happens in this stage?</p>
+            "title": "Filing a Complaint",
+            "content": """<p class="lead">What happens in this stage?</p>
                                     <p> In Pittsburgh there are two places to file a police misconduct complaint. The Office of Municipal Investigations (OMI) is the City's investigative branch and investigates all complaints filed against any city employees, including police and fire. The Citizens Police Reivew Board (CPRB) is an independent review board staffed with non-city employees. Three members are appointed by the mayor, and two members have to be experienced law professionals. You can choose which one to file the complaint with. Both of these agencies only investigate complaints involving the Pittsburgh Bureau's officers, not outside municipalites. The details, forms, and contact information for both are below. </p>
                                                         <p>To file a complaint with the Citizens Police Review Board (CPRB), you can fill out this online <a target='_blank' href="https://cprbpgh.org/about/filing-a-complaint/file-a-complaint-now">form</a> to file an "informal complaint". Someone from CPRB will contact you within 10 days to help you file an official complaint. The investigation process will not start until an official complaint is filed. 
                                                                             If you want to start with filing an official complaint, you must fill out this <a target='_blank' href="https://cprbpgh.org/documents/cprb-citizen-complaint.pdf">form</a>. You must mail or deliver your form to the following address: 
@@ -244,35 +244,35 @@ class LocationStageList(APIView):
                                                                                                                                                                                                                                                                                                                                                         Fax: 412-255-2952
                                                                                                                                                                                                                                                                                                                                                                             </address>
                                                                                                                                                                                                                                                                                                                                                                                                 </p>""",
-                'resources': None
-                }
+            "resources": None,
+        }
         review = {
-                'title': 'Review of complaint',
-                'content': """<p class="lead">What happens in this stage?</p>
+            "title": "Review of complaint",
+            "content": """<p class="lead">What happens in this stage?</p>
                                     <p>OMI and CPRB have different ways of reviewing complaints they recieve.</p>
                                                         <p>When you file a complaint with OMI, you will receive a letter informing you that your complaint has been recieved and the person assigned to investigate your case. That person gathers information from you, witnesses, and any other people involved. At CPRB, all complaints are taken through in an intake coordinator, passed to the executive director, and then assigned to an investigator.</p>
                                                                             <p>The accused officer and those associated with them, as well as their legal representation, must be notified within a specific timeframe which is typically a matter of days.</p>""",
-                'resources': None
-                }
+            "resources": None,
+        }
         investigation = {
-                'title': 'Investigation',
-                'content': """ <p class="lead">What happens in this stage?</p>
+            "title": "Investigation",
+            "content": """ <p class="lead">What happens in this stage?</p>
                                     <p>Both CPRB and OMI have their own investigation structure. Depending on which one you file your complaint with, you will experience a different process.</p>
                                                         <p>The process for complaints filed through OMI should take no longer than 120 days from when you file. Once your complaint is assigned an investigator, that person will contact you, witness, and the officers involved to create a full summary of the incidient. That information will be passed to city leadership including the Office of Public Safety where they will decide on the appropriate punishment. The written result and discipline decision will be sent to the officer and their supervisor.</p>
                                                                             <p>Once you file a formal complaint with CPRB including a notarized affidavit, the investigator assigned to your complaint goes over the details and decides if it should be dismissed or presented to the board. If it goes to the board, they either decide to dismiss it or start a preliminary inquiry which takes last 10 buisness days. During this time, the investigator conducts interviews with witnesses, the victim, and the officer in question. They gather documents and request any additonal information they might need from OMI. The inquiry is then brought back to the board who either can decide to dismiss or offer the option of mediation between the citizen and officer. If anyone chooses not to do mediation, the complaint moves to a full investigation with more interviews and research. This review is completed in 30 days and if it requires more time, you will be notified in writing. It then goes back to the board who either dismiss or order a public hearing. You will get a 10 day advance notice of the hearing date. The Hearing panel is made up of three individuals chosen by the CPRB execuitve director. A special prosecutor will represent the complaint and provide the evidence to the panel from the investigation. A final decision is announced publicly either 10 days later or by the next CPRB board meeting, whichever is later. You will be directly notified, the officer in question is notified, and the discipline recommendation is given to the mayor and the police cheif.</p>""",
-                'resources': None
-                }
+            "resources": None,
+        }
         result = {
-                'title': 'Result',
-                'content': """<p class="lead">What happens in this stage?</p>
+            "title": "Result",
+            "content": """<p class="lead">What happens in this stage?</p>
                                     <p>You will be always notified of the result of your complaint and sometimes the course of action being taken by the department if your complaint is sustained. Generally, the form of discipline that is decided is kept internal. Again, if your case is dismissed, that does NOT mean you have not experienced police misconduct. Seeking out the assistance of local organizations can help here as well.</p>""",
-                'resources': None
-                }
+            "resources": None,
+        }
         stages = {
-                'pre-complaint': precomplaint,
-                'complaint': complaint,
-                'review': review,
-                'investigation': investigation,
-                'result': result,
-                }
+            "pre-complaint": precomplaint,
+            "complaint": complaint,
+            "review": review,
+            "investigation": investigation,
+            "result": result,
+        }
         return Response(stages)

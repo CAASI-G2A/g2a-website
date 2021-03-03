@@ -2,3 +2,6 @@
 dist
 build
 coverage
+
+# html in backend
+*.html

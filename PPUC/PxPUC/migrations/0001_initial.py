@@ -8,67 +8,143 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Category',
+            name="Category",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('category', models.CharField(max_length=300)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("category", models.CharField(max_length=300)),
             ],
         ),
         migrations.CreateModel(
-            name='Location',
+            name="Location",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='', max_length=150)),
-                ('state', models.CharField(default='', max_length=50)),
-                ('complaint_form_link', models.URLField(max_length=300)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(default="", max_length=150)),
+                ("state", models.CharField(default="", max_length=50)),
+                ("complaint_form_link", models.URLField(max_length=300)),
             ],
         ),
         migrations.CreateModel(
-            name='Sentence',
+            name="Sentence",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='sentences', to='PxPUC.location')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("text", models.TextField()),
+                (
+                    "location",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="sentences",
+                        to="PxPUC.location",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Question',
+            name="Question",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('q', models.CharField(default='', max_length=450)),
-                ('a', models.CharField(default='', max_length=450)),
-                ('category', models.ManyToManyField(to='PxPUC.Category')),
-                ('location', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='questions', to='PxPUC.location')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("q", models.CharField(default="", max_length=450)),
+                ("a", models.CharField(default="", max_length=450)),
+                ("category", models.ManyToManyField(to="PxPUC.Category")),
+                (
+                    "location",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="questions",
+                        to="PxPUC.location",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Problematic_Sentence',
+            name="Problematic_Sentence",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
-                ('impact', models.TextField(blank=True)),
-                ('limit_oversight', models.BooleanField(default=False)),
-                ('city_pay_for_misconduct', models.BooleanField(default=False)),
-                ('erase_misconduct', models.BooleanField(default=False)),
-                ('disqualify_complaints', models.BooleanField(default=False)),
-                ('restrict_interrogation', models.BooleanField(default=False)),
-                ('unfair_information', models.BooleanField(default=False)),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='problematic_sentences', to='PxPUC.location')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("text", models.TextField()),
+                ("impact", models.TextField(blank=True)),
+                ("limit_oversight", models.BooleanField(default=False)),
+                ("city_pay_for_misconduct", models.BooleanField(default=False)),
+                ("erase_misconduct", models.BooleanField(default=False)),
+                ("disqualify_complaints", models.BooleanField(default=False)),
+                ("restrict_interrogation", models.BooleanField(default=False)),
+                ("unfair_information", models.BooleanField(default=False)),
+                (
+                    "location",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="problematic_sentences",
+                        to="PxPUC.location",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Contract',
+            name="Contract",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
-                ('expiry', models.CharField(max_length=150)),
-                ('is_parsed', models.BooleanField(default=False)),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='contract', to='PxPUC.location')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("text", models.TextField()),
+                ("expiry", models.CharField(max_length=150)),
+                ("is_parsed", models.BooleanField(default=False)),
+                (
+                    "location",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="contract",
+                        to="PxPUC.location",
+                    ),
+                ),
             ],
         ),
     ]

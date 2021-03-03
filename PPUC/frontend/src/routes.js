@@ -4,4 +4,5 @@ export default {
   citizens: "/citizens",
   about: "/about",
   contact: "/contact",
+  location: "/location",
 };

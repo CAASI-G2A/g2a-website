@@ -1,95 +1,182 @@
-{% extends "app/layout.html" %}
-{% block extra_js%}
-    <script src="http://malsup.github.com/jquery.form.js"></script>
-{% endblock %}
-{% block content %}
+{% extends "app/layout.html" %} {% block extra_js%}
+<script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %} {% block content %}
 
 <div class="jumbotron">
-	<div class="row">
-		<div class="col-md-9">
-			<h1>{{location}} Police Contract</h1>
-		</div>
-	</div>
-	<div class="row" style="margin-bottom:-75px;">
-		<p>The following sentences have been flagged from the contract as problematic, click on a category and sentence to learn why a sentence was flagged.</p><br>
-		<a class="btn btn-primary" href="{% url 'download_pdf' location.id %}" role="button" style="position:relative; top:-50px; float:right;">
-			<span class="font-weight-bold">Download PDF&nbsp;</span>
-			<i class="fas fa-file-download"></i>
-		</a>
-		<a class="btn btn-primary" href="{% url 'download_txt' location.id %}" role="button" style="position:relative; top:-50px; float:right; margin-right: 5px">
-			<span class="font-weight-bold">Download TXT&nbsp;</span>
-			<i class="fas fa-file-download"></i>
-		</a>
-	</div>
+  <div class="row">
+    <div class="col-md-9">
+      <h1>{{location}} Police Contract</h1>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: -75px">
+    <p>
+      The following sentences have been flagged from the contract as
+      problematic, click on a category and sentence to learn why a sentence was
+      flagged.
+    </p>
+    <br />
+    <a
+      class="btn btn-primary"
+      href="{% url 'download_pdf' location.id %}"
+      role="button"
+      style="position: relative; top: -50px; float: right"
+    >
+      <span class="font-weight-bold">Download PDF&nbsp;</span>
+      <i class="fas fa-file-download"></i>
+    </a>
+    <a
+      class="btn btn-primary"
+      href="{% url 'download_txt' location.id %}"
+      role="button"
+      style="position: relative; top: -50px; float: right; margin-right: 5px"
+    >
+      <span class="font-weight-bold">Download TXT&nbsp;</span>
+      <i class="fas fa-file-download"></i>
+    </a>
+  </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+<div
+  class="modal fade"
+  id="modal"
+  data-keyboard="false"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+></div>
 <!-- /.modal -->
 <div class="col-md-12">
-	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-		<span class="float-left">Limits Oversight</span>
-		<i class="fas fa-chevron-down float-right"></i>
-	</button>
-	<div class="collapse bg-light px-4" id="collapse1">
-		{% for sentence in sentences %}
-		{% if sentence.limit_oversight %}
-		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
-		<hr class="border border-secondary border-1">
-		{% endif %}
-		{% endfor %}
-	</div>
-	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-		<span class="float-left">City Pays for Misconduct</span>
-		<i class="fas fa-chevron-down float-right"></i>
-	</button>
-	<div class="collapse bg-light px-4" id="collapse2">
-		{% for sentence in sentences %}
-		{% if sentence.city_pay_for_misconduct %}
-		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
-		<hr class="border border-secondary border-1">
-		{% endif %}
-		{% endfor %}
-	</div>
-	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-		<span class="float-left">Erases Misconduct Records</span>
-		<i class="fas fa-chevron-down float-right"></i>
-	</button>
-	<div class="collapse bg-light px-4" id="collapse3">
-		{% for sentence in sentences %}
-		{% if sentence.erases_misconduct %}
-		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
-		<hr class="border border-secondary border-1">
-		{% endif %}
-		{% endfor %}
-	</div>
-	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-		<span class="float-left">Disqualifies Complaints</span>
-		<i class="fas fa-chevron-down float-right"></i>
-	</button>
-	<div class="collapse bg-light px-4" id="collapse4">
-		{% for sentence in sentences %}
-		{% if sentence.disqualify_complaints %}
-		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
-		<hr class="border border-secondary border-1">
-		{% endif %}
-		{% endfor %}
-	</div>
-	<button class="btn btn-block btn-lg btn-primary mb-3" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-		<span class="float-left">Gives Officer Unfair Access to Information</span>
-		<i class="fas fa-chevron-down float-right"></i>
-	</button>
-	<div class="collapse bg-light px-4" id="collapse5">
-		{% for sentence in sentences %}
-		{% if sentence.unfair_information %}
-		<br>
-		<p class="lead"><a href="{% url 'view_sentence' sentence.id %}" class="text-body text-decoration-none" data-target="#modal" title="view sentence" onclick="loadModalLink(this, event)">{{sentence.text}}</a></p>
-		<hr class="border border-secondary border-1">
-		{% endif %}
-		{% endfor %}
-	</div>
+  <button
+    class="btn btn-block btn-lg btn-primary mb-3"
+    data-toggle="collapse"
+    data-target="#collapse1"
+    aria-expanded="false"
+    aria-controls="collapse1"
+  >
+    <span class="float-left">Limits Oversight</span>
+    <i class="fas fa-chevron-down float-right"></i>
+  </button>
+  <div class="collapse bg-light px-4" id="collapse1">
+    {% for sentence in sentences %} {% if sentence.limit_oversight %}
+    <br />
+    <p class="lead">
+      <a
+        href="{% url 'view_sentence' sentence.id %}"
+        class="text-body text-decoration-none"
+        data-target="#modal"
+        title="view sentence"
+        onclick="loadModalLink(this, event)"
+        >{{sentence.text}}</a
+      >
+    </p>
+    <hr class="border border-secondary border-1" />
+    {% endif %} {% endfor %}
+  </div>
+  <button
+    class="btn btn-block btn-lg btn-primary mb-3"
+    data-toggle="collapse"
+    data-target="#collapse2"
+    aria-expanded="false"
+    aria-controls="collapse2"
+  >
+    <span class="float-left">City Pays for Misconduct</span>
+    <i class="fas fa-chevron-down float-right"></i>
+  </button>
+  <div class="collapse bg-light px-4" id="collapse2">
+    {% for sentence in sentences %} {% if sentence.city_pay_for_misconduct %}
+    <br />
+    <p class="lead">
+      <a
+        href="{% url 'view_sentence' sentence.id %}"
+        class="text-body text-decoration-none"
+        data-target="#modal"
+        title="view sentence"
+        onclick="loadModalLink(this, event)"
+        >{{sentence.text}}</a
+      >
+    </p>
+    <hr class="border border-secondary border-1" />
+    {% endif %} {% endfor %}
+  </div>
+  <button
+    class="btn btn-block btn-lg btn-primary mb-3"
+    data-toggle="collapse"
+    data-target="#collapse3"
+    aria-expanded="false"
+    aria-controls="collapse3"
+  >
+    <span class="float-left">Erases Misconduct Records</span>
+    <i class="fas fa-chevron-down float-right"></i>
+  </button>
+  <div class="collapse bg-light px-4" id="collapse3">
+    {% for sentence in sentences %} {% if sentence.erases_misconduct %}
+    <br />
+    <p class="lead">
+      <a
+        href="{% url 'view_sentence' sentence.id %}"
+        class="text-body text-decoration-none"
+        data-target="#modal"
+        title="view sentence"
+        onclick="loadModalLink(this, event)"
+        >{{sentence.text}}</a
+      >
+    </p>
+    <hr class="border border-secondary border-1" />
+    {% endif %} {% endfor %}
+  </div>
+  <button
+    class="btn btn-block btn-lg btn-primary mb-3"
+    data-toggle="collapse"
+    data-target="#collapse4"
+    aria-expanded="false"
+    aria-controls="collapse4"
+  >
+    <span class="float-left">Disqualifies Complaints</span>
+    <i class="fas fa-chevron-down float-right"></i>
+  </button>
+  <div class="collapse bg-light px-4" id="collapse4">
+    {% for sentence in sentences %} {% if sentence.disqualify_complaints %}
+    <br />
+    <p class="lead">
+      <a
+        href="{% url 'view_sentence' sentence.id %}"
+        class="text-body text-decoration-none"
+        data-target="#modal"
+        title="view sentence"
+        onclick="loadModalLink(this, event)"
+        >{{sentence.text}}</a
+      >
+    </p>
+    <hr class="border border-secondary border-1" />
+    {% endif %} {% endfor %}
+  </div>
+  <button
+    class="btn btn-block btn-lg btn-primary mb-3"
+    data-toggle="collapse"
+    data-target="#collapse5"
+    aria-expanded="false"
+    aria-controls="collapse5"
+  >
+    <span class="float-left">Gives Officer Unfair Access to Information</span>
+    <i class="fas fa-chevron-down float-right"></i>
+  </button>
+  <div class="collapse bg-light px-4" id="collapse5">
+    {% for sentence in sentences %} {% if sentence.unfair_information %}
+    <br />
+    <p class="lead">
+      <a
+        href="{% url 'view_sentence' sentence.id %}"
+        class="text-body text-decoration-none"
+        data-target="#modal"
+        title="view sentence"
+        onclick="loadModalLink(this, event)"
+        >{{sentence.text}}</a
+      >
+    </p>
+    <hr class="border border-secondary border-1" />
+    {% endif %} {% endfor %}
+  </div>
 </div>
 {% endblock %}

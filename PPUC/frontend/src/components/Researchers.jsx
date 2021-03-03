@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import QueryString from "query-string";
-import Highlighter from "react-highlight-words";
+import * as scrollToElement from "scroll-to-element";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
+import ResearcherResult from "./ResearcherResult";
 
 class Researchers extends Component {
   constructor(props) {
@@ -16,10 +17,34 @@ class Researchers extends Component {
       filteredQueryResults: null,
       queryResultStates: null,
       stateFilter: "null",
+      currentPage: 1,
+      totalPages: 1,
+      pageSize: 10,
     };
+    this.setPage = this.setPage.bind(this);
+    this.setPageSize = this.setPageSize.bind(this);
     this.setSearchQuery = this.setSearchQuery.bind(this);
     this.setStateFilter = this.setStateFilter.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  setPage(newPage) {
+    this.setState({
+      currentPage: newPage,
+    });
+    // scroll to top
+    scrollToElement("#results");
+  }
+
+  setPageSize(newPageSize) {
+    newPageSize = parseInt(newPageSize);
+    this.setState({
+      pageSize: newPageSize,
+      totalPages: Math.ceil(
+        this.state.filteredQueryResults.length / newPageSize
+      ),
+      currentPage: 1,
+    });
   }
 
   setSearchQuery(newQuery, autoSearch) {
@@ -40,12 +65,18 @@ class Researchers extends Component {
       this.setState({
         filteredQueryResults: filteredResults,
         stateFilter: state,
+        currentPage: 1,
+        totalPages: Math.ceil(filteredResults.length / this.state.pageSize),
       });
     } else {
       // disable filter
       this.setState({
         filteredQueryResults: this.state.queryResults,
         stateFilter: "null",
+        currentPage: 1,
+        totalPages: Math.ceil(
+          this.state.queryResults.length / this.state.pageSize
+        ),
       });
     }
   }
@@ -90,6 +121,7 @@ class Researchers extends Component {
           searchQueryError: null,
           searchQueryWords: searchQueryWords,
           stateFilter: "null",
+          totalPages: Math.ceil(respFilter.length / this.state.pageSize),
         });
       });
       // set search query param
@@ -196,8 +228,8 @@ class Researchers extends Component {
         </div>
         {this.state.filteredQueryResults && (
           <div>
-            <div className="col-lg-12 mt-3">
-              {this.state.queryResultStates && (
+            {this.state.queryResultStates && (
+              <div className="col-lg-12 mt-3">
                 <div className="col-md-3">
                   <div className="input-group">
                     <select
@@ -223,7 +255,26 @@ class Researchers extends Component {
                     </span>
                   </div>
                 </div>
-              )}
+                <div className="col-md-3">
+                  <select
+                    className="form-control"
+                    defaultValue="null"
+                    onChange={(e) => this.setPageSize(e.target.value)}
+                  >
+                    <option value="null" disabled>
+                      Results per Page
+                    </option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+              </div>
+            )}
+            <div className="col-lg-12 mt-3" id="results">
+              <h2>Results</h2>
+              <hr className="my-4 border-top border-secondary" />
             </div>
             <div className="col-lg-12 mt-3">
               {this.state.filteredQueryResults.length === 0 && (
@@ -231,46 +282,89 @@ class Researchers extends Component {
                   Sorry, it appears there are no results for this search!
                 </p>
               )}
-              {this.state.filteredQueryResults.map((result) => (
-                <div key={result.id}>
-                  <button
-                    className="btn btn-block btn-lg btn-primary mb-3"
-                    data-toggle="collapse"
-                    data-target={`#collapse${result.id}`}
-                    aria-expanded="false"
-                    aria-controls={`collapse${result.id}`}
-                  >
-                    <span className="float-left">
-                      {result.name} - {result.sentences.length} results
-                    </span>
-                    <i className="fas fa-chevron-down float-right"></i>
-                  </button>
-                  <div
-                    className="collapse bg-light px-4"
-                    id={`collapse${result.id}`}
-                  >
-                    <br />
-                    <p className="lead">
-                      <strong>
-                        <a href="view_location">{result.name} Contract:</a>{" "}
-                      </strong>
-                    </p>
-                    {result.sentences.map((sentence) => (
-                      <div key={sentence.id}>
-                        <p className="lead">
-                          <Highlighter
-                            highlightClassName="bg-warning"
-                            searchWords={this.state.searchQueryWords}
-                            autoEscape={true}
-                            textToHighlight={sentence.text}
-                          />
-                        </p>
-                        <hr className="border border-secondary border-1" />
-                      </div>
-                    ))}
-                  </div>
+              {this.state.filteredQueryResults
+                .slice(
+                  this.state.pageSize * (this.state.currentPage - 1),
+                  this.state.pageSize * this.state.currentPage
+                )
+                .map((result) => (
+                  <ResearcherResult
+                    result={result}
+                    searchQueryWords={this.state.searchQueryWords}
+                    key={result.id}
+                  />
+                ))}
+              {this.state.filteredQueryResults.length > 0 && (
+                <div className="col-lg-12 text-center">
+                  <nav aria-label="Result navigation">
+                    <ul className="pagination pagination-lg">
+                      {this.state.currentPage - 1 > 0 && (
+                        <li>
+                          <a
+                            aria-label="Previous"
+                            onClick={() =>
+                              this.setPage(this.state.currentPage - 1)
+                            }
+                          >
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                      )}
+                      {this.state.currentPage - 2 > 0 && (
+                        <li
+                          onClick={() =>
+                            this.setPage(this.state.currentPage - 2)
+                          }
+                        >
+                          <a>{this.state.currentPage - 2}</a>
+                        </li>
+                      )}
+                      {this.state.currentPage - 1 > 0 && (
+                        <li
+                          onClick={() =>
+                            this.setPage(this.state.currentPage - 1)
+                          }
+                        >
+                          <a>{this.state.currentPage - 1}</a>
+                        </li>
+                      )}
+                      <li className="active">
+                        <span>{this.state.currentPage}</span>
+                      </li>
+                      {this.state.currentPage + 1 <= this.state.totalPages && (
+                        <li
+                          onClick={() =>
+                            this.setPage(this.state.currentPage + 1)
+                          }
+                        >
+                          <a>{this.state.currentPage + 1}</a>
+                        </li>
+                      )}
+                      {this.state.currentPage + 2 <= this.state.totalPages && (
+                        <li
+                          onClick={() =>
+                            this.setPage(this.state.currentPage + 2)
+                          }
+                        >
+                          <a>{this.state.currentPage + 2}</a>
+                        </li>
+                      )}
+                      {this.state.currentPage + 1 <= this.state.totalPages && (
+                        <li>
+                          <a
+                            aria-label="Next"
+                            onClick={() =>
+                              this.setPage(this.state.currentPage + 1)
+                            }
+                          >
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      )}
+                    </ul>
+                  </nav>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         )}

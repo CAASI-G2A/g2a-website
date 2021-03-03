@@ -19,6 +19,7 @@ import Researchers from "./Researchers";
 import Citizens from "./Citizens";
 import About from "./About";
 import Contact from "./Contact";
+import Location from "./Location";
 
 class App extends Component {
   componentDidMount() {
@@ -56,6 +57,7 @@ class App extends Component {
             <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
             <Route path={routes.contact} component={Contact} />
+            <Route path={routes.location + "/:lid"} component={Location} />
           </Switch>
           <a
             id="back-to-top"

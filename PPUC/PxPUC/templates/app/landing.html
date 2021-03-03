@@ -1,56 +1,112 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} - PxPUC</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app/content/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app/content/site.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="navbar navbar-custom navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand" style="font-weight:bold;">G2A</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class ="nav navbar-nav">
-                    <li><a href="{% url 'PxPUC' %}">PxPUC</a></li>
-                    <li><a href="{% url 'PBB/' %}">412Connect</a></li>
-                </ul>
-                {% include 'app/loginpartial.html' %}
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand" style="font-weight: bold">G2A</a>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'PxPUC' %}">PxPUC</a></li>
+            <li><a href="{% url 'PBB/' %}">412Connect</a></li>
+          </ul>
+          {% include 'app/loginpartial.html' %}
+        </div>
+      </div>
     </div>
 
-
     <div class="container body-content">
-    {% block content %}
-        <p style="margin-top: 30px;">We are Grief to Action (G2A), an interdisciplinary working group at the University of Pittsburgh dedicated to empowering marginalized communities through data science. A project of the Center for Analytical Approaches to Social Innovation (CAASI), we are composed of GSPIA students, alumni, and staff, community activists, undergrads, and faculty from 3 schools across Pitt and outside of Pitt, united in the conviction that Black Lives Matter. .</p>
-        <p> When the George Floyd protests began this summer, CAASI Director Sera Linardi reached out to the Pitt community and invited students, faculty, and staff to join her in a weekly Zoom call to discuss ways to turn our grief into action. We came together in heartbreak and outrage and even a sense of helplessness-- what could we do? We’ve met nearly every week since to discuss this question, and currently have two projects under development: Project Black Business and Project Police Union Contract.</p>
-        <p> PBB works to increase the visibility of Pittsburgh’s black owned business on University of Pittsburgh’s campus and throughout the city. We work together with community partners (Cocoapreneur, Vibrant Pittsburgh, Community Forge, Blackowned.PGH, Black Action Society and more) to build platforms to help support black owned businesses. Through these platforms such as online reviews, social media and community engagement, we are connecting the community with black owned businesses to build a sustainable future.</p>
-        <p> PPUC analyzes police union contracts to help demystify the process of filing a police misconduct complaint. We thank Campaign Zero for sharing their data with us. Access our Complaint Tool here to learn about the process of filing a complaint. Access our searchable database of police union contracts here to learn more about problematic language in contracts.</p>
-        <p> G2A is always seeking new members who are passionate about racial justice. We need people with all skill sets: community building, marketing, data analysis, web development, legal, mathematics. Whether you are an undergrad, grad student, staff, or faculty, you are welcome to join us!  We meet Fridays at 11am over Zoom, and begin every meeting with a brief mindfulness exercise. To learn more or join the team, please email <a href="mailto:claireguth@pitt.edu">claireguth@pitt.edu</a> to get on our mailing list!</p>
-    {% endblock %}
-        <hr/>
-        <footer>
-            <p>&copy; {{ year }} - CAASI From Grief to Action</p>
-        </footer>
+      {% block content %}
+      <p style="margin-top: 30px">
+        We are Grief to Action (G2A), an interdisciplinary working group at the
+        University of Pittsburgh dedicated to empowering marginalized
+        communities through data science. A project of the Center for Analytical
+        Approaches to Social Innovation (CAASI), we are composed of GSPIA
+        students, alumni, and staff, community activists, undergrads, and
+        faculty from 3 schools across Pitt and outside of Pitt, united in the
+        conviction that Black Lives Matter. .
+      </p>
+      <p>
+        When the George Floyd protests began this summer, CAASI Director Sera
+        Linardi reached out to the Pitt community and invited students, faculty,
+        and staff to join her in a weekly Zoom call to discuss ways to turn our
+        grief into action. We came together in heartbreak and outrage and even a
+        sense of helplessness-- what could we do? We’ve met nearly every week
+        since to discuss this question, and currently have two projects under
+        development: Project Black Business and Project Police Union Contract.
+      </p>
+      <p>
+        PBB works to increase the visibility of Pittsburgh’s black owned
+        business on University of Pittsburgh’s campus and throughout the city.
+        We work together with community partners (Cocoapreneur, Vibrant
+        Pittsburgh, Community Forge, Blackowned.PGH, Black Action Society and
+        more) to build platforms to help support black owned businesses. Through
+        these platforms such as online reviews, social media and community
+        engagement, we are connecting the community with black owned businesses
+        to build a sustainable future.
+      </p>
+      <p>
+        PPUC analyzes police union contracts to help demystify the process of
+        filing a police misconduct complaint. We thank Campaign Zero for sharing
+        their data with us. Access our Complaint Tool here to learn about the
+        process of filing a complaint. Access our searchable database of police
+        union contracts here to learn more about problematic language in
+        contracts.
+      </p>
+      <p>
+        G2A is always seeking new members who are passionate about racial
+        justice. We need people with all skill sets: community building,
+        marketing, data analysis, web development, legal, mathematics. Whether
+        you are an undergrad, grad student, staff, or faculty, you are welcome
+        to join us! We meet Fridays at 11am over Zoom, and begin every meeting
+        with a brief mindfulness exercise. To learn more or join the team,
+        please email
+        <a href="mailto:claireguth@pitt.edu">claireguth@pitt.edu</a> to get on
+        our mailing list!
+      </p>
+      {% endblock %}
+      <hr />
+      <footer>
+        <p>&copy; {{ year }} - CAASI From Grief to Action</p>
+      </footer>
     </div>
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
     <script src="{% static 'app/scripts/scripts.js' %}"></script>
-{% block scripts %}{% endblock %}
-</body>
+    {% block scripts %}{% endblock %}
+  </body>
 </html>
