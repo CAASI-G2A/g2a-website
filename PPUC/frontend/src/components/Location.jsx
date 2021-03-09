@@ -21,6 +21,8 @@ class Location extends Component {
     });
     // make request for contract
     Api.getLocationContract(lid).then((resp) => {
+      // split text lines
+      resp.text = resp.text.split("\n");
       this.setState({
         contract: resp,
       });
@@ -29,14 +31,49 @@ class Location extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
-        <div className="row">
-          {this.state.location && (
-            <div className="col-md-9">
-              <h1>{this.state.location.name} Police Contract</h1>
+      <div>
+        {this.state.location && (
+          <div className="jumbotron">
+            <div className="row">
+              <div className="col-md-9">
+                <h1>{this.state.location.name} Contract</h1>
+              </div>
             </div>
-          )}
-        </div>
+            <div className="row">
+              <a
+                className="btn btn-primary float-right"
+                href={Api.ENDPOINTS.getLocationContractFile(
+                  this.state.location.id,
+                  "pdf"
+                )}
+                download
+              >
+                <span className="font-weight-bold">Download PDF </span>
+                <i className="fas fa-file-download"></i>
+              </a>
+              <a
+                className="btn btn-primary float-right mr-2"
+                href={Api.ENDPOINTS.getLocationContractFile(
+                  this.state.location.id,
+                  "txt"
+                )}
+                download
+              >
+                <span className="font-weight-bold">Download TXT </span>
+                <i className="fas fa-file-download"></i>
+              </a>
+            </div>
+          </div>
+        )}
+        {this.state.contract && (
+          <div className="row">
+            <div className="col-md-12 bg-light p-3 border border-dark rounded">
+              {this.state.contract.text.map((line) => (
+                <p>{line}</p>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

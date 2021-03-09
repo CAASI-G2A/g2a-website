@@ -11,8 +11,6 @@ urlpatterns = [
     path("PxPUC/view_location/<int:lid>", views.view_location, name="view_location"),
     path("PxPUC/view_sentence/<int:sid>", views.view_sentence, name="view_sentence"),
     path("PxPUC/edit_sentence/<int:sid>", views.edit_sentence, name="edit_sentence"),
-    path("PxPUC/download_pdf/<int:lid>", views.download_pdf, name="download_pdf"),
-    path("PxPUC/download_txt/<int:lid>", views.download_txt, name="download_txt"),
     path("PxPUC/locations", views.LocationList.as_view(), name="location-list"),
     path(
         "PxPUC/location/<int:lid>",
@@ -24,6 +22,7 @@ urlpatterns = [
         views.LocationContractRetrieve.as_view(),
         name="location-contract-retrieve",
     ),
+    path("PxPUC/location/<int:lid>/contract/download", views.contract_download),
     path(
         "PxPUC/location/<int:lid>/questions",
         views.LocationQuestionList.as_view(),

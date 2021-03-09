@@ -59,36 +59,6 @@ def view_location(request, lid):
     return render(request, "app/view_location.html", context)
 
 
-def download_pdf(request, lid):
-    location = Location.objects.get(pk=lid)
-    state = re.sub(" ", "-", location.state)
-    city = re.sub(" ", "-", location.name)
-    fn = state + "_" + city + ".pdf"
-    dirspot = os.getcwd()
-    file_path = dirspot + "/PxPUC/static/app/contracts_pdf/" + fn
-    filename = fn
-    fl = open(file_path, mode="rb")
-    mime_type, _ = mimetypes.guess_type(file_path)
-    response = HttpResponse(fl, content_type="application/pdf")
-    response["Content-Disposition"] = "attachment; filename=%s" % filename
-    return response
-
-
-def download_txt(request, lid):
-    location = Location.objects.get(pk=lid)
-    state = re.sub(" ", "-", location.state)
-    city = re.sub(" ", "-", location.name)
-    fn = state + "_" + city + ".txt"
-    dirspot = os.getcwd()
-    file_path = dirspot + "/PxPUC/static/app/contracts_txt/" + fn
-    filename = fn
-    fl = open(file_path, mode="rb")
-    mime_type, _ = mimetypes.guess_type(file_path)
-    response = HttpResponse(fl, content_type="application/txt")
-    response["Content-Disposition"] = "attachment; filename=%s" % filename
-    return response
-
-
 def view_sentence(request, sid):
     print(sid)
     sentence = Problematic_Sentence.objects.get(id=sid)
@@ -152,6 +122,32 @@ class LocationContractRetrieve(generics.RetrieveAPIView):
     lookup_field = "location_id"
     queryset = Contract.objects.all()
     serializer_class = ContractSerializer
+
+
+def contract_download(request, lid):
+    file_format = request.GET.get("format", "pdf").lower()
+    if file_format not in ("txt", "pdf"):
+        raise serializers.ValidationError(
+            {"message": "Only txt and pdf are supported file formats."}
+        )
+
+    # get location information
+    location = Location.objects.get(pk=lid)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
+
+    # get filename and path for format
+    filename = "%s_%s.%s" % (state, city, file_format)
+    contract_directory = "/PxPUC/static/app/contracts_%s/" % (file_format)
+    filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
+
+    # open file for reading and return HTTP response
+    contract_file = open(filepath, mode="rb")
+    response = HttpResponse(
+        contract_file, content_type="application/%s" % (file_format)
+    )
+    response["Content-Disposition"] = "attachment; filename=%s" % filename
+    return response
 
 
 class ResearcherSearchList(generics.ListAPIView):
