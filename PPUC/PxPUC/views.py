@@ -14,6 +14,7 @@ from django.views.generic import ListView, FormView
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.decorators import login_required
 import os
+import sys
 import re
 import nltk
 import mimetypes
@@ -22,6 +23,7 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
+from django.conf import settings
 
 
 def landing(request):
@@ -103,6 +105,43 @@ def edit_sentence(request, sid):
             "app/edit_sentence.html",
             {"title": "Edit Sentence", "form": form, "sentence": sentence},
         )
+
+
+import hmac
+import hashlib
+import subprocess
+
+
+def is_valid_signature(x_hub_signature, data, private_key):
+    # x_hub_signature and data are from the webhook payload
+    # private key is your webhook secret
+    hash_algorithm, github_signature = x_hub_signature.split("=", 1)
+    algorithm = hashlib.__dict__.get(hash_algorithm)
+    encoded_key = bytes(private_key, "latin-1")
+    mac = hmac.new(encoded_key, msg=data, digestmod=algorithm)
+    return hmac.compare_digest(mac.hexdigest(), github_signature)
+
+
+def update_server(request):
+    if request.method == "POST":
+        # validate request
+        x_hub_signature = request.headers.get("X-Hub-Signature")
+        valid = is_valid_signature(
+            x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
+        )
+        if not valid:
+            return HttpResponse()
+
+        # try to pull new code
+        subprocess.run(["git", "pull"])
+
+        # run setup script
+        subprocess.run([sys.executable, "manage.py", "runscript", "-v3", "setup_app"])
+
+        # restart
+        if settings.get("WSGI_PATH"):
+            subprocess.run(["touch", settings.WSGI_PATH])
+    return HttpResponse()
 
 
 class LocationList(generics.ListAPIView):

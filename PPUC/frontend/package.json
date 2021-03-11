@@ -13,8 +13,7 @@
     "prettier-all": "npm run prettier && npm run prettier-backend",
     "test": "jest",
     "test-backend": "python ../manage.py test PxPUC",
-    "test-all": "npm run test && npm run test-backend",
-    "postinstall": "husky install"
+    "test-all": "npm run test && npm run test-backend"
   },
   "husky": {
     "hooks": {
