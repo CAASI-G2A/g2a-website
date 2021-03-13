@@ -123,14 +123,14 @@ def is_valid_signature(x_hub_signature, data, private_key):
 
 
 def update_server(request):
-    if request.method == "POST":
+    if request.method == "POST" or request.method == "GET":
         # validate request
-        x_hub_signature = request.headers.get("X-Hub-Signature")
-        valid = is_valid_signature(
-            x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
-        )
-        if not valid:
-            return HttpResponse()
+        #x_hub_signature = request.headers.get("X-Hub-Signature")
+        #valid = is_valid_signature(
+        #    x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
+        #)
+        #if not valid:
+        #    return HttpResponse()
 
         # try to pull new code
         subprocess.run(["git", "pull"])
@@ -139,8 +139,8 @@ def update_server(request):
         subprocess.run([sys.executable, "manage.py", "runscript", "-v3", "setup_app"])
 
         # restart
-        if settings.get("WSGI_PATH"):
-            subprocess.run(["touch", settings.WSGI_PATH])
+        subprocess.run(["touch", settings.WSGI_PATH])
+        return HttpResponse("update complete")
     return HttpResponse()
 
 
