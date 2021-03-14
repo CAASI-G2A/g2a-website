@@ -24,6 +24,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
 from django.conf import settings
+from django.core.management import call_command
 
 
 def landing(request):
@@ -131,12 +132,13 @@ def update_server(request):
         # )
         # if not valid:
         #    return HttpResponse()
+        project_dir = settings.BASE_DIR
 
         # try to pull new code
-        subprocess.run(["git", "pull"])
+        subprocess.run(["git", "pull"], cwd=project_dir)
 
         # run setup script
-        subprocess.run([sys.executable, "manage.py", "runscript", "-v3", "setup_app"])
+        call_command("runscript", "-v3", "setup_app")
 
         # restart
         subprocess.run(["touch", settings.WSGI_PATH])

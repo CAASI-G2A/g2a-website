@@ -1,5 +1,8 @@
 from django.core.management import call_command
+from django.conf import settings
 import subprocess
+
+FRONTEND_DIR = settings.BASE_DIR+'/frontend'
 
 def run():
     print("running migrate")
@@ -28,9 +31,9 @@ def run():
     print ("runscript add_questions complete\n\n")
 
     print("running npm install")
-    subprocess.run('npm install', cwd='./frontend', shell=True)
+    subprocess.run('npm install', cwd=FRONTEND_DIR, shell=True)
     print ("npm install complete\n\n")
 
     print("running npm run build")
-    subprocess.run('npm run build', cwd='./frontend', shell=True)
+    subprocess.run('npm run build', cwd=FRONTEND_DIR, shell=True)
     print ("npm run build complete\n\n")
