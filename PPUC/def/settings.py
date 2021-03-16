@@ -22,13 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '64e78b4c-9f43-4988-a739-21c2d177af93'
-GITHUB_HOOK_KEY = 'test'
-WSGI_PATH = '/var/www/zhable_pythonanywhere_com_wsgi.py'
+GITHUB_HOOK_KEY = '7tzuR.w&%e6W'
+WSGI_PATH = '/var/www/www_grieftoaction_org_wsgi.py'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zhable.pythonanywhere.com', 'www.grieftoaction.org','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS

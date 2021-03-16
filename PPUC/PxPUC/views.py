@@ -124,14 +124,14 @@ def is_valid_signature(x_hub_signature, data, private_key):
 
 
 def update_server(request):
-    if request.method == "POST" or request.method == "GET":
+    if request.method == "POST":
         # validate request
-        # x_hub_signature = request.headers.get("X-Hub-Signature")
-        # valid = is_valid_signature(
-        #    x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
-        # )
-        # if not valid:
-        #    return HttpResponse()
+        x_hub_signature = request.headers.get("X-Hub-Signature")
+        valid = is_valid_signature(
+            x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
+        )
+        if not valid:
+            return HttpResponse()
         project_dir = settings.BASE_DIR
 
         # try to pull new code
