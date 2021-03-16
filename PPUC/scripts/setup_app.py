@@ -30,10 +30,10 @@ def run():
     call_command('runscript', 'add_questions')
     print ("runscript add_questions complete\n\n")
 
-    print("running npm install")
-    subprocess.run('npm install', cwd=FRONTEND_DIR, shell=True)
-    print ("npm install complete\n\n")
+    #print("running npm install")
+    #subprocess.run('npm install', cwd=FRONTEND_DIR, shell=True)
+    #print ("npm install complete\n\n")
 
-    print("running npm run build")
-    subprocess.run('npm run build', cwd=FRONTEND_DIR, shell=True)
-    print ("npm run build complete\n\n")
+    #print("running npm run build")
+    #subprocess.run('npm run build', cwd=FRONTEND_DIR, shell=True)
+    #print ("npm run build complete\n\n")

@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier-all && npm run test-all && git add -A . && git add -A ../PxPUC"
+      "pre-commit": "npm run prettier-all && npm run test-all && npm run build && git add -A . && git add -A ../PxPUC"
     }
   },
   "repository": {
