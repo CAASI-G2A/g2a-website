@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'manifest_loader',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'after_response',
 ]
 
 # Middleware framework

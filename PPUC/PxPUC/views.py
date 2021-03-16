@@ -24,6 +24,7 @@ from rest_framework.response import Response
 import json
 from django.conf import settings
 from django.core.management import call_command
+import after_response
 
 
 def landing(request):
@@ -123,6 +124,22 @@ def is_valid_signature(x_hub_signature, data, private_key):
 
 
 def update_server(request):
+    # create async/background task to handle actual updating to meet Github's 10 second timeout
+    @after_response.enable
+    def run_update_async():
+        # get project directory
+        project_dir = settings.BASE_DIR
+
+        # try to pull new code
+        subprocess.run(["git", "pull"], cwd=project_dir)
+
+        # run setup script
+        call_command("runscript", "-v3", "setup_app")
+
+        # restart
+        subprocess.run(["touch", settings.WSGI_PATH])
+
+    # process request
     if request.method == "POST":
         # try to get signature from header
         x_hub_signature = request.headers.get("X-Hub-Signature")
@@ -136,18 +153,11 @@ def update_server(request):
         if not valid:
             return HttpResponseForbidden("Permission denied.")
 
-        # get project directory
-        project_dir = settings.BASE_DIR
+        # start background update task
+        run_update_async.after_response()
 
-        # try to pull new code
-        subprocess.run(["git", "pull"], cwd=project_dir)
-
-        # run setup script
-        call_command("runscript", "-v3", "setup_app")
-
-        # restart
-        subprocess.run(["touch", settings.WSGI_PATH])
-        return HttpResponse("update completed")
+        # return response
+        return HttpResponse("update initiated")
     return HttpResponse()
 
 
