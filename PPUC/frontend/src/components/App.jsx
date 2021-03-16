@@ -77,7 +77,9 @@ class App extends Component {
 
 export default App;
 const container = document.getElementById("app");
-render(<App />, container);
+if (container) {
+  render(<App />, container);
+}
 
 window.showContractSearch = () => {
   //on click set all elements to hidden and who the one we want

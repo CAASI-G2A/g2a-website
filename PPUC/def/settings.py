@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['zhable.pythonanywhere.com', 'www.grieftoaction.org','localhost
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
     'PxPUC',
-    'PBB',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',

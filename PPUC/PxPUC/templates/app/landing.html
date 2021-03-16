@@ -1,25 +1,12 @@
 ﻿<!DOCTYPE html>
+{% load manifest %} {% load static %}
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} - PxPUC</title>
-    {% load static %}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'app/content/bootstrap.min.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'app/content/site.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <link rel="stylesheet" href="{% manifest 'vendor.css' %}" />
+    <link rel="stylesheet" href="{% manifest 'main.css' %}" />
   </head>
 
   <body>
@@ -41,15 +28,13 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="{% url 'PxPUC' %}">PxPUC</a></li>
-            <li><a href="{% url 'PBB/' %}">412Connect</a></li>
+            <li><a href="https://www.412connect.org/">412Connect</a></li>
           </ul>
-          {% include 'app/loginpartial.html' %}
         </div>
       </div>
     </div>
 
     <div class="container body-content">
-      {% block content %}
       <p style="margin-top: 30px">
         We are Grief to Action (G2A), an interdisciplinary working group at the
         University of Pittsburgh dedicated to empowering marginalized
@@ -97,16 +82,12 @@
         <a href="mailto:claireguth@pitt.edu">claireguth@pitt.edu</a> to get on
         our mailing list!
       </p>
-      {% endblock %}
       <hr />
       <footer>
         <p>&copy; {{ year }} - CAASI From Grief to Action</p>
       </footer>
     </div>
-    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
-    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
-    <script src="{% static 'app/scripts/respond.js' %}"></script>
-    <script src="{% static 'app/scripts/scripts.js' %}"></script>
-    {% block scripts %}{% endblock %}
+  <script src="{% manifest 'vendor.js' %}"></script>
+  <script src="{% manifest 'main.js' %}"></script>
   </body>
 </html>
