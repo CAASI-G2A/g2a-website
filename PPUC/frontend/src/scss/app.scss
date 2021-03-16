@@ -1,0 +1,208 @@
+@import "~@fontsource/roboto-mono/index.css";
+@import "~bootstrap-utilities";
+
+.border-0 {
+  border-width: 0 !important;
+}
+
+// text decoration from bootstrap 4 utilities
+.text-decoration-none {
+  text-decoration: none !important;
+}
+// border sizes from Bootstrap 5
+.border-1 {
+  border-width: 1px !important;
+}
+.border-2 {
+  border-width: 2px !important;
+}
+.border-3 {
+  border-width: 3px !important;
+}
+.border-4 {
+  border-width: 4px !important;
+}
+.border-5 {
+  border-width: 5px !important;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: auto;
+  left: 100%;
+  margin-top: -33px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+textarea {
+  width: 100%;
+  height: 75px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+  color: #b94a48;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+input.input-validation-error {
+  border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+  border: 0 none;
+}
+
+.validation-summary-errors {
+  color: #b94a48;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+.navbar-custom {
+  background-color: white;
+}
+
+.active-cyan-3 input[type="text"] {
+  border: 1px solid #428bca;
+  box-shadow: 0 0 0 1px #428bca;
+}
+
+.active-cyan-4 input[type="text"]:focus:not([readonly]) {
+  border: 1px solid #428bca;
+  box-shadow: 0 0 0 1px #428bca;
+}
+a {
+  overflow-wrap: break-word;
+}
+a.a1:link {
+  color: black;
+}
+
+a.a1:hover {
+  text-decoration: none;
+}
+
+a.a1:visited {
+  color: black;
+  text-decoration: none;
+}
+
+pre {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  background: none;
+  white-space: normal;
+  padding: 0px;
+  word-break: keep-all;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+.panel-body {
+  border-top: 1px solid #428bca;
+}
+.scrollable-panel {
+  height: 300px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #428bca;
+}
+
+.flow-circle {
+  color: #337ab7;
+}
+.flow-stage {
+  transition: transform 0.35s ease;
+}
+// disable hover on mobile
+@media (hover: hover) {
+  .flow-stage:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: transform 0.35s ease;
+  }
+}
+.flow-stage-text {
+  margin-top: 0px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+
+// adds fix to prevent shifting of elements when scroll bars are enabled
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.btn-rounded {
+  border-radius: 15px !important;
+}

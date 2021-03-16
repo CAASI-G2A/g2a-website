@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '64e78b4c-9f43-4988-a739-21c2d177af93'
+GITHUB_HOOK_KEY = '7tzuR.w&%e6W'
+WSGI_PATH = '/var/www/www_grieftoaction_org_wsgi.py'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,7 +34,6 @@ ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
     'PxPUC',
-    'PBB',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'django_extensions',
+    'django_extensions',
+    'manifest_loader',
+    'corsheaders',
+    'rest_framework'
 ]
 
 # Middleware framework
@@ -114,3 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
+
+# Additional directories for static files
+# Webpacked assets stored here
+STATICFILES_DIRS = [BASE_DIR + '/frontend/dist']

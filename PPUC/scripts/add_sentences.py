@@ -3,10 +3,11 @@ import csv
 import re
 from PxPUC.models import Problematic_Sentence
 from PxPUC.models import Location
+from django.conf import settings
 
 def run():
     r = 0
-    with os.scandir("./PxPUC/static/app/problematic_sentences") as entries:
+    with os.scandir(settings.BASE_DIR+"/PxPUC/static/app/problematic_sentences") as entries:
         for entry in entries:
             if entry.is_file():
                 with open(entry, encoding = 'cp1252') as csvFile:

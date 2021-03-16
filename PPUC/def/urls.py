@@ -8,10 +8,10 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from PxPUC import forms, views
-import PxPUC.urls, PBB.urls
+import PxPUC.urls
+
 urlpatterns = [
     url('^',include(PxPUC.urls)),
-	url('^',include(PBB.urls)),
     path('', views.landing, name='landing'),
     path('login/',
          LoginView.as_view

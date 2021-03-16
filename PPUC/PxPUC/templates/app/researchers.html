@@ -1,22 +1,159 @@
-{% extends "app/layout.html" %}
+{% extends "app/layout.html" %} {% block content %} {% load static %}
 
-{% block content %}
-{% load static %}
-
-<div style="margin-top:44px;"></div>
-
-
-    <h2>Tools for researchers:</h2>
-<hr class="my-4">
-    <div style="margin-left:22px;">
-        <div style="padding-top:1px;"></div>
-        <h2><a href="{% url 'search_contract' %}"><span class="glyphicon glyphicon-search"></span> &nbsp;Search all contracts by keywords</a></h2>
-        <h2><a href="{% url 'search' %}"><span class="glyphicon glyphicon-search"></span> &nbsp;View union contracts by city</a></h2>
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="text-center">Select a state to explore contracts.</h2>
+    <div class="dropdown" style="text-align: center">
+      <button
+        class="btn btn-default dropdown-toggle"
+        type="button"
+        id="dropdownMenu1"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true"
+        style="margin: 10px auto"
+      >
+        Choose a state&nbsp;&nbsp;
+        <span class="caret"></span>
+      </button>
+      <ul
+        class="dropdown-menu multi-level"
+        aria-labelledby="dropdownMenu1"
+        style="margin: 10px auto; width: 200px; left: 50%; margin-left: -100px"
+      >
+        {% if locations != '' %} {% for state in states %}
+        <li class="dropdown-submenu">
+          <a href="#">{{ state }}</a>
+          <ul class="dropdown-menu">
+            {% for obj in locations %} {% if obj.state == state %}
+            <li>
+              <a tabindex="-1" href="{%url 'view_location' obj.pk %}"
+                >{{ obj.name }}</a
+              >
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+          {% endfor %} {% endif %}
+        </li>
+      </ul>
     </div>
-
-
-<div style="margin-bottom:44px;"></div>
-
-
+  </div>
+  <div class="col-lg-12">
+    <h2 class="text-center">
+      Search our database of contracts for any keyword.
+    </h2>
+    <div class="col-md-6 col-md-offset-3 text-center">
+      <h3>Quick Queries</h3>
+      <div class="btn-group" role="group" aria-label="...">
+        <button
+          type="button"
+          onclick="getElementById('searchQuery').value='file';document.querySelector('form').submit();"
+          class="btn btn-info mr-2"
+          style="border-radius: 15px"
+        >
+          file
+        </button>
+        <button
+          type="button"
+          onclick="getElementById('searchQuery').value='interview';document.querySelector('form').submit();"
+          class="btn btn-info mr-2"
+          style="border-radius: 15px"
+        >
+          interview
+        </button>
+        <button
+          type="button"
+          onclick="getElementById('searchQuery').value='arbitration';document.querySelector('form').submit();"
+          class="btn btn-info mr-2"
+          style="border-radius: 15px"
+        >
+          arbitration
+        </button>
+        <button
+          type="button"
+          onclick="getElementById('searchQuery').value='review';document.querySelector('form').submit();"
+          class="btn btn-info mr-2"
+          style="border-radius: 15px"
+        >
+          review
+        </button>
+        <button
+          type="button"
+          onclick="getElementById('searchQuery').value='investigation';document.querySelector('form').submit();"
+          class="btn btn-info"
+          style="border-radius: 15px"
+        >
+          investigation
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="col-md-6 col-md-offset-3">
+      <h3 class="text-center">Custom Queries</h3>
+      <form method="GET" action="{% url 'researchers' %}">
+        <div class="form-group form-group-lg">
+          <label for="searchQuery">Search Query*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="searchQuery"
+            placeholder="Search Query..."
+            name="q"
+            value="{{request.GET.q}}"
+          />
+        </div>
+        <div class="form-group form-group-lg">
+          <label for="orCond">Or...</label>
+          <input
+            type="text"
+            class="form-control"
+            id="orCond"
+            placeholder="Or..."
+            name="OR"
+            value="{{request.GET.OR}}"
+          />
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-lg btn-primary" id="subbtn" type="submit">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    {% if results != '' %}
+    <h2 class="text-center">Search Results</h2>
+    {% regroup results by location as cities %} {% for city in cities %}
+    <button
+      class="btn btn-block btn-lg btn-primary mb-3"
+      data-toggle="collapse"
+      data-target="#collapse{{city.grouper.id}}"
+      aria-expanded="false"
+      aria-controls="collapse{{city.grouper.id}}"
+    >
+      <span class="float-left"
+        >{{city.grouper}} - {{city.list|length}} results</span
+      >
+      <i class="fas fa-chevron-down float-right"></i>
+    </button>
+    <div class="collapse bg-light px-4" id="collapse{{city.grouper.id}}">
+      {% for obj in results %} {% if obj.location == city.grouper %}
+      <br />
+      <p class="lead">
+        <strong
+          ><a href="{%url 'view_location' obj.lid %}"
+            >{{obj.location}} Contract:</a
+          > </strong
+        >{{obj.first}}<span class="bg-warning">{{obj.second}}</span
+        >{{obj.third}}
+      </p>
+      <hr class="border border-secondary border-1" />
+      {% endif %} {% endfor %}
+    </div>
+    {% endfor %} {% endif %}
+  </div>
+</div>
 
 {% endblock %}
