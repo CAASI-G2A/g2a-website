@@ -5,6 +5,7 @@ Definition of urls for PPUC.
 from datetime import datetime
 from django.urls import path
 from PxPUC import forms, views
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path("PxPUC/", views.home, name="PxPUC"),
@@ -12,7 +13,7 @@ urlpatterns = [
     path("PxPUC/view_sentence/<int:sid>", views.view_sentence, name="view_sentence"),
     path("PxPUC/edit_sentence/<int:sid>", views.edit_sentence, name="edit_sentence"),
     path("PxPUC/locations", views.LocationList.as_view(), name="location-list"),
-    path("PxPUC/update", views.update_server),
+    path("PxPUC/update", csrf_exempt(views.update_server)),
     path(
         "PxPUC/location/<int:lid>",
         views.LocationRetrieve.as_view(),

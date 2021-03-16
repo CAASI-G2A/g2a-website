@@ -5,8 +5,7 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q, Prefetch
-from django.http import HttpRequest
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden, HttpRequest
 from .models import *
 from .serializers import *
 from PxPUC.forms import *
@@ -125,13 +124,19 @@ def is_valid_signature(x_hub_signature, data, private_key):
 
 def update_server(request):
     if request.method == "POST":
-        # validate request
+        # try to get signature from header
         x_hub_signature = request.headers.get("X-Hub-Signature")
+        if x_hub_signature is None:
+            return HttpResponseForbidden("Permission denied.")
+
+        # validate request
         valid = is_valid_signature(
-            x_hub_signature, request.data, settings.GITHUB_HOOK_KEY
+            x_hub_signature, request.body, settings.GITHUB_HOOK_KEY
         )
         if not valid:
-            return HttpResponse()
+            return HttpResponseForbidden("Permission denied.")
+
+        # get project directory
         project_dir = settings.BASE_DIR
 
         # try to pull new code
