@@ -15,9 +15,7 @@ from django.contrib.auth.decorators import login_required
 import os
 import sys
 import re
-import nltk
 import mimetypes
-from nltk.tokenize import sent_tokenize
 from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -25,6 +23,9 @@ import json
 from django.conf import settings
 from django.core.management import call_command
 import after_response
+import hmac
+import hashlib
+import subprocess
 
 
 def landing(request):
@@ -45,21 +46,6 @@ def home(request):
     }
     assert isinstance(request, HttpRequest)
     return render(request, "app/index.html", context)
-
-
-def view_location(request, lid):
-    context = {}
-    location = Location.objects.get(pk=lid)
-    sentences = Problematic_Sentence.objects.filter(Q(location=location))
-    context = {
-        "title": "View Location",
-        "location": location,
-        "sentences": sentences,
-        "form": ProblematicLanguageForm,
-        "year": datetime.now().year,
-    }
-    assert isinstance(request, HttpRequest)
-    return render(request, "app/view_location.html", context)
 
 
 def view_sentence(request, sid):
@@ -106,11 +92,6 @@ def edit_sentence(request, sid):
             "app/edit_sentence.html",
             {"title": "Edit Sentence", "form": form, "sentence": sentence},
         )
-
-
-import hmac
-import hashlib
-import subprocess
 
 
 def is_valid_signature(x_hub_signature, data, private_key):
@@ -265,6 +246,17 @@ class LocationQuestionList(generics.ListAPIView):
                 ),
             )
         )
+        return queryset
+
+
+class LocationProblematicSentenceList(generics.ListAPIView):
+    serializer_class = ProblematicSentenceSerializer
+    lookup_url_kwarg = "lid"
+
+    def get_queryset(self):
+        lid = self.kwargs.get(self.lookup_url_kwarg)
+        location = Location.objects.get(pk=lid)
+        queryset = location.problematic_sentences
         return queryset
 
 

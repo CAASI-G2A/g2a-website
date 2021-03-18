@@ -4,9 +4,17 @@ import Api from "../libs/api";
 class Location extends Component {
   constructor(props) {
     super(props);
+    this.categories = {
+      cityPayMisconduct: "Citys Pays for Misconduct",
+      disqualifyComplaint: "Disqualifies Complaints",
+      eraseMisconduct: "Erases Misconduct Records",
+      limitOversight: "Limits Oversight",
+      unfairInformation: "Gives Officer Unfair Access to Information",
+    };
     this.state = {
       location: null,
       contract: null,
+      problematicSentences: null,
     };
   }
 
@@ -25,6 +33,25 @@ class Location extends Component {
       resp.text = resp.text.split("\n");
       this.setState({
         contract: resp,
+      });
+    });
+    // make request for problematic sentences
+    Api.getLocationProblematicSentences(lid).then((resp) => {
+      // go through list and assemble into more friendly dictionary
+      let problematicSentences = {};
+      for (let category of Object.keys(this.categories)) {
+        problematicSentences[category] = [];
+        for (let sentence of resp) {
+          if (sentence[category] === true) {
+            problematicSentences[category].push({
+              text: sentence.text,
+              impact: sentence.impact,
+            });
+          }
+        }
+      }
+      this.setState({
+        problematicSentences: problematicSentences,
       });
     });
   }
@@ -65,15 +92,86 @@ class Location extends Component {
             </div>
           </div>
         )}
-        {this.state.contract && (
-          <div className="row">
-            <div className="col-md-12 bg-light p-3 border border-dark rounded">
-              {this.state.contract.text.map((line) => (
-                <p>{line}</p>
+        <div className="row">
+          <div className="col-md-offset-6 col-md-6">
+            <h3 className="text-center">Metadata</h3>
+            <table className="table table-hover table-bordered">
+              <tbody>
+                <tr>
+                  <th className="bg-light">City</th>
+                  {this.state.location && <td>{this.state.location.name}</td>}
+                  <th className="bg-light">State</th>
+                  {this.state.location && <td>{this.state.location.state}</td>}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-md-12">
+            <h2>Problematic Sentences</h2>
+            <hr className="my-4 border-top border-secondary" />
+            <ul className="nav nav-tabs" role="tablist">
+              {Object.entries(this.categories).map(
+                ([category, title], index) => (
+                  <li
+                    key={category}
+                    role="presentation"
+                    className={`${index === 0 ? "active" : ""}`}
+                  >
+                    <a
+                      href={`#${category}`}
+                      aria-controls={category}
+                      role="tab"
+                      data-toggle="tab"
+                    >
+                      {title}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
+            <div className="tab-content">
+              {Object.keys(this.categories).map((category, index) => (
+                <div
+                  key={category}
+                  role="tabpanel"
+                  className={`tab-pane ${index === 0 ? "active" : ""}`}
+                  id={category}
+                >
+                  {this.state.problematicSentences &&
+                    this.state.problematicSentences[category] &&
+                    ((this.state.problematicSentences[category].length ===
+                      0 && (
+                      <p className="text-center">
+                        There are no problematic sentences for this category.
+                      </p>
+                    )) ||
+                      this.state.problematicSentences[category].map(
+                        (sentence, index) => (
+                          <p key={index}>
+                            <span className="font-weight-bold">Problem:</span>{" "}
+                            {sentence.text}
+                            <br />
+                            <span className="font-weight-bold">
+                              Impact:
+                            </span>{" "}
+                            {sentence.impact}
+                          </p>
+                        )
+                      ))}
+                </div>
               ))}
             </div>
           </div>
-        )}
+          {this.state.contract && (
+            <div className="col-md-12">
+              <h2>Contract</h2>
+              <hr className="my-4 border-top border-secondary" />
+              {this.state.contract.text.map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     );
   }

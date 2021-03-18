@@ -8,6 +8,8 @@ const Api = {
     getLocationContractFile: (lid, format) =>
       `${Api.BASE_PATH}/location/${lid}/contract/download?format=${format}`,
     getLocationQuestions: (lid) => `${Api.BASE_PATH}/location/${lid}/questions`,
+    getLocationProblematicSentences: (lid) =>
+      `${Api.BASE_PATH}/location/${lid}/problematic-sentences`,
     getLocationStages: (lid) => `${Api.BASE_PATH}/location/${lid}/stages`,
     getResearcherSearchResults: (query) =>
       `${Api.BASE_PATH}/researcher?query=${JSON.stringify(query)}`,
@@ -26,6 +28,11 @@ const Api = {
   },
   getLocationQuestions: (lid) => {
     return fetch(Api.ENDPOINTS.getLocationQuestions(lid)).then(toJSON);
+  },
+  getLocationProblematicSentences: (lid) => {
+    return fetch(Api.ENDPOINTS.getLocationProblematicSentences(lid)).then(
+      toJSON
+    );
   },
   getLocationStages: (lid) => {
     return fetch(Api.ENDPOINTS.getLocationStages(lid)).then(toJSON);
