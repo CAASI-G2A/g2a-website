@@ -99,7 +99,7 @@ class ResearcherResult extends Component {
             ))}
           </div>
         </div>
-        <hr className="my-4 border-top border-secondary" />
+        <hr className="my-4 border-top border-light-gray" />
       </div>
     );
   }
