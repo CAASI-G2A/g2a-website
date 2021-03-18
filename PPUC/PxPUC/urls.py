@@ -9,7 +9,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path("PxPUC/", views.home, name="PxPUC"),
-    path("PxPUC/view_location/<int:lid>", views.view_location, name="view_location"),
     path("PxPUC/view_sentence/<int:sid>", views.view_sentence, name="view_sentence"),
     path("PxPUC/edit_sentence/<int:sid>", views.edit_sentence, name="edit_sentence"),
     path("PxPUC/locations", views.LocationList.as_view(), name="location-list"),
@@ -29,6 +28,11 @@ urlpatterns = [
         "PxPUC/location/<int:lid>/questions",
         views.LocationQuestionList.as_view(),
         name="location-questions-list",
+    ),
+    path(
+        "PxPUC/location/<int:lid>/problematic-sentences",
+        views.LocationProblematicSentenceList.as_view(),
+        name="location-problematic-sentences-list",
     ),
     path(
         "PxPUC/location/<int:lid>/stages",

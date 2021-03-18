@@ -73,6 +73,46 @@ class QuestionSerializer(serializers.ModelSerializer):
         return obj.a
 
 
+class ProblematicSentenceSerializer(serializers.ModelSerializer):
+    limitOversight = serializers.SerializerMethodField()
+    cityPayMisconduct = serializers.SerializerMethodField()
+    eraseMisconduct = serializers.SerializerMethodField()
+    disqualifyComplaint = serializers.SerializerMethodField()
+    restrictInterrogation = serializers.SerializerMethodField()
+    unfairInformation = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Problematic_Sentence
+        fields = (
+            "text",
+            "impact",
+            "limitOversight",
+            "cityPayMisconduct",
+            "eraseMisconduct",
+            "disqualifyComplaint",
+            "restrictInterrogation",
+            "unfairInformation",
+        )
+
+    def get_limitOversight(self, obj):
+        return obj.limit_oversight
+
+    def get_cityPayMisconduct(self, obj):
+        return obj.city_pay_for_misconduct
+
+    def get_eraseMisconduct(self, obj):
+        return obj.erase_misconduct
+
+    def get_disqualifyComplaint(self, obj):
+        return obj.disqualify_complaints
+
+    def get_restrictInterrogation(self, obj):
+        return obj.restrict_interrogation
+
+    def get_unfairInformation(self, obj):
+        return obj.unfair_information
+
+
 class SentenceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sentence

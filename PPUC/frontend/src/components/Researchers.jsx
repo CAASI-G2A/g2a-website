@@ -275,6 +275,9 @@ class Researchers extends Component {
             <div className="col-lg-12 mt-3" id="results">
               <h2>Results</h2>
               <hr className="my-4 border-top border-secondary" />
+              {this.state.queryResults && (
+                <h4>{this.state.queryResults.length} Results found!</h4>
+              )}
             </div>
             <div className="col-lg-12 mt-3">
               {this.state.filteredQueryResults.length === 0 && (
