@@ -1,7 +1,5 @@
 // import bootstrap
 import "bootstrap";
-// import fontawesome icons
-import "@fortawesome/fontawesome-free/js/all.js";
 
 // import bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +9,8 @@ import "../scss/app.scss";
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { HashRouter, Switch, Route } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import routes from "../routes";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -65,7 +65,7 @@ class App extends Component {
             className="btn btn-light btn-lg back-to-top"
             role="button"
           >
-            <i className="fas fa-chevron-up"></i>
+            <FontAwesomeIcon icon={faChevronUp} />
           </a>
           <hr />
           <Footer />
@@ -80,22 +80,3 @@ const container = document.getElementById("app");
 if (container) {
   render(<App />, container);
 }
-
-window.showContractSearch = () => {
-  //on click set all elements to hidden and who the one we want
-  document.getElementById("pre-complaintPanel").style.display = "none";
-  document.getElementById("complaintPanel").style.display = "none";
-  document.getElementById("reviewPanel").style.display = "none";
-  document.getElementById("investigationPanel").style.display = "none";
-  document.getElementById("resultPanel").style.display = "none";
-  document.getElementById("contractPanel").style.display = "block";
-};
-
-window.loadModalLink = function (element, e) {
-  if (e) {
-    e.preventDefault();
-  }
-  const modalId = $(element).attr("data-target");
-  const href = $(element).attr("href");
-  $(modalId).modal("show").load(href);
-};

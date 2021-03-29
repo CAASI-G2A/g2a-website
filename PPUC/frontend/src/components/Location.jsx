@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import Api from "../libs/api";
 
 class Location extends Component {
@@ -76,7 +78,7 @@ class Location extends Component {
                 download
               >
                 <span className="font-weight-bold">Download PDF </span>
-                <i className="fas fa-file-download"></i>
+                <FontAwesomeIcon icon={faFileDownload} />
               </a>
               <a
                 className="btn btn-primary float-right mr-2"
@@ -87,7 +89,7 @@ class Location extends Component {
                 download
               >
                 <span className="font-weight-bold">Download TXT </span>
-                <i className="fas fa-file-download"></i>
+                <FontAwesomeIcon icon={faFileDownload} />
               </a>
             </div>
           </div>

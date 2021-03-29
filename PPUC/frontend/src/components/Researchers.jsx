@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
@@ -173,7 +175,7 @@ class Researchers extends Component {
                     className="btn btn-sm btn-outline-primary"
                     type="submit"
                   >
-                    <i className="fas fa-search"></i>
+                    <FontAwesomeIcon icon={faSearch} />
                   </button>
                 </div>
               </div>
@@ -250,7 +252,7 @@ class Researchers extends Component {
                         type="button"
                         onClick={() => this.setStateFilter()}
                       >
-                        <i className="fas fa-times"></i>
+                        <FontAwesomeIcon icon={faTimes} />
                       </button>
                     </span>
                   </div>

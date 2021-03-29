@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Highlighter from "react-highlight-words";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 import routes from "../routes";
 
 class ResearcherResultSentence extends Component {
@@ -31,10 +36,10 @@ class ResearcherResultSentence extends Component {
         {this.props.collapsable && (
           <span>
             <span className={`${!this.state.expanded ? "" : "d-none"}`}>
-              <i className="fas fa-chevron-right"></i>{" "}
+              <FontAwesomeIcon icon={faChevronRight} />{" "}
             </span>
             <span className={`${!this.state.expanded ? "d-none" : ""}`}>
-              <i className="fas fa-chevron-down"></i>
+              <FontAwesomeIcon icon={faChevronDown} />
             </span>
           </span>
         )}

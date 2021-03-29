@@ -1,5 +1,14 @@
 import React, { Component } from "react";
 import LeaderLine from "leader-line";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircle,
+  faUsers,
+  faEdit,
+  faSearch,
+  faExclamationCircle,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import * as scrollToElement from "scroll-to-element";
 import CitizenInfoPanel from "./CitizenInfoPanel";
 import Api from "../libs/api";
@@ -195,11 +204,19 @@ class Citizens extends Component {
                 onClick={() => this.handleIconClick("pre-complaint")}
               >
                 <span className="fa-stack fa-5x">
-                  <i
+                  <FontAwesomeIcon
                     id="pre-complaintCircle"
-                    className="fas fa-circle fa-stack-2x flow-circle"
-                  ></i>
-                  <i className="fas fa-users fa-stack-1x fa-inverse"></i>
+                    className={`fa-stack-2x flow-circle ${
+                      this.state.curStage == "pre-complaint"
+                        ? "flow-circle-selected"
+                        : ""
+                    }`}
+                    icon={faCircle}
+                  />
+                  <FontAwesomeIcon
+                    className="fa-stack-1x fa-inverse"
+                    icon={faUsers}
+                  />
                 </span>
               </div>
               <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
@@ -215,11 +232,19 @@ class Citizens extends Component {
                 onClick={() => this.handleIconClick("complaint")}
               >
                 <span className="fa-stack fa-5x">
-                  <i
+                  <FontAwesomeIcon
                     id="complaintCircle"
-                    className="fas fa-circle fa-stack-2x flow-circle"
-                  ></i>
-                  <i className="fas fa-exclamation-circle fa-stack-1x fa-inverse"></i>
+                    className={`fa-stack-2x flow-circle ${
+                      this.state.curStage == "complaint"
+                        ? "flow-circle-selected"
+                        : ""
+                    }`}
+                    icon={faCircle}
+                  />
+                  <FontAwesomeIcon
+                    className="fa-stack-1x fa-inverse"
+                    icon={faExclamationCircle}
+                  />
                 </span>
               </div>
               <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
@@ -235,11 +260,19 @@ class Citizens extends Component {
                 onClick={() => this.handleIconClick("review")}
               >
                 <span className="fa-stack fa-5x">
-                  <i
+                  <FontAwesomeIcon
                     id="reviewCircle"
-                    className="fas fa-circle fa-stack-2x flow-circle"
-                  ></i>
-                  <i className="fas fa-edit fa-stack-1x fa-inverse"></i>
+                    className={`fa-stack-2x flow-circle ${
+                      this.state.curStage == "review"
+                        ? "flow-circle-selected"
+                        : ""
+                    }`}
+                    icon={faCircle}
+                  />
+                  <FontAwesomeIcon
+                    className="fa-stack-1x fa-inverse"
+                    icon={faEdit}
+                  />
                 </span>
               </div>
               <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
@@ -255,11 +288,19 @@ class Citizens extends Component {
                 onClick={() => this.handleIconClick("investigation")}
               >
                 <span className="fa-stack fa-5x">
-                  <i
+                  <FontAwesomeIcon
                     id="investigationCircle"
-                    className="fas fa-circle fa-stack-2x flow-circle"
-                  ></i>
-                  <i className="fas fa-search fa-stack-1x fa-inverse"></i>
+                    className={`fa-stack-2x flow-circle ${
+                      this.state.curStage == "investigation"
+                        ? "flow-circle-selected"
+                        : ""
+                    }`}
+                    icon={faCircle}
+                  />
+                  <FontAwesomeIcon
+                    className="fa-stack-1x fa-inverse"
+                    icon={faSearch}
+                  />
                 </span>
               </div>
               <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
@@ -275,11 +316,19 @@ class Citizens extends Component {
                 onClick={() => this.handleIconClick("result")}
               >
                 <span className="fa-stack fa-5x">
-                  <i
+                  <FontAwesomeIcon
                     id="resultCircle"
-                    className="fas fa-circle fa-stack-2x flow-circle"
-                  ></i>
-                  <i className="fas fa-check fa-stack-1x fa-inverse"></i>
+                    className={`fa-stack-2x flow-circle ${
+                      this.state.curStage == "result"
+                        ? "flow-circle-selected"
+                        : ""
+                    }`}
+                    icon={faCircle}
+                  />
+                  <FontAwesomeIcon
+                    className="fa-stack-1x fa-inverse"
+                    icon={faCheck}
+                  />
                 </span>
               </div>
               <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">

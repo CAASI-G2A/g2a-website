@@ -178,6 +178,9 @@ pre {
 .flow-circle {
   color: #337ab7;
 }
+.flow-circle-selected {
+  color: red;
+}
 .flow-stage {
   transition: transform 0.35s ease;
 }
