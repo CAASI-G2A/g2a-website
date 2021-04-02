@@ -69,28 +69,32 @@ class Location extends Component {
               </div>
             </div>
             <div className="row">
-              <a
-                className="btn btn-primary float-right"
-                href={Api.ENDPOINTS.getLocationContractFile(
-                  this.state.location.id,
-                  "pdf"
-                )}
-                download
-              >
-                <span className="font-weight-bold">Download PDF </span>
-                <FontAwesomeIcon icon={faFileDownload} />
-              </a>
-              <a
-                className="btn btn-primary float-right mr-2"
-                href={Api.ENDPOINTS.getLocationContractFile(
-                  this.state.location.id,
-                  "txt"
-                )}
-                download
-              >
-                <span className="font-weight-bold">Download TXT </span>
-                <FontAwesomeIcon icon={faFileDownload} />
-              </a>
+              {this.state.location.hasPdf && (
+                <a
+                  className="btn btn-primary float-right"
+                  href={Api.ENDPOINTS.getLocationContractFile(
+                    this.state.location.id,
+                    "pdf"
+                  )}
+                  download
+                >
+                  <span className="font-weight-bold">Download PDF </span>
+                  <FontAwesomeIcon icon={faFileDownload} />
+                </a>
+              )}
+              {this.state.location.hasTxt && (
+                <a
+                  className="btn btn-primary float-right mr-2"
+                  href={Api.ENDPOINTS.getLocationContractFile(
+                    this.state.location.id,
+                    "txt"
+                  )}
+                  download
+                >
+                  <span className="font-weight-bold">Download TXT </span>
+                  <FontAwesomeIcon icon={faFileDownload} />
+                </a>
+              )}
             </div>
           </div>
         )}
@@ -144,7 +148,8 @@ class Location extends Component {
                     ((this.state.problematicSentences[category].length ===
                       0 && (
                       <p className="text-center">
-                        There are no problematic sentences for this category.
+                        No problematic sentences were identified by Campaign 0
+                        as of June 29, 2016.
                       </p>
                     )) ||
                       this.state.problematicSentences[category].map(

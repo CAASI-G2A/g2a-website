@@ -52,6 +52,22 @@ class Citizens extends Component {
         )
       );
     }
+    const subLines = [
+      ["sub1", "sub2"],
+      ["sub2", "sub3"],
+      ["sub3", "sub5"],
+      ["subHorizontal", "sub4"],
+    ];
+    const getSubCircle = (element) => element.children[0].children[0];
+    for (let line of subLines) {
+      leaderLines.push(
+        new LeaderLine(
+          getSubCircle(document.getElementById(line[0])),
+          getSubCircle(document.getElementById(line[1])),
+          leaderLineConfig
+        )
+      );
+    }
     this.setState({
       leaderLines: leaderLines,
     });
@@ -280,6 +296,19 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
+          <div className="col-md-2 mb-2">
+            <div className="row">
+              <div className="text-center flow-stage col-xs-6 col-lg-12">
+                <FontAwesomeIcon
+                  className="fa-2x flow-circle"
+                  icon={faCircle}
+                />
+              </div>
+              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+                Investigation
+              </h2>
+            </div>
+          </div>
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
@@ -335,6 +364,51 @@ class Citizens extends Component {
                 Result
               </h2>
             </div>
+          </div>
+        </div>
+        <div className="row d-none d-lg-block">
+          <div className="col-md-12 d-flex align-items-center">
+            <div id="sub1" className="py-4" style={{ paddingLeft: "1.4rem" }}>
+              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
+            </div>
+            <h4>DAR is filed. Copies given to officer</h4>
+          </div>
+          <div className="col-md-12 d-flex align-items-center">
+            <div id="sub2" className="py-4" style={{ paddingLeft: "1.4rem" }}>
+              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
+            </div>
+            <h4>DAR goes through the chain of command</h4>
+          </div>
+          <div className="col-md-12 d-flex align-items-center">
+            <div id="sub3" className="py-4" style={{ paddingLeft: "1.4rem" }}>
+              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
+            </div>
+            <h4>DOPS holds meeting with officer</h4>
+          </div>
+          <div className="col-md-1 d-flex align-items-center">
+            <div
+              id="subHorizontal"
+              className="pb-5"
+              style={{
+                paddingLeft: "4.7rem",
+                fontSize: "0.25em",
+                paddingTop: "4.8rem",
+              }}
+            >
+              <FontAwesomeIcon className="flow-circle" icon={faCircle} />
+            </div>
+          </div>
+          <div className="col-md-11 d-flex align-items-center">
+            <div id="sub4" className="py-4">
+              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
+            </div>
+            <h4>No discipline</h4>
+          </div>
+          <div className="col-md-12 d-flex align-items-center">
+            <div id="sub5" className="py-4">
+              <FontAwesomeIcon className="flow-circle fa-7x" icon={faCircle} />
+            </div>
+            <h2>Investigation</h2>
           </div>
         </div>
         <div className="row">

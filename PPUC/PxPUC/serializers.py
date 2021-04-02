@@ -1,12 +1,16 @@
 from django.db.models.query import QuerySet
 from rest_framework import serializers
 from .models import *
+import os, re
 
 
 class LocationSerializer(serializers.ModelSerializer):
+    hasTxt = serializers.SerializerMethodField()
+    hasPdf = serializers.SerializerMethodField()
+
     class Meta:
         model = Location
-        fields = ("id", "name", "state")
+        fields = ("id", "name", "state", "hasTxt", "hasPdf")
 
     def __init__(self, *args, **kwargs):
         super(LocationSerializer, self).__init__(*args, **kwargs)
@@ -27,6 +31,22 @@ class LocationSerializer(serializers.ModelSerializer):
 
     def get_sentences(self, obj):
         return SentenceSerializer(obj.sentences, many=True).data
+
+    def get_hasTxt(self, obj):
+        # check filesystem
+        state = re.sub(" ", "-", obj.state)
+        city = re.sub(" ", "-", obj.name)
+        return os.path.exists(
+            "%s/PxPUC/static/app/contracts_txt/%s_%s.txt" % (os.getcwd(), state, city)
+        )
+
+    def get_hasPdf(self, obj):
+        # check filesystem
+        state = re.sub(" ", "-", obj.state)
+        city = re.sub(" ", "-", obj.name)
+        return os.path.exists(
+            "%s/PxPUC/static/app/contracts_pdf/%s_%s.pdf" % (os.getcwd(), state, city)
+        )
 
 
 class CategorySerializer(serializers.ModelSerializer):
