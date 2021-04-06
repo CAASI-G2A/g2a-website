@@ -41,7 +41,7 @@ class Landing extends Component {
             complaint.
           </p>
           <Link
-            className="btn btn-default float-right"
+            className="btn btn-secondary float-right"
             to={routes.about}
             role="button"
           >
@@ -65,7 +65,7 @@ class Landing extends Component {
             works and what it means for them if they choose to do so.
           </p>
           <Link
-            className="btn btn-default float-right"
+            className="btn btn-secondary float-right"
             to={routes.about}
             role="button"
           >

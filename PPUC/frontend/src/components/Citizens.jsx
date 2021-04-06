@@ -8,8 +8,11 @@ import {
   faSearch,
   faExclamationCircle,
   faCheck,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import * as scrollToElement from "scroll-to-element";
+import $ from "jquery";
+import "bootstrap/js/dist/tooltip";
 import CitizenInfoPanel from "./CitizenInfoPanel";
 import Api from "../libs/api";
 import { useParams } from "react-router-dom";
@@ -22,7 +25,36 @@ class Citizens extends Component {
       location: null,
       locationQuestions: null,
       locationStages: null,
+      stageOrder: [
+        "pre-complaint",
+        "complaint",
+        "review",
+        "investigation",
+        "result",
+      ],
       curStage: null,
+      subStages: {
+        review: [
+          {
+            id: 1,
+            text: "DAR is filed. Copies given to officer",
+          },
+          {
+            id: 2,
+            text: "DAR goes through the chain of command",
+          },
+          {
+            id: 3,
+            text: "DOPS holds meeting with officer",
+            alternates: [
+              {
+                id: 4,
+                text: "No discipline",
+              },
+            ],
+          },
+        ],
+      },
       leaderLines: [],
     };
     this.drawLeaderLines = this.drawLeaderLines.bind(this);
@@ -52,6 +84,7 @@ class Citizens extends Component {
         )
       );
     }
+    /*
     const subLines = [
       ["sub1", "sub2"],
       ["sub2", "sub3"],
@@ -68,6 +101,7 @@ class Citizens extends Component {
         )
       );
     }
+    */
     this.setState({
       leaderLines: leaderLines,
     });
@@ -111,11 +145,17 @@ class Citizens extends Component {
       {
         curStage: category,
       },
-      () => scrollToElement("#citizenInfoPanel")
+      () => {
+        // enable all tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+        scrollToElement("#citizenInfoPanel");
+      }
     );
   }
 
   componentDidMount() {
+    // enable all tooltips
+    $('[data-toggle="tooltip"]').tooltip();
     // load available locations
     Api.getLocations().then((resp) => {
       const locationsByState = {};
@@ -162,35 +202,25 @@ class Citizens extends Component {
       <div className="container-fluid">
         <div className="dropdown text-center">
           <button
-            className="btn btn-default dropdown-toggle"
+            className="btn btn-secondary dropdown-toggle"
             type="button"
-            id="dropdownMenu1"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="true"
+            aria-expanded="false"
             style={{ margin: "10px auto" }}
           >
-            Choose a state&nbsp;&nbsp;
+            Choose a state
             <span className="caret"></span>
           </button>
-          <ul
-            className="dropdown-menu multi-level"
-            aria-labelledby="dropdownMenu1"
-            style={{
-              margin: "10px auto",
-              width: "200px",
-              left: "50%",
-              marginLeft: "-100px",
-            }}
-          >
+          <div className="dropdown-menu multi-level">
             {Object.entries(this.state.locations).map(([state, cities]) => (
               <li key={state} className="dropdown-submenu">
-                <a href="#">{state}</a>
+                <a className="dropdown-item">{state}</a>
                 <ul className="dropdown-menu">
                   {cities.map((city) => (
                     <li key={city.id}>
                       <a
-                        tabIndex="-1"
+                        className="dropdown-item"
                         onClick={() => this.handleLocationSelect(city)}
                       >
                         {city.name}
@@ -200,7 +230,7 @@ class Citizens extends Component {
                 </ul>
               </li>
             ))}
-          </ul>
+          </div>
         </div>
         <div className="jumbotron">
           <h1>{this.state.location && this.state.location.name}</h1>
@@ -212,17 +242,17 @@ class Citizens extends Component {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-2 col-md-offset-1 mb-5">
+          <div className="col-md-2 offset-md-1 mb-5">
             <div className="row">
               <div
-                className="text-center flow-stage col-xs-6 col-lg-12"
+                className="text-center flow-stage col-6 col-lg-12"
                 id="pre-complaintIcon"
                 onClick={() => this.handleIconClick("pre-complaint")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
                     id="pre-complaintCircle"
-                    className={`fa-stack-2x flow-circle ${
+                    className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "pre-complaint"
                         ? "flow-circle-selected"
                         : ""
@@ -235,7 +265,7 @@ class Citizens extends Component {
                   />
                 </span>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+              <h2 className="text-center flow-stage-text col-6 col-lg-12">
                 Interaction
               </h2>
             </div>
@@ -243,14 +273,14 @@ class Citizens extends Component {
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
-                className="text-center flow-stage col-xs-6 col-lg-12"
+                className="text-center flow-stage col-6 col-lg-12"
                 id="complaintIcon"
                 onClick={() => this.handleIconClick("complaint")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
                     id="complaintCircle"
-                    className={`fa-stack-2x flow-circle ${
+                    className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "complaint"
                         ? "flow-circle-selected"
                         : ""
@@ -263,7 +293,7 @@ class Citizens extends Component {
                   />
                 </span>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+              <h2 className="text-center flow-stage-text col-6 col-lg-12">
                 Complaint
               </h2>
             </div>
@@ -271,14 +301,14 @@ class Citizens extends Component {
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
-                className="text-center flow-stage col-xs-6 col-lg-12"
+                className="text-center flow-stage col-6 col-lg-12"
                 id="reviewIcon"
                 onClick={() => this.handleIconClick("review")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
                     id="reviewCircle"
-                    className={`fa-stack-2x flow-circle ${
+                    className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "review"
                         ? "flow-circle-selected"
                         : ""
@@ -291,35 +321,42 @@ class Citizens extends Component {
                   />
                 </span>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+              <h2 className="text-center flow-stage-text col-6 col-lg-12">
                 Review
               </h2>
             </div>
           </div>
-          <div className="col-md-2 mb-2">
-            <div className="row">
-              <div className="text-center flow-stage col-xs-6 col-lg-12">
-                <FontAwesomeIcon
-                  className="fa-2x flow-circle"
-                  icon={faCircle}
-                />
+          {this.state.subStages["review"] &&
+            this.state.subStages["review"].map((subStage, index, arr) => (
+              <div
+                className={`col-md-2 ${
+                  index === arr.length - 1 ? "mb-5" : "mb-2"
+                } d-lg-none`}
+              >
+                <div className="row">
+                  <div className="text-center flow-stage col-6 col-lg-12">
+                    <FontAwesomeIcon
+                      className="fa-2x flow-circle"
+                      icon={faCircle}
+                    />
+                  </div>
+                  <span className="flow-stage-text col-6 col-lg-12">
+                    {subStage.text}
+                  </span>
+                </div>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
-                Investigation
-              </h2>
-            </div>
-          </div>
+            ))}
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
-                className="text-center flow-stage col-xs-6 col-lg-12"
+                className="text-center flow-stage col-6 col-lg-12"
                 id="investigationIcon"
                 onClick={() => this.handleIconClick("investigation")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
                     id="investigationCircle"
-                    className={`fa-stack-2x flow-circle ${
+                    className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "investigation"
                         ? "flow-circle-selected"
                         : ""
@@ -332,7 +369,7 @@ class Citizens extends Component {
                   />
                 </span>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+              <h2 className="text-center flow-stage-text col-6 col-lg-12">
                 Investigation
               </h2>
             </div>
@@ -340,14 +377,14 @@ class Citizens extends Component {
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
-                className="text-center flow-stage col-xs-6 col-lg-12"
+                className="text-center flow-stage col-6 col-lg-12"
                 id="resultIcon"
                 onClick={() => this.handleIconClick("result")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
                     id="resultCircle"
-                    className={`fa-stack-2x flow-circle ${
+                    className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "result"
                         ? "flow-circle-selected"
                         : ""
@@ -360,57 +397,75 @@ class Citizens extends Component {
                   />
                 </span>
               </div>
-              <h2 className="text-center flow-stage-text col-xs-6 col-lg-12">
+              <h2 className="text-center flow-stage-text col-6 col-lg-12">
                 Result
               </h2>
             </div>
           </div>
         </div>
-        <div className="row d-none d-lg-block">
-          <div className="col-md-12 d-flex align-items-center">
-            <div id="sub1" className="py-4" style={{ paddingLeft: "1.4rem" }}>
-              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
+        {this.state.subStages[this.state.curStage] && (
+          <div className="row d-none d-lg-block">
+            {this.state.subStages[this.state.curStage].map((subStage) => (
+              <div>
+                <div className="col-md-12 d-flex align-items-center">
+                  <div
+                    id={subStage.id}
+                    className="py-4"
+                    style={{ paddingLeft: "1.4rem" }}
+                  >
+                    <FontAwesomeIcon
+                      className="flow-circle fa-5x"
+                      icon={faCircle}
+                    />
+                  </div>
+                  <h4>{subStage.text}</h4>
+                  <a
+                    href="#"
+                    data-toggle="tooltip"
+                    title=""
+                    data-original-title="Another one here too"
+                  >
+                    test
+                    <FontAwesomeIcon icon={faQuestionCircle} />
+                  </a>
+                </div>
+                {subStage.alternates && (
+                  <div className="col-md-1 d-flex align-items-center">
+                    <div
+                      id="subHorizontal"
+                      className="pb-5"
+                      style={{
+                        paddingLeft: "4.7rem",
+                        fontSize: "0.25em",
+                        paddingTop: "4.8rem",
+                      }}
+                    >
+                      <FontAwesomeIcon
+                        className="flow-circle"
+                        icon={faCircle}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="col-md-12 d-flex align-items-center">
+              <div id="subEnd" className="py-4">
+                <FontAwesomeIcon
+                  className="flow-circle fa-7x"
+                  icon={faCircle}
+                />
+              </div>
+              <h2 className="text-capitalize">
+                {
+                  this.state.stageOrder[
+                    this.state.stageOrder.indexOf(this.state.curStage) + 1
+                  ]
+                }
+              </h2>
             </div>
-            <h4>DAR is filed. Copies given to officer</h4>
           </div>
-          <div className="col-md-12 d-flex align-items-center">
-            <div id="sub2" className="py-4" style={{ paddingLeft: "1.4rem" }}>
-              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
-            </div>
-            <h4>DAR goes through the chain of command</h4>
-          </div>
-          <div className="col-md-12 d-flex align-items-center">
-            <div id="sub3" className="py-4" style={{ paddingLeft: "1.4rem" }}>
-              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
-            </div>
-            <h4>DOPS holds meeting with officer</h4>
-          </div>
-          <div className="col-md-1 d-flex align-items-center">
-            <div
-              id="subHorizontal"
-              className="pb-5"
-              style={{
-                paddingLeft: "4.7rem",
-                fontSize: "0.25em",
-                paddingTop: "4.8rem",
-              }}
-            >
-              <FontAwesomeIcon className="flow-circle" icon={faCircle} />
-            </div>
-          </div>
-          <div className="col-md-11 d-flex align-items-center">
-            <div id="sub4" className="py-4">
-              <FontAwesomeIcon className="flow-circle fa-5x" icon={faCircle} />
-            </div>
-            <h4>No discipline</h4>
-          </div>
-          <div className="col-md-12 d-flex align-items-center">
-            <div id="sub5" className="py-4">
-              <FontAwesomeIcon className="flow-circle fa-7x" icon={faCircle} />
-            </div>
-            <h2>Investigation</h2>
-          </div>
-        </div>
+        )}
         <div className="row">
           {this.state.curStage && (
             <CitizenInfoPanel

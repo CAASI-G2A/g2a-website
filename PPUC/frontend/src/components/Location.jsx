@@ -68,10 +68,10 @@ class Location extends Component {
                 <h1>{this.state.location.name} Contract</h1>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-end">
               {this.state.location.hasPdf && (
                 <a
-                  className="btn btn-primary float-right"
+                  className="btn btn-primary mr-2"
                   href={Api.ENDPOINTS.getLocationContractFile(
                     this.state.location.id,
                     "pdf"
@@ -84,7 +84,7 @@ class Location extends Component {
               )}
               {this.state.location.hasTxt && (
                 <a
-                  className="btn btn-primary float-right mr-2"
+                  className="btn btn-primary mr-2"
                   href={Api.ENDPOINTS.getLocationContractFile(
                     this.state.location.id,
                     "txt"
@@ -99,8 +99,8 @@ class Location extends Component {
           </div>
         )}
         <div className="row">
-          <div className="col-md-offset-6 col-md-6">
-            <h3 className="text-center">Metadata</h3>
+          <div className="offset-md-6 col-md-6">
+            <h3 className="text-center">Summary</h3>
             <table className="table table-hover table-bordered">
               <tbody>
                 <tr>
@@ -118,12 +118,9 @@ class Location extends Component {
             <ul className="nav nav-tabs" role="tablist">
               {Object.entries(this.categories).map(
                 ([category, title], index) => (
-                  <li
-                    key={category}
-                    role="presentation"
-                    className={`${index === 0 ? "active" : ""}`}
-                  >
+                  <li key={category} role="presentation" className="nav-item">
                     <a
+                      className={`${index === 0 ? "active" : ""} nav-link`}
                       href={`#${category}`}
                       aria-controls={category}
                       role="tab"

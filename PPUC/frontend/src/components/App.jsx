@@ -1,8 +1,6 @@
 // import bootstrap
 import "bootstrap";
 
-// import bootstrap styles
-import "bootstrap/dist/css/bootstrap.min.css";
 // import site styles
 import "../scss/app.scss";
 

@@ -156,7 +156,7 @@ class Researchers extends Component {
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
-          <div className="col-md-6 col-md-offset-3">
+          <div className="col-md-6 offset-md-3">
             <form onSubmit={(e) => this.handleSearch(e)}>
               <div className="input-group">
                 <input
@@ -170,11 +170,8 @@ class Researchers extends Component {
                     this.setSearchQuery(event.target.value, false)
                   }
                 />
-                <div className="input-group-addon">
-                  <button
-                    className="btn btn-sm btn-outline-primary"
-                    type="submit"
-                  >
+                <div className="input-group-append">
+                  <button className="btn btn-outline-primary" type="submit">
                     <FontAwesomeIcon icon={faSearch} />
                   </button>
                 </div>
@@ -188,7 +185,7 @@ class Researchers extends Component {
           </div>
         </div>
         <div className="col-lg-12 mt-3">
-          <div className="col-md-6 col-md-offset-3 text-center">
+          <div className="col-md-6 offset-md-3 text-center">
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
@@ -229,13 +226,13 @@ class Researchers extends Component {
           </div>
         </div>
         {this.state.filteredQueryResults && (
-          <div>
+          <div className="col-lg-12">
             {this.state.queryResultStates && (
-              <div className="col-lg-12 mt-3">
+              <div className="col-lg-12 mt-3 row">
                 <div className="col-md-3">
                   <div className="input-group">
                     <select
-                      className="form-control"
+                      className="custom-select"
                       value={this.state.stateFilter}
                       onChange={(e) => this.setStateFilter(e.target.value)}
                     >
@@ -246,20 +243,20 @@ class Researchers extends Component {
                         <option key={result}>{result}</option>
                       ))}
                     </select>
-                    <span className="input-group-btn">
+                    <div className="input-group-append">
                       <button
-                        className="btn btn-default"
+                        className="btn btn-outline-secondary"
                         type="button"
                         onClick={() => this.setStateFilter()}
                       >
                         <FontAwesomeIcon icon={faTimes} />
                       </button>
-                    </span>
+                    </div>
                   </div>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 offset-md-6">
                   <select
-                    className="form-control"
+                    className="custom-select"
                     defaultValue="null"
                     onChange={(e) => this.setPageSize(e.target.value)}
                   >
@@ -300,12 +297,13 @@ class Researchers extends Component {
                   />
                 ))}
               {this.state.filteredQueryResults.length > 0 && (
-                <div className="col-lg-12 text-center">
+                <div className="col-lg-12">
                   <nav aria-label="Result navigation">
-                    <ul className="pagination pagination-lg">
+                    <ul className="pagination justify-content-center">
                       {this.state.currentPage - 1 > 0 && (
                         <li>
                           <a
+                            className="page-link"
                             aria-label="Previous"
                             onClick={() =>
                               this.setPage(this.state.currentPage - 1)
@@ -317,46 +315,59 @@ class Researchers extends Component {
                       )}
                       {this.state.currentPage - 2 > 0 && (
                         <li
+                          className="page-item"
                           onClick={() =>
                             this.setPage(this.state.currentPage - 2)
                           }
                         >
-                          <a>{this.state.currentPage - 2}</a>
+                          <a className="page-link">
+                            {this.state.currentPage - 2}
+                          </a>
                         </li>
                       )}
                       {this.state.currentPage - 1 > 0 && (
                         <li
+                          className="page-item"
                           onClick={() =>
                             this.setPage(this.state.currentPage - 1)
                           }
                         >
-                          <a>{this.state.currentPage - 1}</a>
+                          <a className="page-link">
+                            {this.state.currentPage - 1}
+                          </a>
                         </li>
                       )}
-                      <li className="active">
-                        <span>{this.state.currentPage}</span>
+                      <li className="page-item active">
+                        <a className="page-link">{this.state.currentPage}</a>
                       </li>
                       {this.state.currentPage + 1 <= this.state.totalPages && (
                         <li
+                          className="page-item"
                           onClick={() =>
                             this.setPage(this.state.currentPage + 1)
                           }
                         >
-                          <a>{this.state.currentPage + 1}</a>
+                          <a className="page-link">
+                            {this.state.currentPage + 1}
+                          </a>
                         </li>
                       )}
                       {this.state.currentPage + 2 <= this.state.totalPages && (
                         <li
+                          className="page-item"
                           onClick={() =>
                             this.setPage(this.state.currentPage + 2)
                           }
                         >
-                          <a>{this.state.currentPage + 2}</a>
+                          <a className="page-link">
+                            {this.state.currentPage + 2}
+                          </a>
                         </li>
                       )}
                       {this.state.currentPage + 1 <= this.state.totalPages && (
-                        <li>
+                        <li className="page-item">
                           <a
+                            className="page-link"
                             aria-label="Next"
                             onClick={() =>
                               this.setPage(this.state.currentPage + 1)
