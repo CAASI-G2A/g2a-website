@@ -35,6 +35,11 @@ urlpatterns = [
         name="location-problematic-sentences-list",
     ),
     path(
+        "PxPUC/location/<int:lid>/glossary",
+        views.LocationGlossaryTermList.as_view(),
+        name="location-glossary-terms-list",
+    ),
+    path(
         "PxPUC/location/<int:lid>/stages",
         views.LocationStageList.as_view(),
         name="location-stages-list",

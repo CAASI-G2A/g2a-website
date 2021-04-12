@@ -10,6 +10,7 @@ const Api = {
     getLocationQuestions: (lid) => `${Api.BASE_PATH}/location/${lid}/questions`,
     getLocationProblematicSentences: (lid) =>
       `${Api.BASE_PATH}/location/${lid}/problematic-sentences`,
+    getLocationGlossary: (lid) => `${Api.BASE_PATH}/location/${lid}/glossary`,
     getLocationStages: (lid) => `${Api.BASE_PATH}/location/${lid}/stages`,
     getResearcherSearchResults: (query) =>
       `${Api.BASE_PATH}/researcher?query=${JSON.stringify(query)}`,
@@ -33,6 +34,9 @@ const Api = {
     return fetch(Api.ENDPOINTS.getLocationProblematicSentences(lid)).then(
       toJSON
     );
+  },
+  getLocationGlossary: (lid) => {
+    return fetch(Api.ENDPOINTS.getLocationGlossary(lid)).then(toJSON);
   },
   getLocationStages: (lid) => {
     return fetch(Api.ENDPOINTS.getLocationStages(lid)).then(toJSON);

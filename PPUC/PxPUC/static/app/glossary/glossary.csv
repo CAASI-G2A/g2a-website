@@ -1,0 +1,9 @@
+city,state,term,definition
+pittsburgh,pa,FOP,"Fraternal Order of Police. This is one of the biggest police union organizations, with lots of local branches. FOP Branch #1 is the police union that bargains for the Pittsburgh Bureau of Police."
+pittsburgh,pa,DAR,Disciplinary Action Report. This is the internal form completed by the Pittsburgh Bureau of Police when a complaint is filed against an officer.
+pittsburgh,pa,DOPS,"Department of Public Safety. The Bureau of Police is overseen by the Department of Public Safety, and the Director of Public Safety ultimately signs off on all police discipline."
+pittsburgh,pa,Discipline,"Any punishment imposed on a police officer. Can be a written warning, suspension, or (rarely) termination."
+pittsburgh,pa,Grievance,"A formal complaint filed with the union alleging that a police officer has been treated unfairly. In this context, it means that an officer is appealing the disciplinary action taken against them"
+pittsburgh,pa,Arbitration,"The legal process wherein a third party settles a disagreement between the FOP and the City of Pittsburgh. In this context, it means the process of determining whether or not to uphold discipline."
+pittsburgh,pa,Arbitrator,The (supposedly) neutral party that decides whether or not to uphold the grievance.
+pittsburgh,pa,Tripartite board,"Board of 3 arbitrators that makes the arbitration decision. (Not sure how they are appointed, but not actually very neutral)"

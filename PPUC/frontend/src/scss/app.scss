@@ -206,7 +206,7 @@ body {
 }
 
 // fix font awesome shifting stacked icons
-.fa-stack {
+.flow-stage > .fa-stack {
   position: initial !important;
 }
 
@@ -216,4 +216,13 @@ body {
 }
 .border-blue {
   border-color: #337ab7;
+}
+
+// negative margin customized for header next to subprocess buttons when a FAQ is attached to the subprocess icon
+.subprocess-ml-n {
+  margin-left: -1.4rem !important;
+}
+// set higher z index so FAQ button is clickable
+.subprocess-faq-icon {
+  z-index: 2;
 }

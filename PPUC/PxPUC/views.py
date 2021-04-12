@@ -260,6 +260,17 @@ class LocationProblematicSentenceList(generics.ListAPIView):
         return queryset
 
 
+class LocationGlossaryTermList(generics.ListAPIView):
+    serializer_class = GlossaryTermSerializer
+    lookup_url_kwarg = "lid"
+
+    def get_queryset(self):
+        lid = self.kwargs.get(self.lookup_url_kwarg)
+        location = Location.objects.get(pk=lid)
+        queryset = location.glossary_terms
+        return queryset
+
+
 # this is a generic view until the data model is formalized for stages
 class LocationStageList(APIView):
     def get(self, request, lid, format=None):

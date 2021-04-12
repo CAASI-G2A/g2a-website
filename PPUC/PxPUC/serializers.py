@@ -148,3 +148,9 @@ class ContractSerializer(serializers.ModelSerializer):
 
     def get_parsed(self, obj):
         return obj.is_parsed
+
+
+class GlossaryTermSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GlossaryTerm
+        fields = ("id", "term", "definition")

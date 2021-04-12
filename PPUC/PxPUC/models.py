@@ -70,3 +70,11 @@ class Problematic_Sentence(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class GlossaryTerm(models.Model):
+    location = models.ForeignKey(
+        Location, related_name="glossary_terms", on_delete=models.CASCADE
+    )
+    term = models.TextField()
+    definition = models.TextField()

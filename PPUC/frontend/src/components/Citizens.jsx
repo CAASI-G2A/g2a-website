@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOMServer from "react-dom/server";
 import LeaderLine from "leader-line";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,10 +10,12 @@ import {
   faExclamationCircle,
   faCheck,
   faQuestionCircle,
+  faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 import * as scrollToElement from "scroll-to-element";
 import $ from "jquery";
 import "bootstrap/js/dist/tooltip";
+import "bootstrap/js/dist/popover";
 import CitizenInfoPanel from "./CitizenInfoPanel";
 import Api from "../libs/api";
 import { useParams } from "react-router-dom";
@@ -25,6 +28,7 @@ class Citizens extends Component {
       location: null,
       locationQuestions: null,
       locationStages: null,
+      locationGlossary: null,
       stageOrder: [
         "pre-complaint",
         "complaint",
@@ -33,11 +37,15 @@ class Citizens extends Component {
         "result",
       ],
       curStage: null,
-      subStages: {
+      locationSubStages: {
         review: [
           {
             id: 1,
             text: "DAR is filed. Copies given to officer",
+            faq: {
+              title: "FAQ",
+              text: "FAQ TEXT",
+            },
           },
           {
             id: 2,
@@ -60,6 +68,8 @@ class Citizens extends Component {
     this.drawLeaderLines = this.drawLeaderLines.bind(this);
     this.getLocationQuestions = this.getLocationQuestions.bind(this);
     this.getLocationStages = this.getLocationStages.bind(this);
+    this.getLocationGlossary = this.getLocationGlossary.bind(this);
+    this.applyGlossary = this.applyGlossary.bind(this);
     this.handleLocationSelect = this.handleLocationSelect.bind(this);
     this.handleIconClick = this.handleIconClick.bind(this);
   }
@@ -109,6 +119,57 @@ class Citizens extends Component {
     });
   }
 
+  getLocationGlossary() {
+    Api.getLocationGlossary(this.state.location.id).then((resp) => {
+      this.setState(
+        {
+          locationGlossary: resp,
+        },
+        () => {
+          this.applyGlossary();
+        }
+      );
+    });
+  }
+
+  applyGlossary() {
+    // ensure we have the terms + substages
+    if (!this.state.locationGlossary || !this.state.locationSubStages) {
+      return;
+    }
+    // go through all substages and look for terms
+    const newSubStages = {};
+    for (let [stageName, subStages] of Object.entries(
+      this.state.locationSubStages
+    )) {
+      for (let subStage of subStages) {
+        subStage.html = subStage.text;
+        for (let term of this.state.locationGlossary) {
+          const termMatches = [
+            ...subStage.text.matchAll(new RegExp(`\\b${term.term}\\b`, "g")),
+          ];
+          // start from end of indices
+          termMatches.reverse();
+          for (let match of termMatches) {
+            const index = match.index;
+            subStage.html = `${subStage.html.substr(0, index)}<a
+		      data-toggle="tooltip"
+		      title=""
+		      data-original-title="${term.definition}"
+		    >${term.term}${ReactDOMServer.renderToString(
+              <FontAwesomeIcon className="fa-xs mb-3" icon={faQuestionCircle} />
+            )}
+		    </a>${subStage.html.substr(index + term.term.length)}`;
+          }
+        }
+      }
+      newSubStages[stageName] = subStages;
+    }
+    this.setState({
+      locationSubStages: newSubStages,
+    });
+  }
+
   handleLocationSelect(location) {
     // update current selected location
     this.setState(
@@ -118,6 +179,7 @@ class Citizens extends Component {
       () => {
         this.getLocationQuestions();
         this.getLocationStages();
+        this.getLocationGlossary();
       }
     );
   }
@@ -137,6 +199,8 @@ class Citizens extends Component {
   componentDidMount() {
     // enable all tooltips
     $('[data-toggle="tooltip"]').tooltip();
+    // enable all popovers
+    $('[data-toggle="popover"]').popover();
     // load available locations
     Api.getLocations().then((resp) => {
       const locationsByState = {};
@@ -166,16 +230,19 @@ class Citizens extends Component {
           this.drawLeaderLines();
           this.getLocationQuestions();
           this.getLocationStages();
+          this.getLocationGlossary();
         }
       );
     });
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
+    // enable all tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    // enable all popovers
+    $('[data-toggle="popover"]').popover();
     // draw leader lines if state changed
     if (prevState.curStage !== this.state.curStage) {
-      // enable all tooltips
-      $('[data-toggle="tooltip"]').tooltip();
       const leaderLineConfig = { color: "#337ab7", path: "straight" };
       const subLines = [
         ["sub1", "sub2"],
@@ -340,26 +407,29 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
-          {this.state.subStages["review"] &&
-            this.state.subStages["review"].map((subStage, index, arr) => (
-              <div
-                className={`col-md-2 ${
-                  index === arr.length - 1 ? "mb-5" : "mb-2"
-                } d-lg-none`}
-              >
-                <div className="row">
-                  <div className="text-center flow-stage col-6 col-lg-12">
-                    <FontAwesomeIcon
-                      className="fa-2x flow-circle"
-                      icon={faCircle}
-                    />
+          {this.state.locationSubStages["review"] &&
+            this.state.locationSubStages["review"].map(
+              (subStage, index, arr) => (
+                <div
+                  className={`col-md-2 ${
+                    index === arr.length - 1 ? "mb-5" : "mb-2"
+                  } d-lg-none`}
+                >
+                  <div className="row">
+                    <div className="text-center flow-stage col-6 col-lg-12">
+                      <FontAwesomeIcon
+                        className="fa-2x flow-circle"
+                        icon={faCircle}
+                      />
+                    </div>
+                    <span
+                      className="flow-stage-text col-6 col-lg-12"
+                      dangerouslySetInnerHTML={{ __html: subStage.html }}
+                    ></span>
                   </div>
-                  <span className="flow-stage-text col-6 col-lg-12">
-                    {subStage.text}
-                  </span>
                 </div>
-              </div>
-            ))}
+              )
+            )}
           <div className="col-md-2 mb-5">
             <div className="row">
               <div
@@ -417,62 +487,74 @@ class Citizens extends Component {
             </div>
           </div>
         </div>
-        {this.state.subStages[this.state.curStage] && (
+        {this.state.locationSubStages[this.state.curStage] && (
           <div className="row d-none d-lg-block">
-            {this.state.subStages[this.state.curStage].map((subStage) => (
-              <div>
-                <div className="row no-gutters">
-                  <div className="pl-3 py-3 col-md-auto d-flex align-items-center">
-                    <div id={`sub${subStage.id}`}>
-                      <FontAwesomeIcon
-                        className="flow-circle fa-3x"
-                        icon={faCircle}
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md d-flex align-items-center">
-                    <h4>{subStage.text}</h4>
-                    <a
-                      href="#"
-                      data-toggle="tooltip"
-                      title=""
-                      data-original-title="Another one here too"
-                    >
-                      test
-                      <FontAwesomeIcon icon={faQuestionCircle} />
-                    </a>
-                  </div>
-                </div>
-                {subStage.alternates && (
+            <h3 className="text-capitalize">{this.state.curStage}</h3>
+            {this.state.locationSubStages[this.state.curStage].map(
+              (subStage) => (
+                <div>
                   <div className="row no-gutters">
-                    {subStage.alternates.map((altSubStage) => (
-                      <div className="offset-md-1 row no-gutters">
-                        <div className="col-md-auto d-flex align-items-center">
-                          <div id={`sub${altSubStage.id}`}>
+                    <div className="pl-3 py-3 col-md-auto d-flex align-items-center">
+                      <div id={`sub${subStage.id}`}>
+                        <FontAwesomeIcon
+                          className="flow-circle fa-3x"
+                          icon={faCircle}
+                        />
+                      </div>
+                    </div>
+                    {subStage.faq && (
+                      <div className="col-md-auto d-flex align-items-start ml-n2 subprocess-faq-icon">
+                        <a
+                          tabIndex="0"
+                          data-toggle="popover"
+                          title={subStage.faq.title}
+                          data-content={subStage.faq.text}
+                        >
+                          <span className="fa-stack fa-xs">
                             <FontAwesomeIcon
-                              className="flow-circle fa-3x"
+                              className="fa-stack-2x flow-circle w-100"
                               icon={faCircle}
                             />
+                            <FontAwesomeIcon
+                              className="fa-stack-1x fa-inverse"
+                              icon={faEllipsisH}
+                            />
+                          </span>
+                        </a>
+                      </div>
+                    )}
+                    <div
+                      className={`col-md d-flex align-items-center ${
+                        subStage.faq ? "subprocess-ml-n" : ""
+                      }`}
+                    >
+                      <h4
+                        dangerouslySetInnerHTML={{ __html: subStage.html }}
+                      ></h4>
+                    </div>
+                  </div>
+                  {subStage.alternates && (
+                    <div className="row no-gutters">
+                      {subStage.alternates.map((altSubStage) => (
+                        <div className="offset-md-1 row no-gutters">
+                          <div className="col-md-auto d-flex align-items-center">
+                            <div id={`sub${altSubStage.id}`}>
+                              <FontAwesomeIcon
+                                className="flow-circle fa-3x"
+                                icon={faCircle}
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md d-flex align-items-center">
+                            <h4>{altSubStage.text}</h4>
                           </div>
                         </div>
-                        <div className="col-md d-flex align-items-center">
-                          <h4>{altSubStage.text}</h4>
-                          <a
-                            href="#"
-                            data-toggle="tooltip"
-                            title=""
-                            data-original-title="Another one here too"
-                          >
-                            test
-                            <FontAwesomeIcon icon={faQuestionCircle} />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            )}
             <div className="row no-gutters">
               <div className="col-md-auto d-flex align-items-center">
                 <div id="subEnd" className="py-4">
