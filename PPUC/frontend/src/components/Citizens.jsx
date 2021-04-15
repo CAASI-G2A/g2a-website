@@ -11,6 +11,7 @@ import {
   faCheck,
   faQuestionCircle,
   faEllipsisH,
+  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import * as scrollToElement from "scroll-to-element";
 import $ from "jquery";
@@ -66,6 +67,7 @@ class Citizens extends Component {
       leaderLines: [],
     };
     this.drawLeaderLines = this.drawLeaderLines.bind(this);
+    this.drawSubStageLines = this.drawSubStageLines.bind(this);
     this.getLocationQuestions = this.getLocationQuestions.bind(this);
     this.getLocationStages = this.getLocationStages.bind(this);
     this.getLocationGlossary = this.getLocationGlossary.bind(this);
@@ -97,6 +99,12 @@ class Citizens extends Component {
     this.setState({
       leaderLines: leaderLines,
     });
+  }
+
+  drawSubStageLines() {
+    for (let line of this.state.leaderLines) {
+      line.position();
+    }
   }
 
   getLocationQuestions() {
@@ -241,6 +249,12 @@ class Citizens extends Component {
     $('[data-toggle="tooltip"]').tooltip();
     // enable all popovers
     $('[data-toggle="popover"]').popover();
+    $("#collapseSub1").on("shown.bs.collapse", () => {
+      this.drawSubStageLines();
+    });
+    $("#collapseSub1").on("hidden.bs.collapse", () => {
+      this.drawSubStageLines();
+    });
     // draw leader lines if state changed
     if (prevState.curStage !== this.state.curStage) {
       const leaderLineConfig = { color: "#337ab7", path: "straight" };
@@ -261,13 +275,18 @@ class Citizens extends Component {
         );
       }
       // draw line from last line to alternate side
-      new LeaderLine(
-        document.getElementById(
-          `leader-line-${leaderLines[leaderLines.length - 1]._id}-line-path`
-        ),
-        getSubCircle(document.getElementById("sub4")),
-        leaderLineConfig
+      leaderLines.push(
+        new LeaderLine(
+          document.getElementById(
+            `leader-line-${leaderLines[leaderLines.length - 1]._id}-line-path`
+          ),
+          getSubCircle(document.getElementById("sub4")),
+          leaderLineConfig
+        )
       );
+      this.setState({
+        leaderLines: this.state.leaderLines.concat(leaderLines),
+      });
     }
   }
 
@@ -493,6 +512,16 @@ class Citizens extends Component {
             {this.state.locationSubStages[this.state.curStage].map(
               (subStage) => (
                 <div>
+                  {subStage.faq && (
+                    <div
+                      className="row collapse"
+                      id={`collapseSub${subStage.id}`}
+                    >
+                      <div className="col-md-12 card card-body">
+                        {subStage.faq.text}
+                      </div>
+                    </div>
+                  )}
                   <div className="row no-gutters">
                     <div className="pl-3 py-3 col-md-auto d-flex align-items-center">
                       <div id={`sub${subStage.id}`}>
@@ -500,15 +529,16 @@ class Citizens extends Component {
                           className="flow-circle fa-3x"
                           icon={faCircle}
                         />
+                        <FontAwesomeIcon icon={faArrowDown} />
                       </div>
                     </div>
                     {subStage.faq && (
                       <div className="col-md-auto d-flex align-items-start ml-n2 subprocess-faq-icon">
                         <a
-                          tabIndex="0"
-                          data-toggle="popover"
-                          title={subStage.faq.title}
-                          data-content={subStage.faq.text}
+                          data-toggle="collapse"
+                          data-target={`#collapseSub${subStage.id}`}
+                          aria-expanded="false"
+                          aria-controls={`collapseSub${subStage.id}`}
                         >
                           <span className="fa-stack fa-xs">
                             <FontAwesomeIcon
