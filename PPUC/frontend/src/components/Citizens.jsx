@@ -12,6 +12,7 @@ import {
   faQuestionCircle,
   faEllipsisH,
   faArrowDown,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import * as scrollToElement from "scroll-to-element";
 import $ from "jquery";
@@ -78,33 +79,33 @@ class Citizens extends Component {
 
   drawLeaderLines() {
     // given a flow chat element returns the underlying circle element SVG
-    const getCircle = (element) => element.children[0].children[0].children[0];
-    const leaderLineConfig = { color: "#337ab7", path: "straight" };
-    const lines = [
-      ["pre-complaintIcon", "complaintIcon"],
-      ["complaintIcon", "reviewIcon"],
-      ["reviewIcon", "investigationIcon"],
-      ["investigationIcon", "resultIcon"],
-    ];
-    const leaderLines = [];
-    for (let line of lines) {
-      leaderLines.push(
-        new LeaderLine(
-          getCircle(document.getElementById(line[0])),
-          getCircle(document.getElementById(line[1])),
-          leaderLineConfig
-        )
-      );
-    }
-    this.setState({
-      leaderLines: leaderLines,
-    });
+    //const getCircle = (element) => element.children[0].children[0].children[0];
+    //const leaderLineConfig = { color: "#337ab7", path: "straight" };
+    //const lines = [
+    //  ["pre-complaintIcon", "complaintIcon"],
+    //  ["complaintIcon", "reviewIcon"],
+    //  ["reviewIcon", "investigationIcon"],
+    //  ["investigationIcon", "resultIcon"],
+    //];
+    //const leaderLines = [];
+    //for (let line of lines) {
+    //  leaderLines.push(
+    //    new LeaderLine(
+    //      getCircle(document.getElementById(line[0])),
+    //      getCircle(document.getElementById(line[1])),
+    //      leaderLineConfig
+    //    )
+    //  );
+    //}
+    //this.setState({
+    //  leaderLines: leaderLines,
+    //});
   }
 
   drawSubStageLines() {
-    for (let line of this.state.leaderLines) {
-      line.position();
-    }
+    //for (let line of this.state.leaderLines) {
+    //  line.position();
+    //}
   }
 
   getLocationQuestions() {
@@ -257,44 +258,44 @@ class Citizens extends Component {
     });
     // draw leader lines if state changed
     if (prevState.curStage !== this.state.curStage) {
-      const leaderLineConfig = { color: "#337ab7", path: "straight" };
-      const subLines = [
-        ["sub1", "sub2"],
-        ["sub2", "sub3"],
-        ["sub3", "subEnd"],
-      ];
-      const getSubCircle = (element) => element.children[0].children[0];
-      const leaderLines = [];
-      for (let line of subLines) {
-        leaderLines.push(
-          new LeaderLine(
-            getSubCircle(document.getElementById(line[0])),
-            getSubCircle(document.getElementById(line[1])),
-            leaderLineConfig
-          )
-        );
-      }
-      // draw line from last line to alternate side
-      leaderLines.push(
-        new LeaderLine(
-          document.getElementById(
-            `leader-line-${leaderLines[leaderLines.length - 1]._id}-line-path`
-          ),
-          getSubCircle(document.getElementById("sub4")),
-          leaderLineConfig
-        )
-      );
-      this.setState({
-        leaderLines: this.state.leaderLines.concat(leaderLines),
-      });
+      //const leaderLineConfig = { color: "#337ab7", path: "straight" };
+      //const subLines = [
+      //  ["sub1", "sub2"],
+      //  ["sub2", "sub3"],
+      //  ["sub3", "subEnd"],
+      //];
+      //const getSubCircle = (element) => element.children[0].children[0];
+      //const leaderLines = [];
+      //for (let line of subLines) {
+      //  leaderLines.push(
+      //    new LeaderLine(
+      //      getSubCircle(document.getElementById(line[0])),
+      //      getSubCircle(document.getElementById(line[1])),
+      //      leaderLineConfig
+      //    )
+      //  );
+      //}
+      //// draw line from last line to alternate side
+      //leaderLines.push(
+      //  new LeaderLine(
+      //    document.getElementById(
+      //      `leader-line-${leaderLines[leaderLines.length - 1]._id}-line-path`
+      //    ),
+      //    getSubCircle(document.getElementById("sub4")),
+      //    leaderLineConfig
+      //  )
+      //);
+      //this.setState({
+      //  leaderLines: this.state.leaderLines.concat(leaderLines),
+      //});
     }
   }
 
   componentWillUnmount() {
     // remove leader lines
-    for (let leaderLine of this.state.leaderLines) {
-      leaderLine.remove();
-    }
+    //for (let leaderLine of this.state.leaderLines) {
+    //  leaderLine.remove();
+    //}
   }
 
   render() {
@@ -341,8 +342,8 @@ class Citizens extends Component {
             this tool was found on the OMI and CPRB websites.
           </p>
         </div>
-        <div className="row">
-          <div className="col-md-2 offset-md-1 mb-5">
+        <div className="row no-gutters">
+          <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
@@ -370,7 +371,19 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
-          <div className="col-md-2 mb-5">
+          <div className="col-md-auto">
+            <div className="d-none d-md-block row no-gutters h-100">
+              <div className="text-center flow-circle col-auto d-flex align-items-center h-75 mb-5">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowRight} />
+              </div>
+            </div>
+            <div className="d-block d-md-none row h-100">
+              <div className="text-center flow-circle col-auto col-6">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowDown} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
@@ -398,7 +411,19 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
-          <div className="col-md-2 mb-5">
+          <div className="col-md-auto">
+            <div className="d-none d-md-block row no-gutters h-100">
+              <div className="text-center flow-circle col-auto d-flex align-items-center h-75 mb-5">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowRight} />
+              </div>
+            </div>
+            <div className="d-block d-md-none row h-100">
+              <div className="text-center flow-circle col-auto col-6">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowDown} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
@@ -426,30 +451,41 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
+          <div className="col-md-auto">
+            <div className="d-none d-md-block row no-gutters h-100">
+              <div className="text-center flow-circle col-auto d-flex align-items-center h-75 mb-5">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowRight} />
+              </div>
+            </div>
+            <div className="d-block d-md-none row h-100">
+              <div className="text-center flow-circle col-auto col-6">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowDown} />
+              </div>
+            </div>
+          </div>
           {this.state.locationSubStages["review"] &&
-            this.state.locationSubStages["review"].map(
-              (subStage, index, arr) => (
-                <div
-                  className={`col-md-2 ${
-                    index === arr.length - 1 ? "mb-5" : "mb-2"
-                  } d-lg-none`}
-                >
-                  <div className="row">
-                    <div className="text-center flow-stage col-6 col-lg-12">
-                      <FontAwesomeIcon
-                        className="fa-2x flow-circle"
-                        icon={faCircle}
-                      />
-                    </div>
-                    <span
-                      className="flow-stage-text col-6 col-lg-12"
-                      dangerouslySetInnerHTML={{ __html: subStage.html }}
-                    ></span>
+            this.state.locationSubStages["review"].map((subStage) => (
+              <div className="col-md-2 d-lg-none">
+                <div className="row">
+                  <div className="text-center flow-stage col-6 col-lg-12">
+                    <FontAwesomeIcon
+                      className="fa-2x flow-circle"
+                      icon={faCircle}
+                    />
+                    <br />
+                    <FontAwesomeIcon
+                      className="fa-3x fa-w-16 flow-circle"
+                      icon={faArrowDown}
+                    />
                   </div>
+                  <span
+                    className="flow-stage-text col-6 col-lg-12"
+                    dangerouslySetInnerHTML={{ __html: subStage.html }}
+                  ></span>
                 </div>
-              )
-            )}
-          <div className="col-md-2 mb-5">
+              </div>
+            ))}
+          <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
@@ -477,7 +513,19 @@ class Citizens extends Component {
               </h2>
             </div>
           </div>
-          <div className="col-md-2 mb-5">
+          <div className="col-md-auto">
+            <div className="d-none d-md-block row no-gutters h-100">
+              <div className="text-center flow-circle col-auto d-flex align-items-center h-75 mb-5">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowRight} />
+              </div>
+            </div>
+            <div className="d-block d-md-none row h-100">
+              <div className="text-center flow-circle col-auto col-6">
+                <FontAwesomeIcon className="fa-3x" icon={faArrowDown} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
@@ -510,30 +558,23 @@ class Citizens extends Component {
           <div className="row d-none d-lg-block">
             <h3 className="text-capitalize">{this.state.curStage}</h3>
             {this.state.locationSubStages[this.state.curStage].map(
-              (subStage) => (
+              (subStage, index) => (
                 <div>
-                  {subStage.faq && (
-                    <div
-                      className="row collapse"
-                      id={`collapseSub${subStage.id}`}
-                    >
-                      <div className="col-md-12 card card-body">
-                        {subStage.faq.text}
-                      </div>
-                    </div>
-                  )}
                   <div className="row no-gutters">
-                    <div className="pl-3 py-3 col-md-auto d-flex align-items-center">
+                    <div
+                      className={`pl-3 col-md-auto d-flex align-items-center ${
+                        index === 0 ? "pt-2" : ""
+                      }`}
+                    >
                       <div id={`sub${subStage.id}`}>
                         <FontAwesomeIcon
                           className="flow-circle fa-3x"
                           icon={faCircle}
                         />
-                        <FontAwesomeIcon icon={faArrowDown} />
                       </div>
                     </div>
                     {subStage.faq && (
-                      <div className="col-md-auto d-flex align-items-start ml-n2 subprocess-faq-icon">
+                      <div className="col-md-auto d-flex align-items-start ml-n2 mt-n2 subprocess-faq-icon">
                         <a
                           data-toggle="collapse"
                           data-target={`#collapseSub${subStage.id}`}
@@ -551,6 +592,16 @@ class Citizens extends Component {
                             />
                           </span>
                         </a>
+                        {subStage.faq && (
+                          <div
+                            className="row collapse"
+                            id={`collapseSub${subStage.id}`}
+                          >
+                            <div className="col-md-12 card card-body">
+                              {subStage.faq.text}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
                     <div
@@ -566,7 +617,23 @@ class Citizens extends Component {
                   {subStage.alternates && (
                     <div className="row no-gutters">
                       {subStage.alternates.map((altSubStage) => (
-                        <div className="offset-md-1 row no-gutters">
+                        <div className="row no-gutters">
+                          <div
+                            className="col-md-auto d-flex align-items-center"
+                            style={{ paddingLeft: "1.9rem" }}
+                          >
+                            <span
+                              className="flow-circle fa-3x mt-n3"
+                              style={{ fontWeight: "800" }}
+                            >
+                              |
+                            </span>
+                            <FontAwesomeIcon
+                              className="fa-3x fa-w-16 flow-circle"
+                              icon={faArrowRight}
+                              style={{ marginLeft: "-.75rem" }}
+                            />
+                          </div>
                           <div className="col-md-auto d-flex align-items-center">
                             <div id={`sub${altSubStage.id}`}>
                               <FontAwesomeIcon
@@ -582,12 +649,24 @@ class Citizens extends Component {
                       ))}
                     </div>
                   )}
+                  <div
+                    className={`row no-gutters ${
+                      subStage.alternates ? "mt-n3" : ""
+                    }`}
+                  >
+                    <div className="pl-3 col-md-auto d-flex align-items-center">
+                      <FontAwesomeIcon
+                        className="fa-3x fa-w-16 flow-circle"
+                        icon={faArrowDown}
+                      />
+                    </div>
+                  </div>
                 </div>
               )
             )}
             <div className="row no-gutters">
               <div className="col-md-auto d-flex align-items-center">
-                <div id="subEnd" className="py-4">
+                <div>
                   <FontAwesomeIcon
                     className="flow-circle fa-5x"
                     icon={faCircle}
@@ -606,7 +685,7 @@ class Citizens extends Component {
             </div>
           </div>
         )}
-        <div className="row">
+        <div className="row mt-5">
           {this.state.curStage && (
             <CitizenInfoPanel
               id="citizenInfoPanel"

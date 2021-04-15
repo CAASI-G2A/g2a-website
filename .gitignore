@@ -137,3 +137,4 @@ proj-*/
 PPUC/PPUC.pyproj
 PPUC/PPUC.pyproj.user
 PPUC/frontend/node_modules
+*.map
