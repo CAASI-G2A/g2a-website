@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOMServer from "react-dom/server";
-import LeaderLine from "leader-line";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircle,
@@ -65,47 +64,13 @@ class Citizens extends Component {
           },
         ],
       },
-      leaderLines: [],
     };
-    this.drawLeaderLines = this.drawLeaderLines.bind(this);
-    this.drawSubStageLines = this.drawSubStageLines.bind(this);
     this.getLocationQuestions = this.getLocationQuestions.bind(this);
     this.getLocationStages = this.getLocationStages.bind(this);
     this.getLocationGlossary = this.getLocationGlossary.bind(this);
     this.applyGlossary = this.applyGlossary.bind(this);
     this.handleLocationSelect = this.handleLocationSelect.bind(this);
     this.handleIconClick = this.handleIconClick.bind(this);
-  }
-
-  drawLeaderLines() {
-    // given a flow chat element returns the underlying circle element SVG
-    //const getCircle = (element) => element.children[0].children[0].children[0];
-    //const leaderLineConfig = { color: "#337ab7", path: "straight" };
-    //const lines = [
-    //  ["pre-complaintIcon", "complaintIcon"],
-    //  ["complaintIcon", "reviewIcon"],
-    //  ["reviewIcon", "investigationIcon"],
-    //  ["investigationIcon", "resultIcon"],
-    //];
-    //const leaderLines = [];
-    //for (let line of lines) {
-    //  leaderLines.push(
-    //    new LeaderLine(
-    //      getCircle(document.getElementById(line[0])),
-    //      getCircle(document.getElementById(line[1])),
-    //      leaderLineConfig
-    //    )
-    //  );
-    //}
-    //this.setState({
-    //  leaderLines: leaderLines,
-    //});
-  }
-
-  drawSubStageLines() {
-    //for (let line of this.state.leaderLines) {
-    //  line.position();
-    //}
   }
 
   getLocationQuestions() {
@@ -236,7 +201,6 @@ class Citizens extends Component {
           location: location,
         },
         () => {
-          this.drawLeaderLines();
           this.getLocationQuestions();
           this.getLocationStages();
           this.getLocationGlossary();
@@ -250,52 +214,6 @@ class Citizens extends Component {
     $('[data-toggle="tooltip"]').tooltip();
     // enable all popovers
     $('[data-toggle="popover"]').popover();
-    $("#collapseSub1").on("shown.bs.collapse", () => {
-      this.drawSubStageLines();
-    });
-    $("#collapseSub1").on("hidden.bs.collapse", () => {
-      this.drawSubStageLines();
-    });
-    // draw leader lines if state changed
-    if (prevState.curStage !== this.state.curStage) {
-      //const leaderLineConfig = { color: "#337ab7", path: "straight" };
-      //const subLines = [
-      //  ["sub1", "sub2"],
-      //  ["sub2", "sub3"],
-      //  ["sub3", "subEnd"],
-      //];
-      //const getSubCircle = (element) => element.children[0].children[0];
-      //const leaderLines = [];
-      //for (let line of subLines) {
-      //  leaderLines.push(
-      //    new LeaderLine(
-      //      getSubCircle(document.getElementById(line[0])),
-      //      getSubCircle(document.getElementById(line[1])),
-      //      leaderLineConfig
-      //    )
-      //  );
-      //}
-      //// draw line from last line to alternate side
-      //leaderLines.push(
-      //  new LeaderLine(
-      //    document.getElementById(
-      //      `leader-line-${leaderLines[leaderLines.length - 1]._id}-line-path`
-      //    ),
-      //    getSubCircle(document.getElementById("sub4")),
-      //    leaderLineConfig
-      //  )
-      //);
-      //this.setState({
-      //  leaderLines: this.state.leaderLines.concat(leaderLines),
-      //});
-    }
-  }
-
-  componentWillUnmount() {
-    // remove leader lines
-    //for (let leaderLine of this.state.leaderLines) {
-    //  leaderLine.remove();
-    //}
   }
 
   render() {
@@ -347,12 +265,10 @@ class Citizens extends Component {
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
-                id="pre-complaintIcon"
                 onClick={() => this.handleIconClick("pre-complaint")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
-                    id="pre-complaintCircle"
                     className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "pre-complaint"
                         ? "flow-circle-selected"
@@ -387,12 +303,10 @@ class Citizens extends Component {
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
-                id="complaintIcon"
                 onClick={() => this.handleIconClick("complaint")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
-                    id="complaintCircle"
                     className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "complaint"
                         ? "flow-circle-selected"
@@ -427,12 +341,10 @@ class Citizens extends Component {
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
-                id="reviewIcon"
                 onClick={() => this.handleIconClick("review")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
-                    id="reviewCircle"
                     className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "review"
                         ? "flow-circle-selected"
@@ -465,13 +377,39 @@ class Citizens extends Component {
           </div>
           {this.state.locationSubStages["review"] &&
             this.state.locationSubStages["review"].map((subStage) => (
-              <div className="col-md-2 d-lg-none">
+              <div key={subStage.id} className="col-md-2 d-lg-none">
                 <div className="row">
                   <div className="text-center flow-stage col-6 col-lg-12">
-                    <FontAwesomeIcon
-                      className="fa-2x flow-circle"
-                      icon={faCircle}
-                    />
+                    {!subStage.faq && (
+                      <FontAwesomeIcon
+                        className="fa-3x flow-circle"
+                        icon={faCircle}
+                      />
+                    )}
+                    {subStage.faq && (
+                      <a
+                        data-toggle="collapse"
+                        data-target={`#collapseSub${subStage.id}`}
+                        aria-expanded="false"
+                        aria-controls={`collapseSub${subStage.id}`}
+                      >
+                        <FontAwesomeIcon
+                          className="fa-3x flow-circle"
+                          icon={faCircle}
+                        />
+                        <span className="fa-stack fa-xs mr-n4 ml-n1 mb-4">
+                          <FontAwesomeIcon
+                            className="fa-stack-2x flow-circle w-100"
+                            icon={faCircle}
+                          />
+                          <FontAwesomeIcon
+                            className="fa-stack-1x fa-inverse"
+                            icon={faEllipsisH}
+                            data-fa-transform="shrink-10 up-2"
+                          />
+                        </span>
+                      </a>
+                    )}
                     <br />
                     <FontAwesomeIcon
                       className="fa-3x fa-w-16 flow-circle"
@@ -483,18 +421,26 @@ class Citizens extends Component {
                     dangerouslySetInnerHTML={{ __html: subStage.html }}
                   ></span>
                 </div>
+                {subStage.faq && (
+                  <div
+                    className="row collapse"
+                    id={`collapseSub${subStage.id}`}
+                  >
+                    <div className="col-md-12 card card-body">
+                      {subStage.faq.text}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           <div className="col-md-2">
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
-                id="investigationIcon"
                 onClick={() => this.handleIconClick("investigation")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
-                    id="investigationCircle"
                     className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "investigation"
                         ? "flow-circle-selected"
@@ -529,12 +475,10 @@ class Citizens extends Component {
             <div className="row">
               <div
                 className="text-center flow-stage col-6 col-lg-12"
-                id="resultIcon"
                 onClick={() => this.handleIconClick("result")}
               >
                 <span className="fa-stack fa-5x">
                   <FontAwesomeIcon
-                    id="resultCircle"
                     className={`fa-stack-2x flow-circle w-100 ${
                       this.state.curStage == "result"
                         ? "flow-circle-selected"
@@ -559,14 +503,14 @@ class Citizens extends Component {
             <h3 className="text-capitalize">{this.state.curStage}</h3>
             {this.state.locationSubStages[this.state.curStage].map(
               (subStage, index) => (
-                <div>
+                <div key={subStage.id}>
                   <div className="row no-gutters">
                     <div
                       className={`pl-3 col-md-auto d-flex align-items-center ${
                         index === 0 ? "pt-2" : ""
                       }`}
                     >
-                      <div id={`sub${subStage.id}`}>
+                      <div>
                         <FontAwesomeIcon
                           className="flow-circle fa-3x"
                           icon={faCircle}
@@ -592,16 +536,6 @@ class Citizens extends Component {
                             />
                           </span>
                         </a>
-                        {subStage.faq && (
-                          <div
-                            className="row collapse"
-                            id={`collapseSub${subStage.id}`}
-                          >
-                            <div className="col-md-12 card card-body">
-                              {subStage.faq.text}
-                            </div>
-                          </div>
-                        )}
                       </div>
                     )}
                     <div
@@ -617,7 +551,7 @@ class Citizens extends Component {
                   {subStage.alternates && (
                     <div className="row no-gutters">
                       {subStage.alternates.map((altSubStage) => (
-                        <div className="row no-gutters">
+                        <div key={altSubStage.id} className="row no-gutters">
                           <div
                             className="col-md-auto d-flex align-items-center"
                             style={{ paddingLeft: "1.9rem" }}
@@ -661,6 +595,16 @@ class Citizens extends Component {
                       />
                     </div>
                   </div>
+                  {subStage.faq && (
+                    <div
+                      className="row collapse"
+                      id={`collapseSub${subStage.id}`}
+                    >
+                      <div className="col-md-12 card card-body">
+                        {subStage.faq.text}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )
             )}

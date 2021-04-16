@@ -64,8 +64,6 @@ object-assign
  * Date: 2014-01-23T21:02Z
  */
 
-/*! LeaderLine v1.0.5 (c) anseki https://anseki.github.io/leader-line/ */
-
 /** @license React v0.20.1
  * scheduler.production.min.js
  *
