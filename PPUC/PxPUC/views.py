@@ -4,7 +4,7 @@ Definition of views.
 
 from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
-from django.db.models import Q, Prefetch
+from django.db.models import Q, Prefetch, Count
 from django.http import HttpResponse, HttpResponseForbidden, HttpRequest
 from .models import *
 from .serializers import *
@@ -191,18 +191,21 @@ class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
 
     def get_queryset(self):
-        def buildFilter(query):
+        def build_filter(query, parent_obj=False):
             # we hit an operand
             if type(query) is str:
-                return Q(text__icontains=query)
+                if parent_obj:
+                    return Q(sentences__text__icontains=query)
+                else:
+                    return Q(text__icontains=query)
             else:
                 if query["operation"] == "AND":
-                    return buildFilter(query["operand1"]) & buildFilter(
-                        query["operand2"]
+                    return build_filter(query["operand1"], parent_obj) & build_filter(
+                        query["operand2"], parent_obj
                     )
                 else:
-                    return buildFilter(query["operand1"]) | buildFilter(
-                        query["operand2"]
+                    return build_filter(query["operand1"], parent_obj) | build_filter(
+                        query["operand2"], parent_obj
                     )
 
         query = self.request.query_params.get("query")
@@ -224,10 +227,37 @@ class ResearcherSearchList(generics.ListAPIView):
                 {"message": "JSON root field 'query' missing from request data."}
             )
 
-        queryFilter = buildFilter(query)
-        queryset = Location.objects.all().prefetch_related(
-            Prefetch("sentences", queryset=Sentence.objects.filter(queryFilter))
+        # build filter on search terms
+        prefetch_query_filter = build_filter(query)
+        prefetch_queryset = Sentence.objects.filter(prefetch_query_filter)
+        count_query_filter = build_filter(query, parent_obj=True)
+        sentence_queryset = (
+            Location.objects.all()
+            .annotate(sentences_count=Count("sentences", filter=count_query_filter))
+            .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
+            .exclude(sentences_count=0)
         )
+
+        # perform lookup as if they're looking for a specific city by name
+        def build_loc_filter(query):
+            # we hit an operand
+            if type(query) is str:
+                return Q(name__icontains=query)
+            else:
+                if query["operation"] == "AND":
+                    return build_loc_filter(query["operand1"]) & build_loc_filter(
+                        query["operand2"]
+                    )
+                else:
+                    return build_loc_filter(query["operand1"]) | build_loc_filter(
+                        query["operand2"]
+                    )
+
+        location_queryset = Location.objects.all().filter(build_loc_filter(query))
+
+        # combine results
+        queryset = (sentence_queryset | location_queryset).distinct()
+
         return queryset
 
 

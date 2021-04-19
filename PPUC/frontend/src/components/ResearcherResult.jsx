@@ -66,30 +66,39 @@ class ResearcherResult extends Component {
               </Link>
             </h3>
           </div>
-          <div className="col-md-12">
-            <ResearcherResultSentence
-              searchQueryWords={this.props.searchQueryWords}
-              sentence={{
-                text: this.props.result.sentences
-                  .slice(0, 3)
-                  .map((s) => s.text)
-                  .join("\n"),
-              }}
-              key={this.props.result.sentences[0].id}
-              collapsable={false}
-            />
-            {this.props.result.sentences.length - 3 > 0 && (
-              <a
-                className="text-decoration-none float-right"
-                data-toggle="collapse"
-                aria-expanded="false"
-                href={`#sentences${this.props.result.id}`}
-                aria-controls={`sentences${this.props.result.id}`}
-              >
-                {this.props.result.sentences.length - 3} more sentences
-              </a>
-            )}
-          </div>
+          {this.props.result.sentences.length === 0 && (
+            <div className="col-md-12">
+              <p className="text-center">
+                There are no contract sentences available for this city yet.
+              </p>
+            </div>
+          )}
+          {this.props.result.sentences.length > 0 && (
+            <div className="col-md-12">
+              <ResearcherResultSentence
+                searchQueryWords={this.props.searchQueryWords}
+                sentence={{
+                  text: this.props.result.sentences
+                    .slice(0, 3)
+                    .map((s) => s.text)
+                    .join("\n"),
+                }}
+                key={this.props.result.sentences[0].id}
+                collapsable={false}
+              />
+              {this.props.result.sentences.length - 3 > 0 && (
+                <a
+                  className="text-decoration-none float-right"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  href={`#sentences${this.props.result.id}`}
+                  aria-controls={`sentences${this.props.result.id}`}
+                >
+                  {this.props.result.sentences.length - 3} more sentences
+                </a>
+              )}
+            </div>
+          )}
           <div
             className="col-md-12 collapse"
             id={`sentences${this.props.result.id}`}
