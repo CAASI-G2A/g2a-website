@@ -102,10 +102,8 @@ class Researchers extends Component {
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
-        // remove cities that had 0 results
-        const respFilter = resp.filter((res) => res.sentences.length > 0);
         // sort based on city name
-        respFilter.sort((a, b) => {
+        resp.sort((a, b) => {
           if (a.name < b.name) {
             return -1;
           }
@@ -115,15 +113,15 @@ class Researchers extends Component {
           return 0;
         });
         // parse states out
-        const respStates = [...new Set(respFilter.map((a) => a.state))];
+        const respStates = [...new Set(resp.map((a) => a.state))];
         this.setState({
-          queryResults: respFilter,
-          filteredQueryResults: respFilter,
+          queryResults: resp,
+          filteredQueryResults: resp,
           queryResultStates: respStates,
           searchQueryError: null,
           searchQueryWords: searchQueryWords,
           stateFilter: "null",
-          totalPages: Math.ceil(respFilter.length / this.state.pageSize),
+          totalPages: Math.ceil(resp.length / this.state.pageSize),
         });
       });
       // set search query param
