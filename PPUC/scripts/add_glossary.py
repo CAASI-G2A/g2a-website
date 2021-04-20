@@ -11,7 +11,7 @@ def run():
         for entry in entries:
             if entry.is_file():
                 print("Processing file: %s" % entry)
-                with open(entry) as f:
+                with open(entry, encoding = 'cp1252') as f:
                     csv_reader = csv.DictReader(f, delimiter=',', quotechar='"')
                     for row in csv_reader:
                         location, get = Location.objects.get_or_create(name=sanitize_city(row["city"]), state=sanitize_state(row["state"]))
