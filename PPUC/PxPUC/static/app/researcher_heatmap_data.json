@@ -1,0 +1,142 @@
+[
+  {
+    "City": "Austin",
+    "Problem": "Delay",
+    "Contracts": 10
+  },
+  {
+    "City": "Austin",
+    "Problem": "Evidence Access",
+    "Contracts": 15
+  },
+  {
+    "City": "Austin",
+    "Problem": "Limits Cons",
+    "Contracts": 8
+  },
+  {
+    "City": "Austin",
+    "Problem": "Limits Length/Statute",
+    "Contracts": 23
+  },
+  {
+    "City": "Austin",
+    "Problem": "Limits Anon Complaints",
+    "Contracts": 0
+  },
+  {
+    "City": "Austin",
+    "Problem": "Limits Civ Oversight",
+    "Contracts": 6
+  },
+  {
+    "City": "Austin",
+    "Problem": "Provides Arbitration",
+    "Contracts": 18
+  },
+  {
+    "City": "Boston",
+    "Problem": "Delay",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Evidence Access",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Limits Cons",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Limits Length/Statute",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Limits Anon Complaints",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Limits Civ Oversight",
+    "Contracts": 0
+  },
+  {
+    "City": "Boston",
+    "Problem": "Provides Arbitration",
+    "Contracts": 20
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Delay",
+    "Contracts": 12
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Evidence Access",
+    "Contracts": 0
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Limits Cons",
+    "Contracts": 20
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Limits Length/Statute",
+    "Contracts": 0
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Limits Anon Complaints",
+    "Contracts": 8
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Limits Civ Oversight",
+    "Contracts": 0
+  },
+  {
+    "City": "Chicago",
+    "Problem": "Provides Arbitration",
+    "Contracts": 15
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Delay",
+    "Contracts": 23
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Evidence Access",
+    "Contracts": 0
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Limits Cons",
+    "Contracts": 10
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Limits Length/Statute",
+    "Contracts": 15
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Limits Anon Complaints",
+    "Contracts": 9
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Limits Civ Oversight",
+    "Contracts": 4
+  },
+  {
+    "City": "Columbus",
+    "Problem": "Provides Arbitration",
+    "Contracts": 14
+  }
+]
