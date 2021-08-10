@@ -17,8 +17,8 @@ class Researchers extends Component {
       searchQueryError: null,
       queryResults: null,
       filteredQueryResults: null,
-      queryResultStates: null,
-      stateFilter: "null",
+      queryResultCounties: null,
+      countyFilter: "null",
       currentPage: 1,
       totalPages: 1,
       pageSize: 10,
@@ -26,7 +26,7 @@ class Researchers extends Component {
     this.setPage = this.setPage.bind(this);
     this.setPageSize = this.setPageSize.bind(this);
     this.setSearchQuery = this.setSearchQuery.bind(this);
-    this.setStateFilter = this.setStateFilter.bind(this);
+    this.setCountyFilter = this.setCountyFilter.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
 
@@ -58,15 +58,15 @@ class Researchers extends Component {
     );
   }
 
-  setStateFilter(state) {
-    if (state) {
-      // filter down to current state
+  setCountyFilter(county) {
+    if (county) {
+      // filter down to current county
       const filteredResults = this.state.queryResults.filter(
-        (a) => a.state === state
+        (a) => a.name === county
       );
       this.setState({
         filteredQueryResults: filteredResults,
-        stateFilter: state,
+        countyFilter: county,
         currentPage: 1,
         totalPages: Math.ceil(filteredResults.length / this.state.pageSize),
       });
@@ -74,7 +74,7 @@ class Researchers extends Component {
       // disable filter
       this.setState({
         filteredQueryResults: this.state.queryResults,
-        stateFilter: "null",
+        countyFilter: "null",
         currentPage: 1,
         totalPages: Math.ceil(
           this.state.queryResults.length / this.state.pageSize
@@ -113,14 +113,14 @@ class Researchers extends Component {
           return 0;
         });
         // parse states out
-        const respStates = [...new Set(resp.map((a) => a.state))];
+        const respCounties = [...new Set(resp.map((a) => a.name))];
         this.setState({
           queryResults: resp,
           filteredQueryResults: resp,
-          queryResultStates: respStates,
+          queryResultCounties: respCounties,
           searchQueryError: null,
           searchQueryWords: searchQueryWords,
-          stateFilter: "null",
+          countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
         });
       });
@@ -182,8 +182,11 @@ class Researchers extends Component {
             </form>
           </div>
         </div>
-        <div className="col-lg-12 mt-3">
-          <div className="col-md-6 offset-md-3 text-center">
+        <div className="col-lg-12 mt-1">
+          <div className="col-md-6 offset-md-3 small text-secondary">
+            e.g., interview AND review
+          </div>
+          <div className="col-md-6 offset-md-3 mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
@@ -225,19 +228,19 @@ class Researchers extends Component {
         </div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
-            {this.state.queryResultStates && (
+            {this.state.queryResultCounties && (
               <div className="col-lg-12 mt-3 row">
                 <div className="col-md-3">
                   <div className="input-group">
                     <select
                       className="custom-select"
-                      value={this.state.stateFilter}
-                      onChange={(e) => this.setStateFilter(e.target.value)}
+                      value={this.state.countyFilter}
+                      onChange={(e) => this.setCountyFilter(e.target.value)}
                     >
                       <option value="null" disabled>
-                        Filter by State
+                        Filter by County
                       </option>
-                      {this.state.queryResultStates.map((result) => (
+                      {this.state.queryResultCounties.map((result) => (
                         <option key={result}>{result}</option>
                       ))}
                     </select>
@@ -245,7 +248,7 @@ class Researchers extends Component {
                       <button
                         className="btn btn-outline-secondary"
                         type="button"
-                        onClick={() => this.setStateFilter()}
+                        onClick={() => this.setCountyFilter()}
                       >
                         <FontAwesomeIcon icon={faTimes} />
                       </button>
