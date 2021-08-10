@@ -16,7 +16,7 @@ class Contact extends Component {
             <strong>General:</strong>
             <span>
               {" "}
-              <a href="mailto:iph34@pitt.edu">iph3@pitt.edu</a>
+              <a href="mailto:caasipuc@pitt.edu">caasipuc@pitt.edu</a>
             </span>
             <br />
           </address>
@@ -24,7 +24,7 @@ class Contact extends Component {
             <strong>Tech Support:</strong>
             <span>
               {" "}
-              <a href="mailto:cjk94@pitt.edu">caasipuc@pitt.edu</a>
+              <a href="mailto:cjk94@pitt.edu">cjk94@pitt.edu</a>
             </span>
             <br />
           </address>

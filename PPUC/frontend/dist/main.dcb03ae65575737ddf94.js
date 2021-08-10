@@ -1097,12 +1097,12 @@ var Contact = /*#__PURE__*/function (_Component) {
       }, "Feel free to e-mail us with any questions or inquiries. We're happy to help!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("address", {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "General:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "mailto:iph34@pitt.edu"
-      }, "iph3@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("address", {
+        href: "mailto:caasipuc@pitt.edu"
+      }, "caasipuc@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("address", {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Tech Support:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "mailto:cjk94@pitt.edu"
-      }, "caasipuc@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+      }, "cjk94@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4 border-top border-secondary"
       })));
     }
@@ -3223,4 +3223,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.ef12c3468cb3d921b0d4.js.map
+//# sourceMappingURL=main.dcb03ae65575737ddf94.js.map
