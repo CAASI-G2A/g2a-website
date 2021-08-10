@@ -1102,7 +1102,7 @@ var Contact = /*#__PURE__*/function (_Component) {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Tech Support:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "mailto:cjk94@pitt.edu"
-      }, "cjk94@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+      }, "caasipuc@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4 border-top border-secondary"
       })));
     }
@@ -3223,4 +3223,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.399885d6fb05158397f0.js.map
+//# sourceMappingURL=main.ef12c3468cb3d921b0d4.js.map

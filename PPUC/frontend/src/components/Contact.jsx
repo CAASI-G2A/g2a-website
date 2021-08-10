@@ -24,7 +24,7 @@ class Contact extends Component {
             <strong>Tech Support:</strong>
             <span>
               {" "}
-              <a href="mailto:cjk94@pitt.edu">cjk94@pitt.edu</a>
+              <a href="mailto:cjk94@pitt.edu">caasipuc@pitt.edu</a>
             </span>
             <br />
           </address>
