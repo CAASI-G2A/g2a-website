@@ -12,7 +12,7 @@ class Navbar extends Component {
             className="navbar-brand"
             style={{ fontWeight: "bold" }}
           >
-            P<span style={{ fontWeight: "bolder", opacity: 0.65 }}>x</span>PUC
+            ACPP
           </NavLink>
           <button
             type="button"

@@ -1245,12 +1245,7 @@ var Landing = /*#__PURE__*/function (_Component) {
         style: {
           color: "white"
         }
-      }, "P", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        style: {
-          fontWeight: "bolder",
-          opacity: 0.5
-        }
-      }, "x"), "PUC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+      }, "ACPP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4",
         style: {
           borderTop: "1px solid white"
@@ -1260,12 +1255,7 @@ var Landing = /*#__PURE__*/function (_Component) {
         style: {
           color: "white"
         }
-      }, "Project", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        style: {
-          fontWeight: "bolder",
-          opacity: 0.5
-        }
-      }, "x"), " Police Union Contracts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Allegheny County Policing Project")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron",
         style: {
           backgroundColor: "white",
@@ -1613,12 +1603,7 @@ var Navbar = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, "P", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        style: {
-          fontWeight: "bolder",
-          opacity: 0.65
-        }
-      }, "x"), "PUC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "ACPP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         className: "navbar-toggler navbar-light",
         "data-toggle": "collapse",
@@ -3223,4 +3208,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.dcb03ae65575737ddf94.js.map
+//# sourceMappingURL=main.d6097f762dd46edf90b1.js.map

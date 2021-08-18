@@ -19,14 +19,10 @@ class Landing extends Component {
             src="/static/app/img/CAASI2.png"
             style={{ width: "55px", paddingBottom: "14px", opacity: 0.9 }}
           />
-          <h1 style={{ color: "white" }}>
-            P<span style={{ fontWeight: "bolder", opacity: 0.5 }}>x</span>PUC
-          </h1>
+          <h1 style={{ color: "white" }}>ACPP</h1>
           <hr className="my-4" style={{ borderTop: "1px solid white" }} />
           <p className="lead" style={{ color: "white" }}>
-            Project{" "}
-            <span style={{ fontWeight: "bolder", opacity: 0.5 }}>x</span> Police
-            Union Contracts
+            Allegheny County Policing Project
           </p>
         </div>
         <div
