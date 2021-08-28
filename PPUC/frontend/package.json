@@ -39,6 +39,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "autoprefixer": "^10.2.4",
     "bootstrap": "^4.6.0",
+    "bootstrap-select": "^1.13.18",
     "core-js": "^3.8.3",
     "jquery": "^1.11.0",
     "leader-line": "^1.0.5",

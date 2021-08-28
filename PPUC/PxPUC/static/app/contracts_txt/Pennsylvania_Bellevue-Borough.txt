@@ -1,4 +1,6 @@
-JUN 47 2019
+n
+
+JUN\ 7 10\9
 
 AGREEMENT
 Between
@@ -8,68 +10,78 @@ A Home Rule Charter Municipality,
 AND
 THE ASSOCIATION OF BELLEVUE POLICE
 
+(
+
+)
+
 January 1, 2019 through December 31, 2022
-Article
 
-aN On tk Wn =
+u
+-1-
 
-NNN MY HY NY NY NY NY |= a@a s&s ow ow ow om An Aw 4s CO
-OonN Oat OND HS ODO ON Doh WHY = OO
+INDEX
 
-INDEX
+,-
 
- 
+Article
+
+)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
 
 Subject
 
-Agreement Page - History
-Recognition
-
-Term of Agreement
-Management
-
-Grievance Procedure
-Working Conditions
-Vacations
-
-Holidays
-
-Residency
-
-Health Insurance Coverage
-Accident Insurance Coverage
-Pension Benefits
-
-Life Insurance
-
-Disability
-
-Survivors’ Benefits
-
-False Arrest Insurance
-Salaries
-
-Overtime Compensation
-Witness Fee Compensation
-Call-Out/Call-Back Pay
-Clothing Allowance
-Personal Property of Officers
-Sick Leave
-
-Bereavement Leave
-
-Legal Reimbursement
-Police Schools
-
-Longevity Pay
-
-Statutory Protection
-Non-Discrimination
-
 Page
 
-owmnoaanrt -f ff
+Agreement Page - History
 
+Term of Agreement
+
+4
+4
+4
+
+Management
+
+5
+
+Grievance Procedure
+
+5
+
+Working Conditions
+
+8
+8
+9
+10
 10
 14
 15
@@ -90,62 +102,105 @@ owmnoaanrt -f ff
 29
 30
 30
+
+Recognition
+
+Vacations
+Holidays
+Residency
+Health Insurance Coverage
+Accident Insurance Coverage
+Pension Benefits
+Life Insurance
+Disability
+Survivors' Benefits
+False Arrest Insurance
+Salaries
+Overtime Compensation
+Witness Fee Compensation
+Call-Out/Call-Back Pay
+Clothing Allowance
+Personal Property of Officers
+Sick Leave
+Bereavement Leave
+Legal Reimbursement
+Police Schools
+Longevity Pay
+Statutory Protection
+Non-Discrimination
+
+-2-
+
 Article
+
+Subject
+
+Page
+
 29
+
+Disciplinary Transfers/Just Cause
+
 30
 31
+
+Scheduling
+
 32
 33
 34
+
+Dues Deductions
+
+31
+33
+34
+34
+34
+35
+35
+35
+
 35
 36
 37
 38
 
-Subject
-
-Disciplinary Transfers/Just Cause
-Scheduling
-
 Off-Duty Protection
-
-Dues Deductions
 
 Police Association File Space
 Military Leave
-
 Equipment
-
 Pay Period
+
+Part-time Police Officers
+
+36
+36
+
+Signature Page
+
+38
 
 Drop Program
 
-Part-time Police Officers
-Signature Page
+)
 
-Page
-31
-33
-34
-34
-34
-35
-35
-35
-36
-36
-38
+-3-
+
 AGREEMENT PAGE
 
 HISTORY
+THIS AGREEMENT, made and entered into this ___
 
-THIS AGREEMENT, made and entered into this day of
+day of _____
+
+_
 
 2019, between the BOROUGH OF BELLEVUE, a Home Rule Charter Municipality,
 hereinafter sometimes referred to as "Borough" and the ASSOCIATION OF BELLEVUE
 POLICE, hereinafter referred to as "Police", was the result of collective bargaining under
 Act No. 111 of the General Assembly of the Commonwealth of Pennsylvania.
-
 All prior arbitration awards and agreements are herein incorporated by reference,
 and the provisions of the awards and agreements shall be applicable except as
 modified herein or by mutual written agreement between parties.
@@ -156,73 +211,85 @@ RECOGNITION
 Pursuant to Act 111 of 1968, the Borough of Bellevue, as employer, recognizes
 the Association of Bellevue Police as the exclusive bargaining agent for all member of
 the police department in compliance with the Pennsylvania Labor Relations Board
-Certification No. PF-—R-90—W.
+Certification No. PF-R-90-W.
 
 ARTICLE 2
 TERM OF AGREEMENT
 
 The term of this Agreement shall be four (4) years; that is, commencing January
 1, 2019 and terminating December 31, 2022.
-
 The Borough and the Association agree that this contract can be declared to be
 null and void within thirty days upon approval and authorization to consolidate the
 Bellevue Police Department with another department or departments. As such, the
 terms and conditions of this contract should not be considered as a deterrent to
 contemplating or finalizing any such consolidation of Police Services.
+
+-4-
+
 ARTICLE 3
 MANAGEMENT
-
 The parties hereto recognize and agree that the Borough of Bellevue, through its
 Mayor and the Town Council of the Borough of Bellevue, shall direct the operation of
 the Police Department as provided by the laws of the Commonwealth of Pennsylvania
 and the Ordinances and Resolutions of the Borough of Bellevue, except as expressly
 provided by certain terms and conditions as set forth in this Agreement.
-
 The operation of the Police Department includes, but is not limited to, the right to:
+A.
 
-A. Direct the Officers of the Borough of Bellevue Police Department.
+Direct the Officers of the Borough of Bellevue Police Department.
 
-B. Hire, promote, transfer, assign and retain employees in positions, and to
+B.
+Hire, promote, transfer, assign and retain employees in positions, and to
 suspend, demote, discharge or take disciplinary action against said Officers.
+C.
 
-C, Relieve employees from duties for legitimate reasons.
+Relieve employees from duties for legitimate reasons.
 
-D. Maintain the efficiency of the Borough of Bellevue in supplying Police
+D.
+Maintain the efficiency of the Borough of Bellevue in supplying Police
 protection.
-
-E. Determine the methods, means, job classifications and personnel by
+E.
+Determine the methods, means, job classifications and personnel by
 which such Police protection is to be supplied.
 
-F. Take whatever actions may be necessary to carry out the missions of the
-
+F.
+Take whatever actions may be necessary to carry out the missions of the
 Police Department of the Borough of Bellevue in situations of emergency.
-
-G. Determine reasonable schedules of work and duties and establish the
+G.
+Determine reasonable schedules of work and duties and establish the
 methods and processes by which such work and duties are performed.
 
 ARTICLE 4
 GRIEVANCE PROCEDURE
-
 The parties hereto because of entering into this Agreement fully expect and
 intend that the relationship between the parties hereto shall have been fully settled for
 the term of the Collective Bargaining Agreement.
-
 The parties agree hereby to exercise this Agreement in good faith and carry out
 the terms and conditions of this Agreement in the same manner. In the event any
 dispute arises out of the provisions of this Agreement or the interpretation thereof, such
 disputes shall be settled by the following grievance and arbitration procedure:
+A.
 
-A. The purpose of the procedure is to secure, at the lowest possible level,
+The purpose of the procedure is to secure, at the lowest possible level,
 
 equitable solutions to the problems that may from time to time arise affecting the Police
 Officers of the Borough. This would include the handling of complaints of Officers by the
 Chief of Police when possible.
-B. Both parties agree that the proceedings will be kept as informal and
+
+-5-
+
+B.
+
+Both parties agree that the proceedings will be kept as informal and
 
 confidential as may be appropriate at any level of the procedure.
 
-1. Definitions
-(a) Agrievance is hereby defined as (1) a complaint by an
+1.
+
+Definitions
+(a)
+
+A grievance is hereby defined as (1) a complaint by an
 
 Officer or group of Officers or entire shift of Officers or the entire Police force regarding
 the meaning, interpretation or application of any provision of this Agreement.
@@ -230,19 +297,19 @@ Grievances may also be filed in all matters dealing with discipline and disputes
 the Heart and Lung Act; and/or (2) the Borough or any of its agents acting in bad faith or
 in an arbitrary or capricious manner contrary to this Agreement or established policies
 or practices governing or affecting the Officers covered by this Collective Bargaining
-Agreement, and/or (3) the filing by the Borough of a forma! written reprimand.
-
+Agreement, and/or (3) the filing by the Borough of a formal written reprimand.
 In those areas in which the Borough has management rights, the exercise
 of said rights without consultation with the members of Police force or their
 representatives shall not constitute "acting in bad faith or in any arbitrary or capricious
 manner."
-
-(b) An aggrieved person is a person(s) who may make a claim
+(b)
+An aggrieved person is a person(s) who may make a claim
 including the entire Police force. This shall include the entire Police force in a group
-
 grievance situation.
 
-2. Procedure - Time Limit
+2.
+
+Procedure - Time Limit
 
 Since it is important that the grievance be processed as rapidly as
 possible, the number of days indicated at each level should be considered as the
@@ -256,54 +323,65 @@ construed by the Borough that the grievant and the Association agree and accept 
 disposition of the matter formulated in the last response. The time limit specified,
 however, may be extended to a specific number of days by mutual agreement in writing
 by both parties.
-3. Grievance Levels
-(a) Level 1 - The grievance shall be filed in writing within thirty
-(30) calendar days of its occurrence with the Chief of Police of the Borough and with the
 
+-6-
+
+3.
+
+Grievance Levels
+(a)
+
+Level 1 - The grievance shall be filed in writing within thirty
+
+(30) calendar days of its occurrence with the Chief of Police of the Borough and with the
 Director of Administrative Services of the Borough of Bellevue. The Chief of Police shall
 answer the grievance in writing within fifteen (15) calendar days of the filing of said
 grievance. In the event the Chief of Police is absent due to illness, vacation, or other
 similar reason, the grievance shall be filed with the Mayor, and the Mayor shall answer
 the grievance in writing within fifteen (15) calendar days of the filing of said grievance.
-
-(b) Level 2 - In the event that the grievant or aggrieved person is
+(b)
+Level 2 - In the event that the grievant or aggrieved person is
 not satisfied with the disposition of the grievance at the first level, he shall file the
-
 grievance in writing with the Mayor of the Borough within fifteen (15) calendar days of
-
 the response at Level 1. The Mayor has fifteen (15) calendar days to respond, in writing,
 to the grievant or aggrieved person. In the event the Mayor is absent, due to illness,
 vacation, or other similar reason, the grievance shall be filed with the Acting Mayor of
 the Borough, who shall have fifteen (15) calendar days to respond, in writing, to the
 grievant or aggrieved person.
+(c)
 
-(c) Level 3 - In the event that the grievant or aggrieved person is
+Level 3 - In the event that the grievant or aggrieved person is
+
 not satisfied with the disposition at Level 2, he shall file within fifteen (15) calendar days
 a grievance in writing with the Town Council of the Borough, which shall have fifteen
 (15) calendar days after its next regular meeting to file an answer with the grievant or
 aggrieved person in writing.
+(d)
 
-(d) Level 4 - (1) In the event that the grievant or aggrieved
+Level 4 - (1) In the event that the grievant or aggrieved
+
 person is not satisfied with the disposition at Level 3, the grievant or aggrieved person,
 or a duly authorized representative, shall within fifteen (15) calendar days of the last
-
 response ask that said grievance be filed in writing with the Arbitrator selected by the
 parties as hereinafter provided, for final disposition by said Arbitrator.
+(2)
 
-(2) Cost for said Arbitrator, but not attorneys’ fees for the
+Cost for said Arbitrator, but not attorneys' fees for the
+
 aggrieved person or the Borough of Bellevue, shall be divided equally between the
-
 Borough and the grievant.
-
-(3) In the event the grievant or aggrieved person is not satisfied
+(3)
+In the event the grievant or aggrieved person is not satisfied
 with the disposition at Level 3, the grievant or aggrieved person or a duly authorized
 representative shall ask for a list of arbitrators from the Pennsylvania Bureau of
 Mediation and a striking procedure will commence so that an arbitrator shall be
 selected. The Borough and the grievant shall alternate the option of who shall strike the
 first name from the list of arbitrators selected.
+
+-7-
+
 ARTICLE 5
 WORKING CONDITIONS
-
 No Police Officer shall be required to work or use the facilities or equipment
 provided by the Borough that are unsafe or hazardous or injurious to the Officer's
 safety, well being and welfare. Such determination shall be made by the Officer in
@@ -315,71 +393,101 @@ VACATIONS
 Police Officers of the Borough of Bellevue shall be entitled to the following
 vacation benefits:
 
-A. Vacation earned and available to Police Officers shall be as follows:
-1. Continuous employment for
+A.
+
+Vacation earned and available to Police Officers shall be as follows:
+1.
+
+Continuous employment for
 one (1) year or more but
-less than five (5) years: 80 hours annually with pay
+less than five (5) years:
 
-2. Continuous employment for
+80 hours annually with pay
+
+)
+2.
+
+Continuous employment for
 five (5) years or more but
-less than ten (10) years: 120 hours annually with pay
+less than ten (10) years:
 
-3. Continuous employment for
+3.
+
+120 hours annually with pay
+
+Continuous employment for
 ten (10) years or more but
-less than twenty (20) years: 160 hours annually with pay
+less than twenty (20) years:
 
-4. Continuous employment for
-twenty (20) years or more: 200 hours annually with pay
+4.
 
-B. 1. No more than two (2) weeks vacation will be taken in the months of June,
+Continuous employment for
+twenty (20) years or more:
+
+B.
+
+160 hours annually with pay
+
+200 hours annually with pay
+
+1.
+No more than two (2) weeks vacation will be taken in the months of June,
 July and August. Vacations during the remaining months shall be scheduled at
 the discretion of the Chief of Police and will be permitted to be scheduled from
 January 1 through December 31.
-2. Two weeks of vacation shall be assigned with recognition of seniority.
+
+-8-
+
+2.
+
+Two weeks of vacation shall be assigned with recognition of seniority.
+
 After such two (2) weeks assignment, additional earned vacation time shall also
 be assigned with recognition of seniority and rank.
+3.
 
-3. Vacation will be scheduled so that it will begin after the Officer's pass days
+Vacation will be scheduled so that it will begin after the Officer's pass days
+
 and end before his pass days, except during the months of June, July, August
 and September, during which months vacation shall commence on a Sunday and
-
 terminate on a Saturday.
+4.
 
-4. The vacation seniority selection list shall be posted on January ‘st of each
+The vacation seniority selection list shall be posted on January 1st of each
+
 contract year with all vacations being selected no later than March 31st of the
-
 same contract year. The Chief of Police or other authorized persons may provide
 latitude for special/unusual needs.
-
-5. After the selection of five (5) day multiples is exhausted, selection of single
+5.
+After the selection of five (5) day multiples is exhausted, selection of single
 days or more shall be permitted if selected in accordance with the vacation pick
 schedule and does not conflict with any other provision of this article or any other
-articie.
-
-6. The Chief of Police has the ability and the authority and may make special
+article.
+6.
+The Chief of Police has the ability and the authority and may make special
 arrangements for the usage of vacation time by the Police Officers based on
 special circumstances and situations.
+7.
 
-7. More than one Police Officer may be permitted to take vacation leave
+More than one Police Officer may be permitted to take vacation leave
+
 during the same calendar period at those times when a Supervisor has not
 scheduled a vacation and when such a vacation leave of the "second" Officer
-
 does not result in the need for overtime to provide the necessary shift coverage.
-
 ARTICLE 7
 HOLIDAYS
 
 Each Officer shall receive one hundred (100) paid holiday hours each year, if
 employed throughout the year, which holidays shall be taken by December 31st of each
-
 year.
+-9-
+
 For scheduling purposes, all one hundred (100) holiday hours will become
 available for use at the beginning of each calendar year.
 
 If an Officer files a written request with the Chief of Police for a paid holiday, his
 request shall be answered in writing within fifteen (15) calendar days. If no response is
 given by the Chief of Police within fifteen (15) calendars days, the request is considered
-
 granted.
 
 A maximum of three (3) paid holidays may be used by each Officer in one half
@@ -405,13 +513,15 @@ Borough of Bellevue and only in the state of Pennsylvania.
 ARTICLE 9
 HEALTH INSURANCE COVERAGE
 
-A. The Borough shall provide each employee the option of the Highmark MBS
-PPO Blue Q1500 Plan or the UPMC MBS PPO @1500 plan, a high
+A
+
+The Borough shall provide each employee the option of the Highmark MBS
+PPO Blue 01500 Plan or the UPMC MBS PPO Q1500 plan, a high
 deductible-health insurance plan that has no patient co-pays provided,
 however, that the Borough shall also self-insure all applicable plan
 deductibles and cause such deductibles to be promptly paid in full.
+- 10 -
 
--10-
 Effective January 1, 2019 each covered employee shall contribute seven and
 one-half percent (7.5%) of the premium cost for the applicable level of coverage
 selected and starting July 1, 2019 the employee contribution will increase to eight
@@ -422,7 +532,6 @@ selected. Effective January 1, 2021, each covered employee shall annually contri
 nine percent (9%) of the premium cost for the applicable level of coverage selected.
 Effective January 1, 2022, each covered employee shall annually contribute ten percent
 (10%) of the premium cost for the applicable level of coverage selected.
-
 Employee contributions to premium shall be contingent upon continued subscription by
 the Borough to a health-insurance plan that has no patient co-pays and for which the
 Borough self-insures all applicable plan deductibles. Employee contributions to health
@@ -436,8 +545,8 @@ the proposed new plan and identify and proposed new carrier, is given to the Uni
 advance of such change. The Union retains the right to challenge any proposed
 material change in coverage through the grievance arbitration procedure.
 
-lf the employer receives notice or information indicating that its health care plan
-costs will subject the plan to the Affordable Care Act’s “Cadillac Tax” excise tax, the
+If the employer receives notice or information indicating that its health care plan
+costs will subject the plan to the Affordable Care Act's "Cadillac Tax" excise tax, the
 employer will give the Union written notice of that fact and the parties will immediately
 negotiate changes in the plan design, plan and/or plan carrier in order to avoid the
 imposition of the tax. If no agreement is reached within fourteen (14) days of the
@@ -448,65 +557,78 @@ modify the plan, plan design and/or plan carrier in order to eliminate the expos
 Cadillac Tax. The decision of the arbitration panel on this issue shall be issued within
 thirty (30) calendar days of appointment of the neutral arbitrator.
 
--11-
-B. The Employer agrees to pay the full premium for each regular full-time
-employee and for the employee's dependents for the Borough's Blue Cross/Blue Shield
+- 11 -
 
+B.
+The Employer agrees to pay the full premium for each regular full-time
+employee and for the employee's dependents for the Borough's Blue Cross/Blue Shield
 High Option Dental care plan or a comparable plan from another provider.
 
-C. The Borough agrees to pay the full premium for each regular full-time
+C.
+
+The Borough agrees to pay the full premium for each regular full-time
 
 employee and for the employee's dependents for the Borough's Vision Care plan
 offered through the Municipal Benefits Services (MBS) program or a comparable plan
 form another provider.
 
-D. All obligations of the Borough to make deposits to a Health
+D.
+All obligations of the Borough to make deposits to a Health
 Reimbursement Account (HRA), referenced in Paragraphs E, F, G and H, will be
 suspended effective January 2013, or such earlier time as the Borough may convert to
-the Highmark PPO Blue Q1500 plan. Any unused amounts remaining in the Officers’
+the Highmark PPO Blue Q1500 plan. Any unused amounts remaining in the Officers'
 accounts will be retained and frozen. If the borough resumes or maintains health
 insurance coverage for the officer which requires payment by the officers of a
 deductible, the subject provisions will be reinstated.
 
-E. The Borough shall arrange for a Health Reimbursement Account (HRA)
+E.
+The Borough shall arrange for a Health Reimbursement Account (HRA)
 for each Officer so that the employee may access these funds for payment of medical
 expenses incurred by the Officer, his/her spouse or dependents in accordance with
 HRA rules and regulations.
 
-F, The Borough will deposit the following sums into the HRA account for
+F.
+The Borough will deposit the following sums into the HRA account for
 each Officer on January 1st of each year that this contract is in effect beginning in 2007
 as identified herein:
 
-Officers with "Single" coverage $100.00
-Officers with "Husband & Wife"
-"Parent & Child(ren)" & "Family" coverage $500.00
+Officers with "Single" coverage
 
-G. Officers may only utilize reimbursement for actual medical expenses
+$100.00
+
+Officers with "Husband & Wife"
+"Parent & Child(ren)" & "Family" coverage
+
+$500.00
+
+G.
+Officers may only utilize reimbursement for actual medical expenses
 incurred by the Officer, his/her spouse or dependents in accordance with HRA rules and
 regulations. Any unused amounts remaining in the account upon the Officer's retirement
 will be retained and frozen. The retired Officers may access these amounts during their
 retirement in order to meet actual medical expenses incurred by the retired Officer,
 his/her spouse or dependents in accordance with HRA rules and regulations.
+- 12 -
 
--12-
-H. Effective January 1, 2005 - for Officers hired pre 1981 the Borough will
+H.
+Effective January 1, 2005 - for Officers hired pre 1981 the Borough will
 extend HRA payments into said Officers' retirement for a period of 10 years after date of
 retirement, or until Medicare eligibility, whichever comes first.
-
-I, Any Officer who does not accept coverage through the Borough will so
+I.
+Any Officer who does not accept coverage through the Borough will so
 indicate on forms provided by Blue Cross, Municipal Employers Insurance Trust, or the
 Borough. An Officer who does not accept coverage because he/she is covered through
 a spouse's plan shall be entitled to a payment of $300.00 per month payable through
 the Borough's accounts payable system.
-
-J. Officers who do not accept coverage through the Borough may re-enroll
+J.
+Officers who do not accept coverage through the Borough may re-enroll
 only during open enrollment periods in December of each year to be entitled to
 coverage for the following year. Special provisions will be made for an employee who
 has a significant change in status such as a spouse who dies, a divorce, a marriage,
 child birth, or such other major change during the calendar year in which they have
 opted to decline insurance coverage, subject to COBRA regulations.
-
-K. Retirees shall, at their option, be covered with the Borough's Highmark
+K.
+Retirees shall, at their option, be covered with the Borough's Highmark
 PPO Blue Q1500 medical plan with the same terms and conditions as covered
 employees or a comparable plan from a new carrier. Retirees shall make arrangements
 with the Borough to make their payment contribution on a monthly basis. The Borough
@@ -515,35 +637,39 @@ Agreement for maintenance in force for each retired Officer and his family for t
 Borough's PPO Blue prevailing medical plan or a comparable plan from a new carrier
 from the time that said Officer retires at age 55 or older until he is eligible for Medicare
 coverage under the Social Security program, at which time said Officer shall apply for
-Medicare coverage and will no longer be covered under the Borough's plan. !n the
+Medicare coverage and will no longer be covered under the Borough's plan. In the
 event of an Officer's spouse becomes eligible for Medicare as of her own right, then the
 Officer shall so advise the Borough so that the Borough's coverage will apply only to the
 Officer.
-
-L. Retirees shall, at their option, be covered with the Borough's Blue
+L.
+Retirees shall, at their option, be covered with the Borough's Blue
 Cross/Blue Shield High Option dental plan or a comparable plan from a new carrier. The
 Borough of Bellevue shall assume and pay the full premium charges during the term of
 this agreement for maintaining in force for each retired Officer and his family for the
 Borough's Blue Cross/Blue Shield High Option dental plan or a comparable plan from a
 new carrier from the time that the said Officer retires at age 55 or older until he reaches
-
 the age of 65.
 
-M. The Borough of Bellevue shall pay all the premiums during the term of this
+J
+
+M.
+The Borough of Bellevue shall pay all the premiums during the term of this
 Agreement for maintenance in force for each retired Officer and his family, for the vision
 care plan provided by Municipal Employers Insurance Trust or a comparable plan from
 a new carrier from the time that said Officer retires at age 55 or older until he reaches
 the age of 65.
+- 13 -
 
--13-
-N. With respect to any health insurance and major medical coverage, and
+N.
+With respect to any health insurance and major medical coverage, and
 dental program coverage, and vision care coverage, the Borough of Bellevue shall have
 the right to change insurance carriers to obtain the least costly programs and/or
 comparable plans from another provider so long as the coverage provided is
 comparable in nature to the coverage presently provided and the coverage presently
 provided are not reduced.
 
-O. In the event a Police Officer has to retire on disability retirement his/her
+0.
+In the event a Police Officer has to retire on disability retirement his/her
 insurance will continue to be provided by the Employer for two years after the disability
 retirement. After the two years of benefits they will discontinue until the retired Officer
 reaches the age of 55, at which time the benefits will be reinstated until the age of 65.
@@ -557,7 +683,8 @@ and benefits of Officers for injuries sustained while on duty.
 ARTICLE 10
 ACCIDENT INSURANCE COVERAGE
 
-A. The Borough will provide Health and Accident Insurance coverage for all
+A.
+The Borough will provide Health and Accident Insurance coverage for all
 Police Officers, but not the families of Officers, under the same terms and conditions of
 the existing coverage, except that the weekly benefits for a period of twenty-six (26)
 weeks, after the seven (7) day waiting period, shall be at the rate of sixty percent (60%)
@@ -565,12 +692,14 @@ of employees pay per week. The employee will pay fifty percent (50%) of the prem
 and the Employer will pay the remainder of the premium of fifty percent (50%). In the
 event an Officer is hospitalized, the waiting period terminates upon his hospitalization.
 
-B. With respect to any Police Officer injured while self-employed or in the
+B.
+With respect to any Police Officer injured while self-employed or in the
 employ of another person, firm or corporation, said Police Officer is subject to the
 provisions of the Borough's Accident Insurance policy and the determination of the
 insurance company as to eligibility for benefits shall be final.
 
--14-
+- 14 -
+
 ARTICLE 11
 PENSION BENEFITS
 
@@ -578,7 +707,8 @@ The parties hereto agree that the present pension program as prescribed by
 applicable State law (Act 600 and amendments) and Borough Ordinances shall
 continue in full force and effect except as modified herein.
 
-A. Parties further agree that pension rights shall vest after twelve (12) years
+A.
+Parties further agree that pension rights shall vest after twelve (12) years
 of continuous services.
 
 B. Subject to and consistent with the limitations imposed by the statutes of the
@@ -586,18 +716,20 @@ Commonwealth of Pennsylvania, each police officer shall receive an
 additional $100.00 per month for each completed year of service in excess of
 twenty-five (25) years up to a maximum of $500.00 per month after thirty (30)
 years of service.
-
-C. In addition to monthly pension or retirement allowances or increments,
+C.
+In addition to monthly pension or retirement allowances or increments,
 each person receiving retirement benefits shall receive annual cost of living increases
-
-equal to the percentage increases in the Consumer Price Index (CPI—W-Working
+equal to the percentage increases in the Consumer Price Index (CPI-W-Working
 Wage Earners), but not more than three percent (3%) a year, from the year in which the
 member last worked, provided, however, that in no case shall the total pension benefits
 exceed seventy-five percent (75%) of the compensation for computing retirement
 benefits or thirty percent (30%) of such compensation in total cost of living increases,
 whichever is lesser.
 
-D. In addition to the pension benefits heretofore provided, each Police
+J
+
+D.
+In addition to the pension benefits heretofore provided, each Police
 Officer, regardless of date of hire, shall be entitled to receive any and all benefits that
 are required, mandated, and allowable by Act 600 as amended and specifically as
 amended by Act 30 of 2002. It is recognized that these statutes mandate certain
@@ -609,8 +741,8 @@ benefit. For only those Officers hired prior to December 30, 2002 shall be entit
 optional widows benefit consistent with the Amendment of Agreement executed by the
 parties on that date, said Officers are entitled to the optional widow's benefit established
 in the prior collective bargaining Agreement. Under this provision, the widow of any
+- 15 -
 
--15-
 Officer that dies prior to reaching superannuation shall have the option of accepting any
 available survivor's benefits pursuant to Act 600, as amended by Act 30, or all of the
 following benefits as established under the prior collective bargaining Agreement. (1) A
@@ -619,21 +751,24 @@ full refund of the Officers contributions with interest; (2) A survivorship bene
 at the time of death, and (3) said benefit shall be payable only until such time as the
 widow reaches age 62.
 
-E. During each year of the Agreement the Borough will have an actuarial
+E.
+During each year of the Agreement the Borough will have an actuarial
 study performed to see if the employee contributions to the Police Pension Plan can be
 reduced or eliminated without harming the fund's assets and stability.
 
-F. The above actuarial studies shall be deemed to be an expense of the
+F.
+
+The above actuarial studies shall be deemed to be an expense of the
 
 Police Pension Plan fund and shall be paid for from the pension fund at no cost to either
 the Association of Bellevue Police or the Borough of Bellevue.
 
-G. The Association of Bellevue Police shall have the right to select one of
+G.
+The Association of Bellevue Police shall have the right to select one of
 their members to attend all the meetings of the Borough of Bellevue Police Pension
 Plan Committee and that said member shall be notified of all transactions involving the
 Police Pension Plan as they occur, and that said member shall be furnished any and all
 Ordinances, present and future, pertaining to the Police Pension Plan.
-
 The Police Officer selected by the members of the Association of Bellevue Police
 shall be a member of the Borough of Bellevue Police Pension Plan Committee, which
 Committee will periodically review Police Pension Plan matters and make
@@ -642,32 +777,35 @@ be limited to, the review by other companies providing Police Pension Plan servi
 the purpose of determining whether the benefits provided are available at less cost or
 whether more benefits may be obtained at the same cost. The commitment to review
 the said Police Pension Plan does not commit Council to incur any expense in having
-
 these reviews made.
 
-H. The Borough shall amend its pension Ordinance to incorporate an
+H.
+The Borough shall amend its pension Ordinance to incorporate an
 actuarially reduced early retirement benefits for Officers who terminate employment with
 twenty (20) or more years of service but prior to the completion of superannuation
 retirement age and service requirements in accordance with the provisions of Act 24 (53
-
 P.S. & 771 (i).
 
--16-
+- 16 -
+
 ARTICLE 12
 LIFE INSURANCE
 
-A. Effective May 1, 2016 the Borough of Bellevue shall provide a life
+A.
+Effective May 1, 2016 the Borough of Bellevue shall provide a life
 insurance policy for each Officer while employed by the Borough in the amount of
 $100,000.00 with double indemnity coverage.
 
-B. The Borough of Bellevue shall escrow the sum of $3,000 upon the
+B.
+The Borough of Bellevue shall escrow the sum of $3,000 upon the
 retirement of any Police Officer to be paid to his estate upon his death. A certificate
 shall be provided to the Police Officer to that effect within one month of his retirement.
 
 ARTICLE13
 DISABILITY
 
-A. Disability retirement benefits shall be provided consistent with the terms
+A.
+Disability retirement benefits shall be provided consistent with the terms
 and provisions of Act 600, as amended by Act 30. With regards to an Officers off of
 work due to work related disability, the Association recognizes the Borough's right to
 require the injured Officer to provide medical reports concerning his/her condition at
@@ -678,24 +816,24 @@ determines that Heart and Lung Act Benefits should be terminated or suspended, i
 shall provide notice to the Officer. If the Officer disagrees, he/she shall have the right to
 submit the dispute for resolution through the grievance arbitration procedure, which may
 be expedited at the Borough's request in accordance with the expedited arbitration
-procedure of the American Arbitration Association, Selection of the grievance procedure
+procedure of the American Arbitration Association. Selection of the grievance procedure
 shall constitute a waiver of the Officer's right to Local Agency Hearing.
 
-B. It is agreed that for injuries sustained by each Officer while off duty, his
+B.
+It is agreed that for injuries sustained by each Officer while off duty, his
 disability shall be as provided in Article 10 of this Agreement.
 
--17-
+- 17 -
+
 ARTICLE 14
 SURVIVORS' BENEFITS
 
 In the event any Officer dies prior to retirement, his survivors, including his
 widow, shall receive those benefits as more particularly set forth under Article 11,
 Section D, hereof in accordance with Act 600 as amended.
-
 In the event an Officer dies after retirement, his survivors, including his widow,
 shall have such rights as set forth in the Police Pension Plan and in accordance with the
 option he selected at time of retirement.
-
 ARTICLE 15
 FALSE ARREST INSURANCE
 
@@ -710,53 +848,104 @@ SALARIES
 Salaries of the Police Officers of the Borough of Bellevue shall be as follows
 during the term of this Agreement:
 
-A. Lieutenants shall be paid at the rate as set forth herein.
-Effective Date Hourly Rate
-1/1/19 $39.95
-7/119 $40.55
-1/1/20 $41.16
-7/1/20 $41.78
-1/1/21 $42.82
-1/1/22 $43.89
+A
+
+Lieutenants shall be paid at the rate as set forth herein.
+Effective Date
+
+Hourly Rate
+
+1/1/19
+
+$39.95
+
+7/1/19
+
+$40.55
+
+1/1/20
+
+$41.16
+
+7/1/20
+
+$41.78
+
+1/1/21
+
+$42.82
+
+1/1/22
+
+$43.89
 
 - 18 -
-B. Sergeants shall be paid at the rate as set forth herein.
 
+B.
+
+C.
+
+D.
+
+Sergeants shall be paid at the rate as set forth herein.
 Effective Date
-1/1/19
-7/1/19
-1/1/20
-7/1/20
-1/1/21
-1/1/22
 
 Hourly Rate
+
+1/1/19
+
 $38.36
+
+7/1/19
+
 $38.94
+
+1/1/20
+
 $39.52
+
+7/1/20
+
 $40.11
+
+1/1/21
+
 $41.12
+
+1/1/22
+
 $42.14
 
-Cc. Police Officer (fifth year) shall be paid at the rate as set forth herein.
-
+Police Officer (fifth year) shall be paid at the rate as set forth herein.
 Effective Date
-1/1/19
-7HN9
-1/1/20
-7/1/20
-1/1/21
-1/1/22
 
 Hourly Rate
+
+1/1/19
+
 $36.73
+
+7/1/19
+
 $37.28
+
+1/1/20
+
 $37.84
+
+7/1/20
+
 $38.41
+
+1/1/21
+
 $39.37
+
+1/1/22
+
 $40.35
 
-D. Probationary Police Officers:
+Probationary Police Officers:
 
 (i) Officers shall be paid annually and hourly at seventy percent
 (70%) of the rate set forth above in paragraph C above for Police Officers for the
@@ -766,18 +955,15 @@ second year of employment, and shall be paid annually and hourly at eighty five
 percent (85%) of the rate set forth above in paragraph C for Police Officers for
 the third year of employment, and shall be paid annually and hourly at ninety-five
 (95%)of the rate set forth above in paragraph C for Police Officers for the fourth
-
 year of employment.
-
 (ii) Officers shall reach one hundred percent (100%) of the Police
 Officer rate of pay at the start of their fifth year.
-
-E. In the event a supervisor is not on duty, the senior Police Officer on that
+E.
+In the event a supervisor is not on duty, the senior Police Officer on that
 shift shall be compensated at the rate of compensation equal to that of the next highest
-
 rank.
+- 19 -
 
--19-
 ARTICLE 17
 OVERTIME COMPENSATION
 
@@ -786,7 +972,6 @@ Sergeant and Lieutenant shall consist of a forty-hour (40) workweek. For each ho
 forty (40) hours, each Police Officer, Sergeant and Lieutenant shall receive pay at a rate
 of time and one half of the normal hourly rate. All predictable overtime shall be
 distributed on the basis of rotation according to seniority.
-
 If a Police Officer, Sergeant or Lieutenant is passed over inadvertently and not
 because of a reason attributable to him, he shall be given priority on the next available
 overtime work.
@@ -797,7 +982,6 @@ same amount paid to the Police officer, Sergeant or Lieutenant who was called ou
 his place. Whether the act of passing over was intentional will be determined through
 the grievance procedure, and the Police Officer, Sergeant or Lieutenant alleging the
 intentional pass over has the burden of proving the pass over was intentional.
-
 ARTICLE 18
 WITNESS FEE COMPENSATION
 
@@ -805,16 +989,15 @@ In the event a Police Officer, Sergeant, or Lieutenant is required and a subpoen
 is issued to the officer making his/her appearance mandatory to attend court in the role
 of prosecution witness, in any criminal or statutory case in a court of record, the Officer
 shall receive the following compensation:
-
-1.District/ Magistrate’s Court- The Lieutenant, Sergeant or Officer shall receive
+1. District/ Magistrate's Court- The Lieutenant, Sergeant or Officer shall receive
 the greater of two (2) hours minimum or actual time spent to be paid at the officer's
 current straight pay rate.
-
 2.Statutory/Summary Appeal Court- The Lieutenant, Sergeant or Officer shall
 receive the greater of four (4) hours minimum or actual time spent to be paid at the
 officer's current straight pay rate.
 
--20-
+- 20 -
+
 3.Federal Court, Court of Common Pleas, 302 Hearing - The Lieutenant,
 Sergeant or Officer shall receive the greater of four (4) hours minimum or actual time
 spent to be paid at the rate of one and one-half (1.5) times the officer's current pay rate.
@@ -827,7 +1010,6 @@ when it does not create the need for overtime. This option is for the Officers w
 night turn shift only. The Officer shall obtain permission from their shift supervisor. The
 Officer agrees that the Chief of Police or shift supervisor may deny the Officer this
 option at anytime in the event of a call off or the need for additional manpower is
-
 required.
 
 All reasonable efforts will be exerted by the Borough to avoid such Officer's
@@ -852,100 +1034,129 @@ however that the Officer responsible for calling the overtime list (list of Offi
 maintained on a rotational and seniority basis) refuses or fails to call the Officers on said
 list. If the Officer responsible for calling the list calls and after exhausting the same is
 unable to obtain an Officer to come out, then the Police Officer, Sergeant or Lieutenant
+- 21 -
 
--21-
 required to work a second consecutive shift shall be compensated only at the applicable
-
 hourly rate, time and one half.
 
 ARTICLE 20
-
 CLOTHING ALLOWANCE
 
 A. The standard uniform is hereby defined as:
-
 1 Uniform cap w/ summer
 & winter cover
-1 Cold Weather Cap
-1 Cap Strap
-1 Cap Badge
-1 Helmet, 2-90 Specification
-5 Summer (short sleeve) Shirts
-5 Winter (long sleeve) Shirts
-2 Neck Ties
-1 Tie Tack
-5 Pair Trousers
-41 Light Weight Jacket w/ Liner
-1 Winter Jacket/Leather Jacket
-1 Pullover Sweater
-
-1 pair White Traffic Gloves
 
 1 pair Handcuffs
 1 Handcuff Case
+
+1 Cold Weather Cap
+
 1 Double Magazine or Double Speed Loader Case
+
+1 Cap Strap
+
 1 Holster
+
+1 Cap Badge
+
 1 Duty Belt
+
+1 Helmet, Z-90 Specification
+
 1 Garrison Belt
+
+5 Summer (short sleeve) Shirts
+
 1 Baton Ring or Expandable Baton Holder
+
+5 Winter (long sleeve) Shirts
+
 1 Night Stick or Expandable Baton
+
+2 Neck Ties
+
 1 Whistle, Chain, Rubber Cover
+
+1 Tie Tack
+
 1 Pair Collar Insignia
+
+5 Pair Trousers
+
 3 Name Tags
+
+1 Light Weight Jacket w/ Liner
+
 3 Badges
+
+1 Winter Jacket/Leather Jacket
+
 2 Police Patches per Shirt and Jacket
+
+1 Pullover Sweater
+
 1 Chemical Spray and Case
 (for those authorized to use)
+
+1 pair White Traffic Gloves
+
 1 Radio Holder
 
 1 pair Black cold weather Gloves 1 Key Holder
-
 1 pair Black protective Gloves
+
+1 Maglight Rechargeable "C" cell Flashlight
 
 1 pair Black Uniform Shoes
 
+1 Rechargeable Min-Flashlight with Holder
+
 1 Pair Insulated Leather
+
+1 Raincoat
+
 Uniform Boots
 
-1 Maglight Rechargeable "C" cell Flashlight
-1 Rechargeable Min-Flashlight with Holder
-1 Raincoat
 Ammunition Change every six (6) months
 
 * Soft Body Armor - "Threat Level" to be determined by the Chief of Police. Officers
 shall purchase their own side arm (duty weapons).
+- 22 -
 
--22-
-B. Any change in the design, style, color or material of the uniform beyond
+B.
+Any change in the design, style, color or material of the uniform beyond
 that noted in Section G below must first be approved by the Town Council of the
 Borough of Bellevue.
-
-C. Effective January 1, 2019, the uniform allowance for each officer shall be
+C.
+Effective January 1, 2019, the uniform allowance for each officer shall be
 eight hundred fifty dollars ($850.00). In the year in which the officer is required to
 replace his/her bullet proof vest in accordance with the manufacturer's warranty, the
 officer shall be able to carry over up to two hundred fifty dollars ($250.00) of the
-previous year’s allowance for this purpose.
+previous year's allowance for this purpose.
 
 This allowance shall be either a voucher or purchase order with each Officer
 having the right to purchase the approved items directly through the vender.
 
-D. Prior to an Officer using the Uniform Allowance to replace any article of
+D.
+Prior to an Officer using the Uniform Allowance to replace any article of
 the standard uniform as identified above, the Officer shall provide notification to the
 Police Chief that the item is being replaced and shall identify the need for the
 replacement.
 
-E, New Officers shall be provided with the entire department uniform. New
+E.
+
+New Officers shall be provided with the entire department uniform. New
 
 Officer will not receive a uniform allowance until January 1st after their first anniversary
 date. Newly hired Officers will not have the option of a leather jacket with their initial
 uniform but may purchase a leather jacket with a subsequent annual uniform allowance.
 
-F. Officers will use the Standard Uniform as a guideline to what items may be
+F.
+Officers will use the Standard Uniform as a guideline to what items may be
 purchased with the uniform allowance in balancing the needs of uniformity and comfort
-
 of the individual Officer.
-
-G. Police soft body armor will be replaced at the Borough's expense at the
+G.
+Police soft body armor will be replaced at the Borough's expense at the
 recommended manufacturer's expiration date. Each Officer may select the
 manufacturer, style and body armor options of the soft body armor. The Borough will
 spend a maximum of six hundred fifty dollars ($650) toward the cost of said body armor
@@ -953,12 +1164,14 @@ for each officer. Any amount in excess of six hundred fifty dollars ($650) shall
 the officer making the purchase who may, at his/her option, apply any balance of his/her
 uniform allowance to such excess.
 
--23-
+- 23 -
+
 Every officer must wear soft body armor while on active duty provided that the
 Chief of Police may promulgate regulations waiving the mandatory wear requirements
 consistent with maximum safety of the Officer.
 
-H. Officers will wear summer and winter uniforms on the dates specified in
+H.
+Officers will wear summer and winter uniforms on the dates specified in
 Chapter 36, section 36.02 of the Bellevue Police Department Handbook of Laws,
 Ordinances, Policy and Procedure. Officers will also fit duty belts from the Standard
 Uniform list, at a minimum, with; one (1) holster, one (1) handcuff case, one (1) double
@@ -966,12 +1179,13 @@ magazine or speed loader case and one (1) radio holder or clip. Other duty belt 
 listed in the Standard Uniform may be worn at the individual Officer's discretion and
 comfort.
 
-I. Jackets, raincoats and sweaters may be worn by an Officer in appropriate
+I.
+Jackets, raincoats and sweaters may be worn by an Officer in appropriate
 weather at the discretion and comfort of the individual Officer, except that the Chief of
 Police may require specific uniform for special events or circumstances. Sweaters may
 only be worn with winter uniforms.
-
-J. Alteration to any uniform shirts may only be performed at the time of
+J.
+Alteration to any uniform shirts may only be performed at the time of
 purchasing the uniform shirts and is to be paid from the uniform allowance.
 
 ARTICLE 21
@@ -991,75 +1205,82 @@ activity on the part of the Police Officer.
 
 This article is not applicable to those items damaged or destroyed as a result of
 ordinary wear and tear.
+- 24-
 
--24-
 ARTICLE 22
-sICK LEAVE
+SICK LEAVE
 
-A. Each Officer shall receive one hundred hours (100 hours) of sick time per
+A
+
+Each Officer shall receive one hundred hours (100 hours) of sick time per
 year. Each Officer may accumulate an unlimited amount of sick time to be paid upon
 retirement only.
-
-B. An Officer off sick must call in a minimum of two (2) hours prior to the start
+B.
+An Officer off sick must call in a minimum of two (2) hours prior to the start
 of his shift. The Officer in charge will check on an Officer on the second day such
 Officer is sick.
 
-C. All sick days are at full pay; however, in the event any of said accumulated
+C.
+All sick days are at full pay; however, in the event any of said accumulated
 days, after the first seven (7) days, are applied to an off-duty injury, accident or illness
 and the Borough pays the Officer full pay for every accumulated sick day, said Police
 Officer shall pay over to the Borough all benefits due him under the Health and Accident
-
 Insurance Policy.
-
-D. In the event an Officer is injured off duty, he may apply as many of his
+D.
+In the event an Officer is injured off duty, he may apply as many of his
 accumulated sick days as he wished to a disability period resulting from said injury.
-
-E. Each Officer shall receive credit for the sick days he has accumulated to
+E.
+Each Officer shall receive credit for the sick days he has accumulated to
 the date of this Agreement, and this Agreement shall not affect those sick days to which
 the Officer is presently entitled.
 
-F. On or before February 1st of each year, the Borough shall provide to each
+F.
+
+On or before February 1st of each year, the Borough shall provide to each
 
 Police Officer a report of the number of sick days said Officer has accumulated to
-December 3‘st of the prior year. In the event any Officer wished to dispute the report,
-he shall do so in writing on or before March ‘st of each year. In the event the Director of
-
+December 31st of the prior year. In the event any Officer wished to dispute the report,
+he shall do so in writing on or before March 1st of each year. In the event the Director of
 Administrative Services is not notified in writing as to any dispute by March 1st of each
 year, it shall be conclusively presumed that the report is accurate.
 
--25-
-G. Any Officer who retires shall receive twenty dollars ($20.00) per day for
+- 25 -
+
+G.
+Any Officer who retires shall receive twenty dollars ($20.00) per day for
 each day of accumulated unused sick days. In the event of DROP participation by an
 Officer, the buy-back by the Borough of accumulated unused sick days under Section G
 shall occur on the effective date of the DROP election by the Officer
-
 ARTICLE 23
 BEREAVEMENT LEAVE
 
-A. Upon the death of any member of a Police Officer's immediate family, said
-Officer shall be permitted forty (40) hours off with pay, including regular pass days.
+A
 
+Upon the death of any member of a Police Officer's immediate family, said
+
+Officer shall be permitted forty (40) hours off with pay, including regular pass days.
 Immediate family hereby defined as Officer's spouse, children, mother, father, brother or
 sister.
 
-B. An Officer will receive thirty (30) hours off with pay, including regular pass
-days, for the death of a grandchild, mother-in-law, father-in-law, brother-in-law or sister-
-in-law.
-
-C. An Officer will receive ten (10) hours off with pay - the day of the funeral —
-for the purpose of attending said funeral when the death of an Officer's uncle, aunt,
+B.
+An Officer will receive thirty (30) hours off with pay, including regular pass
+days, for the death of a grandchild, mother-in-law, father-in-law, brother-in-law or sisterin-law.
+C.
+An Officer will receive ten (10) hours off with pay - the day of the funeral for the purpose of attending said funeral when the death of an Officer's uncle, aunt,
 nephew, niece, grandparents, grandparents-in-law or cousin occurs, provided said
-
 Officer attends the funeral.
 
-D. Special circumstances may arise where an Officer may require additional
+D.
+Special circumstances may arise where an Officer may require additional
 bereavement time. Special requests may be made to the Chief of Police for
-consideration of special requests and thé Chief will have the authority to grant up to, but
+consideration of special requests and the Chief will have the authority to grant up to, but
 not more than forty (40) additional hours of bereavement leave by utilizing vacation or
 holiday benefits.
 
 ARTICLE 24
 LEGAL REIMBURSEMENT
+
+)
 
 The Borough shall defend any Officer in connection with any cost of litigation
 arising out of any action taken in regard to any Officer's performance in the line of duty,
@@ -1067,8 +1288,8 @@ while on duty; provided, however, that in those instances where there is no insu
 coverage, the Borough shall provide counsel authorized by the Town Council of the
 Borough for such defense and take such other action as it is necessary to properly
 defend said action; provided, further, that the Borough shall not be liable for any verdict,
+- 26 -
 
--26-
 judgment or award rendered against said Officer, nor shall the Borough be deemed as
 guarantor of a decision in favor of said Officer. The Borough shall not be required to
 defend any intentional tort or criminal conduct on the part of the Officer, but the
@@ -1095,7 +1316,7 @@ sessions.
 
 All tuition charges for such instruction shall be paid in full by the Borough.
 
-When an Officer attends a schoo! that has been approved as per the provisions
+When an Officer attends a school that has been approved as per the provisions
 hereof, he shall receive as reimbursement for expenses the sum of five dollars ($5.00)
 per day, which shall be paid in advance of his attendance and which sum will
 compensate him for expenses incurred.
@@ -1103,10 +1324,10 @@ compensate him for expenses incurred.
 In the event the Officer fails to complete the full term of the school, he shall
 reimburse the Borough for the number of days he did not complete at five dollars
 ($5.00) per day, such reimbursement to be made within fourteen (14) days of the last
-
 day of his attendance.
 
--27-
+- 27 -
+
 Any Police Officers attending such accredited approved Police training course
 referred to herein, and which requires eight (8) hours per day attendance four (4) days
 or more in any one week, will have their regular Police duties, during such period or
@@ -1144,7 +1365,8 @@ in criminal justice, psychology, public administration or a course approved by t
 Safety Committee; (c) The Officer must achieve a grade of "B" or better; and (d) The
 course must be taken at any accredited college or university.
 
--28-
+- 28 -
+
 The Borough may provide a tuition reimbursement of up to seven hundred fifty
 dollar ($750) per year to any Officer upon successful completion of an approved course
 if funds are available in the budget and providing the following criteria are met: (a) The
@@ -1158,50 +1380,78 @@ and (d) The Officer must achieve a grade of "B" or better in said course
 ARTICLE 26
 LONGEVITY PAY
 
-A. In addition to the compensation provided for herein, the same to be
+A.
+
+In addition to the compensation provided for herein, the same to be
 incorporated into the Borough's salary Ordinance, each Police Officer shall receive a
 longevity payment at the rates determined by the "Annual Base Pay Multiplier" set forth
 in the accompanying scale for each year of service beyond two (2) years:
+Years of Service
+Percent of annual base pay
+3
+0.25
+4
+0.25
+5
+0.50
+6
+0.50
+7
+0.75
+8
+0.75
+9
+1.00
+10
+1.00
+11
+1.25
+12
+1.25
+13
+1.50
+14
+1.50
+15
+1.75
+16
+1.75
+17
+2.00
+18
+2.00
+19
+2.25
+20
+2.25
+21
+2.50
+22
+2.50
+23
+2.75
+- 29 -
 
- 
+24
+25
+26
+27
+28
+29
+30
 
-Years of Service Percent of annual base pay
-3 0.25
-4 0.25
-5 0.50
-6 0.50
-7 0.75
-8 0.75
-9 1.00
-10 1.00
-11 1.25
-12 1.25
-13 1.50
-14 1.50
-15 1.75
-16 1.75
-17 2.00
-18 2.00
-19 2.25
-20 2.25
-21 2.50
-22 2.50
-23 2.75
+2.75
+3.00
+3.00
+3.25
+3.25
+3.50
+3.50
 
--29-
-24 2.73
-
-25 3.00
-26 3.00
-27 3.25
-28 3.25
-29 3.50
-30 3.50
-B. The longevity pay increment shall not be included in the Officer's bi-weekly
-
+B.
+The longevity pay increment shall not be included in the Officer's bi-weekly
 pay but shall be paid in one lump sum in a separate check on the first pay day in
 December during each calendar year of this Agreement.
-
 ARTICLE 27
 STATUTORY PROTECTION
 
@@ -1217,7 +1467,6 @@ regulations. The rights granted to the Police Officer hereunder shall be deemed 
 addition to those provided elsewhere, provided that the provisions of this contract are
 not intended to grant rights or expand rights which are defined or limited by applicable
 laws, nor should the provisions of this contract be construed as authorizing a violation of
-
 applicable laws.
 
 ARTICLE 28
@@ -1229,8 +1478,8 @@ or political affiliation, and that there shall be no discrimination, interferenc
 restraint, or coercion by the Borough or any of its agents, against any member of the
 Police force because of his membership in the collective bargaining unit or participation
 in the grievance and/or arbitration process, and no Police Officer employed by the
+- 30 -
 
-- 30-
 Borough waives any of his rights, privileges or immunities afforded to the Police Officer
 under the constitution of the United States of America or the Commonwealth of
 Pennsylvania or any laws that flow therefrom.
@@ -1238,19 +1487,22 @@ Pennsylvania or any laws that flow therefrom.
 ARTICLE 29
 DISCIPLINARY TRANSFERS/JUST CAUSE
 
-A. There shall be no transfer for disciplinary reasons. Any time there is a
+A.
+There shall be no transfer for disciplinary reasons. Any time there is a
 transfer; the reasons should be set forth in writing and given to the Officer.
-B, No Officer shall be suspended, disciplined, reduced in rank or be deprived
-
+B.
+No Officer shall be suspended, disciplined, reduced in rank or be deprived
 of any advantage without just cause. Whether any suspension, disciplinary action,
 reduction in rank or deprivation of any advantage is with or without just cause shall be
 determined in accordance with the applicable provisions of Civil Service for Police and
 Firemen Act (53 P.S. § 46171, et seq.) and other applicable laws or the grievance
 procedure as set forth in Article 4, section (a)(3), of this contract.
 
-C. During the application process for promotions to the position of Sergeant
-and/or Lieutenant, the Borough of Bellevue and/or the Borough of Bellevue Civil Service
+)
 
+C.
+During the application process for promotions to the position of Sergeant
+and/or Lieutenant, the Borough of Bellevue and/or the Borough of Bellevue Civil Service
 Commission shall not consider in their application process any formal written
 reprimands (sometimes referred to as "letter of reprimand") for the purpose of
 disqualifying an otherwise qualified applicant. This provision shall not be construed to
@@ -1259,68 +1511,68 @@ promotion is certified by the Borough of Bellevue Civil Service Commission to th
 Council of the Borough of Bellevue if such letters are final under the grievance
 procedure.
 
-D. Police Officers "Bill of Rights"
+D.
 
-1. When an anonymous complaint is made against a Police Officer
+Police Officers "Bill of Rights"
+
+1.
+When an anonymous complaint is made against a Police Officer
 and no corroborative evidence is obtained, the complaint shall be classified as
 unfounded.
-
-2. When any citizen complaint is filed greater than ninety (90)
+2.
+When any citizen complaint is filed greater than ninety (90)
 calendar days after the date of the alleged event complained of, which if true, could not
 lead to a criminal charge, such complaint shall be classified as unfounded and the
 accused employee shall not be required to submit a written report, but shall be notified
 orally or in writing of such claim.
+- 31-
 
--31-
-3. A Police Officer, whether a subject or witness, must be informed of
+3.
+A Police Officer, whether a subject or witness, must be informed of
 the nature of the interrogation at the outset of the interrogation.
-
-4. If the interrogated Police Officer writes a statement, or a transcript
+4.
+If the interrogated Police Officer writes a statement, or a transcript
 is taken, or a mechanical/electronic record is made, a copy of the same must be given
 to the interrogated Police Officer, without cost, upon request.
-
-5. If any Police Officer under interrogation is under arrest or is likely to
+5.
+If any Police Officer under interrogation is under arrest or is likely to
 be placed under arrest as a result of the interrogation, he shall be completely informed
 of all his rights prior to the commencement of the interrogation.
-
-6. At the request of any Police Officer under interrogation, he shall
+6.
+At the request of any Police Officer under interrogation, he shall
 have the right to be represented by counsel of his choice and/or a representative of the
-
 Association of Bellevue Police who shall be present at all times during the interrogation.
-
 The interrogation shall be suspended for a reasonable time until representation can be
 obtained.
-
-7. Unless agreed to by the Officer, the Borough of Bellevue shall not
+7.
+Unless agreed to by the Officer, the Borough of Bellevue shall not
 make any public comment on the reason for any disciplinary action brought against the
 Officer.
-
-E, The provisions identified in Sections A and B of this Article are not
+E.
+The provisions identified in Sections A and B of this Article are not
 intended to restrict the Mayor or Chief of Police in the free exercise of their respective
 authorities in assigning the Police Officers in a manner which in their respective sole
 discretions they or either of them may deem necessary for the protection of the citizens
 of the Borough of Bellevue.
-
-F. A copy of any disciplinary action taken against an Officer shall be placed
+F.
+A copy of any disciplinary action taken against an Officer shall be placed
 in that Officer's personnel file. A copy of any disciplinary action taken against an Officer
 shall be provided to the Officer.
-
-G. Copies of any disciplinary action taken against an Officer shall be
+G.
+Copies of any disciplinary action taken against an Officer shall be
 removed from the Officer's personnel file if no additional disciplinary action for any
 reason has been taken against said Officer for a period of three (3) years from the date
 of the original disciplinary action.
-
-H. Discipline is recognized as essential and necessary element to a
+H.
+Discipline is recognized as essential and necessary element to a
 professional department.
-
 The purpose of this section is to establish a clear protocol regarding matter of
 discipline. This section is intended to balance the need for the Borough's ability to
 implement discipline and maintain standards while protecting each Officer's
 Constitutional rights, including the right to due process.
-
 As in Article 4, discipline should be handed at the lowest possible level.
+- 32 -
 
--32-
 Oral and written complaints will be directed to the Chief of Police. Complaints will
 be handled as specified in Subsection 27.01 of the Bellevue Police Department Policy
 and Procedure Manual. Complaints that the Chief of Police determines are "founded"
@@ -1328,14 +1580,12 @@ will be handled by the Chief or referred to Borough Council, at the Chiefs discr
 stated in Bellevue Police Department Police and Procedure Manual, The Chief of Police
 may reprimand or suspend Officers for conduct in violation of the policy, the Borough
 Personnel Code, Civil Service Code or other statute. The Chief of Police may still
-handle matters of discipline at the lowest level informaily if agreed upon between he/she
+handle matters of discipline at the lowest level informally if agreed upon between he/she
 and the accused Officer and/or Union representative or legal counsel.
-
 An Officer may appeal discipline by filing through the grievance procedure or with
 the Civil Service Commission, at the discretion of the accused Officer. All hearings
 regarding these matters will be private unless the Officer chooses to allow the hearings
 to be public, when and where possible.
-
 ARTICLE 30
 SCHEDULING
 
@@ -1344,24 +1594,22 @@ four (4) months on any one turn in a calendar year. In the event a Police Office
 required to work more than four (4) months on any one turn in a calendar year, he shall
 have the right to seek proper relief through the grievance procedure as set forth in
 Article 4 hereof.
-
 No Lieutenant or Sergeant without his written consent shall be required to work
 more than four (4) months on any one turn in a calendar year. In the event a Lieutenant
 or Sergeant is required to work more than four (4) months on any one turn in a calendar
 year, he shall have the right to seek proper relief through the aforesaid grievance
 procedure.
-
 A schedule shall be posted at all times indicating the days and shifts to be
 worked by all Officers for a minimum of two months in advance. The posted schedule
 may be changed or altered due to situations and events (i.e. injury, illness, family
 emergencies and the like) but all Officers will be advised of the need for the changes
 before those changes are made.
-
 As has been the practice for the safety of Officers and providing proper service to
 the Borough each shift shall be staffed with a minimum of two (2) full-time sworn Police
 Officers per shift, not including the Chief of Police.
 
-- 33-
+- 33 -
+
 ARTICLE 31
 OFF-DUTY PROTECTION
 
@@ -1372,26 +1620,25 @@ discretion, he deems it necessary to act for the protection of property and/or l
 the corporate limits of the Borough of Bellevue, said Officer, in so acting, shall be
 covered with and protected by all the benefits provided for the Police Officers as set
 forth in the current Agreement between the Borough of Bellevue and the Association of
-
 Bellevue Police.
 
 This provision shall not diminish or affect any rights; privileges or benefits said
 Officer might have under applicable State and Federal statutes.
-
 ARTICLE 32
 DUE DEDUCTIONS
 
+)
 The Borough of Bellevue, as employer, shall deduct from each Police Officer's,
 Sergeants and Lieutenant's salary the sum of money identified by the Union as dues
 each pay and transmit said proceeds to the Treasurer of the Association of Bellevue
-
 Police, provided:
-
-(1) | The Borough of Bellevue is furnished written authorization as provided on
-a form by the Borough from each Officer from whose pay the dues are to be deducted:
-
+(1)
+The Borough of Bellevue is furnished written authorization as provided on
+a form by the Borough from each Officer from whose pay the dues are to be deducted;
 and
-(2) That said funds will be transmitted to the Treasurer of the Association, 537
+(2)
+
+That said funds will be transmitted to the Treasurer of the Association, 537
 
 Bayne Avenue, Bellevue, PA 15202, until such time as the Borough is advised in writing
 that the Treasurer and/or his address has been changed.
@@ -1401,32 +1648,33 @@ POLICE ASSOCIATION FILE SPACE
 
 The Borough of Bellevue shall provide space for the Association of Bellevue Police for
 two (2) file cabinets in the Police area of the Borough Hall, 537 Bayne Avenue.
+- 34 -
 
-- 34-
 ARTICLE 34
 MILITARY LEAVE
 
 The Borough of Bellevue will comply with applicable Federal and State laws with
 respect to military service of any member of its Police force.
-
 ARTICLE 35
 EQUIPMENT
 
-A. The Borough of Bellevue shall equip each Police vehicle with a trunk
+A.
+
+The Borough of Bellevue shall equip each Police vehicle with a trunk
 
 organizer equipped as required for the Police Officer to perform his normally assigned
 duties.
-
-B. The Borough of Bellevue shall provide copies of the following two (2)
+B.
+The Borough of Bellevue shall provide copies of the following two (2)
 items in the "Squad Room" of the Police Department.
-1. One copy of the Motor Vehicle Code and update inserts as they are
-
+1.
+One copy of the Motor Vehicle Code and update inserts as they are
 published and received; and
-
-2. One copy of the Crime Code and updated inserts as they are
+2.
+One copy of the Crime Code and updated inserts as they are
 published and received.
-
-C. The Borough of Bellevue shail provide for use by each Officer one copy of
+C.
+The Borough of Bellevue shall provide for use by each Officer one copy of
 the Motor Vehicle Code and updated inserts as they are published and received and
 one copy of the Crime Code and updated inserts as they are published and received.
 
@@ -1435,17 +1683,16 @@ PAY PERIOD
 
 The pay period shall be defined as two (2) weeks, and the Officer shall be paid not later
 than one calendar week after the end of each pay period.
+- 35 -
 
--35-
 ARTICLE 37
 DROP PROGRAM
 
-A Deferred Retirement Option Plan (“DROP”) shall be implemented effective
+A Deferred Retirement Option Plan ("DROP") shall be implemented effective
 January 1, 2013 or such earlier dates as the Borough may, by ordinance, adopt a
 DROP program. This shall be the first date that eligible Officers may enter the DROP.
 The terms and provisions of the DROP shall be substantially as set forth in the
-document marked Exhibit “A”, which is attached hereto and incorporated herein as if
-
+document marked Exhibit "A", which is attached hereto and incorporated herein as if
 fully set forth.
 
 ARTICLE 38
@@ -1454,13 +1701,10 @@ PART-TIME EMPLOYEES
 A. Part-time officers shall receive only the benefits set forth in this Article and shall
 not be entitled to any other benefit set forth in this Collective Bargaining
 Agreement.
-
-B. Part-time officers shall be paid at a rate of seventy percent (70%) of the rate set
+8. Part-time officers shall be paid at a rate of seventy percent (70%) of the rate set
 forth for a fifth year patrol officer.
-
 C. Part-time officers shall not be used by the Borough while any full-time police
 officer is on layoff.
-
 D. Part-time officers shall be scheduled to work as determined appropriate in the
 sole discretion of the Borough but shall be scheduled so they average less than
 thirty (30) hours per week.
@@ -1473,18 +1717,15 @@ who makes known his attention not to appear for his scheduled shift within 24
 hours of that shift thereby limiting the time the Borough has to fill that vacancy if
 in its discretion, it intends to do so. The parties are directed to establish
 protocols for dealing with this issue and the panel will retain jurisdiction resolving
-
 any disputes that may result.
+- 36 -
 
-- 36-
 F. Work opportunities available at the request of outside entities (for example,
 PennDOT, school football games, and other opportunities for which the Borough
 received reimbursement for any wages paid to officers) shall be first offered to
 full time police officers.
-
-G. Uniforms and equipment for part-time officers shall be provided at the Borough’s
+G. Uniforms and equipment for part-time officers shall be provided at the Borough's
 expense.
-
 H. In the event a part-time officer who is not eligible for health insurance under this
 agreement becomes eligible as a result of the application of the requirements of
 the Affordable Care Act, the employee shall be offered the lowest cost plan the
@@ -1495,49 +1736,42 @@ for dependents. This benefit will be available only as it is necessary to comply
 with the ACA and its implementing regulations and eligibility or ineligibility shall
 be governed exclusively thereby.
 
+)
 In the event the Borough elects to hire and utilize part-time officers, the Borough and Association agree
 to re-open Article 38 Part-Time Employees with the purpose to explore, amend, or re-negotiate the
 verbiage included in said Article. It is agreed that no other articles will be altered or changed as part of
-such re-opener,
+such re-opener.
 
--37-
+- 37 -
+
 SIGNATURE PAGE
 
 IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be
 executed, in duplicate, the day and year first above written, each of which shall
-
 constitute and original.
 
- 
+ATTEST:
 
- 
+BOROUGH OF BELLEVUE:
 
-ATTEST: BOROUGH OF BELLEVUE:
-QM aby neh!
-; OE . oe A .
+Director of Administrative Services
 
-Director of Administrative Services President of Council
+By~
+President of Council
 
-WITNESS: ASSOCIATION OF BELLEVUE POLICE:
+WITNESS:
 
- 
+ASSOCIATION OF BELLEVUE POLICE:
 
- 
+- 38-
 
-je My
-
-Vice-President (/ President
-
-Xv
-
-- 38 - \-
 § 637. State police, enforcement, officers, investigators, parole agents, correction officers, psychiatric
 security aides, drug enforcement agents, policemen, firemen, park guards; injuries and diseases;
 compensation and expenses
 
 (a) Any member of the State Police Force, any enforcement officer or investigator employed by the
 Pennsylvania Liquor Control Board, and the parole agents, enforcement officers and Investigators of the
-Pennsylvania Board of Probation and Parole, Capito! Police officers, correction officers employed by the
+Pennsylvania Board of Probation and Parole, Capitol Police officers, correction officers employed by the
 Department of Corrections, whose principal duty is the care, custody and control of inmates, psychiatric,
 security aides employed by the Department of Public Welfare and the Department of Corrections, whose
 principal duty is the care, custody, and control of the criminally insane, and drug enforcement agents of the
@@ -1548,7 +1782,7 @@ firemen, duty as special fire police, and by reason thereof is temporarily incap
 duties, shall be paid by the Commonwealth of Pennsylvania if a member of the State Police Force or an
 enforcement officer or Investigator employed by the Pennsylvania Liquor Control Board or the parole agents,
 enforcement officers and investigators of the Pennsylvania Board of Probation and Parole, Capitol Police
-officers, correction officers employed by the Department of Corrections, whose principal duty is the care,
+officers, correction officers E:mployedby the Department of Corrections, whose principal duty is the care,
 custody and control of inmates, psychiatric security aides employed by the Department of Public Welfare and
 the Department of Corrections, whose principal duty is the care, custody, and control of the criminally insane,
 and drug enforcement agents of the Office of Attorney General whose principal duty is the enforcement of the
@@ -1559,18 +1793,17 @@ bills, incurred in connection with any such injury, shall be paid by the; Common
 Delaware River Port Authority or by such '-county, township or municipality. During the time salary for
 temporary incapacity shall be paid by the Commonwealth of Pennsylvania or by the Delaware River Port
 Authority, or by the county, city, borough, town or township, any workmen's compensation, received
-or collected by any such employee for such period, shall be turned over to the Commenwealth of Pennsylvania
+or collected by any such employee for such period, shall be turned over to the Commonwealth of Pennsylvania
 or to the Delaware River Port Authority or to such county, city, borough, town or township, and paid into the
 treasury thereof, and if such payment shall not be so made by the employee the amount so due the
 Commonwealth of Pennsylvania, the Delaware River Port Authority or the county, city, borough, town or
 township shall be deducted from any salary then or thereafter becoming due and owing.
-
-+ (b) In the case of the State Police Force, enforcement officers and investigators employed by the
-Pennsylvania Liquor Control Board and the parole agents, enforcement ‘officers and investigators of the
+• (b) In the case of the State Police Force, enforcement officers and investigators employed by the
+Pennsylvania Liquor Control Board and the parole agents, enforcement 'officers and investigators of the
 Pennsylvania Hoard of Probation and Parole, Capitol Police officers, correction officers employed by the
 Department of Corrections, whose principal duty is the care, custody and control of inmates, psychiatric
 security aides employed by the Department of Public Welfare and the Department of Corrections whose
-principal duty is the care, custody, and contro! of the criminally insane, and drug enforcement agents of the
+principal duty is the care, custody, and control of the criminally insane, and drug enforcement agents of the
 Office of Attorney General whose principal duty is the enforcement of the drug laws of the Commonwealth,
 members of the Delaware River .Port Authority Police and salaried policemen and firemen who have seized for
 four consecutive years, or longer, diseases of the heart and tuberculosis of the respiratory ; system, contracted
@@ -1580,12 +1813,12 @@ employment of any such member of the State Police Force, enforcement officer, in
 Pennsylvania Liquor Control Board; guard or enforcement officer employed by the Department of Corrections
 or parole agent, enforcement officer or investigator of the Pennsylvania Board of Probation and Parole, Capitol
 
-- 39-
+- 39 -
+
 Police officers, correction officers employed by the Department of Corrections whose principal duty is the care,
 custody and control of inmates, psychiatric security aides employed by the Department of Public Welfare and
 
 53 P.S. § 637 MUNICIPAL & QUASI-MUN. CORPS.
-
 the Department of Corrections whose principal duty is the care, custody, and control of the criminally insane,
 and drug enforcement agents of the Office of Attorney General whose principal duty is the enforcement of the
 drug laws of the Commonwealth, member of the Delaware River Port Authority Police, or policeman or fireman,
@@ -1594,12 +1827,10 @@ under the compensation laws as having been caused by accidental injury, such dis
 as occupational disease disabilities are presently compensable under the compensation laws of this
 Commonwealth. It shall be presumed that tuberculosis of the respiratory system contracted or incurred after
 four consecutive years of service was contracted or incurred as a direct result of employment.
-
 . (c) In the case of any person receiving benefits pursuant to this act, the statutes of limitations set forth in
 sections 30G.1, 315, 413, and 434 of the act of June 2, 1915 (P.L. 736, No. 338), known as "The Pennsylvania
-Workmen's Compensation Act,1 " shall not begin to run until the expiration of the receipt of benefits
+Workmen's Compensation Act, 1 " shall not begin to run until the expiration of the receipt of benefits
 pursuant to this act.
-
 (d) All payments herein required to be made by the Commonwealth of Pennsylvania on account of any member
 of- the State Police Force shall be made from moneys appropriated to the Pennsylvania State Police, and any
 payments required to be made on account of any enforcement; officer or investigator employed by the
@@ -1613,11 +1844,10 @@ any payments required to be made on-account of any psychiatric security aides sh
 appropriated to the Department of Public Welfare or the Department of Corrections where appropriate, and any
 payments required to be made on account of any drug enforcement agent shall be made from moneys
 appropriated, to the Office of Attorney General.
-
 As amended 1974, May 31, P.L. 309, No. 9<3, § 1, effective in 90 days; 1978, July 1, P.L.
 687, No. 117; § 2, imd. effective; 1986, Dec. 19, P.L. 1733, No. 208, § 1, effective in 30 days.
+1 77 P.S. §§ 516, 602, 771 to 774 and 1001.
 
-177 P.S. §§ 516, 602, 771 to 774 and 1001.
+- 40-
 
-- 40 -
 

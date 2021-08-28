@@ -231,11 +231,28 @@ class Researchers extends Component {
             {this.state.queryResultCounties && (
               <div className="col-lg-12 mt-3 row">
                 <div className="col-md-3">
-                  <div className="input-group">
+                  <div className="col-md-3">
                     <select
-                      className="custom-select"
+                      className="selectpicker"
                       value={this.state.countyFilter}
                       onChange={(e) => this.setCountyFilter(e.target.value)}
+                      data-live-search="true"
+                      multiple
+                    >
+                      <option value="null" disabled>
+                        Filter by County
+                      </option>
+                      {this.state.queryResultCounties.map((result) => (
+                        <option key={result}>{result}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="input-group">
+                    <select
+                      className="selectpicker"
+                      value={this.state.countyFilter}
+                      onChange={(e) => this.setCountyFilter(e.target.value)}
+                      multiple
                     >
                       <option value="null" disabled>
                         Filter by County
@@ -276,7 +293,11 @@ class Researchers extends Component {
               <h2>Results</h2>
               <hr className="my-4 border-top border-secondary" />
               {this.state.queryResults && (
-                <h4>{this.state.queryResults.length} Results found!</h4>
+                <div>
+                  <h4>
+                    {this.state.filteredQueryResults.length} Results found!
+                  </h4>
+                </div>
               )}
             </div>
             <div className="col-lg-12 mt-3">

@@ -70,6 +70,10 @@
   border-radius: 6px 0 6px 6px;
 }
 
+select.selectpicker {
+  display: block !important;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
   padding-left: 15px;
@@ -225,4 +229,4 @@ body {
   z-index: 2;
 }
 
-/*# sourceMappingURL=main.a8a32a3f6dbc52e73477.css.map*/
+/*# sourceMappingURL=main.c9ac5a86bb82066c3d1f.css.map*/

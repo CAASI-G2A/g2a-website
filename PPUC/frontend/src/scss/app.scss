@@ -1,6 +1,7 @@
 @import "~@fontsource/roboto-mono/index.css";
 // import bootstrap styles
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-select/dist/css/bootstrap-select.min.css";
 
 .border-0 {
   border-width: 0 !important;
@@ -72,6 +73,10 @@
   -webkit-border-radius: 6px 0 6px 6px;
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
+}
+
+select.selectpicker {
+  display: block !important;
 }
 
 /* Set padding to keep content from hitting the edges */

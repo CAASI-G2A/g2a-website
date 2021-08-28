@@ -2113,13 +2113,31 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "input-group"
+        className: "col-md-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
-        className: "custom-select",
+        className: "selectpicker",
         value: this.state.countyFilter,
         onChange: function onChange(e) {
           return _this4.setCountyFilter(e.target.value);
-        }
+        },
+        "data-live-search": "true",
+        multiple: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+        value: "null",
+        disabled: true
+      }, "Filter by County"), this.state.queryResultCounties.map(function (result) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+          key: result
+        }, result);
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "input-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
+        className: "selectpicker",
+        value: this.state.countyFilter,
+        onChange: function onChange(e) {
+          return _this4.setCountyFilter(e.target.value);
+        },
+        multiple: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
         value: "null",
         disabled: true
@@ -2161,7 +2179,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
         id: "results"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Results"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4 border-top border-secondary"
-      }), this.state.queryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, this.state.queryResults.length, " Results found!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }), this.state.queryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, this.state.filteredQueryResults.length, " Results found!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-lg-12 mt-3"
       }, this.state.filteredQueryResults.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "text-center lead"
@@ -3208,4 +3226,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.d6097f762dd46edf90b1.js.map
+//# sourceMappingURL=main.5e3ed369cd97d7f33dbe.js.map
