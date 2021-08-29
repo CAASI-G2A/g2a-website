@@ -1,6 +1,10 @@
 {
-  "main.css": "main.f33dbba58df21ca5f058.css",
-  "main.js": "main.5d061870be2d77dd249d.js",
-  "vendor.css": "vendor.3e054a5be394f8ebd005.css",
-  "vendor.js": "vendor.e1c37ede0965e7d40aa6.js"
+  "main.css": "main.2a827e4096f04b458428.css",
+  "main.js": "main.11db55c5a41ace4588ff.js",
+  "main.css.map": "main.2a827e4096f04b458428.css.map",
+  "main.js.map": "main.11db55c5a41ace4588ff.js.map",
+  "vendor.css": "vendor.b76f97f14cbdddd5bbeb.css",
+  "vendor.js": "vendor.27147ca75038e3db0d17.js",
+  "vendor.css.map": "vendor.b76f97f14cbdddd5bbeb.css.map",
+  "vendor.js.map": "vendor.27147ca75038e3db0d17.js.map"
 }

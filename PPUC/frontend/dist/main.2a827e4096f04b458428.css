@@ -1,28 +1,27 @@
-@import "~@fontsource/roboto-mono/index.css";
-// import bootstrap styles
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import "bootstrap-select/dist/css/bootstrap-select.min.css";
-
 .border-0 {
   border-width: 0 !important;
 }
 
-// border sizes from Bootstrap 5
 .border-1 {
   border-width: 1px !important;
 }
+
 .border-2 {
   border-width: 2px !important;
 }
+
 .border-3 {
   border-width: 3px !important;
 }
+
 .border-4 {
   border-width: 4px !important;
 }
+
 .border-5 {
   border-width: 5px !important;
 }
+
 .border-light-gray {
   border-color: #c4c4c4;
 }
@@ -36,8 +35,6 @@
   left: 100%;
   margin-top: -33px;
   margin-left: -1px;
-  -webkit-border-radius: 0 6px 6px 6px;
-  -moz-border-radius: 0 6px 6px;
   border-radius: 0 6px 6px 6px;
 }
 
@@ -70,8 +67,6 @@
 .dropdown-submenu.pull-left > .dropdown-menu {
   left: -100%;
   margin-left: 10px;
-  -webkit-border-radius: 6px 0 6px 6px;
-  -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
 
@@ -86,7 +81,6 @@ select.selectpicker {
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-
 textarea {
   width: 100%;
   height: 75px;
@@ -105,7 +99,7 @@ input.input-validation-error {
   border: 1px solid #b94a48;
 }
 
-input[type="checkbox"].input-validation-error {
+input[type=checkbox].input-validation-error {
   border: 0 none;
 }
 
@@ -116,22 +110,25 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
   display: none;
 }
+
 .navbar-custom {
   background-color: white;
 }
 
-.active-cyan-3 input[type="text"] {
+.active-cyan-3 input[type=text] {
   border: 1px solid #428bca;
   box-shadow: 0 0 0 1px #428bca;
 }
 
-.active-cyan-4 input[type="text"]:focus:not([readonly]) {
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
   border: 1px solid #428bca;
   box-shadow: 0 0 0 1px #428bca;
 }
+
 a {
   overflow-wrap: break-word;
 }
+
 a.a1:link {
   color: black;
 }
@@ -162,6 +159,7 @@ pre {
 .panel-body {
   border-top: 1px solid #428bca;
 }
+
 .scrollable-panel {
   height: 300px;
   overflow-y: scroll;
@@ -175,13 +173,15 @@ pre {
 .flow-circle {
   color: #337ab7;
 }
+
 .flow-circle-selected {
   color: red;
 }
+
 .flow-stage {
   transition: transform 0.35s ease;
 }
-// disable hover on mobile
+
 @media (hover: hover) {
   .flow-stage:hover {
     cursor: pointer;
@@ -200,7 +200,6 @@ pre {
   display: none;
 }
 
-// adds fix to prevent shifting of elements when scroll bars are enabled
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -210,29 +209,26 @@ body {
   border-radius: 15px !important;
 }
 
-// fix font awesome shifting stacked icons
 .flow-stage > .fa-stack {
   position: initial !important;
 }
 
-// custom colors
 .bg-blue {
   background-color: #337ab7;
 }
+
 .border-blue {
   border-color: #337ab7;
 }
 
-// negative margin customized for header next to subprocess buttons when a FAQ is attached to the subprocess icon
 .subprocess-ml-n {
   margin-left: -1.4rem !important;
 }
-// set higher z index so FAQ button is clickable
+
 .subprocess-faq-icon {
   z-index: 2;
 }
 
-// search bar
 .ex-keyword {
   background-color: #007bff;
   padding: 5px;
@@ -242,9 +238,8 @@ body {
   border-radius: 10px !important;
 }
 
-// search result page
-.contract-title {
-}
 .contract-highlight-text {
   color: #5d5d5d;
 }
+
+/*# sourceMappingURL=main.2a827e4096f04b458428.css.map*/
