@@ -74,7 +74,7 @@ class ResearcherResult extends Component {
             </div>
           )}
           {this.props.result.sentences.length > 0 && (
-            <div className="col-md-12">
+            <div className="col-md-12 contract-highlight-text">
               <ResearcherResultSentence
                 searchQueryWords={this.props.searchQueryWords}
                 sentence={{

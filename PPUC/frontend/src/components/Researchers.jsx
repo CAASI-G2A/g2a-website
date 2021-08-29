@@ -202,35 +202,35 @@ class Researchers extends Component {
               <button
                 type="button"
                 onClick={() => this.setSearchQuery("file", true)}
-                className="btn btn-info btn-rounded mr-2"
+                className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 file
               </button>
               <button
                 type="button"
                 onClick={() => this.setSearchQuery("interview", true)}
-                className="btn btn-info btn-rounded mr-2"
+                className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 interview
               </button>
               <button
                 type="button"
                 onClick={() => this.setSearchQuery("arbitration", true)}
-                className="btn btn-info btn-rounded mr-2"
+                className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 arbitration
               </button>
               <button
                 type="button"
                 onClick={() => this.setSearchQuery("review", true)}
-                className="btn btn-info btn-rounded mr-2"
+                className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 review
               </button>
               <button
                 type="button"
                 onClick={() => this.setSearchQuery("investigation", true)}
-                className="btn btn-info btn-rounded"
+                className="ex-keyword btn btn-info btn-rounded"
               >
                 investigation
               </button>
