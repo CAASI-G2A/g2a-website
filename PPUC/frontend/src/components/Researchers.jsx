@@ -60,16 +60,27 @@ class Researchers extends Component {
 
   setCountyFilter(county) {
     if (county) {
-      // filter down to current county
-      const filteredResults = this.state.queryResults.filter(
-        (a) => a.name === county
-      );
-      this.setState({
-        filteredQueryResults: filteredResults,
-        countyFilter: county,
-        currentPage: 1,
-        totalPages: Math.ceil(filteredResults.length / this.state.pageSize),
-      });
+      if (county === "All") {
+        this.setState({
+          filteredQueryResults: this.state.queryResults,
+          countyFilter: "null",
+          currentPage: 1,
+          totalPages: Math.ceil(
+            this.state.queryResults.length / this.state.pageSize
+          ),
+        });
+      } else {
+        // filter down to current county
+        const filteredResults = this.state.queryResults.filter(
+          (a) => a.name === county
+        );
+        this.setState({
+          filteredQueryResults: filteredResults,
+          countyFilter: county,
+          currentPage: 1,
+          totalPages: Math.ceil(filteredResults.length / this.state.pageSize),
+        });
+      }
     } else {
       // disable filter
       this.setState({
@@ -231,32 +242,16 @@ class Researchers extends Component {
             {this.state.queryResultCounties && (
               <div className="col-lg-12 mt-3 row">
                 <div className="col-md-3">
-                  <div className="col-md-3">
-                    <select
-                      className="selectpicker"
-                      value={this.state.countyFilter}
-                      onChange={(e) => this.setCountyFilter(e.target.value)}
-                      data-live-search="true"
-                      multiple
-                    >
-                      <option value="null" disabled>
-                        Filter by County
-                      </option>
-                      {this.state.queryResultCounties.map((result) => (
-                        <option key={result}>{result}</option>
-                      ))}
-                    </select>
-                  </div>
                   <div className="input-group">
                     <select
-                      className="selectpicker"
+                      className="custom-select"
                       value={this.state.countyFilter}
                       onChange={(e) => this.setCountyFilter(e.target.value)}
-                      multiple
                     >
                       <option value="null" disabled>
-                        Filter by County
+                        Filter by Municipality
                       </option>
+                      <option key="All">All</option>
                       {this.state.queryResultCounties.map((result) => (
                         <option key={result}>{result}</option>
                       ))}
