@@ -835,49 +835,7 @@ var Citizens = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
         className: "fa-3x",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faArrowDown
-      })))), this.state.locationSubStages["review"] && this.state.locationSubStages["review"].map(function (subStage) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: subStage.id,
-          className: "col-md-2 d-lg-none"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "text-center flow-stage col-6 col-lg-12"
-        }, !subStage.faq && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-3x flow-circle",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-        }), subStage.faq && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-          "data-toggle": "collapse",
-          "data-target": "#collapseSub".concat(subStage.id),
-          "aria-expanded": "false",
-          "aria-controls": "collapseSub".concat(subStage.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-3x flow-circle",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-          className: "fa-stack fa-xs mr-n4 ml-n1 mb-4"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-stack-2x flow-circle w-100",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-stack-1x fa-inverse",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faEllipsisH,
-          "data-fa-transform": "shrink-10 up-2"
-        }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-3x fa-w-16 flow-circle",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faArrowDown
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-          className: "flow-stage-text col-6 col-lg-12",
-          dangerouslySetInnerHTML: {
-            __html: subStage.html
-          }
-        })), subStage.faq && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row collapse",
-          id: "collapseSub".concat(subStage.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "col-md-12 card card-body"
-        }, subStage.faq.text)));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "row"
@@ -931,98 +889,7 @@ var Citizens = /*#__PURE__*/function (_Component) {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCheck
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
         className: "text-center flow-stage-text col-6 col-lg-12"
-      }, "Result")))), this.state.locationSubStages[this.state.curStage] && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row d-none d-lg-block"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
-        className: "text-capitalize"
-      }, this.state.curStage), this.state.locationSubStages[this.state.curStage].map(function (subStage, index) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: subStage.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row no-gutters"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "pl-3 col-md-auto d-flex align-items-center ".concat(index === 0 ? "pt-2" : "")
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "flow-circle fa-3x",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-        }))), subStage.faq && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "col-md-auto d-flex align-items-start ml-n2 mt-n2 subprocess-faq-icon"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-          "data-toggle": "collapse",
-          "data-target": "#collapseSub".concat(subStage.id),
-          "aria-expanded": "false",
-          "aria-controls": "collapseSub".concat(subStage.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-          className: "fa-stack fa-xs"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-stack-2x flow-circle w-100",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-stack-1x fa-inverse",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faEllipsisH
-        })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "col-md d-flex align-items-center ".concat(subStage.faq ? "subprocess-ml-n" : "")
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
-          dangerouslySetInnerHTML: {
-            __html: subStage.html
-          }
-        }))), subStage.alternates && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row no-gutters"
-        }, subStage.alternates.map(function (altSubStage) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            key: altSubStage.id,
-            className: "row no-gutters"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            className: "col-md-auto d-flex align-items-center",
-            style: {
-              paddingLeft: "1.9rem"
-            }
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-            className: "flow-circle fa-3x mt-n3",
-            style: {
-              fontWeight: "800"
-            }
-          }, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-            className: "fa-3x fa-w-16 flow-circle",
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faArrowRight,
-            style: {
-              marginLeft: "-.75rem"
-            }
-          })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            className: "col-md-auto d-flex align-items-center"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            id: "sub".concat(altSubStage.id)
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-            className: "flow-circle fa-3x",
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-          }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-            className: "col-md d-flex align-items-center"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, altSubStage.text)));
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row no-gutters ".concat(subStage.alternates ? "mt-n3" : "")
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "pl-3 col-md-auto d-flex align-items-center"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-          className: "fa-3x fa-w-16 flow-circle",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faArrowDown
-        }))), subStage.faq && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "row collapse",
-          id: "collapseSub".concat(subStage.id)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "col-md-12 card card-body"
-        }, subStage.faq.text)));
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "row no-gutters"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "col-md-auto d-flex align-items-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-        className: "flow-circle fa-5x",
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faCircle
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "col-md d-flex align-items-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-        className: "text-capitalize"
-      }, this.state.stageOrder[this.state.stageOrder.indexOf(this.state.curStage) + 1])))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Result")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "row mt-5"
       }, this.state.curStage && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CitizenInfoPanel__WEBPACK_IMPORTED_MODULE_7__.default, {
         id: "citizenInfoPanel",
@@ -3219,4 +3086,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.11db55c5a41ace4588ff.js.map
+//# sourceMappingURL=main.cf19f13fa64ffe74b63e.js.map

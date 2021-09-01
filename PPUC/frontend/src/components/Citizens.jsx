@@ -375,7 +375,7 @@ class Citizens extends Component {
               </div>
             </div>
           </div>
-          {this.state.locationSubStages["review"] &&
+          {/* {this.state.locationSubStages["review"] &&
             this.state.locationSubStages["review"].map((subStage) => (
               <div key={subStage.id} className="col-md-2 d-lg-none">
                 <div className="row">
@@ -432,7 +432,7 @@ class Citizens extends Component {
                   </div>
                 )}
               </div>
-            ))}
+            ))} */}
           <div className="col-md-2">
             <div className="row">
               <div
@@ -498,7 +498,7 @@ class Citizens extends Component {
             </div>
           </div>
         </div>
-        {this.state.locationSubStages[this.state.curStage] && (
+        {/* {this.state.locationSubStages[this.state.curStage] && (
           <div className="row d-none d-lg-block">
             <h3 className="text-capitalize">{this.state.curStage}</h3>
             {this.state.locationSubStages[this.state.curStage].map(
@@ -628,7 +628,7 @@ class Citizens extends Component {
               </div>
             </div>
           </div>
-        )}
+        )} */}
         <div className="row mt-5">
           {this.state.curStage && (
             <CitizenInfoPanel
