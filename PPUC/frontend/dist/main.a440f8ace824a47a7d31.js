@@ -1185,15 +1185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../libs/api */ "./src/libs/api.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
@@ -1310,8 +1302,6 @@ var Location = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
-
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.state.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1350,47 +1340,7 @@ var Location = /*#__PURE__*/function (_Component) {
         className: "bg-light"
       }, "State"), this.state.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", null, this.state.location.state))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-12"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Problematic Sentences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
-        className: "my-4 border-top border-secondary"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-        className: "nav nav-tabs",
-        role: "tablist"
-      }, Object.entries(this.categories).map(function (_ref, index) {
-        var _ref2 = _slicedToArray(_ref, 2),
-            category = _ref2[0],
-            title = _ref2[1];
-
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-          key: category,
-          role: "presentation",
-          className: "nav-item"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-          className: "".concat(index === 0 ? "active" : "", " nav-link"),
-          href: "#".concat(category),
-          "aria-controls": category,
-          role: "tab",
-          "data-toggle": "tab"
-        }, title));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "tab-content"
-      }, Object.keys(this.categories).map(function (category, index) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          key: category,
-          role: "tabpanel",
-          className: "tab-pane ".concat(index === 0 ? "active" : ""),
-          id: category
-        }, _this3.state.problematicSentences && _this3.state.problematicSentences[category] && (_this3.state.problematicSentences[category].length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-          className: "text-center"
-        }, "No problematic sentences were identified by Campaign 0 as of June 29, 2016.") || _this3.state.problematicSentences[category].map(function (sentence, index) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-            key: index
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-            className: "font-weight-bold"
-          }, "Problem:"), " ", sentence.text, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-            className: "font-weight-bold"
-          }, "Impact:"), " ", sentence.impact);
-        })));
-      }))), this.state.contract && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }), this.state.contract && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Contract"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4 border-top border-secondary"
@@ -1955,34 +1905,40 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("file", true);
+          return _this4.setSearchQuery("time limit", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
-      }, "file"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "time limit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("interview", true);
+          return _this4.setSearchQuery("discipline", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
-      }, "interview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "discipline"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("arbitration", true);
+          return _this4.setSearchQuery("false arrest", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
-      }, "arbitration"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "false arrest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("review", true);
+          return _this4.setSearchQuery("destroy", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
-      }, "review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "destory"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("investigation", true);
+          return _this4.setSearchQuery("release", true);
+        },
+        className: "ex-keyword btn btn-info btn-rounded mr-2"
+      }, "release"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        type: "button",
+        onClick: function onClick() {
+          return _this4.setSearchQuery("subpoena", true);
         },
         className: "ex-keyword btn btn-info btn-rounded"
-      }, "investigation")))), this.state.filteredQueryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "subpoena")))), this.state.filteredQueryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-lg-12"
       }, this.state.queryResultCounties && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-lg-12 mt-3 row"
@@ -3086,4 +3042,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.cf19f13fa64ffe74b63e.js.map
+//# sourceMappingURL=main.a440f8ace824a47a7d31.js.map

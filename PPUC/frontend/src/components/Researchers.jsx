@@ -201,42 +201,42 @@ class Researchers extends Component {
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("file", true)}
+                onClick={() => this.setSearchQuery("time limit", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 time limit
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("interview", true)}
+                onClick={() => this.setSearchQuery("discipline", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 discipline
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("arbitration", true)}
+                onClick={() => this.setSearchQuery("false arrest", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 false arrest
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("review", true)}
+                onClick={() => this.setSearchQuery("destroy", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 destory
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("investigation", true)}
-                className="ex-keyword btn btn-info btn-rounded"
+                onClick={() => this.setSearchQuery("release", true)}
+                className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 release
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("investigation", true)}
+                onClick={() => this.setSearchQuery("subpoena", true)}
                 className="ex-keyword btn btn-info btn-rounded"
               >
                 subpoena

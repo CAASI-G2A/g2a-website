@@ -113,7 +113,7 @@ class Location extends Component {
             </table>
           </div>
           <div className="col-md-12">
-            <h2>Problematic Sentences</h2>
+            {/* <h2>Problematic Sentences</h2>
             <hr className="my-4 border-top border-secondary" />
             <ul className="nav nav-tabs" role="tablist">
               {Object.entries(this.categories).map(
@@ -131,8 +131,8 @@ class Location extends Component {
                   </li>
                 )
               )}
-            </ul>
-            <div className="tab-content">
+            </ul> */}
+            {/* <div className="tab-content">
               {Object.keys(this.categories).map((category, index) => (
                 <div
                   key={category}
@@ -164,7 +164,7 @@ class Location extends Component {
                       ))}
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
           {this.state.contract && (
             <div className="col-md-12">
