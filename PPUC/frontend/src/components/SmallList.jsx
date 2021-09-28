@@ -32,6 +32,28 @@ class SmallList extends Component {
   }
 
   componentDidMount() {
+    try {
+      Api.getSListData().then((resp) => {
+        // sort based on city name
+        resp.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        resp.map((row) => {
+          this.setState({
+            listData: [...this.state.listData, row.name],
+          });
+        });
+      });
+    } catch (err) {
+      throw err;
+    }
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -43,17 +65,17 @@ class SmallList extends Component {
   }
 
   render() {
-    /*return (
-            <>
-                {this.readData()}
-            <List
-                bordered
-                dataSource={this.state.listData2}
-                renderItem={item => <List.Item>{item}</List.Item>}
-                />
-                </>
-        );
-    }*/
+    /* return (
+             <>
+                 {this.readData()}
+             <List
+                 bordered
+                 dataSource={this.state.listData2}
+                 renderItem={item => <List.Item>{item}</List.Item>}
+                 />
+                 </>
+         );
+     }*/
     return (
       <>
         <Menu
