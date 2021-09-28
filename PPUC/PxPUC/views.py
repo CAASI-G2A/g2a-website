@@ -141,6 +141,10 @@ def update_server(request):
         return HttpResponse("update initiated")
     return HttpResponse()
 
+def save_search_query(request, search):
+    print("Made it to query save!")
+    return HttpResponse()
+
 
 class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
@@ -257,6 +261,10 @@ class ResearcherSearchList(generics.ListAPIView):
 
         # combine results
         queryset = (sentence_queryset | location_queryset).distinct()
+
+        # save search query
+        saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
+        saved_query.save()
 
         return queryset
 

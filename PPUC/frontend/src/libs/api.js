@@ -2,6 +2,7 @@ const toJSON = (resp) => resp.json();
 const Api = {
   BASE_PATH: "/PxPUC",
   ENDPOINTS: {
+    // Endpoints correspond with the URL paths in urls.py
     getLocations: () => `${Api.BASE_PATH}/locations`,
     getLocation: (lid) => `${Api.BASE_PATH}/location/${lid}`,
     getLocationContract: (lid) => `${Api.BASE_PATH}/location/${lid}/contract`,
