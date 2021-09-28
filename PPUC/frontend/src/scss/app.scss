@@ -248,3 +248,26 @@ body {
 .contract-highlight-text {
   color: #5d5d5d;
 }
+
+.list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  width: 280px;
+  position: relative;
+  left: 10px;
+  border: 1px solid black;
+}
+
+.map {
+  width: 700px;
+  border: 0px;
+  height: 500px;
+  position: initial;
+}
+
+.div-for-map {
+  display: flex;
+  position: relative;
+  left: 100px;
+}

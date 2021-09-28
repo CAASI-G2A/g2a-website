@@ -7,6 +7,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import SmallList from "./SmallList";
 
 class Researchers extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Researchers extends Component {
       currentPage: 1,
       totalPages: 1,
       pageSize: 10,
+      showResult: false,
     };
     this.setPage = this.setPage.bind(this);
     this.setPageSize = this.setPageSize.bind(this);
@@ -133,6 +135,7 @@ class Researchers extends Component {
           searchQueryWords: searchQueryWords,
           countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
+          showResult: true,
         });
       });
       // set search query param
@@ -243,6 +246,31 @@ class Researchers extends Component {
               </button>
             </div>
           </div>
+        </div>
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div>
+          {this.state.showResult === false ? (
+            <div className="div-for-map">
+              <iframe
+                title="resg"
+                src="test.html"
+                className="map"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                scrolling="auto"
+              />
+              <div className="list">
+                <SmallList />
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
