@@ -1634,16 +1634,18 @@ var ResearcherResult = /*#__PURE__*/function (_Component2) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! query-string */ "./node_modules/query-string/index.js");
-/* harmony import */ var scroll_to_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! scroll-to-element */ "./node_modules/scroll-to-element/index.js");
-/* harmony import */ var scroll_to_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(scroll_to_element__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var _libs_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../libs/api */ "./src/libs/api.js");
-/* harmony import */ var _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../libs/researcher_search_lang */ "./src/libs/researcher_search_lang.js");
-/* harmony import */ var _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../routes */ "./src/routes.js");
-/* harmony import */ var _ResearcherResult__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ResearcherResult */ "./src/components/ResearcherResult.jsx");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! query-string */ "./node_modules/query-string/index.js");
+/* harmony import */ var scroll_to_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! scroll-to-element */ "./node_modules/scroll-to-element/index.js");
+/* harmony import */ var scroll_to_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(scroll_to_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _libs_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../libs/api */ "./src/libs/api.js");
+/* harmony import */ var _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../libs/researcher_search_lang */ "./src/libs/researcher_search_lang.js");
+/* harmony import */ var _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes */ "./src/routes.js");
+/* harmony import */ var _ResearcherResult__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ResearcherResult */ "./src/components/ResearcherResult.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -1677,6 +1679,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -1726,7 +1729,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
         currentPage: newPage
       }); // scroll to top
 
-      scroll_to_element__WEBPACK_IMPORTED_MODULE_2__("#results");
+      scroll_to_element__WEBPACK_IMPORTED_MODULE_3__("#results");
     }
   }, {
     key: "setPageSize",
@@ -1801,10 +1804,10 @@ var Researchers = /*#__PURE__*/function (_Component) {
           }
         };
 
-        var searchQuery = _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_5___default().parse(this.state.searchQuery); // parse down to just the words being searched for, for highlighting
+        var searchQuery = _libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_6___default().parse(this.state.searchQuery); // parse down to just the words being searched for, for highlighting
 
         var searchQueryWords = getQueryWords(searchQuery["query"]);
-        _libs_api__WEBPACK_IMPORTED_MODULE_4__.default.getResearcherSearchResults(searchQuery).then(function (resp) {
+        _libs_api__WEBPACK_IMPORTED_MODULE_5__.default.getResearcherSearchResults(searchQuery).then(function (resp) {
           // sort based on city name
           resp.sort(function (a, b) {
             if (a.name < b.name) {
@@ -1834,13 +1837,13 @@ var Researchers = /*#__PURE__*/function (_Component) {
         }); // set search query param
 
         this.props.history.push({
-          pathname: _routes__WEBPACK_IMPORTED_MODULE_6__.default.researchers,
+          pathname: _routes__WEBPACK_IMPORTED_MODULE_7__.default.researchers,
           search: "?" + new URLSearchParams({
             search: this.state.searchQuery
           }).toString()
         });
       } catch (err) {
-        if (err instanceof (_libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_5___default().SyntaxError)) {
+        if (err instanceof (_libs_researcher_search_lang__WEBPACK_IMPORTED_MODULE_6___default().SyntaxError)) {
           this.setState({
             searchQueryError: err
           });
@@ -1852,11 +1855,16 @@ var Researchers = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      var queryParams = query_string__WEBPACK_IMPORTED_MODULE_1__.parse(this.props.location.search); // if search already set, use it
+      var queryParams = query_string__WEBPACK_IMPORTED_MODULE_2__.parse(this.props.location.search); // if search already set, use it
 
       if (queryParams.search) {
         this.setSearchQuery(queryParams.search, true);
       }
+
+      console.log('dddd');
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()("#app").click(function () {
+        console.log('clicked');
+      });
     }
   }, {
     key: "render",
@@ -1888,8 +1896,8 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         className: "btn btn-outline-primary",
         type: "submit"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__.faSearch
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faSearch
       })))), this.state.searchQueryError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "text-danger text-center"
       }, "This search query is invalid")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1969,8 +1977,8 @@ var Researchers = /*#__PURE__*/function (_Component) {
         onClick: function onClick() {
           return _this4.setCountyFilter();
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__.faTimes
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faTimes
       }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-3 offset-md-6"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
@@ -2000,7 +2008,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, this.state.filteredQueryResults.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "text-center lead"
       }, "Sorry, it appears there are no results for this search!"), this.state.filteredQueryResults.slice(this.state.pageSize * (this.state.currentPage - 1), this.state.pageSize * this.state.currentPage).map(function (result) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ResearcherResult__WEBPACK_IMPORTED_MODULE_7__.default, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ResearcherResult__WEBPACK_IMPORTED_MODULE_8__.default, {
           result: result,
           searchQueryWords: _this4.state.searchQueryWords,
           key: result.id
@@ -3042,4 +3050,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.a440f8ace824a47a7d31.js.map
+//# sourceMappingURL=main.ac71d3451ebb7ece0a4f.js.map

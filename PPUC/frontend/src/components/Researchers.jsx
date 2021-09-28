@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import $ from 'jquery';
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -159,6 +160,11 @@ class Researchers extends Component {
     if (queryParams.search) {
       this.setSearchQuery(queryParams.search, true);
     }
+
+    console.log('dddd')
+    $("#app").click(function(){
+       console.log('clicked');
+    });
   }
 
   render() {
