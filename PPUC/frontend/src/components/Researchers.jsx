@@ -256,6 +256,20 @@ class Researchers extends Component {
         </div>
         <div>
           {this.state.showResult === false ? (
+            <div
+              style={{
+                fontFamily: "Helvetica",
+                fontSize: 38,
+                position: "relative",
+                left: 280,
+              }}
+            >
+              Explore police department map
+            </div>
+          ) : (
+            <></>
+          )}
+          {this.state.showResult === false ? (
             <div className="div-for-map">
               <iframe
                 title="resg"
