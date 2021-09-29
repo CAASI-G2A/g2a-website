@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import $ from 'jquery';
+import $ from "jquery";
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +8,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import SmallList from "./SmallList";
 
 class Researchers extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Researchers extends Component {
       currentPage: 1,
       totalPages: 1,
       pageSize: 10,
+      showResult: false,
     };
     this.setPage = this.setPage.bind(this);
     this.setPageSize = this.setPageSize.bind(this);
@@ -134,6 +136,7 @@ class Researchers extends Component {
           searchQueryWords: searchQueryWords,
           countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
+          showResult: true,
         });
       });
       // set search query param
@@ -161,9 +164,9 @@ class Researchers extends Component {
       this.setSearchQuery(queryParams.search, true);
     }
 
-    console.log('dddd')
-    $("#app").click(function(){
-       console.log('clicked');
+    console.log("dddd");
+    $("#app").click(function () {
+      console.log("clicked");
     });
   }
 
@@ -249,6 +252,36 @@ class Researchers extends Component {
               </button>
             </div>
           </div>
+        </div>
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div>
+          {this.state.showResult === false ? (
+            <div>
+              <h4 style={{ paddingLeft: "100px", color: "#007bff" }}>
+                Explore the police department map
+              </h4>
+              <div className="div-for-map">
+                <iframe
+                  title="resg"
+                  src="test.html"
+                  className="map"
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                  scrolling="auto"
+                />
+                <div>
+                  <SmallList />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
