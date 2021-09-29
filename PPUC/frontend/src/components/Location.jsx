@@ -59,6 +59,7 @@ class Location extends Component {
   }
 
   render() {
+    console.log("I am rendering");
     return (
       <div>
         {this.state.location && (

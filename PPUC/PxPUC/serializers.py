@@ -36,6 +36,7 @@ class LocationSerializer(serializers.ModelSerializer):
         # check filesystem
         state = re.sub(" ", "-", obj.state)
         city = re.sub(" ", "-", obj.name)
+        print(city)
         return os.path.exists(
             "%s/PxPUC/static/app/contracts_txt/%s_%s.txt" % (os.getcwd(), state, city)
         )
