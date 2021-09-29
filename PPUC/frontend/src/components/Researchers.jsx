@@ -254,38 +254,7 @@ class Researchers extends Component {
           <br />
           <br />
         </div>
-        <div>
-          {this.state.showResult === false ? (
-            <div
-              style={{
-                fontFamily: "Helvetica",
-                fontSize: 38,
-                position: "relative",
-                left: 280,
-              }}
-            >
-              Explore police department map
-            </div>
-          ) : (
-            <></>
-          )}
-          {this.state.showResult === false ? (
-            <div className="div-for-map">
-              <iframe
-                title="resg"
-                src="test.html"
-                className="map"
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                scrolling="auto"
-              />
-              <div className="list">
-                <SmallList />
-              </div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
+        <div></div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
             {this.state.queryResultCounties && (

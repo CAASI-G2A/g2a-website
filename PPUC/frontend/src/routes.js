@@ -5,4 +5,5 @@ export default {
   about: "/about",
   contact: "/contact",
   location: "/location",
+  map: "/map",
 };
