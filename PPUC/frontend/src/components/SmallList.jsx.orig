@@ -76,27 +76,26 @@ class SmallList extends Component {
   render() {
     return (
       <div>
-        <div
-          style={{
-            fontFamily: "Helvetica",
-            fontSize: 32,
-            position: "relative",
-            left: 101,
-            color: "dodgerblue",
-          }}
-        >
-          Explore police department map
-        </div>
-        <>
-          <div className="div-for-map">
-            <iframe
-              title="resg"
-              src="test.html"
-              className="map"
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              scrolling="auto"
-            />
-            <div className="list">
+            <div
+                style={{
+                    fontFamily: "Helvetica",
+                    fontSize: 32,
+                    position: "relative",
+                    left: 101,
+                    color: "dodgerblue",
+                }}>
+                Explore police department map
+                </div>
+      <>
+        <div className="div-for-map">
+          <iframe
+            title="resg"
+            src="test.html"
+            className="map"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            scrolling="auto"
+          />
+          <div className="list">
               <Menu
                 theme={this.state.theme}
                 onClick={this.handleClick}
@@ -106,9 +105,9 @@ class SmallList extends Component {
               >
                 {this.makeList()}
               </Menu>
-            </div>
-          </div>
-        </>
+             </div>
+           </div>
+       </>
       </div>
     );
   }

@@ -260,7 +260,8 @@ class Researchers extends Component {
           <br />
           <br />
         </div>
-        <div></div>
+        <div>
+        </div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
             {this.state.queryResultCounties && (
