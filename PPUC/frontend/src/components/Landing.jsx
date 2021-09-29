@@ -27,68 +27,69 @@ class Landing extends Component {
         </div>
         <div
           className="jumbotron"
-          style={{ backgroundColor: "white", paddingTop: "20px" }}
+          style={{ backgroundColor: "white", padding: "5px 30px" }}
         >
-          <h2>What does our tool do?</h2>
           <p className="lead">
-            Our tool allows researchers to explore police union contracts more
-            easily for information, and helps citizens to find resources near
-            them and learn more about the process of filing a misconduct
-            complaint.
+            <i>
+              <b>Allegheny County Policing Project (ACPP)</b> is an
+              interdisciplinary working group at the University of PIttsburgh
+              dedicated to empowering marginalized communities through data
+              science. Our mission is to bring more transparency in Allegheny
+              County.
+            </i>
           </p>
-          <Link
-            className="btn btn-secondary float-right"
-            to={routes.about}
-            role="button"
-          >
-            Learn more
-          </Link>
         </div>
 
         <hr className="my-4" />
-
+        <div className="jumbotron" style={{ padding: "2rem" }}>
+          <p className="lead">What you can do on this website:</p>
+          <h4 style={{ marginBottom: "0px" }}>
+            {" "}
+            Explore &nbsp;
+            <Link to={routes.researchers}>Police Dept Map</Link>
+          </h4>
+          <p className="lead">
+            Find your local and neighboring police department and learn about
+            it.
+          </p>
+          <h4 style={{ marginBottom: "0px" }}>
+            <Link to={routes.researchers}>Search Police Contracts</Link>
+          </h4>
+          <p className="lead">
+            Search and compare over 100 contracts from Allegheny County. Filter
+            contracts by location.
+          </p>
+          <h4 style={{ marginBottom: "0px" }}>
+            <Link to={routes.researchers}>Pittsburgh Complaint FAQ</Link>
+          </h4>
+          <p className="lead">
+            Learn about the process of filing a police misconduct complaint at
+            Pittsburgh.
+          </p>
+        </div>
         <div
           className="jumbotron"
-          style={{ backgroundColor: "white", paddingTop: "20px" }}
+          style={{ backgroundColor: "white", padding: "5px 30px" }}
         >
-          <h2>How can it help?</h2>
           <p className="lead">
-            With a more widespread understanding of these police union
-            contracts, we can help break down the barriers they pose to holding
-            police offers accountable for misconduct and misconduct
-            investigation processes. This can help those considering filing a
-            police misconduct complaint understand more about how the process
-            works and what it means for them if they choose to do so.
-          </p>
-          <Link
-            className="btn btn-secondary float-right"
-            to={routes.about}
-            role="button"
-          >
-            Learn more
-          </Link>
-        </div>
-
-        <div className="jumbotron">
-          <h2>
-            <Link to={routes.researchers}>
-              Researchers: search and compare police union contracts
-            </Link>
-          </h2>
-          <p className="lead">
-            Search our database of police contracts by keyword or by city.
+            <b style={{ fontWeight: 600 }}>Why do we need these tools? </b>
+            Data surrounding policing can be difficult for the public to access.
+            This is especially true to Allegheny County due to the hyper
+            fragmentation of all 130 municipalities which makes the process
+            harder to navigate. Our tools consolidate information in
+            easy-to-navigate ways for citizens, researchers, and activists
+            interested in more police accountability in our country.
           </p>
         </div>
-
         <div className="jumbotron">
-          <h2>
-            <Link to={routes.citizens}>
-              Citizens: learn about the process of filing a misconduct complaint
-            </Link>
-          </h2>
+          <h4> Explore police contracts of Allegheny County</h4>
           <p className="lead">
-            Learn about the stages of filing a complaint and find links to
-            resources for your city.
+            There are 108 separate governmental police departments operating in
+            Allegheny County. This includes departments operating at the
+            municipal, regional, county, and state level, from Stowe Township to
+            the Pennsylvania State Troopers. We have gathered police contracts
+            from almost 100 of these departments and made them publicly
+            available to help make policing more transparent in the County.
           </p>
         </div>
       </div>
