@@ -1,3 +1,4 @@
+from django.db.models import fields
 from django.db.models.query import QuerySet
 from rest_framework import serializers
 from .models import *
@@ -154,3 +155,8 @@ class GlossaryTermSerializer(serializers.ModelSerializer):
     class Meta:
         model = GlossaryTerm
         fields = ("id", "term", "definition")
+
+class SearchQuerySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SearchQuery
+        fields = {"id", "query", "timestamp", "results"}

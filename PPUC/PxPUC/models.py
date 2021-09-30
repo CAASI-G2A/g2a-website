@@ -78,3 +78,8 @@ class GlossaryTerm(models.Model):
     )
     term = models.TextField()
     definition = models.TextField()
+
+class SearchQuery(models.Model):
+    query = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+    results = models.IntegerField()
