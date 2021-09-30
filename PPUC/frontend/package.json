@@ -42,7 +42,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-select": "^1.13.18",
     "core-js": "^3.8.3",
-    "jquery": "^1.12.4",
+    "jquery": "^3.6.0",
     "leader-line": "^1.0.5",
     "pegjs": "^0.10.0",
     "popper.js": "^1.16.1",

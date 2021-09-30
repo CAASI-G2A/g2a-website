@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
 import { Alert } from "antd";
@@ -103,9 +102,9 @@ class Researchers extends Component {
       event.preventDefault();
     }
 
-    /*
     // parse query
     try {
+      /*
       function getQueryWords(query) {
         if (typeof query === "string") {
           return [query];
@@ -119,7 +118,7 @@ class Researchers extends Component {
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
       */
-     
+
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
         resp.sort((a, b) => {
@@ -168,11 +167,6 @@ class Researchers extends Component {
     if (queryParams.search) {
       this.setSearchQuery(queryParams.search, true);
     }
-
-    console.log("dddd");
-    $("#app").click(function () {
-      console.log("clicked");
-    });
   }
 
   render() {
