@@ -104,7 +104,7 @@ class Researchers extends Component {
 
     // parse query
     try {
-      /*
+      
       function getQueryWords(query) {
         if (typeof query === "string") {
           return [query];
@@ -117,7 +117,7 @@ class Researchers extends Component {
       const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
-      */
+      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
