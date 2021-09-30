@@ -123,3 +123,8 @@ STATIC_URL = '/static/'
 # Additional directories for static files
 # Webpacked assets stored here
 STATICFILES_DIRS = [BASE_DIR + '/frontend/dist']
+
+
+# Allow iframe
+X_FRAME_OPTIONS = 'ALLOWALL'
+XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']

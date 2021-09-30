@@ -38,6 +38,12 @@ def landing(request):
     return render(request, "app/landing.html", context)
 
 
+def map(request):
+    """Renders the map."""
+    assert isinstance(request, HttpRequest)
+    return render(request, "app/test.html")
+
+
 def home(request):
     """Renders the home page."""
     context = {

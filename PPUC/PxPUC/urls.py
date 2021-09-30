@@ -11,10 +11,15 @@ from django.views.decorators.csrf import csrf_exempt
 urlpatterns = [
     # Many of the url patterns correspond with respective endpoint in api.js
     path("PxPUC/", views.home, name="PxPUC"),
+    path("PxPUC/test.html", views.map),
     path("PxPUC/view_sentence/<int:sid>", views.view_sentence, name="view_sentence"),
     path("PxPUC/edit_sentence/<int:sid>", views.edit_sentence, name="edit_sentence"),
     path("PxPUC/locations", views.LocationList.as_view(), name="location-list"),
     path("PxPUC/update", csrf_exempt(views.update_server)),
+    path(
+        "PxPUC/muni_list_data",
+        views.LocationList.as_view(),
+    ),
     path(
         "PxPUC/location/<int:lid>",
         views.LocationRetrieve.as_view(),
