@@ -12,7 +12,10 @@ class Navbar extends Component {
             className="navbar-brand"
             style={{ fontWeight: "bold" }}
           >
-            ACPP
+            <img
+              src="/static/app/img/acpp.png"
+              style={{ width: "100px", paddingBottom: "5px" }}
+            />
           </NavLink>
           <button
             type="button"
