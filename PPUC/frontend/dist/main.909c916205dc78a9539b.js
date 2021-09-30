@@ -1185,7 +1185,7 @@ var Landing = /*#__PURE__*/function (_Component) {
         className: "jumbotron"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, " Explore police contracts of Allegheny County"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "lead"
-      }, "There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available to help make policing more transparent in the County.")));
+      }, "There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available to help make policing more transparent in the County."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "These contracts often contain controversial provisions that require cities to pay legal expenses for police officers accused of misconduct and make it more difficult to hold these officers accountable. From our preliminary analysis we found that nearly half of the contracts disqualify misconduct complaints from the public that are submitted anonymously, and nearly a third of contracts stipulate that when police officers are disciplined the municipality cannot release any information to the public about why discipline was imposed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.")));
     }
   }]);
 
@@ -3280,4 +3280,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.f7056fec81b362b06524.js.map
+//# sourceMappingURL=main.909c916205dc78a9539b.js.map
