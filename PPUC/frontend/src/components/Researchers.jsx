@@ -104,7 +104,6 @@ class Researchers extends Component {
 
     // parse query
     try {
-      
       function getQueryWords(query) {
         if (typeof query === "string") {
           return [query];
@@ -117,7 +116,6 @@ class Researchers extends Component {
       const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
-      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
@@ -219,7 +217,7 @@ class Researchers extends Component {
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("time limit", true)}
+                onClick={() => this.setSearchQuery('"time limit"', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 time limit
@@ -233,7 +231,7 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("false arrest", true)}
+                onClick={() => this.setSearchQuery('"false arrest"', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 false arrest

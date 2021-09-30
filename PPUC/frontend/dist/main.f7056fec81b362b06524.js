@@ -1951,7 +1951,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("time limit", true);
+          return _this4.setSearchQuery('"time limit"', true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "time limit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
@@ -1963,7 +1963,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, "discipline"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         onClick: function onClick() {
-          return _this4.setSearchQuery("false arrest", true);
+          return _this4.setSearchQuery('"false arrest"', true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "false arrest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
@@ -3280,4 +3280,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.d7f9ec07a7b86cc7e66e.js.map
+//# sourceMappingURL=main.f7056fec81b362b06524.js.map
