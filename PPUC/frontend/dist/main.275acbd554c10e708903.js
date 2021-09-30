@@ -1712,6 +1712,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Researchers = /*#__PURE__*/function (_Component) {
   _inherits(Researchers, _Component);
 
@@ -1928,6 +1929,12 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-3 small text-secondary"
       }, "e.g., interview AND review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "col-md-6 offset-md-3 text-secondary",
+        style: {
+          backgroundColor: "#f9f9f9",
+          padding: "10px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "**Instruction: "), " Use the search bar above to look for keywords in police contracts. To search a phrase, use quotation marks on both ends (i.e. \u201Ctime limit\u201D). You can also use an OR function to find contracts with two keywords (i.e. false OR arrest). Below are some keyword suggestions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-3 mt-2 text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "btn-group",
@@ -3068,12 +3075,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************!*\
   !*** ./src/scss/app.scss ***!
   \***************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Expected identifier.\n    ╷\n274 │   background: ##f9f9f9;\n    │                ^\n    ╵\n  src/scss/app.scss 274:16  root stylesheet\n    at processResult (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/webpack/lib/NormalModule.js:598:19)\n    at /Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/webpack/lib/NormalModule.js:692:5\n    at /Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/loader-runner/lib/LoaderRunner.js:399:11\n    at /Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/loader-runner/lib/LoaderRunner.js:251:18\n    at context.callback (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at /Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/sass-loader/dist/index.js:54:7\n    at Function.call$2 (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/sass/sass.dart.js:91135:16)\n    at _render_closure1.call$2 (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/sass/sass.dart.js:80011:12)\n    at _RootZone.runBinary$3$3 (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/sass/sass.dart.js:27197:18)\n    at _FutureListener.handleError$1 (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/sass/sass.dart.js:25725:19)");
 
 /***/ })
 
@@ -3270,4 +3274,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.f6fa05d0ef2e5e5270cb.js.map
+//# sourceMappingURL=main.275acbd554c10e708903.js.map

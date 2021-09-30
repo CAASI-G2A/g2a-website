@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import $ from "jquery";
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
+import { Alert } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Api from "../libs/api";
@@ -205,6 +206,16 @@ class Researchers extends Component {
         <div className="col-lg-12 mt-1">
           <div className="col-md-6 offset-md-3 small text-secondary">
             e.g., interview AND review
+          </div>
+          <div
+            className="col-md-6 offset-md-3 text-secondary"
+            style={{ backgroundColor: "#f9f9f9", padding: "10px" }}
+          >
+            <b>**Instruction: </b> Use the search bar above to look for keywords
+            in police contracts. To search a phrase, use quotation marks on both
+            ends (i.e. “time limit”). You can also use an OR function to find
+            contracts with two keywords (i.e. false OR arrest). Below are some
+            keyword suggestions.
           </div>
           <div className="col-md-6 offset-md-3 mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
