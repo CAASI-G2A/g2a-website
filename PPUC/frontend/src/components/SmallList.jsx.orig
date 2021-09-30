@@ -76,46 +76,38 @@ class SmallList extends Component {
   render() {
     return (
       <div>
-        <h4
-          style={{
-            fontFamily: "Helvetica",
-            position: "relative",
-            left: 101,
-            color: "dodgerblue",
-            marginTop: "50px",
-          }}
-        >
-          Explore police department map
-        </h4>
-        <>
-          <div className="div-for-map">
-            <iframe
-              title="resg"
-              src="test.html"
-              className="map"
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              scrolling="auto"
-            />
-            <div>
+            <div
+                style={{
+                    fontFamily: "Helvetica",
+                    fontSize: 32,
+                    position: "relative",
+                    left: 101,
+                    color: "dodgerblue",
+                }}>
+                Explore police department map
+                </div>
+      <>
+        <div className="div-for-map">
+          <iframe
+            title="resg"
+            src="test.html"
+            className="map"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            scrolling="auto"
+          />
+          <div className="list">
               <Menu
                 theme={this.state.theme}
                 onClick={this.handleClick}
-                style={{
-                  width: 250,
-                  height: 500,
-                  border: "1px solid #ebebeb",
-                  overflowY: "scroll",
-                  color: "gray",
-                  fontWeight: 600,
-                }}
+                style={{ width: 256 }}
                 selectedKeys={this.state.current}
                 mode="inline"
               >
                 {this.makeList()}
               </Menu>
-            </div>
-          </div>
-        </>
+             </div>
+           </div>
+       </>
       </div>
     );
   }

@@ -98,10 +98,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/app.scss */ "./src/scss/app.scss");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes */ "./src/routes.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navbar */ "./src/components/Navbar.jsx");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer */ "./src/components/Footer.jsx");
@@ -111,6 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./About */ "./src/components/About.jsx");
 /* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Contact */ "./src/components/Contact.jsx");
 /* harmony import */ var _Location__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Location */ "./src/components/Location.jsx");
+/* harmony import */ var _SmallList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./SmallList */ "./src/components/SmallList.jsx");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -136,6 +137,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 // import bootstrap
  // import site styles
+
 
 
 
@@ -188,25 +190,29 @@ var App = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_6__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_6__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
         className: "container body-content"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.home,
         exact: true,
         component: _Landing__WEBPACK_IMPORTED_MODULE_8__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+        path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.map,
+        exact: true,
+        component: _SmallList__WEBPACK_IMPORTED_MODULE_14__.default
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.researchers,
         component: _Researchers__WEBPACK_IMPORTED_MODULE_9__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.citizens + "/:lid?",
         component: _Citizens__WEBPACK_IMPORTED_MODULE_10__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.about,
         component: _About__WEBPACK_IMPORTED_MODULE_11__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.contact,
         component: _Contact__WEBPACK_IMPORTED_MODULE_12__.default
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
         path: _routes__WEBPACK_IMPORTED_MODULE_5__.default.location + "/:lid",
         component: _Location__WEBPACK_IMPORTED_MODULE_13__.default
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
@@ -215,7 +221,7 @@ var App = /*#__PURE__*/function (_Component) {
         className: "btn btn-light btn-lg back-to-top",
         role: "button"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_16__.faChevronUp
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_17__.faChevronUp
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_7__.default, null)));
     }
   }]);
@@ -1046,9 +1052,147 @@ var Footer = /*#__PURE__*/function (_Component) {
 /*!************************************!*\
   !*** ./src/components/Landing.jsx ***!
   \************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/yong8/Workspace/g2a-website/PPUC/frontend/src/components/Landing.jsx: Expected corresponding JSX closing tag for <br> (81:8)\n\n\u001b[0m \u001b[90m 79 |\u001b[39m             contracts by location\u001b[33m.\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 80 |\u001b[39m           \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mp\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 82 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"jumbotron\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 |\u001b[39m           \u001b[33m<\u001b[39m\u001b[33mh2\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.jsxParseElementAt (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:4757:16)\n    at Object.jsxParseElementAt (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:4725:32)\n    at Object.jsxParseElementAt (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:4725:32)\n    at Object.jsxParseElement (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:4783:17)\n    at Object.parseExprAtom (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:4790:19)\n    at Object.parseExprSubscripts (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:10248:23)\n    at Object.parseUpdate (/Users/yong8/Workspace/g2a-website/PPUC/frontend/node_modules/@babel/parser/lib/index.js:10228:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../routes */ "./src/routes.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var Landing = /*#__PURE__*/function (_Component) {
+  _inherits(Landing, _Component);
+
+  var _super = _createSuper(Landing);
+
+  function Landing() {
+    _classCallCheck(this, Landing);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Landing, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "jumbotron",
+        style: {
+          backgroundImage: "url(https://i.imgur.com/jj0eBl5.jpg)",
+          backgroundSize: "100%",
+          paddingTop: "60px",
+          paddingBottom: "90px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "/static/app/img/CAASI2.png",
+        style: {
+          width: "55px",
+          paddingBottom: "14px",
+          opacity: 0.9
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+        style: {
+          color: "white"
+        }
+      }, "ACPP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+        className: "my-4",
+        style: {
+          borderTop: "1px solid white"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead",
+        style: {
+          color: "white"
+        }
+      }, "Allegheny County Policing Project")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "jumbotron",
+        style: {
+          backgroundColor: "white",
+          padding: "5px 30px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Allegheny County Policing Project (ACPP)"), " is an interdisciplinary working group at the University of PIttsburgh dedicated to empowering marginalized communities through data science. Our mission is to bring more transparency in Allegheny County."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+        className: "my-4"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "jumbotron",
+        style: {
+          padding: "2rem"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "What you can do on this website:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        style: {
+          marginBottom: "0px"
+        }
+      }, " ", "Explore \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
+      }, "Police Dept Map")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "Find your local and neighboring police department and learn about it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        style: {
+          marginBottom: "0px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
+      }, "Search Police Contracts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "Search and compare over 100 contracts from Allegheny County. Filter contracts by location."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        style: {
+          marginBottom: "0px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
+      }, "Pittsburgh Complaint FAQ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "Learn about the process of filing a police misconduct complaint at Pittsburgh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "jumbotron",
+        style: {
+          backgroundColor: "white",
+          padding: "5px 30px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", {
+        style: {
+          fontWeight: 600
+        }
+      }, "Why do we need these tools? "), "Data surrounding policing can be difficult for the public to access. This is especially true to Allegheny County due to the hyper fragmentation of all 130 municipalities which makes the process harder to navigate. Our tools consolidate information in easy-to-navigate ways for citizens, researchers, and activists interested in more police accountability in our country.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "jumbotron"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, " Explore police contracts of Allegheny County"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available to help make policing more transparent in the County.")));
+    }
+  }]);
+
+  return Landing;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Landing);
 
 /***/ }),
 
@@ -1315,12 +1459,16 @@ var Navbar = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
         className: "nav-item nav-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.map
+      }, "Police Dept Map")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+        className: "nav-item nav-link"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
         to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
-      }, "Researchers")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      }, "Search Police Contracts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
         className: "nav-item nav-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
         to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.citizens
-      }, "Citizens")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      }, "Complaint FAQ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
         className: "nav-item nav-link"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
         to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.about
@@ -1574,6 +1722,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Researchers = /*#__PURE__*/function (_Component) {
   _inherits(Researchers, _Component);
 
@@ -1790,6 +1939,12 @@ var Researchers = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-3 small text-secondary"
       }, "e.g., interview AND review"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "col-md-6 offset-md-3 text-secondary",
+        style: {
+          backgroundColor: "#f9f9f9",
+          padding: "10px"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "**Instruction: "), " Use the search bar above to look for keywords in police contracts. To search a phrase, use quotation marks on both ends (i.e. \u201Ctime limit\u201D). You can also use an OR function to find contracts with two keywords (i.e. false OR arrest). Below are some keyword suggestions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-3 mt-2 text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "btn-group",
@@ -1831,20 +1986,7 @@ var Researchers = /*#__PURE__*/function (_Component) {
           return _this4.setSearchQuery("subpoena", true);
         },
         className: "ex-keyword btn btn-info btn-rounded"
-      }, "subpoena")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.state.showResult === false ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
-        style: {
-          paddingLeft: "100px",
-          color: "#007bff"
-        }
-      }, "Explore the police department map"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "div-for-map"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
-        title: "resg",
-        src: "test.html",
-        className: "map",
-        sandbox: "allow-same-origin allow-scripts allow-popups allow-forms",
-        scrolling: "auto"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SmallList__WEBPACK_IMPORTED_MODULE_9__.default, null)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null)), this.state.filteredQueryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "subpoena")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null), this.state.filteredQueryResults && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-lg-12"
       }, this.state.queryResultCounties && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-lg-12 mt-3 row"
@@ -2110,18 +2252,23 @@ var SmallList = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      /* return (
-               <>
-                   {this.readData()}
-               <List
-                   bordered
-                   dataSource={this.state.listData2}
-                   renderItem={item => <List.Item>{item}</List.Item>}
-                   />
-                   </>
-           );
-       }*/
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_3__.default, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        style: {
+          fontFamily: "Helvetica",
+          position: "relative",
+          left: 101,
+          color: "dodgerblue",
+          marginTop: "50px"
+        }
+      }, "Explore police department map"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "div-for-map"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
+        title: "resg",
+        src: "test.html",
+        className: "map",
+        sandbox: "allow-same-origin allow-scripts allow-popups allow-forms",
+        scrolling: "auto"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_3__.default, {
         theme: this.state.theme,
         onClick: this.handleClick,
         style: {
@@ -2129,11 +2276,12 @@ var SmallList = /*#__PURE__*/function (_Component) {
           height: 500,
           border: "1px solid #ebebeb",
           overflowY: "scroll",
-          color: "gray"
+          color: "gray",
+          fontWeight: 600
         },
         selectedKeys: this.state.current,
         mode: "inline"
-      }, this.makeList()));
+      }, this.makeList())))));
     }
   }]);
 
@@ -2921,7 +3069,8 @@ __webpack_require__.r(__webpack_exports__);
   citizens: "/citizens",
   about: "/about",
   contact: "/contact",
-  location: "/location"
+  location: "/location",
+  map: "/map"
 });
 
 /***/ }),
@@ -3132,4 +3281,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.c4e4b32d65a1c87c5f3a.js.map
+//# sourceMappingURL=main.3c551d9b473e2acb5949.js.map
