@@ -33,11 +33,25 @@ def run():
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = strip_periods(textFile.read())
+
+                    # organizes lines by periods/ends of sentances  
+                    content = content.replace('\n', ' ').replace('.', '.\n')
+                    # re.sub('(?<!\.)\r\n', ' ', content) 
+
                     contract = Contract.objects.get_or_create(
                         location=location, text=content, is_parsed=True
                     )
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
-                    lines = textFile.readlines()
+                    # lines = textFile.readlines()
+
+                    content = textFile.read()
+
+                    # organizes lines by periods/ends of sentances  
+                    content = content.replace('\n', ' ')
+                    deliminator = ". "
+                    lines =  [e+deliminator for e in content.split(deliminator) if e]
+                    lines = list(map(str.strip, lines))
+
 
                     for line in lines:
                         line = strip_periods(line)
