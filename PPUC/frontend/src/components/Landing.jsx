@@ -91,7 +91,7 @@ class Landing extends Component {
             from almost 100 of these departments and made them publicly
             available to help make policing more transparent in the County.
           </p>
-          <p>
+          <p className="lead">
             These contracts often contain controversial provisions that require
             cities to pay legal expenses for police officers accused of
             misconduct and make it more difficult to hold these officers
@@ -102,7 +102,7 @@ class Landing extends Component {
             cannot release any information to the public about why discipline
             was imposed.
           </p>
-          <p>
+          <p className="lead">
             We hope that this contract database will help concerned citizens
             learn more about police departments in Allegheny County and perhaps
             even help them advocate for change.
