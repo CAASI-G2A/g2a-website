@@ -2,6 +2,7 @@ const toJSON = (resp) => resp.json();
 const Api = {
   BASE_PATH: "/PxPUC",
   ENDPOINTS: {
+    // Endpoints correspond with the URL paths in urls.py
     getLocations: () => `${Api.BASE_PATH}/locations`,
     getLocation: (lid) => `${Api.BASE_PATH}/location/${lid}`,
     getLocationContract: (lid) => `${Api.BASE_PATH}/location/${lid}/contract`,
@@ -14,6 +15,7 @@ const Api = {
     getLocationStages: (lid) => `${Api.BASE_PATH}/location/${lid}/stages`,
     getResearcherSearchResults: (query) =>
       `${Api.BASE_PATH}/researcher?query=${JSON.stringify(query)}`,
+    getSListData: () => `${Api.BASE_PATH}/muni_list_data`,
   },
   getLocations: () => {
     return fetch(Api.ENDPOINTS.getLocations()).then(toJSON);
@@ -43,6 +45,9 @@ const Api = {
   },
   getResearcherSearchResults: (query) => {
     return fetch(Api.ENDPOINTS.getResearcherSearchResults(query)).then(toJSON);
+  },
+  getSListData: () => {
+    return fetch(Api.ENDPOINTS.getSListData()).then(toJSON);
   },
 };
 export default Api;

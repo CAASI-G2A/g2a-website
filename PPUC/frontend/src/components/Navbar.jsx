@@ -12,7 +12,10 @@ class Navbar extends Component {
             className="navbar-brand"
             style={{ fontWeight: "bold" }}
           >
-            ACPP
+            <img
+              src="/static/app/img/acpp.png"
+              style={{ width: "100px", paddingBottom: "5px" }}
+            />
           </NavLink>
           <button
             type="button"
@@ -25,10 +28,15 @@ class Navbar extends Component {
           <div className="navbar-collapse collapse">
             <ul className="navbar-nav">
               <li className="nav-item nav-link">
-                <NavLink to={routes.researchers}>Researchers</NavLink>
+                <NavLink to={routes.map}>Police Dept Map</NavLink>
               </li>
               <li className="nav-item nav-link">
-                <NavLink to={routes.citizens}>Citizens</NavLink>
+                <NavLink to={routes.researchers}>
+                  Search Police Contracts
+                </NavLink>
+              </li>
+              <li className="nav-item nav-link">
+                <NavLink to={routes.citizens}>Complaint FAQ</NavLink>
               </li>
               <li className="nav-item nav-link">
                 <NavLink to={routes.about}>About</NavLink>

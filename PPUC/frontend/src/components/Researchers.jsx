@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
+import { Alert } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import SmallList from "./SmallList";
 
 class Researchers extends Component {
   constructor(props) {
@@ -22,6 +24,7 @@ class Researchers extends Component {
       currentPage: 1,
       totalPages: 1,
       pageSize: 10,
+      showResult: false,
     };
     this.setPage = this.setPage.bind(this);
     this.setPageSize = this.setPageSize.bind(this);
@@ -98,6 +101,7 @@ class Researchers extends Component {
     if (event) {
       event.preventDefault();
     }
+
     // parse query
     try {
       function getQueryWords(query) {
@@ -112,6 +116,7 @@ class Researchers extends Component {
       const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
+
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
         resp.sort((a, b) => {
@@ -133,6 +138,7 @@ class Researchers extends Component {
           searchQueryWords: searchQueryWords,
           countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
+          showResult: true,
         });
       });
       // set search query param
@@ -197,11 +203,21 @@ class Researchers extends Component {
           <div className="col-md-6 offset-md-3 small text-secondary">
             e.g., interview AND review
           </div>
+          <div
+            className="col-md-6 offset-md-3 text-secondary"
+            style={{ backgroundColor: "#f9f9f9", padding: "10px" }}
+          >
+            <b>**Instruction: </b> Use the search bar above to look for keywords
+            in police contracts. To search a phrase, use quotation marks on both
+            ends (i.e. “time limit”). You can also use an OR function to find
+            contracts with two keywords (i.e. false OR arrest). Below are some
+            keyword suggestions.
+          </div>
           <div className="col-md-6 offset-md-3 mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("time limit", true)}
+                onClick={() => this.setSearchQuery('"time limit"', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 time limit
@@ -215,7 +231,7 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("false arrest", true)}
+                onClick={() => this.setSearchQuery('"false arrest"', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 false arrest
@@ -244,6 +260,14 @@ class Researchers extends Component {
             </div>
           </div>
         </div>
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div></div>
         {this.state.filteredQueryResults && (
           <div className="col-lg-12">
             {this.state.queryResultCounties && (
