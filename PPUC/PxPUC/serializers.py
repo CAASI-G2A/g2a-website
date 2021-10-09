@@ -156,6 +156,7 @@ class GlossaryTermSerializer(serializers.ModelSerializer):
         model = GlossaryTerm
         fields = ("id", "term", "definition")
 
+
 class SearchQuerySerializer(serializers.ModelSerializer):
     class Meta:
         model = SearchQuery

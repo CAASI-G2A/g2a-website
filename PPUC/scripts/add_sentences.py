@@ -4,6 +4,8 @@ import re
 from PxPUC.models import Problematic_Sentence
 from PxPUC.models import Location
 from django.conf import settings
+import codecs
+
 
 def run():
     r = 0
@@ -11,7 +13,7 @@ def run():
         for entry in entries:
             if entry.is_file():
                 print("Processing file: %s" % entry)
-                with open(entry, encoding = 'cp1252') as csvFile:
+                with open(entry, encoding = 'cp1252', errors ='replace') as csvFile:
                     spamreader = csv.reader(csvFile, delimiter=',', quotechar='"')
                     for row in spamreader:
                         location = row[0]
