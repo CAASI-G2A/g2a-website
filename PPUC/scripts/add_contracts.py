@@ -41,6 +41,8 @@ def run():
                     contract = Contract.objects.get_or_create(
                         location=location, text=content, is_parsed=True
                     )
+
+                    
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     # lines = textFile.readlines()
 
