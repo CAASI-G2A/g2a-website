@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('PxPUC', '0003_glossaryterm'),
+        ('PxPUC', '0005_glossaryterm'),
     ]
 
     operations = [
