@@ -9,7 +9,7 @@
     "build": "webpack --mode=production --progress",
     "watch": "webpack --watch --mode=development --progress --devtool source-map",
     "prettier": "prettier --write --ignore-unknown .",
-    "prettier-backend": "pip install black && black ..\\PxPUC",
+    "prettier-backend": "pip install black && black ../PxPUC",
     "prettier-all": "npm run prettier && npm run prettier-backend",
     "test": "jest",
     "test-backend": "python ../manage.py test PxPUC",
