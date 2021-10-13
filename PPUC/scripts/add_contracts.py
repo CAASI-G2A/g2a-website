@@ -27,12 +27,17 @@ def run():
                     name=location, state=state
                 )
 
+                # PG: Delete existing contracts and sentences in system to avoid duplicates 
+                Sentence.objects.filter(location=location).delete()
+                Contract.objects.filter(location=location).delete()
+
+
                 # Delete existing contracts and sentences in system to avoid duplicates 
                 Sentence.objects.filter(location=location).delete()
                 Contract.objects.filter(location=location).delete()
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
-                    content = strip_periods(textFile.read())
+                    content = clean_lines(textFile.read())
 
                     # organizes lines by periods/ends of sentances  
                     content = content.replace('\n', ' ').replace('.', '.\n')
@@ -54,14 +59,37 @@ def run():
                     lines =  [e+deliminator for e in content.split(deliminator) if e]
                     lines = list(map(str.strip, lines))
 
+                     #  TODO: Add cases for lines not needed for search
+
 
                     for line in lines:
-                        line = strip_periods(line)
+                        line = clean_lines(line)
                         sentence = Sentence.objects.get_or_create(
                             text=line, location=location
                         )
 
 
-def strip_periods(txt):
+# PG: Simple Pattern Matching
+#     TODO: More pattern matching
+def clean_lines(txt):
+
+    #removes any duplicate periods
     txt = re.sub("\.\.+", ".", txt)
+
+    # PG: keep only certain symbols, which currently include
+    #     - A-Z
+    #     - a-z
+    #     - 1-9
+    #     - \n
+    #     - single spaces ' '
+    #     - punctation: ! . 
+    #     - legal and math symbols: % $ § - 
+    #     TODO: Add more/fix cases
+    txt = re.sub('[^a-zA-Z1-9\n $.!§%-]+', '', txt)
+
+    # PG: remove line breaks that are not after puncitaton
+    txt = re.sub('(?<!\.)\n', ' ', txt)
+    txt = re.sub('\n', '\n\n', txt)
+
     return txt
+
