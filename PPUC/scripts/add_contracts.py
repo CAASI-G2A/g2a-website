@@ -35,6 +35,7 @@ def run():
                 # Delete existing contracts and sentences in system to avoid duplicates 
                 Sentence.objects.filter(location=location).delete()
                 Contract.objects.filter(location=location).delete()
+                
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())

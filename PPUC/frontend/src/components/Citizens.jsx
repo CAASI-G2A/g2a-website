@@ -26,7 +26,7 @@ class Citizens extends Component {
     super(props);
     this.state = {
       locations: {},
-      location: null,
+      location: "Pittsburgh",
       locationQuestions: null,
       locationStages: null,
       locationGlossary: null,
@@ -74,7 +74,8 @@ class Citizens extends Component {
   }
 
   getLocationQuestions() {
-    Api.getLocationQuestions(this.state.location.id).then((resp) => {
+    //Replaced ID this.state.location.id with "0"
+    Api.getLocationQuestions(0).then((resp) => {
       const questionsByCat = {};
       for (let category of resp) {
         questionsByCat[category.name.toLowerCase()] = category.questions;
@@ -86,7 +87,8 @@ class Citizens extends Component {
   }
 
   getLocationStages() {
-    Api.getLocationStages(this.state.location.id).then((resp) => {
+    //Replaced ID this.state.location.id with "0"
+    Api.getLocationStages(0).then((resp) => {
       this.setState({
         locationStages: resp,
       });
@@ -94,7 +96,8 @@ class Citizens extends Component {
   }
 
   getLocationGlossary() {
-    Api.getLocationGlossary(this.state.location.id).then((resp) => {
+    //Replaced ID this.state.location.id with "0"
+    Api.getLocationGlossary(0).then((resp) => {
       this.setState(
         {
           locationGlossary: resp,
@@ -146,6 +149,7 @@ class Citizens extends Component {
 
   handleLocationSelect(location) {
     // update current selected location
+    // TODO: Locations no longer apply, should just set to Pittsburgh or None
     this.setState(
       {
         location: location,
@@ -220,6 +224,7 @@ class Citizens extends Component {
     return (
       <div className="container-fluid">
         <div className="dropdown text-center">
+          {/*
           <button
             className="btn btn-secondary dropdown-toggle"
             type="button"
@@ -231,6 +236,7 @@ class Citizens extends Component {
             Choose a state
             <span className="caret"></span>
           </button>
+          */}
           <div className="dropdown-menu multi-level">
             {Object.entries(this.state.locations).map(([state, cities]) => (
               <li key={state} className="dropdown-submenu">
