@@ -44,6 +44,12 @@ def map(request):
     return render(request, "app/test.html")
 
 
+def marker(request):
+    """The icon of the marker"""
+    assert isinstance(request, HttpRequest)
+    return render(request, "app/marker.png")
+
+
 def home(request):
     """Renders the home page."""
     context = {
@@ -147,6 +153,7 @@ def update_server(request):
         return HttpResponse("update initiated")
     return HttpResponse()
 
+
 def save_search_query(request, search):
     print("Made it to query save!")
     return HttpResponse()
@@ -203,33 +210,34 @@ class ResearcherSearchList(generics.ListAPIView):
     def get_queryset(self):
         # Referred to later in get_queryset
         print("GET QUERYSET")
+
         def build_filter(query, parent_obj=False):
             # we hit an operand
             if type(query) is str:
                 if parent_obj:
-                    query = query.strip('\"')
-                    #print("FIRST BLOCK " + str(query))
+                    query = query.strip('"')
+                    # print("FIRST BLOCK " + str(query))
                     return Q(sentences__text__icontains=query)
                 else:
-                    query = query.strip('\"')
-                    #print("SECOND BLOCK " + str(query))
+                    query = query.strip('"')
+                    # print("SECOND BLOCK " + str(query))
                     return Q(text__icontains=query)
             else:
                 # If query is compound (uses operations), must build the filter first
                 # build_filter is recursively run for each individual operand
                 if query["operation"] == "AND":
-                    #print("THIRD BLOCK " + query["operand1"] + " " + query["operand2"]) 
+                    # print("THIRD BLOCK " + query["operand1"] + " " + query["operand2"])
                     return build_filter(query["operand1"], parent_obj) & build_filter(
                         query["operand2"], parent_obj
                     )
                 else:
-                    #print("FOURTH BLOCK " + query["operand1"] + " " + query["operand2"]) 
+                    # print("FOURTH BLOCK " + query["operand1"] + " " + query["operand2"])
                     return build_filter(query["operand1"], parent_obj) | build_filter(
                         query["operand2"], parent_obj
                     )
-        
+
         # Get query from "self" = calling object
-        # These blocks run BEFORE the build_filter 
+        # These blocks run BEFORE the build_filter
         query = self.request.query_params.get("query")
         if query is None:
             raise serializers.ValidationError(

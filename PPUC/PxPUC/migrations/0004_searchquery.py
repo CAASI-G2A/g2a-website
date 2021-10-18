@@ -6,17 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('PxPUC', '0003_glossaryterm'),
+        ("PxPUC", "0003_glossaryterm"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SearchQuery',
+            name="SearchQuery",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('query', models.TextField()),
-                ('timestamp', models.DateTimeField()),
-                ('results', models.IntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("query", models.TextField()),
+                ("timestamp", models.DateTimeField()),
+                ("results", models.IntegerField()),
             ],
         ),
     ]
