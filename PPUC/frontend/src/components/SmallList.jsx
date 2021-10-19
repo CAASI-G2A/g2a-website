@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-import Api from "../libs/api";
 import "antd/dist/antd.css";
-import { Menu, Switch, List } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-
-const { SubMenu } = Menu;
+import { Menu, Radio } from "antd";
+import Api from "../libs/api";
+import SearchParser from "../libs/researcher_search_lang";
+import MapComponent from "./MapComponent";
 
 class SmallList extends Component {
   constructor(props) {
@@ -21,14 +16,83 @@ class SmallList extends Component {
       listKeyNumber: 1,
       current: 0,
       listData2: "",
+      markerPos: [40, -79.9633],
+      centerLocation: null,
+      searchedRegions: [],
     };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleSelectedRegion = this.handleSelectedRegion.bind(this);
   }
 
   handleClick(e) {
     console.log("click ", e);
     this.setState({
       current: e.key,
+      markerPos: [40.446, -79.9633],
+      centerLocation: e.key,
     });
+  }
+
+  handleSelectedRegion(selectedRegion) {
+    this.setState({
+      centerLocation: selectedRegion,
+    });
+  }
+
+  handleSearch(newQuery, autoSearch) {
+    // parse query
+    try {
+      function getQueryWords(query) {
+        if (typeof query === "string") {
+          return [query];
+        } else {
+          return getQueryWords(query["operand1"]).concat(
+            getQueryWords(query["operand2"])
+          );
+        }
+      }
+
+      const searchQuery = SearchParser.parse(newQuery);
+      // parse down to just the words being searched for, for highlighting
+      const searchQueryWords = getQueryWords(searchQuery["query"]);
+
+      Api.getResearcherSearchResults(searchQuery).then((resp) => {
+        // sort based on city name
+        resp.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        // parse states out
+        const respRegions = [...new Set(resp.map((a) => a.name))];
+        console.log("response on map query: ", respRegions);
+
+        this.setState({
+          searchedRegions: [...respRegions],
+        });
+      });
+      // set search query param
+      // this.props.history.push({
+      //   pathname: routes.researchers,
+      //   search:
+      //     "?" +
+      //     new URLSearchParams({ search: this.state.searchQuery }).toString(),
+      // });
+    } catch (err) {
+      // if (err instanceof SearchParser.SyntaxError) {
+      //   this.setState({
+      //     searchQueryError: err,
+      //   });
+      // } else {
+      //   throw err;
+      // }
+    }
   }
 
   componentDidMount() {
@@ -53,8 +117,6 @@ class SmallList extends Component {
     } catch (err) {
       throw err;
     }
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
   makeList() {
@@ -79,43 +141,46 @@ class SmallList extends Component {
         <h4
           style={{
             fontFamily: "Helvetica",
-            position: "relative",
-            left: 101,
             color: "dodgerblue",
             marginTop: "50px",
           }}
         >
           Explore police department map
         </h4>
-        <>
-          <div className="div-for-map">
-            <iframe
-              title="resg"
-              src="test.html"
-              className="map"
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              scrolling="auto"
+        <Radio.Group value={"default"}>
+          <Radio.Button
+            value="time limit"
+            className="map_search_term"
+            onClick={() => this.handleSearch("discipline", true)}
+          >
+            time limit
+          </Radio.Button>
+          <Radio.Button value="false arrest" className="map_search_term">
+            false arrest
+          </Radio.Button>
+        </Radio.Group>
+        <div style={{ display: "flex" }}>
+          <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
+            <MapComponent
+              pos={this.state.markerPos}
+              center={this.state.centerLocation}
+              searchedRegions={this.state.searchedRegions}
+              onSelectedRegion={this.handleSelectedRegion}
             />
-            <div>
-              <Menu
-                theme={this.state.theme}
-                onClick={this.handleClick}
-                style={{
-                  width: 250,
-                  height: 500,
-                  border: "1px solid #ebebeb",
-                  overflowY: "scroll",
-                  color: "gray",
-                  fontWeight: 600,
-                }}
-                selectedKeys={this.state.current}
-                mode="inline"
-              >
-                {this.makeList()}
-              </Menu>
-            </div>
           </div>
-        </>
+          <div className="region_list">
+            <Menu
+              theme={this.state.theme}
+              onClick={this.handleClick}
+              style={{ width: 256 }}
+              centerLocation={this.state.centerLocation}
+              selectedKeys={this.state.centerLocation}
+              mode="inline"
+            >
+              {this.makeList()}
+            </Menu>
+          </div>
+        </div>
       </div>
     );
   }
