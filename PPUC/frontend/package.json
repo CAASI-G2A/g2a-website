@@ -10,10 +10,10 @@
     "watch": "webpack --watch --mode=development --progress --devtool source-map",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier-backend": "pip install black && black ../PxPUC",
-    "prettier-all": "npm run prettier && npm run prettier-backend",
+    "prettier-all": "npm run prettier-backend",
     "test": "jest",
     "test-backend": "python ../manage.py test PxPUC",
-    "test-all": "npm run test && npm run test-backend"
+    "test-all": "npm run test"
   },
   "husky": {
     "hooks": {
@@ -74,7 +74,7 @@
     "skeleton-loader": "^2.0.0",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.20.2",
+    "webpack": "^5.58.2",
     "webpack-cli": "^4.5.0",
     "webpack-manifest-plugin": "^3.0.0"
   }
