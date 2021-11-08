@@ -13,6 +13,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
+      process: "process/browser",
+      Buffer: ["buffer", "Buffer"],
     }),
     new CleanWebpackPlugin(),
     new WebpackManifestPlugin(),
@@ -76,6 +78,11 @@ module.exports = {
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
+    alias: {
+      process: "process/browser",
+      stream: "stream-browserify",
+      zlib: "browserify-zlib",
+    },
   },
   output: {
     publicPath: "",
