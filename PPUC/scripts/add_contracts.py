@@ -15,6 +15,7 @@ def run():
     with os.scandir(settings.BASE_DIR + "/PxPUC/static/app/contracts_txt") as entries:
         for entry in entries:
             if entry.is_file():
+                # First create the Location object
                 filename = entry.name[:-4]
                 """find _, everything before is state, after is city"""
                 print("filename: " + filename)
