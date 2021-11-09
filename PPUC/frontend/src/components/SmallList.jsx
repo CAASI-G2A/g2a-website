@@ -4,6 +4,7 @@ import { Menu, Radio } from "antd";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import MapComponent from "./MapComponent";
+import features from "./geoData.json";
 
 class SmallList extends Component {
   constructor(props) {
@@ -28,9 +29,28 @@ class SmallList extends Component {
 
   handleClick(e) {
     console.log("click ", e);
+    var center_coordinate_x;
+    var center_coordinate_y;
+    var t = 0;
+    var signal = false;
+    while (t < features.features.length && signal === false) {
+      if (features.features[t].properties.LABEL === e.key) {
+        center_coordinate_x =
+          features.features[t].geometry.center_coordinate[1];
+        center_coordinate_y =
+          features.features[t].geometry.center_coordinate[0];
+        signal = true;
+      }
+      t++;
+    }
+    // If the location is not in geoJson file, set a default coordinate for the marker.
+    if (signal === false) {
+      center_coordinate_x = 0;
+      center_coordinate_y = 0;
+    }
     this.setState({
       current: e.key,
-      markerPos: [40.446, -79.9633],
+      markerPos: [center_coordinate_x, center_coordinate_y],
       centerLocation: e.key,
     });
   }
