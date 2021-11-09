@@ -150,7 +150,7 @@ class Commentary extends Component {
 
               <div
                 className={
-                  "collapse nav-collapse" + dropUnfounded
+                  "collapse nav-collapse " + dropUnfounded
                 }
               >
 
