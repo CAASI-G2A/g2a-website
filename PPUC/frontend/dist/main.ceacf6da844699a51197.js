@@ -1134,35 +1134,103 @@ var Landing = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron",
         style: {
-          padding: "2rem"
+          padding: "2rem",
+          backgroundColor: 'white',
+          borderLeft: '5px solid darkblue'
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-        className: "lead"
-      }, "What you can do on this website:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        className: "lead",
         style: {
-          marginBottom: "0px"
+          fontSize: "1.5rem",
+          fontWeight: 800,
+          color: 'darkblue'
         }
-      }, " ", "Explore \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
+      }, "What you can do on this website:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "item1_map",
+        style: {
+          display: 'flex'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "/static/app/img/landing_icon_map.png",
+        style: {
+          width: "80px",
+          marginRight: '1rem'
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        style: {
+          paddingTop: '1rem'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+        style: {
+          marginBottom: "0px",
+          color: 'royalblue',
+          fontWeight: 700
+        }
+      }, " ", "1) Explore\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers,
+        style: {
+          color: 'royalblue',
+          fontWeight: 700
+        }
       }, "Police Dept Map")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "lead"
-      }, "Find your local and neighboring police department and learn about it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+      }, "Find your local and neighboring police department and learn about it."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "item2_search",
+        style: {
+          display: 'flex'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "/static/app/img/landing_icon_search.png",
+        style: {
+          width: "80px",
+          marginRight: '1rem'
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        style: {
+          paddingTop: '1rem'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+        style: {
+          marginBottom: "0px",
+          color: 'royalblue',
+          fontWeight: 700
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers,
+        style: {
+          color: 'royalblue',
+          fontWeight: 700
+        }
+      }, "2) Search Police Contracts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "lead"
+      }, "Search and compare over 100 contracts from Allegheny County. Filter contracts by location."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "item3_complaint",
+        style: {
+          display: 'flex'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "/static/app/img/landing_icon_complaint.png",
+        style: {
+          width: "80px",
+          marginRight: '1rem'
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        style: {
+          paddingTop: '1rem'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
         style: {
           marginBottom: "0px"
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
-      }, "Search Police Contracts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-        className: "lead"
-      }, "Search and compare over 100 contracts from Allegheny County. Filter contracts by location."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers,
         style: {
-          marginBottom: "0px"
+          color: 'royalblue',
+          fontWeight: 700
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        to: _routes__WEBPACK_IMPORTED_MODULE_1__.default.researchers
-      }, "Pittsburgh Complaint FAQ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, "3) Pittsburgh Complaint FAQ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "lead"
-      }, "Learn about the process of filing a police misconduct complaint at Pittsburgh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Learn about the process of filing a police misconduct complaint at Pittsburgh.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron",
         style: {
           backgroundColor: "white",
@@ -1385,7 +1453,7 @@ var Location = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(antd__WEBPACK_IMPORTED_MODULE_4__.default, {
         defaultActiveKey: "1",
         type: "card",
-        size: 'large'
+        size: "large"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(TabPane, {
         tab: "text",
         key: "1"
@@ -3361,4 +3429,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.69534cdcd3303dc68543.js.map
+//# sourceMappingURL=main.ceacf6da844699a51197.js.map

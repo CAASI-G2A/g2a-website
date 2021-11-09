@@ -12,7 +12,7 @@ import PxPUC.urls
 
 urlpatterns = [
     url('^',include(PxPUC.urls)),
-    path('', views.landing, name='landing'),
+    path('', views.home, name='home'),
     path('login/',
          LoginView.as_view
          (
