@@ -12,6 +12,18 @@ import SearchParser from "../libs/researcher_search_lang";
 import ResearcherResult from "./ResearcherResult";
 import SmallList from "./SmallList";
 
+
+
+// TODO: 
+//     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again
+//     2. Highlight words in setence examples
+//     3. find better way to do breaks in code
+//     4. find place to put manual serch link
+//     5. fix text error
+
+
+
+
 class Commentary extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +58,10 @@ class Commentary extends Component {
     // scrollToElement("#citizenInfoPanel");
   }
 
+
   render() {
+
+    // maybe put in class
     const dropUnfounded = this.state.showUnfounded ? "show" : "";
     const dropInterview = this.state.showInterview ? "show" : "";
     const dropInterrogation = this.state.showInterrogation ? "show" : "";
@@ -57,578 +72,621 @@ class Commentary extends Component {
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
-          <div className="col-md-6 offset-md-8">
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-              style={{ width: "200px", fontSize: "20px" }}
+
+          <div
+              className="jumbotron"
+              style={{
+                backgroundImage: "url(http://www.rmmagazine.com/images/default-source/MagazineImages/2019/07/rm7-8-19_ff_contractrisks.jpg?Status=Master&sfvrsn=9b4a261a_0)",
+                backgroundSize: "100%",
+                paddingTop: "60px",
+                paddingBottom: "90px",
+              }}
             >
-              <NavLink to={routes.researchers} style={{ color: "#ffc92e" }}>
-                {" "}
-                search contracts{" "}
-              </NavLink>
-            </button>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+
+              <div
+                opacity={0.5}
+                style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
+              > 
+                <h1 style={{ color: "black" }}>HOW POLICE UNION CONTRACTS <br/>  BLOCK ACCOUNTABILITY</h1>
+                <hr className="my-4" style={{ borderTop: "1px solid black" }} />
+                <div className="col-md-6 offset-md-8">
+                  <NavLink to={routes.researchers}>
+                      Click Here to Search Contracts Manually
+                  </NavLink>
+                  {/* <button
+                    type="button"
+                    color="#ff5c5c"
+                    className="ex-keyword btn btn-info mr-2"
+                    style={{ width: "200px", height: "50px", fontSize: "15px", paddingBottom: "0px"}}
+                  >
+                    <NavLink to={routes.researchers} style={{ color: "white"}}>
+                      Search Contracts Manually
+                    </NavLink>
+                  </button> */}
+                </div>
+              </div>
           </div>
-          <h2 className="pt-5 pl-1 pb-5">
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              HOW POLICE UNION CONTRACTS BLOCK ACCOUNTABILITY{" "}
-            </span>
-          </h2>
+
+          <div className="pt-5 pl-1 pb-5">
+              <h2>
+                <span style={{ fontWeight: "bold" }}>
+                  {" "} SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS {" "}
+                </span>
+              </h2>
+          </div>
 
           {/* <div>
             it is <b>{test ? 'true' : 'false'}</b> logged in.
           </div> */}
 
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            aria-controls={`hi`}
-            href={`hi`}
-            style={{ color: "black" }}
+
+          <div
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
             onClick={() => this.handleTitleClick("unfounded")}
-          >
-            1.{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              DISQUALIFY MISCONDUCT COMPLAINTS{" "}
-            </span>{" "}
-            Disqualifying misconduct complaints that are submitted too many days
-            after an incident occurs or if an investigation takes too long to
-            complete
-          </a>
-
-          <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropUnfounded
-            }
-          >
-            {/* <br></br> 
-              <a> 
-              <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
+          > 
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                aria-controls={`hi`}
+                href={`hi`}
+                style={{ color: "black" }}
+              >
+                1.{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  DISQUALIFY MISCONDUCT COMPLAINTS{" "}
+                </span>{" "}
               </a>
 
-              <br></br> */}
-
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: unfounded
-            </a>
-            <br></br>
-            <a>
-              "When an anonymous complaint is made against a police officer and
-              no corroborative evidence is obtained, the complaint shall be
-              classified as unfounded." (Bethel Park)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="unfounded"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "collapse nav-collapse" + dropUnfounded
+                }
               >
-                {" "}
-                search contracts for "unfounded"{" "}
-              </NavLink>
-            </button>
 
-            <br></br>
-            <br></br>
-            <br></br>
+                <a>
+                  Disqualifying misconduct complaints that are submitted too many days
+                  after an incident occurs or if an investigation takes too long to
+                  complete
+                </a>
 
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
-              complaint
-            </a>
-            <br></br>
-            <a>
-              "When a citizen complaint is filed, it must be done in writing,
-              signed by the complainant and filed no later than fifteen (15)
-              days from the alleged event."" (Braddock Borough)
-            </a>
+                <div
+                  className={
+                    "col-md-6 offset-md-1"
+                  }
+                >
+                  <br></br>
+                  <a>
+                    <span style={{ fontWeight: "bold" }}> Keyword </span>: unfounded
+                  </a>
+                  <br></br>
+                  <a>
+                    "When an anonymous complaint is made against a police officer and
+                    no corroborative evidence is obtained, the complaint shall be
+                    classified as unfounded." (Bethel Park)
+                  </a>
 
-            <br></br>
+                  <br></br>
 
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="citizen+complaint"'}
-                style={{ color: "#ffc92e" }}
-              >
-                {" "}
-                search contracts for "citizen complaint"{" "}
-              </NavLink>
-            </button>
+                  <button
+                    type="button"
+                    color="#ff5c5c"
+                    className="ex-keyword btn btn-info mr-2"
+                  >
+                    <NavLink
+                      to={routes.researchers + '?search="unfounded"'}
+                      style={{ color: "#ffc92e" }}
+                    >
+                      {" "}
+                      search contracts for "unfounded"{" "}
+                    </NavLink>
+                  </button>
+
+                  <br></br>
+                  <br></br>
+                  <br></br>
+
+                  <a>
+                    <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
+                    complaint
+                  </a>
+                  <br></br>
+                  <a>
+                    "When a citizen complaint is filed, it must be done in writing,
+                    signed by the complainant and filed no later than fifteen (15)
+                    days from the alleged event."" (Braddock Borough)
+                  </a>
+
+                  <br></br>
+
+                  <button
+                    type="button"
+                    color="#ff5c5c"
+                    className="ex-keyword btn btn-info mr-2"
+                  >
+                    <NavLink
+                      to={routes.researchers + '?search="citizen+complaint"'}
+                      style={{ color: "#ffc92e" }}
+                    >
+                      {" "}
+                      search contracts for "citizen complaint"{" "}
+                    </NavLink>
+                  </button>
+                </div>
+
+              </div>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
 
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            aria-controls={`hi`}
-            href={`hi`}
-            style={{ color: "black" }}
+          <div
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
             onClick={() => this.handleTitleClick("Interview")}
-          >
-            2.{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              PREVENTS IMMEDIATE INTERROGATION{" "}
-            </span>{" "}
-            Preventing police officers from being interrogated immediately after
-            being involved in an incident or otherwise restricting how, when, or
-            where they can be interrogated
-          </a>
+          > 
 
-          <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview
-            }
-          >
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: interview
-            </a>
-            <br></br>
-            <a>
-              "The criminal investigatory interview of the deputy shall not be
-              conducted until expiration of seventy-two (72) hours following the
-              shooting/incident unless there are exigent circumstances"
-              (Allegheny County Sheriff's Department)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="interview"'}
-                style={{ color: "#ffc92e" }}
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                aria-controls={`hi`}
+                href={`hi`}
+                style={{ color: "black" }}
               >
-                {" "}
-                search contracts for "interview"{" "}
-              </NavLink>
-            </button>
+                2.{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  PREVENTS IMMEDIATE INTERROGATION{" "}
+                </span>{" "}
+                Preventing police officers from being interrogated immediately after
+                being involved in an incident or otherwise restricting how, when, or
+                where they can be interrogated
+              </a>
 
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: critical
-              incident
-            </a>
-            <br></br>
-            <a>
-              "An officer involved in a critical incident shall be permit 72
-              hours (3 sleep cycles) after the critical incident to make any
-              official statement, report, and interview."" (Penn Hills)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="critical+incident"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview
+                }
               >
-                {" "}
-                search contracts for "critical incident"{" "}
-              </NavLink>
-            </button>
+                <br></br>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: interview
+                </a>
+                <br></br>
+                <a>
+                  "The criminal investigatory interview of the deputy shall not be
+                  conducted until expiration of seventy-two (72) hours following the
+                  shooting/incident unless there are exigent circumstances"
+                  (Allegheny County Sheriff's Department)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="interview"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "interview"{" "}
+                  </NavLink>
+                </button>
+
+                <br></br>
+                <br></br>
+                <br></br>
+
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: critical
+                  incident
+                </a>
+                <br></br>
+                <a>
+                  "An officer involved in a critical incident shall be permit 72
+                  hours (3 sleep cycles) after the critical incident to make any
+                  official statement, report, and interview."" (Penn Hills)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="critical+incident"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "critical incident"{" "}
+                  </NavLink>
+                </button>
+              </div>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
 
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            aria-controls={`hi`}
-            href={`hi`}
-            style={{ color: "black" }}
+
+          <div
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
             onClick={() => this.handleTitleClick("Interrogation")}
-          >
-            3.{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              UNFAIR ACCESS TO INFORMATION{" "}
-            </span>{" "}
-            Giving officers access to information that civilians do not get
-            prior to being interrogated
-          </a>
+          > 
 
-          <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropInterrogation
-            }
-          >
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>:
-              interrogation
-            </a>
-            <br></br>
-            <a>
-              "A police officer, whether a subject or witness, must be informed
-              of the nature of the interrogation at the outset of the
-              interrogation." (Avalon Borough)
-            </a>
 
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="interrogation"'}
-                style={{ color: "#ffc92e" }}
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                aria-controls={`hi`}
+                href={`hi`}
+                style={{ color: "black" }}
               >
-                {" "}
-                search contracts for "interrogation"{" "}
-              </NavLink>
-            </button>
+                3.{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  UNFAIR ACCESS TO INFORMATION{" "}
+                </span>{" "}
+                Giving officers access to information that civilians do not get
+                prior to being interrogated
+              </a>
 
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: accused
-            </a>
-            <br></br>
-            <a>
-              "When a written complaint is made against an officer, the Township
-              will provide a copy of the complaint to the accused officer."
-              (Baldwin Township)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="accused"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "col-md-6 offset-md-1 collapse nav-collapse " + dropInterrogation
+                }
               >
-                {" "}
-                search contracts for "accused"{" "}
-              </NavLink>
-            </button>
+                <br></br>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>:
+                  interrogation
+                </a>
+                <br></br>
+                <a>
+                  "A police officer, whether a subject or witness, must be informed
+                  of the nature of the interrogation at the outset of the
+                  interrogation." (Avalon Borough)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="interrogation"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "interrogation"{" "}
+                  </NavLink>
+                </button>
+
+                <br></br>
+                <br></br>
+                <br></br>
+
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: accused
+                </a>
+                <br></br>
+                <a>
+                  "When a written complaint is made against an officer, the Township
+                  will provide a copy of the complaint to the accused officer."
+                  (Baldwin Township)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="accused"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "accused"{" "}
+                  </NavLink>
+                </button>
+              </div>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
 
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            style={{ color: "black", height: "5" }}
+          <div
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
             onClick={() => this.handleTitleClick("FalseArrest")}
-          >
-            {" "}
-            4. <span style={{ fontWeight: "bold" }}> LEGAL COSTS </span>{" "}
-            Requiring cities to pay costs related to police misconduct including
-            by giving officers paid leave while under investigation, paying
-            legal fees, and/or the cost of settlements
-          </a>
-
-          <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
-            }
-          >
-            {/* <br></br> 
-              <a> 
-              <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
+          > 
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                style={{ color: "black", height: "5" }}
+              >
+                {" "}
+                4. <span style={{ fontWeight: "bold" }}> LEGAL COSTS </span>{" "}
+                Requiring cities to pay costs related to police misconduct including
+                by giving officers paid leave while under investigation, paying
+                legal fees, and/or the cost of settlements
               </a>
 
-              <br></br> */}
-
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: false
-              arrest
-            </a>
-            <br></br>
-            <a>
-              "The Borough shall provide each Officer with false arrest
-              insurance coverage as provided in 2008, which includes coverage
-              for false arrest, detention, imprisonment or malicious
-              prosecution." (Churchill Borough)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="false+arrest"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
+                }
               >
-                {" "}
-                search contracts for "false arrest"{" "}
-              </NavLink>
-            </button>
+                {/* <br></br> 
+                  <a> 
+                  <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
+                  </a>
 
-            <br></br>
-            <br></br>
-            <br></br>
+                  <br></br> */}
 
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: liability
-              insurance
-            </a>
-            <br></br>
-            <a>
-              "The Borough shall pay for 100% of the premium for police
-              professional liability insurance." (Baldwin Borough)
-            </a>
+                <br></br>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: false
+                  arrest
+                </a>
+                <br></br>
+                <a>
+                  "The Borough shall provide each Officer with false arrest
+                  insurance coverage as provided in 2008, which includes coverage
+                  for false arrest, detention, imprisonment or malicious
+                  prosecution." (Churchill Borough)
+                </a>
 
-            <br></br>
+                <br></br>
 
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="liability+insurance"'}
-                style={{ color: "#ffc92e" }}
-              >
-                {" "}
-                search contracts for "liability insurance"{" "}
-              </NavLink>
-            </button>
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="false+arrest"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "false arrest"{" "}
+                  </NavLink>
+                </button>
 
-            <br></br>
-            <br></br>
-            <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
 
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: defense
-              insurance
-            </a>
-            <br></br>
-            <a>
-              "The City shall provide and pay the full cost of the premiums for
-              Criminal and Civil Defense Insurance for all police officers."
-              (Duquesne City)
-            </a>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: liability
+                  insurance
+                </a>
+                <br></br>
+                <a>
+                  "The Borough shall pay for 100% of the premium for police
+                  professional liability insurance." (Baldwin Borough)
+                </a>
 
-            <br></br>
+                <br></br>
 
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="defense+insurance"'}
-                style={{ color: "#ffc92e" }}
-              >
-                {" "}
-                search contracts for "defense insurance"{" "}
-              </NavLink>
-            </button>
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="liability+insurance"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "liability insurance"{" "}
+                  </NavLink>
+                </button>
+
+                <br></br>
+                <br></br>
+                <br></br>
+
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: defense
+                  insurance
+                </a>
+                <br></br>
+                <a>
+                  "The City shall provide and pay the full cost of the premiums for
+                  Criminal and Civil Defense Insurance for all police officers."
+                  (Duquesne City)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="defense+insurance"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "defense insurance"{" "}
+                  </NavLink>
+                </button>
+              </div>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
 
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            aria-controls={`hi`}
-            href={`hi`}
-            style={{ color: "black" }}
+          <div
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
             onClick={() => this.handleTitleClick("Reprimand")}
-          >
-            5.{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              DESTROYS MISCONDUCT RECORDS{" "}
-            </span>{" "}
-            Preventing information on past misconduct investigations from being
-            recorded or retained in an officer's personnel file
-          </a>
+          > 
 
-          <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand
-            }
-          >
-            {/* <br></br> 
-              <a> 
-              <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                aria-controls={`hi`}
+                href={`hi`}
+                style={{ color: "black" }}
+              >
+                5.{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  DESTROYS MISCONDUCT RECORDS{" "}
+                </span>{" "}
+                Preventing information on past misconduct investigations from being
+                recorded or retained in an officer's personnel file
               </a>
 
-              <br></br> */}
-
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: reprimand
-            </a>
-            <br></br>
-            <a>
-              "The written reprimand as herein provided shall not remain in
-              effect for a period of more than eighteen (18) months from the
-              date of the occurence upon which the complaint and written
-              reprimand are based." (Braddock Borough)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="reprimand"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand
+                }
               >
-                {" "}
-                search contracts for "reprimand"{" "}
-              </NavLink>
-            </button>
 
-            <br></br>
-            <br></br>
-            <br></br>
+                <br></br>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: reprimand
+                </a>
+                <br></br>
+                <a>
+                  "The written reprimand as herein provided shall not remain in
+                  effect for a period of more than eighteen (18) months from the
+                  date of the occurence upon which the complaint and written
+                  reprimand are based." (Braddock Borough)
+                </a>
 
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: personnel
-              file
-            </a>
-            <br></br>
-            <a>
-              The City agrees that any and all disciplinary actions shall only
-              be kept in an employee personnel file for thirty (30) months from
-              the date of the infraction and then the infraction shall be
-              removed. (Duquesne City)
-            </a>
+                <br></br>
 
-            <br></br>
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="reprimand"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "reprimand"{" "}
+                  </NavLink>
+                </button>
 
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="personnel+file"'}
-                style={{ color: "#ffc92e" }}
-              >
-                {" "}
-                search contracts for "personnel file"{" "}
-              </NavLink>
-            </button>
+                <br></br>
+                <br></br>
+                <br></br>
+
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: personnel
+                  file
+                </a>
+                <br></br>
+                <a>
+                  The City agrees that any and all disciplinary actions shall only
+                  be kept in an employee personnel file for thirty (30) months from
+                  the date of the infraction and then the infraction shall be
+                  removed. (Duquesne City)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="personnel+file"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "personnel file"{" "}
+                  </NavLink>
+                </button>
+              </div>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
-
-          <a
-            className="pt-5"
-            data-toggle="collapse"
-            aria-expanded="false"
-            aria-controls={`hi`}
-            href={`hi`}
-            style={{ color: "black" }}
-            onClick={() => this.handleTitleClick("PublicComment")}
-          >
-            6.{" "}
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              LIMITS DISCIPLINARY CONSEQUENCES{" "}
-            </span>{" "}
-            Limiting disciplinary consequences for officers or limiting the
-            capacity of civilian oversight structures and/or the media to hold
-            police accountable.
-          </a>
 
           <div
-            className={
-              "col-md-6 offset-md-1 collapse nav-collapse " + dropPublicComment
-            }
-          >
-            {/* <br></br> 
-              <a> 
-              <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
+            style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
+            onClick={() => this.handleTitleClick("PublicComment")}
+          > 
+              <a
+                className="pt-5"
+                data-toggle="collapse"
+                aria-expanded="false"
+                aria-controls={`hi`}
+                href={`hi`}
+                style={{ color: "black" }}
+              >
+                6.{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  LIMITS DISCIPLINARY CONSEQUENCES{" "}
+                </span>{" "}
+                Limiting disciplinary consequences for officers or limiting the
+                capacity of civilian oversight structures and/or the media to hold
+                police accountable.
               </a>
 
-              <br></br> */}
-
-            <br></br>
-            <a>
-              <span style={{ fontWeight: "bold" }}> Keyword </span>: public
-              comment
-            </a>
-            <br></br>
-            <a>
-              "Unless agreed to by the Police Officer or required by law, the
-              Borough shall not make any public comment or statement on the
-              reason for any disciplinary action brought against the police
-              officer." (Bridgeville Borough)
-            </a>
-
-            <br></br>
-
-            <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-            >
-              <NavLink
-                to={routes.researchers + '?search="public+comment"'}
-                style={{ color: "#ffc92e" }}
+              <div
+                className={
+                  "col-md-6 offset-md-1 collapse nav-collapse " + dropPublicComment
+                }
               >
-                {" "}
-                search contracts for "public comment"{" "}
-              </NavLink>
-            </button>
+                <br></br>
+                <a>
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: public
+                  comment
+                </a>
+                <br></br>
+                <a>
+                  "Unless agreed to by the Police Officer or required by law, the
+                  Borough shall not make any public comment or statement on the
+                  reason for any disciplinary action brought against the police
+                  officer." (Bridgeville Borough)
+                </a>
+
+                <br></br>
+
+                <button
+                  type="button"
+                  color="#ff5c5c"
+                  className="ex-keyword btn btn-info mr-2"
+                >
+                  <NavLink
+                    to={routes.researchers + '?search="public+comment"'}
+                    style={{ color: "#ffc92e" }}
+                  >
+                    {" "}
+                    search contracts for "public comment"{" "}
+                  </NavLink>
+                </button>
+              </div>
           </div>
         </div>
       </div>
