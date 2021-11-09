@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('PxPUC', '0006_auto_20211104_1528'),
+        ("PxPUC", "0006_auto_20211104_1528"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='question',
-            name='location',
+            model_name="question",
+            name="location",
         ),
     ]

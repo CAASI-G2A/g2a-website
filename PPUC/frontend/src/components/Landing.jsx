@@ -41,60 +41,101 @@ class Landing extends Component {
         </div>
 
         <hr className="my-4" />
-        <div className="jumbotron" style={{ padding: "2rem", backgroundColor: 'white', borderLeft: '5px solid darkblue' }}>
-          <p className="lead" style={{ fontSize: "1.5rem", fontWeight: 800, color: 'darkblue' }}>What you can do on this website:</p>
-          <div className="item1_map" style={{ display: 'flex' }}>
+        <div
+          className="jumbotron"
+          style={{
+            padding: "2rem",
+            backgroundColor: "white",
+            borderLeft: "5px solid darkblue",
+          }}
+        >
+          <p
+            className="lead"
+            style={{ fontSize: "1.5rem", fontWeight: 800, color: "darkblue" }}
+          >
+            What you can do on this website:
+          </p>
+          <div className="item1_map" style={{ display: "flex" }}>
             <div>
-              <img 
+              <img
                 src="/static/app/img/landing_icon_map.png"
-                style={{ width: "80px", marginRight: '1rem' }}
-                ></img>
+                style={{ width: "80px", marginRight: "1rem" }}
+              ></img>
             </div>
-            <div style={{ paddingTop: '1rem' }}>
-              <h5 style={{ marginBottom: "0px", color: 'royalblue', fontWeight: 700 }}>
+            <div style={{ paddingTop: "1rem" }}>
+              <h5
+                style={{
+                  marginBottom: "0px",
+                  color: "royalblue",
+                  fontWeight: 700,
+                }}
+              >
                 {" "}
                 1) Explore&nbsp;
-                <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>Police Dept Map</Link>
+                <Link
+                  to={routes.researchers}
+                  style={{ color: "royalblue", fontWeight: 700 }}
+                >
+                  Police Dept Map
+                </Link>
               </h5>
               <p className="lead">
-                Find your local and neighboring police department and learn about
-                it.
+                Find your local and neighboring police department and learn
+                about it.
               </p>
             </div>
           </div>
-          <div className="item2_search" style={{ display: 'flex' }}>
+          <div className="item2_search" style={{ display: "flex" }}>
             <div>
-              <img 
+              <img
                 src="/static/app/img/landing_icon_search.png"
-                style={{ width: "80px", marginRight: '1rem' }}
-                ></img>
+                style={{ width: "80px", marginRight: "1rem" }}
+              ></img>
             </div>
-            <div style={{ paddingTop: '1rem' }}>
-              <h5 style={{ marginBottom: "0px", color: 'royalblue', fontWeight: 700 }}>
-                <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>2) Search Police Contracts</Link>
+            <div style={{ paddingTop: "1rem" }}>
+              <h5
+                style={{
+                  marginBottom: "0px",
+                  color: "royalblue",
+                  fontWeight: 700,
+                }}
+              >
+                <Link
+                  to={routes.researchers}
+                  style={{ color: "royalblue", fontWeight: 700 }}
+                >
+                  2) Search Police Contracts
+                </Link>
               </h5>
               <p className="lead">
-                Search and compare over 100 contracts from Allegheny County. Filter contracts by location.
+                Search and compare over 100 contracts from Allegheny County.
+                Filter contracts by location.
               </p>
             </div>
           </div>
-          <div className="item3_complaint" style={{ display: 'flex' }}>
+          <div className="item3_complaint" style={{ display: "flex" }}>
             <div>
-              <img 
+              <img
                 src="/static/app/img/landing_icon_complaint.png"
-                style={{ width: "80px", marginRight: '1rem' }}
-                ></img>
+                style={{ width: "80px", marginRight: "1rem" }}
+              ></img>
             </div>
-            <div style={{ paddingTop: '1rem' }}>
+            <div style={{ paddingTop: "1rem" }}>
               <h5 style={{ marginBottom: "0px" }}>
-                <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>3) Pittsburgh Complaint FAQ</Link>
+                <Link
+                  to={routes.researchers}
+                  style={{ color: "royalblue", fontWeight: 700 }}
+                >
+                  3) Pittsburgh Complaint FAQ
+                </Link>
               </h5>
               <p className="lead">
-                Learn about the process of filing a police misconduct complaint at Pittsburgh.
+                Learn about the process of filing a police misconduct complaint
+                at Pittsburgh.
               </p>
             </div>
           </div>
-          
+
           {/* <h5 style={{ marginBottom: "0px", color: 'royalblue', fontWeight: 700 }}>
             <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>2) Search Police Contracts</Link>
           </h5>

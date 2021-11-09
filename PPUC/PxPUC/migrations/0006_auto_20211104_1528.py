@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('PxPUC', '0005_auto_20211001_0309'),
+        ("PxPUC", "0005_auto_20211001_0309"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='location',
-            name='complaint_form_link',
+            model_name="location",
+            name="complaint_form_link",
             field=models.URLField(max_length=300, null=True),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='a',
-            field=models.CharField(default='', max_length=1000),
+            model_name="question",
+            name="a",
+            field=models.CharField(default="", max_length=1000),
         ),
         migrations.AlterField(
-            model_name='question',
-            name='q',
-            field=models.CharField(default='', max_length=1000),
+            model_name="question",
+            name="q",
+            field=models.CharField(default="", max_length=1000),
         ),
     ]

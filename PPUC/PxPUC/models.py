@@ -15,15 +15,16 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+
 # Keyword table is a junction table of all keywords for Location. Each Location may have (1-5?) keywords
 # and each Keyword may belong to more than one Location (but are separate entries!)
 # class Keyword
-    # location (foreign key)
-    # category (foreign key)
-    # word (string)
+# location (foreign key)
+# category (foreign key)
+# word (string)
 
 
-# Corresponds to the handful of Campaign Zero categories. These are mostly static, and referred to by 
+# Corresponds to the handful of Campaign Zero categories. These are mostly static, and referred to by
 # each keyword object
 class Category(models.Model):
     # Should be separate fields for category_name, and category_description
@@ -63,11 +64,12 @@ class Sentence(models.Model):
     def __str__(self):
         return self.text
 
+
 # Junction table with single entry per keyword per sentence
 # For example: If sentence #1 contains two keywords, will be entry for Setence 1, Key 1, and Sentence 1, Key 2
 # class Sentence_Keyword
-    # sentence (foreign key)
-    # keyword (foreign key)
+# sentence (foreign key)
+# keyword (foreign key)
 
 
 # May need to be modified instead of adding a new class
@@ -87,6 +89,7 @@ class Problematic_Sentence(models.Model):
     def __str__(self):
         return self.text
 
+
 # Also deprecated, replaced by category and keyword
 class GlossaryTerm(models.Model):
     location = models.ForeignKey(
@@ -94,6 +97,7 @@ class GlossaryTerm(models.Model):
     )
     term = models.TextField()
     definition = models.TextField()
+
 
 # Used for saving user search queries
 class SearchQuery(models.Model):
