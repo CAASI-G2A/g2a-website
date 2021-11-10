@@ -69,10 +69,34 @@ class Commentary extends Component {
     const dropReprimand = this.state.showReprimand ? "show" : "";
     const dropPublicComment = this.state.showPublicComment ? "show" : "";
 
+
+
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
-
+          
+        <div
+          opacity={0.5}
+          // style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
+        > 
+          <h1 style={{ color: "black" }}>HOW POLICE UNION CONTRACTS <br/>  BLOCK ACCOUNTABILITY</h1>
+          <hr className="my-4" style={{ borderTop: "1px solid black" }} />
+          <div className="col-md-6 offset-md-8">
+            <NavLink to={routes.researchers}>
+                Click Here to Search Contracts Manually
+            </NavLink>
+            {/* <button
+              type="button"
+              color="#ff5c5c"
+              className="ex-keyword btn btn-info mr-2"
+              style={{ width: "200px", height: "50px", fontSize: "15px", paddingBottom: "0px"}}
+            >
+              <NavLink to={routes.researchers} style={{ color: "white"}}>
+                Search Contracts Manually
+              </NavLink>
+            </button> */}
+          </div>
+        </div>
           <div
               className="jumbotron"
               style={{
@@ -82,6 +106,7 @@ class Commentary extends Component {
                 paddingBottom: "90px",
               }}
             >
+              {/* figure out a better way to add in the spaces */}
               <br></br>
               <br></br>
               <br></br>
@@ -91,30 +116,8 @@ class Commentary extends Component {
               <br></br>
               <br></br>
               <br></br>
-
-              <div
-                opacity={0.5}
-                style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
-              > 
-                <h1 style={{ color: "black" }}>HOW POLICE UNION CONTRACTS <br/>  BLOCK ACCOUNTABILITY</h1>
-                <hr className="my-4" style={{ borderTop: "1px solid black" }} />
-                <div className="col-md-6 offset-md-8">
-                  <NavLink to={routes.researchers}>
-                      Click Here to Search Contracts Manually
-                  </NavLink>
-                  {/* <button
-                    type="button"
-                    color="#ff5c5c"
-                    className="ex-keyword btn btn-info mr-2"
-                    style={{ width: "200px", height: "50px", fontSize: "15px", paddingBottom: "0px"}}
-                  >
-                    <NavLink to={routes.researchers} style={{ color: "white"}}>
-                      Search Contracts Manually
-                    </NavLink>
-                  </button> */}
-                </div>
-              </div>
           </div>
+
 
           <div className="pt-5 pl-1 pb-5">
               <h2>
@@ -146,6 +149,10 @@ class Commentary extends Component {
                   {" "}
                   DISQUALIFY MISCONDUCT COMPLAINTS{" "}
                 </span>{" "}
+                <br></br>
+                Disqualifying misconduct complaints that are submitted too many days
+                after an incident occurs or if an investigation takes too long to
+                complete
               </a>
 
               <div
@@ -153,13 +160,6 @@ class Commentary extends Component {
                   "collapse nav-collapse " + dropUnfounded
                 }
               >
-
-                <a>
-                  Disqualifying misconduct complaints that are submitted too many days
-                  after an incident occurs or if an investigation takes too long to
-                  complete
-                </a>
-
                 <div
                   className={
                     "col-md-6 offset-md-1"
@@ -248,6 +248,7 @@ class Commentary extends Component {
                   {" "}
                   PREVENTS IMMEDIATE INTERROGATION{" "}
                 </span>{" "}
+                <br></br>
                 Preventing police officers from being interrogated immediately after
                 being involved in an incident or otherwise restricting how, when, or
                 where they can be interrogated
@@ -342,6 +343,7 @@ class Commentary extends Component {
                   {" "}
                   UNFAIR ACCESS TO INFORMATION{" "}
                 </span>{" "}
+                <br></br>
                 Giving officers access to information that civilians do not get
                 prior to being interrogated
               </a>
@@ -426,6 +428,7 @@ class Commentary extends Component {
               >
                 {" "}
                 4. <span style={{ fontWeight: "bold" }}> LEGAL COSTS </span>{" "}
+                <br></br>
                 Requiring cities to pay costs related to police misconduct including
                 by giving officers paid leave while under investigation, paying
                 legal fees, and/or the cost of settlements
@@ -436,12 +439,6 @@ class Commentary extends Component {
                   "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
                 }
               >
-                {/* <br></br> 
-                  <a> 
-                  <span style={{fontWeight: "bold"}}> Explanation </span>: Disqualifying misconduct complaints that are submitted too many days after an incident occurs or if an investigation takes too long to complete
-                  </a>
-
-                  <br></br> */}
 
                 <br></br>
                 <a>
@@ -556,6 +553,7 @@ class Commentary extends Component {
                   {" "}
                   DESTROYS MISCONDUCT RECORDS{" "}
                 </span>{" "}
+                <br></br>
                 Preventing information on past misconduct investigations from being
                 recorded or retained in an officer's personnel file
               </a>
@@ -648,6 +646,7 @@ class Commentary extends Component {
                   {" "}
                   LIMITS DISCIPLINARY CONSEQUENCES{" "}
                 </span>{" "}
+                <br></br>
                 Limiting disciplinary consequences for officers or limiting the
                 capacity of civilian oversight structures and/or the media to hold
                 police accountable.
