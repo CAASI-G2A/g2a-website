@@ -321,3 +321,37 @@ body {
 //   position: relative !important;
 //   height: 300px !important;
 // }
+
+/* styles for about us */
+.meet-the-team-row {
+  height: 200px;
+}
+
+.profile-img-wrapper {
+  padding-bottom: 10px;
+}
+.profile-name {
+  font-size: 1rem;
+}
+
+.partner-row {
+  height: 120px;
+}
+
+/* styles for contact us */
+.contact-email-wrapper {
+  background: #f9f9f9 !important;
+}
+
+.contact-img-wrapper {
+  margin-bottom: 20px;
+}
+
+.contact-message {
+  height: 200px !important;
+}
+
+.contact-email-button {
+  background: #337ab7;
+  color: white;
+}

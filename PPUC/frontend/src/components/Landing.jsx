@@ -9,19 +9,20 @@ class Landing extends Component {
         <div
           className="jumbotron"
           style={{
-            backgroundImage: "url(https://i.imgur.com/jj0eBl5.jpg)",
+            backgroundImage: "url(/static/app/img/banner.jpg)",
             backgroundSize: "100%",
             paddingTop: "60px",
             paddingBottom: "90px",
+            height: '150px'
           }}
         >
-          <img
+          {/* <img
             src="/static/app/img/CAASI2.png"
             style={{ width: "55px", paddingBottom: "14px", opacity: 0.9 }}
           />
-          <h1 style={{ color: "white" }}>ACPP</h1>
-          <hr className="my-4" style={{ borderTop: "1px solid white" }} />
-          <p className="lead" style={{ color: "white" }}>
+          <h1 style={{ color: "white" }}>ACPP</h1> */}
+          <hr className="my-4" style={{ borderTop: "1px solid white", marginTop: '0px !important' }} />
+          <p className="lead" style={{ color: "white", fontSize: '2rem', fontWeight: 600 }}>
             Allegheny County Policing Project
           </p>
         </div>

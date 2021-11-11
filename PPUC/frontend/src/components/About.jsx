@@ -37,6 +37,189 @@ class About extends Component {
           </p>
           <hr className="my-4 border-top border-secondary" />
         </div>
+        {/* about the team */}
+        <div class="meet-the-team-wrapper">
+          <h2 class="text-center">Meet the Team</h2>
+          <div class="meet-the-team-row row d-flex align-items-center">
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/sera.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.linardi.gspia.pitt.edu/"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Sera Linardi
+                </a>
+              </div>
+              <div>CAASI Director</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/yuru.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.yurulin.com"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Yu-Ru Lin
+                </a>
+              </div>
+              <div>Project Advisor</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/mikaela.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Mikaela Chandler
+                </a>
+              </div>
+              <div>Project Manager</div>
+            </div>
+          </div>
+          <div class="meet-the-team-row row d-flex align-items-center">
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/eliana.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Eliana Beigel
+                </a>
+              </div>
+              <div>Project Manager</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="100"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                ></a>
+              </div>
+              <div>&emsp;&emsp;</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="100"
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                ></a>
+              </div>
+              <div>&emsp;&emsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="partners-wrapper">
+          <h2 class="text-center">Our Partners</h2>
+          <hr class="my-4"></hr>
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-3 text-center">
+              <a href="https://joincampaignzero.org" target="_blank">
+                <img
+                  src="/static/app/img/partner_camp_zero.jpg"
+                  alt="Open Police"
+                  width="100"
+                />
+              </a>
+            </div>
+            <div class="col-md-9">
+              <h3>Campaign Zero</h3>
+              <p>
+                A comprehensive platform of research-based policy solutions to
+                end police brutality in America.
+              </p>
+            </div>
+          </div>
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-3 text-center">
+              <a href="https://openpolice.org" target="_blank">
+                <img
+                  src="/static/app/img/partner_open_pol.jpg"
+                  alt="Open Police"
+                  width="200"
+                />
+              </a>
+            </div>
+            <div class="col-md-9">
+              <h3>Open Police</h3>
+              <p>
+                Prepare, file, and track reports of police conduct because your
+                story is too important to be ignored.
+              </p>
+            </div>
+          </div>
+          {/* <table class="col-md-12">
+            <tr>
+              <th colspan="4" class="text-center"><h2>Partners</h2></th>
+            </tr>
+            <tr rowspan="3">
+              <td><a href="https://www.joincampaignzero.org" target="_blank"><img src="camp_zero.jpg" alt="Campaign Zero" width="80" height="80" /></a></td>
+              <td>
+                <h4>Campaign Zero</h4>
+                <p>A comprehensive platform of research-based policy solutions to end police brutality in America.</p></td>
+            </tr>
+            <tr rowspan="3">
+              <td><a href="https://openpolice.org" target="_blank"><img src="open_pol.jpg" alt="Open Police" width="120" height="60" /></a></td>
+              <td>Open Police: Prepare, file, and track reports of police conduct because your story is too important to be ignored.</td>
+            </tr>
+            <tr rowspan="3">
+              <td><a href="https://www.grieftoaction.org/PBB/" target="_blank"><img src="412conn.jpg" alt="412 Connect" width="100" height="60" /></a></td>
+              <td>412 Connect: promote and increase the visibility of Black-owned businesses in Pittsburgh and to expand their business presence on and around the University of Pittsburgh campus and the Pittsburgh community.</td>
+            </tr>
+          </table> */}
+        </div>
       </div>
     );
   }

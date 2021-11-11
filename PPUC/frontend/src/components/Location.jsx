@@ -185,7 +185,16 @@ class Location extends Component {
             </div> */}
           </div>
           <Tabs defaultActiveKey="1" type="card" size={"large"}>
-            <TabPane tab="text" key="1">
+            <TabPane tab="pdf" key="1">
+              <div className="pdf_viewer_wrapper col-md-12">
+                <ReactPDF
+                  url="/static/app/img/pdf1.pdf"
+                  showProgressBar
+                  showToolbox
+                />
+              </div>
+            </TabPane>
+            <TabPane tab="text" key="2">
               {this.state.contract && (
                 <div className="col-md-12">
                   <h2>Contract</h2>
@@ -195,15 +204,6 @@ class Location extends Component {
                   ))}
                 </div>
               )}
-            </TabPane>
-            <TabPane tab="pdf" key="2">
-              <div className="pdf_viewer_wrapper col-md-12">
-                <ReactPDF
-                  url="/static/app/img/pdf1.pdf"
-                  showProgressBar
-                  showToolbox
-                />
-              </div>
             </TabPane>
           </Tabs>
         </div>
