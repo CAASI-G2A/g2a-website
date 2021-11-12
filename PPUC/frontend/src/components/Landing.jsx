@@ -21,7 +21,7 @@ class Landing extends Component {
             style={{ width: "55px", paddingBottom: "14px", opacity: 0.9 }}
           />
           <h1 style={{ color: "white" }}>ACPP</h1> */}
-          <hr className="my-4" style={{ borderTop: "1px solid white", marginTop: '0px !important' }} />
+          <hr className="my-4" style={{ borderTop: "1px solid white", marginTop: "1rem !important", marginBottom: '1rem !important' }} />
           <p className="lead" style={{ color: "white", fontSize: '2rem', fontWeight: 600 }}>
             Allegheny County Policing Project
           </p>

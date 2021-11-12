@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { Card, Meta, Col, Row } from 'antd';
 
-class About extends Component {
+class About extends Component {  
   render() {
+    const { Meta } = Card;
+
     return (
       <div>
         <h1 className="text-center pt-5 pl-2">
@@ -39,8 +42,67 @@ class About extends Component {
         </div>
         {/* about the team */}
         <div class="meet-the-team-wrapper">
-          <h2 class="text-center">Meet the Team</h2>
-          <div class="meet-the-team-row row d-flex align-items-center">
+          <h2 class="text-center" style={{ marginBottom: 5 }}>Meet the Team</h2>
+          <hr style={{ width: '10%', border: '3px solid darkblue', marginTop: 5, marginBottom: 40 }} />
+          <Row gutter={[16, 24]}>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Sera Linardi" description="www.instagram.com" />
+              </Card>
+            </Col>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+              </Card>
+            </Col>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+              </Card>
+            </Col>
+          </Row>
+          <Row gutter={24}>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Sera Linardi" description="www.instagram.com" />
+              </Card>
+            </Col>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+              </Card>
+            </Col>
+            <Col span={8}>
+              <Card
+                hoverable
+                style={{ width: '70%', margin: '0 auto' }}
+                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
+              >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+              </Card>
+            </Col>
+          </Row>
+          {/* <div class="meet-the-team-row row d-flex align-items-center">
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
@@ -101,8 +163,8 @@ class About extends Component {
               </div>
               <div>Project Manager</div>
             </div>
-          </div>
-          <div class="meet-the-team-row row d-flex align-items-center">
+          </div> */}
+          {/* <div class="meet-the-team-row row d-flex align-items-center">
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
@@ -159,7 +221,7 @@ class About extends Component {
               </div>
               <div>&emsp;&emsp;</div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div class="partners-wrapper">
           <h2 class="text-center">Our Partners</h2>
