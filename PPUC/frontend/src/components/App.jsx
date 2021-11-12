@@ -13,13 +13,13 @@ import routes from "../routes";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Landing from "./Landing";
-import Commentary from "./Commentary";
 import Researchers from "./Researchers";
 import Citizens from "./Citizens";
 import About from "./About";
 import Contact from "./Contact";
 import Location from "./Location";
 import Map from "./SmallList";
+import Commentary from "./Commentary";
 
 class App extends Component {
   componentDidMount() {

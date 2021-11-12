@@ -298,15 +298,14 @@ class LocationQuestionList(generics.ListAPIView):
     lookup_url_kwarg = "lid"
 
     def get_queryset(self):
-        # lid = self.kwargs.get(self.lookup_url_kwarg)
-        # location = Location.objects.get(pk=lid)
+        lid = self.kwargs.get(self.lookup_url_kwarg)
+        location = Location.objects.get(pk=lid)
         queryset = Category.objects.all().prefetch_related(
             Prefetch(
                 "questions",
-                # queryset=Question.objects.filter(
-                #    Q(location=None) | Q(location=location)
-                # ),
-                queryset=Question.objects.filter(Q(location=None)),
+                queryset=Question.objects.filter(
+                    Q(location=None) | Q(location=location)
+                ),
             )
         )
         return queryset

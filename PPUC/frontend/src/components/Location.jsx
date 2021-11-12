@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
-import { Tabs } from "antd";
 import Api from "../libs/api";
-import ReactPDF from "@intelllex/react-pdf";
+
 class Location extends Component {
   constructor(props) {
     super(props);
@@ -18,17 +17,7 @@ class Location extends Component {
       location: null,
       contract: null,
       problematicSentences: null,
-      numPages: null,
-      pageNumber: 1,
     };
-
-    this.handleNumPages = this.handleNumPages.bind(this);
-  }
-
-  handleNumPages(numPages) {
-    this.setState({
-      numPages: numPages,
-    });
   }
 
   componentDidMount() {
@@ -70,12 +59,6 @@ class Location extends Component {
   }
 
   render() {
-    const options = {
-      cMapUrl: "cmaps/",
-      cMapPacked: true,
-    };
-    const { TabPane } = Tabs;
-
     console.log("I am rendering");
     return (
       <div>
@@ -184,28 +167,15 @@ class Location extends Component {
               ))}
             </div> */}
           </div>
-          <Tabs defaultActiveKey="1" type="card" size={"large"}>
-            <TabPane tab="pdf" key="1">
-              <div className="pdf_viewer_wrapper col-md-12">
-                <ReactPDF
-                  url="/static/app/img/pdf1.pdf"
-                  showProgressBar
-                  showToolbox
-                />
-              </div>
-            </TabPane>
-            <TabPane tab="text" key="2">
-              {this.state.contract && (
-                <div className="col-md-12">
-                  <h2>Contract</h2>
-                  <hr className="my-4 border-top border-secondary" />
-                  {this.state.contract.text.map((line, index) => (
-                    <p key={index}>{line}</p>
-                  ))}
-                </div>
-              )}
-            </TabPane>
-          </Tabs>
+          {this.state.contract && (
+            <div className="col-md-12">
+              <h2>Contract</h2>
+              <hr className="my-4 border-top border-secondary" />
+              {this.state.contract.text.map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     );

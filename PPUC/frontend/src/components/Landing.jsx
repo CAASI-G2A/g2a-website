@@ -74,7 +74,7 @@ class Landing extends Component {
                 {" "}
                 1) Explore&nbsp;
                 <Link
-                  to={routes.researchers}
+                  to={routes.map}
                   style={{ color: "royalblue", fontWeight: 700 }}
                 >
                   Police Dept Map
@@ -102,7 +102,7 @@ class Landing extends Component {
                 }}
               >
                 <Link
-                  to={routes.researchers}
+                  to={routes.commentary}
                   style={{ color: "royalblue", fontWeight: 700 }}
                 >
                   2) Search Police Contracts
@@ -124,7 +124,7 @@ class Landing extends Component {
             <div style={{ paddingTop: "1rem" }}>
               <h5 style={{ marginBottom: "0px" }}>
                 <Link
-                  to={routes.researchers}
+                  to={routes.citizens}
                   style={{ color: "royalblue", fontWeight: 700 }}
                 >
                   3) Pittsburgh Complaint FAQ
