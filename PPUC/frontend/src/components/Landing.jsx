@@ -46,21 +46,21 @@ class Landing extends Component {
           <h4 style={{ marginBottom: "0px" }}>
             {" "}
             Explore &nbsp;
-            <Link to={routes.researchers}>Police Dept Map</Link>
+            <Link to={routes.map}>Police Dept Map</Link>
           </h4>
           <p className="lead">
             Find your local and neighboring police department and learn about
             it.
           </p>
           <h4 style={{ marginBottom: "0px" }}>
-            <Link to={routes.researchers}>Search Police Contracts</Link>
+            <Link to={routes.commentary}>Search Police Contracts</Link>
           </h4>
           <p className="lead">
             Search and compare over 100 contracts from Allegheny County. Filter
             contracts by location.
           </p>
           <h4 style={{ marginBottom: "0px" }}>
-            <Link to={routes.researchers}>Pittsburgh Complaint FAQ</Link>
+            <Link to={routes.citizens}>Pittsburgh Complaint FAQ</Link>
           </h4>
           <p className="lead">
             Learn about the process of filing a police misconduct complaint at
