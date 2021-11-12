@@ -31,7 +31,9 @@ class Navbar extends Component {
                 <NavLink to={routes.map}>Police Dept Map</NavLink>
               </li>
               <li className="nav-item nav-link">
-                <NavLink to={routes.commentary}>Police Contracts</NavLink>
+                <NavLink to={routes.researchers}>
+                  Search Police Contracts
+                </NavLink>
               </li>
               <li className="nav-item nav-link">
                 <NavLink to={routes.citizens}>Complaint FAQ</NavLink>

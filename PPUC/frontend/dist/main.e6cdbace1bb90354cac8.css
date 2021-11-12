@@ -1,0 +1,292 @@
+.border-0 {
+  border-width: 0 !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.border-light-gray {
+  border-color: #c4c4c4;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: auto;
+  left: 100%;
+  margin-top: -33px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+
+select.selectpicker {
+  display: block !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+textarea {
+  width: 100%;
+  height: 75px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+  color: #b94a48;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+input.input-validation-error {
+  border: 1px solid #b94a48;
+}
+
+input[type=checkbox].input-validation-error {
+  border: 0 none;
+}
+
+.validation-summary-errors {
+  color: #b94a48;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+.navbar-custom {
+  background-color: white;
+}
+
+.active-cyan-3 input[type=text] {
+  border: 1px solid #428bca;
+  box-shadow: 0 0 0 1px #428bca;
+}
+
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+  border: 1px solid #428bca;
+  box-shadow: 0 0 0 1px #428bca;
+}
+
+a {
+  overflow-wrap: break-word;
+}
+
+a.a1:link {
+  color: black;
+}
+
+a.a1:hover {
+  text-decoration: none;
+}
+
+a.a1:visited {
+  color: black;
+  text-decoration: none;
+}
+
+pre {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  background: none;
+  white-space: normal;
+  padding: 0px;
+  word-break: keep-all;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+.panel-body {
+  border-top: 1px solid #428bca;
+}
+
+.scrollable-panel {
+  height: 300px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #428bca;
+}
+
+.flow-circle {
+  color: #337ab7;
+}
+
+.flow-circle-selected {
+  color: red;
+}
+
+.flow-stage {
+  transition: transform 0.35s ease;
+}
+
+@media (hover: hover) {
+  .flow-stage:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: transform 0.35s ease;
+  }
+}
+.flow-stage-text {
+  margin-top: 0px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.btn-rounded {
+  border-radius: 15px !important;
+}
+
+.flow-stage > .fa-stack {
+  position: initial !important;
+}
+
+.bg-blue {
+  background-color: #337ab7;
+}
+
+.border-blue {
+  border-color: #337ab7;
+}
+
+.subprocess-ml-n {
+  margin-left: -1.4rem !important;
+}
+
+.subprocess-faq-icon {
+  z-index: 2;
+}
+
+.ex-keyword {
+  background-color: #007bff;
+  padding: 5px;
+  font-size: 0.9rem;
+  height: 30px !important;
+  line-height: 1;
+  border-radius: 10px !important;
+}
+
+.contract-highlight-text {
+  color: #5d5d5d;
+}
+
+.region_list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  width: 280px;
+  position: relative;
+  left: 10px;
+}
+
+.map_wrapper {
+  width: 70%;
+}
+
+.map {
+  width: 700px;
+  border: 0px;
+  height: 500px;
+  position: initial;
+}
+
+.div-for-map {
+  display: flex;
+  position: relative;
+  left: 100px;
+  padding: 10px 50px;
+  background: #f9f9f9;
+}
+
+.map_search_term {
+  background-color: #ffb42a !important;
+  border-radius: 10px !important;
+  margin-right: 10px !important;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  border-radius: 5px;
+}
+
+.legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+
+/*# sourceMappingURL=main.e6cdbace1bb90354cac8.css.map*/

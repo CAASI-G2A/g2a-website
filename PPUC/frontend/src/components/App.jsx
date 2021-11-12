@@ -13,7 +13,6 @@ import routes from "../routes";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Landing from "./Landing";
-import Commentary from "./Commentary";
 import Researchers from "./Researchers";
 import Citizens from "./Citizens";
 import About from "./About";
@@ -54,7 +53,6 @@ class App extends Component {
           <Switch>
             <Route path={routes.home} exact component={Landing} />
             <Route path={routes.map} exact component={Map} />
-            <Route path={routes.commentary} component={Commentary} />
             <Route path={routes.researchers} component={Researchers} />
             <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
