@@ -13,6 +13,9 @@ def run():
     category = Category.objects.get_or_create(category="Investigation")
     category = Category.objects.get_or_create(category="Result")
     with os.scandir(settings.BASE_DIR + "/PxPUC/static/app/contracts_txt") as entries:
+        Sentence.objects.all().delete()
+        Contract.objects.all().delete()
+
         for entry in entries:
             if entry.is_file():
                 # First create the Location object
@@ -29,14 +32,8 @@ def run():
                 )
 
                 # PG: Delete existing contracts and sentences in system to avoid duplicates 
-                Sentence.objects.filter(location=location).delete()
-                Contract.objects.filter(location=location).delete()
-
-
-                # Delete existing contracts and sentences in system to avoid duplicates 
-                Sentence.objects.filter(location=location).delete()
-                Contract.objects.filter(location=location).delete()
-                
+                #Sentence.objects.filter(location=location).delete()
+                #Contract.objects.filter(location=location).delete()
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())

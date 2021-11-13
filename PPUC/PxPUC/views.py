@@ -306,7 +306,7 @@ class LocationQuestionList(generics.ListAPIView):
                 # queryset=Question.objects.filter(
                 #    Q(location=None) | Q(location=location)
                 # ),
-                queryset=Question.objects.filter(Q(location=None)),
+                queryset=Question.objects.all(),
             )
         )
         return queryset
