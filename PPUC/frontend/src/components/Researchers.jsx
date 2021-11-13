@@ -106,7 +106,8 @@ class Researchers extends Component {
     try {
       function getQueryWords(query) {
         if (typeof query === "string") {
-          return [query];
+          // Patrick Gavazzi: removes quotation marks from search string for highlighting
+          return [query.replace(/['"]+/g, "")];
         } else {
           return getQueryWords(query["operand1"]).concat(
             getQueryWords(query["operand2"])

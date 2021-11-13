@@ -1,0 +1,866 @@
+[
+  {
+    "File name": "Allegheny County District Attorney",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Allegheny County Police arbitration award",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Allegheny Valley Regional Police Department",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Avalon Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Baldwin Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Baldwin Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Bell Acres Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Bellevue Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Bethel Park Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Blawnox Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Braddock Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Braddock Hills Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Brentwood Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Bridgeville Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Carnegie Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Castle Shannon Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Churchill Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Clairton",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Collier Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Coraopolis Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Crafton Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Crescent Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Dormont Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Duquesne",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "East McKeesport Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Edgewood Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Edgeworth Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Elizabeth Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Elizabeth Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Etna Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Findlay Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Forest Hills Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Fox Chapel Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Franklin Park Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Frazer Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Glassport Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Green Tree Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Hampton Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Harmar Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Harrison Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Homestead Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Indiana Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Ingram Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Jefferson Hills Borough",
+    "unfounded": "0",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Kennedy Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Leet Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Leetsdale Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Liberty Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Lincoln Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Mccandless Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "McKees Rocks Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "McKeesport",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Millvale Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Monroeville",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Moon Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Mount Oliver Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Mt. Lebanon Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Munhall Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "North Braddock Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "North Fayette Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "North Versailles Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Northern Regional PD",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Oakmont Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "OHara Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Ohio Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "PA state 2012 2017",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "PA State 2017 2020",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "PA state 2020 2021",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Pitcairn Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Pittsburgh 1.1.19 12.31.22",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Pittsburgh 2010 2015",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Pleasant Hills Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Plum Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Port Vue Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Rankin Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Reserve Township",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Robinson Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Ross Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Sewickley Glen Osborne Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Sewickley Heights Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Shaler Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "South Park Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Springdale Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Stowe Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Swissvale Borough",
+    "unfounded": "1",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Tarentum Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Turtle Creek Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Upper St Clair Township",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "1"
+  },
+  {
+    "File name": "Verona Borough",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "West Deer Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "West Homestead Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "West View Borough",
+    "unfounded": "0",
+    "interview": "1",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "Whitaker Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "1",
+    "reprimand": "0",
+    "public comment": "0"
+  },
+  {
+    "File name": "White Oak Borough",
+    "unfounded": "1",
+    "interview": "0",
+    "interrogation": "1",
+    "false arrest": "1",
+    "reprimand": "1",
+    "public comment": "1"
+  },
+  {
+    "File name": "Whitehall Township",
+    "unfounded": "0",
+    "interview": "1",
+    "interrogation": "1",
+    "false arrest": "0",
+    "reprimand": "1",
+    "public comment": "0"
+  },
+  {
+    "File name": "Wilkins Township",
+    "unfounded": "0",
+    "interview": "0",
+    "interrogation": "0",
+    "false arrest": "0",
+    "reprimand": "0",
+    "public comment": "0"
+  }
+]

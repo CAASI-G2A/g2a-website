@@ -249,14 +249,17 @@ body {
   color: #5d5d5d;
 }
 
-.list {
+.region_list {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 500px;
   width: 280px;
   position: relative;
   left: 10px;
-  border: 1px solid black;
+}
+
+.map_wrapper {
+  width: 70%;
 }
 
 .map {
@@ -272,4 +275,23 @@ body {
   left: 100px;
   padding: 10px 50px;
   background: #f9f9f9;
+}
+
+.map_search_term {
+  background-color: #ffb42a !important;
+  border-radius: 10px !important;
+  margin-right: 10px !important;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  border-radius: 5px;
+}
+
+.legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
 }

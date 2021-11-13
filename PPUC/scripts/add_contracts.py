@@ -84,7 +84,7 @@ def clean_lines(txt):
     #     - punctation: ! . 
     #     - legal and math symbols: % $ § - 
     #     TODO: Add more/fix cases
-    txt = re.sub('[^a-zA-Z1-9\n $.!§%-]+', '', txt)
+    txt = re.sub('[^a-zA-Z0-9\n $.!§%-]+', '', txt)
 
     # PG: remove line breaks that are not after puncitaton
     txt = re.sub('(?<!\.)\n', ' ', txt)

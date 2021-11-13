@@ -19,6 +19,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Location from "./Location";
 import Map from "./SmallList";
+import Commentary from "./Commentary";
 
 class App extends Component {
   componentDidMount() {
@@ -53,6 +54,7 @@ class App extends Component {
           <Switch>
             <Route path={routes.home} exact component={Landing} />
             <Route path={routes.map} exact component={Map} />
+            <Route path={routes.commentary} component={Commentary} />
             <Route path={routes.researchers} component={Researchers} />
             <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
