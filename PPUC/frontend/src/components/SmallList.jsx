@@ -5,7 +5,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import MapComponent from "./MapComponent";
 import features from "../geoData.json";
-import frequencies from "./frequency.json";
+import frequencies from "./../frequency.json";
 
 class SmallList extends Component {
   constructor(props) {
