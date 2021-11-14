@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import _ from 'lodash';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import { Tabs } from "antd";
 import Api from "../libs/api";
+import ReactPDF from "@intelllex/react-pdf";
 
+import regionInfoData from "./merge_data_allegheny_map.json";
+import _default from "rc-trigger";
 class Location extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +20,9 @@ class Location extends Component {
     };
     this.state = {
       location: null,
+      regionInfo: null,
       contract: null,
+      contractPdf: null,
       problematicSentences: null,
     };
   }
@@ -59,7 +66,14 @@ class Location extends Component {
   }
 
   render() {
-    console.log("I am rendering");
+    const { TabPane } = Tabs;
+
+    console.log('filter: ', this.state.location && _.filter(regionInfoData, {'LABEL': this.state.location.name}))
+    const regionInfo = (this.state.location && _.filter(regionInfoData, {'LABEL': this.state.location.name}).length)
+      ? _.filter(regionInfoData, {'LABEL': this.state.location.name})[0] : null;
+    console.log('regionInfoData: ', regionInfoData, regionInfo);
+    
+
     return (
       <div>
         {this.state.location && (
@@ -100,82 +114,56 @@ class Location extends Component {
           </div>
         )}
         <div className="row">
-          <div className="offset-md-6 col-md-6">
-            <h3 className="text-center">Summary</h3>
+          <div className="offset-md-8 col-md-4">
+            <h3 className="text-center">Overview</h3>
             <table className="table table-hover table-bordered">
               <tbody>
                 <tr>
-                  <th className="bg-light">City</th>
-                  {this.state.location && <td>{this.state.location.name}</td>}
-                  <th className="bg-light">State</th>
-                  {this.state.location && <td>{this.state.location.state}</td>}
+                  <th className="bg-light">Full time officers as of 2019</th>
+                  {regionInfo && <td className="align-middle">{regionInfo["Total_Number_Police_Officers_as_of_2019"]}</td>}
+                </tr>
+                <tr>
+                  <th className="bg-light">Do they use a police bill of rights?</th>
+                  {regionInfo && <td className="align-middle">{regionInfo["Do_they_use_a_police_bill_of_rights"]}</td>}
+                </tr>
+                <tr>
+                  <th className="bg-light">Police budget percentage in 2019</th>
+                  {regionInfo && <td className="align-middle">{"xx %"}</td>}
+                </tr>
+                <tr>
+                  <th className="bg-light">Police department website</th>
+                  {regionInfo && <td className="align-middle"><a href={regionInfo['Link_to_police_department']}>Link</a></td>}
                 </tr>
               </tbody>
             </table>
           </div>
-          <div className="col-md-12">
-            {/* <h2>Problematic Sentences</h2>
-            <hr className="my-4 border-top border-secondary" />
-            <ul className="nav nav-tabs" role="tablist">
-              {Object.entries(this.categories).map(
-                ([category, title], index) => (
-                  <li key={category} role="presentation" className="nav-item">
-                    <a
-                      className={`${index === 0 ? "active" : ""} nav-link`}
-                      href={`#${category}`}
-                      aria-controls={category}
-                      role="tab"
-                      data-toggle="tab"
-                    >
-                      {title}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul> */}
-            {/* <div className="tab-content">
-              {Object.keys(this.categories).map((category, index) => (
-                <div
-                  key={category}
-                  role="tabpanel"
-                  className={`tab-pane ${index === 0 ? "active" : ""}`}
-                  id={category}
-                >
-                  {this.state.problematicSentences &&
-                    this.state.problematicSentences[category] &&
-                    ((this.state.problematicSentences[category].length ===
-                      0 && (
-                      <p className="text-center">
-                        No problematic sentences were identified by Campaign 0
-                        as of June 29, 2016.
-                      </p>
-                    )) ||
-                      this.state.problematicSentences[category].map(
-                        (sentence, index) => (
-                          <p key={index}>
-                            <span className="font-weight-bold">Problem:</span>{" "}
-                            {sentence.text}
-                            <br />
-                            <span className="font-weight-bold">
-                              Impact:
-                            </span>{" "}
-                            {sentence.impact}
-                          </p>
-                        )
-                      ))}
+          {this.state.location && 
+            (<Tabs defaultActiveKey="1" type="card" size={"large"}>
+              <TabPane tab="pdf" key="1">
+                <div className="pdf_viewer_wrapper col-md-12">
+                  {this.state.location.hasPdf && (
+                    <ReactPDF
+                      url={Api.ENDPOINTS.getLocationContractPdf(
+                        this.state.location.id
+                      )}
+                      showProgressBar
+                      showToolbox
+                    />
+                  )}
                 </div>
-              ))}
-            </div> */}
-          </div>
-          {this.state.contract && (
-            <div className="col-md-12">
-              <h2>Contract</h2>
-              <hr className="my-4 border-top border-secondary" />
-              {this.state.contract.text.map((line, index) => (
-                <p key={index}>{line}</p>
-              ))}
-            </div>
-          )}
+              </TabPane>
+              <TabPane tab="text" key="2">
+                {this.state.contract && (
+                  <div className="col-md-12">
+                    <h2>Contract</h2>
+                    <hr className="my-4 border-top border-secondary" />
+                    {this.state.contract.text.map((line, index) => (
+                      <p key={index}>{line}</p>
+                    ))}
+                  </div>
+                )}
+              </TabPane>
+            </Tabs>)}
         </div>
       </div>
     );

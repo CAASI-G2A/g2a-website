@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "antd/dist/antd.css";
+import * as d3 from "d3";
 import { Menu, Radio } from "antd";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
@@ -7,6 +7,7 @@ import MapComponent from "./MapComponent";
 import features from "../geoData.json";
 import frequencies from "./frequency.json";
 
+import "antd/dist/antd.css";
 class SmallList extends Component {
   constructor(props) {
     super(props);
@@ -21,18 +22,17 @@ class SmallList extends Component {
       markerPos: [40, -79.9633],
       centerLocation: null,
       searchedRegions: [],
-      keyword_area: null,
-      clear_map: false,
+      selectedRegionsForTerm: null,
+      clearMap: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSelectedRegion = this.handleSelectedRegion.bind(this);
-    this.handleFrequency = this.handleFrequency.bind(this);
+    this.handleSelectKeyword = this.handleSelectKeyword.bind(this);
   }
 
   handleClick(e) {
-    console.log("click ", e);
     var center_coordinate_x;
     var center_coordinate_y;
     var t = 0;
@@ -149,7 +149,6 @@ class SmallList extends Component {
         key={row}
         style={{
           borderBottom: "1px solid #f1f1f1",
-          marginLeft: "20px",
         }}
       >
         {" "}
@@ -159,96 +158,103 @@ class SmallList extends Component {
     return rows;
   }
 
-  handleFrequency(keyword) {
+  handleSelectKeyword(keyword) {
+    const keywordElClass = '.term_' + keyword.replace(' ', '_');
+    d3.select('.term_selected').classed('term_selected', false);
+    d3.select(keywordElClass).classed('term_selected', true);
+
     this.setState({
-      keyword_area: frequencies[keyword],
-      clear_map: false,
+      selectedRegionsForTerm: frequencies[keyword],
+      clearMap: false,
     });
   }
 
   handleClear() {
-    this.setState({ clear_map: true });
+    this.setState({ clearMap: true });
   }
 
   render() {
     return (
       <div>
-        <h4
+        <h3
           style={{
-            fontFamily: "Helvetica",
-            color: "dodgerblue",
+            color: "darkblue",
+            fontWeight: 700,
             marginTop: "50px",
           }}
         >
           Explore police department map
-        </h4>
-        <Radio.Group value={"default"}>
-          <Radio.Button
-            value="unfounded"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("unfounded")}
-          >
-            unfounded
-          </Radio.Button>
-          <Radio.Button
-            value="interview"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("interview")}
-          >
-            interview
-          </Radio.Button>
-          <Radio.Button
-            value="interrogation"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("interrogation")}
-          >
-            interrogation
-          </Radio.Button>
-          <Radio.Button
-            value="false arrest"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("false arrest")}
-          >
-            false arrest
-          </Radio.Button>
-          <Radio.Button
-            value="reprimand"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("reprimand")}
-          >
-            reprimand
-          </Radio.Button>
-          <Radio.Button
-            value="public comment"
-            className="map_search_term"
-            onClick={() => this.handleFrequency("public comment")}
-          >
-            public comment
-          </Radio.Button>
-          <Radio.Button
-            value="clear"
-            className="map_search_term"
-            onClick={() => this.handleClear()}
-          >
-            clear
-          </Radio.Button>
-        </Radio.Group>
-        <div style={{ display: "flex" }}>
+        </h3>
+        <div className="keywords_wrapper" style={{ display: 'flex', background: '#f7f7f7', padding: 5, alignItems: 'center', marginBottom: 10 }}>
+          <div style={{ marginRight: 10 }}>Keywords &nbsp;&nbsp;&nbsp;&nbsp;</div>
+          <Radio.Group value={"default"}>
+            <Radio.Button
+              value="unfounded"
+              className="map_search_term term_unfounded"
+              onClick={() => this.handleSelectKeyword("unfounded")}
+            >
+              unfounded
+            </Radio.Button>
+            <Radio.Button
+              value="interview"
+              className="map_search_term term_interview"
+              onClick={() => this.handleSelectKeyword("interview")}
+            >
+              interview
+            </Radio.Button>
+            <Radio.Button
+              value="interrogation"
+              className="map_search_term term_interrogation"
+              onClick={() => this.handleSelectKeyword("interrogation")}
+            >
+              interrogation
+            </Radio.Button>
+            <Radio.Button
+              value="false arrest"
+              className="map_search_term term_false_arrest"
+              onClick={() => this.handleSelectKeyword("false arrest")}
+            >
+              false arrest
+            </Radio.Button>
+            <Radio.Button
+              value="reprimand"
+              className="map_search_term term_reprimand"
+              onClick={() => this.handleSelectKeyword("reprimand")}
+            >
+              reprimand
+            </Radio.Button>
+            <Radio.Button
+              value="public comment"
+              className="map_search_term"
+              onClick={() => this.handleSelectKeyword("public comment")}
+            >
+              public comment
+            </Radio.Button>
+            <Radio.Button
+              value="clear"
+              className="map_search_term"
+              onClick={() => this.handleClear()}
+            >
+              clear
+            </Radio.Button>
+          </Radio.Group>
+        </div>
+        <div className="map_list_wrapper">
           <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
             <MapComponent
               pos={this.state.markerPos}
               center={this.state.centerLocation}
               searchedRegions={this.state.searchedRegions}
               onSelectedRegion={this.handleSelectedRegion}
-              keywordRegions={this.state.keyword_area}
-              clearMap={this.state.clear_map}
+              keywordRegions={this.state.selectedRegionsForTerm}
+              clearMap={this.state.clearMap}
             />
           </div>
-          <div className="region_list">
+          <div className="region_list_wrapper">
             <Menu
+              className="region_list"
               theme={this.state.theme}
               onClick={this.handleClick}
-              style={{ width: 256 }}
               centerLocation={this.state.centerLocation}
               selectedKeys={this.state.centerLocation}
               mode="inline"

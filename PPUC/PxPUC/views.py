@@ -198,6 +198,24 @@ def contract_download(request, lid):
     return response
 
 
+def load_contract_pdf(request, lid):
+    # get location information
+    location = Location.objects.get(pk=lid)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
+
+    # get filename and path for format
+    filename = "%s_%s.pdf" % (state, city)
+    contract_directory = "/PxPUC/static/app/contracts_pdf/"
+    filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
+
+    # open file for reading and return HTTP response
+    contract_file = open(filepath, mode="rb")
+    response = HttpResponse(contract_file, content_type="application/pdf")
+    response["Content-Disposition"] = "attachment; filename=%s" % filename
+    return response
+
+
 class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
 

@@ -31,6 +31,7 @@ urlpatterns = [
         name="location-contract-retrieve",
     ),
     path("PxPUC/location/<int:lid>/contract/download", views.contract_download),
+    path("PxPUC/location/<int:lid>/contract/load_pdf", views.load_contract_pdf),
     path(
         "PxPUC/location/<int:lid>/questions",
         views.LocationQuestionList.as_view(),

@@ -138,6 +138,7 @@ proj-*/
 
 PPUC/PPUC.pyproj
 PPUC/PPUC.pyproj.user
+PPUC/PxPUC/static/app/contracts_pdf
 PPUC/frontend/node_modules
 *.map
 

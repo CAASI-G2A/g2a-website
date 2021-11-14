@@ -143,6 +143,7 @@ class MapComponent extends Component {
 
   highlightRegion(e) {
     const selectedRegion = e.target.options.className.split("_").join(" ");
+    //d3.select('.leaflet-popup').remove();
     this.props.onSelectedRegion(selectedRegion);
   }
 
@@ -247,7 +248,7 @@ class MapComponent extends Component {
     return (
       <>
         <div
-          className="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          className="map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style={{ height: 500 }}
         >
           <MapContainer

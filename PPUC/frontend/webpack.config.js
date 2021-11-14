@@ -76,6 +76,9 @@ module.exports = {
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
+    alias: {
+      zlib: "browserify-zlib",
+    }
   },
   output: {
     publicPath: "",

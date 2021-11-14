@@ -3,6 +3,10 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-select/dist/css/bootstrap-select.min.css";
 
+a {
+  color: darkblue;
+}
+
 .border-0 {
   border-width: 0 !important;
 }
@@ -154,6 +158,14 @@ pre {
   word-break: keep-all;
 }
 
+.nav-item a {
+  color: darkblue;
+}
+
+.nav-item a.active {
+  font-weight: 700;
+}
+
 .column {
   flex: 50%;
   padding: 10px;
@@ -249,13 +261,38 @@ body {
   color: #5d5d5d;
 }
 
-.region_list {
+.map_list_wrapper {
+  display: flex;
+}
+
+.region_list_wrapper {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 500px;
-  width: 280px;
   position: relative;
   left: 10px;
+}
+
+@media screen and (max-width:767px) {
+  .map_list_wrapper {
+    flex-wrap: wrap;
+  }
+
+  .map_wrapper {
+    width: 100% !important;
+  }
+
+  .region_list_wrapper {
+    width: 100%;
+  }
+  
+  .map_container {
+    width: 100%;
+  }
+
+  .region_list {
+    width: 100% !important;
+  }
 }
 
 .map_wrapper {
@@ -278,9 +315,19 @@ body {
 }
 
 .map_search_term {
-  background-color: #ffb42a !important;
+  font-weight: 600;
+  border: 1px solid #e1e1e1 !important;
   border-radius: 10px !important;
   margin-right: 10px !important;
+  padding: 0 5px !important;
+}
+
+.map_search_term::before {
+  background-color: unset !important;
+}
+
+.term_selected {
+  background-color: #fbc80c !important;
 }
 
 .info {
@@ -295,3 +342,58 @@ body {
   line-height: 18px;
   color: #555;
 }
+
+/* leaflet tooltip */
+.leaflet-tooltip {
+  opacity: 0.93 !important;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ReactPDF viewer */
+.pdf_viewer_wrapper {
+  // position: relative;
+  width: 100%;
+  height: 1000px;
+}
+
+.pdfViewer {
+  width: 100%;
+}
+
+.toolbox {
+  bottom: 170px !important;
+}
+
+.toolbox-container .toolbox-wrapper {
+  position: relative !important;
+  top: unset !important;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.pdf-thumbnail-bar.hide {
+  margin-left: unset !important;
+}
+
+.pdf-thumbnail-bar {
+  position: sticky !important;
+}
+
+#viewer {
+  display: flex;
+}
+
+#viewer-container #viewer {
+  padding-top: 0px !important;
+}
+
+#viewer-container {
+  position: unset !important;
+}
+
+// #viewer-container {
+//   position: relative !important;
+//   height: 300px !important;
+// }
