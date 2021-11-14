@@ -321,9 +321,10 @@ class LocationQuestionList(generics.ListAPIView):
         queryset = Category.objects.all().prefetch_related(
             Prefetch(
                 "questions",
-                queryset=Question.objects.filter(
-                    Q(location=None) | Q(location=location)
-                ),
+                # queryset=Question.objects.filter(
+                #    Q(location=None) | Q(location=location)
+                # ),
+                queryset=Question.objects.all(),
             )
         )
         return queryset

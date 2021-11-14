@@ -13,7 +13,8 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import geoData from "./../geoData.json";
-import contentText from "./merge_data_allegheny_map.json";
+import locationID from "./../location_id.json";
+import contentText from "./../merge_data_allegheny_map.json";
 import { icon } from "leaflet";
 import Legend from "./Legend";
 
@@ -187,10 +188,18 @@ class MapComponent extends Component {
     }
   }
 
-  getText(center) {
-    if (center in this.props.searchedRegions) {
-      // do someting to let this function know how to generate the extra link.
-    }
+    getText(center) {
+        if (center in this.props.searchedRegions) {
+            // do someting to let this function know how to generate the extra link.
+        }
+        var id
+        for (var i in locationID) {
+            if (locationID[i].name == center) {
+                id = locationID[i].id
+                break
+            }
+        }
+
     var t = 1;
     var length = contentText.length;
     while (t < length) {
@@ -200,38 +209,56 @@ class MapComponent extends Component {
           contentText[t].Link_to_police_department == null ||
           contentText[t].Link_to_police_department == "NA"
         ) {
+            var contract_link = "<br><a  href=/PxPUC/#/location/" +
+                id +
+                " target='_blank'>Link to contract detail page</a>"
+            if (id == null) {
+                contract_link = "No contract detail"
+            }
           return (
             contentText[t].LABEL +
             "<br>" +
             "<br >No link for police department</br>" +
-            "<br> Full time police officers as of 2019:" +
+            "<br> Full time police officers as of 2019: " +
             this.getContent(
               contentText[t].Total_Number_Police_Officers_as_of_2019
             ) +
-            "<br> Police bill of rights?: " +
+            "<br> Police bill of rights: " +
             this.getContent(
               contentText[t].Do_they_use_a_police_bill_of_rights
-            ) +
+              ) +
+              "<br> Police budget percentage 2019: " +
+              this.getContent(contentText[t].Budget) +
             "<br> <br> Keywords in contract: " +
-            this.getContent(contentText[t].Keywords_found_in_contract)
+              this.getContent(contentText[t].Keywords_found_in_contract) +
+              contract_link
           );
         } else {
+            var contract_link = "<br><a  href=/PxPUC/#/location/" +
+                id +
+                " target='_blank'>Link to contract detail page</a>"
+            if (id == null) {
+                contract_link = "No contract detail"
+            }
           return (
             contentText[t].LABEL +
             "<br>" +
             "<a  href=" +
             contentText[t].Link_to_police_department +
-            ">Link to police department website</a>" +
-            "<br> Full time police officers as of 2019:" +
+            " target='_blank'>Link to police department website</a>" +
+            "<br> Full time police officers as of 2019: " +
             this.getContent(
               contentText[t].Total_Number_Police_Officers_as_of_2019
             ) +
-            "<br> Police bill of rights?: " +
+            "<br> Police bill of rights: " +
             this.getContent(
               contentText[t].Do_they_use_a_police_bill_of_rights
-            ) +
+              ) +
+              "<br> Police budget percentage 2019: " +
+              this.getContent(contentText[t].Budget) +
             "<br> <br> Keywords in contract: " +
-            this.getContent(contentText[t].Keywords_found_in_contract)
+              this.getContent(contentText[t].Keywords_found_in_contract) +
+              contract_link
           );
         }
       }
