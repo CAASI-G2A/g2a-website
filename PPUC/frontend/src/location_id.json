@@ -5,390 +5,386 @@
   },
   {
     "id": 2,
-    "name": "Allegheny County Sheriff"
+    "name": "Allegheny Valley Regional PD"
   },
   {
     "id": 3,
-    "name": "Allegheny Valley Regional Police Department"
-  },
-  {
-    "id": 4,
-    "name": "Aspinwall Borough"
-  },
-  {
-    "id": 5,
     "name": "Avalon Borough"
   },
   {
-    "id": 6,
+    "id": 4,
     "name": "Baldwin Borough"
   },
   {
-    "id": 7,
+    "id": 5,
     "name": "Baldwin Township"
   },
   {
-    "id": 8,
+    "id": 6,
     "name": "Bell Acres Borough"
   },
   {
-    "id": 9,
+    "id": 7,
     "name": "Bellevue Borough"
   },
   {
-    "id": 10,
+    "id": 8,
     "name": "Bethel Park Borough"
   },
   {
-    "id": 11,
+    "id": 9,
     "name": "Blawnox Borough"
   },
   {
-    "id": 12,
-    "name": "Brackenridge Borough"
-  },
-  {
-    "id": 13,
+    "id": 10,
     "name": "Braddock Borough"
   },
   {
-    "id": 14,
+    "id": 11,
     "name": "Braddock Hills Borough"
   },
   {
-    "id": 15,
+    "id": 12,
     "name": "Brentwood Borough"
   },
   {
-    "id": 16,
+    "id": 13,
     "name": "Bridgeville Borough"
   },
   {
-    "id": 17,
+    "id": 14,
     "name": "Carnegie Borough"
   },
   {
-    "id": 18,
+    "id": 15,
     "name": "Castle Shannon Borough"
   },
   {
-    "id": 19,
+    "id": 16,
     "name": "Churchill Borough"
   },
   {
-    "id": 20,
-    "name": "Clairton City"
-  },
-  {
-    "id": 21,
+    "id": 17,
     "name": "Collier Township"
   },
   {
-    "id": 22,
+    "id": 18,
     "name": "Coraopolis Borough"
   },
   {
-    "id": 23,
+    "id": 19,
     "name": "Crafton Borough"
   },
   {
-    "id": 24,
+    "id": 20,
     "name": "Crescent Township"
   },
   {
-    "id": 25,
+    "id": 21,
     "name": "Dormont Borough"
   },
   {
-    "id": 26,
-    "name": "Duquesne City"
-  },
-  {
-    "id": 27,
+    "id": 22,
     "name": "East McKeesport Borough"
   },
   {
-    "id": 28,
+    "id": 23,
     "name": "Edgewood Borough"
   },
   {
-    "id": 29,
+    "id": 24,
     "name": "Edgeworth Borough"
   },
   {
-    "id": 30,
-    "name": "Elizabeth Borough"
-  },
-  {
-    "id": 31,
+    "id": 25,
     "name": "Elizabeth Township"
   },
   {
-    "id": 32,
+    "id": 26,
     "name": "Etna Borough"
   },
   {
-    "id": 33,
+    "id": 27,
     "name": "Findlay Township"
   },
   {
-    "id": 34,
+    "id": 28,
     "name": "Forest Hills Borough"
   },
   {
-    "id": 35,
+    "id": 29,
     "name": "Fox Chapel Borough"
   },
   {
-    "id": 36,
+    "id": 30,
     "name": "Franklin Park Borough"
   },
   {
-    "id": 37,
+    "id": 31,
     "name": "Frazer Township"
   },
   {
-    "id": 38,
+    "id": 32,
     "name": "Glassport Borough"
   },
   {
-    "id": 39,
+    "id": 33,
     "name": "Green Tree Borough"
   },
   {
-    "id": 40,
+    "id": 34,
     "name": "Hampton Township"
   },
   {
-    "id": 41,
+    "id": 35,
     "name": "Harmar Township"
   },
   {
-    "id": 42,
+    "id": 36,
     "name": "Harrison Township"
   },
   {
-    "id": 43,
+    "id": 37,
     "name": "Homestead Borough"
   },
   {
-    "id": 44,
+    "id": 38,
     "name": "Indiana Township"
   },
   {
-    "id": 45,
+    "id": 39,
     "name": "Ingram Borough"
   },
   {
-    "id": 46,
+    "id": 40,
     "name": "Jefferson Hills Borough"
   },
   {
-    "id": 47,
+    "id": 41,
     "name": "Kennedy Township"
   },
   {
-    "id": 48,
+    "id": 42,
     "name": "Leet Township"
   },
   {
-    "id": 49,
+    "id": 43,
     "name": "Leetsdale Borough"
   },
   {
-    "id": 50,
+    "id": 44,
     "name": "Liberty Borough"
   },
   {
-    "id": 51,
+    "id": 45,
     "name": "Lincoln Borough"
   },
   {
-    "id": 52,
+    "id": 46,
     "name": "Mccandless Township"
   },
   {
-    "id": 53,
+    "id": 47,
     "name": "McKees Rocks Borough"
   },
   {
-    "id": 54,
-    "name": "McKeesport City"
-  },
-  {
-    "id": 55,
+    "id": 48,
     "name": "Millvale Borough"
   },
   {
-    "id": 56,
-    "name": "Monroeville Borough"
-  },
-  {
-    "id": 57,
+    "id": 49,
     "name": "Moon Township"
   },
   {
-    "id": 58,
+    "id": 50,
     "name": "Mount Oliver Borough"
   },
   {
-    "id": 59,
-    "name": "Mt Lebanon Township"
+    "id": 51,
+    "name": "Mt. Lebanon Township"
   },
   {
-    "id": 60,
+    "id": 52,
     "name": "Munhall Borough"
   },
   {
-    "id": 61,
+    "id": 53,
+    "name": "North Braddock Borough"
+  },
+  {
+    "id": 54,
     "name": "North Fayette Township"
   },
   {
-    "id": 62,
+    "id": 55,
     "name": "North Versailles Township"
   },
   {
-    "id": 63,
-    "name": "Northern Regional Police Department"
+    "id": 56,
+    "name": "Northern Regional PD"
   },
   {
-    "id": 64,
-    "name": "Oakdale Borough"
-  },
-  {
-    "id": 65,
+    "id": 57,
     "name": "Oakmont Borough"
   },
   {
-    "id": 66,
+    "id": 58,
     "name": "Ohara Township"
   },
   {
-    "id": 67,
+    "id": 59,
     "name": "Ohio Township"
   },
   {
-    "id": 68,
-    "name": "Penn Hills Township"
+    "id": 60,
+    "name": "Pennsylvania State"
   },
   {
-    "id": 69,
-    "name": "Pennsylvania State Police"
-  },
-  {
-    "id": 70,
+    "id": 61,
     "name": "Pitcairn Borough"
   },
   {
-    "id": 71,
+    "id": 62,
     "name": "Pittsburgh City"
   },
   {
-    "id": 72,
-    "name": "Pleasant Hills Borough"
-  },
-  {
-    "id": 73,
+    "id": 63,
     "name": "Plum Borough"
   },
   {
-    "id": 74,
+    "id": 64,
     "name": "Port Vue Borough"
   },
   {
-    "id": 75,
+    "id": 65,
     "name": "Rankin Borough"
   },
   {
-    "id": 76,
+    "id": 66,
     "name": "Reserve Township"
   },
   {
-    "id": 77,
+    "id": 67,
     "name": "Robinson Township"
   },
   {
-    "id": 78,
+    "id": 68,
     "name": "Ross Township"
   },
   {
-    "id": 79,
-    "name": "Scott Townshihp"
-  },
-  {
-    "id": 80,
-    "name": "Sewickley Borough"
-  },
-  {
-    "id": 81,
+    "id": 69,
     "name": "Sewickley Heights Borough"
   },
   {
-    "id": 82,
+    "id": 70,
     "name": "Shaler Township"
   },
   {
-    "id": 83,
-    "name": "Sharpsburg Borough"
-  },
-  {
-    "id": 84,
-    "name": "South Fayette Township"
-  },
-  {
-    "id": 85,
+    "id": 71,
     "name": "South Park Township"
   },
   {
-    "id": 86,
+    "id": 72,
     "name": "Springdale Borough"
   },
   {
-    "id": 87,
+    "id": 73,
     "name": "Stowe Township"
   },
   {
-    "id": 88,
+    "id": 74,
     "name": "Swissvale Borough"
   },
   {
-    "id": 89,
+    "id": 75,
     "name": "Tarentum Borough"
   },
   {
-    "id": 90,
+    "id": 76,
     "name": "Turtle Creek Borough"
   },
   {
-    "id": 91,
+    "id": 77,
     "name": "Upper St Clair Township"
   },
   {
-    "id": 92,
+    "id": 78,
     "name": "Verona Borough"
   },
   {
-    "id": 93,
+    "id": 79,
+    "name": "West Deer Township"
+  },
+  {
+    "id": 80,
     "name": "West Homestead Borough"
   },
   {
-    "id": 94,
+    "id": 81,
     "name": "West View Borough"
   },
   {
-    "id": 95,
+    "id": 82,
     "name": "Whitaker Borough"
   },
   {
-    "id": 96,
+    "id": 83,
     "name": "White Oak Borough"
   },
   {
-    "id": 97,
-    "name": "Whitehall Borough"
+    "id": 84,
+    "name": "Wilkins Township"
   },
   {
-    "id": 98,
-    "name": "Wilkins Township"
+    "id": 85,
+    "name": "Albuquerque"
+  },
+  {
+    "id": 86,
+    "name": "category"
+  },
+  {
+    "id": 87,
+    "name": "Disqualifies Complaints"
+  },
+  {
+    "id": 88,
+    "name": "Erases Misconduct Record"
+  },
+  {
+    "id": 89,
+    "name": "Erases misconduct records"
+  },
+  {
+    "id": 90,
+    "name": "Gives officers unfair access to information"
+  },
+  {
+    "id": 91,
+    "name": "Gives Officers Unfair Access to Information"
+  },
+  {
+    "id": 92,
+    "name": "Limits Oversight / Discipline"
+  },
+  {
+    "id": 93,
+    "name": "Limits Oversight/Discipline"
+  },
+  {
+    "id": 94,
+    "name": "Requires City Pay for Misconduct"
+  },
+  {
+    "id": 95,
+    "name": "Requires City Pay for Misconduct"
+  },
+  {
+    "id": 96,
+    "name": "Restricts/Delays Interrogations"
+  },
+  {
+    "id": 97,
+    "name": "Seattle"
   }
 ]
