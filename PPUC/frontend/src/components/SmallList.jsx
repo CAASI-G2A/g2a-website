@@ -119,7 +119,7 @@ class SmallList extends Component {
     }
   }
 
-  componentDidMount() {
+    componentDidMount() {
     try {
       Api.getSListData().then((resp) => {
         // sort based on city name
@@ -132,10 +132,12 @@ class SmallList extends Component {
           }
           return 0;
         });
-        resp.map((row) => {
-          this.setState({
-            listData: [...this.state.listData, row.name],
-          });
+          resp.map((row) => {
+            if (this.inGeoData(row.name)) {
+                this.setState({
+                    listData: [...this.state.listData, row.name],
+                });
+            }
         });
       });
     } catch (err) {
@@ -143,8 +145,18 @@ class SmallList extends Component {
     }
   }
 
-  makeList() {
-    const rows = this.state.listData.map((row) => (
+    inGeoData(location) {
+        var sign = false
+        for (var t = 0; t < features.features.length && !sign; t++) {
+            if (location == features.features[t].properties.LABEL) {
+                sign = true
+            }
+        }
+        return sign
+    }
+
+    makeList() {
+      const rows = this.state.listData.map((row) => ( 
       <Menu.Item
         key={row}
         style={{
