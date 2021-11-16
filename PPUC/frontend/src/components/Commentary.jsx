@@ -111,10 +111,10 @@ class Commentary extends Component {
             opacity={0.5}
             // style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
           >
-            <h1 style={{ color: "black" }}>
+            {/* <h1 style={{ color: "black" }}>
               HOW POLICE UNION CONTRACTS <br /> BLOCK ACCOUNTABILITY
             </h1>
-            <hr className="my-4" style={{ borderTop: "1px solid black" }} />
+            <hr className="my-4" style={{ borderTop: "1px solid black" }} /> */}
           </div>
           <div
             className="jumbotron"
@@ -132,13 +132,14 @@ class Commentary extends Component {
             <br></br>
           </div>
 
-          <div className="pt-5 pl-1 pb-5">
-            <h2>
+          <div className="pt-5 pl-1 pb-5"
+               style={{ textAlign: "center" }}>
+            <h1>
               <span style={{ fontWeight: "bold" }}>
                 {" "}
                 EXPLORE POLICE UNION CONTRACTS{" "}
               </span>
-            </h2>
+            </h1>
             <div
             style={{
               borderRadius: 10,
@@ -148,6 +149,7 @@ class Commentary extends Component {
               paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
+              textAlign: "left"
             }}
             >
               <a>
@@ -165,35 +167,44 @@ class Commentary extends Component {
               </a>
             </div>
             <br></br>
-            <NavLink to={routes.researchers}
-                     style={{
-                      fontSize: "20px"
-                      // borderRadius: 10,
-                      // backgroundColor: "#EAECEF",
-                      // borderRadius: 10,
-                      // paddingTop: 20,
-                      // paddingBottom: 30,
-                      // paddingLeft: 20,
-                      // paddingRight: 20,
-                    }}
+            <NavLink 
+                to={routes.researchers}
+                style={{
+                  fontSize: "20px"
+                }}
             >
-                Click Here to Search Contracts Manually
+                Click Here to Search Contracts Manually 
             </NavLink>
             <br></br>
             <br></br>
 
+            {/* <DownloadLink 
+                src="/static/app/instructions/How_to_read_a_contract.pdf"
+                style={{
+                  fontSize: "20px"       
+                }}
+            >
+               How to read a contract
+            </DownloadLink> */}
 
-            <h4>
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
-              </span>
-            </h4>
+            <a href='/static/app/instructions/How_to_read_a_contract.pdf' 
+                style={{
+                  fontSize: "20px"       
+                }}
+            download>
+                How to read a contract *(PDF)
+            </a>
+
+           
           </div>
 
-          {/* <div>
-            it is <b>{test ? 'true' : 'false'}</b> logged in.
-          </div> */}
+
+          <h4>
+            <span style={{ fontWeight: "bold" }}>
+              {" "}
+              SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
+            </span>
+          </h4>
           
           {/* complaints */}
           <div
@@ -218,7 +229,9 @@ class Commentary extends Component {
               aria-expanded="false"
               aria-controls={`hi`}
               href={`hi`}
-              style={{ color: "black" }}
+              style={{ color: "black",
+                       paddingLeft: "15px"
+                    }}
             >
               1.{" "}
               <span style={{ fontWeight: "bold" }}>
@@ -332,7 +345,9 @@ class Commentary extends Component {
               aria-expanded="false"
               aria-controls={`hi`}
               href={`hi`}
-              style={{ color: "black" }}
+              style={{ color: "black",
+                       paddingLeft: "15px" 
+                    }}
             >
               2.{" "}
               <span style={{ fontWeight: "bold" }}>
@@ -437,7 +452,9 @@ class Commentary extends Component {
               aria-expanded="false"
               aria-controls={`hi`}
               href={`hi`}
-              style={{ color: "black" }}
+              style={{ color: "black",
+                       paddingLeft: "15px"
+                    }}
             >
               3.{" "}
               <span style={{ fontWeight: "bold" }}>
@@ -539,7 +556,9 @@ class Commentary extends Component {
               className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
-              style={{ color: "black", height: "5" }}
+              style={{ color: "black",
+                       paddingLeft: "15px"
+              }}
             >
               {" "}
               4. <span style={{ fontWeight: "bold" }}> LEGAL COSTS </span>{" "}
@@ -674,10 +693,12 @@ class Commentary extends Component {
               aria-expanded="false"
               aria-controls={`hi`}
               href={`hi`}
-              style={{ color: "black" }}
+              style={{ color: "black",
+                       paddingLeft: "15px"
+                    }}
             >
               5.{" "}
-              <span style={{ fontWeight: "bold" }}>
+              <span style={{ fontWeight: "bold"}}>
                 {" "}
                 DESTROYS MISCONDUCT RECORDS{" "}
               </span>{" "}
@@ -779,7 +800,9 @@ class Commentary extends Component {
               aria-expanded="false"
               aria-controls={`hi`}
               href={`hi`}
-              style={{ color: "black" }}
+              style={{ color: "black",
+                       paddingLeft: "15px"
+                    }}
             >
               6.{" "}
               <span style={{ fontWeight: "bold" }}>
@@ -828,6 +851,9 @@ class Commentary extends Component {
               </button>
             </div>
           </div>
+
+          <br></br>
+          <br></br>
         </div>
       </div>
     );
