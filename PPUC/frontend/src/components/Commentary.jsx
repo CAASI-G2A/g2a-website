@@ -17,8 +17,6 @@ import SmallList from "./SmallList";
 //     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again
 //     2. Highlight words in setence examples
 //     3. find better way to do breaks in code
-//     4. find place to put manual serch link
-//     5. fix text error
 
 class Commentary extends Component {
   constructor(props) {
@@ -108,15 +106,6 @@ class Commentary extends Component {
       <div className="row mt-3">
         <div className="col-lg-12">
           <div
-            opacity={0.5}
-            // style={{borderRadius: 10, backgroundColor: "#EAECEF", borderRadius: 10, paddingTop: 20, paddingBottom: 20,paddingLeft: 20, paddingRight: 20,}}
-          >
-            {/* <h1 style={{ color: "black" }}>
-              HOW POLICE UNION CONTRACTS <br /> BLOCK ACCOUNTABILITY
-            </h1>
-            <hr className="my-4" style={{ borderTop: "1px solid black" }} /> */}
-          </div>
-          <div
             className="jumbotron"
             style={{
               backgroundImage:
@@ -132,41 +121,39 @@ class Commentary extends Component {
             <br></br>
           </div>
 
-          <div className="pt-5 pl-1 pb-5"
-               style={{ textAlign: "center" }}>
-            <h1>
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                EXPLORE POLICE UNION CONTRACTS{" "}
-              </span>
+          <div className="pt-5 pl-1 pb-5" style={{ textAlign: "center", }}>
+            <h1 style={{ fontWeight: "bold"}}>
+                {" "}EXPLORE POLICE UNION CONTRACTS{" "}
             </h1>
-            <div
-            style={{
-              borderRadius: 10,
-              backgroundColor: "#EAECEF",
-              borderRadius: 10,
-              paddingTop: 20,
-              paddingBottom: 30,
-              paddingLeft: 20,
-              paddingRight: 20,
-              textAlign: "left"
-            }}
+
+            <div className="jumbotron"
+                 style={{ textAlign: "left"}}
             >
-              <a>
-                There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available to help make policing more transparent in the County.
-
-                <br></br>
-                <br></br>
-
-                These contracts often contain controversial provisions that require cities to pay legal expenses for police officers accused of misconduct and make it more difficult to hold these officers accountable. From our preliminary analysis we found that nearly half of the contracts disqualify misconduct complaints from the public that are submitted anonymously, and nearly a third of contracts stipulate that when police officers are disciplined the municipality cannot release any information to the public about why discipline was imposed.
-
-                <br></br>
-                <br></br>
-
-                We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.
-              </a>
+              <p className="lead">
+                There are 108 separate governmental police departments operating in
+                Allegheny County. This includes departments operating at the
+                municipal, regional, county, and state level, from Stowe Township to
+                the Pennsylvania State Troopers. We have gathered police contracts
+                from almost 100 of these departments and made them publicly
+                available to help make policing more transparent in the County.
+              </p>
+              <p className="lead">
+                These contracts often contain controversial provisions that require
+                cities to pay legal expenses for police officers accused of
+                misconduct and make it more difficult to hold these officers
+                accountable. From our preliminary analysis we found that nearly half
+                of the contracts disqualify misconduct complaints from the public
+                that are submitted anonymously, and nearly a third of contracts
+                stipulate that when police officers are disciplined the municipality
+                cannot release any information to the public about why discipline
+                was imposed.
+              </p>
+              <p className="lead">
+                We hope that this contract database will help concerned citizens
+                learn more about police departments in Allegheny County and perhaps
+                even help them advocate for change.
+              </p>
             </div>
-            <br></br>
             <NavLink 
                 to={routes.researchers}
                 style={{
@@ -193,17 +180,12 @@ class Commentary extends Component {
                 }}
             download>
                 How to read a contract *(PDF)
-            </a>
-
-           
+            </a>           
           </div>
 
 
-          <h4>
-            <span style={{ fontWeight: "bold" }}>
-              {" "}
-              SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
-            </span>
+          <h4 style={{ fontWeight: "bold" }}>
+              {" "}SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
           </h4>
           
           {/* complaints */}
@@ -264,7 +246,7 @@ class Commentary extends Component {
                 <a>
                   "When an anonymous complaint is made against a police officer
                   and no corroborative evidence is obtained, the complaint shall
-                  be classified as unfounded." (Bethel Park)
+                  be classified as <span style={{ fontWeight: "bold" }}>  unfounded </span>." (Bethel Park)
                 </a>
 
                 <br></br>
@@ -293,9 +275,9 @@ class Commentary extends Component {
                 </a>
                 <br></br>
                 <a>
-                  "When a citizen complaint is filed, it must be done in
+                  "When a citizen <span style={{ fontWeight: "bold" }}> complaint </span> is filed, it must be done in
                   writing, signed by the complainant and filed no later than
-                  fifteen (15) days from the alleged event."" (Braddock Borough)
+                  fifteen (15) days from the alleged event." (Braddock Borough)
                 </a>
 
                 <br></br>
@@ -364,6 +346,7 @@ class Commentary extends Component {
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview
               }
+              style={{  paddingTop: "30px"}}
             >
               <br></br>
               <a>
@@ -371,7 +354,7 @@ class Commentary extends Component {
               </a>
               <br></br>
               <a>
-                "The criminal investigatory interview of the deputy shall not be
+                "The criminal investigatory <span style={{ fontWeight: "bold" }}> interview </span> of the deputy shall not be
                 conducted until expiration of seventy-two (72) hours following
                 the shooting/incident unless there are exigent circumstances"
                 (Allegheny County Sheriff's Department)
@@ -403,7 +386,7 @@ class Commentary extends Component {
               </a>
               <br></br>
               <a>
-                "An officer involved in a critical incident shall be permit 72
+                "An officer involved in a <span style={{ fontWeight: "bold" }}>critical incident</span> shall be permit 72
                 hours (3 sleep cycles) after the critical incident to make any
                 official statement, report, and interview."" (Penn Hills)
               </a>
@@ -481,7 +464,7 @@ class Commentary extends Component {
               <a>
                 "A police officer, whether a subject or witness, must be
                 informed of the nature of the interrogation at the outset of the
-                interrogation." (Avalon Borough)
+                <span style={{ fontWeight: "bold" }}> interrogation</span>." (Avalon Borough)
               </a>
 
               <br></br>
@@ -510,7 +493,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "When a written complaint is made against an officer, the
-                Township will provide a copy of the complaint to the accused
+                Township will provide a copy of the complaint to the <span style={{ fontWeight: "bold" }}>accused</span>
                 officer." (Baldwin Township)
               </a>
 
@@ -561,7 +544,7 @@ class Commentary extends Component {
               }}
             >
               {" "}
-              4. <span style={{ fontWeight: "bold" }}> LEGAL COSTS </span>{" "}
+              4. <span style={{ fontWeight: "bold"}}> LEGAL COSTS </span>{" "}
               <br></br>
               Requiring cities to pay costs related to police misconduct
               including by giving officers paid leave while under investigation,
@@ -573,6 +556,7 @@ class Commentary extends Component {
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
               }
+              style={{ paddingTop: "30px"}}
             >
               <br></br>
               <a>
@@ -581,7 +565,7 @@ class Commentary extends Component {
               </a>
               <br></br>
               <a>
-                "The Borough shall provide each Officer with false arrest
+                "The Borough shall provide each Officer with <span style={{ fontWeight: "bold" }}>false arrest</span>
                 insurance coverage as provided in 2008, which includes coverage
                 for false arrest, detention, imprisonment or malicious
                 prosecution." (Churchill Borough)
@@ -614,7 +598,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "The Borough shall pay for 100% of the premium for police
-                professional liability insurance." (Baldwin Borough)
+                professional <span style={{ fontWeight: "bold" }}>liability insurance</span>." (Baldwin Borough)
               </a>
 
               <br></br>
@@ -644,7 +628,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "The City shall provide and pay the full cost of the premiums
-                for Criminal and Civil Defense Insurance for all police
+                for Criminal and Civil <span style={{ fontWeight: "bold" }}>Defense Insurance</span>for all police
                 officers." (Duquesne City)
               </a>
 
@@ -721,7 +705,7 @@ class Commentary extends Component {
                 "The written reprimand as herein provided shall not remain in
                 effect for a period of more than eighteen (18) months from the
                 date of the occurence upon which the complaint and written
-                reprimand are based." (Braddock Borough)
+                <span style={{ fontWeight: "bold" }}>reprimand</span> are based." (Braddock Borough)
               </a>
 
               <br></br>
@@ -751,7 +735,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 The City agrees that any and all disciplinary actions shall only
-                be kept in an employee personnel file for thirty (30) months
+                be kept in an employee <span style={{ fontWeight: "bold" }}>personnel file</span> for thirty (30) months
                 from the date of the infraction and then the infraction shall be
                 removed. (Duquesne City)
               </a>
@@ -777,7 +761,7 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
-          {/* bold */}
+          {/* Disciplinary */}
           <div
             style={{
               borderRadius: 10,
@@ -829,7 +813,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "Unless agreed to by the Police Officer or required by law, the
-                Borough shall not make any public comment or statement on the
+                Borough shall not make any <span style={{ fontWeight: "bold" }}>public comment</span> or statement on the
                 reason for any disciplinary action brought against the police
                 officer." (Bridgeville Borough)
               </a>

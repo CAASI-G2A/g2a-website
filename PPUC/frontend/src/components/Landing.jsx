@@ -166,33 +166,6 @@ class Landing extends Component {
             interested in more police accountability in our country.
           </p>
         </div>
-        <div className="jumbotron">
-          <h4> Explore police contracts of Allegheny County</h4>
-          <p className="lead">
-            There are 108 separate governmental police departments operating in
-            Allegheny County. This includes departments operating at the
-            municipal, regional, county, and state level, from Stowe Township to
-            the Pennsylvania State Troopers. We have gathered police contracts
-            from almost 100 of these departments and made them publicly
-            available to help make policing more transparent in the County.
-          </p>
-          <p className="lead">
-            These contracts often contain controversial provisions that require
-            cities to pay legal expenses for police officers accused of
-            misconduct and make it more difficult to hold these officers
-            accountable. From our preliminary analysis we found that nearly half
-            of the contracts disqualify misconduct complaints from the public
-            that are submitted anonymously, and nearly a third of contracts
-            stipulate that when police officers are disciplined the municipality
-            cannot release any information to the public about why discipline
-            was imposed.
-          </p>
-          <p className="lead">
-            We hope that this contract database will help concerned citizens
-            learn more about police departments in Allegheny County and perhaps
-            even help them advocate for change.
-          </p>
-        </div>
       </div>
     );
   }

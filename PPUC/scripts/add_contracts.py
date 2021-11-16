@@ -78,7 +78,7 @@ def clean_lines(txt):
     # PG: keep only certain symbols, which currently include
     #     - A-Z
     #     - a-z
-    #     - 1-9
+    #     - 0-9
     #     - \n
     #     - single spaces ' '
     #     - punctation: ! . 
