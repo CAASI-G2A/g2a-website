@@ -244,7 +244,7 @@ class SmallList extends Component {
             </Radio.Button>
             <Radio.Button
               value="clear"
-              className="map_search_term"
+              className="clear_button"
               onClick={() => this.handleClear()}
             >
               clear

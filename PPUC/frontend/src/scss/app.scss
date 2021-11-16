@@ -322,6 +322,16 @@ body {
   padding: 0 5px !important;
 }
 
+.clear_button {
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+    border-radius: 10px !important;
+    margin-right: 10px !important;
+    padding: 0 5px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-decoration: underline;
+}
+
 .map_search_term::before {
   background-color: unset !important;
 }
