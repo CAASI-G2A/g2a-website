@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { NavLink } from "react-router-dom";
 import routes from "../routes";
 
@@ -30,6 +31,12 @@ class Commentary extends Component {
       showReprimand: false,
       showPublicComment: false,
     };
+    this.icons = {   
+        'plus'    : '/static/app/img/plus.png',
+        'minus'   : '/static/app/img/minus.png'
+    };
+
+    this.handleTitleClick = this.handleTitleClick.bind(this);
   }
 
   handleTitleClick(to_show) {
@@ -61,11 +68,41 @@ class Commentary extends Component {
   render() {
     // maybe put in class
     const dropUnfounded = this.state.showUnfounded ? "show" : "";
+    let iconUnfounded = this.icons['plus'];
+    if(this.state.showUnfounded){
+        iconUnfounded = this.icons['minus'];
+    }
+
     const dropInterview = this.state.showInterview ? "show" : "";
+    let iconInterview = this.icons['plus'];
+    if(this.state.showInterview){
+        iconInterview = this.icons['minus'];
+    }
+
+
     const dropInterrogation = this.state.showInterrogation ? "show" : "";
+    let iconInterrogation = this.icons['plus'];
+    if(this.state.showInterrogation){
+        iconInterrogation = this.icons['minus'];
+    }
+
     const dropFalse = this.state.showFalseArrest ? "show" : "";
+    let iconFalse = this.icons['plus'];
+    if(this.state.showFalseArrest){
+        iconFalse = this.icons['minus'];
+    }
+
     const dropReprimand = this.state.showReprimand ? "show" : "";
+    let iconReprimand = this.icons['plus'];
+    if(this.state.showReprimand){
+        iconReprimand = this.icons['minus'];
+    }
+
     const dropPublicComment = this.state.showPublicComment ? "show" : "";
+    let iconComment = this.icons['plus'];
+    if(this.state.showPublicComment){
+        iconComment = this.icons['minus'];
+    }
 
     return (
       <div className="row mt-3">
@@ -78,21 +115,6 @@ class Commentary extends Component {
               HOW POLICE UNION CONTRACTS <br /> BLOCK ACCOUNTABILITY
             </h1>
             <hr className="my-4" style={{ borderTop: "1px solid black" }} />
-            <div className="col-md-6 offset-md-8">
-              <NavLink to={routes.researchers}>
-                Click Here to Search Contracts Manually
-              </NavLink>
-              {/* <button
-              type="button"
-              color="#ff5c5c"
-              className="ex-keyword btn btn-info mr-2"
-              style={{ width: "200px", height: "50px", fontSize: "15px", paddingBottom: "0px"}}
-            >
-              <NavLink to={routes.researchers} style={{ color: "white"}}>
-                Search Contracts Manually
-              </NavLink>
-            </button> */}
-            </div>
           </div>
           <div
             className="jumbotron"
@@ -108,41 +130,90 @@ class Commentary extends Component {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
 
           <div className="pt-5 pl-1 pb-5">
             <h2>
               <span style={{ fontWeight: "bold" }}>
                 {" "}
-                SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
+                EXPLORE POLICE UNION CONTRACTS{" "}
               </span>
             </h2>
+            <div
+            style={{
+              borderRadius: 10,
+              backgroundColor: "#EAECEF",
+              borderRadius: 10,
+              paddingTop: 20,
+              paddingBottom: 30,
+              paddingLeft: 20,
+              paddingRight: 20,
+            }}
+            >
+              <a>
+                There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available to help make policing more transparent in the County.
+
+                <br></br>
+                <br></br>
+
+                These contracts often contain controversial provisions that require cities to pay legal expenses for police officers accused of misconduct and make it more difficult to hold these officers accountable. From our preliminary analysis we found that nearly half of the contracts disqualify misconduct complaints from the public that are submitted anonymously, and nearly a third of contracts stipulate that when police officers are disciplined the municipality cannot release any information to the public about why discipline was imposed.
+
+                <br></br>
+                <br></br>
+
+                We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.
+              </a>
+            </div>
+            <br></br>
+            <NavLink to={routes.researchers}
+                     style={{
+                      fontSize: "20px"
+                      // borderRadius: 10,
+                      // backgroundColor: "#EAECEF",
+                      // borderRadius: 10,
+                      // paddingTop: 20,
+                      // paddingBottom: 30,
+                      // paddingLeft: 20,
+                      // paddingRight: 20,
+                    }}
+            >
+                Click Here to Search Contracts Manually
+            </NavLink>
+            <br></br>
+            <br></br>
+
+
+            <h4>
+              <span style={{ fontWeight: "bold" }}>
+                {" "}
+                SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
+              </span>
+            </h4>
           </div>
 
           {/* <div>
             it is <b>{test ? 'true' : 'false'}</b> logged in.
           </div> */}
-
+          
+          {/* complaints */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("unfounded")}
           >
+            <img
+                src={iconUnfounded}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               aria-controls={`hi`}
@@ -158,6 +229,15 @@ class Commentary extends Component {
               Disqualifying misconduct complaints that are submitted too many
               days after an incident occurs or if an investigation takes too
               long to complete
+              {/* <TouchableHighlight 
+                        style={styles.button} 
+                        onPress={this.toggle.bind(this)}
+                        underlayColor="#f1f1f1">
+                        <Image
+                            style={styles.buttonImage}
+                            source={icon}
+                        ></Image>
+              </TouchableHighlight> */}
             </a>
 
             <div className={"collapse nav-collapse " + dropUnfounded}>
@@ -227,20 +307,27 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
+          {/* Interrogation */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("Interview")}
           >
+
+             <img
+                src={iconInterview}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
+
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               aria-controls={`hi`}
@@ -327,20 +414,25 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
+          {/* Information */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("Interrogation")}
           >
+            <img
+                src={iconInterrogation}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               aria-controls={`hi`}
@@ -426,20 +518,25 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
+          {/* falsearrest */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("FalseArrest")}
           >
+            <img
+                src={iconFalse}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               style={{ color: "black", height: "5" }}
@@ -451,6 +548,7 @@ class Commentary extends Component {
               including by giving officers paid leave while under investigation,
               paying legal fees, and/or the cost of settlements
             </a>
+            
 
             <div
               className={
@@ -552,20 +650,26 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
+
+          {/* Reprimand */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("Reprimand")}
           >
+            <img
+                src={iconReprimand}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               aria-controls={`hi`}
@@ -652,20 +756,25 @@ class Commentary extends Component {
           <br></br>
           <br></br>
 
+          {/* bold */}
           <div
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 20,
+              paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
             }}
             onClick={() => this.handleTitleClick("PublicComment")}
           >
+            <img
+                src={iconComment}
+                style={{ width: "30px", height: "30px"}}
+            ></img>
             <a
-              className="pt-5"
+              className="position-absolute"
               data-toggle="collapse"
               aria-expanded="false"
               aria-controls={`hi`}

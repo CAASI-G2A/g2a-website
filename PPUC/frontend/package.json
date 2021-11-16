@@ -57,6 +57,7 @@
     "react-dom": "^17.0.2",
     "react-highlight-words": "^0.17.0",
     "react-leaflet": "^3.2.2",
+    "react-pdf": "^5.5.0",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0",
     "scroll-to-element": "^2.0.3",
