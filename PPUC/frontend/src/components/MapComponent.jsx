@@ -179,7 +179,7 @@ class MapComponent extends Component {
   }
 
   getContent(content) {
-    if (content === null || content == "NA" || content == "") {
+    if (content === null || content == "NA" || content == "" || content == "none") {
       return "No info";
     } else {
       return content;
@@ -212,7 +212,7 @@ class MapComponent extends Component {
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "No contract detail"
+                contract_link = "<br>No contract detail"
             }
           return (
             contentText[t].LABEL +
