@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom"
 import QueryString from "query-string";
 import * as scrollToElement from "scroll-to-element";
 import { Alert } from "antd";
@@ -117,6 +118,7 @@ class Researchers extends Component {
       const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
+      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
@@ -142,12 +144,14 @@ class Researchers extends Component {
           showResult: true,
         });
       });
+      // TODO: Modify this URLSearchParam to allow for selection of location
+      // will also then need to modify API, and Python method (and possible urls.py)
       // set search query param
       this.props.history.push({
         pathname: routes.researchers,
         search:
           "?" +
-          new URLSearchParams({ search: this.state.searchQuery }).toString(),
+          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
       });
     } catch (err) {
       if (err instanceof SearchParser.SyntaxError) {
@@ -206,29 +210,55 @@ class Researchers extends Component {
           </div>
           <div
             className="col-md-6 offset-md-3 text-secondary"
-            style={{ backgroundColor: "#f9f9f9", padding: "10px" }}
+            style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
           >
-            <b>**Instruction: </b> Use the search bar above to look for keywords
-            in police contracts. To search a phrase, use quotation marks on both
-            ends (i.e. “time limit”). You can also use an OR function to find
-            contracts with two keywords (i.e. false OR arrest). Below are some
-            keyword suggestions.
+            <li className="nav-item nav-link">
+              <b>**How to use the search bar: </b> enter the keyword that you want to find in police contracts. Enclose multi-word phrases in quotations (i.e. “false arrest”). &nbsp;
+                <a
+                  className="collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  href="#collapseAdvanced"
+                  aria-expanded="false"
+                  aria-controls="collapseAdvanced"
+                >
+                  Click for advanced search settings.
+                </a>
+                <div
+                    id="collapseAdvanced"
+                    class="collapse"
+                  >
+                  To search for contracts that contain multiple keywords simultaneously, separate the keywords with <b>“AND”</b> (i.e. “anonymous” AND “unfounded”).<br></br><br></br> To search for contracts that contain at least one of multiple keywords, separate the keywords with <b>“OR”</b> (i.e. “critical incident” OR “traumatic incident”).
+                </div>
+                <br />
+                <br /> 
+              Below are some keyword suggestions. (<NavLink className={isActive =>"nav-link" + (!isActive ? " unselected" : "")}to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)
+                <br />
+              This <a target="_blank" href='/static/app/instructions/How_to_read_a_contract.pdf'>brief guide</a> may also be helpful.
+            </li>   
           </div>
-          <div className="col-md-6 offset-md-3 mt-2 text-center">
+          <div className="mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery('"time limit"', true)}
+                onClick={() => this.setSearchQuery('unfounded', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
-                time limit
+                unfounded
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("discipline", true)}
+                onClick={() => this.setSearchQuery("interview", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
-                discipline
+                interview
+              </button>
+              <button
+                type="button"
+                onClick={() => this.setSearchQuery('interrogation', true)}
+                className="ex-keyword btn btn-info btn-rounded mr-2"
+              >
+                interrogation
               </button>
               <button
                 type="button"
@@ -239,24 +269,17 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("destroy", true)}
+                onClick={() => this.setSearchQuery("reprimand", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
-                destory
+                reprimand
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("release", true)}
-                className="ex-keyword btn btn-info btn-rounded mr-2"
-              >
-                release
-              </button>
-              <button
-                type="button"
-                onClick={() => this.setSearchQuery("subpoena", true)}
+                onClick={() => this.setSearchQuery('"public comment"', true)}
                 className="ex-keyword btn btn-info btn-rounded"
               >
-                subpoena
+                public comment
               </button>
             </div>
           </div>

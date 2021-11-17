@@ -7,10 +7,11 @@ class About extends Component {
 
     return (
       <div>
+        {/* HEADING */}
         <h1 className="text-center pt-5 pl-2">
           About P<span style={{ color: "#5685d1" }}>x</span>PUC
         </h1>
-
+        {/* PRIMARY INTRO */}
         <div className="jumbotron pb-5">
           <p className="lead">
             The P<span style={{ color: "#5685d1" }}>x</span>PUC team is made up
@@ -24,7 +25,7 @@ class About extends Component {
             beyond.
           </p>
         </div>
-
+        {/* SECONDARY INTRO */}
         <div className="jumbotron pt-0 bg-white">
           <hr className="my-4 border-top border-secondary" />
           <p className="lead">
@@ -40,7 +41,8 @@ class About extends Component {
           </p>
           <hr className="my-4 border-top border-secondary" />
         </div>
-        {/* about the team */}
+
+        {/* ABOUT THE TEAM */}
         <div class="meet-the-team-wrapper">
           <h2 class="text-center" style={{ marginBottom: 5 }}>Meet the Team</h2>
           <hr style={{ width: '10%', border: '3px solid darkblue', marginTop: 5, marginBottom: 40 }} />
@@ -102,7 +104,10 @@ class About extends Component {
               </Card>
             </Col>
           </Row> */}
+
           <div class="meet-the-team-row row d-flex align-items-center">
+
+
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
@@ -110,6 +115,7 @@ class About extends Component {
                   class="rounded-circle"
                   width="120"
                   height="120"
+                  style={{objectFit: "cover"}}
                 />
               </div>
               <div>
@@ -121,35 +127,17 @@ class About extends Component {
                   Sera Linardi
                 </a>
               </div>
-              <div>CAASI Director</div>
+              <div><i>CAASI Director</i></div>
             </div>
+
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/yuru.png"
+                  src="/static/app/img/profiles/mikaela.jpg"
                   class="rounded-circle"
                   width="120"
                   height="120"
-                />
-              </div>
-              <div>
-                <a
-                  href="http://www.yurulin.com"
-                  class="profile-name"
-                  target="_blank"
-                >
-                  Yu-Ru Lin
-                </a>
-              </div>
-              <div>Project Advisor</div>
-            </div>
-            <div class="col-md-4 text-center">
-              <div class="profile-img-wrapper">
-                <img
-                  src="/static/app/img/profiles/mikaela.png"
-                  class="rounded-circle"
-                  width="120"
-                  height="120"
+                  style={{objectFit: "cover"}}
                 />
               </div>
               <div>
@@ -162,9 +150,9 @@ class About extends Component {
                 </a>
               </div>
               <div>Project Manager</div>
+              <div><i>GSPIA MPA '22</i></div>
             </div>
-          </div>
-          {/* <div class="meet-the-team-row row d-flex align-items-center">
+
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
@@ -172,6 +160,53 @@ class About extends Component {
                   class="rounded-circle"
                   width="120"
                   height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.yurulin.com"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Eliana Biegel
+                </a>
+              </div>
+              <div>Project Manager</div>
+              <div><i>GSPIA MPA '22</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/yuru.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.yurulin.com"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Yu-Ru Lin
+                </a>
+              </div>
+              <div>Program Manager</div>
+              <div><i>Pitt SCI Faculty</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
                 />
               </div>
               <div>
@@ -180,18 +215,21 @@ class About extends Component {
                   class="profile-name"
                   target="_blank"
                 >
-                  Eliana Beigel
+                  Blair J. Mickles
                 </a>
               </div>
-              <div>Project Manager</div>
+              <div>Community Engagement</div>
+              <div><i>MPIA + MSW</i></div>
             </div>
+
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  src="/static/app/img/profiles/yongsu.jpg"
                   class="rounded-circle"
                   width="120"
-                  height="100"
+                  height="120"
+                  style={{objectFit: "cover"}}
                 />
               </div>
               <div>
@@ -199,17 +237,22 @@ class About extends Component {
                   href="http://www.grieftoaction.org"
                   class="profile-name"
                   target="_blank"
-                ></a>
+                >
+                  Yonsgu An
+                </a>
               </div>
-              <div>&emsp;&emsp;</div>
+              <div>Technical Program Manager</div>
+              <div><i>Pitt SCI Computer Science</i></div>
             </div>
+
             <div class="col-md-4 text-center">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  src="/static/app/img/profiles/patrick.jpg"
                   class="rounded-circle"
                   width="120"
-                  height="100"
+                  height="120"
+                  style={{objectFit: "cover"}}
                 />
               </div>
               <div>
@@ -217,12 +260,210 @@ class About extends Component {
                   href="http://www.grieftoaction.org"
                   class="profile-name"
                   target="_blank"
-                ></a>
+                >
+                  Patrick Gavazzi
+                </a>
               </div>
-              <div>&emsp;&emsp;</div>
+              <div>Technical Team</div>
+              <div><i>Tufts Computer Science</i></div>
             </div>
-          </div> */}
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+
+                  src="/static/app/img/profiles/ivy.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Ivy Chang
+                </a>
+              </div>
+              <div>CAASI Communications Coordinator</div>
+              <div><i>Pitt CBA Finance and Dietrichs A+S Economics</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/emmaline.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Emmaline Rial
+                </a>
+              </div>
+              <div>Technical Team and Data Collection Team</div>
+              <div><i>Mathematics and Computer Science</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/eduardo.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Eduardo Solomo
+                </a>
+              </div>
+              <div>Technical Team and Data Collection Team</div>
+              <div><i>Housing and Data Policy</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/tom.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Tom Vielott
+                </a>
+              </div>
+              <div>Data Collection Team</div>
+              <div><i>Pitt GSPIA Alumnus</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Collin Griffin
+                </a>
+              </div>
+              <div>Technical Project Manager</div>
+              <div><i>Pitt SCI Computer Science and Dietrich A+S Economics</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/adam.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Adam Nie
+                </a>
+              </div>
+              <div>Development Team</div>
+              <div><i>Pitt GSPIA MPA</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/sean.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Sean Hudson
+                </a>
+              </div>
+              <div>Data Collection</div>
+              <div><i>Data Analyst</i></div>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/kai.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Malachiah/Kai Koehler
+                </a>
+              </div>
+              <div>Development Team</div>
+              <div><i>Non-profit capacity building</i></div>
+            </div>
+
+            
+
+
+
+
+
+          </div> {/* END PROFILE PICTURES */}
+
         </div>
+
+        {/* BEGIN PARTNERS SECTION */}
         <div class="partners-wrapper">
           <h2 class="text-center">Our Partners</h2>
           <hr class="my-4"></hr>
@@ -230,59 +471,103 @@ class About extends Component {
             <div class="col-md-3 text-center">
               <a href="https://joincampaignzero.org" target="_blank">
                 <img
-                  src="/static/app/img/partner_camp_zero.jpg"
-                  alt="Open Police"
-                  width="100"
+                  src="/static/app/img/campaign_zero.png"
+                  alt="Campaign Zero"
+                  width="200"
                 />
               </a>
             </div>
             <div class="col-md-9">
               <h3>Campaign Zero</h3>
               <p>
-                A comprehensive platform of research-based policy solutions to
-                end police brutality in America.
+              Campaign Zero encourages policymakers to focus on solutions 
+              with the strongest evidence of effectiveness at reducing police violence.
               </p>
             </div>
           </div>
+
           <div class="partner-row row d-flex align-items-center">
             <div class="col-md-3 text-center">
-              <a href="https://openpolice.org" target="_blank">
+              <a href="https://www.tamv.org" target="_blank">
                 <img
-                  src="/static/app/img/partner_open_pol.jpg"
-                  alt="Open Police"
+                  src="/static/app/img/tamv_logo.png"
+                  alt="Take Action Mon Valley Logo"
                   width="200"
                 />
               </a>
             </div>
             <div class="col-md-9">
-              <h3>Open Police</h3>
+              <h3>Take Action Mon Valley</h3>
               <p>
-                Prepare, file, and track reports of police conduct because your
-                story is too important to be ignored.
+              Take Action Mon Valley (TAMV) strives to equip communities with the necessary knowledge to leverage local grassroots community organizing, to gain power and influence over decisions 
+              that directly affect the community, thus creating sustainable change and increasing the conscious level of residents.
               </p>
             </div>
           </div>
-          {/* <table class="col-md-12">
-            <tr>
-              <th colspan="4" class="text-center"><h2>Partners</h2></th>
-            </tr>
-            <tr rowspan="3">
-              <td><a href="https://www.joincampaignzero.org" target="_blank"><img src="camp_zero.jpg" alt="Campaign Zero" width="80" height="80" /></a></td>
-              <td>
-                <h4>Campaign Zero</h4>
-                <p>A comprehensive platform of research-based policy solutions to end police brutality in America.</p></td>
-            </tr>
-            <tr rowspan="3">
-              <td><a href="https://openpolice.org" target="_blank"><img src="open_pol.jpg" alt="Open Police" width="120" height="60" /></a></td>
-              <td>Open Police: Prepare, file, and track reports of police conduct because your story is too important to be ignored.</td>
-            </tr>
-            <tr rowspan="3">
-              <td><a href="https://www.grieftoaction.org/PBB/" target="_blank"><img src="412conn.jpg" alt="412 Connect" width="100" height="60" /></a></td>
-              <td>412 Connect: promote and increase the visibility of Black-owned businesses in Pittsburgh and to expand their business presence on and around the University of Pittsburgh campus and the Pittsburgh community.</td>
-            </tr>
-          </table> */}
         </div>
+
+        {/* RESOURCES */}
+        <div class="partners-wrapper">
+          <h2 class="text-center">Further Resources</h2>
+          <hr class="my-4"></hr>
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://apa-pgh.org/">Alliance for Police Accountability (APA)</a></h4>
+              <p>
+              Grassroots organization dedicated to criminal justice reconstruction, specializing in community/police relations
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://www.tamv.org/">Take Action Mon Valley (TAMV)</a></h4>
+              <p>
+              Equip communities with the necessary knowledge to leverage local grassroots community organizing
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://abolitionistlawcenter.org/">Abolitionist Law Center (ALC)</a></h4>
+              <p>
+              Public interest law firm inspired by the struggle of political and politicized prisoners, and organized for the purpose of abolishing class and race based mass incarceration
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://westendpower.org/">West End P.O.W.E.R</a></h4>
+              <p>
+              Community organization committed to strengthening communities through activism, advocacy, education, equity, and promoting unity
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://www.facebook.com/groups/200194701040816/">Black Lives Matter Pittsburgh</a></h4>
+              <p>
+              Focus is to bring together activists and allies in order to lift up black causes, speak out, and cross societal bridges
+              </p>
+            </div>
+          </div>
+
+          <div class="partner-row row d-flex align-items-center">
+            <div class="col-md-9">
+              <h4><a href="https://www.aclupa.org/en/chapters/greaterpittsburgh">American Civil Liberties Union (ACLU) Pittsburgh</a></h4>
+              <p>
+              Includes Allegheny, Armstrong, Beaver, Butler, Fayette, Greene, Indiana, Lawrence, Washington, and Westmoreland counties.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
+
     );
   }
 }
