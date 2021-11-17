@@ -167,6 +167,19 @@ class Landing extends Component {
             interested in more police accountability in our country.
           </p>
         </div>
+        <hr class="my-4" />
+        <div
+          className="jumbotron"
+          style={{ backgroundColor: "white", padding: "5px 30px", fontSize: '1.1rem' }}
+        >
+        <i>"TAMV is excited that this project is being kicked off. 
+          Huge thanks to Grief To Action for listening to our call and responding. 
+          Being able to collect data on local police departments will be helpful 
+          for our organizing and mobilizing efforts. In addition, it helps that 
+          the focus is on the county and not just Pittsburgh. There is an overwhelming 
+          need to focus on more of these small departments especially 
+          from a data standpoint"</i>  <b>Fawn Montgomery, Take Action Mon Valley</b>
+        </div>
       </div>
     );
   }
