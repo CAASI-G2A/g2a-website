@@ -4,7 +4,8 @@ import os
 import re
 from PxPUC.models import Contract, Location, Sentence, Category
 from django.conf import settings
-
+Sentence.objects.all().delete()
+Contract.objects.all().delete()
 
 def run():
     category = Category.objects.get_or_create(category="Pre-Complaint")
@@ -13,9 +14,6 @@ def run():
     category = Category.objects.get_or_create(category="Investigation")
     category = Category.objects.get_or_create(category="Result")
     with os.scandir(settings.BASE_DIR + "/PxPUC/static/app/contracts_txt") as entries:
-        Sentence.objects.all().delete()
-        Contract.objects.all().delete()
-
         for entry in entries:
             if entry.is_file():
                 # First create the Location object
