@@ -17,7 +17,7 @@ import SmallList from "./SmallList";
 //     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again
 //     2. Highlight words in setence examples
 //     3. find better way to do breaks in code
-
+//     4. make keywords look better 
 class Commentary extends Component {
   constructor(props) {
     super(props);
@@ -121,13 +121,13 @@ class Commentary extends Component {
             <br></br>
           </div>
 
-          <div className="pt-5 pl-1 pb-5" style={{ textAlign: "center", }}>
-            <h1 style={{ fontWeight: "bold"}}>
+          <div className="pt-5 pl-1 pb-5" style={{textAlign: "center"}}>
+            <p className="lead" style={{textAlign: "center", fontSize: '3rem', fontWeight: 600}}>
                 {" "}EXPLORE POLICE UNION CONTRACTS{" "}
-            </h1>
+            </p>
 
             <div className="jumbotron"
-                 style={{ textAlign: "left"}}
+                 style={{ textAlign: "left", fontWeight: 600}}
             >
               <p className="lead">
                 There are 108 separate governmental police departments operating in
@@ -154,17 +154,11 @@ class Commentary extends Component {
                 even help them advocate for change.
               </p>
             </div>
-            <NavLink 
-                to={routes.researchers}
-                style={{
-                  fontSize: "20px"
-                }}
-            >
-                Click Here to Search Contracts Manually 
-            </NavLink>
+            <li className="nav-item nav-link">
+              <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > Click Here to Search Contracts Manually  </NavLink>
+            </li>
             <br></br>
-            <br></br>
-
+            
             {/* <DownloadLink 
                 src="/static/app/instructions/How_to_read_a_contract.pdf"
                 style={{
@@ -174,19 +168,17 @@ class Commentary extends Component {
                How to read a contract
             </DownloadLink> */}
 
-            <a href='/static/app/instructions/How_to_read_a_contract.pdf' 
-                style={{
-                  fontSize: "20px"       
-                }}
-            download>
-                How to read a contract *(PDF)
-            </a>           
+            <li className="nav-item nav-link">
+              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
+                  How to read a contract *(PDF)
+              </a>    
+            </li>       
           </div>
 
 
-          <h4 style={{ fontWeight: "bold" }}>
+          <h3 style={{ fontWeight: "300" }}>
               {" "}SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
-          </h4>
+          </h3>
           
           {/* complaints */}
           <div
@@ -246,7 +238,7 @@ class Commentary extends Component {
                 <a>
                   "When an anonymous complaint is made against a police officer
                   and no corroborative evidence is obtained, the complaint shall
-                  be classified as <span style={{ fontWeight: "bold" }}>  unfounded </span>." (Bethel Park)
+                  be classified as <span style={{ fontWeight: "bold" }}>unfounded</span>." (Bethel Park)
                 </a>
 
                 <br></br>
@@ -493,7 +485,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "When a written complaint is made against an officer, the
-                Township will provide a copy of the complaint to the <span style={{ fontWeight: "bold" }}>accused</span>
+                Township will provide a copy of the complaint to the <span style={{ fontWeight: "bold" }}>accused</span> 
                 officer." (Baldwin Township)
               </a>
 
@@ -628,7 +620,7 @@ class Commentary extends Component {
               <br></br>
               <a>
                 "The City shall provide and pay the full cost of the premiums
-                for Criminal and Civil <span style={{ fontWeight: "bold" }}>Defense Insurance</span>for all police
+                for Criminal and Civil <span style={{ fontWeight: "bold" }}>Defense Insurance</span> for all police
                 officers." (Duquesne City)
               </a>
 
@@ -704,7 +696,7 @@ class Commentary extends Component {
               <a>
                 "The written reprimand as herein provided shall not remain in
                 effect for a period of more than eighteen (18) months from the
-                date of the occurence upon which the complaint and written
+                date of the occurence upon which the complaint and written 
                 <span style={{ fontWeight: "bold" }}>reprimand</span> are based." (Braddock Borough)
               </a>
 
