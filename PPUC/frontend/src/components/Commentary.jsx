@@ -14,10 +14,14 @@ import ResearcherResult from "./ResearcherResult";
 import SmallList from "./SmallList";
 
 // TODO:
-//     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again
-//     2. Highlight words in setence examples
-//     3. find better way to do breaks in code
-//     4. make keywords look better 
+//     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again, and Highlight words in setence examples
+//     2. find better way to do breaks in code
+//     3. make keywords look better 
+//     4. make the expanding and such look better and click better
+//     5. fix text 
+//     6. fix formating 
+
+
 class Commentary extends Component {
   constructor(props) {
     super(props);
@@ -116,72 +120,65 @@ class Commentary extends Component {
             }}
           >
             {/* figure out a better way to add in the spaces */}
-            <br></br>
-            <br></br>
-            <br></br>
+            <br />
+            <br />
+            <br />
           </div>
-
-          <div className="pt-5 pl-1 pb-5" style={{textAlign: "center"}}>
-            <p className="lead" style={{textAlign: "center", fontSize: '3rem', fontWeight: 600}}>
-                {" "}EXPLORE POLICE UNION CONTRACTS{" "}
-            </p>
-
+          <a style={{textAlign: "left", fontSize: '3rem', fontWeight: 600}}>
+                Search Police Contracts
+                {/* <hr style={{ borderTop: "1px solid black" }} /> */}
+          </a>
+          <div style={{ textAlign: "right"}}>
+            <li className="nav-item nav-link">
+              <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > 
+                Click here to go directly to the contract search bar.  
+              </NavLink>
+                <br />
+              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
+                How to read a contract *(PDF)
+              </a>    
+            </li>   
+          </div>
+          <div style={{textAlign: "center"}}>
             <div className="jumbotron"
                  style={{ textAlign: "left", fontWeight: 600}}
             >
               <p className="lead">
-                There are 108 separate governmental police departments operating in
-                Allegheny County. This includes departments operating at the
-                municipal, regional, county, and state level, from Stowe Township to
-                the Pennsylvania State Troopers. We have gathered police contracts
-                from almost 100 of these departments and made them publicly
-                available to help make policing more transparent in the County.
+                There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available for searches and downloads. We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.
               </p>
               <p className="lead">
-                These contracts often contain controversial provisions that require
-                cities to pay legal expenses for police officers accused of
-                misconduct and make it more difficult to hold these officers
-                accountable. From our preliminary analysis we found that nearly half
-                of the contracts disqualify misconduct complaints from the public
-                that are submitted anonymously, and nearly a third of contracts
-                stipulate that when police officers are disciplined the municipality
-                cannot release any information to the public about why discipline
-                was imposed.
-              </p>
-              <p className="lead">
-                We hope that this contract database will help concerned citizens
-                learn more about police departments in Allegheny County and perhaps
-                even help them advocate for change.
+                These contracts may contain provisions that make it more difficult to hold officers accountable. Below we list six categories of potentially problematic provisions that have been identified by Campaign Zero, a national organization, in collaboration with legal scholars and criminal justice experts.  In each we identified some keywords that you can use as a starting point to explore how these categories apply to policing in Allegheny County. For example, clicking on the keyword “unfounded” (under Category 1: Disqualify Misconduct Complaints) reveals that nearly half of the county’s police contracts disqualify misconduct complaints from the public that are submitted anonymously.  
               </p>
             </div>
-            <li className="nav-item nav-link">
+            {/* <li className="nav-item nav-link">
               <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > Click Here to Search Contracts Manually  </NavLink>
             </li>
-            <br></br>
-            
-            {/* <DownloadLink 
-                src="/static/app/instructions/How_to_read_a_contract.pdf"
-                style={{
-                  fontSize: "20px"       
-                }}
-            >
-               How to read a contract
-            </DownloadLink> */}
 
             <li className="nav-item nav-link">
               <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
                   How to read a contract *(PDF)
               </a>    
-            </li>       
+            </li>     */}
           </div>
-
-
+            <br />
+            <br />
           <h3 style={{ fontWeight: "300" }}>
-              {" "}SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS{" "}
+              Search by catagories
           </h3>
+          {/* <div>
+            <h3 style={{ fontWeight: "300" }}>
+                SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS
+            </h3>
+            <div className="jumbotron" style={{ textAlign: "left", fontWeight: 600}}>
+              <p className="lead">
+                These contracts may contain provisions that make it more difficult to hold officers accountable. Below we list six categories of potentially problematic provisions that have been identified by Campaign Zero, a national organization, in collaboration with legal scholars and criminal justice experts.  In each we identified some keywords that you can use as a starting point to explore how these categories apply to policing in Allegheny County. For example, clicking on the keyword “unfounded” (under Category 1: Disqualify Misconduct Complaints) reveals that nearly half of the county’s police contracts disqualify misconduct complaints from the public that are submitted anonymously.  
+              </p>
+            </div>
+          </div> */}
           
           {/* complaints */}
           <div
+            // className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -191,58 +188,47 @@ class Commentary extends Component {
               paddingLeft: 20,
               paddingRight: 20,
             }}
-            onClick={() => this.handleTitleClick("unfounded")}
           >
-            <img
-                src={iconUnfounded}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              aria-controls={`hi`}
-              href={`hi`}
-              style={{ color: "black",
-                       paddingLeft: "15px"
-                    }}
+            <div class="expandClickables"
+                 onClick={() => this.handleTitleClick("unfounded")}
             >
-              1.{" "}
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                DISQUALIFY MISCONDUCT COMPLAINTS{" "}
-              </span>{" "}
-              <br></br>
-              Disqualifying misconduct complaints that are submitted too many
-              days after an incident occurs or if an investigation takes too
-              long to complete
-              {/* <TouchableHighlight 
-                        style={styles.button} 
-                        onPress={this.toggle.bind(this)}
-                        underlayColor="#f1f1f1">
-                        <Image
-                            style={styles.buttonImage}
-                            source={icon}
-                        ></Image>
-              </TouchableHighlight> */}
-            </a>
-
-            <div className={"collapse nav-collapse " + dropUnfounded}>
+              <img
+                  src={iconUnfounded}
+                  style={{ width: "30px", height: "30px"}}
+                  onClick={() => this.handleTitleClick("unfounded")}
+              ></img>
+              <a className="position-absolute"
+                style={{ color: "black", paddingLeft: "15px"}}
+              >
+                1. <span style={{ fontWeight: "bold" }}>Disqualify Misconduct Complaints</span>
+                  <br />
+                Language that falls under this category disqualifies misconduct complaints that are filed anonymously or are not filed within a set time period.
+                {/* <TouchableHighlight 
+                          style={styles.button} 
+                          onPress={this.toggle.bind(this)}
+                          underlayColor="#f1f1f1">
+                          <Image
+                              style={styles.buttonImage}
+                              source={icon}
+                          ></Image>
+                </TouchableHighlight> */}
+              </a>
+                <br />
+                {/* <br /> */}
+            </div>
+            <div className={"collapse nav-collapse " + dropUnfounded}  style={{ paddingTop: "10px" }}>
               <div className={"col-md-6 offset-md-1"}>
-                <br></br>
+                <br />
                 <a>
-                  <span style={{ fontWeight: "bold" }}> Keyword </span>:
-                  unfounded
+                  <span style={{ fontWeight: "bold" }}> Keyword </span>: unfounded
                 </a>
-                <br></br>
+                  <br />
                 <a>
                   "When an anonymous complaint is made against a police officer
                   and no corroborative evidence is obtained, the complaint shall
                   be classified as <span style={{ fontWeight: "bold" }}>unfounded</span>." (Bethel Park)
                 </a>
-
-                <br></br>
-
+                  <br />
                 <button
                   type="button"
                   color="#ff5c5c"
@@ -257,22 +243,22 @@ class Commentary extends Component {
                   </NavLink>
                 </button>
 
-                <br></br>
-                <br></br>
-                <br></br>
+                <br />
+                <br />
+                <br />
 
                 <a>
                   <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
                   complaint
                 </a>
-                <br></br>
+                <br />
                 <a>
                   "When a citizen <span style={{ fontWeight: "bold" }}> complaint </span> is filed, it must be done in
                   writing, signed by the complainant and filed no later than
                   fifteen (15) days from the alleged event." (Braddock Borough)
                 </a>
 
-                <br></br>
+                <br />
 
                 <button
                   type="button"
@@ -291,8 +277,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
 
           {/* Interrogation */}
           <div
@@ -307,44 +293,22 @@ class Commentary extends Component {
             }}
             onClick={() => this.handleTitleClick("Interview")}
           >
-
-             <img
-                src={iconInterview}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              aria-controls={`hi`}
-              href={`hi`}
-              style={{ color: "black",
-                       paddingLeft: "15px" 
-                    }}
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Interview")}>
+              <img src={iconInterview} style={{ width: "30px"}}></img>
+              <a style={{ color: "black", paddingLeft: "15px"}}>
+                2. <span style={{ fontWeight: "bold" }}>Prevents Immediate Interrogation{" "}</span>
+                <br />
+                Language that falls under this category prevents police officers from being interrogated immediately after a “critical incident” and restricts when, where, and how officers are interrogated.
+              </a>
+            </div>
+            <div className={ "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview }
+                 style={{  paddingTop: "30px"}}
             >
-              2.{" "}
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                PREVENTS IMMEDIATE INTERROGATION{" "}
-              </span>{" "}
-              <br></br>
-              Preventing police officers from being interrogated immediately
-              after being involved in an incident or otherwise restricting how,
-              when, or where they can be interrogated
-            </a>
-
-            <div
-              className={
-                "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview
-              }
-              style={{  paddingTop: "30px"}}
-            >
-              <br></br>
+                <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: interview
               </a>
-              <br></br>
+                <br />
               <a>
                 "The criminal investigatory <span style={{ fontWeight: "bold" }}> interview </span> of the deputy shall not be
                 conducted until expiration of seventy-two (72) hours following
@@ -352,7 +316,7 @@ class Commentary extends Component {
                 (Allegheny County Sheriff's Department)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -368,22 +332,22 @@ class Commentary extends Component {
                 </NavLink>
               </button>
 
-              <br></br>
-              <br></br>
-              <br></br>
+              <br />
+              <br />
+              <br />
 
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: critical
                 incident
               </a>
-              <br></br>
+              <br />
               <a>
                 "An officer involved in a <span style={{ fontWeight: "bold" }}>critical incident</span> shall be permit 72
                 hours (3 sleep cycles) after the critical incident to make any
                 official statement, report, and interview."" (Penn Hills)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -401,8 +365,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
 
           {/* Information */}
           <div
@@ -431,14 +395,9 @@ class Commentary extends Component {
                        paddingLeft: "15px"
                     }}
             >
-              3.{" "}
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                UNFAIR ACCESS TO INFORMATION{" "}
-              </span>{" "}
-              <br></br>
-              Giving officers access to information that civilians do not get
-              prior to being interrogated
+              3. <span style={{ fontWeight: "bold" }}>Unfair Access to Information</span>
+                <br />
+              Language that falls under this category gives officers access to information that civilians do not get prior to interrogation.
             </a>
 
             <div
@@ -447,19 +406,19 @@ class Commentary extends Component {
                 dropInterrogation
               }
             >
-              <br></br>
+              <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>:
                 interrogation
               </a>
-              <br></br>
+              <br />
               <a>
                 "A police officer, whether a subject or witness, must be
                 informed of the nature of the interrogation at the outset of the
                 <span style={{ fontWeight: "bold" }}> interrogation</span>." (Avalon Borough)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -475,21 +434,21 @@ class Commentary extends Component {
                 </NavLink>
               </button>
 
-              <br></br>
-              <br></br>
-              <br></br>
+              <br />
+              <br />
+              <br />
 
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: accused
               </a>
-              <br></br>
+              <br />
               <a>
                 "When a written complaint is made against an officer, the
                 Township will provide a copy of the complaint to the <span style={{ fontWeight: "bold" }}>accused</span> 
                 officer." (Baldwin Township)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -507,8 +466,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
 
           {/* falsearrest */}
           <div
@@ -535,12 +494,9 @@ class Commentary extends Component {
                        paddingLeft: "15px"
               }}
             >
-              {" "}
-              4. <span style={{ fontWeight: "bold"}}> LEGAL COSTS </span>{" "}
-              <br></br>
-              Requiring cities to pay costs related to police misconduct
-              including by giving officers paid leave while under investigation,
-              paying legal fees, and/or the cost of settlements
+              4. <span style={{ fontWeight: "bold"}}> Legal Costs </span>
+                <br />
+              Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements.
             </a>
             
 
@@ -550,12 +506,12 @@ class Commentary extends Component {
               }
               style={{ paddingTop: "30px"}}
             >
-              <br></br>
+              <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: false
                 arrest
               </a>
-              <br></br>
+              <br />
               <a>
                 "The Borough shall provide each Officer with <span style={{ fontWeight: "bold" }}>false arrest</span>
                 insurance coverage as provided in 2008, which includes coverage
@@ -563,7 +519,7 @@ class Commentary extends Component {
                 prosecution." (Churchill Borough)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -579,21 +535,21 @@ class Commentary extends Component {
                 </NavLink>
               </button>
 
-              <br></br>
-              <br></br>
-              <br></br>
+              <br />
+              <br />
+              <br />
 
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: liability
                 insurance
               </a>
-              <br></br>
+              <br />
               <a>
                 "The Borough shall pay for 100% of the premium for police
                 professional <span style={{ fontWeight: "bold" }}>liability insurance</span>." (Baldwin Borough)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -609,22 +565,22 @@ class Commentary extends Component {
                 </NavLink>
               </button>
 
-              <br></br>
-              <br></br>
-              <br></br>
+              <br />
+              <br />
+              <br />
 
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: defense
                 insurance
               </a>
-              <br></br>
+              <br />
               <a>
                 "The City shall provide and pay the full cost of the premiums
                 for Criminal and Civil <span style={{ fontWeight: "bold" }}>Defense Insurance</span> for all police
                 officers." (Duquesne City)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -642,8 +598,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
 
 
           {/* Reprimand */}
@@ -653,7 +609,7 @@ class Commentary extends Component {
               backgroundColor: "#EAECEF",
               borderRadius: 10,
               paddingTop: 20,
-              paddingBottom: 30,
+              paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
             }}
@@ -673,26 +629,19 @@ class Commentary extends Component {
                        paddingLeft: "15px"
                     }}
             >
-              5.{" "}
-              <span style={{ fontWeight: "bold"}}>
-                {" "}
-                DESTROYS MISCONDUCT RECORDS{" "}
-              </span>{" "}
-              <br></br>
-              Preventing information on past misconduct investigations from
-              being recorded or retained in an officer's personnel file
+              5. <span style={{ fontWeight: "bold"}}>Destroys Misconduct Records</span>
+                <br />
+                Language that falls under this category prevents some misconduct accusations from being recorded in an officer’s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time.
             </a>
-
+              <br />
             <div
-              className={
-                "col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand
-              }
+              className={"col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand}
+              style={{ paddingTop: "50px"}}
             >
-              <br></br>
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: reprimand
               </a>
-              <br></br>
+                <br />
               <a>
                 "The written reprimand as herein provided shall not remain in
                 effect for a period of more than eighteen (18) months from the
@@ -700,7 +649,7 @@ class Commentary extends Component {
                 <span style={{ fontWeight: "bold" }}>reprimand</span> are based." (Braddock Borough)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -716,15 +665,15 @@ class Commentary extends Component {
                 </NavLink>
               </button>
 
-              <br></br>
-              <br></br>
-              <br></br>
+              <br />
+              <br />
+              <br />
 
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: personnel
                 file
               </a>
-              <br></br>
+              <br />
               <a>
                 The City agrees that any and all disciplinary actions shall only
                 be kept in an employee <span style={{ fontWeight: "bold" }}>personnel file</span> for thirty (30) months
@@ -732,7 +681,7 @@ class Commentary extends Component {
                 removed. (Duquesne City)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -750,8 +699,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
 
           {/* Disciplinary */}
           <div
@@ -780,29 +729,22 @@ class Commentary extends Component {
                        paddingLeft: "15px"
                     }}
             >
-              6.{" "}
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                LIMITS DISCIPLINARY CONSEQUENCES{" "}
-              </span>{" "}
-              <br></br>
-              Limiting disciplinary consequences for officers or limiting the
-              capacity of civilian oversight structures and/or the media to hold
-              police accountable.
+              6. <span style={{ fontWeight: "bold" }}>Limits Disciplinary Consequences</span>
+                <br />
+              Language that falls under this category limits the release of information that could help the media and the public hold police accountable.
             </a>
-
             <div
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " +
                 dropPublicComment
               }
             >
-              <br></br>
+              <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: public
                 comment
               </a>
-              <br></br>
+              <br />
               <a>
                 "Unless agreed to by the Police Officer or required by law, the
                 Borough shall not make any <span style={{ fontWeight: "bold" }}>public comment</span> or statement on the
@@ -810,7 +752,7 @@ class Commentary extends Component {
                 officer." (Bridgeville Borough)
               </a>
 
-              <br></br>
+              <br />
 
               <button
                 type="button"
@@ -828,8 +770,8 @@ class Commentary extends Component {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
+          <br />
+          <br />
         </div>
       </div>
     );
