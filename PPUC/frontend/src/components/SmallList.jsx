@@ -24,6 +24,7 @@ class SmallList extends Component {
       searchedRegions: [],
       selectedRegionsForTerm: null,
       clearMap: false,
+      isClicked: null
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -32,7 +33,20 @@ class SmallList extends Component {
     this.handleSelectKeyword = this.handleSelectKeyword.bind(this);
   }
 
-  handleClick(e) {
+  componentDidUpdate(prevProps, prevState) {
+    // Make only one tooltip appear (either leaflet-tooltip or leaflet-popup)
+    if (this.state.isClicked == 'list') {
+      d3.selectAll('.leaflet-popup').style('visibility', 'hidden');
+      d3.selectAll('.leaflet-marker-icon').style('visibility', 'hidden');
+      d3.select('.leaflet-tooltip-pane').style('visibility', 'visible');
+    } else if (this.state.isClicked == 'map') {
+      d3.select('.leaflet-tooltip-pane').style('visibility', 'hidden');
+      d3.selectAll('.leaflet-popup').style('visibility', 'visible');
+    }
+    
+  }
+
+  handleClick(e) { // on selecting item on the list
     var center_coordinate_x;
     var center_coordinate_y;
     var t = 0;
@@ -57,12 +71,14 @@ class SmallList extends Component {
       current: e.key,
       markerPos: [center_coordinate_x, center_coordinate_y],
       centerLocation: e.key,
+      isClicked: 'list'
     });
   }
 
-  handleSelectedRegion(selectedRegion) {
+  handleSelectedRegion(selectedRegion) { // on selecting map region
     this.setState({
       centerLocation: selectedRegion,
+      isClicked: 'map'
     });
   }
 

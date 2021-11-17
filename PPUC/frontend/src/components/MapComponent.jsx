@@ -41,7 +41,6 @@ class MapComponent extends Component {
   }
 
   componentDidMount() {
-    console.log("mapComponent rendered:" + this.props.pos);
   }
 
   componentDidUpdate(prevProps) {
@@ -144,7 +143,6 @@ class MapComponent extends Component {
 
   highlightRegion(e) {
     const selectedRegion = e.target.options.className.split("_").join(" ");
-    d3.selectAll('.leaflet-popup').remove();
     this.props.onSelectedRegion(selectedRegion);
   }
 
@@ -172,7 +170,7 @@ class MapComponent extends Component {
     } else if (groupName === "PGH") {
       layer.options.fillColor = "black";
     }
-    //console.log(centerName + " + " + areaName);
+
     layer.setStyle({ className: areaName.split(" ").join("_") });
 
     layer.on({
@@ -202,6 +200,7 @@ class MapComponent extends Component {
 
     var t = 1;
     var length = contentText.length;
+
     while (t < length) {
       if (contentText[t].LABEL === center) {
         if (
