@@ -10,22 +10,22 @@ function Legend({ map }) {
         const div = L.DomUtil.create("div", "info legend");
         let labels = [];
         labels.push(
-          '<i style = "background: rgba(255, 255, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> NH'
+          '<i style = "background: rgba(255, 255, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> NH (North Hills)'
         );
         labels.push(
-          '<i style = "background: rgba(128, 0, 128, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> AA'
+          '<i style = "background: rgba(128, 0, 128, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> AA (Airport Area)'
         );
         labels.push(
-          '<i style = "background: rgba(96, 96, 96, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> PGH'
+          '<i style = "background: rgba(96, 96, 96, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> PGH (Pittsburgh)'
         );
         labels.push(
-          '<i style = "background: rgba(0, 255, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> ES'
+          '<i style = "background: rgba(0, 255, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> ES (East Suburb)'
         );
         labels.push(
-          '<i style = "background: rgba(255, 165, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> SH'
+          '<i style = "background: rgba(255, 165, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> SH (South Hills)'
         );
         labels.push(
-          '<i style = "background: rgba(255, 0, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> MV'
+          '<i style = "background: rgba(255, 0, 0, 0.3)">&nbsp;&nbsp;&nbsp;&nbsp</i> MV (Mon Valley)'
         );
 
         div.innerHTML = labels.join("<br>");

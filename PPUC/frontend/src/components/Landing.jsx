@@ -21,25 +21,26 @@ class Landing extends Component {
             style={{ width: "55px", paddingBottom: "14px", opacity: 0.9 }}
           />
           <h1 style={{ color: "white" }}>ACPP</h1> */}
-          <hr style={{ borderTop: "1px solid white", marginTop: "1rem !important", marginBottom: '1rem !important' }} />
-          <p className="lead" style={{ color: "white", fontSize: '2rem', fontWeight: 600 }}>
+          <hr style={{ borderTop: "1px solid white" }} />
+          <p className="lead" style={{ marginTop: '-0.8rem', color: "white", fontSize: '2rem', fontWeight: 600 }}>
             Allegheny County Policing Project
+            <div style={{ marginTop: '-0.7rem', fontSize: '1.2rem', fontStyle: 'italic', fontWeight: 300 }}>Bringing more transparency to policing in Allegheny County.</div>
           </p>
         </div>
-        <div
+        {/* <div
           className="jumbotron"
           style={{ backgroundColor: "white", padding: "5px 30px" }}
         >
           <p className="lead">
+            <b>Bringing more transparency to policing in Allegheny County. </b><br />
             <i>
-              <b>Allegheny County Policing Project (ACPP)</b> is an
-              interdisciplinary working group at the University of PIttsburgh
-              dedicated to empowering marginalized communities through data
-              science. Our mission is to bring more transparency in Allegheny
-              County.
+              Allegheny County Policing Project (ACPP) is an
+              interdisciplinary working group at the University of PIttsburgh 
+              using data science to identify and address racial injustice. 
+              Our mission is to bring more transparency to policing in Allegheny County.
             </i>
           </p>
-        </div>
+        </div> */}
 
         <hr className="my-4" />
         <div

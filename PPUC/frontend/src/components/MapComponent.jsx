@@ -144,7 +144,7 @@ class MapComponent extends Component {
 
   highlightRegion(e) {
     const selectedRegion = e.target.options.className.split("_").join(" ");
-    //d3.select('.leaflet-popup').remove();
+    d3.selectAll('.leaflet-popup').remove();
     this.props.onSelectedRegion(selectedRegion);
   }
 

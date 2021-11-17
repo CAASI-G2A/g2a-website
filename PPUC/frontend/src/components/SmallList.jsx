@@ -52,6 +52,7 @@ class SmallList extends Component {
       center_coordinate_x = 0;
       center_coordinate_y = 0;
     }
+
     this.setState({
       current: e.key,
       markerPos: [center_coordinate_x, center_coordinate_y],
