@@ -118,6 +118,7 @@ class Researchers extends Component {
       const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery["query"]);
+      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
@@ -143,12 +144,14 @@ class Researchers extends Component {
           showResult: true,
         });
       });
+      // TODO: Modify this URLSearchParam to allow for selection of location
+      // will also then need to modify API, and Python method (and possible urls.py)
       // set search query param
       this.props.history.push({
         pathname: routes.researchers,
         search:
           "?" +
-          new URLSearchParams({ search: this.state.searchQuery }).toString(),
+          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
       });
     } catch (err) {
       if (err instanceof SearchParser.SyntaxError) {

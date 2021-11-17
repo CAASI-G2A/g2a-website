@@ -221,7 +221,6 @@ class ResearcherSearchList(generics.ListAPIView):
 
     def get_queryset(self):
         # Referred to later in get_queryset
-        print("GET QUERYSET")
 
         def build_filter(query, parent_obj=False):
             # we hit an operand
@@ -313,9 +312,11 @@ class ResearcherSearchList(generics.ListAPIView):
 
 class LocationQuestionList(generics.ListAPIView):
     serializer_class = CategorySerializer
+    lookup_url_kwarg = "lid"
 
     def get_queryset(self):
-        location = Location.objects.all()
+        lid = self.kwargs.get(self.lookup_url_kwarg)
+        location = Location.objects.get(pk=lid)
         queryset = Category.objects.all().prefetch_related(
             Prefetch(
                 "questions",
