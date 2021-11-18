@@ -155,8 +155,9 @@ class Landing extends Component {
               I look forward to seeing the practical impact of the search tool on equitable police practices 
               throughout the region."</i>  <b> Jerry S. Dickinson, Esq. Associate Professor, University of Pittsburgh School of Law</b>
           </div>
+          <br />
           <div>
-            <i>Endorsement from Campaign Zero from yesterday's meeting: "“Campaign Zero, specifically 
+            <i>“Campaign Zero, specifically 
               the Nix the 6 campaign are elated to see Grief to Action ACPP launch this project. 
               Making police union contract data public is necessary to empower the community at large 
               to combat systemic issues in policing.”</i> <b>Kat McKelvey, Campaign Zero</b>
