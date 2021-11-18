@@ -213,32 +213,28 @@ class Researchers extends Component {
             style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
           >
             <li className="nav-item nav-link">
-              <b>**How to use the search bar: </b> enter the keyword that you want to find in police contracts. Enclose multi-word phrases in quotations (i.e. “false arrest”).
+              <b>**How to use the search bar: </b> enter the keyword that you want to find in police contracts. Enclose multi-word phrases in quotations (i.e. “false arrest”). &nbsp;
+                <a
+                  className="collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  href="#collapseAdvanced"
+                  aria-expanded="false"
+                  aria-controls="collapseAdvanced"
+                >
+                  Click for advanced search settings.
+                </a>
+                <div
+                    id="collapseAdvanced"
+                    class="collapse"
+                  >
+                  To search for contracts that contain multiple keywords simultaneously, separate the keywords with <b>“AND”</b> (i.e. “anonymous” AND “unfounded”).<br></br><br></br> To search for contracts that contain at least one of multiple keywords, separate the keywords with <b>“OR”</b> (i.e. “critical incident” OR “traumatic incident”).
+                </div>
                 <br />
                 <br /> 
               Below are some keyword suggestions. (<NavLink className={isActive =>"nav-link" + (!isActive ? " unselected" : "")}to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)
                 <br />
-              This <a href='/static/app/instructions/How_to_read_a_contract.pdf' download>brief guide</a> may also be helpful.
-                <br />
-                <br />
-              <div className="instructions" role="tab">
-                  <a
-                    className="collapsed"
-                    role="button"
-                    data-toggle="collapse"
-                    href="#collapseAdvanced"
-                    aria-expanded="false"
-                    aria-controls="collapseAdvanced"
-                  >
-                    Click for advanced search settings.
-                  </a>
-              </div>
-              <div
-                  id="collapseAdvanced"
-                  class="collapse"
-                >
-                To search for contracts that contain multiple keywords simultaneously, separate the keywords with <b>“AND”</b> (i.e. “anonymous” AND “unfounded”).<br></br><br></br> To search for contracts that contain at least one of multiple keywords, separate the keywords with <b>“OR”</b> (i.e. “critical incident” OR “traumatic incident”).
-              </div>
+              This <a target="_blank" href='/static/app/instructions/How_to_read_a_contract.pdf'>brief guide</a> may also be helpful.
             </li>   
           </div>
           <div className="mt-2 text-center">

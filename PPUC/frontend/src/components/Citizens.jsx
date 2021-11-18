@@ -224,19 +224,6 @@ class Citizens extends Component {
     return (
       <div className="container-fluid">
         <div className="dropdown text-center">
-          {/*
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            style={{ margin: "10px auto" }}
-          >
-            Choose a state
-            <span className="caret"></span>
-          </button>
-          */}
           <div className="dropdown-menu multi-level">
             {Object.entries(this.state.locations).map(([state, cities]) => (
               <li key={state} className="dropdown-submenu">
@@ -257,7 +244,16 @@ class Citizens extends Component {
             ))}
           </div>
         </div>
-        <div className="jumbotron">
+        <h2
+          style={{
+            color: "darkblue",
+            fontWeight: 700,
+            marginTop: "50px",
+          }}
+        >
+          Complaint FAQ
+        </h2>
+        <div className="jumbotron" style={{ padding: '2rem' }}>
           <h1>{this.state.location && this.state.location.name}</h1>
           <p className="lead">
             This tool highlights the phases involved in the process of filing a
@@ -381,64 +377,6 @@ class Citizens extends Component {
               </div>
             </div>
           </div>
-          {/* {this.state.locationSubStages["review"] &&
-            this.state.locationSubStages["review"].map((subStage) => (
-              <div key={subStage.id} className="col-md-2 d-lg-none">
-                <div className="row">
-                  <div className="text-center flow-stage col-6 col-lg-12">
-                    {!subStage.faq && (
-                      <FontAwesomeIcon
-                        className="fa-3x flow-circle"
-                        icon={faCircle}
-                      />
-                    )}
-                    {subStage.faq && (
-                      <a
-                        data-toggle="collapse"
-                        data-target={`#collapseSub${subStage.id}`}
-                        aria-expanded="false"
-                        aria-controls={`collapseSub${subStage.id}`}
-                      >
-                        <FontAwesomeIcon
-                          className="fa-3x flow-circle"
-                          icon={faCircle}
-                        />
-                        <span className="fa-stack fa-xs mr-n4 ml-n1 mb-4">
-                          <FontAwesomeIcon
-                            className="fa-stack-2x flow-circle w-100"
-                            icon={faCircle}
-                          />
-                          <FontAwesomeIcon
-                            className="fa-stack-1x fa-inverse"
-                            icon={faEllipsisH}
-                            data-fa-transform="shrink-10 up-2"
-                          />
-                        </span>
-                      </a>
-                    )}
-                    <br />
-                    <FontAwesomeIcon
-                      className="fa-3x fa-w-16 flow-circle"
-                      icon={faArrowDown}
-                    />
-                  </div>
-                  <span
-                    className="flow-stage-text col-6 col-lg-12"
-                    dangerouslySetInnerHTML={{ __html: subStage.html }}
-                  ></span>
-                </div>
-                {subStage.faq && (
-                  <div
-                    className="row collapse"
-                    id={`collapseSub${subStage.id}`}
-                  >
-                    <div className="col-md-12 card card-body">
-                      {subStage.faq.text}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))} */}
           <div className="col-md-2">
             <div className="row">
               <div
@@ -504,137 +442,6 @@ class Citizens extends Component {
             </div>
           </div>
         </div>
-        {/* {this.state.locationSubStages[this.state.curStage] && (
-          <div className="row d-none d-lg-block">
-            <h3 className="text-capitalize">{this.state.curStage}</h3>
-            {this.state.locationSubStages[this.state.curStage].map(
-              (subStage, index) => (
-                <div key={subStage.id}>
-                  <div className="row no-gutters">
-                    <div
-                      className={`pl-3 col-md-auto d-flex align-items-center ${
-                        index === 0 ? "pt-2" : ""
-                      }`}
-                    >
-                      <div>
-                        <FontAwesomeIcon
-                          className="flow-circle fa-3x"
-                          icon={faCircle}
-                        />
-                      </div>
-                    </div>
-                    {subStage.faq && (
-                      <div className="col-md-auto d-flex align-items-start ml-n2 mt-n2 subprocess-faq-icon">
-                        <a
-                          data-toggle="collapse"
-                          data-target={`#collapseSub${subStage.id}`}
-                          aria-expanded="false"
-                          aria-controls={`collapseSub${subStage.id}`}
-                        >
-                          <span className="fa-stack fa-xs">
-                            <FontAwesomeIcon
-                              className="fa-stack-2x flow-circle w-100"
-                              icon={faCircle}
-                            />
-                            <FontAwesomeIcon
-                              className="fa-stack-1x fa-inverse"
-                              icon={faEllipsisH}
-                            />
-                          </span>
-                        </a>
-                      </div>
-                    )}
-                    <div
-                      className={`col-md d-flex align-items-center ${
-                        subStage.faq ? "subprocess-ml-n" : ""
-                      }`}
-                    >
-                      <h4
-                        dangerouslySetInnerHTML={{ __html: subStage.html }}
-                      ></h4>
-                    </div>
-                  </div>
-                  {subStage.alternates && (
-                    <div className="row no-gutters">
-                      {subStage.alternates.map((altSubStage) => (
-                        <div key={altSubStage.id} className="row no-gutters">
-                          <div
-                            className="col-md-auto d-flex align-items-center"
-                            style={{ paddingLeft: "1.9rem" }}
-                          >
-                            <span
-                              className="flow-circle fa-3x mt-n3"
-                              style={{ fontWeight: "800" }}
-                            >
-                              |
-                            </span>
-                            <FontAwesomeIcon
-                              className="fa-3x fa-w-16 flow-circle"
-                              icon={faArrowRight}
-                              style={{ marginLeft: "-.75rem" }}
-                            />
-                          </div>
-                          <div className="col-md-auto d-flex align-items-center">
-                            <div id={`sub${altSubStage.id}`}>
-                              <FontAwesomeIcon
-                                className="flow-circle fa-3x"
-                                icon={faCircle}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md d-flex align-items-center">
-                            <h4>{altSubStage.text}</h4>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  <div
-                    className={`row no-gutters ${
-                      subStage.alternates ? "mt-n3" : ""
-                    }`}
-                  >
-                    <div className="pl-3 col-md-auto d-flex align-items-center">
-                      <FontAwesomeIcon
-                        className="fa-3x fa-w-16 flow-circle"
-                        icon={faArrowDown}
-                      />
-                    </div>
-                  </div>
-                  {subStage.faq && (
-                    <div
-                      className="row collapse"
-                      id={`collapseSub${subStage.id}`}
-                    >
-                      <div className="col-md-12 card card-body">
-                        {subStage.faq.text}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )
-            )}
-            <div className="row no-gutters">
-              <div className="col-md-auto d-flex align-items-center">
-                <div>
-                  <FontAwesomeIcon
-                    className="flow-circle fa-5x"
-                    icon={faCircle}
-                  />
-                </div>
-              </div>
-              <div className="col-md d-flex align-items-center">
-                <h2 className="text-capitalize">
-                  {
-                    this.state.stageOrder[
-                      this.state.stageOrder.indexOf(this.state.curStage) + 1
-                    ]
-                  }
-                </h2>
-              </div>
-            </div>
-          </div>
-        )} */}
         <div className="row mt-5">
           {this.state.curStage && (
             <CitizenInfoPanel

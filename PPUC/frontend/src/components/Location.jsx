@@ -6,7 +6,7 @@ import { Tabs } from "antd";
 import Api from "../libs/api";
 import ReactPDF from "@intelllex/react-pdf";
 
-import regionInfoData from "./merge_data_allegheny_map.json";
+import regionInfoData from "../merge_data_allegheny_map.json";
 import _default from "rc-trigger";
 class Location extends Component {
   constructor(props) {
@@ -120,22 +120,25 @@ class Location extends Component {
               <tbody>
                 <tr>
                   <th className="bg-light">Full time officers as of 2019</th>
-                  {regionInfo && <td className="align-middle">{regionInfo["Total_Number_Police_Officers_as_of_2019"]}</td>}
+                  {regionInfo ? <td className="align-middle">{regionInfo["Total_Number_Police_Officers_as_of_2019"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
-                  <th className="bg-light">Do they use a police bill of rights?</th>
-                  {regionInfo && <td className="align-middle">{regionInfo["Do_they_use_a_police_bill_of_rights"]}</td>}
+                  <th className="bg-light">Do they use a police bill of rights</th>
+                  {regionInfo ? <td className="align-middle">{regionInfo["Do_they_use_a_police_bill_of_rights"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
                   <th className="bg-light">Police budget percentage in 2019</th>
-                  {regionInfo && <td className="align-middle">{"xx %"}</td>}
+                  {regionInfo ? <td className="align-middle">{regionInfo["Budget"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
                   <th className="bg-light">Police department website</th>
-                  {regionInfo && <td className="align-middle"><a href={regionInfo['Link_to_police_department']}>Link</a></td>}
+                  {regionInfo ? <td className="align-middle"><a href={regionInfo["Budget"]}>Link</a></td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
+            <a target="_blank" href="https://www.grietoaction.org/static/app/instructions/How_to_read_a_contract.pdf">Click for our brief “How to Read a Contract” guide</a>
           </div>
           {this.state.location && 
             (<Tabs defaultActiveKey="1" type="card" size={"large"}>

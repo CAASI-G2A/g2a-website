@@ -4,7 +4,7 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-center pt-5 pl-2">Contact Us</h1>
+        <h2 className="text-center pt-5 pl-2" style={{ color: 'darkblue', fontWeight: 700 }}>Contact Us</h2>
 
         <div className="jumbotron pt-2 bg-white">
           <hr className="my-4 border-top border-secondary" />

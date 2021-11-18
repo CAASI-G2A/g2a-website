@@ -16,33 +16,12 @@ class Landing extends Component {
             height: '150px'
           }}
         >
-          {/* <img
-            src="/static/app/img/CAASI2.png"
-            style={{ width: "55px", paddingBottom: "14px", opacity: 0.9 }}
-          />
-          <h1 style={{ color: "white" }}>ACPP</h1> */}
           <hr style={{ borderTop: "1px solid white" }} />
           <p className="lead" style={{ marginTop: '-0.8rem', color: "white", fontSize: '2rem', fontWeight: 600 }}>
             Allegheny County Policing Project
             <div style={{ marginTop: '-0.7rem', fontSize: '1.2rem', fontStyle: 'italic', fontWeight: 300 }}>Bringing more transparency to policing in Allegheny County.</div>
           </p>
         </div>
-        {/* <div
-          className="jumbotron"
-          style={{ backgroundColor: "white", padding: "5px 30px" }}
-        >
-          <p className="lead">
-            <b>Bringing more transparency to policing in Allegheny County. </b><br />
-            <i>
-              Allegheny County Policing Project (ACPP) is an
-              interdisciplinary working group at the University of PIttsburgh 
-              using data science to identify and address racial injustice. 
-              Our mission is to bring more transparency to policing in Allegheny County.
-            </i>
-          </p>
-        </div> */}
-
-        <hr className="my-4" />
         <div
           className="jumbotron"
           style={{
@@ -137,21 +116,6 @@ class Landing extends Component {
               </p>
             </div>
           </div>
-
-          {/* <h5 style={{ marginBottom: "0px", color: 'royalblue', fontWeight: 700 }}>
-            <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>2) Search Police Contracts</Link>
-          </h5>
-          <p className="lead">
-            Search and compare over 100 contracts from Allegheny County. Filter
-            contracts by location.
-          </p>
-          <h5 style={{ marginBottom: "0px" }}>
-            <Link to={routes.researchers} style={{ color: 'royalblue', fontWeight: 700 }}>3) Pittsburgh Complaint FAQ</Link>
-          </h5>
-          <p className="lead">
-            Learn about the process of filing a police misconduct complaint at
-            Pittsburgh.
-          </p> */}
         </div>
         <div
           className="jumbotron"
@@ -172,13 +136,32 @@ class Landing extends Component {
           className="jumbotron"
           style={{ backgroundColor: "white", padding: "5px 30px", fontSize: '1.1rem' }}
         >
-        <i>"TAMV is excited that this project is being kicked off. 
-          Huge thanks to Grief To Action for listening to our call and responding. 
-          Being able to collect data on local police departments will be helpful 
-          for our organizing and mobilizing efforts. In addition, it helps that 
-          the focus is on the county and not just Pittsburgh. There is an overwhelming 
-          need to focus on more of these small departments especially 
-          from a data standpoint"</i>  <b>Fawn Montgomery, Take Action Mon Valley</b>
+          <div>
+            <i>"TAMV is excited that this project is being kicked off. 
+            Huge thanks to Grief To Action for listening to our call and responding. 
+            Being able to collect data on local police departments will be helpful 
+            for our organizing and mobilizing efforts. In addition, it helps that 
+            the focus is on the county and not just Pittsburgh. There is an overwhelming 
+            need to focus on more of these small departments especially 
+            from a data standpoint"</i>  <b>Fawn Montgomery, Take Action Mon Valley</b>
+          </div>
+          <br />
+          <div>
+            <i>"This project is an extraordinary contribution to our region’s police reform efforts. 
+              The breadth and depth of the search capabilities into specific provisions within 
+              collective bargaining agreements is astonishing. As a civil rights lawyer 
+              who advises activist groups on police reform efforts and who frequently analyzes police 
+              contracts, this project is a game-changer for social and racial justice in policing. 
+              I look forward to seeing the practical impact of the search tool on equitable police practices 
+              throughout the region."</i>  <b> Jerry S. Dickinson, Esq. Associate Professor, University of Pittsburgh School of Law</b>
+          </div>
+          <br />
+          <div>
+            <i>“Campaign Zero, specifically 
+              the Nix the 6 campaign are elated to see Grief to Action ACPP launch this project. 
+              Making police union contract data public is necessary to empower the community at large 
+              to combat systemic issues in policing.”</i> <b>Kat McKelvey, Campaign Zero</b>
+          </div>
         </div>
       </div>
     );

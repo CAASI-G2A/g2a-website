@@ -41,7 +41,6 @@ class MapComponent extends Component {
   }
 
   componentDidMount() {
-    console.log("mapComponent rendered:" + this.props.pos);
   }
 
   componentDidUpdate(prevProps) {
@@ -144,7 +143,6 @@ class MapComponent extends Component {
 
   highlightRegion(e) {
     const selectedRegion = e.target.options.className.split("_").join(" ");
-    d3.selectAll('.leaflet-popup').remove();
     this.props.onSelectedRegion(selectedRegion);
   }
 
@@ -172,7 +170,7 @@ class MapComponent extends Component {
     } else if (groupName === "PGH") {
       layer.options.fillColor = "black";
     }
-    //console.log(centerName + " + " + areaName);
+
     layer.setStyle({ className: areaName.split(" ").join("_") });
 
     layer.on({
@@ -181,7 +179,7 @@ class MapComponent extends Component {
   }
 
   getContent(content) {
-    if (content === null || content == "NA" || content == "") {
+    if (content === null || content == "NA" || content == "" || content == "none") {
       return "No info";
     } else {
       return content;
@@ -202,6 +200,7 @@ class MapComponent extends Component {
 
     var t = 1;
     var length = contentText.length;
+
     while (t < length) {
       if (contentText[t].LABEL === center) {
         if (
@@ -213,7 +212,7 @@ class MapComponent extends Component {
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "No contract detail"
+                contract_link = "<br>No contract detail"
             }
           return (
             contentText[t].LABEL +
@@ -255,7 +254,7 @@ class MapComponent extends Component {
               contentText[t].Do_they_use_a_police_bill_of_rights
               ) +
               "<br> Police budget percentage 2019: " +
-              this.getContent(contentText[t].Budget) +
+              ((this.getContent(contentText[t].Budget) !== 'null') ? this.getContent(contentText[t].Budget) : "No info") +
             "<br> <br> Keywords in contract: " +
               this.getContent(contentText[t].Keywords_found_in_contract) +
               contract_link
