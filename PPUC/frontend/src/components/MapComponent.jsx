@@ -249,7 +249,7 @@ class MapComponent extends Component {
             this.getContent(
               contentText[t].Total_Number_Police_Officers_as_of_2019
             ) +
-            "<br> Police bill of rights: " +
+            "<br> Police bill of rights: " + 
             this.getContent(
               contentText[t].Do_they_use_a_police_bill_of_rights
               ) +
