@@ -27,19 +27,44 @@ class Commentary extends Component {
     super(props);
     this.state = {
       showUnfounded: false,
+      // hoveredUnfounded: false,
+
       showInterview: false,
+      // hoveredInterview: false,
+
       showInterrogation: false,
+      // hoveredInterrogation: false,
+
       showFalseArrest: false,
+      // hoveredFalseArrest: false,
+
       showReprimand: false,
+      // hoveredReprimand: false,
+
       showPublicComment: false,
+      // hoveredPublicComment: false,
+
     };
+
+    // location of plus and minus icons that show up 
     this.icons = {   
         'plus'    : '/static/app/img/plus.png',
         'minus'   : '/static/app/img/minus.png'
     };
 
     this.handleTitleClick = this.handleTitleClick.bind(this);
+
+    const styles = {
+       myTextStyle: {
+          textDecoration: 'none',
+          '&:hover': {
+          color: 'white'
+        }
+      }
+    };
+    
   }
+  
 
   handleTitleClick(to_show) {
     // Look for which click was executed
@@ -66,6 +91,12 @@ class Commentary extends Component {
     // make sure that the page is always loaded at the top
     window.scrollTo(0, 0);
   }
+
+  componentDidMount() {
+    // make sure that the page is always loaded at the top
+    window.scrollTo(0, 0);
+  }
+
 
   render() {
     // maybe put in class
@@ -162,7 +193,7 @@ class Commentary extends Component {
             <br />
             <br />
           <h3 style={{ fontWeight: "300" }}>
-              Search by catagories
+              Search by categories
           </h3>
           {/* <div>
             <h3 style={{ fontWeight: "300" }}>
@@ -177,7 +208,7 @@ class Commentary extends Component {
           
           {/* complaints */}
           <div
-            // className="col-md-10 offset-md-1"
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -188,16 +219,20 @@ class Commentary extends Component {
               paddingRight: 20,
             }}
           >
-            <div class="expandClickables"
-                 onClick={() => this.handleTitleClick("unfounded")}
+            <div onClick={() => this.handleTitleClick("unfounded")}
+                 // Patrick: Maybe implement later, hover over on text
+                //  onMouseOut={() => this.setState({hovered: false})}
+                //  onMouseOver={() => this.setState({hovered: true})}
             >
-              <img
+              <img 
                   src={iconUnfounded}
-                  style={{ width: "30px", height: "30px"}}
-                  onClick={() => this.handleTitleClick("unfounded")}
+                  style={{ width: "30px", height: "30px", transform: `${this.state.hovered ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
               ></img>
-              <a className="position-absolute"
-                style={{ color: "black", paddingLeft: "15px"}}
+              <a className="position-absolute  col-md-9"
+                style={{ color: "black", paddingLeft: "15px", textDecoration: 'none', 
+                         textDecoration: `${this.state.hovered ? 'underline' : ''}`}}
+                        //  textDecoration: `${this.state.hovered ? 'underline' : 'null'}`}}
+                        //  transform: `${this.state.hovered ? 'scale(1,1.1)' : 'scale(1,1)'}`}}
               >
                 1. <span style={{ fontWeight: "bold" }}>Disqualify Misconduct Complaints</span>
                   <br />
@@ -215,6 +250,7 @@ class Commentary extends Component {
                 <br />
                 {/* <br /> */}
             </div>
+              <br />
             <div className={"collapse nav-collapse " + dropUnfounded}  style={{ paddingTop: "10px" }}>
               <div className={"col-md-6 offset-md-1"}>
                 <br />
@@ -241,11 +277,9 @@ class Commentary extends Component {
                     search contracts for "unfounded"{" "}
                   </NavLink>
                 </button>
-
-                <br />
-                <br />
-                <br />
-
+                  <br />
+                  <br />
+                  <br />
                 <a>
                   <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
                   complaint
@@ -256,9 +290,7 @@ class Commentary extends Component {
                   writing, signed by the complainant and filed no later than
                   fifteen (15) days from the alleged event." (Braddock Borough)
                 </a>
-
-                <br />
-
+                 <br />
                 <button
                   type="button"
                   color="#ff5c5c"
@@ -275,12 +307,11 @@ class Commentary extends Component {
               </div>
             </div>
           </div>
-
-          <br />
-          <br />
-
+            <br />
+            <br />
           {/* Interrogation */}
           <div
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -290,11 +321,12 @@ class Commentary extends Component {
               paddingLeft: 20,
               paddingRight: 20,
             }}
-            onClick={() => this.handleTitleClick("Interview")}
           >
             <div class="expandClickables" onClick={() => this.handleTitleClick("Interview")}>
               <img src={iconInterview} style={{ width: "30px"}}></img>
-              <a style={{ color: "black", paddingLeft: "15px"}}>
+              <a className="position-absolute  col-md-9" 
+                 style={{ color: "black", paddingLeft: "15px"}}
+              >
                 2. <span style={{ fontWeight: "bold" }}>Prevents Immediate Interrogation{" "}</span>
                 <br />
                 Language that falls under this category prevents police officers from being interrogated immediately after a “critical incident” and restricts when, where, and how officers are interrogated.
@@ -314,9 +346,7 @@ class Commentary extends Component {
                 the shooting/incident unless there are exigent circumstances"
                 (Allegheny County Sheriff's Department)
               </a>
-
-              <br />
-
+                <br />
               <button
                 type="button"
                 color="#ff5c5c"
@@ -330,11 +360,9 @@ class Commentary extends Component {
                   search contracts for "interview"{" "}
                 </NavLink>
               </button>
-
-              <br />
-              <br />
-              <br />
-
+                <br />
+                <br />
+                <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: critical
                 incident
@@ -345,9 +373,7 @@ class Commentary extends Component {
                 hours (3 sleep cycles) after the critical incident to make any
                 official statement, report, and interview."" (Penn Hills)
               </a>
-
-              <br />
-
+                <br />
               <button
                 type="button"
                 color="#ff5c5c"
@@ -363,12 +389,11 @@ class Commentary extends Component {
               </button>
             </div>
           </div>
-
-          <br />
-          <br />
-
+            <br />
+            <br />
           {/* Information */}
           <div
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -378,27 +403,22 @@ class Commentary extends Component {
               paddingLeft: 20,
               paddingRight: 20,
             }}
-            onClick={() => this.handleTitleClick("Interrogation")}
           >
-            <img
-                src={iconInterrogation}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              aria-controls={`hi`}
-              href={`hi`}
-              style={{ color: "black",
-                       paddingLeft: "15px"
-                    }}
-            >
-              3. <span style={{ fontWeight: "bold" }}>Unfair Access to Information</span>
-                <br />
-              Language that falls under this category gives officers access to information that civilians do not get prior to interrogation.
-            </a>
-
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Interrogation")}>
+              <img
+                  src={iconInterrogation}
+                  style={{ width: "30px", height: "30px"}}
+              ></img>
+              <a
+                className="position-absolute  col-md-9"
+                style={{ color: "black", paddingLeft: "15px" }}
+              >
+                3. <span style={{ fontWeight: "bold" }}>Unfair Access to Information</span>
+                  <br />
+                Language that falls under this category gives officers access to information that civilians do not get prior to interrogation.
+              </a>
+            </div>
+              <br />
             <div
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " +
@@ -414,11 +434,10 @@ class Commentary extends Component {
               <a>
                 "A police officer, whether a subject or witness, must be
                 informed of the nature of the interrogation at the outset of the
-                <span style={{ fontWeight: "bold" }}> interrogation</span>." (Avalon Borough)
+                {" "} <span style={{ fontWeight: "bold" }}> interrogation</span> {" "}." 
+                (Avalon Borough)
               </a>
-
-              <br />
-
+                <br />
               <button
                 type="button"
                 color="#ff5c5c"
@@ -432,23 +451,20 @@ class Commentary extends Component {
                   search contracts for "interrogation"{" "}
                 </NavLink>
               </button>
-
-              <br />
-              <br />
-              <br />
-
+                <br />
+                <br />
+                <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: accused
               </a>
               <br />
               <a>
                 "When a written complaint is made against an officer, the
-                Township will provide a copy of the complaint to the <span style={{ fontWeight: "bold" }}>accused</span> 
+                Township will provide a copy of the complaint to the 
+                {" "} <span style={{ fontWeight: "bold" }}>accused</span> {" "}
                 officer." (Baldwin Township)
               </a>
-
-              <br />
-
+                <br />
               <button
                 type="button"
                 color="#ff5c5c"
@@ -464,12 +480,11 @@ class Commentary extends Component {
               </button>
             </div>
           </div>
-
-          <br />
-          <br />
-
+            <br />
+            <br />
           {/* falsearrest */}
           <div
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -479,26 +494,21 @@ class Commentary extends Component {
               paddingLeft: 20,
               paddingRight: 20,
             }}
-            onClick={() => this.handleTitleClick("FalseArrest")}
           >
-            <img
-                src={iconFalse}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              style={{ color: "black",
-                       paddingLeft: "15px"
-              }}
-            >
-              4. <span style={{ fontWeight: "bold"}}> Legal Costs </span>
-                <br />
-              Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements.
-            </a>
-            
-
+            <div class="expandClickables" onClick={() => this.handleTitleClick("FalseArrest")}>
+              <img
+                  src={iconFalse}
+                  style={{ width: "30px", height: "30px"}}
+              ></img>
+              <a
+                className="position-absolute col-md-9"
+                style={{ color: "black", paddingLeft: "15px" }}
+              >
+                4. <span style={{ fontWeight: "bold"}}> Legal Costs </span>
+                  <br />
+                Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements.
+              </a>
+            </div>
             <div
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
@@ -512,7 +522,8 @@ class Commentary extends Component {
               </a>
               <br />
               <a>
-                "The Borough shall provide each Officer with <span style={{ fontWeight: "bold" }}>false arrest</span>
+                "The Borough shall provide each Officer with 
+                {" "} <span style={{ fontWeight: "bold" }}>false arrest</span> {" "}
                 insurance coverage as provided in 2008, which includes coverage
                 for false arrest, detention, imprisonment or malicious
                 prosecution." (Churchill Borough)
@@ -603,6 +614,7 @@ class Commentary extends Component {
 
           {/* Reprimand */}
           <div
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -612,26 +624,18 @@ class Commentary extends Component {
               paddingLeft: 20,
               paddingRight: 20,
             }}
-            onClick={() => this.handleTitleClick("Reprimand")}
           >
-            <img
-                src={iconReprimand}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              aria-controls={`hi`}
-              href={`hi`}
-              style={{ color: "black",
-                       paddingLeft: "15px"
-                    }}
-            >
-              5. <span style={{ fontWeight: "bold"}}>Destroys Misconduct Records</span>
-                <br />
-                Language that falls under this category prevents some misconduct accusations from being recorded in an officer’s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time.
-            </a>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Reprimand")}>
+              <img src={iconReprimand} style={{ width: "30px", height: "30px"}}></img>
+              <a
+                className="position-absolute col-md-9"
+                style={{ color: "black", paddingLeft: "15px" }}
+              >
+                5. <span style={{ fontWeight: "bold"}}>Destroys Misconduct Records</span>
+                  <br />
+                  Language that falls under this category prevents some misconduct accusations from being recorded in an officer’s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time.
+              </a>
+            </div>
               <br />
             <div
               className={"col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand}
@@ -644,8 +648,9 @@ class Commentary extends Component {
               <a>
                 "The written reprimand as herein provided shall not remain in
                 effect for a period of more than eighteen (18) months from the
-                date of the occurence upon which the complaint and written 
-                <span style={{ fontWeight: "bold" }}>reprimand</span> are based." (Braddock Borough)
+                date of the occurence upon which the complaint and 
+                written <span style={{ fontWeight: "bold" }}>reprimand</span> are 
+                based." (Braddock Borough)
               </a>
 
               <br />
@@ -703,6 +708,7 @@ class Commentary extends Component {
 
           {/* Disciplinary */}
           <div
+            className="col-md-10 offset-md-1"
             style={{
               borderRadius: 10,
               backgroundColor: "#EAECEF",
@@ -714,24 +720,18 @@ class Commentary extends Component {
             }}
             onClick={() => this.handleTitleClick("PublicComment")}
           >
-            <img
-                src={iconComment}
-                style={{ width: "30px", height: "30px"}}
-            ></img>
-            <a
-              className="position-absolute"
-              data-toggle="collapse"
-              aria-expanded="false"
-              aria-controls={`hi`}
-              href={`hi`}
-              style={{ color: "black",
-                       paddingLeft: "15px"
-                    }}
-            >
-              6. <span style={{ fontWeight: "bold" }}>Limits Disciplinary Consequences</span>
-                <br />
-              Language that falls under this category limits the release of information that could help the media and the public hold police accountable.
-            </a>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("PublicComment")}>
+              <img src={iconComment} style={{ width: "30px", height: "30px"}}></img>
+              <a
+                className="position-absolute  col-md-9"
+                style={{ color: "black", paddingLeft: "15px" }}
+              >
+                6. <span style={{ fontWeight: "bold" }}>Limits Disciplinary Consequences</span>
+                  <br />
+                Language that falls under this category limits the release of information that could help the media and the public hold police accountable.
+              </a>
+            </div>
+              <br />
             <div
               className={
                 "col-md-6 offset-md-1 collapse nav-collapse " +
@@ -777,3 +777,4 @@ class Commentary extends Component {
   }
 }
 export default Commentary;
+
