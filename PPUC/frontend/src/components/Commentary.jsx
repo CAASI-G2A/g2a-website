@@ -109,6 +109,9 @@ class Commentary extends Component {
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
+          <h3 style={{ color: 'darkblue', fontWeight: 700, marginTop: 40 }}>
+                Search Police Contracts
+          </h3>
           <div
             className="jumbotron"
             style={{
@@ -124,10 +127,6 @@ class Commentary extends Component {
             <br />
             <br />
           </div>
-          <a style={{textAlign: "left", fontSize: '3rem', fontWeight: 600}}>
-                Search Police Contracts
-                {/* <hr style={{ borderTop: "1px solid black" }} /> */}
-          </a>
           <div style={{ textAlign: "right"}}>
             <li className="nav-item nav-link">
               <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > 

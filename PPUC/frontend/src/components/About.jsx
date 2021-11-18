@@ -8,9 +8,9 @@ class About extends Component {
     return (
       <div>
         {/* HEADING */}
-        <h1 className="text-center pt-5 pl-2">
+        <h2 className="text-center pt-5 pl-2" style={{ fontWeight: 700, color: 'darkblue' }}>
           About P<span style={{ color: "#5685d1" }}>x</span>PUC
-        </h1>
+        </h2>
         {/* PRIMARY INTRO */}
         <div className="jumbotron pb-5">
           <p className="lead">
@@ -238,7 +238,7 @@ class About extends Component {
                   class="profile-name"
                   target="_blank"
                 >
-                  Yonsgu An
+                  Yongsu Ahn
                 </a>
               </div>
               <div>Technical Program Manager</div>
