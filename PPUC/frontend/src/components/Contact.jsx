@@ -9,7 +9,7 @@ class Contact extends Component {
         <div className="jumbotron pt-2 bg-white">
           <hr className="my-4 border-top border-secondary" />
           <p className="lead text-center">
-            Feel free to e-mail us with any questions or inquiries. We're happy
+            Feel free to e-mail us with at <a href="mailto:caasi@pitt.edu">caasi@pitt.edu</a> with any questions or inquiries. We're happy
             to help!
           </p>
           <address className="text-center">

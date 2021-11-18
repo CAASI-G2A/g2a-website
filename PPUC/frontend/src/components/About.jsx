@@ -9,20 +9,27 @@ class About extends Component {
       <div>
         {/* HEADING */}
         <h2 className="text-center pt-5 pl-2" style={{ fontWeight: 700, color: 'darkblue' }}>
-          About P<span style={{ color: "#5685d1" }}>x</span>PUC
+          About AC<span style={{ color: "#5685d1" }}>PP</span>
         </h2>
         {/* PRIMARY INTRO */}
         <div className="jumbotron pb-5">
           <p className="lead">
-            The P<span style={{ color: "#5685d1" }}>x</span>PUC team is made up
-            of a subset of members from Grief to Action (G2A) , a working group
-            at the University of Pittsburgh's Center for Analytical Approaches.{" "}
+            The AC<span style={{ color: "#5685d1" }}>PP</span> team is made up of a subset of members from Grief to Action (G2A), 
+            a working group at the University of Pittsburgh's Center for Analytical Approaches in Social Innovation (CAASI). 
+            Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to 
+            use data analysis to address structural racism in Pittsburgh and beyond.
+            <br></br>
+            The aim of this project is to bring more transparency to the police accountability process at 
+            the local level. We hope this site allows users to navigate municipal police departments, 
+            look up information in police contracts, and become more familiar with the ways these 
+            contracts govern police accountability.
+            {" "}
           </p>
           <p className="lead">
-            Our team is made up of students, staff, and community members who
-            came together this summer in the wake of George Floyd's murder to
-            use data analysis to address structural racism in Pittsburgh and
-            beyond.
+          Our team is made up of students, faculty, and community members. Almost a third of our 
+          volunteers are from outside of Pitt. Email us to join forces!  We gratefully acknowledge 
+          funding from the Pitt Cyber Accelerator Grant and the Pitt Momentum Fund, as well as the 
+          contributions of Pitt’s CS1980, INFSCI 1740, and PIA 2960 capstone teams.
           </p>
         </div>
         {/* SECONDARY INTRO */}
@@ -108,7 +115,7 @@ class About extends Component {
           <div class="meet-the-team-row row d-flex align-items-center">
 
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center  mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/sera.png"
@@ -127,10 +134,11 @@ class About extends Component {
                   Sera Linardi
                 </a>
               </div>
-              <div><i>CAASI Director</i></div>
+              <div>CAASI Director</div>
+              <div><i>GSPIA Faculty</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/mikaela.jpg"
@@ -153,10 +161,10 @@ class About extends Component {
               <div><i>GSPIA MPA '22</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/eliana.png"
+                  src="/static/app/img/profiles/eliana.jpeg"
                   class="rounded-circle"
                   width="120"
                   height="120"
@@ -165,7 +173,7 @@ class About extends Component {
               </div>
               <div>
                 <a
-                  href="http://www.yurulin.com"
+                  href="http://www.grieftoaction.org"
                   class="profile-name"
                   target="_blank"
                 >
@@ -176,7 +184,7 @@ class About extends Component {
               <div><i>GSPIA MPA '22</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/yuru.jpg"
@@ -195,14 +203,14 @@ class About extends Component {
                   Yu-Ru Lin
                 </a>
               </div>
-              <div>Program Manager</div>
+              <div>Faculty Advisor</div>
               <div><i>Pitt SCI Faculty</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  src="/static/app/img/profiles/blair.jpeg"
                   class="rounded-circle"
                   width="120"
                   height="120"
@@ -222,7 +230,7 @@ class About extends Component {
               <div><i>MPIA + MSW</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/yongsu.jpg"
@@ -241,11 +249,11 @@ class About extends Component {
                   Yongsu Ahn
                 </a>
               </div>
-              <div>Technical Program Manager</div>
+              <div>Technical Project Manager</div>
               <div><i>Pitt SCI Computer Science</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/patrick.jpg"
@@ -268,7 +276,7 @@ class About extends Component {
               <div><i>Tufts Computer Science</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
 
@@ -289,10 +297,10 @@ class About extends Component {
                 </a>
               </div>
               <div>CAASI Communications Coordinator</div>
-              <div><i>Pitt CBA Finance and Dietrichs A+S Economics</i></div>
+              <div><i>Pitt CBA Finance and DSAS Economics</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/emmaline.jpg"
@@ -315,7 +323,7 @@ class About extends Component {
               <div><i>Mathematics and Computer Science</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/eduardo.jpg"
@@ -338,7 +346,7 @@ class About extends Component {
               <div><i>Housing and Data Policy</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/tom.jpg"
@@ -361,10 +369,10 @@ class About extends Component {
               <div><i>Pitt GSPIA Alumnus</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
-                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  src="/static/app/img/profiles/collin.png"
                   class="rounded-circle"
                   width="120"
                   height="120"
@@ -381,10 +389,10 @@ class About extends Component {
                 </a>
               </div>
               <div>Technical Project Manager</div>
-              <div><i>Pitt SCI Computer Science and Dietrich A+S Economics</i></div>
+              <div><i>Pitt SCI Computer Science and DSAS Economics</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/adam.jpg"
@@ -407,7 +415,7 @@ class About extends Component {
               <div><i>Pitt GSPIA MPA</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/sean.jpg"
@@ -426,11 +434,11 @@ class About extends Component {
                   Sean Hudson
                 </a>
               </div>
-              <div>Data Collection</div>
+              <div>Data Collection Team</div>
               <div><i>Data Analyst</i></div>
             </div>
 
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
                   src="/static/app/img/profiles/kai.jpg"
@@ -453,6 +461,29 @@ class About extends Component {
               <div><i>Non-profit capacity building</i></div>
             </div>
 
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/profile_picture_placeholder.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Bocar Ba
+                </a>
+              </div>
+              <div>Faculty Advisor</div>
+              <div><i>Duke Economics Faculty</i></div>
+            </div>
+
             
 
 
@@ -464,7 +495,7 @@ class About extends Component {
         </div>
 
         {/* BEGIN PARTNERS SECTION */}
-        <div class="partners-wrapper">
+        <div class="partners-wrapper mt-4">
           <h2 class="text-center">Our Partners</h2>
           <hr class="my-4"></hr>
           <div class="partner-row row d-flex align-items-center">
@@ -499,15 +530,14 @@ class About extends Component {
             <div class="col-md-9">
               <h3>Take Action Mon Valley</h3>
               <p>
-              Take Action Mon Valley (TAMV) strives to equip communities with the necessary knowledge to leverage local grassroots community organizing, to gain power and influence over decisions 
-              that directly affect the community, thus creating sustainable change and increasing the conscious level of residents.
+              Take Action Mon Valley (TAMV) strives to equip communities with the necessary knowledge to leverage local grassroots community organizing.
               </p>
             </div>
           </div>
         </div>
 
         {/* RESOURCES */}
-        <div class="partners-wrapper">
+        <div class="partners-wrapper mt-4">
           <h2 class="text-center">Further Resources</h2>
           <hr class="my-4"></hr>
           <div class="partner-row row d-flex align-items-center">
