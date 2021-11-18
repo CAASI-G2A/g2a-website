@@ -214,8 +214,33 @@ class SmallList extends Component {
         >
           Explore police department map
         </h3>
-        <div className="keywords_wrapper" style={{ display: 'flex', background: '#f7f7f7', padding: 5, alignItems: 'center', marginBottom: 10 }}>
-          <div style={{ marginRight: 10 }}>Keywords &nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style={{ fontStyle: 'italic', color: 'gray', fontSize: '0.8rem' }}>*For more information in the tooltip, refer to <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jAnGHnQdK9UZK_Iy9fxkdfIlat7krILq/edit#gid=1063952290">link</a>.</div>
+        <div className="map_list_wrapper">
+          <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
+            <MapComponent
+              pos={this.state.markerPos}
+              center={this.state.centerLocation}
+              searchedRegions={this.state.searchedRegions}
+              onSelectedRegion={this.handleSelectedRegion}
+              keywordRegions={this.state.selectedRegionsForTerm}
+              clearMap={this.state.clearMap}
+            />
+          </div>
+          <div className="region_list_wrapper">
+            <Menu
+              className="region_list"
+              theme={this.state.theme}
+              onClick={this.handleClick}
+              centerLocation={this.state.centerLocation}
+              selectedKeys={this.state.centerLocation}
+              mode="inline"
+            >
+              {this.makeList()}
+            </Menu>
+          </div>
+        </div>
+        <div className="keywords_wrapper" style={{ display: 'flex', background: '#f7f7f7', padding: 5, alignItems: 'center' }}>
+          <div style={{ marginRight: 10 }}>Contract keywords &nbsp;&nbsp;&nbsp;&nbsp;</div>
           <Radio.Group value={"default"}>
             <Radio.Button
               value="unfounded"
@@ -269,40 +294,13 @@ class SmallList extends Component {
           </Radio.Group>
         </div>
         <div style={{ padding: 10, color: 'gray', fontStyle: 'italic' }}>
-          Below is a map of Allegheny County, PA. Above the map are some keywords from 
-          police contracts that  may relate to police accountability, 
-          such as disqualification of misconduct complaints or destruction of misconduct records. 
-          Read more about these keywords <a target="_blank" href="https://www.grieftoaction.org/#/commentary">here</a>.
-          <br/>What you can do:
+          How to use this map:
           <ul>
-            <li>Click on a region on the map OR in the panel to view information about the police department in a particular borough/township/municipality. </li>
-            <li>Click on any of the keywords to see the boroughs where they appear. </li>
+            <li>Click on a region on the map OR in the panel to view information about the police department in a particular borough/township/municipality in Allegheny County, PA. </li>
+            <li>Click on any of these police contract keywords to see the boroughs where they appear. These keywords may relate to policy accountability concerns, 
+              such as disqualification of misconduct complaints or destruction of misconduct records (Read more <a target="_blank" href="https://www.grieftoaction.org/#/commentary">here</a>)
+            </li>
           </ul>
-        </div>
-        <div style={{ fontStyle: 'italic', color: 'gray', fontSize: '0.8rem' }}>*For more information in the tooltip, refer to <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jAnGHnQdK9UZK_Iy9fxkdfIlat7krILq/edit#gid=1063952290">link</a>.</div>
-        <div className="map_list_wrapper">
-          <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
-            <MapComponent
-              pos={this.state.markerPos}
-              center={this.state.centerLocation}
-              searchedRegions={this.state.searchedRegions}
-              onSelectedRegion={this.handleSelectedRegion}
-              keywordRegions={this.state.selectedRegionsForTerm}
-              clearMap={this.state.clearMap}
-            />
-          </div>
-          <div className="region_list_wrapper">
-            <Menu
-              className="region_list"
-              theme={this.state.theme}
-              onClick={this.handleClick}
-              centerLocation={this.state.centerLocation}
-              selectedKeys={this.state.centerLocation}
-              mode="inline"
-            >
-              {this.makeList()}
-            </Menu>
-          </div>
         </div>
       </div>
     );

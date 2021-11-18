@@ -4,10 +4,10 @@ import os
 import re
 from PxPUC.models import Contract, Location, Sentence, Category
 from django.conf import settings
-Sentence.objects.all().delete()
-Contract.objects.all().delete()
 
 def run():
+    Sentence.objects.all().delete()
+    Contract.objects.all().delete()
     category = Category.objects.get_or_create(category="Pre-Complaint")
     category = Category.objects.get_or_create(category="Complaint")
     category = Category.objects.get_or_create(category="Review")

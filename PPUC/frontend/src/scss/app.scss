@@ -262,15 +262,16 @@ body {
 }
 
 .map_list_wrapper {
+  margin-bottom: 10px;
   display: flex;
 }
 
 .region_list_wrapper {
+  width: 25%;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 500px;
   position: relative;
-  left: 10px;
 }
 
 @media screen and (max-width:767px) {
@@ -296,7 +297,7 @@ body {
 }
 
 .map_wrapper {
-  width: 70%;
+  width: 75%;
 }
 
 .map {
