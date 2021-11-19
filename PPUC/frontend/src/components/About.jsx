@@ -9,12 +9,12 @@ class About extends Component {
       <div>
         {/* HEADING */}
         <h2 className="text-center pt-5 pl-2" style={{ fontWeight: 700, color: 'darkblue' }}>
-          About AC<span style={{ color: "#5685d1" }}>PP</span>
+          About ACPP
         </h2>
         {/* PRIMARY INTRO */}
         <div className="jumbotron pb-5">
           <p className="lead">
-            The AC<span style={{ color: "#5685d1" }}>PP</span> team is made up of a subset of members from Grief to Action (G2A), 
+            The ACPP team is made up of a subset of members from Grief to Action (G2A), 
             a working group at the University of Pittsburgh's Center for Analytical Approaches in Social Innovation (CAASI). 
             Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to 
             use data analysis to address structural racism in Pittsburgh and beyond.
@@ -53,65 +53,6 @@ class About extends Component {
         <div class="meet-the-team-wrapper">
           <h2 class="text-center" style={{ marginBottom: 5 }}>Meet the Team</h2>
           <hr style={{ width: '10%', border: '3px solid darkblue', marginTop: 5, marginBottom: 40 }} />
-          {/* <Row gutter={[16, 24]}>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Sera Linardi" description="www.instagram.com" />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-              </Card>
-            </Col>
-          </Row>
-          <Row gutter={24}>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Sera Linardi" description="www.instagram.com" />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card
-                hoverable
-                style={{ width: '70%', margin: '0 auto' }}
-                cover={<img alt="example" src="/static/app/img/profiles/sera.png" />}
-              >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-              </Card>
-            </Col>
-          </Row> */}
-
           <div class="meet-the-team-row row d-flex align-items-center">
 
 
@@ -205,6 +146,29 @@ class About extends Component {
               </div>
               <div>Faculty Advisor</div>
               <div><i>Pitt SCI Faculty</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
+                  src="/static/app/img/profiles/bocar.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Bocar Ba
+                </a>
+              </div>
+              <div>Faculty Advisor</div>
+              <div><i>Duke Economics Faculty</i></div>
             </div>
 
             <div class="col-md-4 text-center mb-2">
@@ -460,36 +424,6 @@ class About extends Component {
               <div>Development Team</div>
               <div><i>Non-profit capacity building</i></div>
             </div>
-
-            <div class="col-md-4 text-center mb-2">
-              <div class="profile-img-wrapper">
-                <img
-                  src="/static/app/img/profiles/profile_picture_placeholder.png"
-                  class="rounded-circle"
-                  width="120"
-                  height="120"
-                  style={{objectFit: "cover"}}
-                />
-              </div>
-              <div>
-                <a
-                  href="http://www.grieftoaction.org"
-                  class="profile-name"
-                  target="_blank"
-                >
-                  Bocar Ba
-                </a>
-              </div>
-              <div>Faculty Advisor</div>
-              <div><i>Duke Economics Faculty</i></div>
-            </div>
-
-            
-
-
-
-
-
           </div> {/* END PROFILE PICTURES */}
 
         </div>

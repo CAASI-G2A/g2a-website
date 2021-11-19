@@ -6,8 +6,6 @@ from PxPUC.models import Contract, Location, Sentence, Category
 from django.conf import settings
 
 def run():
-    Sentence.objects.all().delete()
-    Contract.objects.all().delete()
     category = Category.objects.get_or_create(category="Pre-Complaint")
     category = Category.objects.get_or_create(category="Complaint")
     category = Category.objects.get_or_create(category="Review")
@@ -30,8 +28,8 @@ def run():
                 )
 
                 # PG: Delete existing contracts and sentences in system to avoid duplicates 
-                #Sentence.objects.filter(location=location).delete()
-                #Contract.objects.filter(location=location).delete()
+                Sentence.objects.filter(location=location).delete()
+                Contract.objects.filter(location=location).delete()
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())
