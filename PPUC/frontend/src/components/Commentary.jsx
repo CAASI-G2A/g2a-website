@@ -12,6 +12,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import ResearcherResult from "./ResearcherResult";
 import SmallList from "./SmallList";
+import { autoType } from "d3-dsv";
 
 // TODO:
 //     1. Once classes get fixed... condense code so that the same html text is not repeated over and over again, and Highlight words in setence examples
@@ -169,9 +170,9 @@ class Commentary extends Component {
               </a>    
             </li>   
           </div>
-          <div style={{textAlign: "center"}}>
+          <div>
             <div className="jumbotron"
-                 style={{ textAlign: "left", fontWeight: 600}}
+                 style={{ textAlign: "left", fontWeight: 600, marginBottom: "0px"}}
             >
               <p className="lead">
                 There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available for searches and downloads. We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.
@@ -180,136 +181,12 @@ class Commentary extends Component {
                 These contracts may contain provisions that make it more difficult to hold officers accountable. Below we list six categories of potentially problematic provisions that have been identified by Campaign Zero, a national organization, in collaboration with legal scholars and criminal justice experts.  In each we identified some keywords that you can use as a starting point to explore how these categories apply to policing in Allegheny County. For example, clicking on the keyword “unfounded” (under Category 1: Disqualify Misconduct Complaints) reveals that nearly half of the county’s police contracts disqualify misconduct complaints from the public that are submitted anonymously.  
               </p>
             </div>
-            {/* <li className="nav-item nav-link">
-              <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > Click Here to Search Contracts Manually  </NavLink>
-            </li>
-
-            <li className="nav-item nav-link">
-              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
-                  How to read a contract *(PDF)
-              </a>    
-            </li>     */}
           </div>
             <br />
             <br />
           <h3 style={{ fontWeight: "300" }}>
               Search by categories
           </h3>
-          {/* <div>
-            <h3 style={{ fontWeight: "300" }}>
-                SEARCH BY CAMPAIGN CATEGORY AND KEYWORDS
-            </h3>
-            <div className="jumbotron" style={{ textAlign: "left", fontWeight: 600}}>
-              <p className="lead">
-                These contracts may contain provisions that make it more difficult to hold officers accountable. Below we list six categories of potentially problematic provisions that have been identified by Campaign Zero, a national organization, in collaboration with legal scholars and criminal justice experts.  In each we identified some keywords that you can use as a starting point to explore how these categories apply to policing in Allegheny County. For example, clicking on the keyword “unfounded” (under Category 1: Disqualify Misconduct Complaints) reveals that nearly half of the county’s police contracts disqualify misconduct complaints from the public that are submitted anonymously.  
-              </p>
-            </div>
-          </div> */}
-          
-          {/* complaints */}
-          <div
-            className="col-md-10 offset-md-1"
-            style={{
-              borderRadius: 10,
-              backgroundColor: "#EAECEF",
-              borderRadius: 10,
-              paddingTop: 20,
-              paddingBottom: 30,
-              paddingLeft: 20,
-              paddingRight: 20,
-            }}
-          >
-            <div onClick={() => this.handleTitleClick("unfounded")}
-                 // Patrick: Maybe implement later, hover over on text
-                //  onMouseOut={() => this.setState({hovered: false})}
-                //  onMouseOver={() => this.setState({hovered: true})}
-            >
-              <img 
-                  src={iconUnfounded}
-                  style={{ width: "30px", height: "30px", transform: `${this.state.hovered ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
-              ></img>
-              <a className="position-absolute  col-md-9"
-                style={{ color: "black", paddingLeft: "15px", textDecoration: 'none', 
-                         textDecoration: `${this.state.hovered ? 'underline' : ''}`}}
-                        //  textDecoration: `${this.state.hovered ? 'underline' : 'null'}`}}
-                        //  transform: `${this.state.hovered ? 'scale(1,1.1)' : 'scale(1,1)'}`}}
-              >
-                1. <span style={{ fontWeight: "bold" }}>Disqualify Misconduct Complaints</span>
-                  <br />
-                Language that falls under this category disqualifies misconduct complaints that are filed anonymously or are not filed within a set time period.
-                {/* <TouchableHighlight 
-                          style={styles.button} 
-                          onPress={this.toggle.bind(this)}
-                          underlayColor="#f1f1f1">
-                          <Image
-                              style={styles.buttonImage}
-                              source={icon}
-                          ></Image>
-                </TouchableHighlight> */}
-              </a>
-                <br />
-                {/* <br /> */}
-            </div>
-              <br />
-            <div className={"collapse nav-collapse " + dropUnfounded}  style={{ paddingTop: "10px" }}>
-              <div className={"col-md-6 offset-md-1"}>
-                <br />
-                <a>
-                  <span style={{ fontWeight: "bold" }}> Keyword </span>: unfounded
-                </a>
-                  <br />
-                <a>
-                  "When an anonymous complaint is made against a police officer
-                  and no corroborative evidence is obtained, the complaint shall
-                  be classified as <span style={{ fontWeight: "bold" }}>unfounded</span>." (Bethel Park)
-                </a>
-                  <br />
-                <button
-                  type="button"
-                  color="#ff5c5c"
-                  className="ex-keyword btn btn-info mr-2"
-                >
-                  <NavLink
-                    to={routes.researchers + "?search=unfounded"}
-                    style={{ color: "#ffc92e" }}
-                  >
-                    {" "}
-                    search contracts for "unfounded"{" "}
-                  </NavLink>
-                </button>
-                  <br />
-                  <br />
-                  <br />
-                <a>
-                  <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
-                  complaint
-                </a>
-                <br />
-                <a>
-                  "When a citizen <span style={{ fontWeight: "bold" }}> complaint </span> is filed, it must be done in
-                  writing, signed by the complainant and filed no later than
-                  fifteen (15) days from the alleged event." (Braddock Borough)
-                </a>
-                 <br />
-                <button
-                  type="button"
-                  color="#ff5c5c"
-                  className="ex-keyword btn btn-info mr-2"
-                >
-                  <NavLink
-                    to={routes.researchers + '?search="citizen+complaint"'}
-                    style={{ color: "#ffc92e" }}
-                  >
-                    {" "}
-                    search contracts for "citizen complaint"{" "}
-                  </NavLink>
-                </button>
-              </div>
-            </div>
-          </div>
-            <br />
-            <br />
-          {/* Interrogation */}
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -320,12 +197,118 @@ class Commentary extends Component {
               paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
+              minHeight: "5%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
             }}
           >
-            <div class="expandClickables" onClick={() => this.handleTitleClick("Interview")}>
-              <img src={iconInterview} style={{ width: "30px"}}></img>
-              <a className="position-absolute  col-md-9" 
-                 style={{ color: "black", paddingLeft: "15px"}}
+              <div onClick={() => this.handleTitleClick("unfounded")}
+                  // Patrick: add style to make it easier for user to see what they can click on 
+                  onMouseOut={() => this.setState({hoveredUnfounded: false})}
+                  onMouseOver={() => this.setState({hoveredUnfounded: true})}
+                  style={{ paddingBottom: 5 }}
+              >
+                <img 
+                    src={iconUnfounded}
+                    style={{ width: "30px", height: "30px", transform: `${this.state.hoveredUnfounded ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
+                ></img>
+                <a className="position-absolute"
+                  style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredUnfounded ? 'underline' : ''}`}}
+                >
+                  1. <span style={{ fontWeight: "bold" }}>Disqualify Misconduct Complaints</span>
+                    <br />
+                  Language that falls under this category disqualifies misconduct complaints that are filed anonymously or are not filed within a set time period.
+                </a>
+              </div>
+              <div className={"collapse nav-collapse " + dropUnfounded}  style={{ paddingTop: "30px" }}>
+                <div className={"col-md-6 offset-md-1"}>
+                  <br />
+                  <a>
+                    <span style={{ fontWeight: "bold" }}> Keyword </span>: unfounded
+                  </a>
+                    <br />
+                  <a>
+                    "When an anonymous complaint is made against a police officer
+                    and no corroborative evidence is obtained, the complaint shall
+                    be classified as <span style={{ fontWeight: "bold" }}>unfounded</span>." (Bethel Park)
+                  </a>
+                    <br />
+                  <button
+                    type="button"
+                    color="#ff5c5c"
+                    className="ex-keyword btn btn-info mr-2"
+                  >
+                    <NavLink
+                      to={routes.researchers + "?search=unfounded"}
+                      style={{ color: "#ffc92e" }}
+                    >
+                      {" "}
+                      search contracts for "unfounded"{" "}
+                    </NavLink>
+                  </button>
+                    <br />
+                    <br />
+                    <br />
+                  <a>
+                    <span style={{ fontWeight: "bold" }}> Keyword </span>: citizen
+                    complaint
+                  </a>
+                  <br />
+                  <a>
+                    "When a citizen <span style={{ fontWeight: "bold" }}> complaint </span> is filed, it must be done in
+                    writing, signed by the complainant and filed no later than
+                    fifteen (15) days from the alleged event." (Braddock Borough)
+                  </a>
+                  <br />
+                  <button
+                    type="button"
+                    color="#ff5c5c"
+                    className="ex-keyword btn btn-info mr-2"
+                  >
+                    <NavLink
+                      to={routes.researchers + '?search="citizen+complaint"'}
+                      style={{ color: "#ffc92e" }}
+                    >
+                      {" "}
+                      search contracts for "citizen complaint"{" "}
+                    </NavLink>
+                  </button>
+                </div>
+              </div>
+          </div>
+            <br />
+            <br />
+           {/* Interrogation */}
+           <div
+            className="col-md-10 offset-md-1"
+            style={{
+              borderRadius: 10,
+              backgroundColor: "#EAECEF",
+              borderRadius: 10,
+              paddingTop: 20,
+              paddingBottom: 50,
+              paddingLeft: 20,
+              paddingRight: 20,
+              minHeight: "5.5%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
+            }}
+          >
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Interview")}
+                  onMouseOut={() => this.setState({hoveredInterview: false})}
+                  onMouseOver={() => this.setState({hoveredInterview: true})}
+            >
+              <img src={iconInterview} 
+                   style={{ width: "30px", height: "30px",transform: `${this.state.hoveredInterview ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
+              ></img>
+              <a className="position-absolute" 
+                 style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredInterview ? 'underline' : ''}`}}
               >
                 2. <span style={{ fontWeight: "bold" }}>Prevents Immediate Interrogation{" "}</span>
                 <br />
@@ -333,7 +316,7 @@ class Commentary extends Component {
               </a>
             </div>
             <div className={ "col-md-6 offset-md-1 collapse nav-collapse " + dropInterview }
-                 style={{  paddingTop: "30px"}}
+                 style={{  paddingTop: "50px"}}
             >
                 <br />
               <a>
@@ -402,29 +385,32 @@ class Commentary extends Component {
               paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
+              minHeight: "4.5%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
             }}
           >
-            <div class="expandClickables" onClick={() => this.handleTitleClick("Interrogation")}>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Interrogation")}
+                 onMouseOut={() => this.setState({hoveredInterrogation: false})}
+                 onMouseOver={() => this.setState({hoveredInterrogation: true})}
+            >
               <img
                   src={iconInterrogation}
-                  style={{ width: "30px", height: "30px"}}
+                  style={{ width: "30px", height: "30px", transform: `${this.state.hoveredInterrogation ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
               ></img>
               <a
-                className="position-absolute  col-md-9"
-                style={{ color: "black", paddingLeft: "15px" }}
+                className="position-absolute"
+                style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredInterrogation ? 'underline' : ''}` }}
               >
                 3. <span style={{ fontWeight: "bold" }}>Unfair Access to Information</span>
                   <br />
                 Language that falls under this category gives officers access to information that civilians do not get prior to interrogation.
               </a>
             </div>
-              <br />
-            <div
-              className={
-                "col-md-6 offset-md-1 collapse nav-collapse " +
-                dropInterrogation
-              }
-            >
+            <div className={"col-md-6 offset-md-1 collapse nav-collapse " + dropInterrogation} style={{  paddingTop: "30px" }}>
               <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>:
@@ -493,28 +479,32 @@ class Commentary extends Component {
               paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
+              minHeight: "6%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
             }}
           >
-            <div class="expandClickables" onClick={() => this.handleTitleClick("FalseArrest")}>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("FalseArrest")}
+                 onMouseOut={() => this.setState({hoveredFalseArrest: false})}
+                 onMouseOver={() => this.setState({hoveredFalseArrest: true})}
+            >
               <img
                   src={iconFalse}
-                  style={{ width: "30px", height: "30px"}}
+                  style={{ width: "30px", height: "30px", transform: `${this.state.hoveredFalseArrest ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
               ></img>
               <a
-                className="position-absolute col-md-9"
-                style={{ color: "black", paddingLeft: "15px" }}
+                className="position-absolute"
+                style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredFalseArrest ? 'underline' : ''}` }}
               >
                 4. <span style={{ fontWeight: "bold"}}> Legal Costs </span>
                   <br />
                 Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements.
               </a>
             </div>
-            <div
-              className={
-                "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse
-              }
-              style={{ paddingTop: "30px"}}
-            >
+            <div className={ "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse}  style={{ paddingTop: "50px"}}>
               <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: false
@@ -623,24 +613,32 @@ class Commentary extends Component {
               paddingBottom: 50,
               paddingLeft: 20,
               paddingRight: 20,
+              minHeight: "6.5%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
             }}
           >
-            <div class="expandClickables" onClick={() => this.handleTitleClick("Reprimand")}>
-              <img src={iconReprimand} style={{ width: "30px", height: "30px"}}></img>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("Reprimand")}
+                 onMouseOut={() => this.setState({hoveredReprimand: false})}
+                 onMouseOver={() => this.setState({hoveredReprimand: true})}
+            >
+              <img src={iconReprimand} 
+                   style={{ width: "30px", height: "30px", transform: `${this.state.hoveredReprimand ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
+              ></img>
               <a
-                className="position-absolute col-md-9"
-                style={{ color: "black", paddingLeft: "15px" }}
+                className="position-absolute"
+                style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredReprimand ? 'underline' : ''}` }}
               >
                 5. <span style={{ fontWeight: "bold"}}>Destroys Misconduct Records</span>
                   <br />
                   Language that falls under this category prevents some misconduct accusations from being recorded in an officer’s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time.
               </a>
             </div>
-              <br />
             <div
-              className={"col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand}
-              style={{ paddingTop: "50px"}}
-            >
+              className={"col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand} style={{ paddingTop: "100px"}}>
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: reprimand
               </a>
@@ -717,27 +715,32 @@ class Commentary extends Component {
               paddingBottom: 30,
               paddingLeft: 20,
               paddingRight: 20,
+              minHeight: "4.5%",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "center",
+              flexWrap: 'wrap',
+              overflow: "hidden",
             }}
-            onClick={() => this.handleTitleClick("PublicComment")}
           >
-            <div class="expandClickables" onClick={() => this.handleTitleClick("PublicComment")}>
-              <img src={iconComment} style={{ width: "30px", height: "30px"}}></img>
+            <div class="expandClickables" onClick={() => this.handleTitleClick("PublicComment")}
+                  onMouseOut={() => this.setState({hoveredPublic: false})}
+                  onMouseOver={() => this.setState({hoveredPublic: true})}
+                  style={{ paddingBottom: "50px",  paddingBottom: "50px"}}
+            >
+              <img src={iconComment} 
+                   style={{ width: "30px", height: "30px", transform: `${this.state.hoveredPublic ? 'scale(1.3,1.3)' : 'scale(1,1)'}`}}
+              ></img>
               <a
-                className="position-absolute  col-md-9"
-                style={{ color: "black", paddingLeft: "15px" }}
+                className="position-absolute"
+                style={{ color: "black", paddingLeft: "15px", textDecoration: `${this.state.hoveredPublic ? 'underline' : ''}` }}
               >
                 6. <span style={{ fontWeight: "bold" }}>Limits Disciplinary Consequences</span>
                   <br />
                 Language that falls under this category limits the release of information that could help the media and the public hold police accountable.
               </a>
             </div>
-              <br />
-            <div
-              className={
-                "col-md-6 offset-md-1 collapse nav-collapse " +
-                dropPublicComment
-              }
-            >
+            <div className={ "col-md-6 offset-md-1 collapse nav-collapse " + dropPublicComment}>
               <br />
               <a>
                 <span style={{ fontWeight: "bold" }}> Keyword </span>: public
@@ -768,7 +771,10 @@ class Commentary extends Component {
               </button>
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
         </div>
