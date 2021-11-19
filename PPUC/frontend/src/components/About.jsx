@@ -118,7 +118,7 @@ class About extends Component {
                   class="profile-name"
                   target="_blank"
                 >
-                  Eliana Biegel
+                  Eliana Beigel
                 </a>
               </div>
               <div>Project Manager</div>
