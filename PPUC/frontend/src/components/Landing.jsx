@@ -143,7 +143,7 @@ class Landing extends Component {
             for our organizing and mobilizing efforts. In addition, it helps that 
             the focus is on the county and not just Pittsburgh. There is an overwhelming 
             need to focus on more of these small departments especially 
-            from a data standpoint"</i>  <b>Fawn Montgomery, Take Action Mon Valley</b>
+            from a data standpoint"</i>  <b>Fawn Montgomery, Co-Founder and Executive Director - Take Action Mon Valley</b>
           </div>
           <br />
           <div>
@@ -160,7 +160,7 @@ class Landing extends Component {
             <i>“Campaign Zero, specifically 
               the Nix the 6 campaign are elated to see Grief to Action ACPP launch this project. 
               Making police union contract data public is necessary to empower the community at large 
-              to combat systemic issues in policing.”</i> <b>Kat McKelvey, Campaign Zero</b>
+              to combat systemic issues in policing.”</i> <b>Kat McKelvey, Manager - Campaign Zero</b>
           </div>
         </div>
       </div>

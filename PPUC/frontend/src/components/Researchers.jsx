@@ -237,11 +237,10 @@ class Researchers extends Component {
               This <a target="_blank" href='/static/app/instructions/How_to_read_a_contract.pdf'>brief guide</a> may also be helpful.
             </li>   
           </div>
-          <div className="mt-2 d-flex text-center">
+          <div className="mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery('unfounded', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
@@ -249,7 +248,6 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery("interview", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
@@ -257,7 +255,6 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery('interrogation', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
@@ -265,7 +262,6 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery('"false arrest"', true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
@@ -273,7 +269,6 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery("reprimand", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
@@ -281,7 +276,6 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                style={{padding: "5px"}}
                 onClick={() => this.setSearchQuery('"public comment"', true)}
                 className="ex-keyword btn btn-info btn-rounded"
               >
