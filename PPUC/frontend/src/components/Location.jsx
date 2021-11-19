@@ -68,11 +68,9 @@ class Location extends Component {
   render() {
     const { TabPane } = Tabs;
 
-    console.log('filter: ', this.state.location && _.filter(regionInfoData, {'LABEL': this.state.location.name}))
-    const regionInfo = (this.state.location && _.filter(regionInfoData, {'LABEL': this.state.location.name}).length)
-      ? _.filter(regionInfoData, {'LABEL': this.state.location.name})[0] : null;
-    console.log('regionInfoData: ', regionInfoData, regionInfo);
-    
+    const regionInfo = this.state.location
+      && (_.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name}).length 
+      ? _.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name})[0]: null);
 
     return (
       <div>
@@ -114,29 +112,29 @@ class Location extends Component {
           </div>
         )}
         <div className="row">
-          <div className="offset-md-8 col-md-4">
+          {this.state.location && (<div className="offset-md-8 col-md-4">
             <h3 className="text-center">Overview</h3>
             <table className="table table-hover table-bordered">
               <tbody>
                 <tr>
                   <th className="bg-light">Full time officers as of 2019</th>
-                  {regionInfo ? <td className="align-middle">{regionInfo["Total_Number_Police_Officers_as_of_2019"]}</td> : <td className="align-middle">{"No info"}</td>}
+                  {regionInfo ? <td className="align-middle">{regionInfo["2019_Full_Time_Police"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
                   <th className="bg-light">Do they use a police bill of rights</th>
-                  {regionInfo ? <td className="align-middle">{regionInfo["Do_they_use_a_police_bill_of_rights"]}</td> : <td className="align-middle">{"No info"}</td>}
+                  {regionInfo ? <td className="align-middle">{regionInfo["police_bill_of_rights"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
                   <th className="bg-light">Police budget percentage in 2019</th>
-                  {regionInfo ? <td className="align-middle">{regionInfo["Budget"]}</td> : <td className="align-middle">{"No info"}</td>}
+                  {regionInfo ? <td className="align-middle">{regionInfo["2019_Police_Budget_Percentage"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
                 <tr>
                   <th className="bg-light">Police department website</th>
-                  {regionInfo ? <td className="align-middle"><a href={regionInfo["Budget"]}>Link</a></td> : <td className="align-middle">{"No info"}</td>}
+                  {regionInfo ? <td className="align-middle"><a href={regionInfo["Police_Department_Website"]}>Link</a></td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div>)}
           <div className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
             <a target="_blank" href="https://www.grietoaction.org/static/app/instructions/How_to_read_a_contract.pdf">Click for our brief “How to Read a Contract” guide</a>
           </div>

@@ -44,7 +44,6 @@ class MapComponent extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    //console.log("prevProps: ", prevProps, this.props);
     if (prevProps.center !== this.props.center) {
       var last_color;
       if (
@@ -186,50 +185,49 @@ class MapComponent extends Component {
     }
   }
 
-    getText(center) {
-        if (center in this.props.searchedRegions) {
-            // do someting to let this function know how to generate the extra link.
+  getText(center) {
+    if (center in this.props.searchedRegions) {
+        // do someting to let this function know how to generate the extra link.
+    }
+    var id;
+    for (var i in this.props.locations) {
+        if (this.props.locations[i].name == center) {
+            id = this.props.locations[i].id;
+            break
         }
-        var id
-        for (var i in locationID) {
-            if (locationID[i].name == center) {
-                id = locationID[i].id
-                break
-            }
-        }
+    }
 
     var t = 1;
-    var length = contentText.length;
-
+    var length = contentText.length;   
     while (t < length) {
-      if (contentText[t].LABEL === center) {
+      if (contentText[t]['Police_Agency_Name'] === center) {
         if (
-          contentText[t].Link_to_police_department == "" ||
-          contentText[t].Link_to_police_department == null ||
-          contentText[t].Link_to_police_department == "NA"
+          contentText[t]['Police_Department_Website'] == "" ||
+          contentText[t]['Police_Department_Website'] == null ||
+          contentText[t]['Police_Department_Website'] == "NA"
         ) {
             var contract_link = "<br><a  href=/PxPUC/#/location/" +
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "<br>No contract detail"
+                contract_link = "<br>No link for contract"
             }
           return (
-            contentText[t].LABEL +
+            contentText[t]['Police_Agency_Name'] +
             "<br>" +
             "<br >No link for police department</br>" +
             "<br> Full time police officers as of 2019: " +
             this.getContent(
-              contentText[t].Total_Number_Police_Officers_as_of_2019
+              contentText[t]['2019_Full_Time_Police']
             ) +
             "<br> Police bill of rights: " +
             this.getContent(
-              contentText[t].Do_they_use_a_police_bill_of_rights
+              contentText[t]['police_bill_of_rights']
               ) +
               "<br> Police budget percentage 2019: " +
-              this.getContent(contentText[t].Budget) +
+              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
             "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t].Keywords_found_in_contract) +
+              this.getContent(contentText[t]['Keywords_found_in_contract']) +
               contract_link
           );
         } else {
@@ -237,32 +235,33 @@ class MapComponent extends Component {
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "No contract detail"
+                contract_link = "<br>No link for contract"
             }
           return (
-            contentText[t].LABEL +
+            contentText[t]['Police_Agency_Name'] +
             "<br>" +
             "<a  href=" +
-            contentText[t].Link_to_police_department +
+            contentText[t]['Police_Department_Website'] +
             " target='_blank'>Link to police department website</a>" +
             "<br> Full time police officers as of 2019: " +
             this.getContent(
-              contentText[t].Total_Number_Police_Officers_as_of_2019
+              contentText[t]['2019_Full_Time_Police']
             ) +
             "<br> Police bill of rights: " + 
             this.getContent(
-              contentText[t].Do_they_use_a_police_bill_of_rights
+              contentText[t]['police_bill_of_rights']
               ) +
               "<br> Police budget percentage 2019: " +
-              ((this.getContent(contentText[t].Budget) !== 'null') ? this.getContent(contentText[t].Budget) : "No info") +
+              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
             "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t].Keywords_found_in_contract) +
+              this.getContent(contentText[t]['Keywords_found_in_contract']) +
               contract_link
           );
         }
       }
       t++;
     }
+
     return "no data";
   }
 
@@ -271,40 +270,43 @@ class MapComponent extends Component {
     const iconFile = icon({
       iconUrl: "https://z3.ax1x.com/2021/10/21/5rZ6c6.png",
     });
-    return (
-      <>
-        <div
-          className="map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-          style={{ height: 500 }}
-        >
-          <MapContainer
-            center={position}
-            zoom={10}
-            scrollWheelZoom={true}
+    if (this.props.locations.length == 0)
+      return <div></div> 
+    else
+      return (
+        <>
+          <div
+            className="map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style={{ height: 500 }}
-            whenCreated={(map) => {
-              this.setState({ map: map });
-            }}
           >
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &copy; <a href="http://cartodb.com/attributions">CartoDB</a> attributions <a href = "mailto: gishelp@alleghenycounty.us">GIS Help</a> Legend credit'
-              url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
-            />
-            <GeoJSON data={geoData.features} onEachFeature={this.eachArea} />
-            <Marker position={this.props.pos} icon={iconFile}>
-              <Tooltip interactive={true} permanent>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.getText(this.props.center),
-                  }}
-                />
-              </Tooltip>
-            </Marker>
-            <Legend map={this.state.map} />
-          </MapContainer>
-        </div>
-      </>
-    );
+            <MapContainer
+              center={position}
+              zoom={10}
+              scrollWheelZoom={true}
+              style={{ height: 500 }}
+              whenCreated={(map) => {
+                this.setState({ map: map });
+              }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &copy; <a href="http://cartodb.com/attributions">CartoDB</a> attributions <a href = "mailto: gishelp@alleghenycounty.us">GIS Help</a> Legend credit'
+                url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
+              />
+              <GeoJSON data={geoData.features} onEachFeature={this.eachArea} />
+              <Marker position={this.props.pos} icon={iconFile}>
+                <Tooltip interactive={true} permanent>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.getText(this.props.center),
+                    }}
+                  />
+                </Tooltip>
+              </Marker>
+              <Legend map={this.state.map} />
+            </MapContainer>
+          </div>
+        </>
+      );
   }
 }
 
