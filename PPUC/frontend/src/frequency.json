@@ -42,7 +42,8 @@
     "North Versailles Township",
     "Collier Township",
     "Pitcairn Borough",
-    "Bellevue Borough"
+    "Bellevue Borough",
+    "Pittsburgh City"
   ],
   "interview": [
     "Millvale Borough",
@@ -58,7 +59,8 @@
     "Bridgeville Borough",
     "McKees Rocks Borough",
     "Crafton Borough",
-    "Jefferson Hills Borough"
+    "Jefferson Hills Borough",
+    "Pittsburgh City"
   ],
   "interrogation": [
     "Sewickley Heights Borough",
@@ -98,7 +100,8 @@
     "North Versailles Township",
     "Collier Township",
     "Pitcairn Borough",
-    "Bellevue Borough"
+    "Bellevue Borough",
+    "Pittsburgh City"
   ],
   "false arrest": [
     "Harmar Township",
@@ -182,7 +185,8 @@
     "White Oak Borough",
     "Collier Township",
     "Pitcairn Borough",
-    "Bellevue Borough"
+    "Bellevue Borough",
+    "Pittsburgh City"
   ],
   "public comment": [
     "Sewickley Heights Borough",
