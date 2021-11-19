@@ -247,11 +247,11 @@ class MapComponent extends Component {
             this.getContent(
               contentText[t]['2019_Full_Time_Police']
             ) +
-            "<br> Police bill of rights: " + 
-            this.getContent(
-              contentText[t]['police_bill_of_rights']
-              ) +
-              "<br> Police budget percentage 2019: " +
+            // "<br> Police bill of rights: " + 
+            // this.getContent(
+            //   contentText[t]['police_bill_of_rights']
+            //   ) +
+            "<br> Police budget percentage 2019: " +
               ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
             "<br> <br> Keywords in contract: " +
               this.getContent(contentText[t]['Keywords_found_in_contract']) +

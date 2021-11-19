@@ -2504,12 +2504,6 @@ var Location = /*#__PURE__*/function (_Component) {
         className: "align-middle"
       }, "No info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("th", {
         className: "bg-light"
-      }, "Do they use a police bill of rights"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
-        className: "align-middle"
-      }, regionInfo["police_bill_of_rights"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
-        className: "align-middle"
-      }, "No info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("th", {
-        className: "bg-light"
       }, "Police budget percentage in 2019"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, regionInfo["2019_Police_Budget_Percentage"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
@@ -2821,7 +2815,11 @@ var MapComponent = /*#__PURE__*/function (_Component) {
               contract_link = "<br>No link for contract";
             }
 
-            return _merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Police_Agency_Name'] + "<br>" + "<a  href=" + _merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Police_Department_Website'] + " target='_blank'>Link to police department website</a>" + "<br> Full time police officers as of 2019: " + this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Full_Time_Police']) + "<br> Police bill of rights: " + this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['police_bill_of_rights']) + "<br> Police budget percentage 2019: " + (this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Police_Budget_Percentage']) !== 'null' ? this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Police_Budget_Percentage']) : "No info") + "<br> <br> Keywords in contract: " + this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Keywords_found_in_contract']) + contract_link;
+            return _merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Police_Agency_Name'] + "<br>" + "<a  href=" + _merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Police_Department_Website'] + " target='_blank'>Link to police department website</a>" + "<br> Full time police officers as of 2019: " + this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Full_Time_Police']) + // "<br> Police bill of rights: " + 
+            // this.getContent(
+            //   contentText[t]['police_bill_of_rights']
+            //   ) +
+            "<br> Police budget percentage 2019: " + (this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Police_Budget_Percentage']) !== 'null' ? this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['2019_Police_Budget_Percentage']) : "No info") + "<br> <br> Keywords in contract: " + this.getContent(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_8__[t]['Keywords_found_in_contract']) + contract_link;
           }
         }
 
@@ -5151,4 +5149,4 @@ module.exports = JSON.parse("[{\"MUNI_ID\":23813,\"Police_Agency_Name\":\"Allegh
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.5755a8ca279e91fdc99a.js.map
+//# sourceMappingURL=main.df092389cb36dcf5fdaa.js.map

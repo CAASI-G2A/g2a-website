@@ -120,10 +120,10 @@ class Location extends Component {
                   <th className="bg-light">Full time officers as of 2019</th>
                   {regionInfo ? <td className="align-middle">{regionInfo["2019_Full_Time_Police"]}</td> : <td className="align-middle">{"No info"}</td>}
                 </tr>
-                <tr>
+                {/* <tr>
                   <th className="bg-light">Do they use a police bill of rights</th>
                   {regionInfo ? <td className="align-middle">{regionInfo["police_bill_of_rights"]}</td> : <td className="align-middle">{"No info"}</td>}
-                </tr>
+                </tr> */}
                 <tr>
                   <th className="bg-light">Police budget percentage in 2019</th>
                   {regionInfo ? <td className="align-middle">{regionInfo["2019_Police_Budget_Percentage"]}</td> : <td className="align-middle">{"No info"}</td>}
