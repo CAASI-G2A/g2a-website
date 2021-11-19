@@ -472,9 +472,8 @@ class About extends Component {
               <div>Development Team</div>
               <div><i>Non-profit capacity building</i></div>
             </div>
-          </div>
 
-          <div class="col-md-4 text-center mb-2">
+            <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
 
@@ -509,6 +508,7 @@ class About extends Component {
                   style={{objectFit: "cover"}}
                 />
               </div>
+
               <div>
                 <a
                   href="http://www.grieftoaction.org"
@@ -520,10 +520,10 @@ class About extends Component {
               </div>
               <div><i>JD/MPIA, May 2023</i></div>
             </div>
-          
-          {/* END PROFILE PICTURES */}
 
-        </div>
+          </div>
+
+        </div>{/* END PROFILE PICTURES */}
 
         {/* BEGIN PARTNERS SECTION */}
         <div class="partners-wrapper mt-4">
