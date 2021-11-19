@@ -57,19 +57,11 @@ var About = /*#__PURE__*/function (_Component) {
           fontWeight: 700,
           color: 'darkblue'
         }
-      }, "About AC", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        style: {
-          color: "#5685d1"
-        }
-      }, "PP")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "About ACPP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron pb-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "lead"
-      }, "The AC", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        style: {
-          color: "#5685d1"
-        }
-      }, "PP"), " team is made up of a subset of members from Grief to Action (G2A), a working group at the University of Pittsburgh's Center for Analytical Approaches in Social Innovation (CAASI). Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to use data analysis to address structural racism in Pittsburgh and beyond.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "The aim of this project is to bring more transparency to the police accountability process at the local level. We hope this site allows users to navigate municipal police departments, look up information in police contracts, and become more familiar with the ways these contracts govern police accountability.", " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      }, "The ACPP team is made up of a subset of members from Grief to Action (G2A), a working group at the University of Pittsburgh's Center for Analytical Approaches in Social Innovation (CAASI). Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to use data analysis to address structural racism in Pittsburgh and beyond.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "The aim of this project is to bring more transparency to the police accountability process at the local level. We hope this site allows users to navigate municipal police departments, look up information in police contracts, and become more familiar with the ways these contracts govern police accountability.", " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
         className: "lead"
       }, "Our team is made up of students, faculty, and community members. Almost a third of our volunteers are from outside of Pitt. Email us to join forces!  We gratefully acknowledge funding from the Pitt Cyber Accelerator Grant and the Pitt Momentum Fund, as well as the contributions of Pitt\u2019s CS1980, INFSCI 1740, and PIA 2960 capstone teams.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron pt-0 bg-white"
@@ -162,6 +154,22 @@ var About = /*#__PURE__*/function (_Component) {
         "class": "profile-name",
         target: "_blank"
       }, "Yu-Ru Lin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Faculty Advisor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Pitt SCI Faculty"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "col-md-4 text-center mb-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "profile-img-wrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+        src: "/static/app/img/profiles/bocar.jpg",
+        "class": "rounded-circle",
+        width: "120",
+        height: "120",
+        style: {
+          objectFit: "cover"
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        href: "http://www.grieftoaction.org",
+        "class": "profile-name",
+        target: "_blank"
+      }, "Bocar Ba")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Faculty Advisor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Duke Economics Faculty"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         "class": "col-md-4 text-center mb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         "class": "profile-img-wrapper"
@@ -337,23 +345,7 @@ var About = /*#__PURE__*/function (_Component) {
         href: "http://www.grieftoaction.org",
         "class": "profile-name",
         target: "_blank"
-      }, "Malachiah/Kai Koehler")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Development Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Non-profit capacity building"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        "class": "col-md-4 text-center mb-2"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        "class": "profile-img-wrapper"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: "/static/app/img/profiles/profile_picture_placeholder.png",
-        "class": "rounded-circle",
-        width: "120",
-        height: "120",
-        style: {
-          objectFit: "cover"
-        }
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "http://www.grieftoaction.org",
-        "class": "profile-name",
-        target: "_blank"
-      }, "Bocar Ba")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Faculty Advisor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Duke Economics Faculty")))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Malachiah/Kai Koehler")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Development Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "Non-profit capacity building")))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         "class": "partners-wrapper mt-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
         "class": "text-center"
@@ -1348,17 +1340,32 @@ var Commentary = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     _this.state = {
       showUnfounded: false,
+      // hoveredUnfounded: false,
       showInterview: false,
+      // hoveredInterview: false,
       showInterrogation: false,
+      // hoveredInterrogation: false,
       showFalseArrest: false,
+      // hoveredFalseArrest: false,
       showReprimand: false,
-      showPublicComment: false
-    };
+      // hoveredReprimand: false,
+      showPublicComment: false // hoveredPublicComment: false,
+
+    }; // location of plus and minus icons that show up 
+
     _this.icons = {
       'plus': '/static/app/img/plus.png',
       'minus': '/static/app/img/minus.png'
     };
     _this.handleTitleClick = _this.handleTitleClick.bind(_assertThisInitialized(_this));
+    var styles = {
+      myTextStyle: {
+        textDecoration: 'none',
+        '&:hover': {
+          color: 'white'
+        }
+      }
+    };
     return _this;
   }
 
@@ -1405,11 +1412,11 @@ var Commentary = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _ref,
           _this2 = this,
-          _ref2,
           _ref3,
           _ref4,
           _ref5,
-          _ref6;
+          _ref6,
+          _ref7;
 
       // maybe put in class
       var dropUnfounded = this.state.showUnfounded ? "show" : "";
@@ -1507,37 +1514,40 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "300"
         }
-      }, "Search by catagories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        // className="col-md-10 offset-md-1"
+      }, "Search by categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "col-md-10 offset-md-1",
         style: (_ref = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
         }, _defineProperty(_ref, "borderRadius", 10), _defineProperty(_ref, "paddingTop", 20), _defineProperty(_ref, "paddingBottom", 30), _defineProperty(_ref, "paddingLeft", 20), _defineProperty(_ref, "paddingRight", 20), _ref)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        "class": "expandClickables",
         onClick: function onClick() {
           return _this2.handleTitleClick("unfounded");
-        }
+        } // Patrick: Maybe implement later, hover over on text
+        //  onMouseOut={() => this.setState({hovered: false})}
+        //  onMouseOver={() => this.setState({hovered: true})}
+
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: iconUnfounded,
         style: {
           width: "30px",
-          height: "30px"
-        },
-        onClick: function onClick() {
-          return _this2.handleTitleClick("unfounded");
+          height: "30px",
+          transform: "".concat(this.state.hovered ? 'scale(1.3,1.3)' : 'scale(1,1)')
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: "position-absolute",
-        style: {
+        className: "position-absolute  col-md-9",
+        style: _defineProperty({
           color: "black",
-          paddingLeft: "15px"
-        }
+          paddingLeft: "15px",
+          textDecoration: 'none'
+        }, "textDecoration", "".concat(this.state.hovered ? 'underline' : '')) //  textDecoration: `${this.state.hovered ? 'underline' : 'null'}`}}
+        //  transform: `${this.state.hovered ? 'scale(1,1.1)' : 'scale(1,1)'}`}}
+
       }, "1. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
-      }, "Disqualify Misconduct Complaints"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category disqualifies misconduct complaints that are filed anonymously or are not filed within a set time period."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Disqualify Misconduct Complaints"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category disqualifies misconduct complaints that are filed anonymously or are not filed within a set time period."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "collapse nav-collapse " + dropUnfounded,
         style: {
           paddingTop: "10px"
@@ -1579,13 +1589,11 @@ var Commentary = /*#__PURE__*/function (_Component) {
           color: "#ffc92e"
         }
       }, " ", "search contracts for \"citizen complaint\"", " "))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        style: (_ref2 = {
+        className: "col-md-10 offset-md-1",
+        style: (_ref3 = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
-        }, _defineProperty(_ref2, "borderRadius", 10), _defineProperty(_ref2, "paddingTop", 20), _defineProperty(_ref2, "paddingBottom", 50), _defineProperty(_ref2, "paddingLeft", 20), _defineProperty(_ref2, "paddingRight", 20), _ref2),
-        onClick: function onClick() {
-          return _this2.handleTitleClick("Interview");
-        }
+        }, _defineProperty(_ref3, "borderRadius", 10), _defineProperty(_ref3, "paddingTop", 20), _defineProperty(_ref3, "paddingBottom", 50), _defineProperty(_ref3, "paddingLeft", 20), _defineProperty(_ref3, "paddingRight", 20), _ref3)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         "class": "expandClickables",
         onClick: function onClick() {
@@ -1597,6 +1605,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
           width: "30px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        className: "position-absolute  col-md-9",
         style: {
           color: "black",
           paddingLeft: "15px"
@@ -1645,10 +1654,13 @@ var Commentary = /*#__PURE__*/function (_Component) {
           color: "#ffc92e"
         }
       }, " ", "search contracts for \"critical incident\"", " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        style: (_ref3 = {
+        className: "col-md-10 offset-md-1",
+        style: (_ref4 = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
-        }, _defineProperty(_ref3, "borderRadius", 10), _defineProperty(_ref3, "paddingTop", 20), _defineProperty(_ref3, "paddingBottom", 30), _defineProperty(_ref3, "paddingLeft", 20), _defineProperty(_ref3, "paddingRight", 20), _ref3),
+        }, _defineProperty(_ref4, "borderRadius", 10), _defineProperty(_ref4, "paddingTop", 20), _defineProperty(_ref4, "paddingBottom", 30), _defineProperty(_ref4, "paddingLeft", 20), _defineProperty(_ref4, "paddingRight", 20), _ref4)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "expandClickables",
         onClick: function onClick() {
           return _this2.handleTitleClick("Interrogation");
         }
@@ -1659,11 +1671,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
           height: "30px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: "position-absolute",
-        "data-toggle": "collapse",
-        "aria-expanded": "false",
-        "aria-controls": "hi",
-        href: "hi",
+        className: "position-absolute  col-md-9",
         style: {
           color: "black",
           paddingLeft: "15px"
@@ -1672,17 +1680,17 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, "Unfair Access to Information"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category gives officers access to information that civilians do not get prior to interrogation."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Unfair Access to Information"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category gives officers access to information that civilians do not get prior to interrogation.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-1 collapse nav-collapse " + dropInterrogation
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
-      }, " Keyword "), ": interrogation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"A police officer, whether a subject or witness, must be informed of the nature of the interrogation at the outset of the", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      }, " Keyword "), ": interrogation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"A police officer, whether a subject or witness, must be informed of the nature of the interrogation at the outset of the", " ", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
-      }, " interrogation"), ".\" (Avalon Borough)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, " interrogation"), " ", " ", ".\" (Avalon Borough)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         color: "#ff5c5c",
         className: "ex-keyword btn btn-info mr-2"
@@ -1695,11 +1703,11 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, " Keyword "), ": accused"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"When a written complaint is made against an officer, the Township will provide a copy of the complaint to the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      }, " Keyword "), ": accused"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"When a written complaint is made against an officer, the Township will provide a copy of the complaint to the", " ", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
-      }, "accused"), "officer.\" (Baldwin Township)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "accused"), " ", " ", "officer.\" (Baldwin Township)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         color: "#ff5c5c",
         className: "ex-keyword btn btn-info mr-2"
@@ -1709,10 +1717,13 @@ var Commentary = /*#__PURE__*/function (_Component) {
           color: "#ffc92e"
         }
       }, " ", "search contracts for \"accused\"", " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        style: (_ref4 = {
+        className: "col-md-10 offset-md-1",
+        style: (_ref5 = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
-        }, _defineProperty(_ref4, "borderRadius", 10), _defineProperty(_ref4, "paddingTop", 20), _defineProperty(_ref4, "paddingBottom", 50), _defineProperty(_ref4, "paddingLeft", 20), _defineProperty(_ref4, "paddingRight", 20), _ref4),
+        }, _defineProperty(_ref5, "borderRadius", 10), _defineProperty(_ref5, "paddingTop", 20), _defineProperty(_ref5, "paddingBottom", 50), _defineProperty(_ref5, "paddingLeft", 20), _defineProperty(_ref5, "paddingRight", 20), _ref5)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "expandClickables",
         onClick: function onClick() {
           return _this2.handleTitleClick("FalseArrest");
         }
@@ -1723,9 +1734,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
           height: "30px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: "position-absolute",
-        "data-toggle": "collapse",
-        "aria-expanded": "false",
+        className: "position-absolute col-md-9",
         style: {
           color: "black",
           paddingLeft: "15px"
@@ -1734,7 +1743,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, " Legal Costs "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, " Legal Costs "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category requires municipalities to pay costs related to police misconduct. This includes requiring cities to buy false arrest insurance and pay out legal settlements.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-1 collapse nav-collapse " + dropFalse,
         style: {
           paddingTop: "30px"
@@ -1743,11 +1752,11 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, " Keyword "), ": false arrest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"The Borough shall provide each Officer with ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      }, " Keyword "), ": false arrest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"The Borough shall provide each Officer with", " ", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
-      }, "false arrest"), "insurance coverage as provided in 2008, which includes coverage for false arrest, detention, imprisonment or malicious prosecution.\" (Churchill Borough)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      }, "false arrest"), " ", " ", "insurance coverage as provided in 2008, which includes coverage for false arrest, detention, imprisonment or malicious prosecution.\" (Churchill Borough)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
         color: "#ff5c5c",
         className: "ex-keyword btn btn-info mr-2"
@@ -1791,10 +1800,13 @@ var Commentary = /*#__PURE__*/function (_Component) {
           color: "#ffc92e"
         }
       }, " ", "search contracts for \"defense insurance\"", " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        style: (_ref5 = {
+        className: "col-md-10 offset-md-1",
+        style: (_ref6 = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
-        }, _defineProperty(_ref5, "borderRadius", 10), _defineProperty(_ref5, "paddingTop", 20), _defineProperty(_ref5, "paddingBottom", 50), _defineProperty(_ref5, "paddingLeft", 20), _defineProperty(_ref5, "paddingRight", 20), _ref5),
+        }, _defineProperty(_ref6, "borderRadius", 10), _defineProperty(_ref6, "paddingTop", 20), _defineProperty(_ref6, "paddingBottom", 50), _defineProperty(_ref6, "paddingLeft", 20), _defineProperty(_ref6, "paddingRight", 20), _ref6)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "expandClickables",
         onClick: function onClick() {
           return _this2.handleTitleClick("Reprimand");
         }
@@ -1805,11 +1817,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
           height: "30px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: "position-absolute",
-        "data-toggle": "collapse",
-        "aria-expanded": "false",
-        "aria-controls": "hi",
-        href: "hi",
+        className: "position-absolute col-md-9",
         style: {
           color: "black",
           paddingLeft: "15px"
@@ -1818,7 +1826,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, "Destroys Misconduct Records"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category prevents some misconduct accusations from being recorded in an officer\u2019s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Destroys Misconduct Records"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category prevents some misconduct accusations from being recorded in an officer\u2019s personnel file and also requires that records of misconduct are removed from personnel files and destroyed after a set period of time.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-1 collapse nav-collapse " + dropReprimand,
         style: {
           paddingTop: "50px"
@@ -1827,7 +1835,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, " Keyword "), ": reprimand"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"The written reprimand as herein provided shall not remain in effect for a period of more than eighteen (18) months from the date of the occurence upon which the complaint and written", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      }, " Keyword "), ": reprimand"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, "\"The written reprimand as herein provided shall not remain in effect for a period of more than eighteen (18) months from the date of the occurence upon which the complaint and written ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
           fontWeight: "bold"
         }
@@ -1858,10 +1866,16 @@ var Commentary = /*#__PURE__*/function (_Component) {
           color: "#ffc92e"
         }
       }, " ", "search contracts for \"personnel file\"", " ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        style: (_ref6 = {
+        className: "col-md-10 offset-md-1",
+        style: (_ref7 = {
           borderRadius: 10,
           backgroundColor: "#EAECEF"
-        }, _defineProperty(_ref6, "borderRadius", 10), _defineProperty(_ref6, "paddingTop", 20), _defineProperty(_ref6, "paddingBottom", 30), _defineProperty(_ref6, "paddingLeft", 20), _defineProperty(_ref6, "paddingRight", 20), _ref6),
+        }, _defineProperty(_ref7, "borderRadius", 10), _defineProperty(_ref7, "paddingTop", 20), _defineProperty(_ref7, "paddingBottom", 30), _defineProperty(_ref7, "paddingLeft", 20), _defineProperty(_ref7, "paddingRight", 20), _ref7),
+        onClick: function onClick() {
+          return _this2.handleTitleClick("PublicComment");
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        "class": "expandClickables",
         onClick: function onClick() {
           return _this2.handleTitleClick("PublicComment");
         }
@@ -1872,11 +1886,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
           height: "30px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        className: "position-absolute",
-        "data-toggle": "collapse",
-        "aria-expanded": "false",
-        "aria-controls": "hi",
-        href: "hi",
+        className: "position-absolute  col-md-9",
         style: {
           color: "black",
           paddingLeft: "15px"
@@ -1885,7 +1895,7 @@ var Commentary = /*#__PURE__*/function (_Component) {
         style: {
           fontWeight: "bold"
         }
-      }, "Limits Disciplinary Consequences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category limits the release of information that could help the media and the public hold police accountable."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Limits Disciplinary Consequences"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Language that falls under this category limits the release of information that could help the media and the public hold police accountable.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "col-md-6 offset-md-1 collapse nav-collapse " + dropPublicComment
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         style: {
@@ -1976,15 +1986,7 @@ var Contact = /*#__PURE__*/function (_Component) {
         className: "lead text-center"
       }, "Feel free to e-mail us with at ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "mailto:caasi@pitt.edu"
-      }, "caasi@pitt.edu"), " with any questions or inquiries. We're happy to help!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("address", {
-        className: "text-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "General:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "mailto:caasipuc@pitt.edu"
-      }, "caasipuc@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("address", {
-        className: "text-center"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("strong", null, "Tech Support:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "mailto:cjk94@pitt.edu"
-      }, "cjk94@pitt.edu")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
+      }, "caasi@pitt.edu"), " with any questions or inquiries. We're happy to help!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", {
         className: "my-4 border-top border-secondary"
       })));
     }
@@ -2457,15 +2459,12 @@ var Location = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var TabPane = antd__WEBPACK_IMPORTED_MODULE_7__.default.TabPane;
-      console.log('filter: ', this.state.location && lodash__WEBPACK_IMPORTED_MODULE_1___default().filter(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_5__, {
-        'LABEL': this.state.location.name
-      }));
-      var regionInfo = this.state.location && lodash__WEBPACK_IMPORTED_MODULE_1___default().filter(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_5__, {
-        'LABEL': this.state.location.name
+      var regionInfo = this.state.location && (lodash__WEBPACK_IMPORTED_MODULE_1___default().filter(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_5__, {
+        'Police_Agency_Name': this.state.location.name
       }).length ? lodash__WEBPACK_IMPORTED_MODULE_1___default().filter(_merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_5__, {
-        'LABEL': this.state.location.name
-      })[0] : null;
-      console.log('regionInfoData: ', _merge_data_allegheny_map_json__WEBPACK_IMPORTED_MODULE_5__, regionInfo);
+        'Police_Agency_Name': this.state.location.name
+      })[0] : null);
+      console.log('regionInfo: ', regionInfo);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.state.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "jumbotron"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2492,7 +2491,7 @@ var Location = /*#__PURE__*/function (_Component) {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_8__.faFileDownload
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, this.state.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "offset-md-8 col-md-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
         className: "text-center"
@@ -2502,26 +2501,26 @@ var Location = /*#__PURE__*/function (_Component) {
         className: "bg-light"
       }, "Full time officers as of 2019"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
-      }, regionInfo["Total_Number_Police_Officers_as_of_2019"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
+      }, regionInfo["2019_Full_Time_Police"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, "No info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("th", {
         className: "bg-light"
       }, "Do they use a police bill of rights"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
-      }, regionInfo["Do_they_use_a_police_bill_of_rights"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
+      }, regionInfo["police_bill_of_rights"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, "No info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("th", {
         className: "bg-light"
       }, "Police budget percentage in 2019"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
-      }, regionInfo["Budget"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
+      }, regionInfo["2019_Police_Budget_Percentage"]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, "No info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("th", {
         className: "bg-light"
       }, "Police department website"), regionInfo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: regionInfo["Budget"]
+        href: regionInfo["Police_Department_Website"]
       }, "Link")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", {
         className: "align-middle"
       }, "No info"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2797,9 +2796,10 @@ var MapComponent = /*#__PURE__*/function (_Component) {
 
       var id;
 
-      for (var i in _location_id_json__WEBPACK_IMPORTED_MODULE_7__) {
-        if (_location_id_json__WEBPACK_IMPORTED_MODULE_7__[i].name == center) {
-          id = _location_id_json__WEBPACK_IMPORTED_MODULE_7__[i].id;
+      for (var i in this.props.locations) {
+        if (this.props.locations[i].name == center) {
+          id = this.props.locations[i].id;
+          console.log('id and name: ', id);
           break;
         }
       }
@@ -2843,7 +2843,7 @@ var MapComponent = /*#__PURE__*/function (_Component) {
       var iconFile = (0,leaflet__WEBPACK_IMPORTED_MODULE_4__.icon)({
         iconUrl: "https://z3.ax1x.com/2021/10/21/5rZ6c6.png"
       });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      if (this.props.locations.length == 0) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom",
         style: {
           height: 500
@@ -3477,43 +3477,61 @@ var Researchers = /*#__PURE__*/function (_Component) {
         target: "_blank",
         href: "/static/app/instructions/How_to_read_a_contract.pdf"
       }, "brief guide"), " may also be helpful.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "mt-2 text-center"
+        className: "mt-2 d-flex text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "btn-group",
         role: "group",
         "aria-label": "..."
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery('unfounded', true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "unfounded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery("interview", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "interview"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery('interrogation', true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "interrogation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery('"false arrest"', true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "false arrest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery("reprimand", true);
         },
         className: "ex-keyword btn btn-info btn-rounded mr-2"
       }, "reprimand"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "button",
+        style: {
+          padding: "5px"
+        },
         onClick: function onClick() {
           return _this4.setSearchQuery('"public comment"', true);
         },
@@ -3727,6 +3745,7 @@ var SmallList = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.state = {
+      locations: [],
       listData: [],
       smallList: null,
       collapsed: false,
@@ -3887,6 +3906,11 @@ var SmallList = /*#__PURE__*/function (_Component) {
             }
           });
         });
+        _libs_api__WEBPACK_IMPORTED_MODULE_2__.default.getLocations().then(function (resp) {
+          _this3.setState({
+            locations: resp
+          });
+        });
       } catch (err) {
         throw err;
       }
@@ -3962,6 +3986,7 @@ var SmallList = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MapComponent__WEBPACK_IMPORTED_MODULE_4__.default, {
         pos: this.state.markerPos,
         center: this.state.centerLocation,
+        locations: this.state.locations,
         searchedRegions: this.state.searchedRegions,
         onSelectedRegion: this.handleSelectedRegion,
         keywordRegions: this.state.selectedRegionsForTerm,
@@ -5130,4 +5155,4 @@ module.exports = JSON.parse("[{\"MUNI_ID\":23813,\"Police_Agency_Name\":\"Allegh
 /******/ 	__webpack_require__.x();
 /******/ })()
 ;
-//# sourceMappingURL=main.ecb01d0ce14115e85143.js.map
+//# sourceMappingURL=main.4d728d4b34ad49b4b64f.js.map

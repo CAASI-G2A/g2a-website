@@ -187,16 +187,17 @@ class MapComponent extends Component {
   }
 
   getText(center) {
-        if (center in this.props.searchedRegions) {
-            // do someting to let this function know how to generate the extra link.
+    if (center in this.props.searchedRegions) {
+        // do someting to let this function know how to generate the extra link.
+    }
+    var id;
+    for (var i in this.props.locations) {
+        if (this.props.locations[i].name == center) {
+            id = this.props.locations[i].id;
+            console.log('id and name: ', id)
+            break
         }
-        var id
-        for (var i in locationID) {
-            if (locationID[i].name == center) {
-                id = locationID[i].id
-                break
-            }
-        }
+    }
 
     var t = 1;
     var length = contentText.length;   
@@ -272,40 +273,43 @@ class MapComponent extends Component {
     const iconFile = icon({
       iconUrl: "https://z3.ax1x.com/2021/10/21/5rZ6c6.png",
     });
-    return (
-      <>
-        <div
-          className="map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-          style={{ height: 500 }}
-        >
-          <MapContainer
-            center={position}
-            zoom={10}
-            scrollWheelZoom={true}
+    if (this.props.locations.length == 0)
+      return <div></div> 
+    else
+      return (
+        <>
+          <div
+            className="map_container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style={{ height: 500 }}
-            whenCreated={(map) => {
-              this.setState({ map: map });
-            }}
           >
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &copy; <a href="http://cartodb.com/attributions">CartoDB</a> attributions <a href = "mailto: gishelp@alleghenycounty.us">GIS Help</a> Legend credit'
-              url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
-            />
-            <GeoJSON data={geoData.features} onEachFeature={this.eachArea} />
-            <Marker position={this.props.pos} icon={iconFile}>
-              <Tooltip interactive={true} permanent>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.getText(this.props.center),
-                  }}
-                />
-              </Tooltip>
-            </Marker>
-            <Legend map={this.state.map} />
-          </MapContainer>
-        </div>
-      </>
-    );
+            <MapContainer
+              center={position}
+              zoom={10}
+              scrollWheelZoom={true}
+              style={{ height: 500 }}
+              whenCreated={(map) => {
+                this.setState({ map: map });
+              }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &copy; <a href="http://cartodb.com/attributions">CartoDB</a> attributions <a href = "mailto: gishelp@alleghenycounty.us">GIS Help</a> Legend credit'
+                url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
+              />
+              <GeoJSON data={geoData.features} onEachFeature={this.eachArea} />
+              <Marker position={this.props.pos} icon={iconFile}>
+                <Tooltip interactive={true} permanent>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.getText(this.props.center),
+                    }}
+                  />
+                </Tooltip>
+              </Marker>
+              <Legend map={this.state.map} />
+            </MapContainer>
+          </div>
+        </>
+      );
   }
 }
 

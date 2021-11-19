@@ -12,6 +12,7 @@ class SmallList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      locations: [],
       listData: [],
       smallList: null,
       collapsed: false,
@@ -158,6 +159,12 @@ class SmallList extends Component {
             }
         });
       });
+
+      Api.getLocations().then((resp) => {
+        this.setState({
+          locations: resp
+        });
+      })
     } catch (err) {
       throw err;
     }
@@ -221,6 +228,7 @@ class SmallList extends Component {
             <MapComponent
               pos={this.state.markerPos}
               center={this.state.centerLocation}
+              locations={this.state.locations}
               searchedRegions={this.state.searchedRegions}
               onSelectedRegion={this.handleSelectedRegion}
               keywordRegions={this.state.selectedRegionsForTerm}
