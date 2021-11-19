@@ -197,6 +197,30 @@ class About extends Component {
             <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
+
+                  src="/static/app/img/profiles/ivy.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Ivy Chang
+                </a>
+              </div>
+              <div>CAASI Communications Coordinator</div>
+              <div><i>Pitt CBA Finance and DSAS Economics</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
                   src="/static/app/img/profiles/yongsu.jpg"
                   class="rounded-circle"
                   width="120"
@@ -220,6 +244,29 @@ class About extends Component {
             <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
+                  src="/static/app/img/profiles/collin.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Collin Griffin
+                </a>
+              </div>
+              <div>Technical Project Manager</div>
+              <div><i>Pitt SCI Computer Science and DSAS Economics</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
                   src="/static/app/img/profiles/patrick.jpg"
                   class="rounded-circle"
                   width="120"
@@ -238,30 +285,6 @@ class About extends Component {
               </div>
               <div>Technical Team</div>
               <div><i>Tufts Computer Science</i></div>
-            </div>
-
-            <div class="col-md-4 text-center mb-2">
-              <div class="profile-img-wrapper">
-                <img
-
-                  src="/static/app/img/profiles/ivy.jpg"
-                  class="rounded-circle"
-                  width="120"
-                  height="120"
-                  style={{objectFit: "cover"}}
-                />
-              </div>
-              <div>
-                <a
-                  href="http://www.grieftoaction.org"
-                  class="profile-name"
-                  target="_blank"
-                >
-                  Ivy Chang
-                </a>
-              </div>
-              <div>CAASI Communications Coordinator</div>
-              <div><i>Pitt CBA Finance and DSAS Economics</i></div>
             </div>
 
             <div class="col-md-4 text-center mb-2">
@@ -313,6 +336,54 @@ class About extends Component {
             <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
+
+                  src="/static/app/img/profiles/tosan.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Tosan Adoki
+                </a>
+              </div>
+              <div>Technical Team</div>
+              <div><i>GSPIA, Urban Affairs and Planning</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
+
+                  src="/static/app/img/profiles/noah.jpeg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Noah Braun
+                </a>
+              </div>
+              <div>Technical Team</div>
+              <div><i>Technical Writer</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
                   src="/static/app/img/profiles/tom.jpg"
                   class="rounded-circle"
                   width="120"
@@ -331,29 +402,6 @@ class About extends Component {
               </div>
               <div>Data Collection Team</div>
               <div><i>Pitt GSPIA Alumnus</i></div>
-            </div>
-
-            <div class="col-md-4 text-center mb-2">
-              <div class="profile-img-wrapper">
-                <img
-                  src="/static/app/img/profiles/collin.png"
-                  class="rounded-circle"
-                  width="120"
-                  height="120"
-                  style={{objectFit: "cover"}}
-                />
-              </div>
-              <div>
-                <a
-                  href="http://www.grieftoaction.org"
-                  class="profile-name"
-                  target="_blank"
-                >
-                  Collin Griffin
-                </a>
-              </div>
-              <div>Technical Project Manager</div>
-              <div><i>Pitt SCI Computer Science and DSAS Economics</i></div>
             </div>
 
             <div class="col-md-4 text-center mb-2">
@@ -424,7 +472,56 @@ class About extends Component {
               <div>Development Team</div>
               <div><i>Non-profit capacity building</i></div>
             </div>
-          </div> {/* END PROFILE PICTURES */}
+          </div>
+
+          <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
+
+                  src="/static/app/img/profiles/jessi.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Jessi DeFusco
+                </a>
+              </div>
+              <div>Consultant</div>
+              <div><i>Global Health Policy</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
+
+                  src="/static/app/img/profiles/kaleigh.png"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Kaleigh Dryden
+                </a>
+              </div>
+              <div><i>JD/MPIA, May 2023</i></div>
+            </div>
+          
+          {/* END PROFILE PICTURES */}
 
         </div>
 
