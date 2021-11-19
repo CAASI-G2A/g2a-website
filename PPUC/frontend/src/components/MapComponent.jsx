@@ -186,7 +186,7 @@ class MapComponent extends Component {
     }
   }
 
-    getText(center) {
+  getText(center) {
         if (center in this.props.searchedRegions) {
             // do someting to let this function know how to generate the extra link.
         }
@@ -199,37 +199,37 @@ class MapComponent extends Component {
         }
 
     var t = 1;
-    var length = contentText.length;
-
+    var length = contentText.length;   
     while (t < length) {
-      if (contentText[t].LABEL === center) {
+      if (contentText[t]['Police_Agency_Name'] === center) {
+        // console.log('center: ', contentText[t]['NAME'], center);
         if (
-          contentText[t].Link_to_police_department == "" ||
-          contentText[t].Link_to_police_department == null ||
-          contentText[t].Link_to_police_department == "NA"
+          contentText[t]['Police_Department_Website'] == "" ||
+          contentText[t]['Police_Department_Website'] == null ||
+          contentText[t]['Police_Department_Website'] == "NA"
         ) {
             var contract_link = "<br><a  href=/PxPUC/#/location/" +
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "<br>No contract detail"
+                contract_link = "<br>No link for contract"
             }
           return (
-            contentText[t].LABEL +
+            contentText[t]['Police_Agency_Name'] +
             "<br>" +
             "<br >No link for police department</br>" +
             "<br> Full time police officers as of 2019: " +
             this.getContent(
-              contentText[t].Total_Number_Police_Officers_as_of_2019
+              contentText[t]['2019_Full_Time_Police']
             ) +
             "<br> Police bill of rights: " +
             this.getContent(
-              contentText[t].Do_they_use_a_police_bill_of_rights
+              contentText[t]['police_bill_of_rights']
               ) +
               "<br> Police budget percentage 2019: " +
-              this.getContent(contentText[t].Budget) +
+              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
             "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t].Keywords_found_in_contract) +
+              this.getContent(contentText[t]['Keywords_found_in_contract']) +
               contract_link
           );
         } else {
@@ -237,32 +237,33 @@ class MapComponent extends Component {
                 id +
                 " target='_blank'>Link to contract detail page</a>"
             if (id == null) {
-                contract_link = "No contract detail"
+                contract_link = "<br>No link for contract"
             }
           return (
-            contentText[t].LABEL +
+            contentText[t]['Police_Agency_Name'] +
             "<br>" +
             "<a  href=" +
-            contentText[t].Link_to_police_department +
+            contentText[t]['Police_Department_Website'] +
             " target='_blank'>Link to police department website</a>" +
             "<br> Full time police officers as of 2019: " +
             this.getContent(
-              contentText[t].Total_Number_Police_Officers_as_of_2019
+              contentText[t]['2019_Full_Time_Police']
             ) +
             "<br> Police bill of rights: " + 
             this.getContent(
-              contentText[t].Do_they_use_a_police_bill_of_rights
+              contentText[t]['police_bill_of_rights']
               ) +
               "<br> Police budget percentage 2019: " +
-              ((this.getContent(contentText[t].Budget) !== 'null') ? this.getContent(contentText[t].Budget) : "No info") +
+              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
             "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t].Keywords_found_in_contract) +
+              this.getContent(contentText[t]['Keywords_found_in_contract']) +
               contract_link
           );
         }
       }
       t++;
     }
+
     return "no data";
   }
 

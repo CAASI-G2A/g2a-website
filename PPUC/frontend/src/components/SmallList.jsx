@@ -67,6 +67,7 @@ class SmallList extends Component {
       center_coordinate_y = 0;
     }
 
+    console.log('on select item: ', e.key);
     this.setState({
       current: e.key,
       markerPos: [center_coordinate_x, center_coordinate_y],
@@ -214,7 +215,7 @@ class SmallList extends Component {
         >
           Explore police department map
         </h3>
-        <div style={{ fontStyle: 'italic', color: 'gray', fontSize: '0.8rem' }}>*For more information in the tooltip, refer to <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jAnGHnQdK9UZK_Iy9fxkdfIlat7krILq/edit#gid=1063952290">link</a>.</div>
+        <div style={{ fontStyle: 'italic', color: 'gray', fontSize: '0.8rem' }}>*Click <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jAnGHnQdK9UZK_Iy9fxkdfIlat7krILq/edit#gid=1063952290">here</a> to see how we collected this data.</div>
         <div className="map_list_wrapper">
           <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
             <MapComponent
