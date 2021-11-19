@@ -67,12 +67,11 @@ class Location extends Component {
 
   render() {
     const { TabPane } = Tabs;
-    
+
     const regionInfo = this.state.location
       && (_.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name}).length 
       ? _.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name})[0]: null);
 
-    console.log('regionInfo: ', regionInfo);
     return (
       <div>
         {this.state.location && (

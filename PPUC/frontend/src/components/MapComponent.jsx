@@ -44,7 +44,6 @@ class MapComponent extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    //console.log("prevProps: ", prevProps, this.props);
     if (prevProps.center !== this.props.center) {
       var last_color;
       if (
@@ -194,7 +193,6 @@ class MapComponent extends Component {
     for (var i in this.props.locations) {
         if (this.props.locations[i].name == center) {
             id = this.props.locations[i].id;
-            console.log('id and name: ', id)
             break
         }
     }
@@ -203,7 +201,6 @@ class MapComponent extends Component {
     var length = contentText.length;   
     while (t < length) {
       if (contentText[t]['Police_Agency_Name'] === center) {
-        // console.log('center: ', contentText[t]['NAME'], center);
         if (
           contentText[t]['Police_Department_Website'] == "" ||
           contentText[t]['Police_Department_Website'] == null ||
