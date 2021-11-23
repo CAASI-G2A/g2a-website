@@ -29,7 +29,7 @@ class About extends Component {
           Our team is made up of students, faculty, and community members. Almost a third of our 
           volunteers are from outside of Pitt. Email us to join forces!  We gratefully acknowledge 
           funding from the Pitt Cyber Accelerator Grant and the Pitt Momentum Fund, as well as the 
-          contributions of Pitt’s CS1980, INFSCI 1740, and PIA 2960 capstone teams.
+          contributions of Pitt’s CS1980, INFSCI 1740, and PIA 2096 capstone teams.
           </p>
         </div>
         {/* SECONDARY INTRO */}
@@ -497,33 +497,11 @@ class About extends Component {
               <div><i>Global Health Policy</i></div>
             </div>
 
-            <div class="col-md-4 text-center mb-2">
-              <div class="profile-img-wrapper">
-                <img
-
-                  src="/static/app/img/profiles/kaleigh.png"
-                  class="rounded-circle"
-                  width="120"
-                  height="120"
-                  style={{objectFit: "cover"}}
-                />
-              </div>
-
-              <div>
-                <a
-                  href="http://www.grieftoaction.org"
-                  class="profile-name"
-                  target="_blank"
-                >
-                  Kaleigh Dryden
-                </a>
-              </div>
-              <div><i>JD/MPIA, May 2023</i></div>
-            </div>
-
           </div>
+          
+          {/* END PROFILE PICTURES */}
 
-        </div>{/* END PROFILE PICTURES */}
+        </div>
 
         {/* BEGIN PARTNERS SECTION */}
         <div class="partners-wrapper mt-4">
