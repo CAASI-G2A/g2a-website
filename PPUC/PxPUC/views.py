@@ -371,9 +371,9 @@ class LocationStageList(APIView):
             "title": "Review of complaint",
             "content": """<p class="lead">What happens in this stage?</p>
                                     <p><You have filed your complaint and are waiting for the department to review it and decide whether an investigation 
-                                    should go forward. /p>
+                                    should go forward. </p>
                                     <p>The accused officer and those associated with them, as well as their legal representation, must be notified 
-                                    within a specific timeframe which is typically a matter of days.
+                                    within a specific timeframe which is typically a matter of days.</p>
 </p>""",
             "resources": None,
         }
