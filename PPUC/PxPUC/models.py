@@ -37,7 +37,7 @@ class Category(models.Model):
 class Question(models.Model):
     category = models.ManyToManyField(Category, related_name="questions")
     q = models.CharField(max_length=1000, default="")
-    a = models.CharField(max_length=1000, default="")
+    a = models.CharField(max_length=2000, default="")
 
     def __str__(self):
         return self.q
