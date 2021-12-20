@@ -16,6 +16,8 @@ urlpatterns = [
     path("PxPUC/edit_sentence/<int:sid>", views.edit_sentence, name="edit_sentence"),
     path("PxPUC/locations", views.LocationList.as_view(), name="location-list"),
     path("PxPUC/update", csrf_exempt(views.update_server)),
+    path("PxPUC/templates/app/marker", views.marker),
+    path("PxPUC/geoData", views.geodata),
     path(
         "PxPUC/muni_list_data",
         views.LocationList.as_view(),

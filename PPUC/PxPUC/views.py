@@ -44,6 +44,18 @@ def map(request):
     return render(request, "app/test.html")
 
 
+def marker(request):
+    """The icon of the marker"""
+    assert isinstance(request, HttpRequest)
+    return render(request, "app/marker.png")
+
+
+def geodata(request):
+    """The geo data from geoData.json"""
+    assert isinstance(request, HttpRequest)
+    return render(request, "app/geoData.json")
+
+
 def home(request):
     """Renders the home page."""
     context = {
