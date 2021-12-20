@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('PxPUC', '0007_remove_question_location'),
+        ("PxPUC", "0007_remove_question_location"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='question',
-            name='a',
-            field=models.CharField(default='', max_length=2000),
+            model_name="question",
+            name="a",
+            field=models.CharField(default="", max_length=2000),
         ),
     ]

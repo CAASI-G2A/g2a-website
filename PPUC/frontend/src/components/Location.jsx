@@ -6,7 +6,7 @@ import { Tabs } from "antd";
 import Api from "../libs/api";
 import ReactPDF from "@intelllex/react-pdf";
 
-import regionInfoData from "../merge_data_allegheny_map.json";
+import regionInfoData from "../data/merge_data_allegheny_map.json";
 import _default from "rc-trigger";
 class Location extends Component {
   constructor(props) {

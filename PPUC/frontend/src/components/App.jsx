@@ -18,7 +18,7 @@ import Citizens from "./Citizens";
 import About from "./About";
 import Contact from "./Contact";
 import Location from "./Location";
-import Map from "./SmallList";
+import Map from "./Police_Dept_Map/MapPanel";
 import Commentary from "./Commentary";
 
 class App extends Component {

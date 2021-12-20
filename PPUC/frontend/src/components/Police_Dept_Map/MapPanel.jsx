@@ -1,36 +1,29 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
 import { Menu, Radio } from "antd";
-import Api from "../libs/api";
-import SearchParser from "../libs/researcher_search_lang";
+import Api from "../../libs/api";
+import SearchParser from "../../libs/researcher_search_lang";
 import MapComponent from "./MapComponent";
-import features from "../geoData.json";
-import frequencies from "./../frequency.json";
+import features from "../../data/geoData.json";
+import frequencies from "./../../data/frequency.json";
 
 import "antd/dist/antd.css";
-class SmallList extends Component {
+class MapPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       locations: [],
       listData: [],
-      smallList: null,
-      collapsed: false,
       theme: "light",
-      listKeyNumber: 1,
-      current: 0,
-      listData2: "",
-      markerPos: [40, -79.9633],
+      markerPos: [0, 0],
       centerLocation: null,
       searchedRegions: [],
-      selectedRegionsForTerm: null,
+      selectedTermRegions: null,
       clearMap: false,
       isClicked: null
     };
-
-    this.handleClick = this.handleClick.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleSelectedRegion = this.handleSelectedRegion.bind(this);
+    this.handleListSelection = this.handleListSelection.bind(this);
+    this.handleMapSelection = this.handleMapSelection.bind(this);
     this.handleSelectKeyword = this.handleSelectKeyword.bind(this);
   }
 
@@ -47,7 +40,7 @@ class SmallList extends Component {
     
   }
 
-  handleClick(e) { // on selecting item on the list
+  handleListSelection(e) { // on selecting item on the list
     var center_coordinate_x;
     var center_coordinate_y;
     var t = 0;
@@ -67,75 +60,19 @@ class SmallList extends Component {
       center_coordinate_x = 0;
       center_coordinate_y = 0;
     }
-
     console.log('on select item: ', e.key);
     this.setState({
-      current: e.key,
       markerPos: [center_coordinate_x, center_coordinate_y],
       centerLocation: e.key,
       isClicked: 'list'
     });
   }
 
-  handleSelectedRegion(selectedRegion) { // on selecting map region
+  handleMapSelection(selectedRegion) { // on selecting map region
     this.setState({
       centerLocation: selectedRegion,
       isClicked: 'map'
     });
-  }
-
-  handleSearch(newQuery, autoSearch) {
-    // parse query
-    try {
-      function getQueryWords(query) {
-        if (typeof query === "string") {
-          return [query];
-        } else {
-          return getQueryWords(query["operand1"]).concat(
-            getQueryWords(query["operand2"])
-          );
-        }
-      }
-
-      const searchQuery = SearchParser.parse(newQuery);
-      // parse down to just the words being searched for, for highlighting
-      const searchQueryWords = getQueryWords(searchQuery["query"]);
-
-      Api.getResearcherSearchResults(searchQuery).then((resp) => {
-        // sort based on city name
-        resp.sort((a, b) => {
-          if (a.name < b.name) {
-            return -1;
-          }
-          if (a.name > b.name) {
-            return 1;
-          }
-          return 0;
-        });
-        // parse states out
-        const respRegions = [...new Set(resp.map((a) => a.name))];
-        console.log("response on map query: ", respRegions);
-
-        this.setState({
-          searchedRegions: [...respRegions],
-        });
-      });
-      // set search query param
-      // this.props.history.push({
-      //   pathname: routes.researchers,
-      //   search:
-      //     "?" +
-      //     new URLSearchParams({ search: this.state.searchQuery }).toString(),
-      // });
-    } catch (err) {
-      // if (err instanceof SearchParser.SyntaxError) {
-      //   this.setState({
-      //     searchQueryError: err,
-      //   });
-      // } else {
-      //   throw err;
-      // }
-    }
   }
 
     componentDidMount() {
@@ -199,9 +136,9 @@ class SmallList extends Component {
     const keywordElClass = '.term_' + keyword.replace(' ', '_');
     d3.select('.term_selected').classed('term_selected', false);
     d3.select(keywordElClass).classed('term_selected', true);
-
+      console.log(frequencies[keyword])
     this.setState({
-      selectedRegionsForTerm: frequencies[keyword],
+      selectedTermRegions: frequencies[keyword],
       clearMap: false,
     });
   }
@@ -230,8 +167,8 @@ class SmallList extends Component {
               center={this.state.centerLocation}
               locations={this.state.locations}
               searchedRegions={this.state.searchedRegions}
-              onSelectedRegion={this.handleSelectedRegion}
-              keywordRegions={this.state.selectedRegionsForTerm}
+              onSelectedRegion={this.handleMapSelection}
+              keywordRegions={this.state.selectedTermRegions}
               clearMap={this.state.clearMap}
             />
           </div>
@@ -239,7 +176,7 @@ class SmallList extends Component {
             <Menu
               className="region_list"
               theme={this.state.theme}
-              onClick={this.handleClick}
+              onClick={this.handleListSelection}
               centerLocation={this.state.centerLocation}
               selectedKeys={this.state.centerLocation}
               mode="inline"
@@ -315,4 +252,4 @@ class SmallList extends Component {
     );
   }
 }
-export default SmallList;
+export default MapPanel;

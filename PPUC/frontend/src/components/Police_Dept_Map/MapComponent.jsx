@@ -1,20 +1,16 @@
 ﻿import React, { Component, useState } from "react";
 import * as d3 from "d3";
-import Api from "../libs/api";
 import "antd/dist/antd.css";
-import L from "leaflet";
 import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup,
   GeoJSON,
   Tooltip,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import geoData from "./../geoData.json";
-import locationID from "./../location_id.json";
-import contentText from "./../merge_data_allegheny_map.json";
+import geoData from "./../../data/geoData.json";
+import contentText from "./../../data/merge_data_allegheny_map.json";
 import { icon } from "leaflet";
 import Legend from "./Legend";
 
@@ -25,13 +21,9 @@ class MapComponent extends Component {
       position: [40.446, -79.9633],
       last_selected_location: "nowhere",
       last_selected_location_color: null,
-      last_frequency_color: [],
+      last_selected_term_location_color: [],
       map: null,
-      last_clicked_color: null,
-      last_clicked_location: null,
-      prev_keyword: null,
       is_frequency_selected: false,
-      repeat_time: 0,
     };
 
     this.eachArea = this.eachArea.bind(this);
@@ -86,15 +78,15 @@ class MapComponent extends Component {
           );
           if (!selectedRegion.empty()) {
             d3.select("." + r.split(" ").join("_"))
-              .style("fill", this.state.last_frequency_color[t])
+              .style("fill", this.state.last_selected_term_location_color[t])
               .style("fill-opacity", 0.2);
           }
         });
       }
-      var last_frequency_color = [];
+      var last_selected_term_location_color = [];
       this.props.keywordRegions.forEach((r) => {
-        last_frequency_color = [
-          ...last_frequency_color,
+         last_selected_term_location_color = [
+           ...last_selected_term_location_color,
           d3.select("." + r.split(" ").join("_")).style("fill"),
         ];
         const selectedRegion = d3.select(
@@ -113,10 +105,10 @@ class MapComponent extends Component {
         }
       });
       this.setState({
-        last_frequency_color: last_frequency_color,
+        last_selected_term_location_color: last_selected_term_location_color,
         is_frequency_selected: true,
       });
-    }
+      }
 
     if (this.props.clearMap && prevProps.keywordRegions != null) {
       var t = -1;
@@ -133,7 +125,7 @@ class MapComponent extends Component {
         );
         if (!selectedRegion.empty()) {
           d3.select("." + r.split(" ").join("_"))
-            .style("fill", this.state.last_frequency_color[t])
+            .style("fill", this.state.last_selected_term_location_color[t])
             .style("fill-opacity", 0.2);
         }
       });
@@ -145,31 +137,17 @@ class MapComponent extends Component {
     this.props.onSelectedRegion(selectedRegion);
   }
 
-  getJson() {
-    return fetch(
-      "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson"
-    ).then((response) => response.json());
-  }
-
   eachArea(feature, layer) {
     const areaName = feature.properties.LABEL;
     const groupName = feature.properties.REGION;
     layer.bindPopup(this.getText(areaName));
     layer.options.color = "black";
-    if (groupName === "MV") {
-      layer.options.fillColor = "red";
-    } else if (groupName === "NH") {
-      layer.options.fillColor = "yellow";
-    } else if (groupName === "SH") {
-      layer.options.fillColor = "orange";
-    } else if (groupName === "ES") {
-      layer.options.fillColor = "green";
-    } else if (groupName === "AA") {
-      layer.options.fillColor = "purple";
-    } else if (groupName === "PGH") {
-      layer.options.fillColor = "black";
-    }
-
+      groupName === "MV" ? layer.options.fillColor = "red" :
+          groupName === "NH" ? layer.options.fillColor = "yellow" :
+              groupName === "SH" ? layer.options.fillColor = "orange" :
+                  groupName === "ES" ? layer.options.fillColor = "green" :
+                      groupName === "AA" ? layer.options.fillColor = "purple" :
+                          groupName === "PGH" ? layer.options.fillColor = "black" : none = 1;
     layer.setStyle({ className: areaName.split(" ").join("_") });
 
     layer.on({
@@ -185,85 +163,66 @@ class MapComponent extends Component {
     }
   }
 
-  getText(center) {
-    if (center in this.props.searchedRegions) {
-        // do someting to let this function know how to generate the extra link.
-    }
-    var id;
-    for (var i in this.props.locations) {
-        if (this.props.locations[i].name == center) {
-            id = this.props.locations[i].id;
-            break
-        }
-    }
-
-    var t = 1;
-    var length = contentText.length;   
-    while (t < length) {
-      if (contentText[t]['Police_Agency_Name'] === center) {
-        if (
-          contentText[t]['Police_Department_Website'] == "" ||
-          contentText[t]['Police_Department_Website'] == null ||
-          contentText[t]['Police_Department_Website'] == "NA"
-        ) {
-            var contract_link = "<br><a  href=/PxPUC/#/location/" +
-                id +
-                " target='_blank'>Link to contract detail page</a>"
-            if (id == null) {
-                contract_link = "<br>No link for contract"
+    getText(center) {
+        var id;
+        for (var i in this.props.locations) {
+            if (this.props.locations[i].name == center) {
+                id = this.props.locations[i].id;
+                break
             }
-          return (
-            contentText[t]['Police_Agency_Name'] +
-            "<br>" +
-            "<br >No link for police department</br>" +
-            "<br> Full time police officers as of 2019: " +
-            this.getContent(
-              contentText[t]['2019_Full_Time_Police']
-            ) +
-            "<br> Police bill of rights: " +
-            this.getContent(
-              contentText[t]['police_bill_of_rights']
-              ) +
-              "<br> Police budget percentage 2019: " +
-              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
-            "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t]['Keywords_found_in_contract']) +
-              contract_link
-          );
-        } else {
-            var contract_link = "<br><a  href=/PxPUC/#/location/" +
-                id +
-                " target='_blank'>Link to contract detail page</a>"
-            if (id == null) {
-                contract_link = "<br>No link for contract"
-            }
-          return (
-            contentText[t]['Police_Agency_Name'] +
-            "<br>" +
-            "<a  href=" +
-            contentText[t]['Police_Department_Website'] +
-            " target='_blank'>Link to police department website</a>" +
-            "<br> Full time police officers as of 2019: " +
-            this.getContent(
-              contentText[t]['2019_Full_Time_Police']
-            ) +
-            // "<br> Police bill of rights: " + 
-            // this.getContent(
-            //   contentText[t]['police_bill_of_rights']
-            //   ) +
-            "<br> Police budget percentage 2019: " +
-              ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
-            "<br> <br> Keywords in contract: " +
-              this.getContent(contentText[t]['Keywords_found_in_contract']) +
-              contract_link
-          );
         }
-      }
-      t++;
-    }
 
-    return "no data";
-  }
+        var t = 1;
+        var length = contentText.length;
+        while (t < length) {
+            if (contentText[t]['Police_Agency_Name'] === center) {
+                var link_string
+                if (
+                    contentText[t]['Police_Department_Website'] == "" ||
+                    contentText[t]['Police_Department_Website'] == null ||
+                    contentText[t]['Police_Department_Website'] == "NA"
+                ) {
+                    link_string = "<br>" +
+                        "<br >No link for police department</br>"
+                }
+                else {
+                    link_string = "<br>" +
+                        "<a  href=" +
+                        contentText[t]['Police_Department_Website'] +
+                        " target='_blank'>Link to police department website</a><br>"
+                }
+                var contract_link = "<br><a  href=/PxPUC/#/location/" +
+                    id +
+                    " target='_blank'>Link to contract detail page</a>"
+                if (id == null) {
+                    contract_link = "<br>No link for contract"
+                }
+                var police_number = String(this.getContent(
+                    contentText[t]['2019_Full_Time_Police']
+                ))
+                var text = ""
+                text = text.concat(contentText[t]['Police_Agency_Name'] +
+                    link_string)
+                text = text.concat( "Full time police officers as of 2019: ")
+                text = text.concat(String(police_number))
+                text = text.concat("<br> Police bill of rights: " +
+                    this.getContent(
+                        contentText[t]['police_bill_of_rights']
+                    ) +
+                    "<br> Police budget percentage 2019: " +
+                    ((this.getContent(contentText[t]['2019_Police_Budget_Percentage']) !== 'null') ? this.getContent(contentText[t]['2019_Police_Budget_Percentage']) : "No info") +
+                    "<br> <br> Keywords in contract: " +
+                    this.getContent(contentText[t]['Keywords_found_in_contract']) +
+                    contract_link)
+                return (
+                     text
+                );
+            }
+            t++;
+        }
+
+        return "no data";
+    }
 
   render() {
     const { position } = this.state;

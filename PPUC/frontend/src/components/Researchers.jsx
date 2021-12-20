@@ -9,7 +9,6 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
-import SmallList from "./SmallList";
 
 class Researchers extends Component {
   constructor(props) {
