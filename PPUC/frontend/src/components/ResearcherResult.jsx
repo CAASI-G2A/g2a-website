@@ -23,7 +23,7 @@ class ResearcherResultSentence extends Component {
         expanded: !this.state.expanded,
       });
     }
-  }
+   }
 
   render() {
     return (

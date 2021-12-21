@@ -11,7 +11,7 @@ import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import ResearcherResult from "./ResearcherResult";
-import SmallList from "./Police_Dept_Map/MapPanel";
+import SmallList from "./policeDeptMap/MapContainer";
 import { autoType } from "d3-dsv";
 
 // TODO:

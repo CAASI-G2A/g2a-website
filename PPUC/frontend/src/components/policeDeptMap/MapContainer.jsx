@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
-import { Menu, Radio } from "antd";
+import { Radio } from "antd";
 import Api from "../../libs/api";
-import SearchParser from "../../libs/researcher_search_lang";
-import MapComponent from "./MapComponent";
+import Map from "./Map";
 import features from "../../data/geoData.json";
 import frequencies from "./../../data/frequency.json";
-
 import "antd/dist/antd.css";
+import Sidebar from "./Sidebar"
 class MapPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       locations: [],
-      listData: [],
-      theme: "light",
       markerPos: [0, 0],
       centerLocation: null,
       searchedRegions: [],
@@ -40,33 +37,33 @@ class MapPanel extends Component {
     
   }
 
-  handleListSelection(e) { // on selecting item on the list
-    var center_coordinate_x;
-    var center_coordinate_y;
-    var t = 0;
-    var signal = false;
-    while (t < features.features.length && signal === false) {
-      if (features.features[t].properties.LABEL === e.key) {
-        center_coordinate_x =
-          features.features[t].geometry.center_coordinate[1];
-        center_coordinate_y =
-          features.features[t].geometry.center_coordinate[0];
-        signal = true;
-      }
-      t++;
+    handleListSelection(e) { // on selecting item on the list
+        var center_coordinate_x;
+        var center_coordinate_y;
+        var t = 0;
+        var signal = false;
+        while (t < features.features.length && signal === false) {
+            if (features.features[t].properties.LABEL === e.key) {
+                center_coordinate_x =
+                    features.features[t].geometry.center_coordinate[1];
+                center_coordinate_y =
+                    features.features[t].geometry.center_coordinate[0];
+                signal = true;
+            }
+            t++;
+        }
+        // If the location is not in geoJson file, set a default coordinate for the marker.
+        if (signal === false) {
+            center_coordinate_x = 0;
+            center_coordinate_y = 0;
+        }
+        console.log('on select item: ', e.key);
+        this.setState({
+            markerPos: [center_coordinate_x, center_coordinate_y],
+            centerLocation: e.key,
+            isClicked: 'list'
+        });
     }
-    // If the location is not in geoJson file, set a default coordinate for the marker.
-    if (signal === false) {
-      center_coordinate_x = 0;
-      center_coordinate_y = 0;
-    }
-    console.log('on select item: ', e.key);
-    this.setState({
-      markerPos: [center_coordinate_x, center_coordinate_y],
-      centerLocation: e.key,
-      isClicked: 'list'
-    });
-  }
 
   handleMapSelection(selectedRegion) { // on selecting map region
     this.setState({
@@ -77,26 +74,6 @@ class MapPanel extends Component {
 
     componentDidMount() {
     try {
-      Api.getSListData().then((resp) => {
-        // sort based on city name
-        resp.sort((a, b) => {
-          if (a.name < b.name) {
-            return -1;
-          }
-          if (a.name > b.name) {
-            return 1;
-          }
-          return 0;
-        });
-          resp.map((row) => {
-            if (this.inGeoData(row.name)) {
-                this.setState({
-                    listData: [...this.state.listData, row.name],
-                });
-            }
-        });
-      });
-
       Api.getLocations().then((resp) => {
         this.setState({
           locations: resp
@@ -105,31 +82,6 @@ class MapPanel extends Component {
     } catch (err) {
       throw err;
     }
-  }
-
-    inGeoData(location) {
-        var sign = false
-        for (var t = 0; t < features.features.length && !sign; t++) {
-            if (location == features.features[t].properties.LABEL) {
-                sign = true
-            }
-        }
-        return sign
-    }
-
-    makeList() {
-      const rows = this.state.listData.map((row) => ( 
-      <Menu.Item
-        key={row}
-        style={{
-          borderBottom: "1px solid #f1f1f1",
-        }}
-      >
-        {" "}
-        {row}{" "}
-      </Menu.Item>
-    ));
-    return rows;
   }
 
   handleSelectKeyword(keyword) {
@@ -162,7 +114,7 @@ class MapPanel extends Component {
         <div style={{ fontStyle: 'italic', color: 'gray', fontSize: '0.8rem' }}>*Click <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jAnGHnQdK9UZK_Iy9fxkdfIlat7krILq/edit#gid=1063952290">here</a> to see how we collected this data.</div>
         <div className="map_list_wrapper">
           <div className="map_wrapper leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
-            <MapComponent
+            <Map
               pos={this.state.markerPos}
               center={this.state.centerLocation}
               locations={this.state.locations}
@@ -172,17 +124,10 @@ class MapPanel extends Component {
               clearMap={this.state.clearMap}
             />
           </div>
-          <div className="region_list_wrapper">
-            <Menu
-              className="region_list"
-              theme={this.state.theme}
-              onClick={this.handleListSelection}
-              centerLocation={this.state.centerLocation}
-              selectedKeys={this.state.centerLocation}
-              mode="inline"
-            >
-              {this.makeList()}
-            </Menu>
+          <div class = "sidebar_panel">
+                    <Sidebar
+                        handleListSelection={this.handleListSelection}>
+                    </Sidebar>
           </div>
         </div>
         <div className="keywords_wrapper" style={{ display: 'flex', background: '#f7f7f7', padding: 5, alignItems: 'center' }}>

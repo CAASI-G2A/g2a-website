@@ -19,11 +19,11 @@ class MapComponent extends Component {
     super();
     this.state = {
       position: [40.446, -79.9633],
-      last_selected_location: "nowhere",
-      last_selected_location_color: null,
-      last_selected_term_location_color: [],
+      lastSelectedLocation: "nowhere",
+      lastSelectedLocationColor: null,
+      lastSelectedTermLocationColor: [],
       map: null,
-      is_frequency_selected: false,
+      isFrequencySelected: false,
     };
 
     this.eachArea = this.eachArea.bind(this);
@@ -50,15 +50,15 @@ class MapComponent extends Component {
         .style("fill", "red")
         .style("fill-opacity", 0.6);
       var opa = 0.2;
-      if (this.state.last_selected_location_color == "blue") {
+      if (this.state.lastSelectedLocationColor == "blue") {
         opa = 0.6;
       }
-      d3.select("." + this.state.last_selected_location.split(" ").join("_"))
-        .style("fill", this.state.last_selected_location_color)
+      d3.select("." + this.state.lastSelectedLocation.split(" ").join("_"))
+        .style("fill", this.state.lastSelectedLocationColor)
         .style("fill-opacity", opa);
       this.setState({
-        last_selected_location: this.props.center,
-        last_selected_location_color: last_color,
+        lastSelectedLocation: this.props.center,
+        lastSelectedLocationColor: last_color,
       });
     }
 
@@ -78,15 +78,15 @@ class MapComponent extends Component {
           );
           if (!selectedRegion.empty()) {
             d3.select("." + r.split(" ").join("_"))
-              .style("fill", this.state.last_selected_term_location_color[t])
+              .style("fill", this.state.lastSelectedTermLocationColor[t])
               .style("fill-opacity", 0.2);
           }
         });
       }
-      var last_selected_term_location_color = [];
+      var lastSelectedTermLocationColor = [];
       this.props.keywordRegions.forEach((r) => {
-         last_selected_term_location_color = [
-           ...last_selected_term_location_color,
+         lastSelectedTermLocationColor = [
+           ...lastSelectedTermLocationColor,
           d3.select("." + r.split(" ").join("_")).style("fill"),
         ];
         const selectedRegion = d3.select(
@@ -105,8 +105,8 @@ class MapComponent extends Component {
         }
       });
       this.setState({
-        last_selected_term_location_color: last_selected_term_location_color,
-        is_frequency_selected: true,
+        lastSelectedTermLocationColor: lastSelectedTermLocationColor,
+        isFrequencySelected: true,
       });
       }
 
@@ -125,7 +125,7 @@ class MapComponent extends Component {
         );
         if (!selectedRegion.empty()) {
           d3.select("." + r.split(" ").join("_"))
-            .style("fill", this.state.last_selected_term_location_color[t])
+            .style("fill", this.state.lastSelectedTermLocationColor[t])
             .style("fill-opacity", 0.2);
         }
       });
