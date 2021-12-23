@@ -267,6 +267,29 @@ class About extends Component {
             <div class="col-md-4 text-center mb-2">
               <div class="profile-img-wrapper">
                 <img
+                  src="/static/app/img/profiles/zian.jpg"
+                  class="rounded-circle"
+                  width="120"
+                  height="120"
+                  style={{objectFit: "cover"}}
+                />
+              </div>
+              <div>
+                <a
+                  href="http://www.grieftoaction.org"
+                  class="profile-name"
+                  target="_blank"
+                >
+                  Zian Wang
+                </a>
+              </div>
+              <div>Technical Team</div>
+              <div><i>Pitt SCI Information Science</i></div>
+            </div>
+
+            <div class="col-md-4 text-center mb-2">
+              <div class="profile-img-wrapper">
+                <img
                   src="/static/app/img/profiles/patrick.jpg"
                   class="rounded-circle"
                   width="120"
