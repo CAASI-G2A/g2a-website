@@ -221,7 +221,7 @@ class MapComponent extends Component {
             t++;
         }
 
-        return "no data";
+        return "No data for " + String(center);
     }
 
   render() {
