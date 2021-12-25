@@ -201,7 +201,7 @@ class MapComponent extends Component {
                     contentText[t]['2019_Full_Time_Police']
                 ))
                 var text = ""
-                text = text.concat(contentText[t]['Police_Agency_Name'] +
+                text = text.concat(contentText[t]['Municipality_Served'] +
                     link_string)
                 text = text.concat( "Full time police officers as of 2019: ")
                 text = text.concat(String(police_number))
