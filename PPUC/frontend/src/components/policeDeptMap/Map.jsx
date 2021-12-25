@@ -175,7 +175,7 @@ class MapComponent extends Component {
         var t = 1;
         var length = contentText.length;
         while (t < length) {
-            if (contentText[t]['Police_Agency_Name'] === center) {
+            if (contentText[t]['Municipality_Served'] === center) {
                 var link_string
                 if (
                     contentText[t]['Police_Department_Website'] == "" ||
