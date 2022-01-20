@@ -15,9 +15,18 @@ class Sidebar extends Component {
         };
         this.initialSideBar = this.initialSideBar.bind(this)
         this.inGeoData = this.inGeoData.bind(this)
+
+        // Add each location to the listData list
+        for (var t = 0; t < features.features.length; t++) {
+            var locationName = features.features[t].properties.LABEL;
+            this.setState({
+                listData: [...this.state.listData, locationName],
+            });
+        }
     }
 
     componentDidMount() {
+        /*
         try {
             Api.getSListData().then((resp) => {
                 // sort based on city name
@@ -41,8 +50,11 @@ class Sidebar extends Component {
         } catch (err) {
             throw err;
         }
+        */
     }
 
+    // Checks to see if data from database Location table is in the geodata
+    // JSON file
     inGeoData(location) {
         var sign = false
         for (var t = 0; t < features.features.length && !sign; t++) {
