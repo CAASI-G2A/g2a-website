@@ -7,22 +7,24 @@ import "antd/dist/antd.css";
 class Sidebar extends Component {
 
     constructor(props) {
+        // Copy all "LABEL" (Municipality Name) values from geoData.json 
+        // into a plain list, and sort it
+        var locationList = [];
+        for (var t = 0; t < features.features.length; t++){
+            locationList.push(features.features[t].properties.LABEL);
+        }
+        locationList.sort();
+
         super(props);
         this.state = {
-            listData: [],
+            // Turn locationList from above into a stateful list
+            listData: locationList,
             theme: "light",
             centerLocation: null
         };
         this.initialSideBar = this.initialSideBar.bind(this)
         this.inGeoData = this.inGeoData.bind(this)
-
-        // Add each location to the listData list
-        for (var t = 0; t < features.features.length; t++) {
-            var locationName = features.features[t].properties.LABEL;
-            this.setState({
-                listData: [...this.state.listData, locationName],
-            });
-        }
+        
     }
 
     componentDidMount() {
