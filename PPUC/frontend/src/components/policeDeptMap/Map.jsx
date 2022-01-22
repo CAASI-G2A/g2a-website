@@ -172,9 +172,9 @@ class MapComponent extends Component {
             }
         }
 
-        var t = 1;
+        var t = 0;
         var length = contentText.length;
-        while (t <= length) {
+        while (t < length) {
           // Municipality_Served is the name of the municipality, wi
             if (contentText[t]['Municipality_Served'] === center) {
                 var link_string
