@@ -3121,8 +3121,8 @@
   },
   {
     "MUNI_ID": 22434,
-    "Police_Agency_Name": "OHara Township",
-    "Municipality_Served": "OHara Township",
+    "Police_Agency_Name": "O Hara Township",
+    "Municipality_Served": "O Hara Township",
     "FID": 29481,
     "NAME": "OHARA",
     "TYPE": "TOWNSHIP",
@@ -3473,7 +3473,7 @@
   {
     "MUNI_ID": 22524,
     "Police_Agency_Name": "Penn Hills Township",
-    "Municipality_Served": "Penn Hills Municipality",
+    "Municipality_Served": "Penn Hills Township",
     "FID": 35908,
     "NAME": "PENN HILLS",
     "TYPE": "TOWNSHIP",
