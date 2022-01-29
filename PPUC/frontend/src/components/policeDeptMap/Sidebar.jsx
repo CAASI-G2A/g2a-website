@@ -7,8 +7,7 @@ import "antd/dist/antd.css";
 class Sidebar extends Component {
 
     constructor(props) {
-        // Copy all "LABEL" (Municipality Name) values from geoData.json 
-        // into a plain list, and sort it
+        // Copy all "LABEL" (Municipality Name) values from geoData into a plain list, and sort it
         var locationList = [];
         for (var t = 0; t < features.features.length; t++){
             locationList.push(features.features[t].properties.LABEL);

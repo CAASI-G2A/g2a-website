@@ -46,6 +46,7 @@ class MapComponent extends Component {
           .select("." + this.props.center.split(" ").join("_"))
           .style("fill");
       }
+      console.log(d3.select("." + this.props.center.split(" ").join("_")));
       d3.select("." + this.props.center.split(" ").join("_"))
         .style("fill", "red")
         .style("fill-opacity", 0.6);
@@ -62,7 +63,12 @@ class MapComponent extends Component {
       });
     }
 
+    // Color in selected regions which have selected keyword
+    // prevProps could either be empty or a different set of regions
     if (prevProps.keywordRegions !== this.props.keywordRegions) {
+      console.log("Made into exterior loop!");
+
+      // If prevProps was not empty (null)
       if (prevProps.keywordRegions != null) {
         var t = -1;
         prevProps.keywordRegions.forEach((r) => {
@@ -78,16 +84,28 @@ class MapComponent extends Component {
           );
           if (!selectedRegion.empty()) {
             d3.select("." + r.split(" ").join("_"))
-              .style("fill", this.state.lastSelectedTermLocationColor[t])
+              .style("fill", "blue")
               .style("fill-opacity", 0.2);
           }
         });
+      }else{
+        console.log("previous keyword regions were empty");
       }
+
+      
       var lastSelectedTermLocationColor = [];
+      // Error is somewhere in here
       this.props.keywordRegions.forEach((r) => {
-         lastSelectedTermLocationColor = [
-           ...lastSelectedTermLocationColor,
-          d3.select("." + r.split(" ").join("_")).style("fill"),
+        const selectedMuni = d3.select("." + r.split(" ").join("_"));
+        console.log(selectedMuni)
+
+        lastSelectedTermLocationColor = [
+          ...lastSelectedTermLocationColor,
+          /*
+          d3.select("." + r.split(" ").join("_"))
+            .style("fill"),
+          */
+         "blue",
         ];
         const selectedRegion = d3.select(
           "." +

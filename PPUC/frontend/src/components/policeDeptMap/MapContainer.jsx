@@ -88,7 +88,7 @@ class MapPanel extends Component {
     const keywordElClass = '.term_' + keyword.replace(' ', '_');
     d3.select('.term_selected').classed('term_selected', false);
     d3.select(keywordElClass).classed('term_selected', true);
-      console.log(frequencies[keyword])
+    console.log(frequencies[keyword])
     this.setState({
       selectedTermRegions: frequencies[keyword],
       clearMap: false,
