@@ -20,7 +20,11 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
 
-RUN git clone https://github.com/CAASI-G2A/g2a-website.git
+#RUN git clone https://github.com/CAASI-G2A/g2a-website.git     This is the actual g2a repo
+
+#my repo on my docker branch. for bugfixing
+RUN git clone https://github.com/drewwiesen155/g2a-website.git
+RUN git checkout docker
 #WORKDIR /g2a-website
 
 #Commands taken from setup wiki of the repo (Docker errors needed to add the install commands)
@@ -45,4 +49,4 @@ RUN npm run build
 
 WORKDIR /g2a-website/PPUC
 #equivalent for python3 manage.py runserver
-CMD [ "python3", "./manage.py runserver" ]
+CMD [ "python3", "./manage.py", "runserver" ]
