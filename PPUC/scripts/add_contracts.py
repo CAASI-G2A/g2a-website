@@ -34,7 +34,7 @@ def run():
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())
 
-                    # organizes lines by periods/ends of sentances  
+                    # organizes lines by periods/ends of sentences  
                     content = content.replace('\n', ' ').replace('.', '.\n')
                     # re.sub('(?<!\.)\r\n', ' ', content) 
 
