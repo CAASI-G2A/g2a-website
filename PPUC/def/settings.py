@@ -26,7 +26,7 @@ GITHUB_HOOK_KEY = '7tzuR.w&%e6W'
 WSGI_PATH = '/var/www/www_grieftoaction_org_wsgi.py'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
 
