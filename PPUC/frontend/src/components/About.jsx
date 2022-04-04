@@ -16,8 +16,8 @@ class About extends Component {
           <p className="lead">
             The ACPP team is made up of a subset of members from Grief to Action (G2A), 
             a working group at the University of Pittsburgh's Center for Analytical Approaches in Social Innovation (CAASI). 
-            Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to 
-            use data analysis to address structural racism in Pittsburgh and beyond.
+            Grief to Action started in the summer of 2020 in the wake of George Floyd's murder to concretely support racial
+            and social justice efforts through community-based, innovative application of data science.
             <br></br>
             The aim of this project is to bring more transparency to the police accountability process at 
             the local level. We hope this site allows users to navigate municipal police departments, 
