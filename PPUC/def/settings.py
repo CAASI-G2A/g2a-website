@@ -28,7 +28,7 @@ WSGI_PATH = '/var/www/www_grieftoaction_org_wsgi.py'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.grieftoaction.org','localhost:8000','127.0.0.1', '*']
+ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
@@ -118,11 +118,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-STATIC_URL = '/PxPUC/static/'
+STATIC_URL = '/static/'
 
 # Additional directories for static files
 # Webpacked assets stored here
-STATICFILES_DIRS = [BASE_DIR + '/frontend/dist',]
+STATICFILES_DIRS = [BASE_DIR + '/frontend/dist']
 
 # Allow iframe
 X_FRAME_OPTIONS = 'ALLOWALL'
