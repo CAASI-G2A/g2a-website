@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1', '*']
 INSTALLED_APPS = [
     'PxPUC',
     # Add your apps here to enable them
-    'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic',    #Makes it so that static file serving is the same for Debug = False and Debug = True. Should prevent problems in future
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 # https://docs.djangoproject.com/en/2.1/topics/http/middleware/
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   #Whitenoise works to serve the static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
