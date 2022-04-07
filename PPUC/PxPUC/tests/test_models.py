@@ -9,7 +9,6 @@ class LocationTests(APITransactionTestCase):
     """
     Ensure we can get the city and state of all locations
     """
-
     def test_get_locations(self):
         # create locations
         new_locs = Location.objects.bulk_create(
@@ -34,7 +33,6 @@ class LocationTests(APITransactionTestCase):
     """
     Ensure we can get the city and state of an individual location
     """
-
     def test_get_location(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -51,7 +49,6 @@ class LocationTests(APITransactionTestCase):
     """
     Ensure that the questions returned are categorized by their category
     """
-
     def test_get_questions(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -90,7 +87,6 @@ class LocationTests(APITransactionTestCase):
     """
     Ensure that the stages are returned
     """
-
     def test_get_stages(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -103,12 +99,29 @@ class LocationTests(APITransactionTestCase):
         parsed = json.loads(response.content)
         self.assertEqual(len(parsed.keys()), 5)
 
+    """
+    Ensure we can create and get new contracts
+    """
+    def test_init_contract(self):
+        # create contract
+        new_loc = Location.objects.create(name="CITY", state="STATE")
+        new_con = Contract.objects.create(location=new_loc, text="This is a test contract.", expiry="01/01/2029")
+
+         # attempt read
+        url = reverse("location-contract-retrieve", args=[new_con.id])
+        response = self.client.get(url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        
+        parsed = json.loads(response.content)
+        self.assertEqual(parsed["id"], 1)
+        self.assertEqual(parsed["text"], "This is a test contract.")
+        self.assertEqual(parsed["parsed"], False)
+
 
 class ResearcherTests(APITransactionTestCase):
     """
     Ensures empty search requests returns nothing
     """
-
     def test_empty_search(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -126,7 +139,6 @@ class ResearcherTests(APITransactionTestCase):
     """
     Ensures empty request returns an error
     """
-
     def test_no_query_param(self):
         # make query
         url = reverse("researcher-search")
@@ -138,7 +150,6 @@ class ResearcherTests(APITransactionTestCase):
     """
     Ensures malformed request returns an error
     """
-
     def test_malformed_search(self):
         # make query
         query = {}
@@ -151,7 +162,6 @@ class ResearcherTests(APITransactionTestCase):
     """
     Ensures correct request is processed and results are correct
     """
-
     def test_single_word_search(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -181,7 +191,6 @@ class ResearcherTests(APITransactionTestCase):
     """
     Ensures correct request is processed and results are correct
     """
-
     def test_and_search(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -213,7 +222,6 @@ class ResearcherTests(APITransactionTestCase):
     """
     Ensures correct request is processed and results are correct
     """
-
     def test_or_search(self):
         # create location
         new_loc = Location.objects.create(name="CITY", state="STATE")
@@ -242,34 +250,3 @@ class ResearcherTests(APITransactionTestCase):
         self.assertEqual(parsed[0]["sentences"][0]["text"], sentences[0].text)
         self.assertEqual(parsed[0]["sentences"][1]["text"], sentences[1].text)
         self.assertEqual(parsed[0]["sentences"][2]["text"], sentences[2].text)
-
-    
-class CapstoneTests(APITransactionTestCase):
-
-    def test_basic(self):
-        self.assertEqual(1, 1)
-    
-    """
-    Ensure we can create and get new contracts
-    """
-    def test_init_contract(self):
-        # create contract
-        new_loc = Location.objects.create(name="CITY", state="STATE")
-        new_con = Contract.objects.create(location=new_loc, text="This is a test contract.", expiry="01/01/2029")
-
-         # attempt read
-        url = reverse("location-contract-retrieve", args=[new_con.id])
-        response = self.client.get(url, format="json")
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        
-        parsed = json.loads(response.content)
-        self.assertEqual(parsed["id"], 1)
-        self.assertEqual(parsed["text"], "This is a test contract.")
-        self.assertEqual(parsed["parsed"], False)
-
-    """
-    Parse contract text file to change formatting
-    """
-    # def test_add_contracts(self):
-       
-
