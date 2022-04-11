@@ -248,6 +248,7 @@ class CapstoneTests(APITransactionTestCase):
 
     def test_basic(self):
         self.assertEqual(1, 1)
+
     
     """
     Ensure we can create and get new contracts
@@ -268,8 +269,19 @@ class CapstoneTests(APITransactionTestCase):
         self.assertEqual(parsed["parsed"], False)
 
     """
-    Parse contract text file to change formatting
+    Ensure we can create new keywords
     """
-    # def test_add_contracts(self):
-       
+    def test_init_keyword(self):
+        # create contract
+        new_loc = Location.objects.create(name="CITY", state="STATE")
+        new_con = Contract.objects.create(location=new_loc, text="This is a test contract.", expiry="01/01/2029")
 
+         # attempt read
+        url = reverse("location-contract-retrieve", args=[new_con.id])
+        response = self.client.get(url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        
+        parsed = json.loads(response.content)
+        self.assertEqual(parsed["id"], 1)
+        self.assertEqual(parsed["text"], "This is a test contract.")
+        self.assertEqual(parsed["parsed"], False)
