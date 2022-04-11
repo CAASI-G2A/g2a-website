@@ -34,8 +34,21 @@ def run():
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())
 
-                    # organizes lines by periods/ends of sentances  
-                    content = content.replace('\n', ' ').replace('.', '.\n')
+                    # Remove newlines 
+                    content = content.replace('\n', ' ')
+
+                    # Add newlines after periods
+                    content = content.replace('. ', '.\n')
+
+                    # Remove newlines in acronyms
+                    content = content.replace('\n.\.', '.\.')
+
+                    # Remove newlines in money
+                    content = content.replace('\.\n[0-9] ', '\.[0-9] ')
+
+                    # Add newlines before list items & remove them after
+                    content = content.replace(' [IVXivx0-9].\n', '\n[IVXivx0-9]. ')
+
                     # re.sub('(?<!\.)\r\n', ' ', content) 
 
                     contract = Contract.objects.get_or_create(
@@ -77,12 +90,13 @@ def clean_lines(txt):
     #     - 1-9
     #     - \n
     #     - single spaces ' '
-    #     - punctation: ! . 
+    #     - punctation: . , : ? \/
+    #     - Parentheses: () []
     #     - legal and math symbols: % $ § - 
     #     TODO: Add more/fix cases
-    txt = re.sub('[^a-zA-Z0-9\n $.!§%-]+', '', txt)
+    txt = re.sub('[^a-zA-Z0-9\n:$,§%-+\/()? .]', '', txt)
 
-    # PG: remove line breaks that are not after puncitaton
+    # PG: remove line breaks that are not after punctuation
     txt = re.sub('(?<!\.)\n', ' ', txt)
     txt = re.sub('\n', '\n\n', txt)
 
