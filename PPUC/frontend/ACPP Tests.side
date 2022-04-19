@@ -1,0 +1,507 @@
+{
+  "id": "5ce4462c-0d28-4b40-b173-e74e7873cf0c",
+  "version": "2.0",
+  "name": "ACPP Tests",
+  "url": "https://www.grieftoaction.org/#/",
+  "tests": [{
+    "id": "346bfc9c-042b-4bfb-8ebf-0cde73771dd6",
+    "name": "Test Search County filter",
+    "commands": [{
+      "id": "f6ce9fab-ba88-41d6-af29-d0b536edcd9d",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78003a9a-d869-4e4f-a285-a8ffcc78c129",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Contracts",
+      "targets": [
+        ["linkText=Police Contracts", "linkText"],
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/commentary')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "610dbceb-1250-46fe-a77a-13822974601e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to go directly to the contract search bar.",
+      "targets": [
+        ["linkText=Click here to go directly to the contract search bar.", "linkText"],
+        ["css=div > .nav-item > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to go directly to the contract search bar.')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/researchers')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to go directly to the contract search bar.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b86f8bee-cbda-409e-9300-35d0c1b8da2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a64fb937-8f1f-4d99-ba62-ef73a69cbffb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='review']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "review"
+    }, {
+      "id": "ebe7f440-d862-4a7b-9051-617ed30603fd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='review']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "24b9d6bc-d252-4c35-bc81-c3d8c9a198df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-search > path",
+      "targets": [
+        ["css=.fa-search > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e37a5b3-ae09-4bfd-b495-a3cae2f9d95e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-group > .custom-select",
+      "targets": [
+        ["css=.input-group > .custom-select", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div[5]/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5be361ed-4462-486c-9335-cb6bcff8bfe8",
+      "comment": "",
+      "command": "select",
+      "target": "css=.input-group > .custom-select",
+      "targets": [],
+      "value": "label=Avalon Borough"
+    }, {
+      "id": "1fdae11b-673e-44e7-b1e8-464bdfd43f29",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Avalon Borough",
+      "targets": [],
+      "value": "Avalon Borough"
+    }]
+  }, {
+    "id": "3d6f1fed-e052-427b-9385-e6984f57dac4",
+    "name": "Test Search results",
+    "commands": [{
+      "id": "3d10ab68-54a4-466a-a197-7f310563d9ef",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/#/researchers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c04566d7-ddd3-4d7b-838f-1846bb2cfe52",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Contracts",
+      "targets": [
+        ["linkText=Police Contracts", "linkText"],
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/commentary')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c27cfb4a-27e7-4316-b169-33e7d747e63f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to go directly to the contract search bar.",
+      "targets": [
+        ["linkText=Click here to go directly to the contract search bar.", "linkText"],
+        ["css=div > .nav-item > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to go directly to the contract search bar.')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/researchers')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to go directly to the contract search bar.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd1ca363-8e08-4496-884f-dce23509a303",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a85bce6-da66-42e6-96c9-07100aaba8cb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"critical incident\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "\"critical incident\""
+    }, {
+      "id": "43def982-745b-4203-ad7a-787c9ebfb30c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"critical incident\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "fb75af47-7841-4ebe-8f15-1a2e2175f88b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-outline-primary",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2163c458-9069-4f2e-8fd6-de004ae35782",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=h4",
+      "targets": [],
+      "value": "0 Results found!"
+    }]
+  }, {
+    "id": "b0dbc456-530a-405f-a03d-c3a5228ffcaf",
+    "name": "Test No valid results",
+    "commands": [{
+      "id": "180f25c7-e85f-4239-a9b5-54722c567aa5",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/#/researchers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb800f89-6d1a-473a-9617-a1539a23a8ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Contracts",
+      "targets": [
+        ["linkText=Police Contracts", "linkText"],
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/commentary')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0f3f372-1ef6-4ee7-aa01-288cdfdb69ef",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to go directly to the contract search bar.",
+      "targets": [
+        ["linkText=Click here to go directly to the contract search bar.", "linkText"],
+        ["css=div > .nav-item > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to go directly to the contract search bar.')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/researchers')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to go directly to the contract search bar.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06c7f2ea-d894-45a9-904a-8fabe3deb721",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05d837e5-afc5-4b45-9233-82eeec5d7b6c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"completely made up and nonexistent search\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "\"completely made up and nonexistent search\""
+    }, {
+      "id": "7d80397b-c592-41ce-ba22-554a0e267fd9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"completely made up and nonexistent search\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "79862957-60ba-4f81-a1a4-ae38f9b7ba8c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [],
+      "value": "0 Results found!"
+    }]
+  }, {
+    "id": "c8d96871-1da0-44ca-a6a6-dd66a23a0700",
+    "name": "Test Search Result Link",
+    "commands": [{
+      "id": "0712d28a-7f95-4663-9bc0-a3e0e5d6bbf0",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/#/researchers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "855ce222-3cc4-4677-acba-c65cc8701e9d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Contracts",
+      "targets": [
+        ["linkText=Police Contracts", "linkText"],
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/commentary')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f51a8e6-a6f0-470b-9d7a-2122c4d6f4a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to go directly to the contract search bar.",
+      "targets": [
+        ["linkText=Click here to go directly to the contract search bar.", "linkText"],
+        ["css=div > .nav-item > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to go directly to the contract search bar.')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/researchers')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to go directly to the contract search bar.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "883198d2-cd3f-4351-b00d-d0919a465c93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a1f785c-50b5-44d4-a1d8-c785e4e0a2fe",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"critical incidents\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "\"critical incidents\""
+    }, {
+      "id": "901c668d-34c6-445e-973d-24aadb776dbb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@value='\"critical incidents\"']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a907b89a-05d8-45d3-a426-5e14188557e9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pittsburgh City",
+      "targets": [
+        ["linkText=Pittsburgh City", "linkText"],
+        ["css=h3 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Pittsburgh City')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div[5]/div[3]/div/div/div/h3/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/location/24')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pittsburgh City')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40c2210d-597c-4f78-8ef6-89624a6601bd",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd8b590f-b853-4667-931f-09d9df6b65a1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Pittsburgh City Contract"
+    }]
+  }, {
+    "id": "3a54483c-4fcc-4714-adaf-4dbb668bacac",
+    "name": "Test Results Number of results",
+    "commands": [{
+      "id": "d3797fa8-33c7-480b-a5f9-6e1d2b420e42",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/#/researchers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24a44b65-ccf4-479f-b13f-9c22abb32e87",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Contracts",
+      "targets": [
+        ["linkText=Police Contracts", "linkText"],
+        ["css=.nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/commentary')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f373a9f0-1e1e-4712-97a7-b2b37557d349",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to go directly to the contract search bar.",
+      "targets": [
+        ["linkText=Click here to go directly to the contract search bar.", "linkText"],
+        ["css=div > .nav-item > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to go directly to the contract search bar.')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/researchers')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to go directly to the contract search bar.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f4be294-03cc-4fb8-a7d8-ea63d7bf5ced",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ex-keyword:nth-child(2)",
+      "targets": [
+        ["css=.ex-keyword:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'interview')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8796d53c-b9eb-4b91-a4bd-fad6559f167e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-3 > .custom-select",
+      "targets": [
+        ["css=.col-md-3 > .custom-select", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div[5]/div/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50c6ff91-04c2-424e-b7da-5116d447c099",
+      "comment": "",
+      "command": "select",
+      "target": "css=.col-md-3 > .custom-select",
+      "targets": [],
+      "value": "label=10"
+    }, {
+      "id": "ef088a30-7849-44ec-b038-3f6b7d7860b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=1",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "75538a4d-e703-44df-9bea-499f7f97a9cd",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=2",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "fac9c021-b3a0-40fd-8e55-3ac169bc0ff0",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=»",
+      "targets": [],
+      "value": "»"
+    }]
+  }],
+  "suites": [{
+    "id": "5602315e-d839-40a3-9110-bc02df29158d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.grieftoaction.org/#/"],
+  "plugins": []
+}

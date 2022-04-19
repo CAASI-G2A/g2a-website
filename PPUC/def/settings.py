@@ -26,15 +26,16 @@ GITHUB_HOOK_KEY = '7tzuR.w&%e6W'
 WSGI_PATH = '/var/www/www_grieftoaction_org_wsgi.py'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['www.grieftoaction.org','localhost','127.0.0.1', '*']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
 INSTALLED_APPS = [
     'PxPUC',
     # Add your apps here to enable them
+    'whitenoise.runserver_nostatic',    #Makes it so that static file serving is the same for Debug = False and Debug = True. Should prevent problems in future
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
 # https://docs.djangoproject.com/en/2.1/topics/http/middleware/
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   #Whitenoise works to serve the static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,11 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'PxPUC/static')
 
 # Additional directories for static files
 # Webpacked assets stored here
 STATICFILES_DIRS = [BASE_DIR + '/frontend/dist']
-
 
 # Allow iframe
 X_FRAME_OPTIONS = 'ALLOWALL'
