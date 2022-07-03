@@ -15,6 +15,11 @@ class Footer extends Component {
           individual case, you should consult an attorney for advice regarding
           your individual situation.
         </p>
+        <div>
+          <p>
+            Center for Analytical Approaches to Social Innovation, University of Pittsburgh. Allegheny County Policing Project Contract Dataset (last updated 2021-11-19). <a href="https://www.grieftoaction.org/">https://www.grieftoaction.org/</a>
+          </p>
+        </div>
         <p>&copy; {new Date().getFullYear()} - CAASI From Grief to Action</p>
       </footer>
     );

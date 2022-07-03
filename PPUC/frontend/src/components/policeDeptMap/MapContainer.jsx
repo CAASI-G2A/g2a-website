@@ -7,6 +7,7 @@ import features from "../../data/geoData.json";
 import frequencies from "./../../data/frequency.json";
 import "antd/dist/antd.css";
 import Sidebar from "./Sidebar"
+import DropdownButton from "antd/lib/dropdown/dropdown-button";
 class MapPanel extends Component {
   constructor(props) {
     super(props);
@@ -191,6 +192,16 @@ class MapPanel extends Component {
             <li>Click on any of these police contract keywords to see the boroughs where they appear. These keywords may relate to policy accountability concerns, 
               such as disqualification of misconduct complaints or destruction of misconduct records (Read more <a target="_blank" href="https://www.grieftoaction.org/#/commentary">here</a>)
             </li>
+            <li>
+              Tests
+            </li>
+
+            <select>
+              <option>Aspinwall</option>
+              <option>Pittsburgh</option>
+              <option>Robinson Township</option>
+            </select>
+
           </ul>
         </div>
       </div>

@@ -128,7 +128,7 @@ class Landing extends Component {
             fragmentation of all 130 municipalities which makes the process
             harder to navigate. Our tools consolidate information in
             easy-to-navigate ways for citizens, researchers, and activists
-            interested in more police accountability in our country.
+            interested in more police accountability in our countsy.
           </p>
         </div>
         <hr class="my-4" />

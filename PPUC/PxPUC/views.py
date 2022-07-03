@@ -321,7 +321,8 @@ class ResearcherSearchList(generics.ListAPIView):
 
         return queryset
 
-# Used for FAQ page, gets list of "questions" for the location (which is specified as null, since they 
+
+# Used for FAQ page, gets list of "questions" for the location (which is specified as null, since they
 # all refer to the same location, i.e. Allegheny County)
 class LocationQuestionList(generics.ListAPIView):
     serializer_class = CategorySerializer
