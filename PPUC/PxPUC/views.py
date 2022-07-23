@@ -238,10 +238,10 @@ class ResearcherSearchList(generics.ListAPIView):
             # we hit an operand
             if type(query) is str:
                 if parent_obj:
-                    query = query.strip('"')
+                    # query = query.strip('"')
                     return Q(sentences__text__icontains=query)
                 else:
-                    query = query.strip('"')
+                    # uery = query.strip('"')
                     # print("SECOND BLOCK " + str(query))
                     return Q(text__icontains=query)
             else:
@@ -260,10 +260,8 @@ class ResearcherSearchList(generics.ListAPIView):
 
         # Get query from "self" = calling object
         # These blocks run BEFORE the build_filter
-        # query = self.request.query_params.get("query")
         query = self.request.GET.get("query", "")
-        print(query)
-        if query is "":
+        if query is None:
             raise serializers.ValidationError(
                 {"message": "Request missing query string parameter 'query'."}
             )

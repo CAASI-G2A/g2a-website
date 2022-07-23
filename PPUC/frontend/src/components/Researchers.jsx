@@ -117,9 +117,8 @@ class Researchers extends Component {
       }
 
       //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = this.state.searchQuery;
+      const searchQuery = '"' + this.state.searchQuery + '"';
       // parse down to just the words being searched for, for highlighting
-      console.log(this.state.searchQuery);
       const searchQueryWords = getQueryWords(searchQuery);
       
 
