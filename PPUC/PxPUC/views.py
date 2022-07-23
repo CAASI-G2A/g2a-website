@@ -239,7 +239,6 @@ class ResearcherSearchList(generics.ListAPIView):
             if type(query) is str:
                 if parent_obj:
                     query = query.strip('"')
-                    # print("FIRST BLOCK " + str(query))
                     return Q(sentences__text__icontains=query)
                 else:
                     query = query.strip('"')
@@ -261,8 +260,10 @@ class ResearcherSearchList(generics.ListAPIView):
 
         # Get query from "self" = calling object
         # These blocks run BEFORE the build_filter
-        query = self.request.query_params.get("query")
-        if query is None:
+        # query = self.request.query_params.get("query")
+        query = self.request.GET.get("query", "")
+        print(query)
+        if query is "":
             raise serializers.ValidationError(
                 {"message": "Request missing query string parameter 'query'."}
             )
@@ -275,7 +276,6 @@ class ResearcherSearchList(generics.ListAPIView):
             )
 
         # Ensure that the query field was included in the request after it was processed
-        query = query.get("query")
         if query is None:
             raise serializers.ValidationError(
                 {"message": "JSON root field 'query' missing from request data."}
