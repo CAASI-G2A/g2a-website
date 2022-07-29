@@ -2,6 +2,7 @@
 Definition of views.
 """
 
+from cgitb import text
 from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q, Prefetch, Count
@@ -232,86 +233,55 @@ class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
 
     def get_queryset(self):
-        # Referred to later in get_queryset
-
-        def build_filter(query, parent_obj=False):
-            # we hit an operand
-            if type(query) is str:
-                if parent_obj:
-                    # query = query.strip('"')
-                    return Q(sentences__text__icontains=query)
-                else:
-                    # uery = query.strip('"')
-                    # print("SECOND BLOCK " + str(query))
-                    return Q(text__icontains=query)
-            else:
-                # If query is compound (uses operations), must build the filter first
-                # build_filter is recursively run for each individual operand
-                if query["operation"] == "AND":
-                    # print("THIRD BLOCK " + query["operand1"] + " " + query["operand2"])
-                    return build_filter(query["operand1"], parent_obj) & build_filter(
-                        query["operand2"], parent_obj
-                    )
-                else:
-                    # print("FOURTH BLOCK " + query["operand1"] + " " + query["operand2"])
-                    return build_filter(query["operand1"], parent_obj) | build_filter(
-                        query["operand2"], parent_obj
-                    )
 
         # Get query from "self" = calling object
-        # These blocks run BEFORE the build_filter
         query = self.request.GET.get("query", "")
         if query is None:
             raise serializers.ValidationError(
                 {"message": "Request missing query string parameter 'query'."}
             )
-        # Attempt to load the query from the JSON-formatted request
-        try:
-            query = json.loads(query)
-        except:
-            raise serializers.ValidationError(
-                {"message": "Invalid JSON data received."}
-            )
 
-        # Ensure that the query field was included in the request after it was processed
-        if query is None:
-            raise serializers.ValidationError(
-                {"message": "JSON root field 'query' missing from request data."}
-            )
+        # Remove the quotes surrounding the query (which are added for processing in the URL)
+        query = query[1:-1]
 
-        # build filter on search terms
-        # NOW we call build_filter
-        # FIRST to build the query for searching the sentences
-        # SECOND to build filter to be used to count results (can we use the same one?)
-        prefetch_query_filter = build_filter(query)
-        prefetch_queryset = Sentence.objects.filter(prefetch_query_filter)
-        count_query_filter = build_filter(query, parent_obj=True)
-        sentence_queryset = (
-            Location.objects.all()
-            .annotate(sentences_count=Count("sentences", filter=count_query_filter))
-            .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
-            .exclude(sentences_count=0)
-        )
+        # Build filter on search terms
+        # First , query for searching the sentences
+        # Second, query for number of results
+
+        queryset = Location.objects.none()
+        query_strings = query.split()
+
+        for word in query_strings:
+            prefetch_queryset = Sentence.objects.filter(text__icontains=word)
+            count_query_filter = Q(sentences__text__icontains=word)
+            sentence_queryset = (
+                Location.objects.all()
+                .annotate(sentences_count=Count("sentences", filter=count_query_filter))
+                .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
+                .exclude(sentences_count=0)
+            )
+            queryset = queryset | sentence_queryset
 
         # perform lookup as if they're looking for a specific city by name
-        def build_loc_filter(query):
-            # we hit an operand
-            if type(query) is str:
-                return Q(name__icontains=query)
-            else:
-                if query["operation"] == "AND":
-                    return build_loc_filter(query["operand1"]) & build_loc_filter(
-                        query["operand2"]
-                    )
-                else:
-                    return build_loc_filter(query["operand1"]) | build_loc_filter(
-                        query["operand2"]
-                    )
+        # def build_loc_filter(query):
+        #    # we hit an operand
+        #    if type(query) is str:
+        #        return Q(name__icontains=query)
+        #    else:
+        #        if query["operation"] == "AND":
+        #            return build_loc_filter(query["operand1"]) & build_loc_filter(
+        #                query["operand2"]
+        #            )
+        #        else:
+        #            return build_loc_filter(query["operand1"]) | build_loc_filter(
+        #                query["operand2"]
+        #            )
 
-        location_queryset = Location.objects.all().filter(build_loc_filter(query))
+        # location_queryset = Location.objects.all().filter(build_loc_filter(query))
 
         # combine results
-        queryset = (sentence_queryset | location_queryset).distinct()
+        # queryset = (sentence_queryset | location_queryset).distinct()
+        queryset = sentence_queryset
 
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
