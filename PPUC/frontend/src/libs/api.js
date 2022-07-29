@@ -16,7 +16,7 @@ const Api = {
     getLocationGlossary: (lid) => `${Api.BASE_PATH}/location/${lid}/glossary`,
     getLocationStages: (lid) => `${Api.BASE_PATH}/location/${lid}/stages`,
     getResearcherSearchResults: (query) =>
-      `${Api.BASE_PATH}/researcher?query=${JSON.stringify(query)}`,
+      `${Api.BASE_PATH}/researcher?query=${query}`,
     getSListData: () => `${Api.BASE_PATH}/muni_list_data`,
   },
   getLocations: () => {
