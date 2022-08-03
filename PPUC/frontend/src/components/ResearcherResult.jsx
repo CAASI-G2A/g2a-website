@@ -26,6 +26,7 @@ class ResearcherResultSentence extends Component {
    }
 
   render() {
+    var words = this.props.searchQueryWords[0].split(" ");
     return (
       <p
         className={`${
@@ -45,7 +46,7 @@ class ResearcherResultSentence extends Component {
         )}
         <Highlighter
           highlightClassName="font-weight-bold px-0 bg-transparent"
-          searchWords={this.props.searchQueryWords}
+          searchWords={words}
           autoEscape={true}
           textToHighlight={this.props.sentence.text}
         />
