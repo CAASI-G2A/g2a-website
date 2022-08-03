@@ -104,20 +104,19 @@ class Researchers extends Component {
 
     // parse query
     try {
-      // Defines function to remove quotation marks from the search string
       function getQueryWords(query) {
         if (typeof query === "string") {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
           return [query.replace(/['"]+/g, "")];
         } else {
-          throw 'Query is not a string';
+          return getQueryWords(query["operand1"]).concat(
+            getQueryWords(query["operand2"])
+          );
         }
       }
-
-      //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + this.state.searchQuery + '"';
+      const searchQuery = SearchParser.parse(this.state.searchQuery);
       // parse down to just the words being searched for, for highlighting
-      const searchQueryWords = getQueryWords(searchQuery);
+      const searchQueryWords = getQueryWords(searchQuery["query"]);
       
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
