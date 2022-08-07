@@ -216,23 +216,7 @@ class Researchers extends Component {
             style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
           >
             <li className="nav-item nav-link">
-              <b>**How to use the search bar: </b> enter the keyword that you want to find in police contracts. Enclose multi-word phrases in quotations (i.e. “false arrest”). &nbsp;
-                <a
-                  className="collapsed"
-                  role="button"
-                  data-toggle="collapse"
-                  href="#collapseAdvanced"
-                  aria-expanded="false"
-                  aria-controls="collapseAdvanced"
-                >
-                  Click for advanced search settings.
-                </a>
-                <div
-                    id="collapseAdvanced"
-                    class="collapse"
-                  >
-                  To search for contracts that contain multiple keywords simultaneously, separate the keywords with <b>“AND”</b> (i.e. “anonymous” AND “unfounded”).<br></br><br></br> To search for contracts that contain at least one of multiple keywords, separate the keywords with <b>“OR”</b> (i.e. “critical incident” OR “traumatic incident”).
-                </div>
+              <h4>**How to use the search bar: </h4> enter the keyword that you want to find in police contracts.
                 <br />
                 <br /> 
               Below are some keyword suggestions. (<NavLink className={isActive =>"nav-link" + (!isActive ? " unselected" : "")}to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)
