@@ -244,44 +244,27 @@ class ResearcherSearchList(generics.ListAPIView):
         # Remove the quotes surrounding the query (which are added for processing in the URL)
         query = query[1:-1]
 
-        # Build filter on search terms
-        # First , query for searching the sentences
-        # Second, query for number of results
-
+        # Create an empty queryset to add results for each subquery
         queryset = Location.objects.none()
-        query_strings = query.split()
 
-        for word in query_strings:
-            prefetch_queryset = Sentence.objects.filter(text__icontains=word)
-            count_query_filter = Q(sentences__text__icontains=word)
+        # This loop takes the search query and finds results for each possible query, making the
+        # query smaller from right to left (i.e. police officer salary -> police officer -> police)
+        for i in range(len(query.split())):
+            cur_query = query.rsplit(" ", i)[0]
+            print(cur_query)
+
+            prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
+            count_query_filter = Q(sentences__text__icontains=cur_query)
             sentence_queryset = (
                 Location.objects.all()
                 .annotate(sentences_count=Count("sentences", filter=count_query_filter))
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
             )
-            queryset = queryset | sentence_queryset
 
-        # perform lookup as if they're looking for a specific city by name
-        # def build_loc_filter(query):
-        #    # we hit an operand
-        #    if type(query) is str:
-        #        return Q(name__icontains=query)
-        #    else:
-        #        if query["operation"] == "AND":
-        #            return build_loc_filter(query["operand1"]) & build_loc_filter(
-        #                query["operand2"]
-        #            )
-        #        else:
-        #            return build_loc_filter(query["operand1"]) | build_loc_filter(
-        #                query["operand2"]
-        #            )
-
-        # location_queryset = Location.objects.all().filter(build_loc_filter(query))
-
-        # combine results
-        # queryset = (sentence_queryset | location_queryset).distinct()
-        queryset = sentence_queryset
+            # Compare whether in the current sentence_queryset or in the previous
+            # sentence_queryset MUST be listed first, so that the newest results are added
+            queryset = sentence_queryset | queryset
 
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())

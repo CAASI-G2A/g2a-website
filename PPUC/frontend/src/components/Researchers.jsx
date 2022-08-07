@@ -118,6 +118,8 @@ class Researchers extends Component {
       const searchQuery = '"' + this.state.searchQuery + '"';
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
+      console.log(searchQuery)
+
       
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
@@ -134,6 +136,7 @@ class Researchers extends Component {
         // parse states out
         const respCounties = [...new Set(resp.map((a) => a.name))];
         this.setState({
+          //queryResults is set to the response for views.py ResearcherSearchList()
           queryResults: resp,
           filteredQueryResults: resp,
           queryResultCounties: respCounties,
@@ -241,7 +244,7 @@ class Researchers extends Component {
             <div className="btn-group" role="group" aria-label="...">
               <button
                 type="button"
-                onClick={() => this.setSearchQuery('unfounded', true)}
+                onClick={() => this.setSearchQuery("unfounded", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 unfounded
@@ -255,14 +258,14 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery('interrogation', true)}
+                onClick={() => this.setSearchQuery("interrogation", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 interrogation
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery('"false arrest"', true)}
+                onClick={() => this.setSearchQuery("false arrest", true)}
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 false arrest
@@ -276,7 +279,7 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery('"public comment"', true)}
+                onClick={() => this.setSearchQuery("public comment", true)}
                 className="ex-keyword btn btn-info btn-rounded"
               >
                 public comment

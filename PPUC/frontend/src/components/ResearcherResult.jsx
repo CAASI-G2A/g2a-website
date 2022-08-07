@@ -61,12 +61,14 @@ class ResearcherResult extends Component {
       <div>
         <div className="row mb-2">
           <div className="col-md-12">
+            {/* Location Name */}
             <h3>
               <Link to={`${routes.location}/${this.props.result.id}`}>
                 {this.props.result.name}
               </Link>
             </h3>
           </div>
+          {/* Default text to be display if search results are not found */}
           {this.props.result.sentences.length === 0 && (
             <div className="col-md-12">
               <p className="text-center">
