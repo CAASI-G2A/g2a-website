@@ -208,9 +208,6 @@ class Researchers extends Component {
           </div>
         </div>
         <div className="col-lg-12 mt-1">
-          <div className="col-md-6 offset-md-3 small text-secondary">
-            e.g., interview AND review
-          </div>
           <div
             className="col-md-6 offset-md-3 text-secondary"
             style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
