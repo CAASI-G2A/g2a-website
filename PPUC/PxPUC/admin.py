@@ -3,7 +3,7 @@ from django.db import models
 from django.forms import Textarea
 
 # Register your models here.
-from .models import Location
+from .models import Location, SearchQuery
 from .models import Category
 from .models import Contract
 from .models import Sentence
@@ -21,3 +21,4 @@ admin.site.register(Contract)
 admin.site.register(Sentence)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Problematic_Sentence)
+admin.site.register(SearchQuery)
