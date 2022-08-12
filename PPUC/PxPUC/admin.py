@@ -21,4 +21,8 @@ admin.site.register(Contract)
 admin.site.register(Sentence)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Problematic_Sentence)
-admin.site.register(SearchQuery)
+
+
+@admin.register(SearchQuery)
+class SearchQueryAdmin(admin.ModelAdmin):
+    list_display = ("query", "timestamp")

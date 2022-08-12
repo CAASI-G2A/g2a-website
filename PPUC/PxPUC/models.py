@@ -2,6 +2,7 @@
 Definition of models.
 """
 
+from tabnanny import verbose
 from django.db import models, reset_queries
 
 # Location object is the foundation for all other objects, most refer to it
@@ -104,3 +105,9 @@ class SearchQuery(models.Model):
     query = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     results = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.query
+
+    class Meta:
+        verbose_name_plural = "Search Queries"
