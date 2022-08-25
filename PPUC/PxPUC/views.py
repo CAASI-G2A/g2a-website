@@ -4,6 +4,7 @@ Definition of views.
 
 from cgitb import text
 from datetime import datetime
+from operator import contains
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q, Prefetch, Count
 from django.http import HttpResponse, HttpResponseForbidden, HttpRequest
@@ -234,7 +235,6 @@ class ResearcherSearchList(generics.ListAPIView):
 
     def get_queryset(self):
 
-        # Get query from "self" = calling object
         query = self.request.GET.get("query", "")
         if query is None:
             raise serializers.ValidationError(
@@ -243,6 +243,12 @@ class ResearcherSearchList(generics.ListAPIView):
 
         # Remove the quotes surrounding the query (which are added for processing in the URL)
         query = query[1:-1]
+        if (
+            query.__contains__('"')
+            | query.__contains__("AND")
+            | query.__contains__("OR")
+        ):
+            print("Contains operators")
 
         # Create an empty queryset to add results for each subquery
         queryset = Location.objects.none()
