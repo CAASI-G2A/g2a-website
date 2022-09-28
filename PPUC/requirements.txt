@@ -1,7 +1,7 @@
-django == 4.0.4
+django == 3.1.3
 django-extensions
 nltk
-numpy == 1.22.0
+numpy == 1.19.3
 pandas
 django-pandas
 django-manifest-loader
