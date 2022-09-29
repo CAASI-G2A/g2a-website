@@ -8,3 +8,4 @@ django-manifest-loader
 djangorestframework
 django-cors-headers
 django-after-response
+whitenoise

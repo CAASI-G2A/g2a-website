@@ -167,6 +167,23 @@ class Researchers extends Component {
     }
   }
 
+  /* Accessor methods added for testing suite
+  getPageSize(){
+    return this.state.pageSize;
+  }
+
+  getSearchQuery(){
+    return this.state.searchQuery;
+  }
+
+  getCountyFilter(){
+    return this.state.countyFilter;
+  }
+
+  getSearchQueryWords(){
+    return this.state.searchQueryWords;
+  }
+*/
   componentDidMount() {
     const queryParams = QueryString.parse(this.props.location.search);
     // if search already set, use it
