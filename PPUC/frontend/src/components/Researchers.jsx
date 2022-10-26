@@ -9,6 +9,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import { removeStopwords, eng } from 'stopword'
 
 class Researchers extends Component {
   constructor(props) {
@@ -108,19 +109,26 @@ class Researchers extends Component {
       function getQueryWords(query) {
         if (typeof query === "string") {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
-          return [query.replace(/['"]+/g, "")];
+          query = query.replace(/['"]+/g, "")
+
+          let tempQuery = ""
+          let lowerQuery = query.toLowerCase().split(" ")
+          let newQuery = removeStopwords(lowerQuery, eng)
+          
+          query = (newQuery.length <= 3) ? query : newQuery.join(" ")
+
+          return [query]
+
         } else {
           throw 'Query is not a string';
         }
       }
 
       //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + this.state.searchQuery + '"';
+      const searchQuery = '"' + getQueryWords(this.state.searchQuery)[0] + '"';
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
-      console.log(searchQuery)
 
-      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
