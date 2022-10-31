@@ -115,9 +115,10 @@ class Researchers extends Component {
           let lowerQuery = query.toLowerCase().split(" ")
           let newQuery = removeStopwords(lowerQuery, eng)
           
-          query = (newQuery.length <= 3) ? query : newQuery.join(" ")
+          // If user input query is constructed solely of stop words, set query to original input
+          query = (newQuery.length == 0) ? query : newQuery.join(" ")
 
-          return [query]
+          return [query.trim()]
 
         } else {
           throw 'Query is not a string';
