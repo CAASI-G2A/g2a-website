@@ -45,6 +45,19 @@ class Commentary extends Component {
       showPublicComment: false,
       // hoveredPublicComment: false,
 
+      searchQuery: "",
+      searchQueryWords: [],
+      searchQueryError: null,
+      queryResults: null,
+      filteredQueryResults: null,
+      queryResultCounties: null,
+      countyFilter: "null",
+      currentPage: 1,
+      totalPages: 1,
+      pageSize: 10,
+      showResult: false,
+
+      keywords: [],
     };
 
     // location of plus and minus icons that show up 
@@ -54,6 +67,11 @@ class Commentary extends Component {
     };
 
     this.handleTitleClick = this.handleTitleClick.bind(this);
+
+    this.setSearchQuery = this.setSearchQuery.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+
+    this.handleClickKeywords = this.handleClickKeywords.bind(this);
 
     const styles = {
        myTextStyle: {
@@ -65,7 +83,85 @@ class Commentary extends Component {
     };
     
   }
-  
+  setSearchQuery(newQuery, autoSearch) {
+    this.setState(
+      {
+        searchQuery: newQuery,
+      },
+      () => (autoSearch ? this.handleSearch() : null)
+    );
+  }
+
+  handleSearch(event) 
+  {
+    if (event) {
+      event.preventDefault();
+    }
+
+    // parse query
+    try {
+      // Defines function to remove quotation marks from the search string
+      function getQueryWords(query) {
+        if (typeof query === "string") {
+          // Patrick Gavazzi: removes quotation marks from search string for highlighting
+          return [query.replace(/['"]+/g, "")];
+        } else {
+          throw 'Query is not a string';
+        }
+      }
+
+      //const searchQuery = SearchParser.parse(this.state.searchQuery);
+      const searchQuery = '"' + this.state.searchQuery + '"';
+      // parse down to just the words being searched for, for highlighting
+      const searchQueryWords = getQueryWords(searchQuery);
+      console.log(searchQuery)
+
+      Api.getResearcherSearchResults(searchQuery).then((resp) => {
+        // sort based on city name
+        resp.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        // parse states out
+        const respCounties = [...new Set(resp.map((a) => a.name))];
+        this.setState({
+          //queryResults is set to the response for views.py ResearcherSearchList()
+          queryResults: resp,
+          filteredQueryResults: resp,
+          queryResultCounties: respCounties,
+          searchQueryError: null,
+          searchQueryWords: searchQueryWords,
+          countyFilter: "null",
+          totalPages: Math.ceil(resp.length / this.state.pageSize),
+          showResult: true,
+        });
+      });
+      // TODO: Modify this URLSearchParam to allow for selection of location
+      // will also then need to modify API, and Python method (and possible urls.py)
+      // set search query param
+      this.props.history.push({
+        pathname: routes.researchers,
+        search:
+          "?" +
+          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
+      });
+    } catch (err) {
+      if (err instanceof SearchParser.SyntaxError) {
+        this.setState({
+          searchQueryError: err,
+        });
+      } else {
+        throw err;
+      }
+    }
+  }
+
+
 
   handleTitleClick(to_show) {
     // Look for which click was executed
@@ -98,6 +194,23 @@ class Commentary extends Component {
     window.scrollTo(0, 0);
   }
 
+  handleClickKeywords(categories) {
+
+    if (categories == "complaints") {
+      this.setState({ keywords: ["unfounded","citizen complaint"] });
+    } else if (categories == "interrogation") {
+      this.setState({ keywords: ["interview","critical incident"] });
+    } else if (categories == "information") {
+      this.setState({ keywords: ["interrogation","accused"] });
+    } else if (categories == "costs") {
+      this.setState({ keywords: ["false arrest","liability insurance","defense insurance"] });
+    } else if (categories == "records") {
+      this.setState({ keywords: ["reprimand","personnel file"] });
+    } else if (categories == "consequences") {
+      this.setState({ keywords: ["public comment"] });
+    } 
+    
+  }
 
   render() {
     // maybe put in class
@@ -161,9 +274,102 @@ class Commentary extends Component {
           </div>
           <div style={{ textAlign: "right"}}>
             <li className="nav-item nav-link">
-              <NavLink  to={routes.researchers} style={{ fontSize: "1.3rem" }} > 
-                Click here to go directly to the contract search bar.  
-              </NavLink>
+            <div className="col-md-6 offset-md-3">
+                <form onSubmit={(e) => this.handleSearch(e)}>
+                  
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className={`form-control input-lg ${
+                        this.state.searchQueryError ? "border-danger" : ""
+                      }`}
+                      placeholder="Search Query..."
+
+                      value={this.state.searchQuery}
+                      onChange={(event) =>
+                        this.setSearchQuery(event.target.value, false)
+                      }
+                    />
+                    <div className="input-group-append">
+                      <button className="btn btn-outline-primary" type="submit">
+                        <FontAwesomeIcon icon={faSearch} />
+                      </button>
+                    </div>
+                  </div>
+                  {this.state.searchQueryError && (
+                    <p className="text-danger text-center">
+                      This search query is invalid
+                    </p>
+                  )}
+                </form>
+              </div>
+              <br />
+              <div 
+                className="search_categories"
+                style={{
+                  textAlign: "left",
+                  overflow: "auto",
+                  textDecoration: "underline",
+                  height: "100px",
+                  color: "#00008b",
+                }}
+              >
+                <div onClick={() => this.handleClickKeywords("complaints")}>
+                  <a>
+                    Disqualify Misconduct Complaints
+                  </a>
+                </div>
+
+                <div onClick={() => this.handleClickKeywords("interrogation")}>
+                  <a>
+                    Prevents Immediate Interrogation
+                  </a>
+                </div>
+
+                <div onClick={() => this.handleClickKeywords("information")}>
+                  <a>
+                    Unfair Access to Information
+                  </a>
+                </div>
+
+                <div onClick={() => this.handleClickKeywords("costs")}>
+                  <a>
+                    Legal Costs
+                  </a>
+                </div>
+
+                <div onClick={() => this.handleClickKeywords("records")}>
+                  <a>
+                    Destroys Misconduct Records
+                  </a>
+                </div>
+
+                <div onClick={() => this.handleClickKeywords("consequences")}>
+                  <a>
+                    Limits Disciplinary Consequences
+                  </a>
+                </div>
+
+              </div>
+                <br />
+                <div style={{
+                  textAlign: "right"
+                }}>
+                  Suggested key words:
+                </div>
+                <div style={{
+                  textDecoration: "underline",
+                  color: "#00008b",
+                }}>
+                  {this.state.keywords.map((keyword, i) => 
+                      (
+                        <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}>
+                          {i == (this.state.keywords.length - 1) ? keyword: keyword + ", "}
+                        </a>
+                      )
+                    )
+                  }
+                </div>
                 <br />
               <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
                 How to read a contract *(PDF)

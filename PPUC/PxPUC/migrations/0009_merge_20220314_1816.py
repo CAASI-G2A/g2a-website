@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("PxPUC", "0008_auto_20211130_1541"),
-        ("PxPUC", "0005_auto_20211007_2014"),
+        ("PxPUC", "0005_auto_20211001_0309"),
     ]
 
     operations = []
