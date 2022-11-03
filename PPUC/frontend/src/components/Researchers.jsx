@@ -123,16 +123,29 @@ class Researchers extends Component {
       
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
-        // sort based on city name
+        // // sort based on city name
+        // resp.sort((a, b) => {
+        //   if (a.name < b.name) {
+        //     return -1;
+        //   }
+        //   if (a.name > b.name) {
+        //     return 1;
+        //   }
+        //   return 0;
+        // });
+
+        // sort based on num of mathching sentences
         resp.sort((a, b) => {
-          if (a.name < b.name) {
+          if (a.sentences.length > b.sentences.length) {
             return -1;
           }
-          if (a.name > b.name) {
+          if (a.sentences.length < b.sentences.length) {
             return 1;
           }
           return 0;
         });
+        console.log(resp)
+
         // parse states out
         const respCounties = [...new Set(resp.map((a) => a.name))];
         this.setState({
