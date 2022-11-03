@@ -111,7 +111,6 @@ class Researchers extends Component {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
           query = query.replace(/['"]+/g, "")
 
-          let tempQuery = ""
           let lowerQuery = query.toLowerCase().split(" ")
           let newQuery = removeStopwords(lowerQuery, eng)
           
