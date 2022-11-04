@@ -1,0 +1,26 @@
+{
+	"Disqualify Misconduct Complaints": [
+		"unfounded",
+		"citizen complaint"
+	],
+	"Prevents Immediate Interrogation": [
+		"interview",
+		"critical incident"
+	],
+	"Unfair Access to Information": [
+		"interrogation",
+		"accused"
+	],
+	"Legal Costs": [
+		"false arrest",
+		"liability insurance",
+		"defense insurance"
+	],
+	"Destroys Misconduct Records": [
+		"reprimand",
+		"personnel file"
+	],
+	"Limits Disciplinary Consequences": [
+		"public comment"
+	]
+}
