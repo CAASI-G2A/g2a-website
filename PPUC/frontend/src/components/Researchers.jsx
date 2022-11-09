@@ -97,6 +97,46 @@ class Researchers extends Component {
     }
   }
 
+  setSortBy(newSort) {
+    if (newSort) {
+      if (newSort === "numSentences") {
+        // sort based on num of mathching sentences
+        let temp = this.state.queryResults;
+        temp.sort((a, b) => {
+          if (a.sentences.length > b.sentences.length) {
+            return -1;
+          }
+          if (a.sentences.length < b.sentences.length) {
+            return 1;
+          }
+          return 0;
+        });
+        this.setState({
+          filteredQueryResults: temp,
+          currentPage: 1,
+          sortBy: "numSentences"
+        });
+      } else if (newSort === "Alphabetical") {
+        // sort alphabetically on municipality name
+        let temp = this.state.queryResults;
+        temp.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        this.setState({
+          filteredQueryResults: temp,
+          currentPage: 1,
+          sortBy: "Alphabetical"
+        });
+      }
+    }
+  }
+
   handleSearch(event) {
     if (event) {
       event.preventDefault();
@@ -123,28 +163,19 @@ class Researchers extends Component {
       
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
-        // // sort based on city name
-        // resp.sort((a, b) => {
-        //   if (a.name < b.name) {
-        //     return -1;
-        //   }
-        //   if (a.name > b.name) {
-        //     return 1;
-        //   }
-        //   return 0;
-        // });
-
-        // sort based on num of mathching sentences
+        const ranks = new Set(resp.map((a) => a.rank))
+        console.log(ranks)
+        console.log(resp)
+        // sort based on city name
         resp.sort((a, b) => {
-          if (a.sentences.length > b.sentences.length) {
+          if (a.name < b.name) {
             return -1;
           }
-          if (a.sentences.length < b.sentences.length) {
+          if (a.name > b.name) {
             return 1;
           }
           return 0;
         });
-        console.log(resp)
 
         // parse states out
         const respCounties = [...new Set(resp.map((a) => a.name))];
@@ -158,6 +189,7 @@ class Researchers extends Component {
           countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
           showResult: true,
+          sortBy: "null"
         });
       });
       // TODO: Modify this URLSearchParam to allow for selection of location
@@ -319,7 +351,20 @@ class Researchers extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-3 offset-md-6">
+                <div className="col-md-3">
+                  <select
+                    className="custom-select"
+                    value={this.state.sortBy}
+                    onChange={(e) => this.setSortBy(e.target.value)}
+                  >
+                    <option value="null" disabled>
+                      Sort by...
+                    </option>
+                    <option value="Alphabetical">Alphabetical</option>
+                    <option value="numSentences">Number of Matches</option>
+                  </select>
+                </div>
+                <div className="col-md-3 offset-md-3">
                   <select
                     className="custom-select"
                     defaultValue="null"
