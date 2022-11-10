@@ -6,7 +6,7 @@ from cgitb import text
 from datetime import datetime
 from operator import contains
 from django.shortcuts import render, redirect, get_object_or_404
-from django.db.models import Q, Prefetch, Count, Value, IntegerField
+from django.db.models import Q, Prefetch, Count, Value, CharField
 from django.http import HttpResponse, HttpResponseForbidden, HttpRequest
 from .models import *
 from .serializers import *
@@ -267,8 +267,17 @@ class ResearcherSearchList(generics.ListAPIView):
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
             )
+            # print("curr_query: ", end="")
+            # print(cur_query)
+            # print("curr_query length: ", end="")
+            # print(len(cur_query.split()))
+            # print("i: ", end="")
+            # print(i)
+            # print("grade: ", end="")
+            # print(chr(i + 65))
+            letter_grade = chr(i + 65)
             sentence_queryset = sentence_queryset.annotate(
-                rank=Value(len(cur_query.split()), output_field=IntegerField())
+                rank=Value(letter_grade, output_field=CharField())
             )
             print("\tsentence_queryset length: ", end="")
             print(len(sentence_queryset))

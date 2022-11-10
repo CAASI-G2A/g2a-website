@@ -116,6 +116,29 @@ class Researchers extends Component {
           currentPage: 1,
           sortBy: "numSentences"
         });
+      } else if (newSort === "bestMatch") {
+        // sort by rank and number of sentences (if ranks are equal)
+        let temp = this.state.queryResults;
+        temp.sort((a, b) => {
+          if (a.rank < b.rank) {
+            return -1;
+          }
+          if (a.rank > b.rank) {
+            return 1;
+          }
+          if (a.sentences.length > b.sentences.length) {
+            return -1;
+          }
+          if (a.sentences.length < b.sentences.length) {
+            return 1;
+          }
+          return 0;
+        });
+        this.setState({
+          filteredQueryResults: temp,
+          currentPage: 1,
+          sortBy: "bestMatch"
+        });
       } else if (newSort === "Alphabetical") {
         // sort alphabetically on municipality name
         let temp = this.state.queryResults;
@@ -163,10 +186,11 @@ class Researchers extends Component {
       
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
+        resp = removeDuplicates(resp)
         const ranks = new Set(resp.map((a) => a.rank))
         console.log(ranks)
         console.log(resp)
-        // sort based on city name
+        // sort based on city name (by default)
         resp.sort((a, b) => {
           if (a.name < b.name) {
             return -1;
@@ -192,6 +216,28 @@ class Researchers extends Component {
           sortBy: "null"
         });
       });
+
+      // Helper function to clean response object from database result
+      // Removes duplicate contracts while keeping the one with the highest "rank"
+      function removeDuplicates(resp) {
+        let ids = [...new Set(resp.map(item => item.id))]
+        let ret = []
+        ids.forEach((id) => {
+          let candidates = resp.filter(contract => contract.id == id)
+          candidates.sort((a, b) => {
+            if (a.rank < b.rank) {
+              return -1;
+            }
+            if (a.rank > b.rank) {
+              return 1;
+            }
+            return 0;
+          });
+          ret.push(candidates[0])
+        })
+        return ret
+      }
+
       // TODO: Modify this URLSearchParam to allow for selection of location
       // will also then need to modify API, and Python method (and possible urls.py)
       // set search query param
@@ -360,8 +406,9 @@ class Researchers extends Component {
                     <option value="null" disabled>
                       Sort by...
                     </option>
+                    <option value="bestMatch">Best Match</option>
                     <option value="Alphabetical">Alphabetical</option>
-                    <option value="numSentences">Number of Matches</option>
+                    <option value="numSentences">Number of Sentences</option>
                   </select>
                 </div>
                 <div className="col-md-3 offset-md-3">
