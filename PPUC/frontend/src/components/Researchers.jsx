@@ -99,24 +99,7 @@ class Researchers extends Component {
 
   setSortBy(newSort) {
     if (newSort) {
-      if (newSort === "numSentences") {
-        // sort based on num of mathching sentences
-        let temp = this.state.queryResults;
-        temp.sort((a, b) => {
-          if (a.sentences.length > b.sentences.length) {
-            return -1;
-          }
-          if (a.sentences.length < b.sentences.length) {
-            return 1;
-          }
-          return 0;
-        });
-        this.setState({
-          filteredQueryResults: temp,
-          currentPage: 1,
-          sortBy: "numSentences"
-        });
-      } else if (newSort === "bestMatch") {
+      if (newSort === "bestMatch") {
         // sort by rank and number of sentences (if ranks are equal)
         let temp = this.state.queryResults;
         temp.sort((a, b) => {
@@ -408,7 +391,6 @@ class Researchers extends Component {
                     </option>
                     <option value="bestMatch">Best Match</option>
                     <option value="Alphabetical">Alphabetical</option>
-                    <option value="numSentences">Number of Sentences</option>
                   </select>
                 </div>
                 <div className="col-md-3 offset-md-3">
