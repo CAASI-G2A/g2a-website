@@ -8,11 +8,9 @@ import os, re
 class LocationSerializer(serializers.ModelSerializer):
     hasTxt = serializers.SerializerMethodField()
     hasPdf = serializers.SerializerMethodField()
-    # rank = serializers.SerializerMethodField()
 
     class Meta:
         model = Location
-        # fields = ("id", "name", "state", "hasTxt", "hasPdf", "rank")
         fields = ("id", "name", "state", "hasTxt", "hasPdf")
 
     def __init__(self, *args, **kwargs):
@@ -36,11 +34,6 @@ class LocationSerializer(serializers.ModelSerializer):
     def get_sentences(self, obj):
         return SentenceSerializer(obj.sentences, many=True).data
 
-    # def get_rank(self, obj):
-    #     try:
-    #         return obj.rank
-    #     except:
-    #         return None
     def get_rank(self, obj):
         return obj.rank
 

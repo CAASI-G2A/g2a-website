@@ -9,6 +9,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import { removeStopwords, eng } from 'stopword'
 
 class Researchers extends Component {
   constructor(props) {
@@ -154,25 +155,29 @@ class Researchers extends Component {
       function getQueryWords(query) {
         if (typeof query === "string") {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
-          return [query.replace(/['"]+/g, "")];
+          query = query.replace(/['"]+/g, "")
+
+          let lowerQuery = query.toLowerCase().split(" ")
+          let newQuery = removeStopwords(lowerQuery, eng)
+          
+          // If user input query is constructed solely of stop words, set query to original input
+          query = (newQuery.length == 0) ? query : newQuery.join(" ")
+
+          return [query.trim()]
+
         } else {
           throw 'Query is not a string';
         }
       }
 
       //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + this.state.searchQuery + '"';
+      const searchQuery = '"' + getQueryWords(this.state.searchQuery)[0] + '"';
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
-      console.log(searchQuery)
 
-      
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         resp = removeDuplicates(resp)
-        const ranks = new Set(resp.map((a) => a.rank))
-        console.log(ranks)
-        console.log(resp)
         // sort based on city name (by default)
         resp.sort((a, b) => {
           if (a.name < b.name) {
@@ -241,6 +246,23 @@ class Researchers extends Component {
     }
   }
 
+  /* Accessor methods added for testing suite
+  getPageSize(){
+    return this.state.pageSize;
+  }
+
+  getSearchQuery(){
+    return this.state.searchQuery;
+  }
+
+  getCountyFilter(){
+    return this.state.countyFilter;
+  }
+
+  getSearchQueryWords(){
+    return this.state.searchQueryWords;
+  }
+*/
   componentDidMount() {
     const queryParams = QueryString.parse(this.props.location.search);
     // if search already set, use it

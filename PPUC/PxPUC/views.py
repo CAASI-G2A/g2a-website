@@ -257,7 +257,6 @@ class ResearcherSearchList(generics.ListAPIView):
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
-            print(cur_query)
 
             prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
             count_query_filter = Q(sentences__text__icontains=cur_query)
@@ -267,32 +266,21 @@ class ResearcherSearchList(generics.ListAPIView):
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
             )
-            # print("curr_query: ", end="")
-            # print(cur_query)
-            # print("curr_query length: ", end="")
-            # print(len(cur_query.split()))
-            # print("i: ", end="")
-            # print(i)
-            # print("grade: ", end="")
-            # print(chr(i + 65))
+
+            # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
             letter_grade = chr(i + 65)
+            # add rank field to sentence_queryset to be returned to front end
             sentence_queryset = sentence_queryset.annotate(
                 rank=Value(letter_grade, output_field=CharField())
             )
-            print("\tsentence_queryset length: ", end="")
-            print(len(sentence_queryset))
-            # Compare whether in the current sentence_queryset or in the previous
-            # sentence_queryset MUST be listed first, so that the newest results are added
-            queryset = sentence_queryset.union(queryset)
 
-            print("\tqueryset length: ", end="")
-            print(len(queryset))
+            # Add current sentence_queryset to previous query_set
+            queryset = sentence_queryset.union(queryset)
 
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
         saved_query.save()
 
-        print(queryset.all().values())
         return queryset
 
 
