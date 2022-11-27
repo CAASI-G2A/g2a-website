@@ -32,6 +32,7 @@ class Researchers extends Component {
     this.setSearchQuery = this.setSearchQuery.bind(this);
     this.setCountyFilter = this.setCountyFilter.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.setSortBy = this.setSortBy.bind(this)
   }
 
   setPage(newPage) {

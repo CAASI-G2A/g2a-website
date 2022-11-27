@@ -284,56 +284,6 @@ class ResearcherSearchList(generics.ListAPIView):
         return queryset
 
 
-# class ResearcherSearchList(generics.ListAPIView):
-#     serializer_class = LocationSerializer
-
-#     def get_queryset(self):
-
-#         query = self.request.GET.get("query", "")
-#         if query is None:
-#             raise serializers.ValidationError(
-#                 {"message": "Request missing query string parameter 'query'."}
-#             )
-
-#         # Remove the quotes surrounding the query (which are added for processing in the URL)
-#         query = query[1:-1]
-#         if (
-#             query.__contains__('"')
-#             | query.__contains__("AND")
-#             | query.__contains__("OR")
-#         ):
-#             print("Contains operators")
-
-#         # Create an empty queryset to add results for each subquery
-#         queryset = Location.objects.none()
-
-#         # This loop takes the search query and finds results for each possible query, making the
-#         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
-#         for i in range(len(query.split())):
-#             cur_query = query.rsplit(" ", i)[0]
-#             print(cur_query)
-
-#             prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
-#             count_query_filter = Q(sentences__text__icontains=cur_query)
-#             sentence_queryset = (
-#                 Location.objects.all()
-#                 .annotate(sentences_count=Count("sentences", filter=count_query_filter))
-#                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
-#                 .exclude(sentences_count=0).annotate(rank=Value(i, output_field=IntegerField()))
-#             )
-
-#             # Compare whether in the current sentence_queryset or in the previous
-#             # sentence_queryset MUST be listed first, so that the newest results are added
-#             queryset = sentence_queryset | queryset
-
-#         # save search query
-#         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
-#         saved_query.save()
-
-#         print(queryset.all().values())
-#         return queryset
-
-
 # Used for FAQ page, gets list of "questions" for the location (which is specified as null, since they
 # all refer to the same location, i.e. Allegheny County)
 class LocationQuestionList(generics.ListAPIView):
