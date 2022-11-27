@@ -257,6 +257,7 @@ class ResearcherSearchList(generics.ListAPIView):
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
+            print(cur_query)
 
             prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
             count_query_filter = Q(sentences__text__icontains=cur_query)

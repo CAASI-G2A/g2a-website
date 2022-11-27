@@ -189,7 +189,6 @@ class Researchers extends Component {
           }
           return 0;
         });
-
         // parse states out
         const respCounties = [...new Set(resp.map((a) => a.name))];
         this.setState({
