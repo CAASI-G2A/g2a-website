@@ -351,18 +351,20 @@ class Commentary extends Component {
                 </div>
               </div>
               <br />
-              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
-                How to read a contract *(PDF)
-              </a>
             </li>
           </div>
+          <div style={{ fontSize: "27px",fontFamily: 'Helvetica', fontStyle:'normal',fontWeight: 700,lineHeight: "31px",color: "#000D85" }}> More Information </div>
+          <br />
           <div>
             <div className="jumbotron"
               style={{ textAlign: "left", fontWeight: 600, marginBottom: "0px" }}
             >
+              <p style={{ fontSize: "22px",fontFamily: 'Helvetica', fontStyle: 'normal',fontWeight: 700,lineHeight: "25px",color: "#202020" }}> About Police Contracts</p>
               <p className="lead">
-                There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available for searches and downloads. We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change.
+                There are 108 separate governmental police departments operating in Allegheny County. This includes departments operating at the municipal, regional, county, and state level, from Stowe Township to the Pennsylvania State Troopers. We have gathered police contracts from almost 100 of these departments and made them publicly available for searches and downloads. We hope that this contract database will help concerned citizens learn more about police departments in Allegheny County and perhaps even help them advocate for change. <a href='/static/app/instructions/How_to_read_a_contract.pdf' download> How to read a contract *(PDF) </a>
               </p>
+
+              <p style={{ fontSize: "22px",fontFamily: 'Helvetica', fontStyle: 'normal',fontWeight: 700,lineHeight: "25px",color: "#202020" }}>Using the Search Function </p>
               <p className="lead">
                 These contracts may contain provisions that make it more difficult to hold officers accountable. Below we list six categories of potentially problematic provisions that have been identified by Campaign Zero, a national organization, in collaboration with legal scholars and criminal justice experts.  In each we identified some keywords that you can use as a starting point to explore how these categories apply to policing in Allegheny County. For example, clicking on the keyword “unfounded” (under Category 1: Disqualify Misconduct Complaints) reveals that nearly half of the county’s police contracts disqualify misconduct complaints from the public that are submitted anonymously.
               </p>
