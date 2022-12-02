@@ -313,34 +313,30 @@ class Commentary extends Component {
                 </form>
                 <br />
                 <div>
-                  <label>Categories: </label>
+                  <label style={{
+                    float: "left",
+                  }}><b>Categories: </b></label>
                   <select // className="scrollable"
                     id="categories"
                     style={{
                       textAlign: "left",
                       overflowY: "scroll",
                       textDecoration: "underline",
+                      float: "left",
                       // height: "100px",
                       color: "#00008b",
                     }}
                     onLoadStart={() => generateCategories()}>
-                    {/* <div id="disqualify" onClick={() => this.getKeywords("disqualify")}>Disqualify Misconduct Complaints</div>
-                    <div id="prevents" onClick={() => this.getKeywords("prevents")}>Prevents Immediate Interrogation</div>
-                    <div id="unfair" onClick={() => this.getKeywords("unfair")}>Unfair Access to Information</div>
-                    <div id="legal" onClick={() => this.getKeywords("legal")}>Legal Costs</div>
-                    <div id="destroys" onClick={() => this.getKeywords("destroys")}>Destroys Misconduct Records</div>
-                    <div id="limits" onClick={() => this.getKeywords("limits")}>Limits Disciplicary Consequences</div> */}
-                    {/* <FormatedMessage tagName="option" defaultMessage="Select a category" /> */}
                     <option value="none">Select a category</option>
                     {categories}
                   </select>
                   <br />
-                  <div id="information">
-                    <div style={{
-                      textAlign: "right"
-                    }}>
-                      Suggested key words:
-                    </div>
+                  <section id="information" style={{
+                    float: "left",
+                    textAlign: "left",
+                    position: "fixed"
+                  }}>
+                    <b>Suggested key words:</b>
                     {this.state.keywords.map((keyword, i) =>
                     (
                       <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}>
@@ -349,7 +345,7 @@ class Commentary extends Component {
                     )
                     )
                     }
-                  </div>
+                  </section>
                 </div>
               </div>
               <br />
