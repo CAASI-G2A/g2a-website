@@ -336,15 +336,19 @@ class Commentary extends Component {
                     textAlign: "left",
                     position: "fixed"
                   }}>
-                    <b>Suggested key words:</b>
-                    {this.state.keywords.map((keyword, i) =>
-                    (
-                      <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}>
-                        {i == (this.state.keywords.length - 1) ? keyword : keyword + ", "}
-                      </a>
-                    )
-                    )
-                    }
+                    <label><b>Suggested keywords:</b></label><select onChange={(e) => this.setSearchQuery(e.target.options[e.target.selectedIndex].value, true)}>
+                      <option>Select a keyword</option>
+                      {this.state.keywords.map((keyword, i) =>
+                      (
+                        <option value={keyword}>
+                          {/* <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}> */}
+                          {keyword}
+                          {/* </a> */}
+                        </option>
+                      )
+                      )
+                      }
+                    </select>
                   </section>
                 </div>
               </div>
