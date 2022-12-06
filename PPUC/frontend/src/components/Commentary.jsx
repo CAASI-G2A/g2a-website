@@ -208,15 +208,21 @@ class Commentary extends Component {
     let insert = [];
     let counter = 0;
     let id = Number(item.strcounter.slice(3));
-    for (var category in keys) {
-      if (counter == id) {
-        for (var key in keys[category])
-          insert.push(keys[category][key]);
-        break;
+    this.resetKeywords();
+    if (item != "-1")
+      for (var category in keys) {
+        if (counter == id) {
+          for (var key in keys[category])
+            insert.push(keys[category][key]);
+          break;
+        }
+        counter++;
       }
-      counter++;
-    }
     this.setState({ keywords: insert });
+  }
+
+  resetKeywords() {
+    this.setState({ keywords: [] });
   }
 
 
@@ -313,37 +319,39 @@ class Commentary extends Component {
                 </form>
                 <br />
                 <div>
-                  <label style={{
+                  {/* <label style={{
                     float: "left",
-                  }}><b>Categories: </b></label>
+                  }}><b>Categories: </b></label> */}
                   <select // className="scrollable"
                     id="categories"
                     style={{
                       textAlign: "left",
                       overflowY: "scroll",
-                      textDecoration: "underline",
                       float: "left",
-                      // height: "100px",
                       color: "#00008b",
                     }}
-                    onLoadStart={() => generateCategories()}>
-                    <option value="none">Select a category</option>
+                    onLoadStart={() => generateCategories()}
+                    onChange={(e) => this.resetKeywords()}>
+                    <option value="none" onClick={() => this.getKeywords("-1")}>Select a category</option>
                     {categories}
                   </select>
+                  <br />
                   <br />
                   <section id="information" style={{
                     float: "left",
                     textAlign: "left",
-                    position: "fixed"
+                    position: "absolute"
                   }}>
-                    <label><b>Suggested keywords:</b></label><select onChange={(e) => this.setSearchQuery(e.target.options[e.target.selectedIndex].value, true)}>
+                    <select id="keywords"
+                      style={{
+                        overflowY: "scroll",
+                        color: "#00008b",
+                      }}>
                       <option>Select a keyword</option>
                       {this.state.keywords.map((keyword, i) =>
                       (
-                        <option value={keyword}>
-                          {/* <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}> */}
+                        <option value={keyword} onClick={(e) => this.setSearchQuery(e.target.value, true)}>
                           {keyword}
-                          {/* </a> */}
                         </option>
                       )
                       )

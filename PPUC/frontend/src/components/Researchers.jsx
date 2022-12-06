@@ -9,6 +9,7 @@ import Api from "../libs/api";
 import SearchParser from "../libs/researcher_search_lang";
 import routes from "../routes";
 import ResearcherResult from "./ResearcherResult";
+import keys from "../data/keywords.json";
 
 class Researchers extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Researchers extends Component {
       totalPages: 1,
       pageSize: 10,
       showResult: false,
+      keywords: [],
     };
     this.setPage = this.setPage.bind(this);
     this.setPageSize = this.setPageSize.bind(this);
@@ -120,7 +122,7 @@ class Researchers extends Component {
       const searchQueryWords = getQueryWords(searchQuery);
       console.log(searchQuery)
 
-      
+
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
@@ -184,6 +186,39 @@ class Researchers extends Component {
     return this.state.searchQueryWords;
   }
 */
+
+  generateCategories() {
+    let insert = [];
+    let counter = 0;
+    for (var i in keys) {
+      const strcounter = "cat" + counter;
+      insert.push(<option id={strcounter} value={i} onClick={() => this.getKeywords({ strcounter })}>{i}</option>);
+      counter++;
+    }
+    return insert;
+  }
+
+  getKeywords(item) {
+    let insert = [];
+    let counter = 0;
+    let id = Number(item.strcounter.slice(3));
+    this.resetKeywords();
+    if (item != "-1")
+      for (var category in keys) {
+        if (counter == id) {
+          for (var key in keys[category])
+            insert.push(keys[category][key]);
+          break;
+        }
+        counter++;
+      }
+    this.setState({ keywords: insert });
+  }
+
+  resetKeywords() {
+    this.setState({ keywords: [] });
+  }
+
   componentDidMount() {
     const queryParams = QueryString.parse(this.props.location.search);
     // if search already set, use it
@@ -193,6 +228,7 @@ class Researchers extends Component {
   }
 
   render() {
+    const categories = this.generateCategories();
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
@@ -201,9 +237,8 @@ class Researchers extends Component {
               <div className="input-group">
                 <input
                   type="text"
-                  className={`form-control input-lg ${
-                    this.state.searchQueryError ? "border-danger" : ""
-                  }`}
+                  className={`form-control input-lg ${this.state.searchQueryError ? "border-danger" : ""
+                    }`}
                   placeholder="Search Query..."
                   value={this.state.searchQuery}
                   onChange={(event) =>
@@ -222,21 +257,63 @@ class Researchers extends Component {
                 </p>
               )}
             </form>
+            <br />
+            <div>
+              {/* <label style={{
+                float: "left",
+              }}><b>Categories: </b></label> */}
+              <select // className="scrollable"
+                id="categories"
+                style={{
+                  textAlign: "left",
+                  overflowY: "scroll",
+                  float: "left",
+                  color: "#00008b",
+                }}
+                onLoadStart={() => generateCategories()}
+                onChange={(e) => this.resetKeywords()}>
+                <option value="none" onClick={() => this.getKeywords("-1")}>Select a category</option>
+                {categories}
+              </select>
+              <br />
+              <br />
+              <section id="information" style={{
+                float: "left",
+                textAlign: "left",
+                position: "absolute"
+              }}>
+                <select id="keywords"
+                  style={{
+                    overflowY: "scroll",
+                    color: "#00008b",
+                  }}>
+                  <option>Select a keyword</option>
+                  {this.state.keywords.map((keyword, i) =>
+                  (
+                    <option value={keyword} onClick={(e) => this.setSearchQuery(e.target.value, true)}>
+                      {keyword}
+                    </option>
+                  )
+                  )
+                  }
+                </select>
+              </section>
+            </div>
           </div>
         </div>
-        <div className="col-lg-12 mt-1">
+        {/* <div className="col-lg-12 mt-1">
           <div
             className="col-md-6 offset-md-3 text-secondary"
-            style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
+            style={{ backgroundColor: "#f9f9f9", padding: "10px" }}
           >
             <li className="nav-item nav-link">
               <h5>How to use the search bar: </h5> Enter the keyword that you want to find in police contracts.
-                <br />
-                <br /> 
-              Below are some keyword suggestions. (<NavLink className={isActive =>"nav-link" + (!isActive ? " unselected" : "")}to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)
-                <br />
+              <br />
+              <br />
+              Below are some keyword suggestions. (<NavLink className={isActive => "nav-link" + (!isActive ? " unselected" : "")} to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)
+              <br />
               This <a target="_blank" href='/static/app/instructions/How_to_read_a_contract.pdf'>brief guide</a> may also be helpful.
-            </li>   
+            </li>
           </div>
           <div className="mt-2 text-center">
             <div className="btn-group" role="group" aria-label="...">
@@ -284,7 +361,7 @@ class Researchers extends Component {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         <div>
           <br />
           <br />
