@@ -351,6 +351,9 @@ class Commentary extends Component {
                 </div>
               </div>
               <br />
+              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
+                How to read a contract *(PDF)
+              </a>
             </li>
           </div>
           <div style={{ fontSize: "27px",fontFamily: 'Helvetica', fontStyle:'normal',fontWeight: 700,lineHeight: "31px",color: "#000D85" }}> More Information </div>
