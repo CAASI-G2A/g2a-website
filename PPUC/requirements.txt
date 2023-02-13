@@ -1,10 +1,12 @@
 django == 3.1.3
 django-extensions
 nltk
-numpy == 1.19.3
+numpy == 1.22.0
 pandas
 django-pandas
 django-manifest-loader
 djangorestframework
 django-cors-headers
 django-after-response
+whitenoise
+symspellpy

@@ -1,0 +1,660 @@
+{
+  "id": "d5f58dc4-7a10-4872-8bb2-7054c1796234",
+  "version": "2.0",
+  "name": "PPUC",
+  "url": "https://www.grieftoaction.org/",
+  "tests": [{
+    "id": "c92f5c0b-7dda-4052-9056-9d3971dad17a",
+    "name": "EXPLORE-MAP-LINK",
+    "commands": [{
+      "id": "adbab5f4-42e0-4e39-a819-8809fd8f4553",
+      "comment": "",
+      "command": "open",
+      "target": "/#/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68de0592-7c78-45df-9de9-00fd25efa661",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Police Department Map",
+      "targets": [
+        ["linkText=Police Department Map", "linkText"],
+        ["css=.item1_map a", "css:finder"],
+        ["xpath=//a[contains(text(),'Police Department Map')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div/div[2]/h5/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#/map')])[2]", "xpath:href"],
+        ["xpath=//h5/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Police Department Map')]", "xpath:innerText"]
+      ],
+      "value": "map"
+    }, {
+      "id": "f4c0460e-6e1d-482b-942d-f1ef8a296ae4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.map_container > .leaflet-container",
+      "targets": [
+        ["css=.map_container > .leaflet-container", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3042e939-0272-45b2-98d8-c2847803f6d0",
+    "name": "SEARCH-POLICE-CONTRACTS-LINK",
+    "commands": [{
+      "id": "8c0b8b78-7206-4726-8ab9-ec29fc237568",
+      "comment": "",
+      "command": "open",
+      "target": "/#/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "362365d5-d838-4353-9334-19b3aa82d83d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=2) Search Police Contracts",
+      "targets": [
+        ["linkText=2) Search Police Contracts", "linkText"],
+        ["css=.item2_search a", "css:finder"],
+        ["xpath=//a[contains(text(),'2) Search Police Contracts')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div[2]/div[2]/h5/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#/commentary')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/h5/a", "xpath:position"],
+        ["xpath=//a[contains(.,'2) Search Police Contracts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "772ff3e4-8c0c-4d73-935d-c698cd229632",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.jumbotron:nth-child(2)",
+      "targets": [
+        ["css=.jumbotron:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f47d8c5f-3aef-4aef-8ed1-364dff5c8af6",
+    "name": "FAQ-LINK-TEST",
+    "commands": [{
+      "id": "535f3823-d939-42ec-9c95-920bc88a519d",
+      "comment": "",
+      "command": "open",
+      "target": "/#/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bc0f48d-d1cf-4726-b0a2-3ed53301ae99",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=3) Pittsburgh Complaint FAQ",
+      "targets": [
+        ["linkText=3) Pittsburgh Complaint FAQ", "linkText"],
+        ["css=.item3_complaint a", "css:finder"],
+        ["xpath=//a[contains(text(),'3) Pittsburgh Complaint FAQ')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/div[3]/div[2]/h5/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#/citizens')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/h5/a", "xpath:position"],
+        ["xpath=//a[contains(.,'3) Pittsburgh Complaint FAQ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bbd5fbc-1ba4-4eab-976b-f71b4a3d062e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.lead",
+      "targets": [
+        ["css=.lead", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This tool highlights the phases involved in the process of filing a police complaint. Click on a circle to learn more about that particular phase. Disclaimer: All the information presented with this tool was found on the OMI and CPRB websites.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ffd08272-c058-4b15-a226-f78b99ae4f4e",
+    "name": "TOP-HOME-PAGE",
+    "commands": [{
+      "id": "5dd91d01-d093-4e0d-ac76-9ce0412fa13b",
+      "comment": "",
+      "command": "open",
+      "target": "/#/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8b06743-f610-47e7-818a-c3f9f333751d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "46ee964f-8e7f-488e-b381-655360bf23a2",
+    "name": "TOP-MAP-PAGE",
+    "commands": [{
+      "id": "3c90af5f-0a65-444e-98e3-2b9a161214bd",
+      "comment": "",
+      "command": "open",
+      "target": "/#/map",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2eb4596-6ca6-4640-b60c-8675d97e7106",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c4ec3003-2f4c-4008-b152-6db9ba79cae0",
+    "name": "TOP-CONTRACT-PAGE",
+    "commands": [{
+      "id": "8fc0014f-8b3c-426d-a4fc-1bac13d92ddb",
+      "comment": "",
+      "command": "open",
+      "target": "/#/commentary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ad6a67f-75cf-439c-950b-7fd6b3331844",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4bd3438a-a7bc-4f3d-b4c8-7968355752ad",
+    "name": "TOP-FAQ-PAGE",
+    "commands": [{
+      "id": "913057be-ba64-469d-98fe-6b7b6c9540e1",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f4e60f7-3f5e-4a6d-a522-a06af9038650",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "75265f87-cc48-4ed4-b827-f5794ec847aa",
+    "name": "TOP-ABOUT-PAGE",
+    "commands": [{
+      "id": "aafefe25-dea8-4f46-bdd7-87e14475cdb5",
+      "comment": "",
+      "command": "open",
+      "target": "/#/about",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68fc0271-e3fa-4b5d-9d96-3892aa61a2b9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3a70c1cd-e35a-42bc-a15f-0efc651cb955",
+    "name": "TOP-CONTACT-PAGE",
+    "commands": [{
+      "id": "167470e7-1f05-4c8a-a8e4-3feaa2cca74d",
+      "comment": "",
+      "command": "open",
+      "target": "/#/contact",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83737c47-98b0-4492-8575-fada4cfb0c23",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a64effcb-366b-4841-a6f6-ef0cefde70f2",
+    "name": "FAQ-INTERACTION",
+    "commands": [{
+      "id": "e4a3a015-6c7c-4b56-8f9c-a2fee4407d88",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca86f20d-28b5-49f8-a6c6-3085bb351b6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-users",
+      "targets": [
+        ["css=.fa-users", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ad17471-a90f-48f4-889f-6dff1935ed30",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.flow-circle-selected",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca271417-0f5e-4454-8bf0-9467da870995",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='citizenInfoPanel']/div",
+      "targets": [],
+      "value": "Interaction with Police"
+    }, {
+      "id": "28360f06-ef06-42ff-81a6-58f3111f5eec",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=citizenInfoPanelAccordion",
+      "targets": [
+        ["id=citizenInfoPanelAccordion", "id"],
+        ["css=#citizenInfoPanelAccordion", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanelAccordion']", "xpath:attributes"],
+        ["xpath=//div[@id='citizenInfoPanel']/div[5]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c90d5d3-d306-4889-be64-c5e1462b92ad",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '#collapse1')]",
+      "targets": [
+        ["linkText=What is police misconduct?", "linkText"],
+        ["css=.card:nth-child(1) > #heading\\{\\{q\\.id\\}\\} > .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'What is police misconduct?')]", "xpath:link"],
+        ["xpath=//div[@id='heading{{q.id}}']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapse1')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'What is police misconduct?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80a87b21-4a78-43c3-b06f-c7bfbd202146",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#collapse1 > .card-body",
+      "targets": [
+        ["css=#collapse1 > .card-body", "css:finder"],
+        ["xpath=//div[@id='collapse1']/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fce97b50-30a8-4fd2-8046-7ecadf39ea69",
+    "name": "FAQ-COMPLAINT",
+    "commands": [{
+      "id": "da1474e0-b17a-4074-a04a-150d759315c1",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0fe7c26-ea3c-44ea-b60a-c66cd4469be2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-exclamation-circle > path",
+      "targets": [
+        ["css=.fa-exclamation-circle > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "26061939-5d20-4723-a5fa-6436323b2412",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.flow-circle-selected",
+      "targets": [
+        ["css=.flow-circle-selected > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "94a5448c-88ce-4501-a017-22fafda91ab5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='citizenInfoPanel']/div",
+      "targets": [
+        ["css=.bg-blue:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanel']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[4]/div/div", "xpath:position"]
+      ],
+      "value": "Filing a Complaint"
+    }, {
+      "id": "7d7a2ef2-7fc6-4200-8433-a55331bcd9a0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=citizenInfoPanelAccordion",
+      "targets": [
+        ["id=citizenInfoPanelAccordion", "id"],
+        ["css=#citizenInfoPanelAccordion", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanelAccordion']", "xpath:attributes"],
+        ["xpath=//div[@id='citizenInfoPanel']/div[5]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b7f196-bf4a-4cf9-8272-81c7ca2ba87e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '#collapse20')]",
+      "targets": [
+        ["linkText=How do I file a complaint with OMI?", "linkText"],
+        ["css=.card:nth-child(1) > #heading\\{\\{q\\.id\\}\\} > .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'How do I file a complaint with OMI?')]", "xpath:link"],
+        ["xpath=//div[@id='heading{{q.id}}']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapse20')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'How do I file a complaint with OMI?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "660b56df-6582-41fe-bf6e-870c8403582d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#collapse20 > .card-body",
+      "targets": [
+        ["css=#collapse20 > .card-body", "css:finder"],
+        ["xpath=//div[@id='collapse20']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9e5fcfdc-fdbc-4fa0-abf2-35abc04ad10d",
+    "name": "FAQ-REVIEW",
+    "commands": [{
+      "id": "9db1d434-72cc-40c9-bdff-a5e364a4a765",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb346193-199f-4541-aa05-ff41834dce0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-edit",
+      "targets": [
+        ["css=.fa-edit", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "88136f5e-585b-4130-aa48-c5770ee65344",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.flow-circle-selected",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e756e7b-5236-49d2-b0a4-e2618aa47a88",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='citizenInfoPanel']/div",
+      "targets": [
+        ["css=.bg-blue:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanel']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[4]/div/div", "xpath:position"]
+      ],
+      "value": "Review of complaint"
+    }, {
+      "id": "fd0b729c-e4e1-4645-be51-e38d5fb8edb6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=citizenInfoPanelAccordion",
+      "targets": [
+        ["id=citizenInfoPanelAccordion", "id"],
+        ["css=#citizenInfoPanelAccordion", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanelAccordion']", "xpath:attributes"],
+        ["xpath=//div[@id='citizenInfoPanel']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9b8b05f-f788-4348-8c93-a1d7849b1a3a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '#collapse10')]",
+      "targets": [
+        ["linkText=How long does the review process take?", "linkText"],
+        ["css=.card:nth-child(1) > #heading\\{\\{q\\.id\\}\\} > .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'How long does the review process take?')]", "xpath:link"],
+        ["xpath=//div[@id='heading{{q.id}}']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapse10')]", "xpath:href"],
+        ["xpath=//div[4]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'How long does the review process take?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f308c3ca-3dff-4a8f-b914-72eff6d0408f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#collapse10 > .card-body",
+      "targets": [
+        ["css=#collapse10 > .card-body", "css:finder"],
+        ["xpath=//div[@id='collapse10']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "57a52800-3c0f-45f9-9bf7-e84cb8bebc45",
+    "name": "FAQ-INVESTIGATION",
+    "commands": [{
+      "id": "4b1ed011-a6b0-4175-93e1-87e2d13231da",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d921aa17-c06c-4aeb-8415-bf52628e8dc4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-search",
+      "targets": [
+        ["css=.fa-search", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef8208a4-260a-4a45-9ff8-0e36d2b514bf",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.flow-circle-selected",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e5f6d90-06b5-4de9-9317-1e1a2d17174c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='citizenInfoPanel']/div",
+      "targets": [
+        ["css=.bg-blue:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanel']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[4]/div/div", "xpath:position"]
+      ],
+      "value": "Investigation"
+    }, {
+      "id": "e2aa9664-3ec2-4dc2-8af1-0c97a235eba9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=citizenInfoPanelAccordion",
+      "targets": [
+        ["id=citizenInfoPanelAccordion", "id"],
+        ["css=#citizenInfoPanelAccordion", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanelAccordion']", "xpath:attributes"],
+        ["xpath=//div[@id='citizenInfoPanel']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cded1de-4715-4761-a233-f559f450a149",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '#collapse23')]",
+      "targets": [
+        ["linkText=What are the steps in an OMI investigation?", "linkText"],
+        ["css=.card:nth-child(1) > #heading\\{\\{q\\.id\\}\\} > .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'What are the steps in an OMI investigation?')]", "xpath:link"],
+        ["xpath=//div[@id='heading{{q.id}}']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapse23')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'What are the steps in an OMI investigation?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df60dfd6-2f44-4d42-b96d-e041712d6dfd",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#collapse23 > .card-body",
+      "targets": [
+        ["css=#collapse23 > .card-body", "css:finder"],
+        ["xpath=//div[@id='collapse23']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "38cbfd9b-f913-4bd2-8bf8-b58eb0ccc703",
+    "name": "FAQ-RESULT",
+    "commands": [{
+      "id": "5587e1de-4cf4-4438-824f-90dba2d8e25f",
+      "comment": "",
+      "command": "open",
+      "target": "/#/citizens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "625eea5b-0946-4974-83c9-b905e1667d28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-check",
+      "targets": [
+        ["css=.fa-check", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cc74f7a-7557-4da7-82c0-bf568c475ceb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.flow-circle-selected",
+      "targets": [
+        ["css=.flow-circle-selected > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dd190ab-3c1c-445d-bd9a-50ca0d939520",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='citizenInfoPanel']/div",
+      "targets": [
+        ["css=.bg-blue:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanel']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[4]/div/div", "xpath:position"]
+      ],
+      "value": "Result"
+    }, {
+      "id": "afe92932-7f99-4786-afb8-ded5a2d3f7ea",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=citizenInfoPanelAccordion",
+      "targets": [
+        ["id=citizenInfoPanelAccordion", "id"],
+        ["css=#citizenInfoPanelAccordion", "css:finder"],
+        ["xpath=//div[@id='citizenInfoPanelAccordion']", "xpath:attributes"],
+        ["xpath=//div[@id='citizenInfoPanel']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "197793e3-b900-4da1-b811-59ac45e5b2c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '#collapse15')]",
+      "targets": [
+        ["linkText=What are some possible results?", "linkText"],
+        ["css=.card:nth-child(1) > #heading\\{\\{q\\.id\\}\\} > .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'What are some possible results?')]", "xpath:link"],
+        ["xpath=//div[@id='heading{{q.id}}']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapse15')]", "xpath:href"],
+        ["xpath=//div/div[4]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'What are some possible results?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f03b0c-786d-4e2a-9fff-ed1eea17c227",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#collapse15 > .card-body",
+      "targets": [
+        ["css=#collapse15 > .card-body", "css:finder"],
+        ["xpath=//div[@id='collapse15']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "029fc0aa-5917-4672-b9a2-2a2cf19d2197",
+    "name": "HOME PAGE",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c92f5c0b-7dda-4052-9056-9d3971dad17a", "f47d8c5f-3aef-4aef-8ed1-364dff5c8af6", "3042e939-0272-45b2-98d8-c2847803f6d0"]
+  }, {
+    "id": "fc37394d-185d-45f3-940b-d366fd6a7244",
+    "name": "NAV-BAR",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["75265f87-cc48-4ed4-b827-f5794ec847aa", "3a70c1cd-e35a-42bc-a15f-0efc651cb955", "c4ec3003-2f4c-4008-b152-6db9ba79cae0", "4bd3438a-a7bc-4f3d-b4c8-7968355752ad", "ffd08272-c058-4b15-a226-f78b99ae4f4e", "46ee964f-8e7f-488e-b381-655360bf23a2"]
+  }, {
+    "id": "12816a8d-7873-4414-8438-918d258b025b",
+    "name": "FAQ",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a64effcb-366b-4841-a6f6-ef0cefde70f2", "fce97b50-30a8-4fd2-8046-7ecadf39ea69", "9e5fcfdc-fdbc-4fa0-abf2-35abc04ad10d", "57a52800-3c0f-45f9-9bf7-e84cb8bebc45", "38cbfd9b-f913-4bd2-8bf8-b58eb0ccc703"]
+  }],
+  "urls": ["https://www.grieftoaction.org/", "https://www.google.com/"],
+  "plugins": []
+}
