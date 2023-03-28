@@ -87,7 +87,7 @@
     "skeleton-loader": "^2.0.0",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.20.2",
+    "webpack": "^5.76.3",
     "webpack-cli": "^4.5.0",
     "webpack-manifest-plugin": "^3.0.0"
   }

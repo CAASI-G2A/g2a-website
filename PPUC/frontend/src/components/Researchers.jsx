@@ -179,16 +179,6 @@ class Researchers extends Component {
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         resp = removeDuplicates(resp)
-        // sort based on city name (by default)
-        resp.sort((a, b) => {
-          if (a.name < b.name) {
-            return -1;
-          }
-          if (a.name > b.name) {
-            return 1;
-          }
-          return 0;
-        });
         // parse states out
         const respCounties = [...new Set(resp.map((a) => a.name))];
         this.setState({
@@ -201,7 +191,8 @@ class Researchers extends Component {
           countyFilter: "null",
           totalPages: Math.ceil(resp.length / this.state.pageSize),
           showResult: true,
-          sortBy: "null"
+          //set defult search to be by best match
+          sortBy: "bestMatch"
         });
       });
 
@@ -309,7 +300,7 @@ class Researchers extends Component {
             style={{ backgroundColor: "#f9f9f9", padding: "10px"}}
           >
             <li className="nav-item nav-link">
-              <h5>How to use the search bar: </h5> Enter the keyword that you want to find in police contracts.
+              <h5>How to use the search bar: </h5> Enter a phrase you wish to find in the police employment contracts (for example: "disciplinary action"). We will display the contracts with the closest match.
                 <br />
                 <br /> 
               Below are some keyword suggestions. (<NavLink className={isActive =>"nav-link" + (!isActive ? " unselected" : "")}to={routes.commentary} activeStyle={{ color: 'red', borderBottomWidth: '2px' }}>Why are these words important?</NavLink>)

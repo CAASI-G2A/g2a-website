@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("PxPUC", "0005_auto_20211001_0309"),
     ]
