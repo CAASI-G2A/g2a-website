@@ -272,8 +272,8 @@ class Commentary extends Component {
             className="jumbotron"
             style={{
               backgroundImage:
-                "url(http://www.rmmagazine.com/images/default-source/MagazineImages/2019/07/rm7-8-19_ff_contractrisks.jpg?Status=Master&sfvrsn=9b4a261a_0)",
-              backgroundSize: "100%",
+                "url(https://media.istockphoto.com/id/1239476410/vector/contract-document-with-magnifying-glass-in-hand-check-and-search-in-legal-agreement-the.jpg?s=170667a&w=0&k=20&c=y3Bx7uQZcKe5NBJ9r1jVlxVaHJDPwxg44NaMXN8od9Q=)",
+              backgroundSize: "20%",
               paddingTop: "60px",
               paddingBottom: "90px",
             }}
