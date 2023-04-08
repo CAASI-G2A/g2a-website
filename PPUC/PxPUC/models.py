@@ -5,11 +5,13 @@ Definition of models.
 from tabnanny import verbose
 from django.db import models, reset_queries
 
+
 # Location object is the foundation for all other objects, most refer to it
 class Location(models.Model):
     name = models.CharField(max_length=150, default="")
     state = models.CharField(max_length=50, default="")
     complaint_form_link = models.URLField(max_length=300, null=True)
+
     # Region (string)
     # Police Budget (if available, float)
     # Number of officers (if available, int)
