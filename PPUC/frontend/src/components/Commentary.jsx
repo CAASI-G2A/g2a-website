@@ -423,17 +423,14 @@ class Commentary extends Component {
                     anonymously or are not filed within a set time period.</p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
+                  {/*<NavLink
                       to={routes.researchers + "?search=unfounded"}
                       style={{ color: "#00008b", textDecoration: "underline"}}>
                       Unfounded
-                    </NavLink>
+                      </NavLink>Test*/}
+                    <a href={"/PxPUC/#/researchers?search=unfounded" }> Unfounded </a>
                     <br />
-                    <NavLink
-                      to={routes.researchers + "?search=citizen+complaint"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Citizen complaint
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=citizen+complaint" }> Citizen Complaint </a>
                 </div>
 
                 <div id="c2" class="tabcontent">
@@ -442,17 +439,9 @@ class Commentary extends Component {
                     immediately after a “critical incident” and restricts when, where, and how officers are interrogated.</p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
-                      to={routes.researchers + "?search=interview"}
-                      style={{ color: "#00008b", textDecoration: "underline"}}>
-                      Interview
-                    </NavLink>
-                    <br />
-                    <NavLink
-                      to={routes.researchers + "?search=critical+incident"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Critical incident
-                    </NavLink>
+                  <a href={"/PxPUC/#/researchers?search=interview" }> Interview </a>
+                  <br />
+                  <a href={"/PxPUC/#/researchers?search=crtitical+incident" }> Critical Incident </a>
                 </div>
 
                 <div id="c3" class="tabcontent">
@@ -461,17 +450,9 @@ class Commentary extends Component {
                     get prior to interrogation. </p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
-                      to={routes.researchers + "?search=interrogation"}
-                      style={{ color: "#00008b", textDecoration: "underline"}}>
-                      Interrogation
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=interrogation" }> Interrogation </a>
                     <br />
-                    <NavLink
-                      to={routes.researchers + "?search=accused"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Accused
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=accused" }> Accused </a>
                 </div>
 
                 <div id="c4" class="tabcontent">
@@ -480,23 +461,11 @@ class Commentary extends Component {
                     This includes requiring cities to buy false arrest insurance and pay out legal settlements.</p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
-                      to={routes.researchers + "?search=false+arrest"}
-                      style={{ color: "#00008b", textDecoration: "underline"}}>
-                      False arrest
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=false+arrest" }> False Arrest </a>
                     <br />
-                    <NavLink
-                      to={routes.researchers + "?search=liability+insurance"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Liability insurance
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=liability+insurance" }> Liability Insurance </a>
                     <br />
-                    <NavLink
-                      to={routes.researchers + "?search=defense+insurance"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Defense insurance
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=defense+insurance" }> Defense Insurance </a>
                 </div>
 
                 <div id="c5" class="tabcontent">
@@ -506,17 +475,9 @@ class Commentary extends Component {
                     destroyed after a set period of time.</p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
-                      to={routes.researchers + "?search=reprimand"}
-                      style={{ color: "#00008b", textDecoration: "underline"}}>
-                      Reprimand
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=reprimand" }> Reprimand </a>
                     <br />
-                    <NavLink
-                      to={routes.researchers + "?search=personal+file"}
-                      style={{ color: "#00008b", textDecoration: "underline", }}>
-                      Personal file
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=personal+file" }> Personal File </a>
                 </div>
 
                 <div id="c6" class="tabcontent">
@@ -525,11 +486,7 @@ class Commentary extends Component {
                     the public hold police accountable.</p>
                   <b> Search related keywords </b>
                   <br />
-                  <NavLink
-                      to={routes.researchers + "?search=public+comment"}
-                      style={{ color: "#00008b", textDecoration: "underline"}}>
-                      Public comment
-                    </NavLink>
+                    <a href={"/PxPUC/#/researchers?search=public+comment" }> Public Comment </a>
                 </div>
               </div>
             </div>

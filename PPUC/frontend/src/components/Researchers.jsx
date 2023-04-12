@@ -278,7 +278,7 @@ class Researchers extends Component {
         <h3 style={{ color: 'darkblue', fontWeight: 700, marginTop: 40 }}>
             Search Police Contracts
           </h3>
-          {/* <div
+          {/* Removed Banner <div
             class="topimage"
           > {/* Removed className="jumbotron" */}
             {/* figure out a better way to add in the spaces */} {/*
