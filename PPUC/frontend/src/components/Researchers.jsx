@@ -39,8 +39,8 @@ class Researchers extends Component {
     this.setState({
       currentPage: newPage,
     });
-    // scroll to top
-    scrollToElement("#results");
+    // scroll to top (not working
+    // scrollToElement("#results");
   }
 
   setPageSize(newPageSize) {
@@ -260,6 +260,8 @@ class Researchers extends Component {
     if (queryParams.search) {
       this.setSearchQuery(queryParams.search, true);
     }
+    // current working solution to get page to scroll to the top when loaded
+    window.scrollTo(0, 0);
   }
 
   render() {
