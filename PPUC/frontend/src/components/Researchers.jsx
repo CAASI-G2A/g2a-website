@@ -39,8 +39,8 @@ class Researchers extends Component {
     this.setState({
       currentPage: newPage,
     });
-    // scroll to top
-    scrollToElement("#results");
+    // scroll to top (not working
+    // scrollToElement("#results");
   }
 
   setPageSize(newPageSize) {
@@ -260,12 +260,30 @@ class Researchers extends Component {
     if (queryParams.search) {
       this.setSearchQuery(queryParams.search, true);
     }
+    // current working solution to get page to scroll to the top when loaded
+    window.scrollTo(0, 0);
   }
 
   render() {
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
+        <h3 style={{ color: 'darkblue', fontWeight: 700, marginTop: 40 }}>
+            Search Police Contracts
+          </h3>
+          {/* Removed Banner <div
+            class="topimage"
+          > {/* Removed className="jumbotron" */}
+            {/* figure out a better way to add in the spaces */} {/*
+            <br />
+            <br />
+            <br />
+          </div> */}
+          <br />
+          <br />
+          <br />
+          <br />
+          <h4 style={{textAlign: "center"}}> <b> Find Matching Text </b> </h4>
           <div className="col-md-6 offset-md-3">
             <form onSubmit={(e) => this.handleSearch(e)}>
               <div className="input-group">

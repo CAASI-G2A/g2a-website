@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { useState } from "react";
+//import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
 
 import { NavLink } from "react-router-dom";
 import routes from "../routes";
@@ -13,6 +16,7 @@ import SearchParser from "../libs/researcher_search_lang";
 import ResearcherResult from "./ResearcherResult";
 import SmallList from "./policeDeptMap/MapContainer";
 import { autoType } from "d3-dsv";
+import "../scss/tab.scss";
 
 import keys from "../data/keywords.json";
 // import keys2 from "../data/keywords.csv";
@@ -220,6 +224,26 @@ class Commentary extends Component {
     this.setState({ keywords: insert });
   }
 
+  genContent(evt, name) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(name).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
 
   render() {
 
@@ -262,100 +286,223 @@ class Commentary extends Component {
       iconComment = this.icons['minus'];
     }
 
+    /*
+    window.onload = function(){
+      hideAllTabs();
+   }
+   function hideAllTabs(){
+    var tabcontent = document.getElementsByClassName("tabcontent");
+      for (var i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+    }*/
+
     return (
       <div className="row mt-3">
         <div className="col-lg-12">
           <h3 style={{ color: 'darkblue', fontWeight: 700, marginTop: 40 }}>
             Search Police Contracts
           </h3>
+          {/*
           <div
-            className="jumbotron"
-            style={{
-              backgroundImage:
-                "url(https://media.istockphoto.com/id/1239476410/vector/contract-document-with-magnifying-glass-in-hand-check-and-search-in-legal-agreement-the.jpg?s=170667a&w=0&k=20&c=y3Bx7uQZcKe5NBJ9r1jVlxVaHJDPwxg44NaMXN8od9Q=)",
-              backgroundSize: "20%",
-              paddingTop: "60px",
-              paddingBottom: "90px",
-            }}
-          >
-            {/* figure out a better way to add in the spaces */}
+            class="topimage"
+          > {/* Removed className="jumbotron"     style={{
+            backgroundImage:
+              "url(http://www.rmmagazine.com/images/default-source/MagazineImages/2019/07/rm7-8-19_ff_contractrisks.jpg?Status=Master&sfvrsn=9b4a261a_0)",
+            backgroundSize: "100%",
+            paddingTop: "60px",
+            paddingBottom: "90px",
+            borderRadius: "5px",
+          }}*/} {/*
+            {/* figure out a better way to add in the spaces */} {/*
             <br />
             <br />
             <br />
-          </div>
-          <div style={{ textAlign: "right" }}>
-            <li className="nav-item nav-link">
-              <div className="col-md-6 offset-md-3">
-                <form onSubmit={(e) => this.handleSearch(e)}>
-
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      className={`form-control input-lg ${this.state.searchQueryError ? "border-danger" : ""
-                        }`}
-                      placeholder="Search Query..."
-
-                      value={this.state.searchQuery}
-                      onChange={(event) =>
-                        this.setSearchQuery(event.target.value, false)
-                      }
-                    />
-                    <div className="input-group-append">
-                      <button className="btn btn-outline-primary" type="submit">
-                        <FontAwesomeIcon icon={faSearch} />
-                      </button>
-                    </div>
-                  </div>
-                  {this.state.searchQueryError && (
-                    <p className="text-danger text-center">
-                      This search query is invalid
-                    </p>
-                  )}
-                </form>
+          </div> */}
+          <div> {/* this is the row div*/}
+            <br />
+            <br />
+            <br />
+            <div>
+              <div style={{ width: "100%", textAlign: "center"}}> {/* width: 50  float rightdiv before this for column */}
                 <br />
-                <div>
-                  <div // className="scrollable"
-                  id="categories" 
-                  style={{
-                    textAlign: "left",
-                    overflowY: "scroll",
-                    textDecoration: "underline",
-                    height: "100px",
-                    color: "#00008b",
-                  }}
-                  onLoadStart={() => generateCategories()}>
-                    {/* <div id="disqualify" onClick={() => this.getKeywords("disqualify")}>Disqualify Misconduct Complaints</div>
-                    <div id="prevents" onClick={() => this.getKeywords("prevents")}>Prevents Immediate Interrogation</div>
-                    <div id="unfair" onClick={() => this.getKeywords("unfair")}>Unfair Access to Information</div>
-                    <div id="legal" onClick={() => this.getKeywords("legal")}>Legal Costs</div>
-                    <div id="destroys" onClick={() => this.getKeywords("destroys")}>Destroys Misconduct Records</div>
-                    <div id="limits" onClick={() => this.getKeywords("limits")}>Limits Disciplicary Consequences</div> */}
-                    {categories}
+                <h4> <b> Find Matching Text </b> </h4>
+                <li className="nav-item nav-link">
+                  <div className="col-md-6 offset-md-3">
+                    <form onSubmit={(e) => this.handleSearch(e)}>
+                      <div 
+                      className="input-group"
+                      style={{}}>
+                        <input
+                          type="text"
+                          className={`form-control input-lg ${this.state.searchQueryError ? "border-danger" : ""
+                            }`}
+                          placeholder="Find terms in contracts..." //Search Query...
+
+                          value={this.state.searchQuery}
+                          onChange={(event) =>
+                            this.setSearchQuery(event.target.value, false)
+                          }
+                        />
+                        <div className="input-group-append">
+                          <button className="btn btn-outline-primary" type="submit">
+                            <FontAwesomeIcon icon={faSearch} />
+                          </button>
+                        </div>
+                      </div>
+                      {this.state.searchQueryError && (
+                        <p className="text-danger text-center">
+                          This search query is invalid
+                        </p>
+                      )}
+                    </form>
+                    <br />
+
+                    {/* Here is content to be removed 
+                    <div>
+                      <div // className="scrollable"
+                      id="categories" 
+                      style={{
+                        textAlign: "left",
+                        overflowY: "scroll",
+                        textDecoration: "underline",
+                        height: "100px",
+                        color: "#00008b",
+                      }}
+                      onLoadStart={() => generateCategories()}>
+                        {/* <div id="disqualify" onClick={() => this.getKeywords("disqualify")}>Disqualify Misconduct Complaints</div>
+                        <div id="prevents" onClick={() => this.getKeywords("prevents")}>Prevents Immediate Interrogation</div>
+                        <div id="unfair" onClick={() => this.getKeywords("unfair")}>Unfair Access to Information</div>
+                        <div id="legal" onClick={() => this.getKeywords("legal")}>Legal Costs</div>
+                        <div id="destroys" onClick={() => this.getKeywords("destroys")}>Destroys Misconduct Records</div>
+                        <div id="limits" onClick={() => this.getKeywords("limits")}>Limits Disciplicary Consequences</div> */} {/*
+                        {categories}
+                      </div>
+                      <br />
+                      <div id="information">
+                        <div style={{
+                          textAlign: "right"
+                        }}>
+                          Suggested key words:
+                        </div>
+                        {this.state.keywords.map((keyword, i) =>
+                        (
+                          <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}>
+                            {i == (this.state.keywords.length - 1) ? keyword : keyword + ", "}
+                          </a>
+                        )
+                        )
+                        }
+                      </div>
+                    </div> {/* End of content to be removed */}
                   </div>
-                  <br />
-                  <div id="information">
-                    <div style={{
-                      textAlign: "right"
-                    }}>
-                      Suggested key words:
-                    </div>
-                    {this.state.keywords.map((keyword, i) =>
-                    (
-                      <a href={"/PxPUC/#/researchers?search=" + keyword.replace(/ /g, '+')}>
-                        {i == (this.state.keywords.length - 1) ? keyword : keyword + ", "}
+                  <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
+                    How to read a contract *(PDF)
                       </a>
-                    )
-                    )
-                    }
-                  </div>
+                </li>
+              </div>
+            </div>
+            <div >
+              <div style={{ width: "100%", textAlign: "left"}}> {/* width: 50 div before this for column */}
+                <br />
+                <h4> <b> Search by Topics </b> </h4>
+                <b style={{color: "grey"}}> Click the boxes to learn more </b>
+                <br />
+                <div class="tab">
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c1')}> Disqualify Misconduct Complaints </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c2')}> Prevents Immediate Interrogation </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c3')}> Unfair Access to Information </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c4')}> Legal Costs </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c5')}> Destroys Misconduct Records </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c6')}> Limits Disciplinary Consequences </button>
+                </div>
+
+                <div id="c1" class="tabcontent">
+                  <b> Disqualify Misconduct Complaints </b>
+                  <p> Language that falls under this category disqualifies misconduct complaints that are filed 
+                    anonymously or are not filed within a set time period.</p>
+                  <b> Search related keywords </b>
+                  <br />
+                  {/*<NavLink
+                      to={routes.researchers + "?search=unfounded"}
+                      style={{ color: "#00008b", textDecoration: "underline"}}>
+                      Unfounded
+                      </NavLink>Test*/}
+                    <a href={"/PxPUC/#/researchers?search=unfounded" }> Unfounded </a>
+                    <br />
+                    <a href={"/PxPUC/#/researchers?search=citizen+complaint" }> Citizen Complaint </a>
+                </div>
+
+                <div id="c2" class="tabcontent">
+                  <b>Prevents Immediate Interrogation </b>
+                  <p> Language that falls under this category prevents police officers from being interrogated 
+                    immediately after a “critical incident” and restricts when, where, and how officers are interrogated.</p>
+                  <b> Search related keywords </b>
+                  <br />
+                  <a href={"/PxPUC/#/researchers?search=interview" }> Interview </a>
+                  <br />
+                  <a href={"/PxPUC/#/researchers?search=crtitical+incident" }> Critical Incident </a>
+                </div>
+
+                <div id="c3" class="tabcontent">
+                  <b> Unfair Access to Information </b>
+                  <p> Language that falls under this category gives officers access to information that civilians do not 
+                    get prior to interrogation. </p>
+                  <b> Search related keywords </b>
+                  <br />
+                    <a href={"/PxPUC/#/researchers?search=interrogation" }> Interrogation </a>
+                    <br />
+                    <a href={"/PxPUC/#/researchers?search=accused" }> Accused </a>
+                </div>
+
+                <div id="c4" class="tabcontent">
+                  <b> Legal Costs </b>
+                  <p> Language that falls under this category requires municipalities to pay costs related to police misconduct.
+                    This includes requiring cities to buy false arrest insurance and pay out legal settlements.</p>
+                  <b> Search related keywords </b>
+                  <br />
+                    <a href={"/PxPUC/#/researchers?search=false+arrest" }> False Arrest </a>
+                    <br />
+                    <a href={"/PxPUC/#/researchers?search=liability+insurance" }> Liability Insurance </a>
+                    <br />
+                    <a href={"/PxPUC/#/researchers?search=defense+insurance" }> Defense Insurance </a>
+                </div>
+
+                <div id="c5" class="tabcontent">
+                  <b> Destroys Misconduct Records </b>
+                  <p> Language that falls under this category prevents some misconduct accusations from being recorded in an 
+                    officer’s personnel file and also requires that records of misconduct are removed from personnel files and 
+                    destroyed after a set period of time.</p>
+                  <b> Search related keywords </b>
+                  <br />
+                    <a href={"/PxPUC/#/researchers?search=reprimand" }> Reprimand </a>
+                    <br />
+                    <a href={"/PxPUC/#/researchers?search=personal+file" }> Personal File </a>
+                </div>
+
+                <div id="c6" class="tabcontent">
+                  <b> Limits Disciplinary Consequences </b>
+                  <p> Language that falls under this category limits the release of information that could help the media and 
+                    the public hold police accountable.</p>
+                  <b> Search related keywords </b>
+                  <br />
+                    <a href={"/PxPUC/#/researchers?search=public+comment" }> Public Comment </a>
                 </div>
               </div>
-              <br />
-              <a href='/static/app/instructions/How_to_read_a_contract.pdf' style={{ fontSize: "1.3rem" }} download>
-                How to read a contract *(PDF)
-              </a>
-            </li>
+            </div>
           </div>
+
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          {/* 
           <div style={{ fontSize: "27px",fontFamily: 'Helvetica', fontStyle:'normal',fontWeight: 700,lineHeight: "31px",color: "#000D85" }}> More Information </div>
           <br />
           <div>
@@ -472,7 +619,7 @@ class Commentary extends Component {
           </div>
           <br />
           <br />
-          {/* Interrogation */}
+          {/* Interrogation */} {/* 
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -565,7 +712,7 @@ class Commentary extends Component {
           </div>
           <br />
           <br />
-          {/* Information */}
+          {/* Information */} {/* 
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -659,7 +806,7 @@ class Commentary extends Component {
           </div>
           <br />
           <br />
-          {/* falsearrest */}
+          {/* falsearrest */} {/* 
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -793,7 +940,7 @@ class Commentary extends Component {
           <br />
 
 
-          {/* Reprimand */}
+          {/* Reprimand */} {/*
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -895,7 +1042,7 @@ class Commentary extends Component {
           <br />
           <br />
 
-          {/* Disciplinary */}
+          {/* Disciplinary */} {/*
           <div
             className="col-md-10 offset-md-1"
             style={{
@@ -944,7 +1091,7 @@ class Commentary extends Component {
                 reason for any disciplinary action brought against the police
                 officer." (Bridgeville Borough)
               </a>
-
+            
               <br />
 
               <button
@@ -962,6 +1109,7 @@ class Commentary extends Component {
               </button>
             </div>
           </div>
+          */}
           <br />
           <br />
           <br />
