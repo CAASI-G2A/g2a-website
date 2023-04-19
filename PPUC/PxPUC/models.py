@@ -5,11 +5,13 @@ Definition of models.
 from tabnanny import verbose
 from django.db import models, reset_queries
 
+
 # Location object is the foundation for all other objects, most refer to it
 class Location(models.Model):
     name = models.CharField(max_length=150, default="")
     state = models.CharField(max_length=50, default="")
     complaint_form_link = models.URLField(max_length=300, null=True)
+
     # Region (string)
     # Police Budget (if available, float)
     # Number of officers (if available, int)
@@ -111,3 +113,94 @@ class SearchQuery(models.Model):
 
     class Meta:
         verbose_name_plural = "Search Queries"
+
+
+### in progress
+
+
+class Keyword(models.Model):
+    keyword = models.CharField(max_length=50, null=True)
+    example = models.CharField(max_length=300, null=True)
+    
+    
+    
+
+    class Meta:
+        ordering = ["keyword"]
+
+    def __str__(self):
+        return self.keyword
+
+
+class Provision(models.Model):
+    number = models.IntegerField(null=True)
+    category = models.CharField(max_length=50, null=True)
+    explanation = models.CharField(max_length=200, null=True)
+
+    keywords = models.ManyToManyField(Keyword)
+
+    class Meta:
+        ordering = ["number"]
+
+    def __str__(self):
+        return self.category
+
+
+class MasterContract(models.Model):
+    department = models.CharField(max_length=50, null=True)
+    startYear = models.CharField(max_length=4, null=True)
+    endYear = models.CharField(max_length=4, null=True)
+    bargAgent = models.CharField(max_length=100, null=True)
+    # blank    origPDFlink = models.CharField(max_length=100, null=True)
+    # two others blank on sheet Mar 23
+
+    provisions = models.ManyToManyField(Provision)
+
+    class Meta:
+        ordering = ["department"]
+
+    def __str__(self):
+        return self.department
+
+
+class Department(models.Model):
+    deptName = models.CharField(max_length=50, null=True)
+    webLink = models.CharField(max_length=100, null=True)
+    fullOfficers2019 = models.IntegerField(blank=True, null=True)
+    partOfficers2019 = models.IntegerField(blank=True, null=True)
+    hasBill = models.BooleanField()
+
+    mContractObj = models.ForeignKey(
+        MasterContract, on_delete=models.CASCADE, related_name="dept", null=True
+    )
+
+    def __str__(self):
+        return self.deptName
+
+
+class Municipality(models.Model):
+    municID = models.CharField(max_length=6, null=True)
+    municipality = models.CharField(max_length=100, null=True)
+    department = models.CharField(max_length=100, null=True)
+    totPop2010 = models.IntegerField()
+    nonWhitePop2010 = models.IntegerField(blank=True, null=True)
+    sqMiArea = models.FloatField(blank=True, null=True)
+    acreArea = models.FloatField(blank=True, null=True)
+
+    region = models.CharField(max_length=20, null=True)
+    COG = models.CharField(max_length=50, null=True)
+    school = models.CharField(max_length=50, null=True)
+
+    sfGlobalID = models.CharField(max_length=50, null=True)
+    sfSHAPEleng = models.FloatField()
+    sfSHAPEarea = models.FloatField()
+
+    departmentObj = models.ForeignKey(
+        Department, on_delete=models.CASCADE, related_name="munici", null=True
+    )
+
+    class Meta:
+        ordering = ["municipality"]
+
+    def __str__(self):
+        return self.municipality

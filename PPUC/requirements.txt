@@ -8,3 +8,6 @@ django-manifest-loader
 djangorestframework
 django-cors-headers
 django-after-response
+googledrivedownloader
+requests
+pathlib

@@ -11,6 +11,11 @@ from .models import Contract
 from .models import Sentence
 from .models import Question
 from .models import Problematic_Sentence
+from .models import Keyword
+from .models import Provision
+from .models import MasterContract
+from .models import Department
+from .models import Municipality
 
 
 def download_csv(modeladmin, request, queryset):
@@ -39,3 +44,12 @@ admin.site.register(Sentence)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Problematic_Sentence)
 admin.site.register(SearchQuery, SearchQueryAdmin)
+admin.site.register(Keyword)
+admin.site.register(Provision)
+admin.site.register(Department)
+admin.site.register(MasterContract)
+admin.site.register(Municipality)
+
+
+
+
