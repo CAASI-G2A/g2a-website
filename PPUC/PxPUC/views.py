@@ -234,7 +234,6 @@ class ResearcherSearchList(generics.ListAPIView):
     serializer_class = LocationSerializer
 
     def get_queryset(self):
-
         query = self.request.GET.get("query", "")
         if query is None:
             raise serializers.ValidationError(

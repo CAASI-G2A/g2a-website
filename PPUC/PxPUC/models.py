@@ -121,9 +121,6 @@ class SearchQuery(models.Model):
 class Keyword(models.Model):
     keyword = models.CharField(max_length=50, null=True)
     example = models.CharField(max_length=300, null=True)
-    
-    
-    
 
     class Meta:
         ordering = ["keyword"]

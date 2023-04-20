@@ -49,7 +49,3 @@ admin.site.register(Provision)
 admin.site.register(Department)
 admin.site.register(MasterContract)
 admin.site.register(Municipality)
-
-
-
-

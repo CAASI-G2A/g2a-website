@@ -5,81 +5,126 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('PxPUC', '0009_auto_20220812_2225'),
+        ("PxPUC", "0009_auto_20220812_2225"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Department',
+            name="Department",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('deptName', models.CharField(max_length=50, null=True)),
-                ('webLink', models.CharField(max_length=100, null=True)),
-                ('fullOfficers2019', models.IntegerField()),
-                ('partOfficers2019', models.IntegerField()),
-                ('hasBill', models.BooleanField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("deptName", models.CharField(max_length=50, null=True)),
+                ("webLink", models.CharField(max_length=100, null=True)),
+                ("fullOfficers2019", models.IntegerField()),
+                ("partOfficers2019", models.IntegerField()),
+                ("hasBill", models.BooleanField()),
             ],
         ),
         migrations.CreateModel(
-            name='Keyword',
+            name="Keyword",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('keyword', models.CharField(max_length=50, null=True)),
-                ('example', models.CharField(max_length=300, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("keyword", models.CharField(max_length=50, null=True)),
+                ("example", models.CharField(max_length=300, null=True)),
             ],
             options={
-                'ordering': ['keyword'],
+                "ordering": ["keyword"],
             },
         ),
         migrations.CreateModel(
-            name='Provision',
+            name="Provision",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('number', models.IntegerField(max_length=3, null=True)),
-                ('category', models.CharField(max_length=50, null=True)),
-                ('explanation', models.CharField(max_length=200, null=True)),
-                ('keywords', models.ManyToManyField(to='PxPUC.Keyword')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("number", models.IntegerField(max_length=3, null=True)),
+                ("category", models.CharField(max_length=50, null=True)),
+                ("explanation", models.CharField(max_length=200, null=True)),
+                ("keywords", models.ManyToManyField(to="PxPUC.Keyword")),
             ],
             options={
-                'ordering': ['number'],
+                "ordering": ["number"],
             },
         ),
         migrations.CreateModel(
-            name='Municipality',
+            name="Municipality",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('municID', models.CharField(max_length=6, null=True)),
-                ('municipality', models.CharField(max_length=100, null=True)),
-                ('totPop2010', models.IntegerField()),
-                ('nonWhitePop2010', models.IntegerField()),
-                ('sqMiArea', models.FloatField()),
-                ('acreArea', models.FloatField()),
-                ('region', models.CharField(max_length=20, null=True)),
-                ('COG', models.CharField(max_length=50, null=True)),
-                ('school', models.CharField(max_length=50, null=True)),
-                ('sfGlobalID', models.CharField(max_length=50, null=True)),
-                ('sfSHAPEleng', models.FloatField()),
-                ('sfSHAPEarea', models.FloatField()),
-                ('department', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='PxPUC.department')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("municID", models.CharField(max_length=6, null=True)),
+                ("municipality", models.CharField(max_length=100, null=True)),
+                ("totPop2010", models.IntegerField()),
+                ("nonWhitePop2010", models.IntegerField()),
+                ("sqMiArea", models.FloatField()),
+                ("acreArea", models.FloatField()),
+                ("region", models.CharField(max_length=20, null=True)),
+                ("COG", models.CharField(max_length=50, null=True)),
+                ("school", models.CharField(max_length=50, null=True)),
+                ("sfGlobalID", models.CharField(max_length=50, null=True)),
+                ("sfSHAPEleng", models.FloatField()),
+                ("sfSHAPEarea", models.FloatField()),
+                (
+                    "department",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="PxPUC.department",
+                    ),
+                ),
             ],
             options={
-                'ordering': ['municipality'],
+                "ordering": ["municipality"],
             },
         ),
         migrations.CreateModel(
-            name='MasterContract',
+            name="MasterContract",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('department', models.CharField(max_length=50, null=True)),
-                ('startYear', models.CharField(max_length=4, null=True)),
-                ('endYear', models.CharField(max_length=4, null=True)),
-                ('bargAgent', models.CharField(max_length=100, null=True)),
-                ('provisions', models.ManyToManyField(to='PxPUC.Provision')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("department", models.CharField(max_length=50, null=True)),
+                ("startYear", models.CharField(max_length=4, null=True)),
+                ("endYear", models.CharField(max_length=4, null=True)),
+                ("bargAgent", models.CharField(max_length=100, null=True)),
+                ("provisions", models.ManyToManyField(to="PxPUC.Provision")),
             ],
             options={
-                'ordering': ['department'],
+                "ordering": ["department"],
             },
         ),
     ]

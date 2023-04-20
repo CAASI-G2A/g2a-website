@@ -5,55 +5,64 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('PxPUC', '0010_department_keyword_mastercontract_municipality_provision'),
+        ("PxPUC", "0010_department_keyword_mastercontract_municipality_provision"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='department',
-            name='mContractObj',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='dept', to='PxPUC.mastercontract'),
+            model_name="department",
+            name="mContractObj",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="dept",
+                to="PxPUC.mastercontract",
+            ),
         ),
         migrations.AddField(
-            model_name='municipality',
-            name='departmentObj',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='munici', to='PxPUC.department'),
+            model_name="municipality",
+            name="departmentObj",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="munici",
+                to="PxPUC.department",
+            ),
         ),
         migrations.AlterField(
-            model_name='department',
-            name='fullOfficers2019',
+            model_name="department",
+            name="fullOfficers2019",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='department',
-            name='partOfficers2019',
+            model_name="department",
+            name="partOfficers2019",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='municipality',
-            name='acreArea',
+            model_name="municipality",
+            name="acreArea",
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='municipality',
-            name='department',
+            model_name="municipality",
+            name="department",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='municipality',
-            name='nonWhitePop2010',
+            model_name="municipality",
+            name="nonWhitePop2010",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='municipality',
-            name='sqMiArea',
+            model_name="municipality",
+            name="sqMiArea",
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='provision',
-            name='number',
+            model_name="provision",
+            name="number",
             field=models.IntegerField(null=True),
         ),
     ]
