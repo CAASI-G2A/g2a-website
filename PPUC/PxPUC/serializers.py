@@ -29,9 +29,13 @@ class LocationSerializer(serializers.ModelSerializer):
                 )
                 if is_preloaded:
                     self.fields["sentences"] = serializers.SerializerMethodField()
+                    self.fields["rank"] = serializers.SerializerMethodField()
 
     def get_sentences(self, obj):
         return SentenceSerializer(obj.sentences, many=True).data
+
+    def get_rank(self, obj):
+        return obj.rank
 
     def get_hasTxt(self, obj):
         # check filesystem

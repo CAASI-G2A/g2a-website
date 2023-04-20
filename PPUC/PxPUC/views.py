@@ -6,7 +6,7 @@ from cgitb import text
 from datetime import datetime
 from operator import contains
 from django.shortcuts import render, redirect, get_object_or_404
-from django.db.models import Q, Prefetch, Count
+from django.db.models import Q, Prefetch, Count, Value, CharField
 from django.http import HttpResponse, HttpResponseForbidden, HttpRequest
 from .models import *
 from .serializers import *
@@ -267,9 +267,15 @@ class ResearcherSearchList(generics.ListAPIView):
                 .exclude(sentences_count=0)
             )
 
-            # Compare whether in the current sentence_queryset or in the previous
-            # sentence_queryset MUST be listed first, so that the newest results are added
-            queryset = sentence_queryset | queryset
+            # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
+            letter_grade = chr(i + 65)
+            # add rank field to sentence_queryset to be returned to front end
+            sentence_queryset = sentence_queryset.annotate(
+                rank=Value(letter_grade, output_field=CharField())
+            )
+
+            # Add current sentence_queryset to previous query_set
+            queryset = sentence_queryset.union(queryset)
 
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())

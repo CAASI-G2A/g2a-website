@@ -1,0 +1,81 @@
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  float: left;
+  display: block;
+  background-color: white;
+  color: black;
+  padding: 22px 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #87CEEB;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  display: none;
+  padding: 0px 12px 0px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+/* Handles the header image responsively */
+.topimage { 
+    background-image:
+    url("http://www.rmmagazine.com/images/default-source/MagazineImages/2019/07/rm7-8-19_ff_contractrisks.jpg?Status=Master&sfvrsn=9b4a261a_0");
+    background-size: 100%;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 800px) { 
+.topimage {
+    display: none;
+    }
+}
+
+/* Removed
+.column {
+    width: 50%;
+}
+
+/* Clear floats after the columns 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+  }*/

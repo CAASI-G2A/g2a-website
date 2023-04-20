@@ -15,18 +15,23 @@ a {
 .border-1 {
   border-width: 1px !important;
 }
+
 .border-2 {
   border-width: 2px !important;
 }
+
 .border-3 {
   border-width: 3px !important;
 }
+
 .border-4 {
   border-width: 4px !important;
 }
+
 .border-5 {
   border-width: 5px !important;
 }
+
 .border-light-gray {
   border-color: #c4c4c4;
 }
@@ -35,7 +40,7 @@ a {
   position: relative;
 }
 
-.dropdown-submenu > .dropdown-menu {
+.dropdown-submenu>.dropdown-menu {
   top: auto;
   left: 100%;
   margin-top: -33px;
@@ -45,11 +50,11 @@ a {
   border-radius: 0 6px 6px 6px;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover>.dropdown-menu {
   display: block;
 }
 
-.dropdown-submenu > a:after {
+.dropdown-submenu>a:after {
   display: block;
   content: " ";
   float: right;
@@ -63,7 +68,7 @@ a {
   margin-right: -10px;
 }
 
-.dropdown-submenu:hover > a:after {
+.dropdown-submenu:hover>a:after {
   border-left-color: #fff;
 }
 
@@ -71,7 +76,7 @@ a {
   float: none;
 }
 
-.dropdown-submenu.pull-left > .dropdown-menu {
+.dropdown-submenu.pull-left>.dropdown-menu {
   left: -100%;
   margin-left: 10px;
   -webkit-border-radius: 6px 0 6px 6px;
@@ -120,6 +125,7 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
   display: none;
 }
+
 .navbar-custom {
   background-color: white;
 }
@@ -133,9 +139,11 @@ input[type="checkbox"].input-validation-error {
   border: 1px solid #428bca;
   box-shadow: 0 0 0 1px #428bca;
 }
+
 a {
   overflow-wrap: break-word;
 }
+
 a.a1:link {
   color: black;
 }
@@ -174,6 +182,7 @@ pre {
 .panel-body {
   border-top: 1px solid #428bca;
 }
+
 .scrollable-panel {
   height: 300px;
   overflow-y: scroll;
@@ -187,12 +196,15 @@ pre {
 .flow-circle {
   color: #337ab7;
 }
+
 .flow-circle-selected {
   color: red;
 }
+
 .flow-stage {
   transition: transform 0.35s ease;
 }
+
 // disable hover on mobile
 @media (hover: hover) {
   .flow-stage:hover {
@@ -201,6 +213,7 @@ pre {
     transition: transform 0.35s ease;
   }
 }
+
 .flow-stage-text {
   margin-top: 0px;
 }
@@ -223,7 +236,7 @@ body {
 }
 
 // fix font awesome shifting stacked icons
-.flow-stage > .fa-stack {
+.flow-stage>.fa-stack {
   position: initial !important;
 }
 
@@ -231,6 +244,7 @@ body {
 .bg-blue {
   background-color: #337ab7;
 }
+
 .border-blue {
   border-color: #337ab7;
 }
@@ -239,6 +253,7 @@ body {
 .subprocess-ml-n {
   margin-left: -1.4rem !important;
 }
+
 // set higher z index so FAQ button is clickable
 .subprocess-faq-icon {
   z-index: 2;
@@ -255,8 +270,8 @@ body {
 }
 
 // search result page
-.contract-title {
-}
+.contract-title {}
+
 .contract-highlight-text {
   color: #5d5d5d;
 }
@@ -267,11 +282,11 @@ body {
 }
 
 .sidebar_panel {
-    width: 25%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 500px;
-    position: relative;
+  width: 25%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  position: relative;
 }
 
 @media screen and (max-width:767px) {
@@ -286,7 +301,7 @@ body {
   .region_list_wrapper {
     width: 100%;
   }
-  
+
   .map_container {
     width: 100%;
   }
@@ -324,13 +339,13 @@ body {
 }
 
 .clear_button {
-    font-weight: 600;
-    border: 1px solid rgba(0, 0, 0, 0) !important;
-    border-radius: 10px !important;
-    margin-right: 10px !important;
-    padding: 0 5px !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    text-decoration: underline;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 10px !important;
+  margin-right: 10px !important;
+  padding: 0 5px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  text-decoration: underline;
 }
 
 .map_search_term::before {
@@ -409,3 +424,13 @@ body {
 //   position: relative !important;
 //   height: 300px !important;
 // }
+
+.scrollable {
+  width: 600px;
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: left;
+
+  padding: 20px;
+}
