@@ -38,9 +38,12 @@ def run():
     print('contracts downloaded\n\n')
 
     # #added by ACPP SPRING 2023
-    # print('Reading in Excel Sheet')
-    # call_command('runscript', 'read_master_sheet')
-    # print('master sheet read\n\n')
+    print('Reading in Excel Sheet')
+    call_command('runscript', 'read_master_sheet')
+    print('master sheet read\n\n')
+
+
+
 
     # print("running npm install")
     # subprocess.run('npm install', cwd=FRONTEND_DIR, shell=True)

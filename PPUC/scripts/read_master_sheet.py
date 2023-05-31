@@ -196,22 +196,22 @@ def run():
         # key= keyword
         # dir=path to file
         # file=file name 
-        def Contract_Search(key,dir,file):
-            directory=os.listdir('PxPUC/static/app/contracts_txt')
-            #check to make sure there exists a contract with this name
-            if file not in directory:
-                return False
-            query=key
-            for i in range(len(query.split())): #Splits multi worded keywords into several smaller queries
-                cur_query = query.rsplit(" ", i)[0]
-                #Reads in file to be easily searched
-                with open(dir,'r',encoding='utf8',errors='ignore') as file:
-                    searchInLines=file.readlines()
-                    file.close
-                    for line in searchInLines:
-                        if cur_query.lower() in line.lower():
-                            return True #returns true if found
-            return False            
+    def Contract_Search(key,dir,file):
+        directory=os.listdir('PxPUC/static/app/contracts_txt')
+        #check to make sure there exists a contract with this name
+        if file not in directory:
+            return False
+        query=key
+        for i in range(len(query.split())): #Splits multi worded keywords into several smaller queries
+            cur_query = query.rsplit(" ", i)[0]
+            #Reads in file to be easily searched
+            with open(dir,'r',encoding='utf8',errors='ignore') as file:
+                searchInLines=file.readlines()
+                file.close
+                for line in searchInLines:
+                    if cur_query.lower() in line.lower():
+                        return True #returns true if found
+        return False            
 
     
     #This is the main part of the contract search for provisions

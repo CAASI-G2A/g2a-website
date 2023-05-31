@@ -165,3 +165,46 @@ class SearchQuerySerializer(serializers.ModelSerializer):
     class Meta:
         model = SearchQuery
         fields = {"id", "query", "timestamp", "results"}
+
+#Added by SU23 Internship
+# Converting new Django models created in models.py by SP23 Capstone team
+class KeywordSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Keyword
+        fields = ("id", "keyword", "example")
+
+class ProvisionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Provision
+        fields = ("id", "number", "category", "explanation")
+        #fields = ("category",)
+
+class MasterContractSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MasterContract
+        fields = ("id", "department", "startYear", "endYear", "bargAgent")
+
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Department
+        fields = ("id", "deptName", "webLink", "fullOfficers2019", "partOfficers2019", "hasBill")
+
+class MunicipalitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Municipality
+        fields = (
+            "id",
+            "municID",
+            "municipality",
+            "department",
+            "totPop2010",
+            "nonWhitePop2010",
+            "sqMiArea",
+            "acreArea",
+            "region",
+            "COG",
+            "school",
+            "sfGlobalID",
+            "sfSHAPEleng",
+            "sfSHAPEarea",
+        )

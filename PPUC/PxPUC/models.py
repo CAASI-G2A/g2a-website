@@ -50,6 +50,7 @@ class Contract(models.Model):
     location = models.ForeignKey(
         Location, related_name="contract", on_delete=models.CASCADE
     )
+    #import pdb; pdb.set_trace()
     text = models.TextField()
     expiry = models.CharField(max_length=150)
     is_parsed = models.BooleanField(default=False)
@@ -115,9 +116,17 @@ class SearchQuery(models.Model):
         verbose_name_plural = "Search Queries"
 
 
-### in progress
+### In progress: Important functions for using the data in a more flexible way.
+### See PPUC/PxPUC/static/app/mastersheets/Model master spreadsheet
 
+########## BEGIN NEW MODELS: The below classes create models based on the spreadsheet and adhere to changes on there
+### Each class creates variables for each header on the spreadsheet and should be able to be used to make these
+### connections. Ideally, these classes can be used to connect the spreadsheet to searching and other tools, so instead of hardcoding
+### the category search box with each category, for example, the fields will all be populated dynamically with these classes.
+### Therefore, changing the master spreadsheet would change the terms on that specific box. This functionality is desired all
+### across the site as well.
 
+# Many to many relationship with provisions
 class Keyword(models.Model):
     keyword = models.CharField(max_length=50, null=True)
     example = models.CharField(max_length=300, null=True)
@@ -128,7 +137,7 @@ class Keyword(models.Model):
     def __str__(self):
         return self.keyword
 
-
+# Many to many relationship with contracts and keywords
 class Provision(models.Model):
     number = models.IntegerField(null=True)
     category = models.CharField(max_length=50, null=True)
@@ -142,7 +151,7 @@ class Provision(models.Model):
     def __str__(self):
         return self.category
 
-
+# Many to many with contracts, one to one with departments
 class MasterContract(models.Model):
     department = models.CharField(max_length=50, null=True)
     startYear = models.CharField(max_length=4, null=True)
@@ -159,13 +168,13 @@ class MasterContract(models.Model):
     def __str__(self):
         return self.department
 
-
+# One to many with municipality, one to one with departments
 class Department(models.Model):
     deptName = models.CharField(max_length=50, null=True)
     webLink = models.CharField(max_length=100, null=True)
     fullOfficers2019 = models.IntegerField(blank=True, null=True)
     partOfficers2019 = models.IntegerField(blank=True, null=True)
-    hasBill = models.BooleanField()
+    hasBill = models.BooleanField() # Refers to if it has a bill of rights or not 
 
     mContractObj = models.ForeignKey(
         MasterContract, on_delete=models.CASCADE, related_name="dept", null=True
@@ -174,7 +183,7 @@ class Department(models.Model):
     def __str__(self):
         return self.deptName
 
-
+# Many to one with departments 
 class Municipality(models.Model):
     municID = models.CharField(max_length=6, null=True)
     municipality = models.CharField(max_length=100, null=True)
@@ -188,6 +197,7 @@ class Municipality(models.Model):
     COG = models.CharField(max_length=50, null=True)
     school = models.CharField(max_length=50, null=True)
 
+    # SHAPE maps data
     sfGlobalID = models.CharField(max_length=50, null=True)
     sfSHAPEleng = models.FloatField()
     sfSHAPEarea = models.FloatField()

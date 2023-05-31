@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { useState } from "react";
 //import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-
 import { NavLink } from "react-router-dom";
 import routes from "../routes";
 
@@ -65,6 +64,13 @@ class Commentary extends Component {
       showResult: false,
 
       keywords: [],
+
+      //SU23 Added new vars for the new models in models.py
+      newKeywords: [],
+      provisions: [],
+      departments: [],
+      masterContract: null,
+      municipalities: [],
     };
 
     // location of plus and minus icons that show up 
@@ -77,6 +83,8 @@ class Commentary extends Component {
 
     this.setSearchQuery = this.setSearchQuery.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+
+    this.provisionsRequest = this.provisionsRequest.bind(this);
 
     const styles = {
       myTextStyle: {
@@ -190,12 +198,19 @@ class Commentary extends Component {
   componentDidMount() {
     // make sure that the page is always loaded at the top
     window.scrollTo(0, 0);
+
+    Api.getProvisions().then((resp) => {
+      this.setState({
+        provisions: resp,
+      });
+    });
   }
 
+  /*
   componentDidMount() {
     // make sure that the page is always loaded at the top
     window.scrollTo(0, 0);
-  }
+  }*/
 
   generateCategories() {
     let insert = [];
@@ -243,6 +258,46 @@ class Commentary extends Component {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(name).style.display = "block";
     evt.currentTarget.className += " active";
+  }
+  
+  provisionsRequest(){
+    Api.getProvisions().then((resp) => {
+      this.setState({
+        provisions: resp,
+      });
+    });
+  }
+
+  keywordsRequest(){
+    Api.getKeywords().then((resp) => {
+      this.setState({
+        newKeywords: resp,
+      });
+    });
+  }
+
+  departmentRequest(){
+    Api.getDepartment().then((resp) => {
+      this.setState({
+        departments: resp,
+      });
+    });
+  }
+
+  municipalityRequest(){
+    Api.getMunicipality().then((resp) => {
+      this.setState({
+        municipalities: resp,
+      });
+    });
+  }
+
+  masterContractRequest(){
+    Api.getMasterContract().then((resp) => {
+      this.setState({
+        masterContract: resp,
+      });
+    });
   }
 
   render() {
@@ -501,7 +556,7 @@ class Commentary extends Component {
           <br />
           <br />
           <br />
-
+       
           {/* 
           <div style={{ fontSize: "27px",fontFamily: 'Helvetica', fontStyle:'normal',fontWeight: 700,lineHeight: "31px",color: "#000D85" }}> More Information </div>
           <br />
@@ -1116,6 +1171,31 @@ class Commentary extends Component {
           <br />
           <br />
           <br />
+        </div>
+
+        {/* Below is just a test to ensure the backend connection is established: WORK IN PROGRESS */}
+        <div>
+            {this.state.provisions.length}
+        </div>
+
+        {/*
+        const provisionItems = this.state.provisions.map((p) =>
+        <li>{p}</li>
+        );
+        return (
+          <ul>{provisionItems}</ul>
+        );*/}
+
+        {/*
+        <div>
+            {this.state.provisions.map((p) => (
+              <p> {p} </p>
+            ))}
+        </div>*/}
+        <div>
+          <ul>
+            {this.state.provisions.map(provision => (<li key={provision.id}>{provision.category}</li>))} 
+          </ul>
         </div>
       </div>
     );

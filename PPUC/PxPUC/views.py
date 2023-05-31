@@ -377,3 +377,27 @@ class LocationStageList(APIView):
             "result": result,
         }
         return Response(stages)
+    
+class ProvisionView(generics.ListAPIView):
+    serializer_class = ProvisionSerializer
+    #queryset = Provision.objects.all()
+    def get_queryset(self):
+        #queryset = Provision.objects.all().values('category') FIRST
+        queryset = [str(elem) for elem in list(Provision.objects.all().values_list('category'))]
+        return queryset
+
+class KeywordView(generics.ListAPIView):
+    serializer_class = KeywordSerializer
+    queryset = Keyword.objects.all()
+
+class MasterContractView(generics.ListAPIView):
+    serializer_class = MasterContractSerializer
+    queryset = MasterContract.objects.all()
+
+class DepartmentView(generics.ListAPIView):
+    serializer_class = DepartmentSerializer
+    queryset = Department.objects.all()
+
+class MunicipalityView(generics.ListAPIView):
+    serializer_class = MunicipalitySerializer
+    queryset = Municipality.objects.all()
