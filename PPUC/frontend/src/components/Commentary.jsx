@@ -28,7 +28,8 @@ import keys from "../data/keywords.json";
 //     5. fix text 
 //     6. fix formating 
 
-
+// From Elias for highlighting: window.scrollTo(0, $('div:contains("THE CONTENT YOU ARE SEARCHING FOR")').offset().top);
+//export const queryWordsContext = React.createContext("");
 class Commentary extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +52,7 @@ class Commentary extends Component {
       showPublicComment: false,
       // hoveredPublicComment: false,
 
-      searchQuery: "",
+      //searchQuery: "",
       searchQueryWords: [],
       searchQueryError: null,
       queryResults: null,
@@ -72,6 +73,9 @@ class Commentary extends Component {
       masterContract: null,
       municipalities: [],
     };
+
+    console.log("Props = ")
+    console.log(this.props);
 
     // location of plus and minus icons that show up 
     this.icons = {
@@ -96,13 +100,15 @@ class Commentary extends Component {
     };
 
   }
-  setSearchQuery(newQuery, autoSearch) {
+  setSearchQuery(newQuery) { //removed autoSearch param
+    /*
     this.setState(
       {
         searchQuery: newQuery,
       },
       () => (autoSearch ? this.handleSearch() : null)
-    );
+    );*/
+    this.props.setSearchQuery(newQuery);
   }
 
   handleSearch(event) {
@@ -123,11 +129,12 @@ class Commentary extends Component {
       }
 
       //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + this.state.searchQuery + '"';
+      //const searchQuery = '"' + this.state.searchQuery + '"'; THIS LINE REMOVED FOR PROPS
+      const searchQuery = '"' + this.props.searchQuery + '"';
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
-      console.log(searchQuery)
-
+      console.log("In handle search");
+      console.log(searchQuery);
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
         resp.sort((a, b) => {
@@ -160,7 +167,7 @@ class Commentary extends Component {
         pathname: routes.researchers,
         search:
           "?" +
-          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
+          new URLSearchParams({ search: this.props.searchQuery, }).toString(), //changed state to props
       });
     } catch (err) {
       if (err instanceof SearchParser.SyntaxError) {
@@ -197,20 +204,11 @@ class Commentary extends Component {
 
   componentDidMount() {
     // make sure that the page is always loaded at the top
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
 
-    Api.getProvisions().then((resp) => {
-      this.setState({
-        provisions: resp,
-      });
-    });
+    this.provisionsRequest();
   }
 
-  /*
-  componentDidMount() {
-    // make sure that the page is always loaded at the top
-    window.scrollTo(0, 0);
-  }*/
 
   generateCategories() {
     let insert = [];
@@ -394,9 +392,9 @@ class Commentary extends Component {
                             }`}
                           placeholder="Find terms in contracts..." //Search Query...
 
-                          value={this.state.searchQuery}
+                          value={this.props.searchQuery} //change from this.state.searchQuery
                           onChange={(event) =>
-                            this.setSearchQuery(event.target.value, false)
+                            this.setSearchQuery(event.target.value) //removed false for second param
                           }
                         />
                         <div className="input-group-append">
@@ -411,6 +409,8 @@ class Commentary extends Component {
                         </p>
                       )}
                     </form>
+                    {console.log("In render")}
+                    {console.log(this.props.searchQuery)}
                     <br />
 
                     {/* Here is content to be removed 
@@ -1174,24 +1174,6 @@ class Commentary extends Component {
         </div>
 
         {/* Below is just a test to ensure the backend connection is established: WORK IN PROGRESS */}
-        <div>
-            {this.state.provisions.length}
-        </div>
-
-        {/*
-        const provisionItems = this.state.provisions.map((p) =>
-        <li>{p}</li>
-        );
-        return (
-          <ul>{provisionItems}</ul>
-        );*/}
-
-        {/*
-        <div>
-            {this.state.provisions.map((p) => (
-              <p> {p} </p>
-            ))}
-        </div>*/}
         <div>
           <ul>
             {this.state.provisions.map(provision => (<li key={provision.id}>{provision.category}</li>))} 

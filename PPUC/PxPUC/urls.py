@@ -7,6 +7,11 @@ from os import name
 from django.urls import path
 from PxPUC import forms, views
 from django.views.decorators.csrf import csrf_exempt
+import logging
+
+logger = logging.getLogger(__name__)
+
+logger.info("In urls")
 
 urlpatterns = [
     # Many of the url patterns correspond with respective endpoint in api.js
@@ -59,8 +64,7 @@ urlpatterns = [
         views.ResearcherSearchList.as_view(),
         name="researcher-search",
     ),
-    #Added by SU23 Intern
-    #TODO: Fix first param for each path
+    # Added by SU23 Intern
     path(
         "PxPUC/provision",
         views.ProvisionView.as_view(),

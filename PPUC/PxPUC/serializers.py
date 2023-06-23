@@ -3,6 +3,9 @@ from django.db.models.query import QuerySet
 from rest_framework import serializers
 from .models import *
 import os, re
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -166,28 +169,42 @@ class SearchQuerySerializer(serializers.ModelSerializer):
         model = SearchQuery
         fields = {"id", "query", "timestamp", "results"}
 
-#Added by SU23 Internship
+
+# Added by SU23 Internship
 # Converting new Django models created in models.py by SP23 Capstone team
 class KeywordSerializer(serializers.ModelSerializer):
     class Meta:
         model = Keyword
         fields = ("id", "keyword", "example")
 
+
 class ProvisionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Provision
-        fields = ("id", "number", "category", "explanation")
-        #fields = ("category",)
+        # fields = ("id", "number", "category", "explanation")
+        fields = ("category",)
+        print("In serial")
+        logger.info(fields)
+
 
 class MasterContractSerializer(serializers.ModelSerializer):
     class Meta:
         model = MasterContract
         fields = ("id", "department", "startYear", "endYear", "bargAgent")
 
+
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ("id", "deptName", "webLink", "fullOfficers2019", "partOfficers2019", "hasBill")
+        fields = (
+            "id",
+            "deptName",
+            "webLink",
+            "fullOfficers2019",
+            "partOfficers2019",
+            "hasBill",
+        )
+
 
 class MunicipalitySerializer(serializers.ModelSerializer):
     class Meta:

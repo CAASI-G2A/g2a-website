@@ -5,9 +5,11 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { Tabs } from "antd";
 import Api from "../libs/api";
 import ReactPDF from "@intelllex/react-pdf";
-
 import regionInfoData from "../data/merge_data_allegheny_map.json";
 import _default from "rc-trigger";
+import Highlighter from "react-highlight-words";
+import { removeStopwords, eng } from 'stopword'
+
 class Location extends Component {
   constructor(props) {
     super(props);
@@ -25,9 +27,84 @@ class Location extends Component {
       contractPdf: null,
       problematicSentences: null,
     };
+    console.log("Location props = ")
+    console.log(this.props.searchQuery);
+
+    this.modifyQuery= this.modifyQuery.bind(this);
+    this.getText = this.getText.bind(this);
+    this.getOffset = this.getOffset.bind(this);
+    //this.scrollToContent = this.scrollToContent(this);
   }
 
+  getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+  }
+
+  getText(){
+    var text = document.getElementById("inputtext").value;
+    var pels = document.querySelectorAll("p");
+    for (var pe of pels){
+        var te = pe.innerHTML;
+        console.log(text);
+        console.log(te.match(text));
+        if (te.match(text)!=null){
+            console.log(pe.innerHTML);
+            var rect = getOffset(pe);
+            console.log(rect);
+            console.log(rect.left);
+            console.log(rect.top);
+            window.scrollBy(rect.left,rect.top)
+        }
+    }
+  }
+
+  modifyQuery(query){
+    function getQueryWords(query) {
+      if (typeof query === "string") {
+        query = query.replace(/['"]+/g, "")
+
+        let lowerQuery = query.toLowerCase().split(" ")
+        let newQuery = removeStopwords(lowerQuery, eng)
+          
+        // If user input query is constructed solely of stop words, set query to original input
+        query = (newQuery.length == 0) ? query : newQuery.join(" ")
+
+        return [query.trim()]
+      } else {
+        throw 'Query is not a string';
+      }
+    }
+
+    let searchQuery = '"' + query + '"';
+    let searchQueryWords = getQueryWords(searchQuery);
+
+    let queryArr = searchQueryWords[0].split(' ')
+    return queryArr;
+  }
+
+  /*
+  scrollToContent(content) {
+    const element = $(`*:contains('${content}'):first`);
+    $(window).scrollTop(element.offset().top);
+  }*/
+  
+  
   componentDidMount() {
+    //const queryWords = this.modifyQuery(this.props.searchQuery);
+    //const important = queryWords[0];
+    //this.scrollToContent(important);
+    //window.scrollTo(0, $('div:contains("THE CONTENT YOU ARE SEARCHING FOR")').offset().top);
+    //document.getElementById('scoller')?.scrollIntoView({ behavior: 'smooth' });
+    //document.getElementById("scroller").scrollTo(0,0);
+    //document.getElementById('scroller')?.scrollIntoView(true);
+
+    $("html,#test").animate({ scrollTop: 1000 }, 500);
+
+
     // grab location id from request
     const { lid } = this.props.match.params;
     // make request for location specific data
@@ -71,6 +148,10 @@ class Location extends Component {
     const regionInfo = this.state.location
       && (_.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name}).length 
       ? _.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name})[0]: null);
+
+    const queryWords = this.modifyQuery(this.props.searchQuery);
+    console.log("Query words = ")
+    console.log(queryWords);
 
     return (
       <div>
@@ -135,12 +216,32 @@ class Location extends Component {
               </tbody>
             </table>
           </div>)}
-          <div className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
+          <div id="test" className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
             <a target="_blank" href="https://www.grietoaction.org/static/app/instructions/How_to_read_a_contract.pdf">Click for our brief “How to Read a Contract” guide</a>
+            {/*<button onClick={() => this.getText()} type="submit" class="btn btn-danger">Find Text</button>
+            <input id="inputtext" type="text"></input>*/}
           </div>
           {this.state.location && 
             (<Tabs defaultActiveKey="1" type="card" size={"large"}>
-              <TabPane tab="pdf" key="1">
+              <TabPane tab="text" key="1">
+                {this.state.contract && (
+                  <div className="col-md-12">
+                    <h2>Contract</h2>
+                    <hr className="my-4 border-top border-secondary" />
+                    {this.state.contract.text.map((line, index) => (
+                      <p key={index}>{line}
+                      <Highlighter
+                      highlightClassName="MyHC"
+                      highlightStyle={{backgroundColor: "#ffd500"}}
+                      searchWords={queryWords} 
+                      autoEscape={true}
+                      textToHighlight={line}/> 
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </TabPane>
+              <TabPane tab="pdf" key="2">
                 <div className="pdf_viewer_wrapper col-md-12">
                   {this.state.location.hasPdf && (
                     <ReactPDF
@@ -152,17 +253,6 @@ class Location extends Component {
                     />
                   )}
                 </div>
-              </TabPane>
-              <TabPane tab="text" key="2">
-                {this.state.contract && (
-                  <div className="col-md-12">
-                    <h2>Contract</h2>
-                    <hr className="my-4 border-top border-secondary" />
-                    {this.state.contract.text.map((line, index) => (
-                      <p key={index}>{line}</p>
-                    ))}
-                  </div>
-                )}
               </TabPane>
             </Tabs>)}
         </div>

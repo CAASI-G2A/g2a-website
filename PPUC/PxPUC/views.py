@@ -18,7 +18,7 @@ import os
 import sys
 import re
 import mimetypes
-from rest_framework import generics
+from rest_framework import generics, mixins, viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
@@ -28,6 +28,13 @@ import after_response
 import hmac
 import hashlib
 import subprocess
+import logging
+
+# from fuzzywuzzy import fuzz
+from thefuzz import fuzz
+from thefuzz import process
+
+logger = logging.getLogger(__name__)
 
 
 def landing(request):
@@ -252,11 +259,41 @@ class ResearcherSearchList(generics.ListAPIView):
         # Create an empty queryset to add results for each subquery
         queryset = Location.objects.none()
 
+        """
+        #SU23 Add: Beginning new algorithm
+        location_queryset = Location.objects.none()
+
+        #Filter in only sentences that contain the query
+        prefetch_queryset = Sentence.objects.filter(text_icontains=query)
+
+        #Dont so the annotation thing here, just calculate the scores per sentence and aggregate a total
+        #For each location with multiple sentences that are ranked, rank locations according to which has the highest fuzz score sentence
+        #For each sentence in the prefetch, calculate the score and assign it to the sentence
+        for sentence in prefetch_queryset:
+            prefetch_queryset = prefetch_queryset.annotate(
+			    score=fuzz.token_set_ratio(query, sentence.text)
+		    )
+
+        #Order by this score (possible change here)
+        prefetch_queryset = prefetch_queryset.order_by("-score")  #Possible change here depending on order_by issue/changing to 
+
+        #Get a count of sentences that contain the query
+        sentences_count = Q(sentences_text_icontains=query)
+
+        #Make the connection from the sorted sentences to their locations, this will be what is returned
+        location_queryset = (
+            #All locations (with a sentence count annotation) from the prefetched sentences
+            Location.objects.all()
+            .annotate(count = Count("sentences", filter=sentences_count))
+            .prefetch_related(Prefetch("sentences", queryset = prefetch_queryset))
+            .exclude(count = 0)
+        )
+        #SU23: End new algorithm"""
+
         # This loop takes the search query and finds results for each possible query, making the
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
-            print(cur_query)
 
             prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
             count_query_filter = Q(sentences__text__icontains=cur_query)
@@ -276,6 +313,8 @@ class ResearcherSearchList(generics.ListAPIView):
 
             # Add current sentence_queryset to previous query_set
             queryset = sentence_queryset.union(queryset)
+
+            # queryset = queryset.order_by("-rank")
 
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
@@ -377,26 +416,36 @@ class LocationStageList(APIView):
             "result": result,
         }
         return Response(stages)
-    
+
+
 class ProvisionView(generics.ListAPIView):
     serializer_class = ProvisionSerializer
-    #queryset = Provision.objects.all()
+
     def get_queryset(self):
-        #queryset = Provision.objects.all().values('category') FIRST
-        queryset = [str(elem) for elem in list(Provision.objects.all().values_list('category'))]
+        # queryset = Provision.objects.all().values('category') FIRST
+        # queryset = [str(elem) for elem in list(Provision.objects.all().values_list('category'))]
+
+        queryset = Provision.objects.all().values("category")
+
+        logger.info(queryset)
+
         return queryset
+
 
 class KeywordView(generics.ListAPIView):
     serializer_class = KeywordSerializer
     queryset = Keyword.objects.all()
 
+
 class MasterContractView(generics.ListAPIView):
     serializer_class = MasterContractSerializer
     queryset = MasterContract.objects.all()
 
+
 class DepartmentView(generics.ListAPIView):
     serializer_class = DepartmentSerializer
     queryset = Department.objects.all()
+
 
 class MunicipalityView(generics.ListAPIView):
     serializer_class = MunicipalitySerializer
