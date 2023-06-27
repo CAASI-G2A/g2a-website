@@ -259,23 +259,32 @@ class ResearcherSearchList(generics.ListAPIView):
         # Create an empty queryset to add results for each subquery
         queryset = Location.objects.none()
 
-        """
-        #SU23 Add: Beginning new algorithm
+        # SU23 Add: Beginning new algorithm
         location_queryset = Location.objects.none()
 
-        #Filter in only sentences that contain the query
-        prefetch_queryset = Sentence.objects.filter(text_icontains=query)
+        # Filter in only sentences that contain the query
+        prefetch = Sentence.objects.filter(text__icontains=query)
 
-        #Dont so the annotation thing here, just calculate the scores per sentence and aggregate a total
-        #For each location with multiple sentences that are ranked, rank locations according to which has the highest fuzz score sentence
-        #For each sentence in the prefetch, calculate the score and assign it to the sentence
-        for sentence in prefetch_queryset:
-            prefetch_queryset = prefetch_queryset.annotate(
-			    score=fuzz.token_set_ratio(query, sentence.text)
-		    )
+        # Dont so the annotation thing here, just calculate the scores per sentence and aggregate a total
+        # For each location with multiple sentences that are ranked, rank locations according to which has the highest fuzz score sentence
+        # For each sentence in the prefetch, calculate the score and assign it to the sentence
+        for sentence in prefetch:
+            # Inside the loop: create empty queryset to be filled with the rank of that sentence then union it with a new queryset at end
+            score = fuzz.partial_token_sort_ratio(query, sentence.text)
+            logger.info("Sentence = ")
+            logger.info(sentence.text)
+            logger.info("Score = ")
+            logger.info(score)
+            logger.info("----------------------------")
+            # prefetch = prefetch.annotate(
+        # score=fuzz.token_set_ratio(query, sentence.text)
+        # )
+        # logger.info("Prefetch = ")
+        # logger.info(prefetch)
 
+        """
         #Order by this score (possible change here)
-        prefetch_queryset = prefetch_queryset.order_by("-score")  #Possible change here depending on order_by issue/changing to 
+        prefetch = prefetch.order_by("-score")  #Possible change here depending on order_by issue/changing to 
 
         #Get a count of sentences that contain the query
         sentences_count = Q(sentences_text_icontains=query)
@@ -285,7 +294,7 @@ class ResearcherSearchList(generics.ListAPIView):
             #All locations (with a sentence count annotation) from the prefetched sentences
             Location.objects.all()
             .annotate(count = Count("sentences", filter=sentences_count))
-            .prefetch_related(Prefetch("sentences", queryset = prefetch_queryset))
+            .prefetch_related(Prefetch("sentences", queryset = prefetch))
             .exclude(count = 0)
         )
         #SU23: End new algorithm"""

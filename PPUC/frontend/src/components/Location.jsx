@@ -86,11 +86,11 @@ class Location extends Component {
     return queryArr;
   }
 
-  /*
+  
   scrollToContent(content) {
     const element = $(`*:contains('${content}'):first`);
     $(window).scrollTop(element.offset().top);
-  }*/
+  }
   
   
   componentDidMount() {
@@ -102,8 +102,28 @@ class Location extends Component {
     //document.getElementById("scroller").scrollTo(0,0);
     //document.getElementById('scroller')?.scrollIntoView(true);
 
-    $("html,#test").animate({ scrollTop: 1000 }, 500);
+    //$("html, body").animate({ scrollTop: $('#test').offset().top }, 1000);
+    //$("html").animate({ scrollTop: 0 }, 500);
+    //$("html, #test").animate({ scrollTop: 1000 }, 500); //ORIGINAL WORKING SOLUTION
+    //$(`*:contains('${alcohol}'):first`).animate({ scrollTop: 1000 }, 500);
+    //$("#test").get(0).scrollIntoView({behavior: 'smooth'});
+    //$('#DebugContainer')[0].scrollHeight
+    //$("html").delay(2000).animate({ scrollTop: $('#test')[0].scrollHeight }, 500);
 
+    /*
+    setTimeout(function() {
+      $("html").animate({ 
+        scrollTop: $('#test').offset().top 
+      }, 500);
+    }, 1000);*/
+
+    const queryWords = this.modifyQuery(this.props.searchQuery);
+    const important = queryWords[0];
+    setTimeout(function() {
+      $("html").animate({ 
+        scrollTop: $(`p:contains('${important}'):first`).offset().top 
+      }, 500);
+    }, 1000);
 
     // grab location id from request
     const { lid } = this.props.match.params;
@@ -216,7 +236,7 @@ class Location extends Component {
               </tbody>
             </table>
           </div>)}
-          <div id="test" className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
+          <div className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
             <a target="_blank" href="https://www.grietoaction.org/static/app/instructions/How_to_read_a_contract.pdf">Click for our brief “How to Read a Contract” guide</a>
             {/*<button onClick={() => this.getText()} type="submit" class="btn btn-danger">Find Text</button>
             <input id="inputtext" type="text"></input>*/}
@@ -255,6 +275,9 @@ class Location extends Component {
                 </div>
               </TabPane>
             </Tabs>)}
+        </div>
+        <div id="test">
+          test
         </div>
       </div>
     );

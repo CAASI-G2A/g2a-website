@@ -204,8 +204,7 @@ class Commentary extends Component {
 
   componentDidMount() {
     // make sure that the page is always loaded at the top
-    window.scrollTo(0, 0); 
-
+    window.scrollTo(0, 0);
     this.provisionsRequest();
   }
 
@@ -339,6 +338,16 @@ class Commentary extends Component {
       iconComment = this.icons['minus'];
     }
 
+    const provisionsArray = this.state.provisions.map((x, index) => {
+      return x.category
+    });
+
+    for (let i = 0; i < provisionsArray.length; i++){
+      provisionsArray[i] = provisionsArray[i].charAt(0).toUpperCase() + provisionsArray[i].slice(1).toLowerCase();
+    }
+
+    console.log(provisionsArray);
+
     /*
     window.onload = function(){
       hideAllTabs();
@@ -409,8 +418,6 @@ class Commentary extends Component {
                         </p>
                       )}
                     </form>
-                    {console.log("In render")}
-                    {console.log(this.props.searchQuery)}
                     <br />
 
                     {/* Here is content to be removed 
@@ -464,16 +471,16 @@ class Commentary extends Component {
                 <b style={{color: "grey"}}> Click the boxes to learn more </b>
                 <br />
                 <div class="tab">
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c1')}> Disqualify Misconduct Complaints </button>
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c2')}> Prevents Immediate Interrogation </button>
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c3')}> Unfair Access to Information </button>
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c4')}> Legal Costs </button>
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c5')}> Destroys Misconduct Records </button>
-                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c6')}> Limits Disciplinary Consequences </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c1')}> {provisionsArray[0]} </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c2')}> {provisionsArray[1]} </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c3')}> {provisionsArray[2]} </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c4')}> {provisionsArray[3]} </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c5')}> {provisionsArray[4]} </button>
+                  <button class="tablinks" onClick={(event) => this.genContent(event, 'c6')}> {provisionsArray[5]} </button>
                 </div>
 
                 <div id="c1" class="tabcontent">
-                  <b> Disqualify Misconduct Complaints </b>
+                  <b> {provisionsArray[0]} </b>
                   <p> Language that falls under this category disqualifies misconduct complaints that are filed 
                     anonymously or are not filed within a set time period.</p>
                   <b> Search related keywords </b>
@@ -489,7 +496,7 @@ class Commentary extends Component {
                 </div>
 
                 <div id="c2" class="tabcontent">
-                  <b>Prevents Immediate Interrogation </b>
+                  <b> {provisionsArray[1]} </b>
                   <p> Language that falls under this category prevents police officers from being interrogated 
                     immediately after a “critical incident” and restricts when, where, and how officers are interrogated.</p>
                   <b> Search related keywords </b>
@@ -500,7 +507,7 @@ class Commentary extends Component {
                 </div>
 
                 <div id="c3" class="tabcontent">
-                  <b> Unfair Access to Information </b>
+                  <b> {provisionsArray[2]} </b>
                   <p> Language that falls under this category gives officers access to information that civilians do not 
                     get prior to interrogation. </p>
                   <b> Search related keywords </b>
@@ -511,7 +518,7 @@ class Commentary extends Component {
                 </div>
 
                 <div id="c4" class="tabcontent">
-                  <b> Legal Costs </b>
+                  <b> {provisionsArray[3]} </b>
                   <p> Language that falls under this category requires municipalities to pay costs related to police misconduct.
                     This includes requiring cities to buy false arrest insurance and pay out legal settlements.</p>
                   <b> Search related keywords </b>
@@ -524,7 +531,7 @@ class Commentary extends Component {
                 </div>
 
                 <div id="c5" class="tabcontent">
-                  <b> Destroys Misconduct Records </b>
+                  <b> {provisionsArray[4]} </b>
                   <p> Language that falls under this category prevents some misconduct accusations from being recorded in an 
                     officer’s personnel file and also requires that records of misconduct are removed from personnel files and 
                     destroyed after a set period of time.</p>
@@ -536,7 +543,7 @@ class Commentary extends Component {
                 </div>
 
                 <div id="c6" class="tabcontent">
-                  <b> Limits Disciplinary Consequences </b>
+                  <b> {provisionsArray[5]} </b>
                   <p> Language that falls under this category limits the release of information that could help the media and 
                     the public hold police accountable.</p>
                   <b> Search related keywords </b>
@@ -1173,12 +1180,6 @@ class Commentary extends Component {
           <br />
         </div>
 
-        {/* Below is just a test to ensure the backend connection is established: WORK IN PROGRESS */}
-        <div>
-          <ul>
-            {this.state.provisions.map(provision => (<li key={provision.id}>{provision.category}</li>))} 
-          </ul>
-        </div>
       </div>
     );
   }
