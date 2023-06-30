@@ -52,6 +52,7 @@ class Commentary extends Component {
       showPublicComment: false,
       // hoveredPublicComment: false,
 
+      //SU23 Removed searchQuery from local declaration, added to App.jsx and sent down as prop
       //searchQuery: "",
       searchQueryWords: [],
       searchQueryError: null,
@@ -72,10 +73,9 @@ class Commentary extends Component {
       departments: [],
       masterContract: null,
       municipalities: [],
+      explanations: [],
     };
 
-    console.log("Props = ")
-    console.log(this.props);
 
     // location of plus and minus icons that show up 
     this.icons = {
@@ -89,6 +89,8 @@ class Commentary extends Component {
     this.handleSearch = this.handleSearch.bind(this);
 
     this.provisionsRequest = this.provisionsRequest.bind(this);
+    this.keywordsRequest = this.keywordsRequest.bind(this);
+    this.provisionExplRequest = this.provisionExplRequest.bind(this);
 
     const styles = {
       myTextStyle: {
@@ -100,6 +102,7 @@ class Commentary extends Component {
     };
 
   }
+  //SU23: Redid setSearchQuery by sending it down as a prop from App.jsx like searchQuery
   setSearchQuery(newQuery) { //removed autoSearch param
     /*
     this.setState(
@@ -109,6 +112,7 @@ class Commentary extends Component {
       () => (autoSearch ? this.handleSearch() : null)
     );*/
     this.props.setSearchQuery(newQuery);
+
   }
 
   handleSearch(event) {
@@ -133,8 +137,6 @@ class Commentary extends Component {
       const searchQuery = '"' + this.props.searchQuery + '"';
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
-      console.log("In handle search");
-      console.log(searchQuery);
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
         // sort based on city name
         resp.sort((a, b) => {
@@ -205,7 +207,11 @@ class Commentary extends Component {
   componentDidMount() {
     // make sure that the page is always loaded at the top
     window.scrollTo(0, 0);
+
+    //SU23 Added the API requests for the search box
     this.provisionsRequest();
+    this.keywordsRequest();
+    this.provisionExplRequest();
   }
 
 
@@ -261,6 +267,14 @@ class Commentary extends Component {
     Api.getProvisions().then((resp) => {
       this.setState({
         provisions: resp,
+      });
+    });
+  }
+
+  provisionExplRequest(){
+    Api.getProvisionExpl().then((resp) => {
+      this.setState({
+        explanations: resp,
       });
     });
   }
@@ -338,6 +352,8 @@ class Commentary extends Component {
       iconComment = this.icons['minus'];
     }
 
+
+    //SU23 Added the next three const for use in the frontend, taking the dict and making an array
     const provisionsArray = this.state.provisions.map((x, index) => {
       return x.category
     });
@@ -346,7 +362,16 @@ class Commentary extends Component {
       provisionsArray[i] = provisionsArray[i].charAt(0).toUpperCase() + provisionsArray[i].slice(1).toLowerCase();
     }
 
-    console.log(provisionsArray);
+    const keywordsArray = this.state.newKeywords.map((x, index) => {
+      return x.keyword
+    });
+    console.log("Keyword arr = ")
+    console.log(keywordsArray);
+    
+    const provisionExplArray = this.state.explanations.map((x, index) => {
+      return x.explanation
+    });
+
 
     /*
     window.onload = function(){
@@ -479,10 +504,10 @@ class Commentary extends Component {
                   <button class="tablinks" onClick={(event) => this.genContent(event, 'c6')}> {provisionsArray[5]} </button>
                 </div>
 
+                {/* SU23: The mapping of keywords/explanations could be done a lot better, just did this to show connection exists */}
                 <div id="c1" class="tabcontent">
                   <b> {provisionsArray[0]} </b>
-                  <p> Language that falls under this category disqualifies misconduct complaints that are filed 
-                    anonymously or are not filed within a set time period.</p>
+                  <p> {provisionExplArray[0]} </p>
                   <b> Search related keywords </b>
                   <br />
                   {/*<NavLink
@@ -490,65 +515,59 @@ class Commentary extends Component {
                       style={{ color: "#00008b", textDecoration: "underline"}}>
                       Unfounded
                       </NavLink>Test*/}
-                    <a href={"/PxPUC/#/researchers?search=unfounded" }> Unfounded </a>
+                    <a href={"/PxPUC/#/researchers?search=unfounded"} onClick= {(event) => this.handleSearch(event)}> {keywordsArray[12]} </a>
                     <br />
-                    <a href={"/PxPUC/#/researchers?search=citizen+complaint" }> Citizen Complaint </a>
+                    <a href={"/PxPUC/#/researchers?search=citizen+complaint" }> {keywordsArray[0]} </a>
                 </div>
 
                 <div id="c2" class="tabcontent">
                   <b> {provisionsArray[1]} </b>
-                  <p> Language that falls under this category prevents police officers from being interrogated 
-                    immediately after a “critical incident” and restricts when, where, and how officers are interrogated.</p>
+                  <p> {provisionExplArray[1]} </p>
                   <b> Search related keywords </b>
                   <br />
-                  <a href={"/PxPUC/#/researchers?search=interview" }> Interview </a>
+                  <a href={"/PxPUC/#/researchers?search=interview" }> {keywordsArray[5]} </a>
                   <br />
-                  <a href={"/PxPUC/#/researchers?search=crtitical+incident" }> Critical Incident </a>
+                  <a href={"/PxPUC/#/researchers?search=crtitical+incident" }> {keywordsArray[1]} </a>
                 </div>
 
                 <div id="c3" class="tabcontent">
                   <b> {provisionsArray[2]} </b>
-                  <p> Language that falls under this category gives officers access to information that civilians do not 
-                    get prior to interrogation. </p>
+                  <p> {provisionExplArray[2]} </p>
                   <b> Search related keywords </b>
                   <br />
-                    <a href={"/PxPUC/#/researchers?search=interrogation" }> Interrogation </a>
+                    <a href={"/PxPUC/#/researchers?search=drug+alcohol" }> {keywordsArray[3]}</a>
                     <br />
-                    <a href={"/PxPUC/#/researchers?search=accused" }> Accused </a>
+                    <a href={"/PxPUC/#/researchers?search=positive+test" }> {keywordsArray[9]}</a>
                 </div>
 
                 <div id="c4" class="tabcontent">
                   <b> {provisionsArray[3]} </b>
-                  <p> Language that falls under this category requires municipalities to pay costs related to police misconduct.
-                    This includes requiring cities to buy false arrest insurance and pay out legal settlements.</p>
+                  <p> {provisionExplArray[3]} </p>
                   <b> Search related keywords </b>
                   <br />
-                    <a href={"/PxPUC/#/researchers?search=false+arrest" }> False Arrest </a>
+                    <a href={"/PxPUC/#/researchers?search=false+arrest" }> {keywordsArray[4]} </a>
                     <br />
-                    <a href={"/PxPUC/#/researchers?search=liability+insurance" }> Liability Insurance </a>
+                    <a href={"/PxPUC/#/researchers?search=liability+insurance" }> {keywordsArray[6]} </a>
                     <br />
-                    <a href={"/PxPUC/#/researchers?search=defense+insurance" }> Defense Insurance </a>
+                    <a href={"/PxPUC/#/researchers?search=defense+insurance" }> {keywordsArray[2]}</a>
                 </div>
 
                 <div id="c5" class="tabcontent">
                   <b> {provisionsArray[4]} </b>
-                  <p> Language that falls under this category prevents some misconduct accusations from being recorded in an 
-                    officer’s personnel file and also requires that records of misconduct are removed from personnel files and 
-                    destroyed after a set period of time.</p>
+                  <p> {provisionExplArray[4]} </p>
                   <b> Search related keywords </b>
                   <br />
-                    <a href={"/PxPUC/#/researchers?search=reprimand" }> Reprimand </a>
+                    <a href={"/PxPUC/#/researchers?search=reprimand" }> {keywordsArray[11]} </a>
                     <br />
-                    <a href={"/PxPUC/#/researchers?search=personal+file" }> Personal File </a>
+                    <a href={"/PxPUC/#/researchers?search=personal+file" }> {keywordsArray[8]} </a>
                 </div>
 
                 <div id="c6" class="tabcontent">
                   <b> {provisionsArray[5]} </b>
-                  <p> Language that falls under this category limits the release of information that could help the media and 
-                    the public hold police accountable.</p>
+                  <p> {provisionExplArray[5]} </p>
                   <b> Search related keywords </b>
                   <br />
-                    <a href={"/PxPUC/#/researchers?search=public+comment" }> Public Comment </a>
+                    <a href={"/PxPUC/#/researchers?search=public+comment" }> {keywordsArray[10]} </a>
                 </div>
               </div>
             </div>

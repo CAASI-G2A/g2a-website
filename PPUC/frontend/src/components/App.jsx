@@ -73,7 +73,10 @@ class App extends Component {
             <Route path={routes.commentary} render={
                           (props) => <Commentary {...props} searchQuery={this.state.searchQuery} setSearchQuery={this.setSearchQuery}/>
                               }/>
-            <Route path={routes.researchers} component={Researchers} />
+            {/*<Route path={routes.researchers} component={Researchers} />*/}
+            <Route path={routes.researchers} render={
+                          (props) => <Researchers {...props} searchQuery={this.state.searchQuery} setSearchQuery={this.setSearchQuery}/>
+                              }/>
             <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
             <Route path={routes.contact} component={Contact} />

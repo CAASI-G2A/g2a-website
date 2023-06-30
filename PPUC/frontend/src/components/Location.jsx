@@ -27,8 +27,6 @@ class Location extends Component {
       contractPdf: null,
       problematicSentences: null,
     };
-    console.log("Location props = ")
-    console.log(this.props.searchQuery);
 
     this.modifyQuery= this.modifyQuery.bind(this);
     this.getText = this.getText.bind(this);
@@ -62,6 +60,7 @@ class Location extends Component {
     }
   }
 
+  //SU23: Reuses code from handle search just to get the search query to be usable in frontend
   modifyQuery(query){
     function getQueryWords(query) {
       if (typeof query === "string") {
@@ -94,29 +93,7 @@ class Location extends Component {
   
   
   componentDidMount() {
-    //const queryWords = this.modifyQuery(this.props.searchQuery);
-    //const important = queryWords[0];
-    //this.scrollToContent(important);
-    //window.scrollTo(0, $('div:contains("THE CONTENT YOU ARE SEARCHING FOR")').offset().top);
-    //document.getElementById('scoller')?.scrollIntoView({ behavior: 'smooth' });
-    //document.getElementById("scroller").scrollTo(0,0);
-    //document.getElementById('scroller')?.scrollIntoView(true);
-
-    //$("html, body").animate({ scrollTop: $('#test').offset().top }, 1000);
-    //$("html").animate({ scrollTop: 0 }, 500);
-    //$("html, #test").animate({ scrollTop: 1000 }, 500); //ORIGINAL WORKING SOLUTION
-    //$(`*:contains('${alcohol}'):first`).animate({ scrollTop: 1000 }, 500);
-    //$("#test").get(0).scrollIntoView({behavior: 'smooth'});
-    //$('#DebugContainer')[0].scrollHeight
-    //$("html").delay(2000).animate({ scrollTop: $('#test')[0].scrollHeight }, 500);
-
-    /*
-    setTimeout(function() {
-      $("html").animate({ 
-        scrollTop: $('#test').offset().top 
-      }, 500);
-    }, 1000);*/
-
+    //SU23: This handles the scrolling to the key words using searchQuery
     const queryWords = this.modifyQuery(this.props.searchQuery);
     const important = queryWords[0];
     setTimeout(function() {
@@ -169,9 +146,8 @@ class Location extends Component {
       && (_.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name}).length 
       ? _.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name})[0]: null);
 
+    //SU23: Call to new method for cleaning up search query
     const queryWords = this.modifyQuery(this.props.searchQuery);
-    console.log("Query words = ")
-    console.log(queryWords);
 
     return (
       <div>
@@ -238,8 +214,6 @@ class Location extends Component {
           </div>)}
           <div className="offset-md-8 col-md-4" style={{ textAlign: 'right' }}>
             <a target="_blank" href="https://www.grietoaction.org/static/app/instructions/How_to_read_a_contract.pdf">Click for our brief “How to Read a Contract” guide</a>
-            {/*<button onClick={() => this.getText()} type="submit" class="btn btn-danger">Find Text</button>
-            <input id="inputtext" type="text"></input>*/}
           </div>
           {this.state.location && 
             (<Tabs defaultActiveKey="1" type="card" size={"large"}>
@@ -250,6 +224,7 @@ class Location extends Component {
                     <hr className="my-4 border-top border-secondary" />
                     {this.state.contract.text.map((line, index) => (
                       <p key={index}>{line}
+                      {/*SU23: Added the highlighting per line using the querywords */}
                       <Highlighter
                       highlightClassName="MyHC"
                       highlightStyle={{backgroundColor: "#ffd500"}}
@@ -275,9 +250,6 @@ class Location extends Component {
                 </div>
               </TabPane>
             </Tabs>)}
-        </div>
-        <div id="test">
-          test
         </div>
       </div>
     );

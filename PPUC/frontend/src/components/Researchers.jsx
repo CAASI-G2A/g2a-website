@@ -15,7 +15,8 @@ class Researchers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: "",
+      //SU23 Similar changes to searchQuery and setSearchQuery, given as prop from App.jsx
+      //searchQuery: "",
       searchQueryWords: [],
       searchQueryError: null,
       queryResults: null,
@@ -55,12 +56,21 @@ class Researchers extends Component {
   }
 
   setSearchQuery(newQuery, autoSearch) {
+    /*
     this.setState(
       {
         searchQuery: newQuery,
       },
       () => (autoSearch ? this.handleSearch() : null)
-    );
+    );*/
+    
+    this.props.setSearchQuery(newQuery);
+    /*
+    if (autoSearch == true){
+      this.handleSearch();
+    }*/
+
+    () => (autoSearch ? this.handleSearch() : null);
   }
 
   setCountyFilter(county) {
@@ -172,7 +182,7 @@ class Researchers extends Component {
       }
 
       //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + getQueryWords(this.state.searchQuery)[0] + '"';
+      const searchQuery = '"' + getQueryWords(this.props.searchQuery)[0] + '"'; //switched from state to props
       // parse down to just the words being searched for, for highlighting
       const searchQueryWords = getQueryWords(searchQuery);
 
@@ -224,7 +234,7 @@ class Researchers extends Component {
         pathname: routes.researchers,
         search:
           "?" +
-          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
+          new URLSearchParams({ search: this.props.searchQuery, }).toString(),
       });
     } catch (err) {
       if (err instanceof SearchParser.SyntaxError) {
@@ -258,7 +268,7 @@ class Researchers extends Component {
     const queryParams = QueryString.parse(this.props.location.search);
     // if search already set, use it
     if (queryParams.search) {
-      this.setSearchQuery(queryParams.search, true);
+      this.setSearchQuery(queryParams.search, true); //issue here with true parameter, doing handle search on nothing
     }
     // current working solution to get page to scroll to the top when loaded
     window.scrollTo(0, 0);
@@ -293,7 +303,7 @@ class Researchers extends Component {
                     this.state.searchQueryError ? "border-danger" : ""
                   }`}
                   placeholder="Search Query..."
-                  value={this.state.searchQuery}
+                  value={this.props.searchQuery}
                   onChange={(event) =>
                     this.setSearchQuery(event.target.value, false)
                   }
@@ -337,7 +347,7 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("interview", true)}
+                onClick={() => this.setSearchQuery("interview", true)} 
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 interview

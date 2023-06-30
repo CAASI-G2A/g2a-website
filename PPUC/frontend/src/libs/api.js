@@ -23,6 +23,7 @@ const Api = {
     getDepartment: () => `${Api.BASE_PATH}/department`,
     getMasterContract: () => `${Api.BASE_PATH}/masterContract`,
     getMunicipality: () => `${Api.BASE_PATH}/municipality`,
+    getProvisionExpl: () => `${Api.BASE_PATH}/provision_expl`,
   },
   getLocations: () => {
     return fetch(Api.ENDPOINTS.getLocations()).then(toJSON);
@@ -73,6 +74,9 @@ const Api = {
   },
   getMunicipality: () => {
     return fetch(Api.ENDPOINTS.getMunicipality()).then(toJSON);
+  },
+  getProvisionExpl: () => {
+    return fetch(Api.ENDPOINTS.getProvisionExpl()).then(toJSON);
   },
 };
 export default Api;

@@ -19,6 +19,8 @@ def run():
     for row in Provision.objects.all().reverse():
         row.delete()
 
+    # Provision.objects.none() Maybe?
+
     for row in Keyword.objects.all().reverse():
         row.delete()"""
 

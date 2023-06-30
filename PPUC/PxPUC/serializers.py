@@ -181,8 +181,7 @@ class KeywordSerializer(serializers.ModelSerializer):
 class ProvisionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Provision
-        # fields = ("id", "number", "category", "explanation")
-        fields = ("category",)
+        fields = ("id", "number", "category", "explanation")
         print("In serial")
         logger.info(fields)
 

@@ -75,4 +75,9 @@ urlpatterns = [
         views.MunicipalityView.as_view(),
         name="municipality-view",
     ),
+    path(
+        "PxPUC/provision_expl",
+        views.ProvisionExplView.as_view(),
+        name="provision-expl-view",
+    ),
 ]

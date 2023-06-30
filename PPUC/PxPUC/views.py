@@ -260,44 +260,43 @@ class ResearcherSearchList(generics.ListAPIView):
         queryset = Location.objects.none()
 
         # SU23 Add: Beginning new algorithm
-        location_queryset = Location.objects.none()
-
-        # Filter in only sentences that contain the query
-        prefetch = Sentence.objects.filter(text__icontains=query)
-
-        # Dont so the annotation thing here, just calculate the scores per sentence and aggregate a total
-        # For each location with multiple sentences that are ranked, rank locations according to which has the highest fuzz score sentence
-        # For each sentence in the prefetch, calculate the score and assign it to the sentence
-        for sentence in prefetch:
-            # Inside the loop: create empty queryset to be filled with the rank of that sentence then union it with a new queryset at end
-            score = fuzz.partial_token_sort_ratio(query, sentence.text)
-            logger.info("Sentence = ")
-            logger.info(sentence.text)
-            logger.info("Score = ")
-            logger.info(score)
-            logger.info("----------------------------")
-            # prefetch = prefetch.annotate(
-        # score=fuzz.token_set_ratio(query, sentence.text)
-        # )
-        # logger.info("Prefetch = ")
-        # logger.info(prefetch)
-
         """
-        #Order by this score (possible change here)
-        prefetch = prefetch.order_by("-score")  #Possible change here depending on order_by issue/changing to 
+        # First init sets for location and sentence models
+        location_queryset = Location.objects.none()
+        prefetch = Sentence.objects.none()
 
-        #Get a count of sentences that contain the query
-        sentences_count = Q(sentences_text_icontains=query)
+        # Filter in sentences that contain any words in the query (query broken into indiv words)
+        split_query = query.split(" ")
+        for word in split_query:
+            temp_queryset = Sentence.objects.none()
+            temp_queryset = Sentence.objects.filter(text__icontains=word)
+            prefetch = temp_queryset.union(prefetch)
 
-        #Make the connection from the sorted sentences to their locations, this will be what is returned
-        location_queryset = (
-            #All locations (with a sentence count annotation) from the prefetched sentences
-            Location.objects.all()
-            .annotate(count = Count("sentences", filter=sentences_count))
-            .prefetch_related(Prefetch("sentences", queryset = prefetch))
-            .exclude(count = 0)
-        )
-        #SU23: End new algorithm"""
+        #First create a query set for sentences that is empty
+        new_prefetch = Sentence.objects.none()
+
+        # For each sentence in the original queryset (prefetch), create a new temporary queryset
+        # for that single sentence. Annotate a score for that single sentence and union it to a permanent queryset
+        for sentence in prefetch:
+            temp_queryset = Sentence.objects.none()
+            temp_queryset = Sentence.objects.all().annotate(score=fuzz.partial_token_sort_ratio(query, sentence.text)
+                                            ).get(id=sentence.id)
+            
+            new_prefetch = temp_queryset.union(new_prefetch)
+
+
+        # Next, order new_prefetch by the scores
+        new_prefetch = new_prefetch.order_by("-score")
+
+        # One thing to think about before the following step is excluding locations with zero sentences from this queryset
+        # This will look a little different from the original algorithm below as the query is taken as a full phrase
+
+        # Now link the new_prefetch sentences sorted by their scores to a location
+        location_queryset = location_queryset.prefetch_related(Prefetch("sentences", queryset=new_prefetch))
+
+        #This location queryset is what will be returned to the frontend
+            """
+        # SU23: End new algorithm
 
         # This loop takes the search query and finds results for each possible query, making the
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
@@ -427,6 +426,7 @@ class LocationStageList(APIView):
         return Response(stages)
 
 
+# SU23: Added the following views for the search box in commentary (see keyword view for issues)
 class ProvisionView(generics.ListAPIView):
     serializer_class = ProvisionSerializer
 
@@ -441,9 +441,25 @@ class ProvisionView(generics.ListAPIView):
         return queryset
 
 
+class ProvisionExplView(generics.ListAPIView):
+    serializer_class = ProvisionSerializer
+
+    def get_queryset(self):
+        queryset = Provision.objects.all().values("explanation")
+        return queryset
+
+
 class KeywordView(generics.ListAPIView):
     serializer_class = KeywordSerializer
-    queryset = Keyword.objects.all()
+
+    def get_queryset(self):
+        # The keyword queryset getting sent to the frontend as is, is a bit out of order. This makes
+        # displaying them clunky. One solution to this could be to make a provision queryset and then
+        # link the keywords grabbed from the queryset below to those provisions via prefetch_related.
+        # This would make it so the queryset will always be in an understandable order once it reaches the frontend
+        # (with understandable meaning in line with the order it appears on the master sheet)
+        queryset = Keyword.objects.all().values("keyword")
+        return queryset
 
 
 class MasterContractView(generics.ListAPIView):
