@@ -72,7 +72,11 @@ class Location extends Component {
         // If user input query is constructed solely of stop words, set query to original input
         query = (newQuery.length == 0) ? query : newQuery.join(" ")
 
-        return [query.trim()]
+        //OLD CODE
+        //return [query.trim()]
+        
+        //New return for highlighting entire search term first
+        return [[lowerQuery.join(" ")], [query.trim()]]
       } else {
         throw 'Query is not a string';
       }
@@ -81,8 +85,12 @@ class Location extends Component {
     let searchQuery = '"' + query + '"';
     let searchQueryWords = getQueryWords(searchQuery);
 
-    let queryArr = searchQueryWords[0].split(' ')
-    return queryArr;
+    //OLD CODE:
+    //let queryArr = searchQueryWords[0].split(' ')
+    //return queryArr;
+
+    //Return full query
+    return searchQueryWords;
   }
 
   
@@ -94,8 +102,21 @@ class Location extends Component {
   
   componentDidMount() {
     //SU23: This handles the scrolling to the key words using searchQuery
-    const queryWords = this.modifyQuery(this.props.searchQuery);
-    const important = queryWords[0];
+    //ER: We need to fix this so it scrolls to the whole term
+    //OLD CODE:
+    //const queryWords = this.modifyQuery(this.props.searchQuery);
+    //console.log("This is in component did mount, about to try to stringing it.");
+    //console.log(queryWords);
+    //const important = queryWords[0];
+
+    
+    var entire_query = this.modifyQuery(this.props.searchQuery);
+    var exact_query = entire_query[1].toString().split(" ")
+    var queryWords = entire_query[0].concat(exact_query)
+    //Get the exact search term for prioritizing:
+    const important = queryWords[0].toString();
+    //End new stuff
+
     setTimeout(function() {
       $("html").animate({ 
         scrollTop: $(`p:contains('${important}'):first`).offset().top 
@@ -147,7 +168,14 @@ class Location extends Component {
       ? _.filter(regionInfoData, {'Police_Agency_Name': this.state.location.name})[0]: null);
 
     //SU23: Call to new method for cleaning up search query
-    const queryWords = this.modifyQuery(this.props.searchQuery);
+    //OLD CODE:
+    //***const queryWords = this.modifyQuery(this.props.searchQuery);
+
+    //ER need to use this to prioritize the whole string
+    var entire_query = this.modifyQuery(this.props.searchQuery);
+    var exact_query = entire_query[1].toString().split(" ")
+    var queryWords = entire_query[0].concat(exact_query) 
+    //end new code
 
     return (
       <div>

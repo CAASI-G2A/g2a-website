@@ -163,28 +163,45 @@ class Researchers extends Component {
     // parse query
     try {
       // Defines function to remove quotation marks from the search string
-      function getQueryWords(query) {
+      function getQueryWords(query, highlight) {
         if (typeof query === "string") {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
           query = query.replace(/['"]+/g, "")
 
-          let lowerQuery = query.toLowerCase().split(" ")
-          let newQuery = removeStopwords(lowerQuery, eng)
+          //ER for getting full, exact query at start
+          if (highlight == true) {
+            let lowerQuery = query.toLowerCase().split(" ");
+            let newQuery = removeStopwords(lowerQuery, eng);
+            query = (newQuery.length == 0) ? query : newQuery.join(" ");
+            //Want to return the full query as well as the individual words MINUS the stop words.
+
+            //***return [query.trim()];
+            return [[lowerQuery.join(" ")], [query.trim()]]
+          }
+
+          else {
+            return [query.trim()];
+          }
+          // (I removed the ones with *** )
+
+          //***let lowerQuery = query.toLowerCase().split(" ")
+          //***let newQuery = removeStopwords(lowerQuery, eng)
           
           // If user input query is constructed solely of stop words, set query to original input
-          query = (newQuery.length == 0) ? query : newQuery.join(" ")
-
-          return [query.trim()]
+          //***query = (newQuery.length == 0) ? query : newQuery.join(" ")
+        
+          //***return [query.trim()]
 
         } else {
           throw 'Query is not a string';
         }
       }
 
-      //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + getQueryWords(this.props.searchQuery)[0] + '"'; //switched from state to props
+      //***const searchQuery = SearchParser.parse(this.state.searchQuery);
+      const searchQuery = '"' + getQueryWords(this.props.searchQuery, false)[0] + '"'; //switched from state to props
       // parse down to just the words being searched for, for highlighting
-      const searchQueryWords = getQueryWords(searchQuery);
+      //ER Adding the "true"
+      const searchQueryWords = getQueryWords(searchQuery, true);
 
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {

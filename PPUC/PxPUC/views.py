@@ -34,6 +34,21 @@ import logging
 from thefuzz import fuzz
 from thefuzz import process
 
+#ER Adding to fix search:
+from nltk.corpus import stopwords
+stop_words = set(stopwords.words('english'))
+def remove_stop_words(sentence): 
+    # Split the sentence into individual words 
+        words = sentence.split() 
+    
+        # Use a list comprehension to remove stop words 
+        filtered_words = [word for word in words if word not in stop_words] 
+        
+        # Join the filtered words back into a sentence 
+        return ' '.join(filtered_words)
+
+#end of ER added
+
 logger = logging.getLogger(__name__)
 
 
@@ -300,6 +315,37 @@ class ResearcherSearchList(generics.ListAPIView):
 
         # This loop takes the search query and finds results for each possible query, making the
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
+
+        #ER: We want to first check for the whole term, then remove any stop words.
+        #-------------------------------------------------------------------------
+
+        prefetch_queryset = Sentence.objects.filter(text__icontains = query)
+        count_query_filter = Q(sentences__text__icontains = query)
+        sentence_queryset = (
+            Location.objects.all()
+            .annotate(sentences_count=Count("sentences", filter=count_query_filter))
+            .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
+            .exclude(sentences_count=0)
+        ) #This is a queryset containing LOCATIONS (i.e. "Avalon Borough") whose contracts contain
+            #the entire search term, i.e. "a police officer salary"
+        
+        # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
+        # give highest priority to exact match (i.e. A)
+        letter_grade = chr(65)
+        # add rank field to sentence_queryset to be returned to front end
+        sentence_queryset = sentence_queryset.annotate(
+            rank=Value(letter_grade, output_field=CharField())
+        )
+
+        # Add current sentence_queryset to previous query_set
+        queryset = sentence_queryset.union(queryset)
+        #***queryset = queryset.order_by("-rank")
+
+        #NOW CLEAN STOP WORDS:
+        query = remove_stop_words(query)
+        #----------------------------------------------------------
+
+        #Now look at the query with the stop words removed. This is the previous algorithm.
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
 
@@ -310,10 +356,12 @@ class ResearcherSearchList(generics.ListAPIView):
                 .annotate(sentences_count=Count("sentences", filter=count_query_filter))
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
-            )
+            ) #This is a queryset containing LOCATIONS (i.e. "Avalon Borough") whose contracts contain
+            #the search terms.
+            
 
             # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
-            letter_grade = chr(i + 65)
+            letter_grade = chr(i + 66) #ER 66 bc after exact match, should start with B.
             # add rank field to sentence_queryset to be returned to front end
             sentence_queryset = sentence_queryset.annotate(
                 rank=Value(letter_grade, output_field=CharField())
@@ -321,9 +369,10 @@ class ResearcherSearchList(generics.ListAPIView):
 
             # Add current sentence_queryset to previous query_set
             queryset = sentence_queryset.union(queryset)
+            #***queryset = queryset.order_by("-rank")
 
-            # queryset = queryset.order_by("-rank")
-
+        #ER: I moved this order by to outside of the loop, and changed its order (rank instead of -rank)
+        queryset = queryset.order_by("rank")
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
         saved_query.save()

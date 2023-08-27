@@ -14,7 +14,7 @@ class LocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location
-        fields = ("id", "name", "state", "hasTxt", "hasPdf")
+        fields = ("id", "name", "state", "hasTxt", "hasPdf") 
 
     def __init__(self, *args, **kwargs):
         super(LocationSerializer, self).__init__(*args, **kwargs)
@@ -32,7 +32,7 @@ class LocationSerializer(serializers.ModelSerializer):
                 )
                 if is_preloaded:
                     self.fields["sentences"] = serializers.SerializerMethodField()
-                    self.fields["rank"] = serializers.SerializerMethodField()
+                    self.fields["rank"] = serializers.SerializerMethodField() 
 
     def get_sentences(self, obj):
         return SentenceSerializer(obj.sentences, many=True).data
