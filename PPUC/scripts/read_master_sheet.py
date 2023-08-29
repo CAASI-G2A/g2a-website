@@ -30,6 +30,7 @@ def run():
     )
 
     # Provision and Keyword
+    # TODO: Make sure it can read it provision with more than three keywrods
     for index, row in dataframDict["Provisions"].iterrows():
         if Provision.objects.filter(
             number=row["Number"],
