@@ -44,7 +44,9 @@ class Migration(migrations.Migration):
                 ("keyword", models.CharField(max_length=50, null=True)),
                 ("example", models.CharField(max_length=300, null=True)),
             ],
-            options={"ordering": ["keyword"],},
+            options={
+                "ordering": ["keyword"],
+            },
         ),
         migrations.CreateModel(
             name="Provision",
@@ -63,7 +65,9 @@ class Migration(migrations.Migration):
                 ("explanation", models.CharField(max_length=200, null=True)),
                 ("keywords", models.ManyToManyField(to="PxPUC.Keyword")),
             ],
-            options={"ordering": ["number"],},
+            options={
+                "ordering": ["number"],
+            },
         ),
         migrations.CreateModel(
             name="Municipality",
@@ -97,7 +101,9 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"ordering": ["municipality"],},
+            options={
+                "ordering": ["municipality"],
+            },
         ),
         migrations.CreateModel(
             name="MasterContract",
@@ -117,6 +123,8 @@ class Migration(migrations.Migration):
                 ("bargAgent", models.CharField(max_length=100, null=True)),
                 ("provisions", models.ManyToManyField(to="PxPUC.Provision")),
             ],
-            options={"ordering": ["department"],},
+            options={
+                "ordering": ["department"],
+            },
         ),
     ]

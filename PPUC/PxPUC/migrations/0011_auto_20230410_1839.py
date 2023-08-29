@@ -61,6 +61,8 @@ class Migration(migrations.Migration):
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name="provision", name="number", field=models.IntegerField(null=True),
+            model_name="provision",
+            name="number",
+            field=models.IntegerField(null=True),
         ),
     ]

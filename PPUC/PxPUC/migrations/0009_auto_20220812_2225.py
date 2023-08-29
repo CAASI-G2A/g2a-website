@@ -10,6 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name="searchquery", options={"verbose_name_plural": "Search Queries"},
+            name="searchquery",
+            options={"verbose_name_plural": "Search Queries"},
         ),
     ]

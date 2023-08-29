@@ -23,7 +23,10 @@ urlpatterns = [
     path("PxPUC/update", csrf_exempt(views.update_server)),
     path("PxPUC/templates/app/marker", views.marker),
     path("PxPUC/geoData", views.geodata),
-    path("PxPUC/muni_list_data", views.LocationList.as_view(),),
+    path(
+        "PxPUC/muni_list_data",
+        views.LocationList.as_view(),
+    ),
     path(
         "PxPUC/location/<int:lid>",
         views.LocationRetrieve.as_view(),
@@ -62,9 +65,21 @@ urlpatterns = [
         name="researcher-search",
     ),
     # Added by SU23 Intern
-    path("PxPUC/provision", views.ProvisionView.as_view(), name="provision-view",),
-    path("PxPUC/keyword", views.KeywordView.as_view(), name="keyword-view",),
-    path("PxPUC/department", views.DepartmentView.as_view(), name="department-view",),
+    path(
+        "PxPUC/provision",
+        views.ProvisionView.as_view(),
+        name="provision-view",
+    ),
+    path(
+        "PxPUC/keyword",
+        views.KeywordView.as_view(),
+        name="keyword-view",
+    ),
+    path(
+        "PxPUC/department",
+        views.DepartmentView.as_view(),
+        name="department-view",
+    ),
     path(
         "PxPUC/masterContract",
         views.MasterContractView.as_view(),
