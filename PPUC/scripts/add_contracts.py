@@ -199,7 +199,7 @@ def run():
                 print("filename: " + filename)
                 sep = filename.find("_")
                 state = re.sub("-", " ", filename[:sep])
-                print("state: " + state)
+                # print("state: " + state)
                 location = re.sub("-", " ", filename[sep + 1 :])
                 print("location: " + location)
                 location, created = Location.objects.get_or_create(

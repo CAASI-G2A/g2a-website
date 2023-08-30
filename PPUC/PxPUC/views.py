@@ -222,11 +222,10 @@ def contract_download(request, lid):
 
     # get location information
     location = Location.objects.get(pk=lid)
-    state = re.sub(" ", "-", location.state)
-    city = re.sub(" ", "-", location.name)
 
     # get filename and path for format
-    filename = "%s_%s.%s" % (state, city, file_format)
+    filename = "%s.%s" % (location.name, file_format)
+    print("yay", filename)
     contract_directory = "/PxPUC/static/app/contracts_%s/" % (file_format)
     filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
 
@@ -242,11 +241,9 @@ def contract_download(request, lid):
 def load_contract_pdf(request, lid):
     # get location information
     location = Location.objects.get(pk=lid)
-    state = re.sub(" ", "-", location.state)
-    city = re.sub(" ", "-", location.name)
 
     # get filename and path for format
-    filename = "%s_%s.pdf" % (state, city)
+    filename = "%s.pdf" % (location.name)
     contract_directory = "/PxPUC/static/app/contracts_pdf/"
     filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
 

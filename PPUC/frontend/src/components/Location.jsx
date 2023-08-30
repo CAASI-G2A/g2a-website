@@ -109,19 +109,23 @@ class Location extends Component {
     //console.log(queryWords);
     //const important = queryWords[0];
 
-    
     var entire_query = this.modifyQuery(this.props.searchQuery);
+    console.log("entire_query:", entire_query)
     var exact_query = entire_query[1].toString().split(" ")
+    console.log("exact_query:", exact_query)
     var queryWords = entire_query[0].concat(exact_query)
+    console.log("queryWords:", queryWords)
     //Get the exact search term for prioritizing:
     const important = queryWords[0].toString();
     //End new stuff
 
+    console.log("befor")
     setTimeout(function() {
       $("html").animate({ 
         scrollTop: $(`p:contains('${important}'):first`).offset().top 
       }, 500);
     }, 1000);
+    console.log("after")
 
     // grab location id from request
     const { lid } = this.props.match.params;
@@ -251,7 +255,7 @@ class Location extends Component {
                     <h2>Contract</h2>
                     <hr className="my-4 border-top border-secondary" />
                     {this.state.contract.text.map((line, index) => (
-                      <p key={index}>{line}
+                      <p key={index}>
                       {/*SU23: Added the highlighting per line using the querywords */}
                       <Highlighter
                       highlightClassName="MyHC"

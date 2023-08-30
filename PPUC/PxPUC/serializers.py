@@ -42,18 +42,17 @@ class LocationSerializer(serializers.ModelSerializer):
 
     def get_hasTxt(self, obj):
         # check filesystem
-        state = re.sub(" ", "-", obj.state)
-        city = re.sub(" ", "-", obj.name)
-        return os.path.exists(
-            "%s/PxPUC/static/app/contracts_txt/%s_%s.txt" % (os.getcwd(), state, city)
+        test = os.path.exists(
+            "%s/PxPUC/static/app/contracts_txt/%s.txt" % (os.getcwd(), obj.name)
         )
+        print("value:", test)
+        print("city:", obj.name)
+        return test
 
     def get_hasPdf(self, obj):
         # check filesystem
-        state = re.sub(" ", "-", obj.state)
-        city = re.sub(" ", "-", obj.name)
         return os.path.exists(
-            "%s/PxPUC/static/app/contracts_pdf/%s_%s.pdf" % (os.getcwd(), state, city)
+            "%s/PxPUC/static/app/contracts_pdf/%s.pdf" % (os.getcwd(), obj.name)
         )
 
 
