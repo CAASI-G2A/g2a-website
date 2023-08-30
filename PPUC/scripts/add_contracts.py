@@ -195,20 +195,17 @@ def run():
             if entry.is_file():
                 # First create the Location object
                 filename = entry.name[:-4]
-                """find _, everything before is state, after is city"""
+                
                 print("filename: " + filename)
-                sep = filename.find("_")
-                state = re.sub("-", " ", filename[:sep])
-                # print("state: " + state)
-                location = re.sub("-", " ", filename[sep + 1 :])
-                print("location: " + location)
-                location, created = Location.objects.get_or_create(
-                    name=location, state=state
+                print("location: Pennsylvania")
+                # SU23: Hard code state as PA for now, change later if 
+                filename, created = Location.objects.get_or_create(
+                    name=filename, state="Pennsylvania"
                 )
 
                 # PG: Delete existing contracts and sentences in system to avoid duplicates 
-                Sentence.objects.filter(location=location).delete()
-                Contract.objects.filter(location=location).delete()
+                Sentence.objects.filter(location=filename).delete()
+                Contract.objects.filter(location=filename).delete()
 
                 with open(entry, encoding="cp1252", errors="ignore") as textFile:
                     content = clean_lines(textFile.read())
@@ -218,7 +215,7 @@ def run():
                     # re.sub('(?<!\.)\r\n', ' ', content) 
 
                     contract = Contract.objects.get_or_create(
-                        location=location, text=content, is_parsed=True
+                        location=filename, text=content, is_parsed=True
                     )
 
                     
@@ -244,7 +241,7 @@ def run():
                     for line in lines:
                         line = clean_lines(line)
                         sentence = Sentence.objects.get_or_create(
-                            text=line, location=location
+                            text=line, location=filename
                         )
 
 

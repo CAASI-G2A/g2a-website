@@ -56,7 +56,8 @@ class Researchers extends Component {
   }
 
   setSearchQuery(newQuery, autoSearch) {
-    /*
+    
+    /* Old code
     this.setState(
       {
         searchQuery: newQuery,
@@ -64,13 +65,18 @@ class Researchers extends Component {
       () => (autoSearch ? this.handleSearch() : null)
     );*/
     
+    // SU23 now change the state in App.jsx
     this.props.setSearchQuery(newQuery);
-    /*
+
+    // SU23 Future TODO: search does not work because modified state in 
+    //     Solution idea: move the search function to App.jsx and put 
+    //     handleSearch function call in setState
+    
+    /* Does not work 
     if (autoSearch == true){
       this.handleSearch();
-    }*/
-
-    () => (autoSearch ? this.handleSearch() : null);
+    }
+    */
   }
 
   setCountyFilter(county) {

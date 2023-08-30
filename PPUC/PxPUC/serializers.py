@@ -42,12 +42,9 @@ class LocationSerializer(serializers.ModelSerializer):
 
     def get_hasTxt(self, obj):
         # check filesystem
-        test = os.path.exists(
+        return os.path.exists(
             "%s/PxPUC/static/app/contracts_txt/%s.txt" % (os.getcwd(), obj.name)
         )
-        print("value:", test)
-        print("city:", obj.name)
-        return test
 
     def get_hasPdf(self, obj):
         # check filesystem
