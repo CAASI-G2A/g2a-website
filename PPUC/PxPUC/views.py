@@ -34,8 +34,9 @@ import logging
 from thefuzz import fuzz
 from thefuzz import process
 
-# ER Adding to fix search:
+
 import nltk
+# ER Adding to fix search:
 from nltk.corpus import stopwords
 
 stop_words = set(stopwords.words("english"))
@@ -315,10 +316,7 @@ class ResearcherSearchList(generics.ListAPIView):
             """
         # SU23: End new algorithm
 
-        # This loop takes the search query and finds results for each possible query, making the
-        # query smaller from right to left (i.e. police officer salary -> police officer -> police)
-
-        # ER: We want to first check for the whole term, then remove any stop words.
+        # ER edits: We want to first check for the whole term, then remove any stop words.
         # -------------------------------------------------------------------------
 
         prefetch_queryset = Sentence.objects.filter(text__icontains=query)
@@ -328,7 +326,7 @@ class ResearcherSearchList(generics.ListAPIView):
             .annotate(sentences_count=Count("sentences", filter=count_query_filter))
             .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
             .exclude(sentences_count=0)
-        )  # This is a queryset containing LOCATIONS (i.e. "Avalon Borough") whose contracts contain
+        )  # The resulting queryset contains LOCATIONS (i.e. "Avalon Borough") whose contracts contain
         # the entire search term, i.e. "a police officer salary"
 
         # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
@@ -343,11 +341,13 @@ class ResearcherSearchList(generics.ListAPIView):
         queryset = sentence_queryset.union(queryset)
         # ***queryset = queryset.order_by("-rank")
 
-        # NOW CLEAN STOP WORDS:
+        # after getting exact match, remove stop words for further matches:
         query = remove_stop_words(query)
         # ----------------------------------------------------------
 
-        # Now look at the query with the stop words removed. This is the previous algorithm.
+        # Look at the query with the stop words removed. This is the previous algorithm.
+        # This loop takes the search query and finds results for each possible query, making the
+        # query smaller from right to left (i.e. police officer salary -> police officer -> police)
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
 
@@ -358,8 +358,7 @@ class ResearcherSearchList(generics.ListAPIView):
                 .annotate(sentences_count=Count("sentences", filter=count_query_filter))
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
-            )  # This is a queryset containing LOCATIONS (i.e. "Avalon Borough") whose contracts contain
-            # the search terms.
+            ) 
 
             # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
             letter_grade = chr(
@@ -374,7 +373,7 @@ class ResearcherSearchList(generics.ListAPIView):
             queryset = sentence_queryset.union(queryset)
             # ***queryset = queryset.order_by("-rank")
 
-        # ER: I moved this order by to outside of the loop, and changed its order (rank instead of -rank)
+        # ER: moved outside of the loop, and changed its order (rank instead of -rank)
         queryset = queryset.order_by("rank")
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
