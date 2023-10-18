@@ -62,7 +62,7 @@ class Landing extends Component {
               </h5>
               <p className="lead">
                 Find your local and neighboring police departments and learn
-                about them.
+                about thems.
               </p>
             </div>
           </div>
@@ -121,12 +121,6 @@ class Landing extends Component {
           className="jumbotron"
           style={{ backgroundColor: "white", padding: "5px 30px" }}
         >
-          <p className="lead">
-              <b style={{ fontWeight: 600 }}>Want to learn more about this project? </b>
-              Check out our paper, <a href="https://doi.org/10.1145/3551624.3555298">Improving Citizen-initiated Police Reform Efforts through Interactive Design: A Case Study in Allegheny County</a>,
-              or our <a href = "https://www.youtube.com/watch?v=jFGeFW6FJ3I&list=PLbZ-pUqfGCLmiWV4Ekk2OFKulLEP59woW&index=18&t=2s">
-              talk at the ACM conference</a> on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO'22).
-          </p>
           <p className="lead">
             <b style={{ fontWeight: 600 }}>Why do we need these tools? </b>
             Data surrounding policing can be difficult for the public to access.

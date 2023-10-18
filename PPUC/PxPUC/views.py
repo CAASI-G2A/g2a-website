@@ -18,7 +18,7 @@ import os
 import sys
 import re
 import mimetypes
-from rest_framework import generics, mixins, viewsets
+from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import json
@@ -28,34 +28,6 @@ import after_response
 import hmac
 import hashlib
 import subprocess
-import logging
-
-# from fuzzywuzzy import fuzz
-from thefuzz import fuzz
-from thefuzz import process
-
-
-import nltk
-# ER Adding to fix search:
-from nltk.corpus import stopwords
-
-stop_words = set(stopwords.words("english"))
-
-
-def remove_stop_words(sentence):
-    # Split the sentence into individual words
-    words = sentence.split()
-
-    # Use a list comprehension to remove stop words
-    filtered_words = [word for word in words if word not in stop_words]
-
-    # Join the filtered words back into a sentence
-    return " ".join(filtered_words)
-
-
-# end of ER added
-
-logger = logging.getLogger(__name__)
 
 
 def landing(request):
@@ -223,10 +195,11 @@ def contract_download(request, lid):
 
     # get location information
     location = Location.objects.get(pk=lid)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
 
     # get filename and path for format
-    filename = "%s.%s" % (location.name, file_format)
-    print("yay", filename)
+    filename = "%s_%s.%s" % (state, city, file_format)
     contract_directory = "/PxPUC/static/app/contracts_%s/" % (file_format)
     filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
 
@@ -242,9 +215,11 @@ def contract_download(request, lid):
 def load_contract_pdf(request, lid):
     # get location information
     location = Location.objects.get(pk=lid)
+    state = re.sub(" ", "-", location.state)
+    city = re.sub(" ", "-", location.name)
 
     # get filename and path for format
-    filename = "%s.pdf" % (location.name)
+    filename = "%s_%s.pdf" % (state, city)
     contract_directory = "/PxPUC/static/app/contracts_pdf/"
     filepath = "%s/%s/%s" % (os.getcwd(), contract_directory, filename)
 
@@ -277,79 +252,11 @@ class ResearcherSearchList(generics.ListAPIView):
         # Create an empty queryset to add results for each subquery
         queryset = Location.objects.none()
 
-        # SU23 Add: Beginning new algorithm
-        """
-        # First init sets for location and sentence models
-        location_queryset = Location.objects.none()
-        prefetch = Sentence.objects.none()
-
-        # Filter in sentences that contain any words in the query (query broken into indiv words)
-        split_query = query.split(" ")
-        for word in split_query:
-            temp_queryset = Sentence.objects.none()
-            temp_queryset = Sentence.objects.filter(text__icontains=word)
-            prefetch = temp_queryset.union(prefetch)
-
-        #First create a query set for sentences that is empty
-        new_prefetch = Sentence.objects.none()
-
-        # For each sentence in the original queryset (prefetch), create a new temporary queryset
-        # for that single sentence. Annotate a score for that single sentence and union it to a permanent queryset
-        for sentence in prefetch:
-            temp_queryset = Sentence.objects.none()
-            temp_queryset = Sentence.objects.all().annotate(score=fuzz.partial_token_sort_ratio(query, sentence.text)
-                                            ).get(id=sentence.id)
-            
-            new_prefetch = temp_queryset.union(new_prefetch)
-
-
-        # Next, order new_prefetch by the scores
-        new_prefetch = new_prefetch.order_by("-score")
-
-        # One thing to think about before the following step is excluding locations with zero sentences from this queryset
-        # This will look a little different from the original algorithm below as the query is taken as a full phrase
-
-        # Now link the new_prefetch sentences sorted by their scores to a location
-        location_queryset = location_queryset.prefetch_related(Prefetch("sentences", queryset=new_prefetch))
-
-        #This location queryset is what will be returned to the frontend
-            """
-        # SU23: End new algorithm
-
-        # ER edits: We want to first check for the whole term, then remove any stop words.
-        # -------------------------------------------------------------------------
-
-        prefetch_queryset = Sentence.objects.filter(text__icontains=query)
-        count_query_filter = Q(sentences__text__icontains=query)
-        sentence_queryset = (
-            Location.objects.all()
-            .annotate(sentences_count=Count("sentences", filter=count_query_filter))
-            .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
-            .exclude(sentences_count=0)
-        )  # The resulting queryset contains LOCATIONS (i.e. "Avalon Borough") whose contracts contain
-        # the entire search term, i.e. "a police officer salary"
-
-        # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
-        # give highest priority to exact match (i.e. A)
-        letter_grade = chr(65)
-        # add rank field to sentence_queryset to be returned to front end
-        sentence_queryset = sentence_queryset.annotate(
-            rank=Value(letter_grade, output_field=CharField())
-        )
-
-        # Add current sentence_queryset to previous query_set
-        queryset = sentence_queryset.union(queryset)
-        # ***queryset = queryset.order_by("-rank")
-
-        # after getting exact match, remove stop words for further matches:
-        query = remove_stop_words(query)
-        # ----------------------------------------------------------
-
-        # Look at the query with the stop words removed. This is the previous algorithm.
         # This loop takes the search query and finds results for each possible query, making the
         # query smaller from right to left (i.e. police officer salary -> police officer -> police)
         for i in range(len(query.split())):
             cur_query = query.rsplit(" ", i)[0]
+            print(cur_query)
 
             prefetch_queryset = Sentence.objects.filter(text__icontains=cur_query)
             count_query_filter = Q(sentences__text__icontains=cur_query)
@@ -358,12 +265,10 @@ class ResearcherSearchList(generics.ListAPIView):
                 .annotate(sentences_count=Count("sentences", filter=count_query_filter))
                 .prefetch_related(Prefetch("sentences", queryset=prefetch_queryset))
                 .exclude(sentences_count=0)
-            ) 
+            )
 
             # generate letter grade based on current iteration in loop (lower i value = higher letter grade)
-            letter_grade = chr(
-                i + 66
-            )  # ER 66 bc after exact match, should start with B.
+            letter_grade = chr(i + 65)
             # add rank field to sentence_queryset to be returned to front end
             sentence_queryset = sentence_queryset.annotate(
                 rank=Value(letter_grade, output_field=CharField())
@@ -371,10 +276,7 @@ class ResearcherSearchList(generics.ListAPIView):
 
             # Add current sentence_queryset to previous query_set
             queryset = sentence_queryset.union(queryset)
-            # ***queryset = queryset.order_by("-rank")
 
-        # ER: moved outside of the loop, and changed its order (rank instead of -rank)
-        queryset = queryset.order_by("rank")
         # save search query
         saved_query = SearchQuery.objects.create(query=query, results=queryset.count())
         saved_query.save()
@@ -475,54 +377,3 @@ class LocationStageList(APIView):
             "result": result,
         }
         return Response(stages)
-
-
-# SU23: Added the following views for the search box in commentary (see keyword view for issues)
-class ProvisionView(generics.ListAPIView):
-    serializer_class = ProvisionSerializer
-
-    def get_queryset(self):
-        # queryset = Provision.objects.all().values('category') FIRST
-        # queryset = [str(elem) for elem in list(Provision.objects.all().values_list('category'))]
-
-        queryset = Provision.objects.all().values("category")
-
-        logger.info(queryset)
-
-        return queryset
-
-
-class ProvisionExplView(generics.ListAPIView):
-    serializer_class = ProvisionSerializer
-
-    def get_queryset(self):
-        queryset = Provision.objects.all().values("explanation")
-        return queryset
-
-
-class KeywordView(generics.ListAPIView):
-    serializer_class = KeywordSerializer
-
-    def get_queryset(self):
-        # The keyword queryset getting sent to the frontend as is, is a bit out of order. This makes
-        # displaying them clunky. One solution to this could be to make a provision queryset and then
-        # link the keywords grabbed from the queryset below to those provisions via prefetch_related.
-        # This would make it so the queryset will always be in an understandable order once it reaches the frontend
-        # (with understandable meaning in line with the order it appears on the master sheet)
-        queryset = Keyword.objects.all().values("keyword")
-        return queryset
-
-
-class MasterContractView(generics.ListAPIView):
-    serializer_class = MasterContractSerializer
-    queryset = MasterContract.objects.all()
-
-
-class DepartmentView(generics.ListAPIView):
-    serializer_class = DepartmentSerializer
-    queryset = Department.objects.all()
-
-
-class MunicipalityView(generics.ListAPIView):
-    serializer_class = MunicipalitySerializer
-    queryset = Municipality.objects.all()

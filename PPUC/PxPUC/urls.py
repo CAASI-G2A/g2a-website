@@ -7,11 +7,6 @@ from os import name
 from django.urls import path
 from PxPUC import forms, views
 from django.views.decorators.csrf import csrf_exempt
-import logging
-
-logger = logging.getLogger(__name__)
-
-logger.info("In urls")
 
 urlpatterns = [
     # Many of the url patterns correspond with respective endpoint in api.js
@@ -63,36 +58,5 @@ urlpatterns = [
         "PxPUC/researcher",
         views.ResearcherSearchList.as_view(),
         name="researcher-search",
-    ),
-    # Added by SU23 Intern
-    path(
-        "PxPUC/provision",
-        views.ProvisionView.as_view(),
-        name="provision-view",
-    ),
-    path(
-        "PxPUC/keyword",
-        views.KeywordView.as_view(),
-        name="keyword-view",
-    ),
-    path(
-        "PxPUC/department",
-        views.DepartmentView.as_view(),
-        name="department-view",
-    ),
-    path(
-        "PxPUC/masterContract",
-        views.MasterContractView.as_view(),
-        name="master-contract-view",
-    ),
-    path(
-        "PxPUC/municipality",
-        views.MunicipalityView.as_view(),
-        name="municipality-view",
-    ),
-    path(
-        "PxPUC/provision_expl",
-        views.ProvisionExplView.as_view(),
-        name="provision-expl-view",
     ),
 ]
