@@ -18,6 +18,12 @@ const Api = {
     getResearcherSearchResults: (query) =>
       `${Api.BASE_PATH}/researcher?query=${query}`,
     getSListData: () => `${Api.BASE_PATH}/muni_list_data`,
+    getProvisions: () => `${Api.BASE_PATH}/provision`,
+    getKeywords: () => `${Api.BASE_PATH}/keyword`,
+    getDepartment: () => `${Api.BASE_PATH}/department`,
+    getMasterContract: () => `${Api.BASE_PATH}/masterContract`,
+    getMunicipality: () => `${Api.BASE_PATH}/municipality`,
+    getProvisionExpl: () => `${Api.BASE_PATH}/provision_expl`,
   },
   getLocations: () => {
     return fetch(Api.ENDPOINTS.getLocations()).then(toJSON);
@@ -53,6 +59,24 @@ const Api = {
   },
   getSListData: () => {
     return fetch(Api.ENDPOINTS.getSListData()).then(toJSON);
+  },
+  getProvisions: () => {
+    return fetch(Api.ENDPOINTS.getProvisions()).then(toJSON);
+  },
+  getKeywords: () => {
+    return fetch(Api.ENDPOINTS.getKeywords()).then(toJSON);
+  },
+  getDepartment: () => {
+    return fetch(Api.ENDPOINTS.getDepartment()).then(toJSON);
+  },
+  getMasterContract: () => {
+    return fetch(Api.ENDPOINTS.getMasterContract()).then(toJSON);
+  },
+  getMunicipality: () => {
+    return fetch(Api.ENDPOINTS.getMunicipality()).then(toJSON);
+  },
+  getProvisionExpl: () => {
+    return fetch(Api.ENDPOINTS.getProvisionExpl()).then(toJSON);
   },
 };
 export default Api;

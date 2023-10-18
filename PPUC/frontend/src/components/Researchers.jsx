@@ -15,7 +15,8 @@ class Researchers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: "",
+      //SU23 Similar changes to searchQuery and setSearchQuery, given as prop from App.jsx
+      //searchQuery: "",
       searchQueryWords: [],
       searchQueryError: null,
       queryResults: null,
@@ -55,12 +56,27 @@ class Researchers extends Component {
   }
 
   setSearchQuery(newQuery, autoSearch) {
+    
+    /* Old code
     this.setState(
       {
         searchQuery: newQuery,
       },
       () => (autoSearch ? this.handleSearch() : null)
-    );
+    );*/
+    
+    // SU23 now change the state in App.jsx
+    this.props.setSearchQuery(newQuery);
+
+    // SU23 Future TODO: search does not work because modified state in 
+    //     Solution idea: move the search function to App.jsx and put 
+    //     handleSearch function call in setState
+    
+    /* Does not work 
+    if (autoSearch == true){
+      this.handleSearch();
+    }
+    */
   }
 
   setCountyFilter(county) {
@@ -153,28 +169,45 @@ class Researchers extends Component {
     // parse query
     try {
       // Defines function to remove quotation marks from the search string
-      function getQueryWords(query) {
+      function getQueryWords(query, highlight) {
         if (typeof query === "string") {
           // Patrick Gavazzi: removes quotation marks from search string for highlighting
           query = query.replace(/['"]+/g, "")
 
-          let lowerQuery = query.toLowerCase().split(" ")
-          let newQuery = removeStopwords(lowerQuery, eng)
+          //ER for getting full, exact query at start
+          if (highlight == true) {
+            let lowerQuery = query.toLowerCase().split(" ");
+            let newQuery = removeStopwords(lowerQuery, eng);
+            query = (newQuery.length == 0) ? query : newQuery.join(" ");
+            //Want to return the full query as well as the individual words MINUS the stop words.
+
+            //***return [query.trim()];
+            return [[lowerQuery.join(" ")], [query.trim()]]
+          }
+
+          else {
+            return [query.trim()];
+          }
+          // (I removed the ones with *** )
+
+          //***let lowerQuery = query.toLowerCase().split(" ")
+          //***let newQuery = removeStopwords(lowerQuery, eng)
           
           // If user input query is constructed solely of stop words, set query to original input
-          query = (newQuery.length == 0) ? query : newQuery.join(" ")
-
-          return [query.trim()]
+          //***query = (newQuery.length == 0) ? query : newQuery.join(" ")
+        
+          //***return [query.trim()]
 
         } else {
           throw 'Query is not a string';
         }
       }
 
-      //const searchQuery = SearchParser.parse(this.state.searchQuery);
-      const searchQuery = '"' + getQueryWords(this.state.searchQuery)[0] + '"';
+      //***const searchQuery = SearchParser.parse(this.state.searchQuery);
+      const searchQuery = '"' + getQueryWords(this.props.searchQuery, false)[0] + '"'; //switched from state to props
       // parse down to just the words being searched for, for highlighting
-      const searchQueryWords = getQueryWords(searchQuery);
+      //ER Adding the "true"
+      const searchQueryWords = getQueryWords(searchQuery, true);
 
 
       Api.getResearcherSearchResults(searchQuery).then((resp) => {
@@ -224,7 +257,7 @@ class Researchers extends Component {
         pathname: routes.researchers,
         search:
           "?" +
-          new URLSearchParams({ search: this.state.searchQuery, }).toString(),
+          new URLSearchParams({ search: this.props.searchQuery, }).toString(),
       });
     } catch (err) {
       if (err instanceof SearchParser.SyntaxError) {
@@ -258,7 +291,7 @@ class Researchers extends Component {
     const queryParams = QueryString.parse(this.props.location.search);
     // if search already set, use it
     if (queryParams.search) {
-      this.setSearchQuery(queryParams.search, true);
+      this.setSearchQuery(queryParams.search, true); //issue here with true parameter, doing handle search on nothing
     }
     // current working solution to get page to scroll to the top when loaded
     window.scrollTo(0, 0);
@@ -293,7 +326,7 @@ class Researchers extends Component {
                     this.state.searchQueryError ? "border-danger" : ""
                   }`}
                   placeholder="Search Query..."
-                  value={this.state.searchQuery}
+                  value={this.props.searchQuery}
                   onChange={(event) =>
                     this.setSearchQuery(event.target.value, false)
                   }
@@ -337,7 +370,7 @@ class Researchers extends Component {
               </button>
               <button
                 type="button"
-                onClick={() => this.setSearchQuery("interview", true)}
+                onClick={() => this.setSearchQuery("interview", true)} 
                 className="ex-keyword btn btn-info btn-rounded mr-2"
               >
                 interview

@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import routes from "../routes";
 
+
+
 class ResearcherResultSentence extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,11 @@ class ResearcherResultSentence extends Component {
    }
 
   render() {
-    var words = this.props.searchQueryWords[0].split(" ");
+    //ER editing this for highlighting.
+    //***var words = this.props.searchQueryWords[0].split(" ");
+    var entire_query = this.props.searchQueryWords;
+    var exact_query = entire_query[1].toString().split(" ")
+    var words = entire_query[0].concat(exact_query) 
     return (
       <p
         className={`${
