@@ -3,9 +3,6 @@ from django.db.models.query import QuerySet
 from rest_framework import serializers
 from .models import *
 import os, re
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -42,14 +39,18 @@ class LocationSerializer(serializers.ModelSerializer):
 
     def get_hasTxt(self, obj):
         # check filesystem
+        state = re.sub(" ", "-", obj.state)
+        city = re.sub(" ", "-", obj.name)
         return os.path.exists(
-            "%s/PxPUC/static/app/contracts_txt/%s.txt" % (os.getcwd(), obj.name)
+            "%s/PxPUC/static/app/contracts_txt/%s_%s.txt" % (os.getcwd(), state, city)
         )
 
     def get_hasPdf(self, obj):
         # check filesystem
+        state = re.sub(" ", "-", obj.state)
+        city = re.sub(" ", "-", obj.name)
         return os.path.exists(
-            "%s/PxPUC/static/app/contracts_pdf/%s.pdf" % (os.getcwd(), obj.name)
+            "%s/PxPUC/static/app/contracts_pdf/%s_%s.pdf" % (os.getcwd(), state, city)
         )
 
 
@@ -164,59 +165,3 @@ class SearchQuerySerializer(serializers.ModelSerializer):
     class Meta:
         model = SearchQuery
         fields = {"id", "query", "timestamp", "results"}
-
-
-# Added by SU23 Internship
-# Converting new Django models created in models.py by SP23 Capstone team
-class KeywordSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Keyword
-        fields = ("id", "keyword", "example")
-
-
-class ProvisionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Provision
-        fields = ("id", "number", "category", "explanation")
-        print("In serial")
-        logger.info(fields)
-
-
-class MasterContractSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MasterContract
-        fields = ("id", "department", "startYear", "endYear", "bargAgent")
-
-
-class DepartmentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Department
-        fields = (
-            "id",
-            "deptName",
-            "webLink",
-            "fullOfficers2019",
-            "partOfficers2019",
-            "hasBill",
-        )
-
-
-class MunicipalitySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Municipality
-        fields = (
-            "id",
-            "municID",
-            "municipality",
-            "department",
-            "totPop2010",
-            "nonWhitePop2010",
-            "sqMiArea",
-            "acreArea",
-            "region",
-            "COG",
-            "school",
-            "sfGlobalID",
-            "sfSHAPEleng",
-            "sfSHAPEarea",
-        )

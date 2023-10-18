@@ -22,21 +22,6 @@ import Map from "./policeDeptMap/MapContainer";
 import Commentary from "./Commentary";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchQuery: "",
-    }
-    this.setSearchQuery = this.setSearchQuery.bind(this);
-  }
-
-  setSearchQuery(newQuery){
-    this.setState(
-      {
-        searchQuery: newQuery,
-      });
-  } //Check passing param to react router 5.2.0
-
   componentDidMount() {
     // scroll to top button
     $(document).ready(function () {
@@ -69,20 +54,12 @@ class App extends Component {
           <Switch>
             <Route path={routes.home} exact component={Landing} />
             <Route path={routes.map} exact component={Map} />
-            {/*<Route path={routes.commentary} component={Commentary} />*/}
-            <Route path={routes.commentary} render={
-                          (props) => <Commentary {...props} searchQuery={this.state.searchQuery} setSearchQuery={this.setSearchQuery}/>
-                              }/>
-            {/*<Route path={routes.researchers} component={Researchers} />*/}
-            <Route path={routes.researchers} render={
-                          (props) => <Researchers {...props} searchQuery={this.state.searchQuery} setSearchQuery={this.setSearchQuery}/>
-                              }/>
+            <Route path={routes.commentary} component={Commentary} />
+            <Route path={routes.researchers} component={Researchers} />
             <Route path={routes.citizens + "/:lid?"} component={Citizens} />
             <Route path={routes.about} component={About} />
             <Route path={routes.contact} component={Contact} />
-            {/*<Route path={routes.location + "/:lid"} component={Location} />*/}
-            <Route path={routes.location + "/:lid"} render={
-                          (props) => <Location {...props} searchQuery={this.state.searchQuery}/>}/>
+            <Route path={routes.location + "/:lid"} component={Location} />
           </Switch>
           <a
             id="back-to-top"
