@@ -10,3 +10,4 @@ django-cors-headers
 django-after-response
 whitenoise
 symspellpy
+thefuzz
