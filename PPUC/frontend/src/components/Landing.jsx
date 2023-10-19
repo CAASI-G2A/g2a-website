@@ -62,7 +62,7 @@ class Landing extends Component {
               </h5>
               <p className="lead">
                 Find your local and neighboring police departments and learn
-                about thems.
+                about them.
               </p>
             </div>
           </div>
