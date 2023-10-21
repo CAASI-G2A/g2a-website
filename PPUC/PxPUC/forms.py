@@ -6,7 +6,7 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms import ModelForm
 from PxPUC.models import Location, Sentence, Problematic_Sentence
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class BootstrapAuthenticationForm(AuthenticationForm):
