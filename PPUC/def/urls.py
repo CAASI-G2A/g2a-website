@@ -3,15 +3,15 @@ Definition of urls for def.
 """
 
 from datetime import datetime
-from django.urls import path
-from django.conf.urls import url,include
+from django.urls import path, re_path, include
+from django.conf.urls import include
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from PxPUC import forms, views
 import PxPUC.urls
 
 urlpatterns = [
-    url('^',include(PxPUC.urls)),
+    re_path('^',include(PxPUC.urls)),
     path('', views.home, name='home'),
     path('login/',
          LoginView.as_view

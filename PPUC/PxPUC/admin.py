@@ -12,7 +12,8 @@ from .models import Sentence
 from .models import Question
 from .models import Problematic_Sentence
 
-
+# Action to enable downloading of an admin model as a CSV
+@admin.action(description="Download selection as a CSV file")
 def download_csv(modeladmin, request, queryset):
     response = HttpResponse(content_type="text/csv")
     response["Content_Disposition"] = 'attachment; filename="results.csv"'
